@@ -1,0 +1,2 @@
+old Usage: signapk publickey.x509[.pem] privatekey.pk8 input.jar output.jar
+new Usage: signapk [-w] [-a <alignment>] [-providerClass <className>] publickey.x509[.pem] privatekey.pk8 [publickey2.x509[.pem] privatekey2.pk8 ...] input.jar output.jar
