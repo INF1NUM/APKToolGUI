@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.button_DECODE_BrowseInputAppPath = new System.Windows.Forms.Button();
             this.button_DECODE_Decode = new System.Windows.Forms.Button();
             this.tabControlMain = new System.Windows.Forms.TabControl();
@@ -890,6 +890,7 @@
             // 
             // statusStrip1
             // 
+            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabelStateImage,
             this.toolStripStatusLabelStateText,
@@ -946,9 +947,9 @@
             // 
             // ColumnImage
             // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.NullValue = null;
-            this.ColumnImage.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.NullValue = null;
+            this.ColumnImage.DefaultCellStyle = dataGridViewCellStyle2;
             this.ColumnImage.Frozen = true;
             resources.ApplyResources(this.ColumnImage, "ColumnImage");
             this.ColumnImage.Name = "ColumnImage";
@@ -972,6 +973,7 @@
             // 
             // contextMenuStripLog
             // 
+            this.contextMenuStripLog.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuStripLog.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.clearLogToolStripMenuItem});
             this.contextMenuStripLog.Name = "contextMenuStripLog";

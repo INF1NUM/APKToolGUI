@@ -13,9 +13,9 @@ namespace Java
                 return environmentPath;
             }
 
-            string javaKey = "SOFTWARE\\JavaSoft\\Java Runtime Environment\\";
+            string javaKey = @"SOFTWARE\JavaSoft\Java Runtime Environment\";
             if (Environment.Is64BitOperatingSystem)
-                javaKey = "SOFTWARE\\Wow6432Node\\JavaSoft\\Java Runtime Environment\\";
+                javaKey = @"SOFTWARE\Wow6432Node\JavaSoft\Java Runtime Environment\";
 
             using (Microsoft.Win32.RegistryKey rk = Microsoft.Win32.Registry.LocalMachine.OpenSubKey(javaKey))
             {
@@ -36,7 +36,7 @@ namespace Java
             string installPath = GetJavaInstallationPath();
             if (!String.IsNullOrWhiteSpace(installPath))
             {
-                string filePath = System.IO.Path.Combine(installPath, "bin\\Java.exe");
+                string filePath = System.IO.Path.Combine(installPath, @"bin\Java.exe");
                 if (System.IO.File.Exists(filePath))
                     return filePath;
                 else
