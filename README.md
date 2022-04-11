@@ -55,6 +55,9 @@ A: Download [Baksmali.jar/Smali.jar](https://bitbucket.org/JesusFreke/smali/down
 ##### Q: How to reset?
 A: Simply delete the config.xml file
 
+##### Q: Why this tool is a virus?
+A: It just a false positive, anti-virus always flag tools/softwares like this. Don't believe what your anti-virus are telling you
+
 # Development
 Use Visual Studio 2019 and above. NET Framework 4.8 SDK is required
 
