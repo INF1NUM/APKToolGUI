@@ -6,11 +6,11 @@ using System.Runtime.InteropServices;
 // набора атрибутов. Измените значения этих атрибутов, чтобы изменить сведения,
 // связанные со сборкой.
 [assembly: AssemblyTitle("APKTool GUI")]
-[assembly: AssemblyDescription("Графический интерфейс для утилит akptool, signapk и zipalign.")]
+[assembly: AssemblyDescription("GUI for apktool, signapk and zipalign utilities.")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("APKTool GUI")]
-[assembly: AssemblyCopyright("© INFINUM, 2012-2015")]
+[assembly: AssemblyCopyright("© INFINUM, 2012-2015 | AndnixSH, 2022")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -32,5 +32,5 @@ using System.Runtime.InteropServices;
 // Можно задать все значения или принять номер построения и номер редакции по умолчанию, 
 // используя "*", как показано ниже:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("2.4.0.446")]
-[assembly: AssemblyFileVersion("2.4.0.446")]
+[assembly: AssemblyVersion("3.0.0.0")]
+[assembly: AssemblyFileVersion("3.0.0.0")]

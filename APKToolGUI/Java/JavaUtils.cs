@@ -1,10 +1,44 @@
-﻿using System;
+﻿using APKToolGUI;
+using APKToolGUI.Languages;
+using APKToolGUI.Properties;
+using System;
 using System.Diagnostics;
+using System.IO;
+using System.Windows.Forms;
 
 namespace Java
 {
     public class JavaUtils
     {
+        public static bool TryGetSystemVariable(out string javaExeLocation)
+        {
+            try
+            {
+                ProcessStartInfo procStartInfo = new ProcessStartInfo("java", "-version ");
+                procStartInfo.RedirectStandardOutput = true;
+                procStartInfo.RedirectStandardError = true;
+                procStartInfo.UseShellExecute = false;
+                procStartInfo.CreateNoWindow = true;
+                Process proc = new Process();
+                proc.StartInfo = procStartInfo;
+                proc.Start();
+                if (!String.IsNullOrEmpty(proc.StandardError.ReadToEnd()))
+                {
+                    javaExeLocation = "java";
+                    return true;
+                }
+                else
+                {
+                    javaExeLocation = null;
+                    return false;
+                }
+            }
+            catch
+            {
+                javaExeLocation = null;
+                return false;
+            }
+        }
         private static string GetJavaInstallationPath()
         {
             string environmentPath = Environment.GetEnvironmentVariable("JAVA_HOME");
@@ -44,6 +78,38 @@ namespace Java
             }
             else
                 return null;
+        }
+
+        public static string GetJavaPath()
+        {
+            string javaExec;
+            if (!JavaUtils.TryGetSystemVariable(out javaExec))
+            {
+                javaExec = JavaUtils.SearchPath();
+                if (!File.Exists(javaExec))
+                {
+                    if (MessageBox.Show(Language.DoYouWantToSelectJavaLocation, Application.ProductName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        using (OpenFileDialog openJavaExe = new OpenFileDialog())
+                        {
+                            openJavaExe.Filter = "java.exe|java.exe";
+                            if (openJavaExe.ShowDialog() == DialogResult.OK)
+                            {
+                                javaExec = Program.GetPortablePath(openJavaExe.FileName);
+                            }
+                            else
+                                Environment.Exit(0);
+                        }
+                    }
+                    else
+                        Environment.Exit(0);
+                }
+                else
+                {
+                    return javaExec;
+                }
+            }
+            return javaExec;
         }
     }
 }

@@ -1,55 +1,118 @@
 ﻿using System;
 using System.Diagnostics;
+using System.Linq;
 using System.Text.RegularExpressions;
 
 namespace Java
 {
     public class JarProcess : Process
     {
+        public string JavaPath { get; set; }
+        public string JarPath { get; set; }
+
         public JarProcess(string javaPath, string jarPath)
         {
-            this.JavaPath = javaPath;
-            this.JarPath = jarPath;
+            JavaPath = javaPath.Equals("java") ? "" : javaPath;
+            JarPath = jarPath;
             Initialize();
         }
 
         private void Initialize()
         {
-            this.EnableRaisingEvents = true;
-            this.StartInfo.FileName = JavaPath; //задаем имя запускного файла
-            this.StartInfo.UseShellExecute = false; //отключаем использование оболочки, чтобы можно было читать данные вывода
-            this.StartInfo.RedirectStandardOutput = true; // разрешаем перенаправление данных вывода
-            this.StartInfo.RedirectStandardError = true; // разрешаем перенаправление данных вывода
-            this.StartInfo.CreateNoWindow = true; //запрещаем создавать окно для запускаемой программы
+            EnableRaisingEvents = true;
+            if (!String.IsNullOrEmpty(JavaPath))
+                StartInfo.FileName = JavaPath;
+            else
+                StartInfo.FileName = "cmd.exe";
+            StartInfo.UseShellExecute = false;
+            StartInfo.RedirectStandardOutput = true;
+            StartInfo.RedirectStandardError = true;
+            StartInfo.CreateNoWindow = true;
         }
-
-        public string JavaPath { get; set; }
-        public string JarPath { get; set; }
 
         public new bool Start(string args)
         {
-            this.EnableRaisingEvents = true;
-            this.StartInfo.Arguments = String.Format("-jar \"{0}\" {1}", JarPath, args);
+            EnableRaisingEvents = true;
+            if (!String.IsNullOrEmpty(JavaPath))
+            {
+                StartInfo.Arguments = String.Format("-jar \"{0}\" {1}", JarPath, args);
+                Debug.WriteLine(String.Format("-jar \"{0}\" {1}", JarPath, args));
+            }
+            else
+            {
+                StartInfo.Arguments = String.Format("/c \" java -jar \"{0}\" {1} \"", JarPath, args);
+                Debug.WriteLine(String.Format("CMD: java -jar \"{0}\" {1} \"", JarPath, args));
+            }
             return base.Start();
         }
-                
-        public Version GetJavaVersion()
+
+        public string GetString(string args)
         {
-            using (Process javaProcess = new Process())
+            try
             {
-                javaProcess.StartInfo.FileName = this.JavaPath;
-                javaProcess.StartInfo.Arguments = "-version";
-                javaProcess.StartInfo.CreateNoWindow = true;
-                javaProcess.StartInfo.UseShellExecute = false;
-                javaProcess.StartInfo.RedirectStandardError = true;
-                bool started = javaProcess.Start();
-                string output = javaProcess.StandardError.ReadToEnd();
-                javaProcess.WaitForExit(3000);
-                System.Text.RegularExpressions.Match match = System.Text.RegularExpressions.Regex.Match(output, @"^java version ""(\d+)\.(\d+)\.(\d+)_(\d+)"".$", System.Text.RegularExpressions.RegexOptions.Multiline);
-                if (match.Groups.Count == 5)
-                    return new Version(Convert.ToInt32(match.Groups[1].Value), Convert.ToInt32(match.Groups[2].Value), Convert.ToInt32(match.Groups[3].Value), Convert.ToInt32(match.Groups[4].Value));
-                else
-                    return null;
+                using (Process javaProcess = new Process())
+                {
+                    if (!String.IsNullOrEmpty(JavaPath))
+                    {
+                        javaProcess.StartInfo.FileName = JavaPath;
+                        javaProcess.StartInfo.Arguments = String.Format("-jar \"{0}\" {1}", JarPath, args);
+
+                    }
+                    else
+                    {
+                        javaProcess.StartInfo.FileName = "cmd.exe";
+                        javaProcess.StartInfo.Arguments = String.Format("/c \" java -jar \"{0}\" {1} \"", JarPath, args);
+                    }
+                    javaProcess.StartInfo.CreateNoWindow = true;
+                    javaProcess.StartInfo.UseShellExecute = false;
+                    javaProcess.StartInfo.RedirectStandardError = true;
+                    javaProcess.StartInfo.RedirectStandardOutput = true;
+                    javaProcess.Start();
+                    string output = javaProcess.StandardOutput.ReadToEnd();
+                    javaProcess.WaitForExit(3000);
+                    if (!String.IsNullOrEmpty(output))
+                        return output;
+                    else
+                        return null;
+                }
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        public string GetJavaVersion()
+        {
+            try
+            {
+                using (Process javaProcess = new Process())
+                {
+                    if (!String.IsNullOrEmpty(JavaPath))
+                    {
+                        javaProcess.StartInfo.FileName = JavaPath;
+                        javaProcess.StartInfo.Arguments = "-version";
+                    }
+                    else
+                    {
+                        javaProcess.StartInfo.FileName = "cmd.exe";
+                        javaProcess.StartInfo.Arguments = "/c \"java -version \"";
+                    }
+                    javaProcess.StartInfo.CreateNoWindow = true;
+                    javaProcess.StartInfo.UseShellExecute = false;
+                    javaProcess.StartInfo.RedirectStandardError = true;
+                    javaProcess.Start();
+                    string output = javaProcess.StandardError.ReadToEnd();
+                    javaProcess.WaitForExit(3000);
+                    if (!String.IsNullOrEmpty(output))
+                        return output.Split(new[] { '\r', '\n' }).FirstOrDefault().Replace("java", "Java");
+                    else
+                        return null;
+                }
+            }
+            catch
+            {
+                throw;
             }
         }
     }
