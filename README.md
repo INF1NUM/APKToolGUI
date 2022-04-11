@@ -66,9 +66,9 @@ Currently there is two languages, english and russian. Russian is not complete b
 - Open any forms. Under properties, scroll down until you see Language, and select any language you would like to translate. It will create new resx file inside cs file
 
 # Credits
-AndnixSH
-iBotPeaches ([Apktool](https://ibotpeaches.github.io/Apktool/))
-INF1NUM (Original author of [APKToolGUI](https://github.com/INF1NUM/APKToolGUI)
+- AndnixSH
+- iBotPeaches ([Apktool](https://ibotpeaches.github.io/Apktool/))
+- INF1NUM (Original author of [APKToolGUI](https://github.com/INF1NUM/APKToolGUI))
 
 # Disclaimer
 Same as Apktool by iBotPeaches, It is NOT intended for piracy and other non-legal uses. It could be used for localizing, adding some features or support for custom platforms and other GOOD purposes. Just try to be fair with authors of an app, that you use and probably like.
