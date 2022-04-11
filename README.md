@@ -1,4 +1,6 @@
 # APK Tool GUI
+![](https://i.imgur.com/MUuWTdW.png)
+
 GUI for apktool, signapk, zipalign and baksmali utilities.
 
 It is a tool for reverse engineering 3rd party, closed, binary Android apps. It can decode resources to nearly original form and rebuild them after making some modifications; it makes possible to debug smali code step by step. Also it makes working with app easier because of project-like files structure and automation of some repetitive tasks like building apk, etc.
