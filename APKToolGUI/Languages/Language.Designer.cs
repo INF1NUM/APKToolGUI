@@ -205,6 +205,15 @@ namespace APKToolGUI.Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Creating Unsigned APK.
+        /// </summary>
+        internal static string CreateUnsignedApk {
+            get {
+                return ResourceManager.GetString("CreateUnsignedApk", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Debug mode.
         /// </summary>
         internal static string DebugMode {
@@ -660,6 +669,15 @@ namespace APKToolGUI.Languages {
         internal static string MainActivityNotFoundPleaseFindManually {
             get {
                 return ResourceManager.GetString("MainActivityNotFoundPleaseFindManually", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to META-INF folder does not exist. Skipped.
+        /// </summary>
+        internal static string MetainfNotExist {
+            get {
+                return ResourceManager.GetString("MetainfNotExist", resourceCulture);
             }
         }
         

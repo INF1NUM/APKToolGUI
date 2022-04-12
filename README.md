@@ -44,7 +44,7 @@ Framework/system apps related issues, check on [XDA Forum](https://forum.xda-dev
 
 # FAQ
 ##### Q: Can it be ported to other OS like Linux?
-A: Maybe, but it's not easy since Microsoft is dumb for not making it easy for .NET Core unlike Java's GUI
+A: Maybe, but it's not easy since Microsoft is dumb for not making it easy for .NET Core unlike Java's GUI which supports all supported platforms
 
 ##### Q: How to update Apktool?
 A: Download [Apktool.jar](https://github.com/iBotPeaches/Apktool/releases) and replace it on Resources folder
@@ -56,7 +56,10 @@ A: Download [Baksmali.jar/Smali.jar](https://bitbucket.org/JesusFreke/smali/down
 A: Simply delete the config.xml file
 
 ##### Q: Why this tool is a virus?
-A: It just a false positive, anti-virus always flag tools/softwares like this. Don't believe what your anti-virus are telling you
+A: It just a false positive, anti-virus always flag tools/softwares like this as virus. Don't always believe what your anti-virus are telling you. Try to compile the source by yourself and you will see
+
+##### Q: Can you make an automatic APK injecting tool?
+A: No, that's not the point of this tool, and I don't have time for that. However, you can try making it by yourself, or have a look on [SaveToGame](https://github.com/And42/SaveToGame) which can give you ideas how to do it.
 
 # Development
 Use Visual Studio 2019 and above. NET Framework 4.8 SDK is required

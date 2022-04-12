@@ -87,8 +87,14 @@ namespace APKToolGUI.Handlers
             string decApkDir = main.textBox_BUILD_InputProjectDir.Text;
 
             string outputFile = decApkDir + " compiled.apk";
+            if (Settings.Default.Build_SignAfterBuild)
+                outputFile = decApkDir + " signed.apk";
             if (Settings.Default.Build_UseOutputAppPath)
-                outputFile = Path.Combine(Settings.Default.Build_OutputAppPath, Path.GetFileName(decApkDir) + ".apk");
+            {
+                outputFile = Path.Combine(Settings.Default.Build_OutputAppPath, Path.GetFileName(decApkDir)) + ".apk";
+                if (Settings.Default.Build_SignAfterBuild)
+                    outputFile = Path.Combine(Settings.Default.Build_OutputAppPath, Path.GetFileName(decApkDir)) + "signed.apk";
+            }
 
             if (File.Exists(outputFile))
                 Process.Start("explorer.exe", string.Format("/select,\"{0}\"", outputFile));

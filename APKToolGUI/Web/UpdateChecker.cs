@@ -31,9 +31,11 @@ namespace APKToolGUI
         private void backgroundWorker_DoWork(object sender, DoWorkEventArgs e)
         {
             Version latestVersion = null;
+            string changelog = null;
             try
             {
                 latestVersion = GetVersion();
+                changelog = GetChangelog();
             }
             catch (Exception exc)
             {
@@ -43,7 +45,7 @@ namespace APKToolGUI
             {
                 if (CompareVersion(latestVersion))
                 {
-                    e.Result = new Result(State.NeedUpdate, latestVersion.ToString(), (bool)e.Argument);
+                    e.Result = new Result(State.NeedUpdate, latestVersion.ToString(), (bool)e.Argument, changelog);
                 }
                 else
                     e.Result = new Result(State.NoUpdate, null, (bool)e.Argument);
@@ -83,6 +85,17 @@ namespace APKToolGUI
                 return null;
         }
 
+        private string GetChangelog()
+        {
+            string changelog;
+            using (WebClient webClient = new WebClient())
+            {
+                changelog = webClient.DownloadString("https://repo.andnixsh.com/tools/APKToolGUI/changelog.txt");
+            }
+
+             return changelog;
+        }
+
         public enum State
         {
             NoUpdate,
@@ -92,15 +105,17 @@ namespace APKToolGUI
 
         public class Result
         {
-            public Result(State state, string message, bool silently)
+            public Result(State state, string message, bool silently, string changelog = null)
             {
-                this.State = state;
-                this.Message = message;
-                this.Silently = silently;
+                State = state;
+                Message = message;
+                Silently = silently;
+                Changelog = changelog;
             }
             public State State { get; private set; }
             public string Message { get; private set; }
             public bool Silently { get; private set; }
+            public string Changelog { get; private set; }
         }
     }
 }

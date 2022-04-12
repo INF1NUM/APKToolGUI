@@ -363,10 +363,11 @@ namespace APKToolGUI
             if (e.Result is UpdateChecker.Result)
             {
                 UpdateChecker.Result result = (UpdateChecker.Result)e.Result;
+
                 switch (result.State)
                 {
                     case UpdateChecker.State.NeedUpdate:
-                        if (MessageBox.Show(Language.UpdateNewVersion, Application.ProductName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                        if (MessageBox.Show(Language.UpdateNewVersion + "\n\n" + result.Changelog, Application.ProductName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                             Process.Start("https://repo.andnixsh.com/tools/APKToolGUI/APKToolGUI.zip");
                         break;
                     case UpdateChecker.State.NoUpdate:
@@ -378,6 +379,7 @@ namespace APKToolGUI
                             MessageBox.Show(Language.ErrorUpdateChecking + " " + Environment.NewLine + result.Message, Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
                         break;
                 }
+
                 Settings.Default.LastUpdateCheck = DateTime.Now;
             }
         }
@@ -605,12 +607,14 @@ namespace APKToolGUI
                 await Task.Factory.StartNew(() =>
                 {
                     string outputFile = inputFile + " compiled.apk";
+                    if (Settings.Default.Build_SignAfterBuild)
+                        outputFile = inputFile + " signed.apk";
                     if (Settings.Default.Build_UseOutputAppPath && !IgnoreOutputDirContextMenu)
                     {
                         outputFile = Path.Combine(Settings.Default.Build_OutputAppPath, Path.GetFileName(inputFile)) + ".apk";
-                        inputFile = outputFile;
+                        if (Settings.Default.Build_SignAfterBuild)
+                            outputFile = Path.Combine(Settings.Default.Build_OutputAppPath, Path.GetFileName(inputFile)) + "signed.apk";
                     }
-                   
                     code = apktool.Build(outputFile);
 
                     if (code == 0)
@@ -626,7 +630,20 @@ namespace APKToolGUI
                                 return;
                             }
                             else
+                            {
+                                if (Settings.Default.Build_CreateUnsignedApk)
+                                {
+                                    ToLog(ApktoolEventType.Information, Language.CreateUnsignedApk);
+                                    if (Directory.Exists(Path.Combine(inputFile, "original", "META-INF")))
+                                    {
+                                        ZipUtils.UpdateDirectory(outputFile, Path.Combine(inputFile, "original", "META-INF"), "META-INF");
+                                        File.Copy(outputFile, Path.Combine(Path.GetDirectoryName(outputFile), Path.GetFileName(inputFile) + " unsigned.apk"), true);
+                                    }
+                                    else
+                                        ToLog(ApktoolEventType.Warning, Language.MetainfNotExist);
+                                }
                                 ToLog(ApktoolEventType.Information, Language.Done);
+                            }
                         }
                         if (Settings.Default.Build_SignAfterBuild)
                         {

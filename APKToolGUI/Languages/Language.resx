@@ -396,4 +396,10 @@
   <data name="ZipalignApk" xml:space="preserve">
     <value>Zipalign APK</value>
   </data>
+  <data name="CreateUnsignedApk" xml:space="preserve">
+    <value>Creating Unsigned APK</value>
+  </data>
+  <data name="MetainfNotExist" xml:space="preserve">
+    <value>META-INF folder does not exist. Skipped</value>
+  </data>
 </root>

@@ -1,3 +1,8 @@
+3.0.0.1
+- Show changelog on update prompt
+- Implement unsigned APK creation after compile. Totally forgotten it
+- Compiled APK named "signed" instead "compiled" when signng after compile
+
 3.0.0.0
 - Updated apktool to 2.6.1
 - Updated apksinger, aapt, and zipalign to SDK 31
