@@ -543,11 +543,11 @@ namespace APKToolGUI
                         ToStatus(String.Format(Language.Decoding + " \"{0}\"...", Path.GetFileName(inputApk)), Resources.waiting);
                     }));
 
-                    string outputDir = PathUtils.GetDirectoryNameWithoutExtension(Settings.Default.Decode_InputAppPath);
+                    string outputDir = PathUtils.GetDirectoryNameWithoutExtension(inputApk);
                     if (Settings.Default.Decode_UseOutputDir && !IgnoreOutputDirContextMenu)
-                        outputDir = Path.Combine(Settings.Default.Decode_OutputDir, Path.GetFileNameWithoutExtension(Settings.Default.Decode_InputAppPath));
+                        outputDir = Path.Combine(Settings.Default.Decode_OutputDir, Path.GetFileNameWithoutExtension(inputApk));
 
-                    code = apktool.Decompile(outputDir);
+                    code = apktool.Decompile(inputApk, outputDir);
 
                     if (code == 0)
                     {
@@ -949,6 +949,27 @@ namespace APKToolGUI
         #endregion
 
         #region Form handlers
+        private void FormMain_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            //For debugging purposes
+            try
+            {
+                using (TextWriter TW = new StreamWriter(Path.Combine(Program.TEMP_DIR, "logs.txt")))
+                {
+                    for (int i = 0; i < logGridView.Rows.Count; i++)
+                    {
+                        string dateTime = (string)logGridView.Rows[i].Cells[1].Value;
+                        string text = (string)logGridView.Rows[i].Cells[2].Value;
+                        TW.WriteLine($"{dateTime} {text}");
+                    }
+                }
+            }
+            catch
+            {
+
+            }
+        }
+
         private void Application_ApplicationExit(object sender, EventArgs e)
         {
             Save();

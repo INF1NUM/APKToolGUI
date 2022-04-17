@@ -1781,6 +1781,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Menu = this.mainMenu1;
             this.Name = "FormMain";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormMain_FormClosing);
             this.Shown += new System.EventHandler(this.FormMain_Shown);
             this.tabControlMain.ResumeLayout(false);
             this.tabPageMain.ResumeLayout(false);

@@ -103,9 +103,8 @@ namespace APKToolGUI
             CancelErrorRead();
         }
 
-        public int Decompile(string outputDir)
+        public int Decompile(string inputPath, string outputDir)
         {
-            string inputPath = Settings.Default.Decode_InputAppPath;
             string keyNoSrc = null, keyNoRes = null, keyForce = null, keyFramePath = null, keyMatchOriginal = null, keyOutputDir = null, onlyMainClasses = null, noDebugInfo = null, keyKeepBrokenRes = null, apiLevel = null;
 
             if (Settings.Default.Decode_NoSrc)
