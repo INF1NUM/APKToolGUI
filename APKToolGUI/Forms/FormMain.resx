@@ -132,10 +132,10 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="comApkOpenDir.Location" type="System.Drawing.Point, System.Drawing">
-    <value>414, 200</value>
+    <value>406, 200</value>
   </data>
   <data name="comApkOpenDir.Size" type="System.Drawing.Size, System.Drawing">
-    <value>167, 24</value>
+    <value>175, 24</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="comApkOpenDir.TabIndex" type="System.Int32, mscorlib">
@@ -156,6 +156,39 @@
   <data name="&gt;&gt;comApkOpenDir.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="decOutOpenDirBtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="decOutOpenDirBtn.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="decOutOpenDirBtn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="decOutOpenDirBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 228</value>
+  </data>
+  <data name="decOutOpenDirBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>175, 24</value>
+  </data>
+  <data name="decOutOpenDirBtn.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="decOutOpenDirBtn.Text" xml:space="preserve">
+    <value>Decompile output location</value>
+  </data>
+  <data name="&gt;&gt;decOutOpenDirBtn.Name" xml:space="preserve">
+    <value>decOutOpenDirBtn</value>
+  </data>
+  <data name="&gt;&gt;decOutOpenDirBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;decOutOpenDirBtn.Parent" xml:space="preserve">
+    <value>tabPageMain</value>
+  </data>
+  <data name="&gt;&gt;decOutOpenDirBtn.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="signApkOpenDirBtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
@@ -166,10 +199,10 @@
     <value>NoControl</value>
   </data>
   <data name="signApkOpenDirBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>306, 227</value>
+    <value>406, 228</value>
   </data>
   <data name="signApkOpenDirBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>167, 24</value>
+    <value>175, 24</value>
   </data>
   <data name="signApkOpenDirBtn.TabIndex" type="System.Int32, mscorlib">
     <value>16</value>
@@ -187,7 +220,7 @@
     <value>tabPageMain</value>
   </data>
   <data name="&gt;&gt;signApkOpenDirBtn.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="alignApkOpenDirBtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -199,10 +232,10 @@
     <value>NoControl</value>
   </data>
   <data name="alignApkOpenDirBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>101, 227</value>
+    <value>206, 228</value>
   </data>
   <data name="alignApkOpenDirBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>167, 24</value>
+    <value>175, 24</value>
   </data>
   <data name="alignApkOpenDirBtn.TabIndex" type="System.Int32, mscorlib">
     <value>16</value>
@@ -220,7 +253,7 @@
     <value>tabPageMain</value>
   </data>
   <data name="&gt;&gt;alignApkOpenDirBtn.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="decApkOpenDirBtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -232,10 +265,10 @@
     <value>NoControl</value>
   </data>
   <data name="decApkOpenDirBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>211, 200</value>
+    <value>206, 200</value>
   </data>
   <data name="decApkOpenDirBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>167, 24</value>
+    <value>175, 24</value>
   </data>
   <data name="decApkOpenDirBtn.TabIndex" type="System.Int32, mscorlib">
     <value>16</value>
@@ -253,7 +286,7 @@
     <value>tabPageMain</value>
   </data>
   <data name="&gt;&gt;decApkOpenDirBtn.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="selectedApkOpenDirBtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -265,10 +298,10 @@
     <value>NoControl</value>
   </data>
   <data name="selectedApkOpenDirBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 201</value>
+    <value>7, 201</value>
   </data>
   <data name="selectedApkOpenDirBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>167, 23</value>
+    <value>175, 23</value>
   </data>
   <data name="selectedApkOpenDirBtn.TabIndex" type="System.Int32, mscorlib">
     <value>13</value>
@@ -286,16 +319,16 @@
     <value>tabPageMain</value>
   </data>
   <data name="&gt;&gt;selectedApkOpenDirBtn.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="button_OpenMainActivity.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="button_OpenMainActivity.Location" type="System.Drawing.Point, System.Drawing">
-    <value>414, 256</value>
+    <value>406, 256</value>
   </data>
   <data name="button_OpenMainActivity.Size" type="System.Drawing.Size, System.Drawing">
-    <value>167, 23</value>
+    <value>175, 23</value>
   </data>
   <data name="button_OpenMainActivity.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -313,16 +346,16 @@
     <value>tabPageMain</value>
   </data>
   <data name="&gt;&gt;button_OpenMainActivity.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="openApktoolYmlBtn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="openApktoolYmlBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>211, 256</value>
+    <value>206, 256</value>
   </data>
   <data name="openApktoolYmlBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>167, 23</value>
+    <value>175, 23</value>
   </data>
   <data name="openApktoolYmlBtn.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -340,16 +373,16 @@
     <value>tabPageMain</value>
   </data>
   <data name="&gt;&gt;openApktoolYmlBtn.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="openAndroidMainfestBtn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="openAndroidMainfestBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 256</value>
+    <value>7, 256</value>
   </data>
   <data name="openAndroidMainfestBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>167, 23</value>
+    <value>175, 23</value>
   </data>
   <data name="openAndroidMainfestBtn.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -367,7 +400,7 @@
     <value>tabPageMain</value>
   </data>
   <data name="&gt;&gt;openAndroidMainfestBtn.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="label4.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -508,7 +541,7 @@
     <value>tabPageMain</value>
   </data>
   <data name="&gt;&gt;signPanel.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="label3.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -649,7 +682,7 @@
     <value>tabPageMain</value>
   </data>
   <data name="&gt;&gt;zipalignPanel.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="label2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -790,7 +823,7 @@
     <value>tabPageMain</value>
   </data>
   <data name="&gt;&gt;comPanel.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>11</value>
   </data>
   <data name="label1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -931,7 +964,7 @@
     <value>tabPageMain</value>
   </data>
   <data name="&gt;&gt;decPanel.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>12</value>
   </data>
   <data name="tabPageMain.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 22</value>
@@ -2282,7 +2315,7 @@ and change target SDK to 29</value>
     <value>4, 4</value>
   </data>
   <data name="groupBox_DECODE_Options.Size" type="System.Drawing.Size, System.Drawing">
-    <value>559, 344</value>
+    <value>559, 349</value>
   </data>
   <data name="groupBox_DECODE_Options.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -2332,6 +2365,36 @@ and change target SDK to 29</value>
   <data name="tabPageBuild.AutoScroll" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="useAapt2ChkBox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="useAapt2ChkBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="useAapt2ChkBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 312</value>
+  </data>
+  <data name="useAapt2ChkBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>353, 17</value>
+  </data>
+  <data name="useAapt2ChkBox.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="useAapt2ChkBox.Text" xml:space="preserve">
+    <value>Use aapt2 (Upgrades apktool to use experimental aapt2 binary.)</value>
+  </data>
+  <data name="&gt;&gt;useAapt2ChkBox.Name" xml:space="preserve">
+    <value>useAapt2ChkBox</value>
+  </data>
+  <data name="&gt;&gt;useAapt2ChkBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;useAapt2ChkBox.Parent" xml:space="preserve">
+    <value>groupBox_BUILD_Options</value>
+  </data>
+  <data name="&gt;&gt;useAapt2ChkBox.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="buildApiLvlUpDown.Location" type="System.Drawing.Point, System.Drawing">
     <value>492, 17</value>
   </data>
@@ -2351,7 +2414,7 @@ and change target SDK to 29</value>
     <value>groupBox_BUILD_Options</value>
   </data>
   <data name="&gt;&gt;buildApiLvlUpDown.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="buildSetApiLvlChkBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2381,7 +2444,7 @@ and change target SDK to 29</value>
     <value>groupBox_BUILD_Options</value>
   </data>
   <data name="&gt;&gt;buildSetApiLvlChkBox.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="label23.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2393,13 +2456,13 @@ and change target SDK to 29</value>
     <value>26, 291</value>
   </data>
   <data name="label23.Size" type="System.Drawing.Size, System.Drawing">
-    <value>336, 13</value>
+    <value>344, 13</value>
   </data>
   <data name="label23.TabIndex" type="System.Int32, mscorlib">
     <value>16</value>
   </data>
   <data name="label23.Text" xml:space="preserve">
-    <value>May not work with Lucky Patcher. It works better for CorePatch. </value>
+    <value>May not work with Lucky Patcher. It works better with CorePatch. </value>
   </data>
   <data name="&gt;&gt;label23.Name" xml:space="preserve">
     <value>label23</value>
@@ -2411,37 +2474,37 @@ and change target SDK to 29</value>
     <value>groupBox_BUILD_Options</value>
   </data>
   <data name="&gt;&gt;label23.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
-  <data name="checkBox1.AutoSize" type="System.Boolean, mscorlib">
+  <data name="createUnsignApkChkBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="checkBox1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="createUnsignApkChkBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="checkBox1.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="createUnsignApkChkBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>8, 271</value>
   </data>
-  <data name="checkBox1.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="createUnsignApkChkBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>190, 17</value>
   </data>
-  <data name="checkBox1.TabIndex" type="System.Int32, mscorlib">
+  <data name="createUnsignApkChkBox.TabIndex" type="System.Int32, mscorlib">
     <value>15</value>
   </data>
-  <data name="checkBox1.Text" xml:space="preserve">
+  <data name="createUnsignApkChkBox.Text" xml:space="preserve">
     <value>Create unsigned APK after build</value>
   </data>
-  <data name="&gt;&gt;checkBox1.Name" xml:space="preserve">
-    <value>checkBox1</value>
+  <data name="&gt;&gt;createUnsignApkChkBox.Name" xml:space="preserve">
+    <value>createUnsignApkChkBox</value>
   </data>
-  <data name="&gt;&gt;checkBox1.Type" xml:space="preserve">
+  <data name="&gt;&gt;createUnsignApkChkBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;checkBox1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;createUnsignApkChkBox.Parent" xml:space="preserve">
     <value>groupBox_BUILD_Options</value>
   </data>
-  <data name="&gt;&gt;checkBox1.ZOrder" xml:space="preserve">
-    <value>3</value>
+  <data name="&gt;&gt;createUnsignApkChkBox.ZOrder" xml:space="preserve">
+    <value>4</value>
   </data>
   <data name="label16.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2471,7 +2534,7 @@ and change target SDK to 29</value>
     <value>groupBox_BUILD_Options</value>
   </data>
   <data name="&gt;&gt;label16.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="signAfterBuildChkBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2501,7 +2564,7 @@ and change target SDK to 29</value>
     <value>groupBox_BUILD_Options</value>
   </data>
   <data name="&gt;&gt;signAfterBuildChkBox.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="zipalignAfterBuildChkBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2531,7 +2594,7 @@ and change target SDK to 29</value>
     <value>groupBox_BUILD_Options</value>
   </data>
   <data name="&gt;&gt;zipalignAfterBuildChkBox.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="checkBox_BUILD_NoCrunch.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2561,7 +2624,7 @@ and change target SDK to 29</value>
     <value>groupBox_BUILD_Options</value>
   </data>
   <data name="&gt;&gt;checkBox_BUILD_NoCrunch.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="button_BUILD_BrowseOutputAppPath.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -2591,7 +2654,7 @@ and change target SDK to 29</value>
     <value>groupBox_BUILD_Options</value>
   </data>
   <data name="&gt;&gt;button_BUILD_BrowseOutputAppPath.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="checkBox_BUILD_ForceAll.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2621,7 +2684,7 @@ and change target SDK to 29</value>
     <value>groupBox_BUILD_Options</value>
   </data>
   <data name="&gt;&gt;checkBox_BUILD_ForceAll.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="button_BUILD_BrowseFrameDir.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -2651,7 +2714,7 @@ and change target SDK to 29</value>
     <value>groupBox_BUILD_Options</value>
   </data>
   <data name="&gt;&gt;button_BUILD_BrowseFrameDir.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>11</value>
   </data>
   <data name="button_BUILD_BrowseAaptPath.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -2681,7 +2744,7 @@ and change target SDK to 29</value>
     <value>groupBox_BUILD_Options</value>
   </data>
   <data name="&gt;&gt;button_BUILD_BrowseAaptPath.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>12</value>
   </data>
   <data name="checkBox_BUILD_OutputAppPath.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2711,7 +2774,7 @@ and change target SDK to 29</value>
     <value>groupBox_BUILD_Options</value>
   </data>
   <data name="&gt;&gt;checkBox_BUILD_OutputAppPath.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>13</value>
   </data>
   <data name="checkBox_BUILD_CopyOriginal.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2741,7 +2804,7 @@ and change target SDK to 29</value>
     <value>groupBox_BUILD_Options</value>
   </data>
   <data name="&gt;&gt;checkBox_BUILD_CopyOriginal.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>14</value>
   </data>
   <data name="textBox_BUILD_OutputAppPath.Location" type="System.Drawing.Point, System.Drawing">
     <value>255, 145</value>
@@ -2765,7 +2828,7 @@ and change target SDK to 29</value>
     <value>groupBox_BUILD_Options</value>
   </data>
   <data name="&gt;&gt;textBox_BUILD_OutputAppPath.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>15</value>
   </data>
   <data name="checkBox_BUILD_UseAapt.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2795,7 +2858,7 @@ and change target SDK to 29</value>
     <value>groupBox_BUILD_Options</value>
   </data>
   <data name="&gt;&gt;checkBox_BUILD_UseAapt.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>16</value>
   </data>
   <data name="textBox_BUILD_AaptPath.Location" type="System.Drawing.Point, System.Drawing">
     <value>255, 93</value>
@@ -2819,7 +2882,7 @@ and change target SDK to 29</value>
     <value>groupBox_BUILD_Options</value>
   </data>
   <data name="&gt;&gt;textBox_BUILD_AaptPath.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>17</value>
   </data>
   <data name="textBox_BUILD_FrameDir.Location" type="System.Drawing.Point, System.Drawing">
     <value>255, 119</value>
@@ -2843,7 +2906,7 @@ and change target SDK to 29</value>
     <value>groupBox_BUILD_Options</value>
   </data>
   <data name="&gt;&gt;textBox_BUILD_FrameDir.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>18</value>
   </data>
   <data name="checkBox_BUILD_UseFramework.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2873,13 +2936,13 @@ and change target SDK to 29</value>
     <value>groupBox_BUILD_Options</value>
   </data>
   <data name="&gt;&gt;checkBox_BUILD_UseFramework.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>19</value>
   </data>
   <data name="groupBox_BUILD_Options.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 7</value>
   </data>
   <data name="groupBox_BUILD_Options.Size" type="System.Drawing.Size, System.Drawing">
-    <value>559, 328</value>
+    <value>559, 354</value>
   </data>
   <data name="groupBox_BUILD_Options.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -5254,7 +5317,7 @@ and change target SDK to 29</value>
     <value>100, 16</value>
   </data>
   <data name="statusStrip1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 485</value>
+    <value>0, 464</value>
   </data>
   <data name="statusStrip1.Size" type="System.Drawing.Size, System.Drawing">
     <value>596, 22</value>
@@ -5386,7 +5449,7 @@ and change target SDK to 29</value>
     <value>96, 96</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>596, 507</value>
+    <value>596, 486</value>
   </data>
   <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 8.25pt</value>
@@ -7056,6 +7119,9 @@ and change target SDK to 29</value>
         ///2AAAAAAAAb////////////EAAAAAAAj////////////+QAAAAAAn/////////////8gAAAABP////
         //////////w4AAAcP///////
 </value>
+  </data>
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
     <value>99, 97</value>

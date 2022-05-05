@@ -44,6 +44,7 @@ namespace APKToolGUI
             public const string OutputAppPath = " -o"; // The name of apk that gets written. Default is dist/name.apk
             public const string NoCrunch = " -nc"; // Disable crunching of resource files during the build step.
             public const string ApiLevel = " -api"; //The numeric api-level of the file to generate, e.g. 14 for ICS.
+            public const string UseAapt2 = " --use-aapt2"; //Upgrades apktool to use experimental aapt2 binary.
         }
 
         static class InstallFrameworkKeys
@@ -127,7 +128,7 @@ namespace APKToolGUI
                 apiLevel = String.Format("{0} {1}", DecompileKeys.ApiLevel, Settings.Default.Decode_ApiLevel);
             keyOutputDir = String.Format("{0} \"{1}\"", DecompileKeys.OutputDir, outputDir);
 
-            string args = String.Format("d{0}{1}{2}{3}{4}{5}{6}{7}{8}{9} \"{10}\"", keyNoSrc, keyNoRes, keyForce, onlyMainClasses, noDebugInfo, keyMatchOriginal, keyFramePath, keyKeepBrokenRes, keyOutputDir, apiLevel, inputPath);
+            string args = String.Format($"d{keyNoSrc}{keyNoRes}{keyForce}{onlyMainClasses}{noDebugInfo}{keyMatchOriginal}{keyFramePath}{keyKeepBrokenRes}{apiLevel}{keyOutputDir} \"{inputPath}\"");
 
             Start(args);
             BeginOutputReadLine();
@@ -140,7 +141,7 @@ namespace APKToolGUI
         {
             string decApkDir = Settings.Default.Build_InputDir;
 
-            string keyForceAll = null, keyAapt = null, keyCopyOriginal = null, noCrunch = null, keyFramePath = null, keyOutputAppPath = null, apiLevel = null;
+            string keyForceAll = null, keyAapt = null, keyCopyOriginal = null, noCrunch = null, keyFramePath = null, keyOutputAppPath = null, apiLevel = null, useAapt2 = null;
             if (Settings.Default.Build_ForceAll)
                 keyForceAll = BuildKeys.ForceAll;
             if (Settings.Default.Build_CopyOriginal)
@@ -153,9 +154,11 @@ namespace APKToolGUI
                 keyFramePath = String.Format("{0} \"{1}\"", BuildKeys.FrameworkPath, Settings.Default.Build_FrameDir);
             if (Settings.Default.Build_SetApiLevel)
                 apiLevel = String.Format("{0} {1}", DecompileKeys.ApiLevel, Settings.Default.Build_ApiLevel);
+            if (Settings.Default.Build_UseAapt2)
+                useAapt2 = BuildKeys.UseAapt2;
             keyOutputAppPath = String.Format("{0} \"{1}\"", BuildKeys.OutputAppPath, outputFile);
 
-            string args = String.Format("b{0}{1}{2}{3}{4}{5}{6} \"{7}\"", keyForceAll, keyAapt, keyCopyOriginal, noCrunch, keyFramePath, keyOutputAppPath, apiLevel, decApkDir);
+            string args = String.Format($"b{keyForceAll}{keyAapt}{keyCopyOriginal}{noCrunch}{keyFramePath}{apiLevel}{useAapt2}{keyOutputAppPath} \"{decApkDir}\"");
 
             Start(args);
             BeginOutputReadLine();
@@ -174,7 +177,7 @@ namespace APKToolGUI
             if (Settings.Default.InstallFramework_UseTag)
                 keyTag = String.Format("{0} \"{1}\"", InstallFrameworkKeys.Tag, Settings.Default.InstallFramework_Tag);
 
-            string args = String.Format("if{0}{1} \"{2}\"", keyFrameDir, keyTag, inputPath);
+            string args = String.Format($"if{keyFrameDir}{keyTag} \"{inputPath}\"");
 
             Start(args);
             BeginOutputReadLine();

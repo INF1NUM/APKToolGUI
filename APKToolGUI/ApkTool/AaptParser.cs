@@ -68,7 +68,7 @@ namespace APKToolGUI.Utils
                             Permissions += StringExt.Regex(@"(?<=name=\')(.*?)(?=\')", line) + "\n";
                             break;
                         case "sdkVersion":
-                            SdkVersion += SdkToAndroidVer(StringExt.Regex(@"(?<=sdkVersion:\')(.*?)(?=\')", line));
+                            SdkVersion = SdkToAndroidVer(StringExt.Regex(@"(?<=sdkVersion:\')(.*?)(?=\')", line));
                             break;
                         case "targetSdkVersion":
                             TargetSdkVersion = SdkToAndroidVer(StringExt.Regex(@"(?<=targetSdkVersion:\')(.*?)(?=\')", line));

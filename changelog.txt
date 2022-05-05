@@ -1,3 +1,13 @@
+3.0.1.0
+- Fix filename to signed APK
+- Fix minimum API changer
+- Added button to open decompile project output folder
+- Added "use aapt2"
+
+3.0.0.2
+- Fix APK input for decompilation 
+- Save log in temp folder
+
 3.0.0.1
 - Show changelog on update prompt
 - Implement unsigned APK creation after compile. Totally forgotten it

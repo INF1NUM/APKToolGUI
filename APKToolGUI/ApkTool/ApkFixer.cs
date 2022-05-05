@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace APKToolGUI.ApkTool
@@ -42,20 +43,16 @@ namespace APKToolGUI.ApkTool
             string ymlPath = Path.Combine(path, "apktool.yml");
             if (File.Exists(ymlPath))
             {
-                string[] Manifest = File.ReadAllLines(ymlPath);
-                string yml = "";
-                foreach (string s in Manifest)
+                string ymll = File.ReadAllText(ymlPath);
+  
+                int sdk = 30;
+                int.TryParse(StringExt.Regex(@"(?<= targetSdkVersion: \')(.*?)(?=\')", ymll), out sdk);
+                if (sdk >= 30)
                 {
-                    int sdk = 30;
-                    int.TryParse(StringExt.Regex(@"(?<= targetSdkVersion: \')(.*?)(?=\')", s), out sdk);
-                    if (sdk >= 30)
-                    {
-                        yml += "  targetSdkVersion: '29'\n";
-                        return true;
-                    }
-                    yml += s + "\n";
+                    ymll = ymll.Replace("targetSdkVersion: '" + sdk + "'", "targetSdkVersion: '29'");
+                    File.WriteAllText(ymlPath, ymll);
+                    return true;
                 }
-                File.WriteAllText(ymlPath, yml);
             }
             return false;
         }

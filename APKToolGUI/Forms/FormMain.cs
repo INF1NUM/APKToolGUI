@@ -89,6 +89,7 @@ namespace APKToolGUI
             button_DECODE_BrowseInputAppPath.Click += decodeHandlers.button_DECODE_BrowseInputAppPath_Click;
             button_DECODE_Decode.Click += decodeHandlers.button_DECODE_Decode_Click;
             decApkOpenDirBtn.Click += decodeHandlers.decApkOpenDirBtn_Click;
+            decOutOpenDirBtn.Click += decodeHandlers.decOutOpenDirBtn_Click;
 
             buildHandlers = new BuildControlEventHandlers(this);
             button_BUILD_BrowseAaptPath.Click += buildHandlers.button_BUILD_BrowseAaptPath_Click;
@@ -257,6 +258,9 @@ namespace APKToolGUI
                         case "apkinfo":
                             GetApkInfo(file);
                             tabControlMain.SelectedIndex = 1;
+                            break;
+                        default: //Fix when running app as Release from Visual studio
+                            IgnoreOutputDirContextMenu = false;
                             break;
                     }
                 }
@@ -566,6 +570,7 @@ namespace APKToolGUI
                             if (ApkFixer.RemoveApkToolDummies(outputDir))
                                 ToLog(ApktoolEventType.Information, Language.RemoveApkToolDummies);
                         }
+                        ToLog(ApktoolEventType.Information, Language.AllDone);
                     }
                     else
                         ToLog(ApktoolEventType.Error, Language.ErrorDecompiling);
@@ -613,7 +618,7 @@ namespace APKToolGUI
                     {
                         outputFile = Path.Combine(Settings.Default.Build_OutputAppPath, Path.GetFileName(inputFile)) + ".apk";
                         if (Settings.Default.Build_SignAfterBuild)
-                            outputFile = Path.Combine(Settings.Default.Build_OutputAppPath, Path.GetFileName(inputFile)) + "signed.apk";
+                            outputFile = Path.Combine(Settings.Default.Build_OutputAppPath, Path.GetFileName(inputFile)) + " signed.apk";
                     }
                     code = apktool.Build(outputFile);
 

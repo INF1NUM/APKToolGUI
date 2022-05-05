@@ -101,5 +101,15 @@ namespace APKToolGUI.Handlers
                 main.ToLog(ApktoolEventType.Error, Language.ErrorSelectedFileNotExist);
             }
         }
+        
+        internal void decOutOpenDirBtn_Click(object sender, EventArgs e)
+        {
+            if (Directory.Exists(main.textBox_DECODE_OutputDirectory.Text))
+                Process.Start("explorer.exe", main.textBox_DECODE_OutputDirectory.Text);
+            else
+            {
+                main.ToLog(ApktoolEventType.Error, Language.ErrorSelectedOutputFolderNotExist);
+            }
+        }
     }
 }

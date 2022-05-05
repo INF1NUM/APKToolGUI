@@ -93,7 +93,7 @@ namespace APKToolGUI.Handlers
             {
                 outputFile = Path.Combine(Settings.Default.Build_OutputAppPath, Path.GetFileName(decApkDir)) + ".apk";
                 if (Settings.Default.Build_SignAfterBuild)
-                    outputFile = Path.Combine(Settings.Default.Build_OutputAppPath, Path.GetFileName(decApkDir)) + "signed.apk";
+                    outputFile = Path.Combine(Settings.Default.Build_OutputAppPath, Path.GetFileName(decApkDir)) + " signed.apk";
             }
 
             if (File.Exists(outputFile))

@@ -932,5 +932,17 @@ namespace APKToolGUI.Properties {
                 this["IgnoreOutputDirContextMenu"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool Build_UseAapt2 {
+            get {
+                return ((bool)(this["Build_UseAapt2"]));
+            }
+            set {
+                this["Build_UseAapt2"] = value;
+            }
+        }
     }
 }
