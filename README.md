@@ -1,7 +1,7 @@
 # APK Tool GUI
 ![](https://i.imgur.com/MUuWTdW.png)
 
-![](https://img.shields.io/github/downloads/AndnixSH/APKToolGUI/total?style=for-the-badge) ![](https://img.shields.io/github/v/release/andnixsh/APKToolGUI?style=for-the-badge) ![](https://img.shields.io/github/v/release/andnixsh/APKToolGUI?style=for-the-badge)
+[![](https://img.shields.io/github/downloads/AndnixSH/APKToolGUI/total?style=for-the-badge)](https://github.com/AndnixSH/APKToolGUI/releases) [![](https://img.shields.io/github/v/release/andnixsh/APKToolGUI?style=for-the-badge)](https://github.com/AndnixSH/APKToolGUI/releases)
 
 GUI for apktool, signapk, zipalign and baksmali utilities.
 
