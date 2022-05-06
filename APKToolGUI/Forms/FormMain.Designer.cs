@@ -144,9 +144,6 @@
             this.toolStripStatusLabelStateText = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
             this.logGridView = new System.Windows.Forms.DataGridView();
-            this.ColumnImage = new System.Windows.Forms.DataGridViewImageColumn();
-            this.ColumnTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnMessage = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.contextMenuStripLog = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.clearLogToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mainMenu1 = new System.Windows.Forms.MainMenu(this.components);
@@ -158,7 +155,6 @@
             this.menuItemCheckUpdate = new System.Windows.Forms.MenuItem();
             this.apktoolIssueItem = new System.Windows.Forms.MenuItem();
             this.menuItemAbout = new System.Windows.Forms.MenuItem();
-            this.useAapt2ChkBox = new System.Windows.Forms.CheckBox();
             this.textBox_SIGN_InputFile = new System.Windows.Forms.TextBox();
             this.textBox_ZIPALIGN_InputFile = new System.Windows.Forms.TextBox();
             this.textBox_BUILD_InputProjectDir = new System.Windows.Forms.TextBox();
@@ -179,6 +175,7 @@
             this.checkBox_DECODE_Force = new System.Windows.Forms.CheckBox();
             this.checkBox_DECODE_NoRes = new System.Windows.Forms.CheckBox();
             this.checkBox_DECODE_NoDebugInfo = new System.Windows.Forms.CheckBox();
+            this.useAapt2ChkBox = new System.Windows.Forms.CheckBox();
             this.buildApiLvlUpDown = new System.Windows.Forms.NumericUpDown();
             this.buildSetApiLvlChkBox = new System.Windows.Forms.CheckBox();
             this.createUnsignApkChkBox = new System.Windows.Forms.CheckBox();
@@ -225,6 +222,9 @@
             this.baksmaliUseOutputChkBox = new System.Windows.Forms.CheckBox();
             this.baksmaliBrowseOutputTxtBox = new System.Windows.Forms.TextBox();
             this.baksmaliBrowseInputDexTxtBox = new System.Windows.Forms.TextBox();
+            this.ColumnImage = new System.Windows.Forms.DataGridViewImageColumn();
+            this.ColumnTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnMessage = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControlMain.SuspendLayout();
             this.tabPageMain.SuspendLayout();
             this.signPanel.SuspendLayout();
@@ -1147,30 +1147,6 @@
             this.logGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.logGridView.ShowEditingIcon = false;
             // 
-            // ColumnImage
-            // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.NullValue = null;
-            this.ColumnImage.DefaultCellStyle = dataGridViewCellStyle1;
-            this.ColumnImage.Frozen = true;
-            resources.ApplyResources(this.ColumnImage, "ColumnImage");
-            this.ColumnImage.Name = "ColumnImage";
-            this.ColumnImage.ReadOnly = true;
-            this.ColumnImage.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // ColumnTime
-            // 
-            resources.ApplyResources(this.ColumnTime, "ColumnTime");
-            this.ColumnTime.Name = "ColumnTime";
-            this.ColumnTime.ReadOnly = true;
-            // 
-            // ColumnMessage
-            // 
-            this.ColumnMessage.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            resources.ApplyResources(this.ColumnMessage, "ColumnMessage");
-            this.ColumnMessage.Name = "ColumnMessage";
-            this.ColumnMessage.ReadOnly = true;
-            // 
             // contextMenuStripLog
             // 
             this.contextMenuStripLog.ImageScalingSize = new System.Drawing.Size(20, 20);
@@ -1244,15 +1220,6 @@
             this.menuItemAbout.Index = 2;
             resources.ApplyResources(this.menuItemAbout, "menuItemAbout");
             this.menuItemAbout.Click += new System.EventHandler(this.menuItemAbout_Click);
-            // 
-            // useAapt2ChkBox
-            // 
-            resources.ApplyResources(this.useAapt2ChkBox, "useAapt2ChkBox");
-            this.useAapt2ChkBox.Checked = global::APKToolGUI.Properties.Settings.Default.Build_UseAapt2;
-            this.useAapt2ChkBox.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.useAapt2ChkBox.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "Build_UseAapt2", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.useAapt2ChkBox.Name = "useAapt2ChkBox";
-            this.useAapt2ChkBox.UseVisualStyleBackColor = true;
             // 
             // textBox_SIGN_InputFile
             // 
@@ -1417,6 +1384,15 @@
             this.checkBox_DECODE_NoDebugInfo.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "Decode_NoDebugInfo", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.checkBox_DECODE_NoDebugInfo.Name = "checkBox_DECODE_NoDebugInfo";
             this.checkBox_DECODE_NoDebugInfo.UseVisualStyleBackColor = true;
+            // 
+            // useAapt2ChkBox
+            // 
+            resources.ApplyResources(this.useAapt2ChkBox, "useAapt2ChkBox");
+            this.useAapt2ChkBox.Checked = global::APKToolGUI.Properties.Settings.Default.Build_UseAapt2;
+            this.useAapt2ChkBox.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.useAapt2ChkBox.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "Build_UseAapt2", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.useAapt2ChkBox.Name = "useAapt2ChkBox";
+            this.useAapt2ChkBox.UseVisualStyleBackColor = true;
             // 
             // buildApiLvlUpDown
             // 
@@ -1788,6 +1764,32 @@
             this.baksmaliBrowseInputDexTxtBox.Name = "baksmaliBrowseInputDexTxtBox";
             this.baksmaliBrowseInputDexTxtBox.Text = global::APKToolGUI.Properties.Settings.Default.Baksmali_InputDexFile;
             // 
+            // ColumnImage
+            // 
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.NullValue = null;
+            this.ColumnImage.DefaultCellStyle = dataGridViewCellStyle1;
+            this.ColumnImage.Frozen = true;
+            resources.ApplyResources(this.ColumnImage, "ColumnImage");
+            this.ColumnImage.Name = "ColumnImage";
+            this.ColumnImage.ReadOnly = true;
+            this.ColumnImage.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // ColumnTime
+            // 
+            resources.ApplyResources(this.ColumnTime, "ColumnTime");
+            this.ColumnTime.Name = "ColumnTime";
+            this.ColumnTime.ReadOnly = true;
+            this.ColumnTime.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // ColumnMessage
+            // 
+            this.ColumnMessage.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            resources.ApplyResources(this.ColumnMessage, "ColumnMessage");
+            this.ColumnMessage.Name = "ColumnMessage";
+            this.ColumnMessage.ReadOnly = true;
+            this.ColumnMessage.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
             // FormMain
             // 
             this.AllowDrop = true;
@@ -1800,6 +1802,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Menu = this.mainMenu1;
             this.Name = "FormMain";
+            this.Activated += new System.EventHandler(this.FormMain_Activated);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormMain_FormClosing);
             this.Shown += new System.EventHandler(this.FormMain_Shown);
             this.tabControlMain.ResumeLayout(false);
@@ -2035,15 +2038,15 @@
         internal System.Windows.Forms.Button apkAioLinkBtn;
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.DataGridViewImageColumn ColumnImage;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnTime;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnMessage;
         private System.Windows.Forms.MenuItem apktoolIssueItem;
         private System.Windows.Forms.MenuItem saveLogItem;
         internal System.Windows.Forms.Button signApkOpenDirBtn;
         internal System.Windows.Forms.Button alignApkOpenDirBtn;
         internal System.Windows.Forms.Button decOutOpenDirBtn;
         private System.Windows.Forms.CheckBox useAapt2ChkBox;
+        private System.Windows.Forms.DataGridViewImageColumn ColumnImage;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnTime;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnMessage;
     }
 }
 

@@ -944,5 +944,17 @@ namespace APKToolGUI.Properties {
                 this["Build_UseAapt2"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool PlaySoundWhenDone {
+            get {
+                return ((bool)(this["PlaySoundWhenDone"]));
+            }
+            set {
+                this["PlaySoundWhenDone"] = value;
+            }
+        }
     }
 }

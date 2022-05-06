@@ -127,6 +127,7 @@ namespace APKToolGUI.Handlers
                 main.Done();
             }
         }
+
         private async void DropApkToSign(DragEventArgs e)
         {
             string apkFile = null;

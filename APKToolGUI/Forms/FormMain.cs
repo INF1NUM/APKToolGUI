@@ -11,12 +11,9 @@ using APKToolGUI.ApkTool;
 using APKToolGUI.Utils;
 using System.Threading.Tasks;
 using System.Collections.Generic;
-using System.Linq;
-using Ookii.Dialogs.WinForms;
-using System.Threading;
 using APKToolGUI.Handlers;
-using System.Text;
-using System.Text.RegularExpressions;
+using Microsoft.WindowsAPICodePack.Taskbar;
+using System.Media;
 
 namespace APKToolGUI
 {
@@ -39,7 +36,11 @@ namespace APKToolGUI
         private SmaliControlEventHandlers smaliHandlers;
         private DragDropHandlers dragDropHandlers;
 
-        public bool IgnoreOutputDirContextMenu = false;
+        private bool IgnoreOutputDirContextMenu;
+        private bool isRunning;
+
+        private Stopwatch stopwatch;
+        private string lastStartedDate;
 
         public FormMain()
         {
@@ -134,6 +135,8 @@ namespace APKToolGUI
             comSmaliBtn.Click += smaliHandlers.comSmaliBtn_Click;
 
             dragDropHandlers = new DragDropHandlers(this);
+
+            stopwatch = new Stopwatch();
         }
 
         private void FormMain_Shown(object sender, EventArgs e)
@@ -172,6 +175,7 @@ namespace APKToolGUI
             TimeSpan updateInterval = DateTime.Now - Settings.Default.LastUpdateCheck;
             if (updateInterval.Days > 0 && Settings.Default.CheckForUpdateAtStartup)
                 updateCheker.CheckAsync(true);
+
             ToStatus(Language.Done, Resources.done);
 
             string decApkPath = Settings.Default.Decode_InputAppPath;
@@ -446,8 +450,14 @@ namespace APKToolGUI
 
         internal void Running()
         {
+            isRunning = true;
+            stopwatch.Reset();
+            stopwatch.Start();
+            lastStartedDate = DateTime.Now.ToString();
+
             Invoke(new Action(delegate ()
             {
+                TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Indeterminate, Handle);
                 toolStripProgressBar1.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
                 ActionButtonsEnabled = false;
                 ClearLog();
@@ -456,6 +466,17 @@ namespace APKToolGUI
 
         internal void Done()
         {
+            isRunning = false;
+
+            stopwatch.Stop();
+            TimeSpan ts = stopwatch.Elapsed;
+            ToLog(ApktoolEventType.Information, "Time started: " + lastStartedDate);
+            ToLog(ApktoolEventType.Information, "Time elapsed: " + ts.ToString("mm\\:ss"));
+
+            if (Settings.Default.PlaySoundWhenDone)
+                SystemSounds.Beep.Play();
+
+            TaskbarManager.Instance.SetProgressValue(1, 1);
             if (statusStrip1.InvokeRequired)
                 statusStrip1.BeginInvoke(new Action(delegate { toolStripProgressBar1.Style = System.Windows.Forms.ProgressBarStyle.Continuous; }));
             else
@@ -954,6 +975,12 @@ namespace APKToolGUI
         #endregion
 
         #region Form handlers
+        private void FormMain_Activated(object sender, EventArgs e)
+        {
+            if (!isRunning)
+                TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.NoProgress, Handle);
+        }
+
         private void FormMain_FormClosing(object sender, FormClosingEventArgs e)
         {
             //For debugging purposes

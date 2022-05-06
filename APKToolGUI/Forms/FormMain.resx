@@ -5317,7 +5317,7 @@ and change target SDK to 29</value>
     <value>100, 16</value>
   </data>
   <data name="statusStrip1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 464</value>
+    <value>0, 484</value>
   </data>
   <data name="statusStrip1.Size" type="System.Drawing.Size, System.Drawing">
     <value>596, 22</value>
@@ -5359,7 +5359,7 @@ and change target SDK to 29</value>
     <value>Time</value>
   </data>
   <data name="ColumnTime.Width" type="System.Int32, mscorlib">
-    <value>70</value>
+    <value>65</value>
   </data>
   <metadata name="ColumnMessage.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -5449,7 +5449,7 @@ and change target SDK to 29</value>
     <value>96, 96</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>596, 486</value>
+    <value>596, 506</value>
   </data>
   <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 8.25pt</value>
@@ -7147,24 +7147,6 @@ and change target SDK to 29</value>
   <data name="&gt;&gt;toolStripProgressBar1.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripProgressBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;ColumnImage.Name" xml:space="preserve">
-    <value>ColumnImage</value>
-  </data>
-  <data name="&gt;&gt;ColumnImage.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewImageColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ColumnTime.Name" xml:space="preserve">
-    <value>ColumnTime</value>
-  </data>
-  <data name="&gt;&gt;ColumnTime.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ColumnMessage.Name" xml:space="preserve">
-    <value>ColumnMessage</value>
-  </data>
-  <data name="&gt;&gt;ColumnMessage.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;clearLogToolStripMenuItem.Name" xml:space="preserve">
     <value>clearLogToolStripMenuItem</value>
   </data>
@@ -7224,6 +7206,24 @@ and change target SDK to 29</value>
   </data>
   <data name="&gt;&gt;menuItemAbout.Type" xml:space="preserve">
     <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ColumnImage.Name" xml:space="preserve">
+    <value>ColumnImage</value>
+  </data>
+  <data name="&gt;&gt;ColumnImage.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewImageColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ColumnTime.Name" xml:space="preserve">
+    <value>ColumnTime</value>
+  </data>
+  <data name="&gt;&gt;ColumnTime.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ColumnMessage.Name" xml:space="preserve">
+    <value>ColumnMessage</value>
+  </data>
+  <data name="&gt;&gt;ColumnMessage.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>FormMain</value>

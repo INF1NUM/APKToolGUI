@@ -1,3 +1,10 @@
+3.0.2.0
+- Bring back status bar. VS kept messing up with the design for some reason
+- Added timelapse
+- Added taskbar progress
+- Play sound when done (OFF by default)
+- Grid no longer sortable
+
 3.0.1.0
 - Fix filename to signed APK
 - Fix minimum API changer

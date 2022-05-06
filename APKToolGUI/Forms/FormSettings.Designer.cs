@@ -43,6 +43,7 @@
             this.buttonRemoveContextMenu = new System.Windows.Forms.Button();
             this.buttonCancel = new System.Windows.Forms.Button();
             this.buttonОК = new System.Windows.Forms.Button();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.checkBoxCheckUpdateStartup = new System.Windows.Forms.CheckBox();
             this.textBoxCustomJavaLocation = new System.Windows.Forms.TextBox();
@@ -75,6 +76,7 @@
             // groupBox1
             // 
             resources.ApplyResources(this.groupBox1, "groupBox1");
+            this.groupBox1.Controls.Add(this.checkBox2);
             this.groupBox1.Controls.Add(this.checkBox1);
             this.groupBox1.Controls.Add(this.checkBoxCheckUpdateStartup);
             this.groupBox1.Name = "groupBox1";
@@ -158,6 +160,14 @@
             this.buttonОК.UseVisualStyleBackColor = true;
             this.buttonОК.Click += new System.EventHandler(this.buttonОК_Click);
             // 
+            // checkBox2
+            // 
+            resources.ApplyResources(this.checkBox2, "checkBox2");
+            this.checkBox2.Checked = global::APKToolGUI.Properties.Settings.Default.PlaySoundWhenDone;
+            this.checkBox2.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "PlaySoundWhenDone", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            // 
             // checkBox1
             // 
             resources.ApplyResources(this.checkBox1, "checkBox1");
@@ -236,5 +246,6 @@
         private System.Windows.Forms.CheckBox checkBoxCheckUpdateStartup;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.CheckBox ignoreOutputContextMenuBox;
+        private System.Windows.Forms.CheckBox checkBox2;
     }
 }
