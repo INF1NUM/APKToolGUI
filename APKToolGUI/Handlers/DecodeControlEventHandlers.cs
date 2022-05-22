@@ -19,6 +19,12 @@ namespace APKToolGUI.Handlers
         public DecodeControlEventHandlers(FormMain Main)
         {
             main = Main;
+            main.button_DECODE_BrowseFrameDir.Click += button_DECODE_BrowseFrameDir_Click;
+            main.button_DECODE_BrowseOutputDirectory.Click += button_DECODE_BrowseOutputDirectory_Click;
+            main.button_DECODE_BrowseInputAppPath.Click += button_DECODE_BrowseInputAppPath_Click;
+            main.button_DECODE_Decode.Click += button_DECODE_Decode_Click;
+            main.decApkOpenDirBtn.Click += decApkOpenDirBtn_Click;
+            main.decOutOpenDirBtn.Click += decOutOpenDirBtn_Click;
         }
 
         internal void button_DECODE_BrowseFrameDir_Click(object sender, EventArgs e)

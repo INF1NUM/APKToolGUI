@@ -85,12 +85,7 @@ namespace APKToolGUI
             Settings.Default.Sign_Schemev4 = v4;
 
             decodeHandlers = new DecodeControlEventHandlers(this);
-            button_DECODE_BrowseFrameDir.Click += decodeHandlers.button_DECODE_BrowseFrameDir_Click;
-            button_DECODE_BrowseOutputDirectory.Click += decodeHandlers.button_DECODE_BrowseOutputDirectory_Click;
-            button_DECODE_BrowseInputAppPath.Click += decodeHandlers.button_DECODE_BrowseInputAppPath_Click;
-            button_DECODE_Decode.Click += decodeHandlers.button_DECODE_Decode_Click;
-            decApkOpenDirBtn.Click += decodeHandlers.decApkOpenDirBtn_Click;
-            decOutOpenDirBtn.Click += decodeHandlers.decOutOpenDirBtn_Click;
+            
 
             buildHandlers = new BuildControlEventHandlers(this);
             button_BUILD_BrowseAaptPath.Click += buildHandlers.button_BUILD_BrowseAaptPath_Click;
@@ -316,9 +311,9 @@ namespace APKToolGUI
             catch (Exception ex)
             {
 #if DEBUG
-                ToLog(ApktoolEventType.Error, ex.ToString());
+                ToLog(ApktoolEventType.Warning, Language.ErrorGettingApkInfo + "\n" + ex.ToString());
 #else
-                ToLog(ApktoolEventType.Error, ex.Message);
+                ToLog(ApktoolEventType.Warning, Language.ErrorGettingApkInfo);
 #endif
             }
         }

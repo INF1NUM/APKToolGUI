@@ -412,6 +412,15 @@ namespace APKToolGUI.Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to There was an error getting APK infomation.
+        /// </summary>
+        internal static string ErrorGettingApkInfo {
+            get {
+                return ResourceManager.GetString("ErrorGettingApkInfo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Java is not installed or is installed incorrectly. The program will be closed..
         /// </summary>
         internal static string ErrorJavaDetect {

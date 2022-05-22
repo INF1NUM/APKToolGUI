@@ -402,4 +402,7 @@
   <data name="MetainfNotExist" xml:space="preserve">
     <value>META-INF folder does not exist. Skipped</value>
   </data>
+  <data name="ErrorGettingApkInfo" xml:space="preserve">
+    <value>There was an error getting APK infomation</value>
+  </data>
 </root>
