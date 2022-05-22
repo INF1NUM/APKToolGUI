@@ -10,11 +10,6 @@ It is a tool for reverse engineering 3rd party, closed, binary Android apps. It 
 # Download links
 https://github.com/AndnixSH/APKToolGUI/releases
 
-https://app.box.com/s/y0cxdzxknb98v3c90e705ltzuehjiddn
-
-https://mega.nz/folder/aBxWnaSA#XMLOS9bPJgtTTd2vEjh2SQ
-
-https://sbupload.com/folder/3324/APK_Tool_GUI
 # Requirements
 - Windows 7 and above
 - JDK/JRE 8 and above. Highly recommended to use 64-bit version of Java if your system is 64-bit
