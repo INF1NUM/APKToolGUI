@@ -64,35 +64,39 @@
             this.button_DECODE_Decode = new System.Windows.Forms.Button();
             this.button_DECODE_BrowseInputAppPath = new System.Windows.Forms.Button();
             this.tabPageApkInfo = new System.Windows.Forms.TabPage();
-            this.selApkFileInfoBtn = new System.Windows.Forms.Button();
-            this.apkComboLinkBtn = new System.Windows.Forms.Button();
-            this.apkAioLinkBtn = new System.Windows.Forms.Button();
-            this.apkPureLinkBtn = new System.Windows.Forms.Button();
-            this.psLinkBtn = new System.Windows.Forms.Button();
-            this.label19 = new System.Windows.Forms.Label();
-            this.localsTxtBox = new System.Windows.Forms.RichTextBox();
-            this.label18 = new System.Windows.Forms.Label();
-            this.permTxtBox = new System.Windows.Forms.RichTextBox();
-            this.buildTxtBox = new System.Windows.Forms.TextBox();
-            this.apkIconPicBox = new System.Windows.Forms.PictureBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.basicInfoTabPage = new System.Windows.Forms.TabPage();
             this.label17 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.densityTxtBox = new System.Windows.Forms.TextBox();
-            this.screenTxtBox = new System.Windows.Forms.TextBox();
-            this.targetSdkTxtBox = new System.Windows.Forms.TextBox();
-            this.minSdkTxtBox = new System.Windows.Forms.TextBox();
-            this.verTxtBox = new System.Windows.Forms.TextBox();
-            this.packNameTxtBox = new System.Windows.Forms.TextBox();
-            this.fileTxtBox = new System.Windows.Forms.TextBox();
+            this.localsTxtBox = new System.Windows.Forms.RichTextBox();
+            this.selApkFileInfoBtn = new System.Windows.Forms.Button();
+            this.label18 = new System.Windows.Forms.Label();
             this.appTxtBox = new System.Windows.Forms.TextBox();
+            this.permTxtBox = new System.Windows.Forms.RichTextBox();
+            this.apkComboLinkBtn = new System.Windows.Forms.Button();
+            this.label15 = new System.Windows.Forms.Label();
+            this.fileTxtBox = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.densityTxtBox = new System.Windows.Forms.TextBox();
+            this.apkAioLinkBtn = new System.Windows.Forms.Button();
+            this.packNameTxtBox = new System.Windows.Forms.TextBox();
+            this.apkPureLinkBtn = new System.Windows.Forms.Button();
+            this.verTxtBox = new System.Windows.Forms.TextBox();
+            this.psLinkBtn = new System.Windows.Forms.Button();
+            this.minSdkTxtBox = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.targetSdkTxtBox = new System.Windows.Forms.TextBox();
+            this.screenTxtBox = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.buildTxtBox = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.apkIconPicBox = new System.Windows.Forms.PictureBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.fullInfoTextBox = new System.Windows.Forms.RichTextBox();
             this.tabPageDecode = new System.Windows.Forms.TabPage();
             this.groupBox_DECODE_Options = new System.Windows.Forms.GroupBox();
             this.decApiLvlUpDown = new System.Windows.Forms.NumericUpDown();
@@ -225,10 +229,6 @@
             this.menuItemCheckUpdate = new System.Windows.Forms.MenuItem();
             this.apktoolIssueItem = new System.Windows.Forms.MenuItem();
             this.menuItemAbout = new System.Windows.Forms.MenuItem();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.basicInfoTabPage = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.fullInfoTextBox = new System.Windows.Forms.RichTextBox();
             this.tabControlMain.SuspendLayout();
             this.tabPageMain.SuspendLayout();
             this.signPanel.SuspendLayout();
@@ -236,7 +236,10 @@
             this.comPanel.SuspendLayout();
             this.decPanel.SuspendLayout();
             this.tabPageApkInfo.SuspendLayout();
+            this.tabControl1.SuspendLayout();
+            this.basicInfoTabPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.apkIconPicBox)).BeginInit();
+            this.tabPage3.SuspendLayout();
             this.tabPageDecode.SuspendLayout();
             this.groupBox_DECODE_Options.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.decApiLvlUpDown)).BeginInit();
@@ -257,9 +260,6 @@
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logGridView)).BeginInit();
             this.contextMenuStripLog.SuspendLayout();
-            this.tabControl1.SuspendLayout();
-            this.basicInfoTabPage.SuspendLayout();
-            this.tabPage3.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControlMain
@@ -507,12 +507,85 @@
             resources.ApplyResources(this.tabPageApkInfo, "tabPageApkInfo");
             this.tabPageApkInfo.Name = "tabPageApkInfo";
             // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.basicInfoTabPage);
+            this.tabControl1.Controls.Add(this.tabPage3);
+            resources.ApplyResources(this.tabControl1, "tabControl1");
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.SizeMode = System.Windows.Forms.TabSizeMode.FillToRight;
+            // 
+            // basicInfoTabPage
+            // 
+            this.basicInfoTabPage.AllowDrop = true;
+            resources.ApplyResources(this.basicInfoTabPage, "basicInfoTabPage");
+            this.basicInfoTabPage.Controls.Add(this.label17);
+            this.basicInfoTabPage.Controls.Add(this.localsTxtBox);
+            this.basicInfoTabPage.Controls.Add(this.selApkFileInfoBtn);
+            this.basicInfoTabPage.Controls.Add(this.label18);
+            this.basicInfoTabPage.Controls.Add(this.appTxtBox);
+            this.basicInfoTabPage.Controls.Add(this.permTxtBox);
+            this.basicInfoTabPage.Controls.Add(this.apkComboLinkBtn);
+            this.basicInfoTabPage.Controls.Add(this.label15);
+            this.basicInfoTabPage.Controls.Add(this.fileTxtBox);
+            this.basicInfoTabPage.Controls.Add(this.label14);
+            this.basicInfoTabPage.Controls.Add(this.densityTxtBox);
+            this.basicInfoTabPage.Controls.Add(this.apkAioLinkBtn);
+            this.basicInfoTabPage.Controls.Add(this.packNameTxtBox);
+            this.basicInfoTabPage.Controls.Add(this.apkPureLinkBtn);
+            this.basicInfoTabPage.Controls.Add(this.verTxtBox);
+            this.basicInfoTabPage.Controls.Add(this.psLinkBtn);
+            this.basicInfoTabPage.Controls.Add(this.minSdkTxtBox);
+            this.basicInfoTabPage.Controls.Add(this.label19);
+            this.basicInfoTabPage.Controls.Add(this.targetSdkTxtBox);
+            this.basicInfoTabPage.Controls.Add(this.screenTxtBox);
+            this.basicInfoTabPage.Controls.Add(this.label7);
+            this.basicInfoTabPage.Controls.Add(this.label9);
+            this.basicInfoTabPage.Controls.Add(this.buildTxtBox);
+            this.basicInfoTabPage.Controls.Add(this.label8);
+            this.basicInfoTabPage.Controls.Add(this.apkIconPicBox);
+            this.basicInfoTabPage.Controls.Add(this.label11);
+            this.basicInfoTabPage.Controls.Add(this.label10);
+            this.basicInfoTabPage.Controls.Add(this.label13);
+            this.basicInfoTabPage.Controls.Add(this.label12);
+            this.basicInfoTabPage.Name = "basicInfoTabPage";
+            this.basicInfoTabPage.UseVisualStyleBackColor = true;
+            // 
+            // label17
+            // 
+            resources.ApplyResources(this.label17, "label17");
+            this.label17.Name = "label17";
+            // 
+            // localsTxtBox
+            // 
+            resources.ApplyResources(this.localsTxtBox, "localsTxtBox");
+            this.localsTxtBox.Name = "localsTxtBox";
+            this.localsTxtBox.ReadOnly = true;
+            // 
             // selApkFileInfoBtn
             // 
             resources.ApplyResources(this.selApkFileInfoBtn, "selApkFileInfoBtn");
             this.selApkFileInfoBtn.Name = "selApkFileInfoBtn";
             this.selApkFileInfoBtn.UseVisualStyleBackColor = true;
             this.selApkFileInfoBtn.Click += new System.EventHandler(this.selApkFileInfoBtn_Click);
+            // 
+            // label18
+            // 
+            resources.ApplyResources(this.label18, "label18");
+            this.label18.Name = "label18";
+            // 
+            // appTxtBox
+            // 
+            resources.ApplyResources(this.appTxtBox, "appTxtBox");
+            this.appTxtBox.Name = "appTxtBox";
+            this.appTxtBox.ReadOnly = true;
+            // 
+            // permTxtBox
+            // 
+            resources.ApplyResources(this.permTxtBox, "permTxtBox");
+            this.permTxtBox.Name = "permTxtBox";
+            this.permTxtBox.ReadOnly = true;
             // 
             // apkComboLinkBtn
             // 
@@ -521,12 +594,40 @@
             this.apkComboLinkBtn.UseVisualStyleBackColor = true;
             this.apkComboLinkBtn.Click += new System.EventHandler(this.apkComboLinkBtn_Click);
             // 
+            // label15
+            // 
+            resources.ApplyResources(this.label15, "label15");
+            this.label15.Name = "label15";
+            // 
+            // fileTxtBox
+            // 
+            resources.ApplyResources(this.fileTxtBox, "fileTxtBox");
+            this.fileTxtBox.Name = "fileTxtBox";
+            this.fileTxtBox.ReadOnly = true;
+            // 
+            // label14
+            // 
+            resources.ApplyResources(this.label14, "label14");
+            this.label14.Name = "label14";
+            // 
+            // densityTxtBox
+            // 
+            resources.ApplyResources(this.densityTxtBox, "densityTxtBox");
+            this.densityTxtBox.Name = "densityTxtBox";
+            this.densityTxtBox.ReadOnly = true;
+            // 
             // apkAioLinkBtn
             // 
             resources.ApplyResources(this.apkAioLinkBtn, "apkAioLinkBtn");
             this.apkAioLinkBtn.Name = "apkAioLinkBtn";
             this.apkAioLinkBtn.UseVisualStyleBackColor = true;
             this.apkAioLinkBtn.Click += new System.EventHandler(this.apkAioLinkBtn_Click);
+            // 
+            // packNameTxtBox
+            // 
+            resources.ApplyResources(this.packNameTxtBox, "packNameTxtBox");
+            this.packNameTxtBox.Name = "packNameTxtBox";
+            this.packNameTxtBox.ReadOnly = true;
             // 
             // apkPureLinkBtn
             // 
@@ -535,6 +636,12 @@
             this.apkPureLinkBtn.UseVisualStyleBackColor = true;
             this.apkPureLinkBtn.Click += new System.EventHandler(this.apkPureLinkBtn_Click);
             // 
+            // verTxtBox
+            // 
+            resources.ApplyResources(this.verTxtBox, "verTxtBox");
+            this.verTxtBox.Name = "verTxtBox";
+            this.verTxtBox.ReadOnly = true;
+            // 
             // psLinkBtn
             // 
             resources.ApplyResources(this.psLinkBtn, "psLinkBtn");
@@ -542,33 +649,49 @@
             this.psLinkBtn.UseVisualStyleBackColor = true;
             this.psLinkBtn.Click += new System.EventHandler(this.psLinkBtn_Click);
             // 
+            // minSdkTxtBox
+            // 
+            resources.ApplyResources(this.minSdkTxtBox, "minSdkTxtBox");
+            this.minSdkTxtBox.Name = "minSdkTxtBox";
+            this.minSdkTxtBox.ReadOnly = true;
+            // 
             // label19
             // 
             resources.ApplyResources(this.label19, "label19");
             this.label19.Name = "label19";
             // 
-            // localsTxtBox
+            // targetSdkTxtBox
             // 
-            resources.ApplyResources(this.localsTxtBox, "localsTxtBox");
-            this.localsTxtBox.Name = "localsTxtBox";
-            this.localsTxtBox.ReadOnly = true;
+            resources.ApplyResources(this.targetSdkTxtBox, "targetSdkTxtBox");
+            this.targetSdkTxtBox.Name = "targetSdkTxtBox";
+            this.targetSdkTxtBox.ReadOnly = true;
             // 
-            // label18
+            // screenTxtBox
             // 
-            resources.ApplyResources(this.label18, "label18");
-            this.label18.Name = "label18";
+            resources.ApplyResources(this.screenTxtBox, "screenTxtBox");
+            this.screenTxtBox.Name = "screenTxtBox";
+            this.screenTxtBox.ReadOnly = true;
             // 
-            // permTxtBox
+            // label7
             // 
-            resources.ApplyResources(this.permTxtBox, "permTxtBox");
-            this.permTxtBox.Name = "permTxtBox";
-            this.permTxtBox.ReadOnly = true;
+            resources.ApplyResources(this.label7, "label7");
+            this.label7.Name = "label7";
+            // 
+            // label9
+            // 
+            resources.ApplyResources(this.label9, "label9");
+            this.label9.Name = "label9";
             // 
             // buildTxtBox
             // 
             resources.ApplyResources(this.buildTxtBox, "buildTxtBox");
             this.buildTxtBox.Name = "buildTxtBox";
             this.buildTxtBox.ReadOnly = true;
+            // 
+            // label8
+            // 
+            resources.ApplyResources(this.label8, "label8");
+            this.label8.Name = "label8";
             // 
             // apkIconPicBox
             // 
@@ -577,103 +700,37 @@
             this.apkIconPicBox.Name = "apkIconPicBox";
             this.apkIconPicBox.TabStop = false;
             // 
+            // label11
+            // 
+            resources.ApplyResources(this.label11, "label11");
+            this.label11.Name = "label11";
+            // 
             // label10
             // 
             resources.ApplyResources(this.label10, "label10");
             this.label10.Name = "label10";
-            // 
-            // label12
-            // 
-            resources.ApplyResources(this.label12, "label12");
-            this.label12.Name = "label12";
-            // 
-            // label15
-            // 
-            resources.ApplyResources(this.label15, "label15");
-            this.label15.Name = "label15";
-            // 
-            // label14
-            // 
-            resources.ApplyResources(this.label14, "label14");
-            this.label14.Name = "label14";
             // 
             // label13
             // 
             resources.ApplyResources(this.label13, "label13");
             this.label13.Name = "label13";
             // 
-            // label11
+            // label12
             // 
-            resources.ApplyResources(this.label11, "label11");
-            this.label11.Name = "label11";
+            resources.ApplyResources(this.label12, "label12");
+            this.label12.Name = "label12";
             // 
-            // label8
+            // tabPage3
             // 
-            resources.ApplyResources(this.label8, "label8");
-            this.label8.Name = "label8";
+            this.tabPage3.Controls.Add(this.fullInfoTextBox);
+            resources.ApplyResources(this.tabPage3, "tabPage3");
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // label9
+            // fullInfoTextBox
             // 
-            resources.ApplyResources(this.label9, "label9");
-            this.label9.Name = "label9";
-            // 
-            // label17
-            // 
-            resources.ApplyResources(this.label17, "label17");
-            this.label17.Name = "label17";
-            // 
-            // label7
-            // 
-            resources.ApplyResources(this.label7, "label7");
-            this.label7.Name = "label7";
-            // 
-            // densityTxtBox
-            // 
-            resources.ApplyResources(this.densityTxtBox, "densityTxtBox");
-            this.densityTxtBox.Name = "densityTxtBox";
-            this.densityTxtBox.ReadOnly = true;
-            // 
-            // screenTxtBox
-            // 
-            resources.ApplyResources(this.screenTxtBox, "screenTxtBox");
-            this.screenTxtBox.Name = "screenTxtBox";
-            this.screenTxtBox.ReadOnly = true;
-            // 
-            // targetSdkTxtBox
-            // 
-            resources.ApplyResources(this.targetSdkTxtBox, "targetSdkTxtBox");
-            this.targetSdkTxtBox.Name = "targetSdkTxtBox";
-            this.targetSdkTxtBox.ReadOnly = true;
-            // 
-            // minSdkTxtBox
-            // 
-            resources.ApplyResources(this.minSdkTxtBox, "minSdkTxtBox");
-            this.minSdkTxtBox.Name = "minSdkTxtBox";
-            this.minSdkTxtBox.ReadOnly = true;
-            // 
-            // verTxtBox
-            // 
-            resources.ApplyResources(this.verTxtBox, "verTxtBox");
-            this.verTxtBox.Name = "verTxtBox";
-            this.verTxtBox.ReadOnly = true;
-            // 
-            // packNameTxtBox
-            // 
-            resources.ApplyResources(this.packNameTxtBox, "packNameTxtBox");
-            this.packNameTxtBox.Name = "packNameTxtBox";
-            this.packNameTxtBox.ReadOnly = true;
-            // 
-            // fileTxtBox
-            // 
-            resources.ApplyResources(this.fileTxtBox, "fileTxtBox");
-            this.fileTxtBox.Name = "fileTxtBox";
-            this.fileTxtBox.ReadOnly = true;
-            // 
-            // appTxtBox
-            // 
-            resources.ApplyResources(this.appTxtBox, "appTxtBox");
-            this.appTxtBox.Name = "appTxtBox";
-            this.appTxtBox.ReadOnly = true;
+            resources.ApplyResources(this.fullInfoTextBox, "fullInfoTextBox");
+            this.fullInfoTextBox.Name = "fullInfoTextBox";
             // 
             // tabPageDecode
             // 
@@ -1769,63 +1826,6 @@
             resources.ApplyResources(this.menuItemAbout, "menuItemAbout");
             this.menuItemAbout.Click += new System.EventHandler(this.menuItemAbout_Click);
             // 
-            // tabControl1
-            // 
-            this.tabControl1.Controls.Add(this.basicInfoTabPage);
-            this.tabControl1.Controls.Add(this.tabPage3);
-            resources.ApplyResources(this.tabControl1, "tabControl1");
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.SizeMode = System.Windows.Forms.TabSizeMode.FillToRight;
-            // 
-            // basicInfoTabPage
-            // 
-            this.basicInfoTabPage.AllowDrop = true;
-            resources.ApplyResources(this.basicInfoTabPage, "basicInfoTabPage");
-            this.basicInfoTabPage.Controls.Add(this.label17);
-            this.basicInfoTabPage.Controls.Add(this.localsTxtBox);
-            this.basicInfoTabPage.Controls.Add(this.selApkFileInfoBtn);
-            this.basicInfoTabPage.Controls.Add(this.label18);
-            this.basicInfoTabPage.Controls.Add(this.appTxtBox);
-            this.basicInfoTabPage.Controls.Add(this.permTxtBox);
-            this.basicInfoTabPage.Controls.Add(this.apkComboLinkBtn);
-            this.basicInfoTabPage.Controls.Add(this.label15);
-            this.basicInfoTabPage.Controls.Add(this.fileTxtBox);
-            this.basicInfoTabPage.Controls.Add(this.label14);
-            this.basicInfoTabPage.Controls.Add(this.densityTxtBox);
-            this.basicInfoTabPage.Controls.Add(this.apkAioLinkBtn);
-            this.basicInfoTabPage.Controls.Add(this.packNameTxtBox);
-            this.basicInfoTabPage.Controls.Add(this.apkPureLinkBtn);
-            this.basicInfoTabPage.Controls.Add(this.verTxtBox);
-            this.basicInfoTabPage.Controls.Add(this.psLinkBtn);
-            this.basicInfoTabPage.Controls.Add(this.minSdkTxtBox);
-            this.basicInfoTabPage.Controls.Add(this.label19);
-            this.basicInfoTabPage.Controls.Add(this.targetSdkTxtBox);
-            this.basicInfoTabPage.Controls.Add(this.screenTxtBox);
-            this.basicInfoTabPage.Controls.Add(this.label7);
-            this.basicInfoTabPage.Controls.Add(this.label9);
-            this.basicInfoTabPage.Controls.Add(this.buildTxtBox);
-            this.basicInfoTabPage.Controls.Add(this.label8);
-            this.basicInfoTabPage.Controls.Add(this.apkIconPicBox);
-            this.basicInfoTabPage.Controls.Add(this.label11);
-            this.basicInfoTabPage.Controls.Add(this.label10);
-            this.basicInfoTabPage.Controls.Add(this.label13);
-            this.basicInfoTabPage.Controls.Add(this.label12);
-            this.basicInfoTabPage.Name = "basicInfoTabPage";
-            this.basicInfoTabPage.UseVisualStyleBackColor = true;
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.Controls.Add(this.fullInfoTextBox);
-            resources.ApplyResources(this.tabPage3, "tabPage3");
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // fullInfoTextBox
-            // 
-            resources.ApplyResources(this.fullInfoTextBox, "fullInfoTextBox");
-            this.fullInfoTextBox.Name = "fullInfoTextBox";
-            // 
             // FormMain
             // 
             this.AllowDrop = true;
@@ -1836,6 +1836,7 @@
             this.Controls.Add(this.tabControlMain);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
             this.Menu = this.mainMenu1;
             this.Name = "FormMain";
             this.Activated += new System.EventHandler(this.FormMain_Activated);
@@ -1852,7 +1853,11 @@
             this.decPanel.ResumeLayout(false);
             this.decPanel.PerformLayout();
             this.tabPageApkInfo.ResumeLayout(false);
+            this.tabControl1.ResumeLayout(false);
+            this.basicInfoTabPage.ResumeLayout(false);
+            this.basicInfoTabPage.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.apkIconPicBox)).EndInit();
+            this.tabPage3.ResumeLayout(false);
             this.tabPageDecode.ResumeLayout(false);
             this.groupBox_DECODE_Options.ResumeLayout(false);
             this.groupBox_DECODE_Options.PerformLayout();
@@ -1882,10 +1887,6 @@
             this.statusStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logGridView)).EndInit();
             this.contextMenuStripLog.ResumeLayout(false);
-            this.tabControl1.ResumeLayout(false);
-            this.basicInfoTabPage.ResumeLayout(false);
-            this.basicInfoTabPage.PerformLayout();
-            this.tabPage3.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
