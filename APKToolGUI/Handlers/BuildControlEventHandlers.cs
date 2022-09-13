@@ -21,6 +21,12 @@ namespace APKToolGUI.Handlers
         public BuildControlEventHandlers(FormMain Main)
         {
             main = Main;
+            main.button_BUILD_BrowseAaptPath.Click += button_BUILD_BrowseAaptPath_Click;
+            main.button_BUILD_BrowseFrameDir.Click += button_BUILD_BrowseFrameDir_Click;
+            main.button_BUILD_BrowseOutputAppPath.Click += button_BUILD_BrowseOutputAppPath_Click;
+            main.button_BUILD_BrowseInputProjectDir.Click += button_BUILD_BrowseInputProjectDir_Click;
+            main.button_BUILD_Build.Click += button_BUILD_Build_Click;
+            main.comApkOpenDir.Click += comApkOpenDir_Click;
         }
 
         internal void button_BUILD_BrowseAaptPath_Click(object sender, EventArgs e)

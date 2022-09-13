@@ -21,6 +21,11 @@ namespace APKToolGUI.Handlers
         {
             main = Main;
             CheckAlignSwitch = !Settings.Default.Zipalign_CheckOnly;
+            main.checkBox_ZIPALIGN_CheckAlignment.Click += checkBox_ZIPALIGN_CheckAlignment_CheckedChanged;
+            main.button_ZIPALIGN_BrowseOutputFile.Click += button_ZIPALIGN_BrowseOutputFile_Click;
+            main.button_ZIPALIGN_BrowseInputFile.Click += button_ZIPALIGN_BrowseInputFile_Click;
+            main.button_ZIPALIGN_Align.Click += button_ZIPALIGN_Align_Click;
+            main.alignApkOpenDirBtn.Click += alignApkOpenDirBtn_Click;
         }
 
         internal bool CheckAlignSwitch

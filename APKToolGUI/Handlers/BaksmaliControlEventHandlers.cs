@@ -19,6 +19,9 @@ namespace APKToolGUI.Handlers
         public BaksmaliControlEventHandlers(FormMain Main)
         {
             main = Main;
+            main.baksmaliBrowseOutputBtn.Click += baksmaliBrowseOutputBtn_Click;
+            main.baksmaliBrowseInputDexBtn.Click += baksmaliBrowseInputDexBtn_Click;
+            main.decSmaliBtn.Click += decSmaliBtn_Click;
         }
 
         internal void baksmaliBrowseOutputBtn_Click(object sender, EventArgs e)

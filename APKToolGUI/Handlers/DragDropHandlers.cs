@@ -50,7 +50,7 @@ namespace APKToolGUI.Handlers
             main.smaliGroupBox.AllowDrop = true;
 
             DragEventHandler apkInfoEventHandler = new DragEventHandler((sender, e) => { DropApkToGetInfo(e); });
-            Register(main.tabPageApkInfo, ".apk", apkInfoEventHandler);
+            Register(main.basicInfoTabPage, ".apk", apkInfoEventHandler);
             Register(main.fileTxtBox, ".apk", apkInfoEventHandler);
         }
 
@@ -192,7 +192,7 @@ namespace APKToolGUI.Handlers
             if (e.DropOneByEnd(".apk", file => apkFile = file))
             {
                 main.smaliBrowseInputDirTxtBox.Text = apkFile;
-                main.tabPageApkInfo.BackColor = Color.White;
+                main.basicInfoTabPage.BackColor = Color.White;
                 main.GetApkInfo(apkFile);
             }
         }

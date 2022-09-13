@@ -44,11 +44,17 @@ namespace APKToolGUI.Utils
 
         public string AppIcon = null;
 
+        public string FullInfo;
+
+
         public bool Parse(string file)
         {
             bool result = true;
 
             string info = ParseApkInfo(file);
+
+            FullInfo = info;
+
             if (!String.IsNullOrEmpty(info))
             {
                 string[] lines = info.Split(

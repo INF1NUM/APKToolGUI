@@ -27,15 +27,6 @@ namespace APKToolGUI
         internal UpdateChecker updateCheker;
         internal AaptParser aapt;
 
-        private DecodeControlEventHandlers decodeHandlers;
-        private BuildControlEventHandlers buildHandlers;
-        private SignControlEventHandlers signHandlers;
-        private ZipalignControlEventHandlers zipalignHandlers;
-        private FrameworkControlEventHandlers frameworkHandlers;
-        private BaksmaliControlEventHandlers baksmaliHandlers;
-        private SmaliControlEventHandlers smaliHandlers;
-        private DragDropHandlers dragDropHandlers;
-
         private bool IgnoreOutputDirContextMenu;
         private bool isRunning;
 
@@ -84,52 +75,14 @@ namespace APKToolGUI
             schemev4ComboBox.SelectedIndex = v4;
             Settings.Default.Sign_Schemev4 = v4;
 
-            decodeHandlers = new DecodeControlEventHandlers(this);
-            
-
-            buildHandlers = new BuildControlEventHandlers(this);
-            button_BUILD_BrowseAaptPath.Click += buildHandlers.button_BUILD_BrowseAaptPath_Click;
-            button_BUILD_BrowseFrameDir.Click += buildHandlers.button_BUILD_BrowseFrameDir_Click;
-            button_BUILD_BrowseOutputAppPath.Click += buildHandlers.button_BUILD_BrowseOutputAppPath_Click;
-            button_BUILD_BrowseInputProjectDir.Click += buildHandlers.button_BUILD_BrowseInputProjectDir_Click;
-            button_BUILD_Build.Click += buildHandlers.button_BUILD_Build_Click;
-            comApkOpenDir.Click += buildHandlers.comApkOpenDir_Click;
-
-            signHandlers = new SignControlEventHandlers(this);
-            button_SIGN_BrowsePublicKey.Click += signHandlers.button_SIGN_BrowsePublicKey_Click;
-            button_SIGN_BrowsePrivateKey.Click += signHandlers.button_SIGN_BrowsePrivateKey_Click;
-            button_SIGN_BrowsePrivateKey.Click += signHandlers.button_SIGN_BrowsePrivateKey_Click;
-            button_SIGN_BrowseInputFile.Click += signHandlers.button_SIGN_BrowseInputFile_Click;
-            button_SIGN_BrowseOutputFile.Click += signHandlers.button_SIGN_BrowseOutputFile_Click;
-            button_SIGN_Sign.Click += signHandlers.button_SIGN_Sign_Click;
-            selectKeyStoreFileBtn.Click += signHandlers.selectKeyStoreFileBtn_Click;
-            signApkOpenDirBtn.Click += signHandlers.signApkOpenDirBtn_Click;
-
-            zipalignHandlers = new ZipalignControlEventHandlers(this);
-            checkBox_ZIPALIGN_CheckAlignment.Click += zipalignHandlers.checkBox_ZIPALIGN_CheckAlignment_CheckedChanged;
-            button_ZIPALIGN_BrowseOutputFile.Click += zipalignHandlers.button_ZIPALIGN_BrowseOutputFile_Click;
-            button_ZIPALIGN_BrowseInputFile.Click += zipalignHandlers.button_ZIPALIGN_BrowseInputFile_Click;
-            button_ZIPALIGN_Align.Click += zipalignHandlers.button_ZIPALIGN_Align_Click;
-            alignApkOpenDirBtn.Click += zipalignHandlers.alignApkOpenDirBtn_Click;
-
-            frameworkHandlers = new FrameworkControlEventHandlers(this);
-            button_IF_BrowseFrameDir.Click += frameworkHandlers.button_IF_BrowseFrameDir_Click;
-            button_IF_BrowseInputFramePath.Click += frameworkHandlers.button_IF_BrowseInputFramePath_Click;
-            button_IF_InstallFramework.Click += frameworkHandlers.button_IF_InstallFramework_Click;
-            clearFwBtn.Click += frameworkHandlers.clearFwBtn_Click;
-            openFwFolderBtn.Click += frameworkHandlers.openFwFolderBtn_Click;
-
-            baksmaliHandlers = new BaksmaliControlEventHandlers(this);
-            baksmaliBrowseOutputBtn.Click += baksmaliHandlers.baksmaliBrowseOutputBtn_Click;
-            baksmaliBrowseInputDexBtn.Click += baksmaliHandlers.baksmaliBrowseInputDexBtn_Click;
-            decSmaliBtn.Click += baksmaliHandlers.decSmaliBtn_Click;
-
-            smaliHandlers = new SmaliControlEventHandlers(this);
-            smaliBrowseOutputBtn.Click += smaliHandlers.smaliBrowseOutputBtn_Click;
-            smaliBrowseInputDirBtn.Click += smaliHandlers.smaliBrowseInputDirBtn_Click;
-            comSmaliBtn.Click += smaliHandlers.comSmaliBtn_Click;
-
-            dragDropHandlers = new DragDropHandlers(this);
+            new DecodeControlEventHandlers(this);
+            new BuildControlEventHandlers(this);
+            new SignControlEventHandlers(this);
+            new ZipalignControlEventHandlers(this);
+            new FrameworkControlEventHandlers(this);
+            new BaksmaliControlEventHandlers(this);
+            new SmaliControlEventHandlers(this);
+            new DragDropHandlers(this);
 
             stopwatch = new Stopwatch();
         }
@@ -299,6 +252,7 @@ namespace APKToolGUI
                             densityTxtBox.Text = aapt.Densities;
                             permTxtBox.Text = aapt.Permissions;
                             localsTxtBox.Text = aapt.Locales;
+                            fullInfoTextBox.Text = aapt.FullInfo;
                             ZipUtils.ExtractFile(file, aapt.AppIcon, Path.Combine(Program.TEMP_DIR, aapt.PackageName));
 
                             string icon = Path.Combine(Program.TEMP_DIR, aapt.PackageName, Path.GetFileName(aapt.AppIcon));

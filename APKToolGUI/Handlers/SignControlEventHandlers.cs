@@ -21,6 +21,14 @@ namespace APKToolGUI.Handlers
         public SignControlEventHandlers(FormMain Main)
         {
             main = Main;
+            main.button_SIGN_BrowsePublicKey.Click += button_SIGN_BrowsePublicKey_Click;
+            main.button_SIGN_BrowsePrivateKey.Click += button_SIGN_BrowsePrivateKey_Click;
+            main.button_SIGN_BrowsePrivateKey.Click += button_SIGN_BrowsePrivateKey_Click;
+            main.button_SIGN_BrowseInputFile.Click += button_SIGN_BrowseInputFile_Click;
+            main.button_SIGN_BrowseOutputFile.Click += button_SIGN_BrowseOutputFile_Click;
+            main.button_SIGN_Sign.Click += button_SIGN_Sign_Click;
+            main.selectKeyStoreFileBtn.Click += selectKeyStoreFileBtn_Click;
+            main.signApkOpenDirBtn.Click += signApkOpenDirBtn_Click;
         }
 
         internal void button_SIGN_BrowsePublicKey_Click(object sender, EventArgs e)

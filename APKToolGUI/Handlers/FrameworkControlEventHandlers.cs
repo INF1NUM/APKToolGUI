@@ -20,6 +20,11 @@ namespace APKToolGUI.Handlers
         public FrameworkControlEventHandlers(FormMain Main)
         {
             main = Main;
+            main.button_IF_BrowseFrameDir.Click += button_IF_BrowseFrameDir_Click;
+            main.button_IF_BrowseInputFramePath.Click += button_IF_BrowseInputFramePath_Click;
+            main.button_IF_InstallFramework.Click += button_IF_InstallFramework_Click;
+            main.clearFwBtn.Click += clearFwBtn_Click;
+            main.openFwFolderBtn.Click += openFwFolderBtn_Click;
         }
 
         internal void button_IF_BrowseFrameDir_Click(object sender, EventArgs e)

@@ -19,6 +19,9 @@ namespace APKToolGUI.Handlers
         public SmaliControlEventHandlers(FormMain Main)
         {
             main = Main;
+            main.smaliBrowseOutputBtn.Click += smaliBrowseOutputBtn_Click;
+            main.smaliBrowseInputDirBtn.Click += smaliBrowseInputDirBtn_Click;
+            main.comSmaliBtn.Click += comSmaliBtn_Click;
         }
 
         internal void smaliBrowseOutputBtn_Click(object sender, EventArgs e)
