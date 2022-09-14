@@ -1357,6 +1357,8 @@
             // signAfterZipalignChkBox
             // 
             resources.ApplyResources(this.signAfterZipalignChkBox, "signAfterZipalignChkBox");
+            this.signAfterZipalignChkBox.Checked = global::APKToolGUI.Properties.Settings.Default.Zipalign_SignAfterZipAlign;
+            this.signAfterZipalignChkBox.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "Zipalign_SignAfterZipAlign", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.signAfterZipalignChkBox.Name = "signAfterZipalignChkBox";
             this.signAfterZipalignChkBox.UseVisualStyleBackColor = true;
             // 

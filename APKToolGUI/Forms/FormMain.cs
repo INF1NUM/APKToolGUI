@@ -467,7 +467,7 @@ namespace APKToolGUI
         {
             Invoke(new Action(delegate ()
             {
-                ToLog(ApktoolEventType.Information, "=====[" + Language.Signing + "]=====");
+                ToLog(ApktoolEventType.Information, "=====[ " + Language.Signing + " ]=====");
                 ToStatus(String.Format(Language.Signing + " \"{0}\"...", Path.GetFileName(input)), Resources.waiting);
             }));
 
@@ -515,7 +515,7 @@ namespace APKToolGUI
 
                     Invoke(new Action(delegate ()
                     {
-                        ToLog(ApktoolEventType.Information, "=====[" + Language.Decoding + "]=====");
+                        ToLog(ApktoolEventType.Information, "=====[ " + Language.Decoding + " ]=====");
                         ToStatus(String.Format(Language.Decoding + " \"{0}\"...", Path.GetFileName(inputApk)), Resources.waiting);
                     }));
 
@@ -564,7 +564,7 @@ namespace APKToolGUI
         {
             Invoke(new Action(delegate ()
             {
-                ToLog(ApktoolEventType.Information, "=====[" + Language.ClearingFramework + "]=====");
+                ToLog(ApktoolEventType.Information, "=====[ " + Language.ClearingFramework + " ]=====");
                 ToStatus(Language.ClearingFramework + "...", Resources.waiting);
             }));
 
@@ -576,7 +576,7 @@ namespace APKToolGUI
             int code = 0;
 
             Running();
-            ToLog(ApktoolEventType.Information, "=====[" + Language.Build + "]=====");
+            ToLog(ApktoolEventType.Information, "=====[ " + Language.Build + " ]=====");
             ToStatus(String.Format(Language.Build + " \"{0}\"...", Path.GetFileName(textBox_BUILD_InputProjectDir.Text)), Resources.waiting);
 
             try
@@ -608,18 +608,19 @@ namespace APKToolGUI
                             }
                             else
                             {
+                                ToLog(ApktoolEventType.Information, Language.Done);
                                 if (Settings.Default.Build_CreateUnsignedApk)
                                 {
-                                    ToLog(ApktoolEventType.Information, Language.CreateUnsignedApk);
+                                    ToLog(ApktoolEventType.Information, "=====[ " + Language.CreateUnsignedApk + " ]=====");
                                     if (Directory.Exists(Path.Combine(inputFile, "original", "META-INF")))
                                     {
                                         ZipUtils.UpdateDirectory(outputFile, Path.Combine(inputFile, "original", "META-INF"), "META-INF");
                                         File.Copy(outputFile, Path.Combine(Path.GetDirectoryName(outputFile), Path.GetFileName(inputFile) + " unsigned.apk"), true);
+                                        ToLog(ApktoolEventType.Information, Language.Done);
                                     }
                                     else
                                         ToLog(ApktoolEventType.Warning, Language.MetainfNotExist);
                                 }
-                                ToLog(ApktoolEventType.Information, Language.Done);
                             }
                         }
                         if (Settings.Default.Build_SignAfterBuild)
@@ -631,9 +632,9 @@ namespace APKToolGUI
                                 return;
                             }
                             else
-                                ToLog(ApktoolEventType.Information, Language.Done);
+                                ToLog(ApktoolEventType.Information, Language.Done );
                         }
-                        ToLog(ApktoolEventType.Information, Language.AllDone);
+                        ToLog(ApktoolEventType.Information, "=====[ " + Language.AllDone + " ]=====");
                     }
                     else
                         ToLog(ApktoolEventType.Error, Language.ErrorCompiling);
@@ -675,7 +676,7 @@ namespace APKToolGUI
             try
             {
                 Running();
-                ToLog(ApktoolEventType.Information, "=====[" + Language.DecompilingDex + "]=====");
+                ToLog(ApktoolEventType.Information, "=====[ " + Language.DecompilingDex + " ]=====");
                 ToStatus(String.Format(Language.DecompilingDex + "...", Path.GetFileName(baksmaliBrowseInputDexTxtBox.Text)), Resources.waiting);
 
                 await Task.Factory.StartNew(() =>
@@ -732,7 +733,7 @@ namespace APKToolGUI
             try
             {
                 Running();
-                ToLog(ApktoolEventType.Information, "=====[" + Language.CompilingDex + "]=====");
+                ToLog(ApktoolEventType.Information, "=====[ " + Language.CompilingDex + " ]=====");
                 ToStatus(String.Format(Language.DecompilingDex + "...", Path.GetFileName(smaliBrowseInputDirTxtBox.Text)), Resources.waiting);
 
                 await Task.Factory.StartNew(() =>
@@ -781,7 +782,7 @@ namespace APKToolGUI
         {
             Invoke(new Action(delegate ()
             {
-                ToLog(ApktoolEventType.Information, "=====[" + Language.Aligning + "]=====");
+                ToLog(ApktoolEventType.Information, "=====[ " + Language.Aligning + " ]=====");
                 ToStatus(String.Format(Language.Aligning + " \"{0}\"...", Path.GetFileName(input)), Resources.waiting);
             }));
 
