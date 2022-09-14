@@ -45,7 +45,7 @@
     <DebugSymbols>false</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>D:\Portable Apps\APK Tool GUI\</OutputPath>
+    <OutputPath>bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -421,7 +421,7 @@
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PreBuildEvent>xcopy "$(ProjectDir)tools" "$(OutDir)Resources" /Y /I /S</PreBuildEvent>
+    <PreBuildEvent>if not exist "$(ProjectDir)\$(OutDir)\Resources" xcopy "$(SolutionDir)\Tools" "$(ProjectDir)\$(OutDir)\Resources" /Y /I /S</PreBuildEvent>
   </PropertyGroup>
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

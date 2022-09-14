@@ -135,6 +135,7 @@ namespace APKToolGUI
             RunCmdArgs();
         }
 
+        #region Context menu args
         private async void RunCmdArgs()
         {
             try
@@ -222,6 +223,7 @@ namespace APKToolGUI
                 ToLog(ApktoolEventType.Error, ex.Message);
             }
         }
+        #endregion
 
         #region Get APK Info
         internal async void GetApkInfo(string file)
