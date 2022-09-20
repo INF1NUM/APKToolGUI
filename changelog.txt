@@ -1,3 +1,9 @@
+3.1.0.0
+- Disable maximize
+- Sign after align settings fixed
+- Sign after align enabled by default
+- Update dependencies
+
 3.0.2.0
 - Bring back status bar. VS kept messing up with the design for some reason
 - Added timelapse
