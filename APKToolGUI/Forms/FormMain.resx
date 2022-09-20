@@ -5167,7 +5167,7 @@ and change target SDK to 29</value>
   <data name="toolStripStatusLabelStateText.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAN
-        1QAADdUBPdZY8QAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAADaJSURBVHhe7d15
+        0gAADdIBb5L+jgAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAADaJSURBVHhe7d15
         sF5Vme/xZlDgFiZ46WtZRkS83KEcUnqtW16rrboNTpiGArqvrd3MaJgMAq1ICINgmgiRBJCIYBgDQss8
         xEQgGBmSEJB5CEOYMgGBhAQcCBD2fVbyHrPZ/hLOOWutvdfe6/vHp6rrKRtS717P73k4OWu/f1MUBbDG
         l//129uavc3R5kxzlZljnjNvmAJA8lyvup51vet62PWy62nX29uq3keeZBH5sED4rPmRud+oMAHQLa7X
@@ -5425,7 +5425,7 @@ and change target SDK to 29</value>
     <value>100, 16</value>
   </data>
   <data name="statusStrip1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 484</value>
+    <value>0, 486</value>
   </data>
   <data name="statusStrip1.Size" type="System.Drawing.Size, System.Drawing">
     <value>596, 22</value>
@@ -5557,7 +5557,7 @@ and change target SDK to 29</value>
     <value>96, 96</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>596, 506</value>
+    <value>596, 508</value>
   </data>
   <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 8.25pt</value>
