@@ -2,229 +2,229 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="APKToolGUI.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
-    <Setting Name="Decode_NoSrc" Provider="Bluegrams.Application.PortableSettingsProvider" Type="System.Boolean" Scope="User">
+    <Setting Name="Decode_NoSrc" Provider="Bluegrams.Application.PortableSettingsProvider" Roaming="true" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
-    <Setting Name="Decode_NoRes" Provider="Bluegrams.Application.PortableSettingsProvider" Type="System.Boolean" Scope="User">
+    <Setting Name="Decode_NoRes" Provider="Bluegrams.Application.PortableSettingsProvider" Roaming="true" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
-    <Setting Name="Decode_Force" Provider="Bluegrams.Application.PortableSettingsProvider" Type="System.Boolean" Scope="User">
+    <Setting Name="Decode_Force" Provider="Bluegrams.Application.PortableSettingsProvider" Roaming="true" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>
     </Setting>
-    <Setting Name="Decode_UseFramework" Provider="Bluegrams.Application.PortableSettingsProvider" Type="System.Boolean" Scope="User">
+    <Setting Name="Decode_UseFramework" Provider="Bluegrams.Application.PortableSettingsProvider" Roaming="true" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
-    <Setting Name="Build_ForceAll" Provider="Bluegrams.Application.PortableSettingsProvider" Type="System.Boolean" Scope="User">
+    <Setting Name="Build_ForceAll" Provider="Bluegrams.Application.PortableSettingsProvider" Roaming="true" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>
     </Setting>
-    <Setting Name="Decode_InputAppPath" Provider="Bluegrams.Application.PortableSettingsProvider" GenerateDefaultValueInCode="false" Type="System.String" Scope="User">
+    <Setting Name="Decode_InputAppPath" Provider="Bluegrams.Application.PortableSettingsProvider" Roaming="true" GenerateDefaultValueInCode="false" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="Decode_FrameDir" Provider="Bluegrams.Application.PortableSettingsProvider" GenerateDefaultValueInCode="false" Type="System.String" Scope="User">
+    <Setting Name="Decode_FrameDir" Provider="Bluegrams.Application.PortableSettingsProvider" Roaming="true" GenerateDefaultValueInCode="false" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="BuildProjectDir" Provider="Bluegrams.Application.PortableSettingsProvider" GenerateDefaultValueInCode="false" Type="System.String" Scope="User">
+    <Setting Name="BuildProjectDir" Provider="Bluegrams.Application.PortableSettingsProvider" Roaming="true" GenerateDefaultValueInCode="false" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="InstallFramework_InputFramePath" Provider="Bluegrams.Application.PortableSettingsProvider" GenerateDefaultValueInCode="false" Type="System.String" Scope="User">
+    <Setting Name="InstallFramework_InputFramePath" Provider="Bluegrams.Application.PortableSettingsProvider" Roaming="true" GenerateDefaultValueInCode="false" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="Sign_InputFile" Provider="Bluegrams.Application.PortableSettingsProvider" GenerateDefaultValueInCode="false" Type="System.String" Scope="User">
+    <Setting Name="Sign_InputFile" Provider="Bluegrams.Application.PortableSettingsProvider" Roaming="true" GenerateDefaultValueInCode="false" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="Sign_OutputDir" Provider="Bluegrams.Application.PortableSettingsProvider" GenerateDefaultValueInCode="false" Type="System.String" Scope="User">
+    <Setting Name="Sign_OutputDir" Provider="Bluegrams.Application.PortableSettingsProvider" Roaming="true" GenerateDefaultValueInCode="false" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="Build_UseAapt" Provider="Bluegrams.Application.PortableSettingsProvider" Type="System.Boolean" Scope="User">
+    <Setting Name="Build_UseAapt" Provider="Bluegrams.Application.PortableSettingsProvider" Roaming="true" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
-    <Setting Name="Build_AaptPath" Provider="Bluegrams.Application.PortableSettingsProvider" GenerateDefaultValueInCode="false" Type="System.String" Scope="User">
+    <Setting Name="Build_AaptPath" Provider="Bluegrams.Application.PortableSettingsProvider" Roaming="true" GenerateDefaultValueInCode="false" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="Culture" Provider="Bluegrams.Application.PortableSettingsProvider" Type="System.String" Scope="User">
+    <Setting Name="Culture" Provider="Bluegrams.Application.PortableSettingsProvider" Roaming="true" Type="System.String" Scope="User">
       <Value Profile="(Default)">Auto</Value>
     </Setting>
-    <Setting Name="JavaExe" Provider="Bluegrams.Application.PortableSettingsProvider" GenerateDefaultValueInCode="false" Type="System.String" Scope="User">
+    <Setting Name="JavaExe" Provider="Bluegrams.Application.PortableSettingsProvider" Roaming="true" GenerateDefaultValueInCode="false" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="LastUpdateCheck" Provider="Bluegrams.Application.PortableSettingsProvider" GenerateDefaultValueInCode="false" Type="System.DateTime" Scope="User">
+    <Setting Name="LastUpdateCheck" Provider="Bluegrams.Application.PortableSettingsProvider" Roaming="true" GenerateDefaultValueInCode="false" Type="System.DateTime" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="CheckForUpdateAtStartup" Provider="Bluegrams.Application.PortableSettingsProvider" Type="System.Boolean" Scope="User">
+    <Setting Name="CheckForUpdateAtStartup" Provider="Bluegrams.Application.PortableSettingsProvider" Roaming="true" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>
     </Setting>
-    <Setting Name="ClearLogBeforeAction" Provider="Bluegrams.Application.PortableSettingsProvider" Type="System.Boolean" Scope="User">
+    <Setting Name="ClearLogBeforeAction" Provider="Bluegrams.Application.PortableSettingsProvider" Roaming="true" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
-    <Setting Name="Decode_MatchOriginal" Provider="Bluegrams.Application.PortableSettingsProvider" Type="System.Boolean" Scope="User">
+    <Setting Name="Decode_MatchOriginal" Provider="Bluegrams.Application.PortableSettingsProvider" Roaming="true" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
-    <Setting Name="Decode_KeepBrokenRes" Provider="Bluegrams.Application.PortableSettingsProvider" Type="System.Boolean" Scope="User">
+    <Setting Name="Decode_KeepBrokenRes" Provider="Bluegrams.Application.PortableSettingsProvider" Roaming="true" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
-    <Setting Name="Build_CopyOriginal" Provider="Bluegrams.Application.PortableSettingsProvider" Type="System.Boolean" Scope="User">
+    <Setting Name="Build_CopyOriginal" Provider="Bluegrams.Application.PortableSettingsProvider" Roaming="true" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
-    <Setting Name="Build_FrameDir" Provider="Bluegrams.Application.PortableSettingsProvider" GenerateDefaultValueInCode="false" Type="System.String" Scope="User">
+    <Setting Name="Build_FrameDir" Provider="Bluegrams.Application.PortableSettingsProvider" Roaming="true" GenerateDefaultValueInCode="false" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="Build_UseFramework" Provider="Bluegrams.Application.PortableSettingsProvider" Type="System.Boolean" Scope="User">
+    <Setting Name="Build_UseFramework" Provider="Bluegrams.Application.PortableSettingsProvider" Roaming="true" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
-    <Setting Name="Decode_UseOutputDir" Provider="Bluegrams.Application.PortableSettingsProvider" Type="System.Boolean" Scope="User">
+    <Setting Name="Decode_UseOutputDir" Provider="Bluegrams.Application.PortableSettingsProvider" Roaming="true" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
-    <Setting Name="Decode_OutputDir" Provider="Bluegrams.Application.PortableSettingsProvider" GenerateDefaultValueInCode="false" Type="System.String" Scope="User">
+    <Setting Name="Decode_OutputDir" Provider="Bluegrams.Application.PortableSettingsProvider" Roaming="true" GenerateDefaultValueInCode="false" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="Build_UseOutputAppPath" Provider="Bluegrams.Application.PortableSettingsProvider" Type="System.Boolean" Scope="User">
+    <Setting Name="Build_UseOutputAppPath" Provider="Bluegrams.Application.PortableSettingsProvider" Roaming="true" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
-    <Setting Name="Build_OutputAppPath" Provider="Bluegrams.Application.PortableSettingsProvider" Type="System.String" Scope="User">
+    <Setting Name="Build_OutputAppPath" Provider="Bluegrams.Application.PortableSettingsProvider" Roaming="true" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="Build_InputDir" Provider="Bluegrams.Application.PortableSettingsProvider" Type="System.String" Scope="User">
+    <Setting Name="Build_InputDir" Provider="Bluegrams.Application.PortableSettingsProvider" Roaming="true" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="InstallFramework_UseFrameDir" Provider="Bluegrams.Application.PortableSettingsProvider" Type="System.Boolean" Scope="User">
+    <Setting Name="InstallFramework_UseFrameDir" Provider="Bluegrams.Application.PortableSettingsProvider" Roaming="true" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
-    <Setting Name="InstallFramework_UseTag" Provider="Bluegrams.Application.PortableSettingsProvider" Type="System.Boolean" Scope="User">
+    <Setting Name="InstallFramework_UseTag" Provider="Bluegrams.Application.PortableSettingsProvider" Roaming="true" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
-    <Setting Name="InstallFramework_Tag" Provider="Bluegrams.Application.PortableSettingsProvider" Type="System.String" Scope="User">
+    <Setting Name="InstallFramework_Tag" Provider="Bluegrams.Application.PortableSettingsProvider" Roaming="true" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="InstallFramework_FrameDir" Provider="Bluegrams.Application.PortableSettingsProvider" Type="System.String" Scope="User">
+    <Setting Name="InstallFramework_FrameDir" Provider="Bluegrams.Application.PortableSettingsProvider" Roaming="true" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="Zipalign_AlignmentInBytes" Provider="Bluegrams.Application.PortableSettingsProvider" Type="System.Decimal" Scope="User">
+    <Setting Name="Zipalign_AlignmentInBytes" Provider="Bluegrams.Application.PortableSettingsProvider" Roaming="true" Type="System.Decimal" Scope="User">
       <Value Profile="(Default)">4</Value>
     </Setting>
-    <Setting Name="Zipalign_OverwriteOutputFile" Provider="Bluegrams.Application.PortableSettingsProvider" Type="System.Boolean" Scope="User">
+    <Setting Name="Zipalign_OverwriteOutputFile" Provider="Bluegrams.Application.PortableSettingsProvider" Roaming="true" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
-    <Setting Name="Zipalign_CheckOnly" Provider="Bluegrams.Application.PortableSettingsProvider" Type="System.Boolean" Scope="User">
+    <Setting Name="Zipalign_CheckOnly" Provider="Bluegrams.Application.PortableSettingsProvider" Roaming="true" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
-    <Setting Name="Zipalign_Verbose" Provider="Bluegrams.Application.PortableSettingsProvider" Type="System.Boolean" Scope="User">
+    <Setting Name="Zipalign_Verbose" Provider="Bluegrams.Application.PortableSettingsProvider" Roaming="true" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
-    <Setting Name="Zipalign_OutputDir" Provider="Bluegrams.Application.PortableSettingsProvider" Type="System.String" Scope="User">
+    <Setting Name="Zipalign_OutputDir" Provider="Bluegrams.Application.PortableSettingsProvider" Roaming="true" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="Zipalign_InputFile" Provider="Bluegrams.Application.PortableSettingsProvider" Type="System.String" Scope="User">
+    <Setting Name="Zipalign_InputFile" Provider="Bluegrams.Application.PortableSettingsProvider" Roaming="true" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="Zipalign_Recompress" Provider="Bluegrams.Application.PortableSettingsProvider" Type="System.Boolean" Scope="User">
+    <Setting Name="Zipalign_Recompress" Provider="Bluegrams.Application.PortableSettingsProvider" Roaming="true" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
-    <Setting Name="Sign_PublicKey" Provider="Bluegrams.Application.PortableSettingsProvider" Type="System.String" Scope="User">
+    <Setting Name="Sign_PublicKey" Provider="Bluegrams.Application.PortableSettingsProvider" Roaming="true" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="Sign_PrivateKey" Provider="Bluegrams.Application.PortableSettingsProvider" Type="System.String" Scope="User">
+    <Setting Name="Sign_PrivateKey" Provider="Bluegrams.Application.PortableSettingsProvider" Roaming="true" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="Decode_OnlyMainClasses" Provider="Bluegrams.Application.PortableSettingsProvider" Type="System.Boolean" Scope="User">
+    <Setting Name="Decode_OnlyMainClasses" Provider="Bluegrams.Application.PortableSettingsProvider" Roaming="true" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>
     </Setting>
-    <Setting Name="Decode_FixError" Provider="Bluegrams.Application.PortableSettingsProvider" Type="System.Boolean" Scope="User">
+    <Setting Name="Decode_FixError" Provider="Bluegrams.Application.PortableSettingsProvider" Roaming="true" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>
     </Setting>
-    <Setting Name="Build_NoCrunch" Provider="Bluegrams.Application.PortableSettingsProvider" Type="System.Boolean" Scope="User">
+    <Setting Name="Build_NoCrunch" Provider="Bluegrams.Application.PortableSettingsProvider" Roaming="true" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
-    <Setting Name="Decode_NoDebugInfo" Provider="Bluegrams.Application.PortableSettingsProvider" Type="System.Boolean" Scope="User">
+    <Setting Name="Decode_NoDebugInfo" Provider="Bluegrams.Application.PortableSettingsProvider" Roaming="true" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
-    <Setting Name="Framework_ClearBeforeDecode" Type="System.Boolean" Scope="User">
+    <Setting Name="Framework_ClearBeforeDecode" Provider="Bluegrams.Application.PortableSettingsProvider" Roaming="true" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>
     </Setting>
-    <Setting Name="Build_ZipalignAfterBuild" Type="System.Boolean" Scope="User">
+    <Setting Name="Build_ZipalignAfterBuild" Provider="Bluegrams.Application.PortableSettingsProvider" Roaming="true" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>
     </Setting>
-    <Setting Name="Build_SignAfterBuild" Type="System.Boolean" Scope="User">
+    <Setting Name="Build_SignAfterBuild" Provider="Bluegrams.Application.PortableSettingsProvider" Roaming="true" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>
     </Setting>
-    <Setting Name="Zipalign_UseOutputDir" Type="System.Boolean" Scope="User">
+    <Setting Name="Zipalign_UseOutputDir" Provider="Bluegrams.Application.PortableSettingsProvider" Roaming="true" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
-    <Setting Name="Zipalign_SignAfterZipAlign" Type="System.Boolean" Scope="User">
+    <Setting Name="Zipalign_SignAfterZipAlign" Provider="Bluegrams.Application.PortableSettingsProvider" Roaming="true" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>
     </Setting>
-    <Setting Name="Sign_Alias" Type="System.String" Scope="User">
+    <Setting Name="Sign_Alias" Provider="Bluegrams.Application.PortableSettingsProvider" Roaming="true" Type="System.String" Scope="User">
       <Value Profile="(Default)">CERT</Value>
     </Setting>
-    <Setting Name="Sign_SetAlias" Type="System.Boolean" Scope="User">
+    <Setting Name="Sign_SetAlias" Provider="Bluegrams.Application.PortableSettingsProvider" Roaming="true" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
-    <Setting Name="Build_CreateUnsignedApk" Type="System.Boolean" Scope="User">
+    <Setting Name="Build_CreateUnsignedApk" Provider="Bluegrams.Application.PortableSettingsProvider" Roaming="true" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
-    <Setting Name="Sign_UseKeystoreFile" Type="System.Boolean" Scope="User">
+    <Setting Name="Sign_UseKeystoreFile" Provider="Bluegrams.Application.PortableSettingsProvider" Roaming="true" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
-    <Setting Name="Sign_KeystoreFilePath" Type="System.String" Scope="User">
+    <Setting Name="Sign_KeystoreFilePath" Provider="Bluegrams.Application.PortableSettingsProvider" Roaming="true" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="Sign_KeystorePassword" Type="System.String" Scope="User">
+    <Setting Name="Sign_KeystorePassword" Provider="Bluegrams.Application.PortableSettingsProvider" Roaming="true" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="Sign_UseOutputDir" Type="System.Boolean" Scope="User">
+    <Setting Name="Sign_UseOutputDir" Provider="Bluegrams.Application.PortableSettingsProvider" Roaming="true" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
-    <Setting Name="Sign_Schemev1" Type="System.Int32" Scope="User">
+    <Setting Name="Sign_Schemev1" Provider="Bluegrams.Application.PortableSettingsProvider" Roaming="true" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">0</Value>
     </Setting>
-    <Setting Name="Sign_Schemev2" Type="System.Int32" Scope="User">
+    <Setting Name="Sign_Schemev2" Provider="Bluegrams.Application.PortableSettingsProvider" Roaming="true" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">0</Value>
     </Setting>
-    <Setting Name="Sign_Schemev3" Type="System.Int32" Scope="User">
+    <Setting Name="Sign_Schemev3" Provider="Bluegrams.Application.PortableSettingsProvider" Roaming="true" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">0</Value>
     </Setting>
-    <Setting Name="Sign_Schemev4" Type="System.Int32" Scope="User">
+    <Setting Name="Sign_Schemev4" Provider="Bluegrams.Application.PortableSettingsProvider" Roaming="true" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">2</Value>
     </Setting>
-    <Setting Name="Decode_ApiLevel" Type="System.Decimal" Scope="User">
+    <Setting Name="Decode_ApiLevel" Provider="Bluegrams.Application.PortableSettingsProvider" Roaming="true" Type="System.Decimal" Scope="User">
       <Value Profile="(Default)">29</Value>
     </Setting>
-    <Setting Name="Build_ApiLevel" Type="System.Decimal" Scope="User">
+    <Setting Name="Build_ApiLevel" Provider="Bluegrams.Application.PortableSettingsProvider" Roaming="true" Type="System.Decimal" Scope="User">
       <Value Profile="(Default)">29</Value>
     </Setting>
-    <Setting Name="Build_SetApiLevel" Type="System.Boolean" Scope="User">
+    <Setting Name="Build_SetApiLevel" Provider="Bluegrams.Application.PortableSettingsProvider" Roaming="true" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
-    <Setting Name="Decode_SetApiLevel" Type="System.Boolean" Scope="User">
+    <Setting Name="Decode_SetApiLevel" Provider="Bluegrams.Application.PortableSettingsProvider" Roaming="true" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
-    <Setting Name="Baksmali_InputDexFile" Type="System.String" Scope="User">
+    <Setting Name="Baksmali_InputDexFile" Provider="Bluegrams.Application.PortableSettingsProvider" Roaming="true" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="Smali_OutputDexFile" Type="System.String" Scope="User">
+    <Setting Name="Smali_OutputDexFile" Provider="Bluegrams.Application.PortableSettingsProvider" Roaming="true" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="Baksmali_OutputDir" Type="System.String" Scope="User">
+    <Setting Name="Baksmali_OutputDir" Provider="Bluegrams.Application.PortableSettingsProvider" Roaming="true" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="Baksmali_UseOutputDir" Type="System.Boolean" Scope="User">
+    <Setting Name="Baksmali_UseOutputDir" Provider="Bluegrams.Application.PortableSettingsProvider" Roaming="true" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
-    <Setting Name="Smali_InputDir" Type="System.String" Scope="User">
+    <Setting Name="Smali_InputDir" Provider="Bluegrams.Application.PortableSettingsProvider" Roaming="true" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="Smali_OutputDir" Type="System.String" Scope="User">
+    <Setting Name="Smali_OutputDir" Provider="Bluegrams.Application.PortableSettingsProvider" Roaming="true" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="Smali_UseOutputDir" Type="System.Boolean" Scope="User">
+    <Setting Name="Smali_UseOutputDir" Provider="Bluegrams.Application.PortableSettingsProvider" Roaming="true" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
-    <Setting Name="IgnoreOutputDirContextMenu" Type="System.Boolean" Scope="User">
+    <Setting Name="IgnoreOutputDirContextMenu" Provider="Bluegrams.Application.PortableSettingsProvider" Roaming="true" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
-    <Setting Name="Build_UseAapt2" Type="System.Boolean" Scope="User">
+    <Setting Name="Build_UseAapt2" Provider="Bluegrams.Application.PortableSettingsProvider" Roaming="true" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>
     </Setting>
-    <Setting Name="PlaySoundWhenDone" Type="System.Boolean" Scope="User">
+    <Setting Name="PlaySoundWhenDone" Provider="Bluegrams.Application.PortableSettingsProvider" Roaming="true" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
   </Settings>
