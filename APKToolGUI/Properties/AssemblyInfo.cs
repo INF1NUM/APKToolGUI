@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("APKTool GUI")]
-[assembly: AssemblyCopyright("© INFINUM, 2012-2015 | AndnixSH, 2022")]
+[assembly: AssemblyCopyright("Original owner: INFINUM, 2012-2015 | Maintained by: AndnixSH, 2022")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
