@@ -136,7 +136,7 @@
     <value>9, 65</value>
   </data>
   <data name="checkBox2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>134, 17</value>
+    <value>144, 17</value>
   </data>
   <data name="checkBox2.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -166,7 +166,7 @@
     <value>9, 42</value>
   </data>
   <data name="checkBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>132, 17</value>
+    <value>144, 17</value>
   </data>
   <data name="checkBox1.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -196,7 +196,7 @@
     <value>9, 19</value>
   </data>
   <data name="checkBoxCheckUpdateStartup.Size" type="System.Drawing.Size, System.Drawing">
-    <value>160, 17</value>
+    <value>173, 17</value>
   </data>
   <data name="checkBoxCheckUpdateStartup.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -250,7 +250,7 @@
     <value>6, 17</value>
   </data>
   <data name="labelCustomJavaLocation.Size" type="System.Drawing.Size, System.Drawing">
-    <value>183, 23</value>
+    <value>176, 23</value>
   </data>
   <data name="labelCustomJavaLocation.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -277,10 +277,10 @@
     <value>Top, Left, Right</value>
   </data>
   <data name="textBoxCustomJavaLocation.Location" type="System.Drawing.Point, System.Drawing">
-    <value>195, 18</value>
+    <value>189, 18</value>
   </data>
   <data name="textBoxCustomJavaLocation.Size" type="System.Drawing.Size, System.Drawing">
-    <value>222, 20</value>
+    <value>222, 22</value>
   </data>
   <data name="textBoxCustomJavaLocation.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -310,10 +310,10 @@
     <value>NoControl</value>
   </data>
   <data name="buttonCustomJavaLocation.Location" type="System.Drawing.Point, System.Drawing">
-    <value>418, 17</value>
+    <value>415, 18</value>
   </data>
   <data name="buttonCustomJavaLocation.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 20</value>
+    <value>24, 23</value>
   </data>
   <data name="buttonCustomJavaLocation.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -367,7 +367,7 @@
     <value>System</value>
   </data>
   <data name="comboBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>129, 19</value>
+    <value>129, 17</value>
   </data>
   <data name="comboBox1.Size" type="System.Drawing.Size, System.Drawing">
     <value>312, 21</value>
@@ -424,7 +424,7 @@
     <value>6, 45</value>
   </data>
   <data name="ignoreOutputContextMenuBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>238, 17</value>
+    <value>263, 17</value>
   </data>
   <data name="ignoreOutputContextMenuBox.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -596,6 +596,9 @@
   </data>
   <data name="&gt;&gt;tabPage1.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="tabControl1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 8.25pt</value>
   </data>
   <data name="tabControl1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 1</value>
