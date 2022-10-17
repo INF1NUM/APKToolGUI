@@ -468,6 +468,7 @@ namespace APKToolGUI
             Invoke(new Action(delegate ()
             {
                 ToLog(ApktoolEventType.Information, "=====[ " + Language.Signing + " ]=====");
+                ToLog(ApktoolEventType.Information, String.Format(Language.InputFile, input));
                 ToStatus(String.Format(Language.Signing + " \"{0}\"...", Path.GetFileName(input)), Resources.waiting);
             }));
 
@@ -516,6 +517,7 @@ namespace APKToolGUI
                     Invoke(new Action(delegate ()
                     {
                         ToLog(ApktoolEventType.Information, "=====[ " + Language.Decoding + " ]=====");
+                        ToLog(ApktoolEventType.Information, String.Format(Language.InputFile, inputApk));
                         ToStatus(String.Format(Language.Decoding + " \"{0}\"...", Path.GetFileName(inputApk)), Resources.waiting);
                     }));
 
@@ -577,6 +579,7 @@ namespace APKToolGUI
 
             Running();
             ToLog(ApktoolEventType.Information, "=====[ " + Language.Build + " ]=====");
+            ToLog(ApktoolEventType.Information, String.Format(Language.InputFile, inputFile));
             ToStatus(String.Format(Language.Build + " \"{0}\"...", Path.GetFileName(textBox_BUILD_InputProjectDir.Text)), Resources.waiting);
 
             try
@@ -669,7 +672,6 @@ namespace APKToolGUI
             ToLog(ApktoolEventType.Information, e.Message);
         }
 
-
         internal async Task<int> Baksmali(string inputFile)
         {
             int code = 0;
@@ -677,6 +679,8 @@ namespace APKToolGUI
             {
                 Running();
                 ToLog(ApktoolEventType.Information, "=====[ " + Language.DecompilingDex + " ]=====");
+                ToLog(ApktoolEventType.Information, String.Format(Language.InputFile, inputFile));
+
                 ToStatus(String.Format(Language.DecompilingDex + "...", Path.GetFileName(baksmaliBrowseInputDexTxtBox.Text)), Resources.waiting);
 
                 await Task.Factory.StartNew(() =>
@@ -734,6 +738,7 @@ namespace APKToolGUI
             {
                 Running();
                 ToLog(ApktoolEventType.Information, "=====[ " + Language.CompilingDex + " ]=====");
+                ToLog(ApktoolEventType.Information, String.Format(Language.InputDirectory, inputDir));
                 ToStatus(String.Format(Language.DecompilingDex + "...", Path.GetFileName(smaliBrowseInputDirTxtBox.Text)), Resources.waiting);
 
                 await Task.Factory.StartNew(() =>
@@ -783,6 +788,7 @@ namespace APKToolGUI
             Invoke(new Action(delegate ()
             {
                 ToLog(ApktoolEventType.Information, "=====[ " + Language.Aligning + " ]=====");
+                ToLog(ApktoolEventType.Information, String.Format(Language.InputFile, input));
                 ToStatus(String.Format(Language.Aligning + " \"{0}\"...", Path.GetFileName(input)), Resources.waiting);
             }));
 

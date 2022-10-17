@@ -405,4 +405,10 @@
   <data name="ErrorGettingApkInfo" xml:space="preserve">
     <value>There was an error getting APK infomation</value>
   </data>
+  <data name="InputDirectory" xml:space="preserve">
+    <value>Input directory: {0}</value>
+  </data>
+  <data name="InputFile" xml:space="preserve">
+    <value>Input file: {0}</value>
+  </data>
 </root>
