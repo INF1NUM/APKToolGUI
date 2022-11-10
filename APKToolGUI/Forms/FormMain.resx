@@ -5134,9 +5134,6 @@ and change target SDK to 29</value>
   <data name="tabControlMain.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="tabControlMain.Padding" type="System.Drawing.Point, System.Drawing">
-    <value>16, 3</value>
-  </data>
   <data name="tabControlMain.Size" type="System.Drawing.Size, System.Drawing">
     <value>597, 311</value>
   </data>
