@@ -127,10 +127,8 @@ namespace APKToolGUI
             ToStatus(Language.Done, Resources.done);
 
             string decApkPath = Settings.Default.Decode_InputAppPath;
-            if (File.Exists(decApkPath))
-            {
-                GetApkInfo(decApkPath);
-            }
+
+            GetApkInfo(decApkPath);
 
             RunCmdArgs();
         }
@@ -228,49 +226,52 @@ namespace APKToolGUI
         #region Get APK Info
         internal async void GetApkInfo(string file)
         {
-            try
+            if (File.Exists(file))
             {
-                await Task.Factory.StartNew(() =>
+                try
                 {
-                    aapt = new AaptParser();
-
-                    if (aapt.Parse(file))
+                    await Task.Factory.StartNew(() =>
                     {
-                        Invoke(new Action(delegate ()
-                        {
-                            if (apkIconPicBox.Image != null)
-                            {
-                                apkIconPicBox.Image.Dispose();
-                                apkIconPicBox.Image = null;
-                            }
-                            fileTxtBox.Text = aapt.ApkFile;
-                            appTxtBox.Text = aapt.AppName;
-                            packNameTxtBox.Text = aapt.PackageName;
-                            verTxtBox.Text = aapt.VersionName;
-                            buildTxtBox.Text = aapt.VersionCode;
-                            minSdkTxtBox.Text = aapt.SdkVersion;
-                            targetSdkTxtBox.Text = aapt.TargetSdkVersion;
-                            screenTxtBox.Text = aapt.Screens;
-                            densityTxtBox.Text = aapt.Densities;
-                            permTxtBox.Text = aapt.Permissions;
-                            localsTxtBox.Text = aapt.Locales;
-                            fullInfoTextBox.Text = aapt.FullInfo;
-                            ZipUtils.ExtractFile(file, aapt.AppIcon, Path.Combine(Program.TEMP_DIR, aapt.PackageName));
+                        aapt = new AaptParser();
 
-                            string icon = Path.Combine(Program.TEMP_DIR, aapt.PackageName, Path.GetFileName(aapt.AppIcon));
-                            if (File.Exists(icon))
-                                apkIconPicBox.Image = Image.FromFile(icon);
-                        }));
-                    }
-                });
-            }
-            catch (Exception ex)
-            {
+                        if (aapt.Parse(file))
+                        {
+                            Invoke(new Action(delegate ()
+                            {
+                                if (apkIconPicBox.Image != null)
+                                {
+                                    apkIconPicBox.Image.Dispose();
+                                    apkIconPicBox.Image = null;
+                                }
+                                fileTxtBox.Text = aapt.ApkFile;
+                                appTxtBox.Text = aapt.AppName;
+                                packNameTxtBox.Text = aapt.PackageName;
+                                verTxtBox.Text = aapt.VersionName;
+                                buildTxtBox.Text = aapt.VersionCode;
+                                minSdkTxtBox.Text = aapt.SdkVersion;
+                                targetSdkTxtBox.Text = aapt.TargetSdkVersion;
+                                screenTxtBox.Text = aapt.Screens;
+                                densityTxtBox.Text = aapt.Densities;
+                                permTxtBox.Text = aapt.Permissions;
+                                localsTxtBox.Text = aapt.Locales;
+                                fullInfoTextBox.Text = aapt.FullInfo;
+                                ZipUtils.ExtractFile(file, aapt.AppIcon, Path.Combine(Program.TEMP_DIR, aapt.PackageName));
+
+                                string icon = Path.Combine(Program.TEMP_DIR, aapt.PackageName, Path.GetFileName(aapt.AppIcon));
+                                if (File.Exists(icon))
+                                    apkIconPicBox.Image = Image.FromFile(icon);
+                            }));
+                        }
+                    });
+                }
+                catch (Exception ex)
+                {
 #if DEBUG
-                ToLog(ApktoolEventType.Warning, Language.ErrorGettingApkInfo + "\n" + ex.ToString());
+                    ToLog(ApktoolEventType.Warning, Language.ErrorGettingApkInfo + "\n" + ex.ToString());
 #else
                 ToLog(ApktoolEventType.Warning, Language.ErrorGettingApkInfo);
 #endif
+                }
             }
         }
 
@@ -635,7 +636,7 @@ namespace APKToolGUI
                                 return;
                             }
                             else
-                                ToLog(ApktoolEventType.Information, Language.Done );
+                                ToLog(ApktoolEventType.Information, Language.Done);
                         }
                         ToLog(ApktoolEventType.Information, "=====[ " + Language.AllDone + " ]=====");
                     }
