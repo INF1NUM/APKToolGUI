@@ -66,7 +66,7 @@ namespace APKToolGUI
             comboBox1.Items.Add(sysLang);
             comboBox1.Items.Add(System.Globalization.CultureInfo.GetCultureInfo("ru"));
             comboBox1.Items.Add(System.Globalization.CultureInfo.GetCultureInfo("en"));
-            //comboBox1.Items.Add(System.Globalization.CultureInfo.GetCultureInfo("uk"));
+            comboBox1.Items.Add(System.Globalization.CultureInfo.GetCultureInfo("zh-CN"));
             //comboBox1.Items.Add(System.Globalization.CultureInfo.GetCultureInfo("ru-RU"));
             //comboBox1.Items.Add(System.Globalization.CultureInfo.GetCultureInfo("en-US"));
             //comboBox1.Items.Add(System.Globalization.CultureInfo.GetCultureInfo("uk-UA"));

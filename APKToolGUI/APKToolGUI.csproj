@@ -351,7 +351,7 @@
       <DependentUpon>FormSettings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Languages\Language.ru.resx" />
-    <EmbeddedResource Include="Languages\Language.zh_CN.resx" />
+    <EmbeddedResource Include="Languages\Language.zh-CN.resx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
