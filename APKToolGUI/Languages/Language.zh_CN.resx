@@ -1,0 +1,414 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+	<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+		<xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+		<xsd:element name="root" msdata:IsDataSet="true">
+			<xsd:complexType>
+				<xsd:choice maxOccurs="unbounded">
+					<xsd:element name="metadata">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" />
+							</xsd:sequence>
+							<xsd:attribute name="name" use="required" type="xsd:string" />
+							<xsd:attribute name="type" type="xsd:string" />
+							<xsd:attribute name="mimetype" type="xsd:string" />
+							<xsd:attribute ref="xml:space" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="assembly">
+						<xsd:complexType>
+							<xsd:attribute name="alias" type="xsd:string" />
+							<xsd:attribute name="name" type="xsd:string" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="data">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+								<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+							<xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+							<xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+							<xsd:attribute ref="xml:space" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="resheader">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" />
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:choice>
+			</xsd:complexType>
+		</xsd:element>
+	</xsd:schema>
+	<resheader name="resmimetype">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="version">
+		<value>2.0</value>
+	</resheader>
+	<resheader name="reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader name="writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<data name="About" xml:space="preserve">
+    <value>关于</value>
+  </data>
+	<data name="APKToolVersion" xml:space="preserve">
+    <value>Apktool 版本</value>
+  </data>
+	<data name="CheckForUpdate" xml:space="preserve">
+    <value>检查更新</value>
+  </data>
+	<data name="DebugMode" xml:space="preserve">
+    <value>调试模式</value>
+  </data>
+	<data name="Exit" xml:space="preserve">
+    <value>退出</value>
+  </data>
+	<data name="File" xml:space="preserve">
+    <value>文件</value>
+  </data>
+	<data name="Help" xml:space="preserve">
+    <value>帮助</value>
+  </data>
+	<data name="Settings" xml:space="preserve">
+    <value>设置</value>
+  </data>
+	<data name="ErrorJavaDetect" xml:space="preserve">
+    <value>Java 没有安装或安装不正确。该程序将被关闭。</value>
+  </data>
+	<data name="ErrorReadSettings" xml:space="preserve">
+    <value>读取设置时出错!</value>
+  </data>
+	<data name="UpdateNewVersion" xml:space="preserve">
+    <value>新版本已经推出。你想更新吗？</value>
+  </data>
+	<data name="UpdateNoUpdates" xml:space="preserve">
+    <value>没有更新可用。</value>
+  </data>
+	<data name="WarningDecodingFolderNotSelected" xml:space="preserve">
+    <value>未选择反编译文件夹!</value>
+  </data>
+	<data name="WarningFileForDecodingNotSelected" xml:space="preserve">
+    <value>未选择用于反编译的文件!</value>
+  </data>
+	<data name="WarningFileForSigningNotSelected" xml:space="preserve">
+    <value>未选择用于签名的文件!</value>
+  </data>
+	<data name="WarningFrameworkNotSelected" xml:space="preserve">
+    <value>Framework 未选择！</value>
+  </data>
+	<data name="ErrorSaveSettings" xml:space="preserve">
+    <value>保存设置时出错!</value>
+  </data>
+	<data name="NeedRestart" xml:space="preserve">
+    <value>为了使这些更改生效，你必须重新启动程序。你想立即重启吗？</value>
+  </data>
+	<data name="FileNotFound" xml:space="preserve">
+    <value>未找到文件</value>
+  </data>
+	<data name="FolderNotExist" xml:space="preserve">
+    <value>文件夹不存在</value>
+  </data>
+	<data name="Error" xml:space="preserve">
+    <value>错误</value>
+  </data>
+	<data name="Build" xml:space="preserve">
+    <value>构建</value>
+  </data>
+	<data name="Decode" xml:space="preserve">
+    <value>反编译</value>
+  </data>
+	<data name="InstallFramework" xml:space="preserve">
+    <value>安装 Framework</value>
+  </data>
+	<data name="Sign" xml:space="preserve">
+    <value>签名</value>
+  </data>
+	<data name="SystemLanguage" xml:space="preserve">
+    <value>系统语言</value>
+  </data>
+	<data name="DoYouRealyWantToInstallCM" xml:space="preserve">
+    <value>你真的想安装上下文菜单吗？</value>
+  </data>
+	<data name="DoYouRealyWantToRemoveCM" xml:space="preserve">
+    <value>你真的想删除上下文菜单吗？</value>
+  </data>
+	<data name="Done" xml:space="preserve">
+    <value>完成</value>
+  </data>
+	<data name="DoYouWantToSelectJavaLocation" xml:space="preserve">
+    <value>没有找到 Java。你想选择自定义位置吗？</value>
+  </data>
+	<data name="CantDetectApktoolVersion" xml:space="preserve">
+    <value>无法检测 apktool 版本。</value>
+  </data>
+	<data name="DecompilingSuccessfullyCompleted" xml:space="preserve">
+    <value>反编译成功完成。输出目录"{0}"。</value>
+  </data>
+	<data name="ErrorUpdateChecking" xml:space="preserve">
+    <value>检查更新错误：</value>
+  </data>
+	<data name="SignSuccessfullyCompleted" xml:space="preserve">
+    <value>签名成功完成。文件保存到"{0}"。</value>
+  </data>
+	<data name="Aligning" xml:space="preserve">
+    <value>正在对齐</value>
+  </data>
+	<data name="ErrorCompiling" xml:space="preserve">
+    <value>编译失败</value>
+  </data>
+	<data name="ErrorEnteringFrameworkTag" xml:space="preserve">
+    <value>输入 Framework 标签错误。</value>
+  </data>
+	<data name="ErrorSelectedFileNotExist" xml:space="preserve">
+    <value>所选文件不存在。</value>
+  </data>
+	<data name="ErrorSelectingFrameworkDirectory" xml:space="preserve">
+    <value>选择 Framework 目录错误。</value>
+  </data>
+	<data name="ErrorSelectingFrameworkFile" xml:space="preserve">
+    <value>选择 Framework 文件时出错。该文件不存在。</value>
+  </data>
+	<data name="ErrorSigning" xml:space="preserve">
+    <value>签名失败。</value>
+  </data>
+	<data name="FrameworkInstallationNotStarted" xml:space="preserve">
+    <value>错误。Framework 安装没有开始。</value>
+  </data>
+	<data name="InstallingFramework" xml:space="preserve">
+    <value>正在安装 Framework</value>
+  </data>
+	<data name="Signing" xml:space="preserve">
+    <value>正在签名</value>
+  </data>
+	<data name="SignInputFileNotFound" xml:space="preserve">
+    <value>未找到输入文件。</value>
+  </data>
+	<data name="SignPrivateKeyNotFound" xml:space="preserve">
+    <value>未找到私钥。</value>
+  </data>
+	<data name="SignPublicKeyNotFound" xml:space="preserve">
+    <value>未找到公钥。</value>
+  </data>
+	<data name="ZIPArchives" xml:space="preserve">
+    <value>ZIP 存档</value>
+  </data>
+	<data name="DecodeCouldNotCreate" xml:space="preserve">
+    <value>所选的反编译目录无法创建，因为包含无效的字符。</value>
+  </data>
+	<data name="DecodeDirNotSelected" xml:space="preserve">
+    <value>未选择反编译目录。</value>
+  </data>
+	<data name="DecodeSelectedFrameworkNotExist" xml:space="preserve">
+    <value>所选的 Framework 目录不存在。</value>
+  </data>
+	<data name="Decoding" xml:space="preserve">
+    <value>正在反编译</value>
+  </data>
+	<data name="ErrorDecompiling" xml:space="preserve">
+    <value>反编译失败</value>
+  </data>
+	<data name="ExecutableFile" xml:space="preserve">
+    <value>可执行文件</value>
+  </data>
+	<data name="ChangedTargetSdkTo29" xml:space="preserve">
+    <value>更改目标 SDK 到 29</value>
+  </data>
+	<data name="ErrorVersionParsing" xml:space="preserve">
+    <value>分析版本失败</value>
+  </data>
+	<data name="FixAndroidManifest" xml:space="preserve">
+    <value>修复 AndroidManifest.xml</value>
+  </data>
+	<data name="RemoveApkToolDummies" xml:space="preserve">
+    <value>删除所有 ApkTool 假象</value>
+  </data>
+	<data name="APKSelected" xml:space="preserve">
+    <value>APK 选择：</value>
+  </data>
+	<data name="ErrorSelectedFolderNotExist" xml:space="preserve">
+    <value>所选的文件夹不存在。</value>
+  </data>
+	<data name="AndroidManifestNotExist" xml:space="preserve">
+    <value>AndroidManifest.xml 不存在</value>
+  </data>
+	<data name="DecompiledAPKNotExist" xml:space="preserve">
+    <value>反编译的 APK 目录不存在</value>
+  </data>
+	<data name="MainActivityFound" xml:space="preserve">
+    <value>在"{0}"发现主要 Activity</value>
+  </data>
+	<data name="MainActivityNotFoundPleaseFindManually" xml:space="preserve">
+    <value>无法找到 MainActivity。请手动找到它</value>
+  </data>
+	<data name="ClearingFramework" xml:space="preserve">
+    <value>正在清理 Framework</value>
+  </data>
+	<data name="CompilingSuccessfullyCompleted" xml:space="preserve">
+    <value>编译成功完成。输出目录"{0}"</value>
+  </data>
+	<data name="ErrorZipalign" xml:space="preserve">
+    <value>Zip 对齐失败</value>
+  </data>
+	<data name="ZipalignFileSavedTo" xml:space="preserve">
+    <value>Zip 对齐成功完成。文件保存到 "{0}"</value>
+  </data>
+	<data name="ErrorClearingFw" xml:space="preserve">
+    <value>清除 Framework 错误</value>
+  </data>
+	<data name="FrameworkCacheCleared" xml:space="preserve">
+    <value>Framework 缓存已清除</value>
+  </data>
+	<data name="AllDone" xml:space="preserve">
+    <value>全部完成！</value>
+  </data>
+	<data name="FrameworkInstalled" xml:space="preserve">
+    <value>Framework 已成功安装</value>
+  </data>
+	<data name="FrameworkDirNotExist" xml:space="preserve">
+    <value>Framework 目录不存在</value>
+  </data>
+	<data name="DecompilingDex" xml:space="preserve">
+    <value>正在反编译 dex</value>
+  </data>
+	<data name="ErrorSelectedOutputFolderNotExist" xml:space="preserve">
+    <value>所选的输出文件夹不存在。</value>
+  </data>
+	<data name="CompilingDex" xml:space="preserve">
+    <value>正在编译 dex</value>
+  </data>
+	<data name="DragDropNotSupported" xml:space="preserve">
+    <value>您正在以管理员身份运行。不支持拖放。</value>
+  </data>
+	<data name="DragDropSupported" xml:space="preserve">
+    <value>支持拖放</value>
+  </data>
+	<data name="ErrorNotAnApk" xml:space="preserve">
+    <value>此目录不是安卓软件包</value>
+  </data>
+	<data name="Baksmali" xml:space="preserve">
+    <value>Baksmali</value>
+  </data>
+	<data name="Smali" xml:space="preserve">
+    <value>Smali</value>
+  </data>
+	<data name="Zipalign" xml:space="preserve">
+    <value>Zip 对齐</value>
+  </data>
+	<data name="CompileApk" xml:space="preserve">
+    <value>编译 APK</value>
+  </data>
+	<data name="CompileDex" xml:space="preserve">
+    <value>编译 DEX</value>
+  </data>
+	<data name="DecompileApk" xml:space="preserve">
+    <value>反编译 APK</value>
+  </data>
+	<data name="DecompileDex" xml:space="preserve">
+    <value>反编译 DEX</value>
+  </data>
+	<data name="GetApkInfo" xml:space="preserve">
+    <value>获取 APK 信息</value>
+  </data>
+	<data name="NotDecompiledApk" xml:space="preserve">
+    <value>此文件夹不是已反编译的 APK</value>
+  </data>
+	<data name="NotDecompiledDex" xml:space="preserve">
+    <value>此文件夹不是反编译的 DEX</value>
+  </data>
+	<data name="RequiredFilesMissing" xml:space="preserve">
+    <value>缺少必需的文件</value>
+  </data>
+	<data name="SignApk" xml:space="preserve">
+    <value>签名 APK</value>
+  </data>
+	<data name="TextFile" xml:space="preserve">
+    <value>文本文件</value>
+  </data>
+	<data name="ZipalignApk" xml:space="preserve">
+    <value>Zip 对齐 APK</value>
+  </data>
+	<data name="CreateUnsignedApk" xml:space="preserve">
+    <value>创建未签名的 APK</value>
+  </data>
+	<data name="MetainfNotExist" xml:space="preserve">
+    <value>META-INF 文件夹不存在。已跳过</value>
+  </data>
+	<data name="ErrorGettingApkInfo" xml:space="preserve">
+    <value>获取 APK 信息时发生错误</value>
+  </data>
+	<data name="InputDirectory" xml:space="preserve">
+    <value>输入目录：{0}</value>
+  </data>
+	<data name="InputFile" xml:space="preserve">
+    <value>输入文件：{0}</value>
+  </data>
+</root>
