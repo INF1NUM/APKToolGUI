@@ -229,6 +229,13 @@
             this.menuItemCheckUpdate = new System.Windows.Forms.MenuItem();
             this.apktoolIssueItem = new System.Windows.Forms.MenuItem();
             this.menuItemAbout = new System.Windows.Forms.MenuItem();
+            this.apkGkLinkBtn = new System.Windows.Forms.Button();
+            this.apkSupportLinkBtn = new System.Windows.Forms.Button();
+            this.apkMirrorLinkBtn = new System.Windows.Forms.Button();
+            this.apkSosLinkBtn = new System.Windows.Forms.Button();
+            this.apkDlLinkBtn = new System.Windows.Forms.Button();
+            this.label30 = new System.Windows.Forms.Label();
+            this.archSdkTxtBox = new System.Windows.Forms.TextBox();
             this.tabControlMain.SuspendLayout();
             this.tabPageMain.SuspendLayout();
             this.signPanel.SuspendLayout();
@@ -520,6 +527,13 @@
             // 
             this.basicInfoTabPage.AllowDrop = true;
             resources.ApplyResources(this.basicInfoTabPage, "basicInfoTabPage");
+            this.basicInfoTabPage.Controls.Add(this.archSdkTxtBox);
+            this.basicInfoTabPage.Controls.Add(this.label30);
+            this.basicInfoTabPage.Controls.Add(this.apkDlLinkBtn);
+            this.basicInfoTabPage.Controls.Add(this.apkSosLinkBtn);
+            this.basicInfoTabPage.Controls.Add(this.apkMirrorLinkBtn);
+            this.basicInfoTabPage.Controls.Add(this.apkSupportLinkBtn);
+            this.basicInfoTabPage.Controls.Add(this.apkGkLinkBtn);
             this.basicInfoTabPage.Controls.Add(this.label17);
             this.basicInfoTabPage.Controls.Add(this.localsTxtBox);
             this.basicInfoTabPage.Controls.Add(this.selApkFileInfoBtn);
@@ -568,7 +582,6 @@
             resources.ApplyResources(this.selApkFileInfoBtn, "selApkFileInfoBtn");
             this.selApkFileInfoBtn.Name = "selApkFileInfoBtn";
             this.selApkFileInfoBtn.UseVisualStyleBackColor = true;
-            this.selApkFileInfoBtn.Click += new System.EventHandler(this.selApkFileInfoBtn_Click);
             // 
             // label18
             // 
@@ -592,7 +605,6 @@
             resources.ApplyResources(this.apkComboLinkBtn, "apkComboLinkBtn");
             this.apkComboLinkBtn.Name = "apkComboLinkBtn";
             this.apkComboLinkBtn.UseVisualStyleBackColor = true;
-            this.apkComboLinkBtn.Click += new System.EventHandler(this.apkComboLinkBtn_Click);
             // 
             // label15
             // 
@@ -621,7 +633,6 @@
             resources.ApplyResources(this.apkAioLinkBtn, "apkAioLinkBtn");
             this.apkAioLinkBtn.Name = "apkAioLinkBtn";
             this.apkAioLinkBtn.UseVisualStyleBackColor = true;
-            this.apkAioLinkBtn.Click += new System.EventHandler(this.apkAioLinkBtn_Click);
             // 
             // packNameTxtBox
             // 
@@ -634,7 +645,6 @@
             resources.ApplyResources(this.apkPureLinkBtn, "apkPureLinkBtn");
             this.apkPureLinkBtn.Name = "apkPureLinkBtn";
             this.apkPureLinkBtn.UseVisualStyleBackColor = true;
-            this.apkPureLinkBtn.Click += new System.EventHandler(this.apkPureLinkBtn_Click);
             // 
             // verTxtBox
             // 
@@ -647,7 +657,6 @@
             resources.ApplyResources(this.psLinkBtn, "psLinkBtn");
             this.psLinkBtn.Name = "psLinkBtn";
             this.psLinkBtn.UseVisualStyleBackColor = true;
-            this.psLinkBtn.Click += new System.EventHandler(this.psLinkBtn_Click);
             // 
             // minSdkTxtBox
             // 
@@ -1725,7 +1734,7 @@
             this.logGridView.ReadOnly = true;
             this.logGridView.RowHeadersVisible = false;
             this.logGridView.RowTemplate.DefaultCellStyle.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.logGridView.RowTemplate.Height = 15;
+            this.logGridView.RowTemplate.Height = 10;
             this.logGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.logGridView.ShowEditingIcon = false;
             // 
@@ -1828,6 +1837,47 @@
             this.menuItemAbout.Index = 2;
             resources.ApplyResources(this.menuItemAbout, "menuItemAbout");
             this.menuItemAbout.Click += new System.EventHandler(this.menuItemAbout_Click);
+            // 
+            // apkGkLinkBtn
+            // 
+            resources.ApplyResources(this.apkGkLinkBtn, "apkGkLinkBtn");
+            this.apkGkLinkBtn.Name = "apkGkLinkBtn";
+            this.apkGkLinkBtn.UseVisualStyleBackColor = true;
+            // 
+            // apkSupportLinkBtn
+            // 
+            resources.ApplyResources(this.apkSupportLinkBtn, "apkSupportLinkBtn");
+            this.apkSupportLinkBtn.Name = "apkSupportLinkBtn";
+            this.apkSupportLinkBtn.UseVisualStyleBackColor = true;
+            // 
+            // apkMirrorLinkBtn
+            // 
+            resources.ApplyResources(this.apkMirrorLinkBtn, "apkMirrorLinkBtn");
+            this.apkMirrorLinkBtn.Name = "apkMirrorLinkBtn";
+            this.apkMirrorLinkBtn.UseVisualStyleBackColor = true;
+            // 
+            // apkSosLinkBtn
+            // 
+            resources.ApplyResources(this.apkSosLinkBtn, "apkSosLinkBtn");
+            this.apkSosLinkBtn.Name = "apkSosLinkBtn";
+            this.apkSosLinkBtn.UseVisualStyleBackColor = true;
+            // 
+            // apkDlLinkBtn
+            // 
+            resources.ApplyResources(this.apkDlLinkBtn, "apkDlLinkBtn");
+            this.apkDlLinkBtn.Name = "apkDlLinkBtn";
+            this.apkDlLinkBtn.UseVisualStyleBackColor = true;
+            // 
+            // label30
+            // 
+            resources.ApplyResources(this.label30, "label30");
+            this.label30.Name = "label30";
+            // 
+            // archSdkTxtBox
+            // 
+            resources.ApplyResources(this.archSdkTxtBox, "archSdkTxtBox");
+            this.archSdkTxtBox.Name = "archSdkTxtBox";
+            this.archSdkTxtBox.ReadOnly = true;
             // 
             // FormMain
             // 
@@ -2094,6 +2144,13 @@
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.RichTextBox fullInfoTextBox;
         internal System.Windows.Forms.TabPage basicInfoTabPage;
+        internal System.Windows.Forms.Button apkMirrorLinkBtn;
+        internal System.Windows.Forms.Button apkDlLinkBtn;
+        internal System.Windows.Forms.Button apkSosLinkBtn;
+        internal System.Windows.Forms.Button apkSupportLinkBtn;
+        internal System.Windows.Forms.Button apkGkLinkBtn;
+        internal System.Windows.Forms.TextBox archSdkTxtBox;
+        internal System.Windows.Forms.Label label30;
     }
 }
 

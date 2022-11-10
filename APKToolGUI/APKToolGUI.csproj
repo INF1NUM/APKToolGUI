@@ -282,6 +282,7 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="ApkTool\Zipalign.cs" />
+    <Compile Include="Handlers\ApkinfoControlEventHandlers.cs" />
     <Compile Include="Handlers\BaksmaliControlEventHandlers.cs" />
     <Compile Include="Handlers\BuildControlEventHandlers.cs" />
     <Compile Include="Handlers\DecodeControlEventHandlers.cs" />
@@ -381,18 +382,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="android-thin.ico" />
-    <None Include="Resources\apkaio.png" />
     <None Include="Resources\info.png" />
     <None Include="Resources\waiting.png" />
     <None Include="Resources\warning.png" />
     <None Include="Resources\Error.png" />
-    <None Include="Resources\playstore.png" />
-    <None Include="Resources\apkpure.png" />
-    <None Include="Resources\apkcombo.png" />
-    <None Include="Resources\apkpure.ico" />
-    <None Include="Resources\apkcombo.ico" />
-    <None Include="Resources\playstore-2.png" />
-    <None Include="Resources\playstore.ico" />
     <None Include="Resources\android-thin.ico" />
     <None Include="Resources\Done.png" />
     <None Include="Resources\android.png" />

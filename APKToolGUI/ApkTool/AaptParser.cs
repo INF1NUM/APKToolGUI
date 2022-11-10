@@ -12,6 +12,12 @@ namespace APKToolGUI.Utils
     {
         public string ApkFile;
 
+        public string RealApkFile;
+
+        public string Armv7ApkFile;
+
+        public string Arm64ApkFile;
+
         public string AppName;
 
         public string PackageName;
@@ -20,7 +26,11 @@ namespace APKToolGUI.Utils
 
         public string VersionCode;
 
-        public string SdkVersion;
+        public string MinSdkVersionDetailed;
+
+        public string TargetSdkVersionDetailed;
+
+        public string MinSdkVersion;
 
         public string TargetSdkVersion;
 
@@ -34,6 +44,8 @@ namespace APKToolGUI.Utils
 
         public string Densities;
 
+        public string NativeCode;
+
         public string PlayStoreLink;
 
         public string ApkComboLink;
@@ -42,7 +54,17 @@ namespace APKToolGUI.Utils
 
         public string ApkAioLink;
 
-        public string AppIcon = null;
+        public string ApkGkLink;
+
+        public string ApkSupportLink;
+
+        public string ApkSosLink;
+
+        public string ApkMirrorLink;
+
+        public string ApkDlLink;
+
+        public string AppIcon;
 
         public string FullInfo;
 
@@ -74,10 +96,12 @@ namespace APKToolGUI.Utils
                             Permissions += StringExt.Regex(@"(?<=name=\')(.*?)(?=\')", line) + "\n";
                             break;
                         case "sdkVersion":
-                            SdkVersion = SdkToAndroidVer(StringExt.Regex(@"(?<=sdkVersion:\')(.*?)(?=\')", line));
+                            MinSdkVersionDetailed = SdkToAndroidVer(StringExt.Regex(@"(?<=sdkVersion:\')(.*?)(?=\')", line));
+                            MinSdkVersion = StringExt.Regex(@"(?<=sdkVersion:\')(.*?)(?=\')", line);
                             break;
                         case "targetSdkVersion":
-                            TargetSdkVersion = SdkToAndroidVer(StringExt.Regex(@"(?<=targetSdkVersion:\')(.*?)(?=\')", line));
+                            TargetSdkVersionDetailed = SdkToAndroidVer(StringExt.Regex(@"(?<=targetSdkVersion:\')(.*?)(?=\')", line));
+                            TargetSdkVersion = StringExt.Regex(@"(?<=targetSdkVersion:\')(.*?)(?=\')", line);
                             break;
                         case "application-label":
                             AppName = StringExt.Regex(@"(?<=application-label:\')(.*?)(?=\')", line);
@@ -99,6 +123,10 @@ namespace APKToolGUI.Utils
                         case "densities":
                             var densities = Regex.Matches(line.Split(':')[1], @"(?<= \')(.*?)(?=\')").Cast<Match>().Select(m => m.Value).ToList();
                             Densities = string.Join(", ", densities);
+                            break;
+                        case "native-code":
+                            var nativecode = Regex.Matches(line.Split(':')[1], @"(?<= \')(.*?)(?=\')").Cast<Match>().Select(m => m.Value).ToList();
+                            NativeCode = string.Join(", ", nativecode);
                             break;
                     }
                 }
@@ -164,14 +192,18 @@ namespace APKToolGUI.Utils
         {
             switch (sdk)
             {
+                case "33":
+                    return "31: Android 13";
+                case "32":
+                    return "31: Android 12.0L";
                 case "31":
-                    return "31: Android 12.0";
+                    return "31: Android 12";
                 case "30":
-                    return "30: Android 11.0";
+                    return "30: Android 11";
                 case "29":
-                    return "29: Android 10.0";
+                    return "29: Android 10";
                 case "28":
-                    return "28: Android 9.0 (Pie)";
+                    return "28: Android 9 (Pie)";
                 case "27":
                     return "27: Android 8.1 (Oreo MR1)";
                 case "26":
@@ -181,7 +213,7 @@ namespace APKToolGUI.Utils
                 case "24":
                     return "24: Android 7.0 (Nougat)";
                 case "23":
-                    return "23: Android 6.0 (Marshmallow)";
+                    return "23: Android 6 (Marshmallow)";
                 case "22":
                     return "22: Android 5.1 (Lollipop MR1)";
                 case "21":

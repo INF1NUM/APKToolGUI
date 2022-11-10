@@ -54,11 +54,6 @@ namespace APKToolGUI
             if (!File.Exists(Settings.Default.Sign_PublicKey) || String.IsNullOrEmpty(Settings.Default.Sign_PublicKey))
                 Settings.Default.Sign_PublicKey = Program.SIGNAPK_KEYPUBLIC;
 
-            psLinkBtn.Image = new Bitmap(Resources.playstore, new Size(psLinkBtn.Height - 7, psLinkBtn.Height - 7));
-            apkComboLinkBtn.Image = new Bitmap(Resources.apkcombo, new Size(apkComboLinkBtn.Height - 7, apkComboLinkBtn.Height - 7));
-            apkPureLinkBtn.Image = new Bitmap(Resources.apkpure, new Size(apkPureLinkBtn.Height - 7, apkPureLinkBtn.Height - 7));
-            apkAioLinkBtn.Image = new Bitmap(Resources.apkaio, new Size(apkAioLinkBtn.Height - 7, apkAioLinkBtn.Height - 7));
-
             int v1 = (schemev1ComboBox.Items.Count + 1 > Settings.Default.Sign_Schemev1) ? Settings.Default.Sign_Schemev1 : 0;
             schemev1ComboBox.SelectedIndex = v1;
             Settings.Default.Sign_Schemev1 = v1;
@@ -83,6 +78,7 @@ namespace APKToolGUI
             new BaksmaliControlEventHandlers(this);
             new SmaliControlEventHandlers(this);
             new DragDropHandlers(this);
+            new ApkinfoControlEventHandlers(this);
 
             stopwatch = new Stopwatch();
         }
@@ -230,39 +226,43 @@ namespace APKToolGUI
             {
                 try
                 {
+                    bool result = false;
                     await Task.Factory.StartNew(() =>
                     {
                         aapt = new AaptParser();
+                        result = aapt.Parse(file);
 
-                        if (aapt.Parse(file))
-                        {
-                            Invoke(new Action(delegate ()
-                            {
-                                if (apkIconPicBox.Image != null)
-                                {
-                                    apkIconPicBox.Image.Dispose();
-                                    apkIconPicBox.Image = null;
-                                }
-                                fileTxtBox.Text = aapt.ApkFile;
-                                appTxtBox.Text = aapt.AppName;
-                                packNameTxtBox.Text = aapt.PackageName;
-                                verTxtBox.Text = aapt.VersionName;
-                                buildTxtBox.Text = aapt.VersionCode;
-                                minSdkTxtBox.Text = aapt.SdkVersion;
-                                targetSdkTxtBox.Text = aapt.TargetSdkVersion;
-                                screenTxtBox.Text = aapt.Screens;
-                                densityTxtBox.Text = aapt.Densities;
-                                permTxtBox.Text = aapt.Permissions;
-                                localsTxtBox.Text = aapt.Locales;
-                                fullInfoTextBox.Text = aapt.FullInfo;
-                                ZipUtils.ExtractFile(file, aapt.AppIcon, Path.Combine(Program.TEMP_DIR, aapt.PackageName));
-
-                                string icon = Path.Combine(Program.TEMP_DIR, aapt.PackageName, Path.GetFileName(aapt.AppIcon));
-                                if (File.Exists(icon))
-                                    apkIconPicBox.Image = Image.FromFile(icon);
-                            }));
-                        }
                     });
+                    
+                    if (aapt.Parse(file))
+                    {
+                        if (apkIconPicBox.Image != null)
+                        {
+                            apkIconPicBox.Image.Dispose();
+                            apkIconPicBox.Image = null;
+                        }
+                        fileTxtBox.Text = aapt.ApkFile;
+                        appTxtBox.Text = aapt.AppName;
+                        packNameTxtBox.Text = aapt.PackageName;
+                        verTxtBox.Text = aapt.VersionName;
+                        buildTxtBox.Text = aapt.VersionCode;
+                        minSdkTxtBox.Text = aapt.MinSdkVersionDetailed;
+                        targetSdkTxtBox.Text = aapt.TargetSdkVersionDetailed;
+                        screenTxtBox.Text = aapt.Screens;
+                        densityTxtBox.Text = aapt.Densities;
+                        permTxtBox.Text = aapt.Permissions;
+                        localsTxtBox.Text = aapt.Locales;
+                        fullInfoTextBox.Text = aapt.FullInfo;
+                        archSdkTxtBox.Text = aapt.NativeCode;
+
+                        if (aapt.AppIcon != null)
+                        {
+                            ZipUtils.ExtractFile(file, aapt.AppIcon, Path.Combine(Program.TEMP_DIR, aapt.PackageName));
+                            string icon = Path.Combine(Program.TEMP_DIR, aapt.PackageName, Path.GetFileName(aapt.AppIcon));
+                            if (File.Exists(icon))
+                                apkIconPicBox.Image = Image.FromFile(icon);
+                        }
+                    }
                 }
                 catch (Exception ex)
                 {
@@ -273,41 +273,6 @@ namespace APKToolGUI
 #endif
                 }
             }
-        }
-
-        private void selApkFileInfoBtn_Click(object sender, EventArgs e)
-        {
-            using (OpenFileDialog ofd = new OpenFileDialog())
-            {
-                if (ofd.ShowDialog() == DialogResult.OK)
-                {
-                    GetApkInfo(ofd.FileName);
-                }
-            }
-        }
-
-        private void psLinkBtn_Click(object sender, EventArgs e)
-        {
-            if (aapt != null)
-                Process.Start(aapt.PlayStoreLink);
-        }
-
-        private void apkComboLinkBtn_Click(object sender, EventArgs e)
-        {
-            if (aapt != null)
-                Process.Start(aapt.ApkComboLink);
-        }
-
-        private void apkPureLinkBtn_Click(object sender, EventArgs e)
-        {
-            if (aapt != null)
-                Process.Start(aapt.ApkPureLink);
-        }
-
-        private void apkAioLinkBtn_Click(object sender, EventArgs e)
-        {
-            if (aapt != null)
-                Process.Start(aapt.ApkAioLink);
         }
         #endregion
 
@@ -358,20 +323,47 @@ namespace APKToolGUI
         internal void ToLog(string time, string message, Image statusImage, Color backColor)
         {
             Size size = new Size();
-            size.Width = 20;
-            size.Height = 20;
-            if (logGridView.InvokeRequired)
-                logGridView.BeginInvoke(new Action(() =>
+            size.Width = 15;
+            size.Height = 15;
+
+            if (message.Contains(Environment.NewLine))
+            {
+                string[] lines = message.Split(
+                    new string[] { Environment.NewLine },
+                    StringSplitOptions.None
+                );
+                foreach (string line in lines)
+                {
+                    if (logGridView.InvokeRequired)
+                        logGridView.BeginInvoke(new Action(() =>
+                        {
+                            int i = logGridView.Rows.Add(new Bitmap(statusImage, size), time, line);
+                            logGridView.Rows[i].DefaultCellStyle.BackColor = backColor;
+                            logGridView.FirstDisplayedScrollingRowIndex = i;
+                        }));
+                    else
+                    {
+                        int i = logGridView.Rows.Add(new Bitmap(statusImage, size), time, line);
+                        logGridView.Rows[i].DefaultCellStyle.BackColor = backColor;
+                        logGridView.FirstDisplayedScrollingRowIndex = i;
+                    }
+                }
+            }
+            else
+            {
+                if (logGridView.InvokeRequired)
+                    logGridView.BeginInvoke(new Action(() =>
+                    {
+                        int i = logGridView.Rows.Add(new Bitmap(statusImage, size), time, message);
+                        logGridView.Rows[i].DefaultCellStyle.BackColor = backColor;
+                        logGridView.FirstDisplayedScrollingRowIndex = i;
+                    }));
+                else
                 {
                     int i = logGridView.Rows.Add(new Bitmap(statusImage, size), time, message);
                     logGridView.Rows[i].DefaultCellStyle.BackColor = backColor;
                     logGridView.FirstDisplayedScrollingRowIndex = i;
-                }));
-            else
-            {
-                int i = logGridView.Rows.Add(new Bitmap(statusImage, size), time, message);
-                logGridView.Rows[i].DefaultCellStyle.BackColor = backColor;
-                logGridView.FirstDisplayedScrollingRowIndex = i;
+                }
             }
         }
 
