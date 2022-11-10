@@ -3,6 +3,9 @@
 - Sign after align settings fixed
 - Sign after align enabled by default
 - Update dependencies
+- Added incomplete Chinese Simplified language
+- Prevent error with apkinfo when file is not found
+- Make config fully portable
 
 3.0.2.0
 - Bring back status bar. VS kept messing up with the design for some reason
