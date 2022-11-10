@@ -29,6 +29,11 @@ https://github.com/AndnixSH/APKToolGUI/releases
 - Multi language
 - Right-click context menu
 
+# Languages
+- English
+- Russian (Incomplete)
+- Chinese Simplified (Incomplete)
+
 # Issues
 Issues with Apktool, read the log, check if your modification and/or syntax is correct. If not, check this page https://github.com/iBotPeaches/Apktool/issues
 
@@ -61,15 +66,17 @@ A: No, that's not the point of this tool, and I don't have time for that. Howeve
 Use Visual Studio 2019 and above. NET Framework 4.8 SDK is required
 
 ### Translation
-Currently there is two languages, english and russian. Russian is not complete because I don't speak russian, it was originally written by INF1NUM. If you like to translate russian or other language, feel free to do it and pull request
+If you like to translate a language, you must use Visual Studio 2022.
 
-- Create new resx file under Languages folder. It is used for cs files
+- Create new resx file under Languages folder within Visual Studio. If you created a resx file outside Visual Studio, it will not detect it
 
 - Open any forms. Under properties, scroll down until you see Language, and select any language you would like to translate. It will create new resx file inside cs file
 
+Make pull request when you are done
+
 # Credits
 - AndnixSH
-- iBotPeaches ([Apktool](https://ibotpeaches.github.io/Apktool/))
+- iBotPeaches ([Apktool CLI](https://ibotpeaches.github.io/Apktool/))
 - INF1NUM (Original author of [APKToolGUI](https://github.com/INF1NUM/APKToolGUI))
 
 # Disclaimer

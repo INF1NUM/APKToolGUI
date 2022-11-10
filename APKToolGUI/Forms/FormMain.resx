@@ -1156,7 +1156,7 @@
     <value>NoControl</value>
   </data>
   <data name="apkComboLinkBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>219, 88</value>
+    <value>225, 88</value>
   </data>
   <data name="apkComboLinkBtn.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 23</value>
@@ -1288,7 +1288,7 @@
     <value>NoControl</value>
   </data>
   <data name="apkAioLinkBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>437, 89</value>
+    <value>450, 88</value>
   </data>
   <data name="apkAioLinkBtn.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 23</value>
@@ -1339,7 +1339,7 @@
     <value>NoControl</value>
   </data>
   <data name="apkPureLinkBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>325, 88</value>
+    <value>338, 88</value>
   </data>
   <data name="apkPureLinkBtn.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 23</value>
@@ -7227,9 +7227,6 @@ and change target SDK to 29</value>
         ///2AAAAAAAAb////////////EAAAAAAAj////////////+QAAAAAAn/////////////8gAAAABP////
         //////////w4AAAcP///////
 </value>
-  </data>
-  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
   </data>
   <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
     <value>99, 97</value>
