@@ -220,6 +220,7 @@
             this.toolStripStatusLabelStateText = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
             this.contextMenuStripLog = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.copyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clearLogToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mainMenu1 = new System.Windows.Forms.MainMenu(this.components);
             this.menuItemFile = new System.Windows.Forms.MenuItem();
@@ -231,7 +232,16 @@
             this.apktoolIssueItem = new System.Windows.Forms.MenuItem();
             this.menuItemAbout = new System.Windows.Forms.MenuItem();
             this.logTxtBox = new System.Windows.Forms.RichTextBox();
-            this.copyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveLogToFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.checkForUpdateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.apktoolIssuesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.baksmaliIssuesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControlMain.SuspendLayout();
             this.tabPageMain.SuspendLayout();
             this.signPanel.SuspendLayout();
@@ -262,6 +272,7 @@
             this.bakSmaliGroupBox.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.contextMenuStripLog.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControlMain
@@ -1750,6 +1761,12 @@
             this.contextMenuStripLog.Name = "contextMenuStripLog";
             resources.ApplyResources(this.contextMenuStripLog, "contextMenuStripLog");
             // 
+            // copyToolStripMenuItem
+            // 
+            this.copyToolStripMenuItem.Name = "copyToolStripMenuItem";
+            resources.ApplyResources(this.copyToolStripMenuItem, "copyToolStripMenuItem");
+            this.copyToolStripMenuItem.Click += new System.EventHandler(this.copyToolStripMenuItem_Click);
+            // 
             // clearLogToolStripMenuItem
             // 
             this.clearLogToolStripMenuItem.Name = "clearLogToolStripMenuItem";
@@ -1808,7 +1825,7 @@
             // 
             this.apktoolIssueItem.Index = 1;
             resources.ApplyResources(this.apktoolIssueItem, "apktoolIssueItem");
-            this.apktoolIssueItem.Click += new System.EventHandler(this.apktoolIssueItem_Click);
+            this.apktoolIssueItem.Click += new System.EventHandler(this.apktoolIssuesLinkItem_Click);
             // 
             // menuItemAbout
             // 
@@ -1822,11 +1839,75 @@
             resources.ApplyResources(this.logTxtBox, "logTxtBox");
             this.logTxtBox.Name = "logTxtBox";
             // 
-            // copyToolStripMenuItem
+            // menuStrip1
             // 
-            this.copyToolStripMenuItem.Name = "copyToolStripMenuItem";
-            resources.ApplyResources(this.copyToolStripMenuItem, "copyToolStripMenuItem");
-            this.copyToolStripMenuItem.Click += new System.EventHandler(this.copyToolStripMenuItem_Click);
+            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fileToolStripMenuItem,
+            this.helpToolStripMenuItem});
+            resources.ApplyResources(this.menuStrip1, "menuStrip1");
+            this.menuStrip1.Name = "menuStrip1";
+            // 
+            // fileToolStripMenuItem
+            // 
+            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.saveLogToFileToolStripMenuItem,
+            this.settingsToolStripMenuItem,
+            this.exitToolStripMenuItem});
+            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+            resources.ApplyResources(this.fileToolStripMenuItem, "fileToolStripMenuItem");
+            // 
+            // saveLogToFileToolStripMenuItem
+            // 
+            this.saveLogToFileToolStripMenuItem.Name = "saveLogToFileToolStripMenuItem";
+            resources.ApplyResources(this.saveLogToFileToolStripMenuItem, "saveLogToFileToolStripMenuItem");
+            this.saveLogToFileToolStripMenuItem.Click += new System.EventHandler(this.saveLogItem_Click);
+            // 
+            // settingsToolStripMenuItem
+            // 
+            this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
+            resources.ApplyResources(this.settingsToolStripMenuItem, "settingsToolStripMenuItem");
+            this.settingsToolStripMenuItem.Click += new System.EventHandler(this.menuItemSettings_Click);
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            resources.ApplyResources(this.exitToolStripMenuItem, "exitToolStripMenuItem");
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.menuItemExit_Click);
+            // 
+            // helpToolStripMenuItem
+            // 
+            this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.checkForUpdateToolStripMenuItem,
+            this.apktoolIssuesToolStripMenuItem,
+            this.baksmaliIssuesToolStripMenuItem,
+            this.aboutToolStripMenuItem});
+            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
+            resources.ApplyResources(this.helpToolStripMenuItem, "helpToolStripMenuItem");
+            // 
+            // checkForUpdateToolStripMenuItem
+            // 
+            this.checkForUpdateToolStripMenuItem.Name = "checkForUpdateToolStripMenuItem";
+            resources.ApplyResources(this.checkForUpdateToolStripMenuItem, "checkForUpdateToolStripMenuItem");
+            this.checkForUpdateToolStripMenuItem.Click += new System.EventHandler(this.menuItemCheckUpdate_Click);
+            // 
+            // apktoolIssuesToolStripMenuItem
+            // 
+            this.apktoolIssuesToolStripMenuItem.Name = "apktoolIssuesToolStripMenuItem";
+            resources.ApplyResources(this.apktoolIssuesToolStripMenuItem, "apktoolIssuesToolStripMenuItem");
+            this.apktoolIssuesToolStripMenuItem.Click += new System.EventHandler(this.apktoolIssuesLinkItem_Click);
+            // 
+            // aboutToolStripMenuItem
+            // 
+            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            resources.ApplyResources(this.aboutToolStripMenuItem, "aboutToolStripMenuItem");
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.menuItemAbout_Click);
+            // 
+            // baksmaliIssuesToolStripMenuItem
+            // 
+            this.baksmaliIssuesToolStripMenuItem.Name = "baksmaliIssuesToolStripMenuItem";
+            resources.ApplyResources(this.baksmaliIssuesToolStripMenuItem, "baksmaliIssuesToolStripMenuItem");
+            this.baksmaliIssuesToolStripMenuItem.Click += new System.EventHandler(this.baksmaliIssuesLinkItem_Click);
             // 
             // FormMain
             // 
@@ -1835,13 +1916,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.Controls.Add(this.logTxtBox);
             this.Controls.Add(this.statusStrip1);
+            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.tabControlMain);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.Name = "FormMain";
             this.Activated += new System.EventHandler(this.FormMain_Activated);
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormMain_FormClosing);
             this.Shown += new System.EventHandler(this.FormMain_Shown);
             this.tabControlMain.ResumeLayout(false);
             this.tabPageMain.ResumeLayout(false);
@@ -1887,6 +1968,8 @@
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             this.contextMenuStripLog.ResumeLayout(false);
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2096,6 +2179,16 @@
         internal System.Windows.Forms.Label label30;
         private System.Windows.Forms.RichTextBox logTxtBox;
         private System.Windows.Forms.ToolStripMenuItem copyToolStripMenuItem;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem saveLogToFileToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem settingsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem checkForUpdateToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem apktoolIssuesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem baksmaliIssuesToolStripMenuItem;
     }
 }
 

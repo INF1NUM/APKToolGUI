@@ -125,13 +125,187 @@
     <value>Top, Left, Right</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="checkBox4.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="checkBox4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 114</value>
+  </data>
+  <data name="checkBox4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>134, 17</value>
+  </data>
+  <data name="checkBox4.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="checkBox4.Text" xml:space="preserve">
+    <value>Custom Java location</value>
+  </data>
+  <data name="&gt;&gt;checkBox4.Name" xml:space="preserve">
+    <value>checkBox4</value>
+  </data>
+  <data name="&gt;&gt;checkBox4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkBox4.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;checkBox4.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="textBox1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="textBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>203, 86</value>
+  </data>
+  <data name="textBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>215, 22</value>
+  </data>
+  <data name="textBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="textBox1.WordWrap" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;textBox1.Name" xml:space="preserve">
+    <value>textBox1</value>
+  </data>
+  <data name="&gt;&gt;textBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBox1.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;textBox1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="textBoxCustomJavaLocation.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="textBoxCustomJavaLocation.Location" type="System.Drawing.Point, System.Drawing">
+    <value>203, 112</value>
+  </data>
+  <data name="textBoxCustomJavaLocation.Size" type="System.Drawing.Size, System.Drawing">
+    <value>215, 22</value>
+  </data>
+  <data name="textBoxCustomJavaLocation.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="textBoxCustomJavaLocation.WordWrap" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;textBoxCustomJavaLocation.Name" xml:space="preserve">
+    <value>textBoxCustomJavaLocation</value>
+  </data>
+  <data name="&gt;&gt;textBoxCustomJavaLocation.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBoxCustomJavaLocation.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;textBoxCustomJavaLocation.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="button1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="button1.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>System</value>
+  </data>
+  <data name="button1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>422, 86</value>
+  </data>
+  <data name="button1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>24, 23</value>
+  </data>
+  <data name="button1.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="button1.Text" xml:space="preserve">
+    <value>...</value>
+  </data>
+  <data name="&gt;&gt;button1.Name" xml:space="preserve">
+    <value>button1</value>
+  </data>
+  <data name="&gt;&gt;button1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button1.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;button1.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="checkBox3.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkBox3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 89</value>
+  </data>
+  <data name="checkBox3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>128, 17</value>
+  </data>
+  <data name="checkBox3.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="checkBox3.Text" xml:space="preserve">
+    <value>Custom temp folder</value>
+  </data>
+  <data name="&gt;&gt;checkBox3.Name" xml:space="preserve">
+    <value>checkBox3</value>
+  </data>
+  <data name="&gt;&gt;checkBox3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkBox3.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;checkBox3.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="buttonCustomJavaLocation.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="buttonCustomJavaLocation.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>System</value>
+  </data>
+  <data name="buttonCustomJavaLocation.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="buttonCustomJavaLocation.Location" type="System.Drawing.Point, System.Drawing">
+    <value>422, 112</value>
+  </data>
+  <data name="buttonCustomJavaLocation.Size" type="System.Drawing.Size, System.Drawing">
+    <value>24, 23</value>
+  </data>
+  <data name="buttonCustomJavaLocation.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="buttonCustomJavaLocation.Text" xml:space="preserve">
+    <value>...</value>
+  </data>
+  <data name="&gt;&gt;buttonCustomJavaLocation.Name" xml:space="preserve">
+    <value>buttonCustomJavaLocation</value>
+  </data>
+  <data name="&gt;&gt;buttonCustomJavaLocation.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonCustomJavaLocation.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;buttonCustomJavaLocation.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
   <data name="checkBox2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="checkBox2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="checkBox2.Location" type="System.Drawing.Point, System.Drawing">
     <value>9, 65</value>
   </data>
@@ -154,7 +328,7 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;checkBox2.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>6</value>
   </data>
   <data name="checkBox1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -184,7 +358,7 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;checkBox1.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>7</value>
   </data>
   <data name="checkBoxCheckUpdateStartup.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -214,19 +388,19 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;checkBoxCheckUpdateStartup.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>8</value>
   </data>
   <data name="groupBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 6</value>
+    <value>8, 6</value>
   </data>
   <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>447, 120</value>
+    <value>454, 157</value>
   </data>
   <data name="groupBox1.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
   </data>
   <data name="groupBox1.Text" xml:space="preserve">
-    <value>General</value>
+    <value>2</value>
   </data>
   <data name="&gt;&gt;groupBox1.Name" xml:space="preserve">
     <value>groupBox1</value>
@@ -239,123 +413,6 @@
   </data>
   <data name="&gt;&gt;groupBox1.ZOrder" xml:space="preserve">
     <value>0</value>
-  </data>
-  <data name="groupBoxJava.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="labelCustomJavaLocation.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="labelCustomJavaLocation.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 17</value>
-  </data>
-  <data name="labelCustomJavaLocation.Size" type="System.Drawing.Size, System.Drawing">
-    <value>176, 23</value>
-  </data>
-  <data name="labelCustomJavaLocation.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="labelCustomJavaLocation.Text" xml:space="preserve">
-    <value>Custom Java location</value>
-  </data>
-  <data name="labelCustomJavaLocation.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
-  </data>
-  <data name="&gt;&gt;labelCustomJavaLocation.Name" xml:space="preserve">
-    <value>labelCustomJavaLocation</value>
-  </data>
-  <data name="&gt;&gt;labelCustomJavaLocation.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelCustomJavaLocation.Parent" xml:space="preserve">
-    <value>groupBoxJava</value>
-  </data>
-  <data name="&gt;&gt;labelCustomJavaLocation.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="textBoxCustomJavaLocation.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="textBoxCustomJavaLocation.Location" type="System.Drawing.Point, System.Drawing">
-    <value>189, 18</value>
-  </data>
-  <data name="textBoxCustomJavaLocation.Size" type="System.Drawing.Size, System.Drawing">
-    <value>222, 22</value>
-  </data>
-  <data name="textBoxCustomJavaLocation.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="textBoxCustomJavaLocation.WordWrap" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;textBoxCustomJavaLocation.Name" xml:space="preserve">
-    <value>textBoxCustomJavaLocation</value>
-  </data>
-  <data name="&gt;&gt;textBoxCustomJavaLocation.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;textBoxCustomJavaLocation.Parent" xml:space="preserve">
-    <value>groupBoxJava</value>
-  </data>
-  <data name="&gt;&gt;textBoxCustomJavaLocation.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="buttonCustomJavaLocation.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
-  </data>
-  <data name="buttonCustomJavaLocation.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>System</value>
-  </data>
-  <data name="buttonCustomJavaLocation.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="buttonCustomJavaLocation.Location" type="System.Drawing.Point, System.Drawing">
-    <value>415, 18</value>
-  </data>
-  <data name="buttonCustomJavaLocation.Size" type="System.Drawing.Size, System.Drawing">
-    <value>24, 23</value>
-  </data>
-  <data name="buttonCustomJavaLocation.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="buttonCustomJavaLocation.Text" xml:space="preserve">
-    <value>...</value>
-  </data>
-  <data name="&gt;&gt;buttonCustomJavaLocation.Name" xml:space="preserve">
-    <value>buttonCustomJavaLocation</value>
-  </data>
-  <data name="&gt;&gt;buttonCustomJavaLocation.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonCustomJavaLocation.Parent" xml:space="preserve">
-    <value>groupBoxJava</value>
-  </data>
-  <data name="&gt;&gt;buttonCustomJavaLocation.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="groupBoxJava.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 265</value>
-  </data>
-  <data name="groupBoxJava.Size" type="System.Drawing.Size, System.Drawing">
-    <value>447, 47</value>
-  </data>
-  <data name="groupBoxJava.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="groupBoxJava.Text" xml:space="preserve">
-    <value>Java</value>
-  </data>
-  <data name="&gt;&gt;groupBoxJava.Name" xml:space="preserve">
-    <value>groupBoxJava</value>
-  </data>
-  <data name="&gt;&gt;groupBoxJava.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;groupBoxJava.Parent" xml:space="preserve">
-    <value>tabPage1</value>
-  </data>
-  <data name="&gt;&gt;groupBoxJava.ZOrder" xml:space="preserve">
-    <value>1</value>
   </data>
   <data name="groupBoxLanguage.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
@@ -370,7 +427,7 @@
     <value>129, 17</value>
   </data>
   <data name="comboBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>312, 21</value>
+    <value>319, 21</value>
   </data>
   <data name="comboBox1.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -388,10 +445,10 @@
     <value>0</value>
   </data>
   <data name="groupBoxLanguage.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 132</value>
+    <value>5, 169</value>
   </data>
   <data name="groupBoxLanguage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>447, 47</value>
+    <value>454, 47</value>
   </data>
   <data name="groupBoxLanguage.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -409,7 +466,7 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;groupBoxLanguage.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>1</value>
   </data>
   <data name="groupBoxContextMenu.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
@@ -454,7 +511,7 @@
     <value>3, 18</value>
   </data>
   <data name="labelAdminRights.Size" type="System.Drawing.Size, System.Drawing">
-    <value>260, 23</value>
+    <value>267, 23</value>
   </data>
   <data name="labelAdminRights.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -487,7 +544,7 @@
     <value>NoControl</value>
   </data>
   <data name="buttonAddContextMenu.Location" type="System.Drawing.Point, System.Drawing">
-    <value>269, 18</value>
+    <value>276, 18</value>
   </data>
   <data name="buttonAddContextMenu.Size" type="System.Drawing.Size, System.Drawing">
     <value>83, 23</value>
@@ -523,7 +580,7 @@
     <value>NoControl</value>
   </data>
   <data name="buttonRemoveContextMenu.Location" type="System.Drawing.Point, System.Drawing">
-    <value>358, 18</value>
+    <value>365, 18</value>
   </data>
   <data name="buttonRemoveContextMenu.Size" type="System.Drawing.Size, System.Drawing">
     <value>83, 23</value>
@@ -547,10 +604,10 @@
     <value>3</value>
   </data>
   <data name="groupBoxContextMenu.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 185</value>
+    <value>5, 222</value>
   </data>
   <data name="groupBoxContextMenu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>447, 74</value>
+    <value>454, 74</value>
   </data>
   <data name="groupBoxContextMenu.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -568,7 +625,7 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;groupBoxContextMenu.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>2</value>
   </data>
   <data name="tabPage1.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 22</value>
@@ -577,7 +634,7 @@
     <value>3, 3, 3, 3</value>
   </data>
   <data name="tabPage1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>459, 324</value>
+    <value>466, 302</value>
   </data>
   <data name="tabPage1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -604,7 +661,7 @@
     <value>0, 1</value>
   </data>
   <data name="tabControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>467, 350</value>
+    <value>474, 328</value>
   </data>
   <data name="tabControl1.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -631,7 +688,7 @@
     <value>NoControl</value>
   </data>
   <data name="buttonCancel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>385, 357</value>
+    <value>392, 335</value>
   </data>
   <data name="buttonCancel.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
@@ -664,7 +721,7 @@
     <value>NoControl</value>
   </data>
   <data name="buttonОК.Location" type="System.Drawing.Point, System.Drawing">
-    <value>304, 357</value>
+    <value>311, 335</value>
   </data>
   <data name="buttonОК.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
@@ -694,7 +751,7 @@
     <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>466, 385</value>
+    <value>473, 363</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterParent</value>

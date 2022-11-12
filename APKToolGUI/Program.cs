@@ -1,5 +1,6 @@
 ﻿using APKToolGUI.Languages;
 using APKToolGUI.Properties;
+using APKToolGUI.Utils;
 using Bluegrams.Application;
 using System;
 using System.Collections.Generic;
@@ -155,8 +156,16 @@ namespace APKToolGUI
                 return path;
         }
 
+        private static string GetTempDir()
+        {
+            if (Settings.Default.UseCustomTempDir)
+                return Path.Combine(Settings.Default.TempDir, "APKToolGUI" + StringExt.RandStrWithCaps(4));
+            else
+                return Path.Combine(Path.GetTempPath(), "APKToolGUI" + StringExt.RandStrWithCaps(4));
+        }
+
         public static string LOCAL_APPDATA_PATH = Environment.GetEnvironmentVariable("LocalAppData");
-        public static string TEMP_DIR = Path.Combine(Path.GetTempPath(), "APKToolGUI");
+        public static string TEMP_DIR = GetTempDir();
         public static string APP_PATH = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
         public static string APKTOOL_PATH = APP_PATH + @"\Resources\apktool.jar";
         public static string APKSIGNER_PATH = APP_PATH + @"\Resources\apksigner.jar";

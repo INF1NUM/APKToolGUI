@@ -35,8 +35,6 @@
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.checkBoxCheckUpdateStartup = new System.Windows.Forms.CheckBox();
-            this.groupBoxJava = new System.Windows.Forms.GroupBox();
-            this.labelCustomJavaLocation = new System.Windows.Forms.Label();
             this.textBoxCustomJavaLocation = new System.Windows.Forms.TextBox();
             this.buttonCustomJavaLocation = new System.Windows.Forms.Button();
             this.groupBoxLanguage = new System.Windows.Forms.GroupBox();
@@ -48,10 +46,13 @@
             this.buttonRemoveContextMenu = new System.Windows.Forms.Button();
             this.buttonCancel = new System.Windows.Forms.Button();
             this.buttonОК = new System.Windows.Forms.Button();
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.checkBox4 = new System.Windows.Forms.CheckBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            this.groupBoxJava.SuspendLayout();
             this.groupBoxLanguage.SuspendLayout();
             this.groupBoxContextMenu.SuspendLayout();
             this.SuspendLayout();
@@ -66,7 +67,6 @@
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.groupBox1);
-            this.tabPage1.Controls.Add(this.groupBoxJava);
             this.tabPage1.Controls.Add(this.groupBoxLanguage);
             this.tabPage1.Controls.Add(this.groupBoxContextMenu);
             resources.ApplyResources(this.tabPage1, "tabPage1");
@@ -76,6 +76,12 @@
             // groupBox1
             // 
             resources.ApplyResources(this.groupBox1, "groupBox1");
+            this.groupBox1.Controls.Add(this.checkBox4);
+            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.textBoxCustomJavaLocation);
+            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.checkBox3);
+            this.groupBox1.Controls.Add(this.buttonCustomJavaLocation);
             this.groupBox1.Controls.Add(this.checkBox2);
             this.groupBox1.Controls.Add(this.checkBox1);
             this.groupBox1.Controls.Add(this.checkBoxCheckUpdateStartup);
@@ -106,20 +112,6 @@
             this.checkBoxCheckUpdateStartup.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "CheckForUpdateAtStartup", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.checkBoxCheckUpdateStartup.Name = "checkBoxCheckUpdateStartup";
             this.checkBoxCheckUpdateStartup.UseVisualStyleBackColor = true;
-            // 
-            // groupBoxJava
-            // 
-            resources.ApplyResources(this.groupBoxJava, "groupBoxJava");
-            this.groupBoxJava.Controls.Add(this.labelCustomJavaLocation);
-            this.groupBoxJava.Controls.Add(this.textBoxCustomJavaLocation);
-            this.groupBoxJava.Controls.Add(this.buttonCustomJavaLocation);
-            this.groupBoxJava.Name = "groupBoxJava";
-            this.groupBoxJava.TabStop = false;
-            // 
-            // labelCustomJavaLocation
-            // 
-            resources.ApplyResources(this.labelCustomJavaLocation, "labelCustomJavaLocation");
-            this.labelCustomJavaLocation.Name = "labelCustomJavaLocation";
             // 
             // textBoxCustomJavaLocation
             // 
@@ -201,6 +193,32 @@
             this.buttonОК.UseVisualStyleBackColor = true;
             this.buttonОК.Click += new System.EventHandler(this.buttonОК_Click);
             // 
+            // checkBox3
+            // 
+            resources.ApplyResources(this.checkBox3, "checkBox3");
+            this.checkBox3.Name = "checkBox3";
+            this.checkBox3.UseVisualStyleBackColor = true;
+            // 
+            // textBox1
+            // 
+            resources.ApplyResources(this.textBox1, "textBox1");
+            this.textBox1.BackColor = System.Drawing.SystemColors.Window;
+            this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::APKToolGUI.Properties.Settings.Default, "JavaExe", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Text = global::APKToolGUI.Properties.Settings.Default.JavaExe;
+            // 
+            // button1
+            // 
+            resources.ApplyResources(this.button1, "button1");
+            this.button1.Name = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // checkBox4
+            // 
+            resources.ApplyResources(this.checkBox4, "checkBox4");
+            this.checkBox4.Name = "checkBox4";
+            this.checkBox4.UseVisualStyleBackColor = true;
+            // 
             // FormSettings
             // 
             resources.ApplyResources(this, "$this");
@@ -217,8 +235,6 @@
             this.tabPage1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.groupBoxJava.ResumeLayout(false);
-            this.groupBoxJava.PerformLayout();
             this.groupBoxLanguage.ResumeLayout(false);
             this.groupBoxContextMenu.ResumeLayout(false);
             this.groupBoxContextMenu.PerformLayout();
@@ -230,7 +246,6 @@
 
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.GroupBox groupBoxJava;
         private System.Windows.Forms.GroupBox groupBoxLanguage;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.GroupBox groupBoxContextMenu;
@@ -241,11 +256,14 @@
         private System.Windows.Forms.Button buttonОК;
         private System.Windows.Forms.TextBox textBoxCustomJavaLocation;
         private System.Windows.Forms.Button buttonCustomJavaLocation;
-        private System.Windows.Forms.Label labelCustomJavaLocation;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.CheckBox checkBoxCheckUpdateStartup;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.CheckBox ignoreOutputContextMenuBox;
         private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.CheckBox checkBox4;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.CheckBox checkBox3;
     }
 }

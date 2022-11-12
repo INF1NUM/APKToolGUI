@@ -261,7 +261,9 @@ namespace APKToolGUI
                             ZipUtils.ExtractFile(file, aapt.AppIcon, Path.Combine(Program.TEMP_DIR, aapt.PackageName));
                             string icon = Path.Combine(Program.TEMP_DIR, aapt.PackageName, Path.GetFileName(aapt.AppIcon));
                             if (File.Exists(icon))
+                            {
                                 apkIconPicBox.Image = Image.FromFile(icon);
+                            }
                         }
                     }
                 }
@@ -800,9 +802,14 @@ namespace APKToolGUI
             frm.ShowDialog();
         }
 
-        private void apktoolIssueItem_Click(object sender, EventArgs e)
+        private void apktoolIssuesLinkItem_Click(object sender, EventArgs e)
         {
-            Process.Start("https://github.com/iBotPeaches/Apktool/issues");
+            Process.Start("https://github.com/iBotPeaches/Apktool/issues?q=is%3Aissue");
+        }
+
+        private void baksmaliIssuesLinkItem_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://github.com/JesusFreke/smali/issues?q=is%3Aissue");
         }
         #endregion
 
@@ -910,13 +917,11 @@ namespace APKToolGUI
                 TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.NoProgress, Handle);
         }
 
-        private void FormMain_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            
-        }
-
         private void Application_ApplicationExit(object sender, EventArgs e)
         {
+            apkIconPicBox.Image.Dispose();
+            apkIconPicBox.Image = null;
+            DirectoryUtils.Delete(Program.TEMP_DIR);
             Save();
         }
 
