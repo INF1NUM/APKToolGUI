@@ -142,7 +142,7 @@
     <value>Settings</value>
   </data>
   <data name="ErrorJavaDetect" xml:space="preserve">
-    <value>Java is not installed or is installed incorrectly. The program will be closed.</value>
+    <value>Java is not installed or is installed incorrectly. Please install Java or set custom location in Settings</value>
   </data>
   <data name="ErrorReadSettings" xml:space="preserve">
     <value>Error reading settings!</value>
@@ -203,9 +203,6 @@
   </data>
   <data name="Done" xml:space="preserve">
     <value>Done</value>
-  </data>
-  <data name="DoYouWantToSelectJavaLocation" xml:space="preserve">
-    <value>Java is not found. Do you want to select custom location?</value>
   </data>
   <data name="CantDetectApktoolVersion" xml:space="preserve">
     <value>Can't detect apktool version.</value>

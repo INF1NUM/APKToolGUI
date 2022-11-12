@@ -88,16 +88,12 @@ namespace APKToolGUI
         {
             Update();
 
-            Settings.Default.JavaExe = JavaUtils.GetJavaPath();
-
             InitializeUpdateChecker();
-            InitializeAPKTool();
             InitializeZipalign();
-            InitializeSignapk();
             InitializeBaksmali();
             InitializeSmali();
-
-            smali = new Smali(Settings.Default.JavaExe, Program.SMALI_PATH);
+            InitializeAPKTool();
+            InitializeSignapk();
 
             string javaVersion = apktool.GetJavaVersion();
             if (javaVersion != null)
@@ -110,7 +106,7 @@ namespace APKToolGUI
                     ToLog(ApktoolEventType.Error, Language.CantDetectApktoolVersion);
             }
             else
-                MessageBox.Show(Language.ErrorJavaDetect, Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ToLog(ApktoolEventType.Error, Language.ErrorJavaDetect);
 
             if (AdminUtils.IsAdministrator())
                 ToLog(ApktoolEventType.Warning, Language.DragDropNotSupported);
@@ -362,7 +358,7 @@ namespace APKToolGUI
                     ToLog(DateTime.Now.ToString("[HH:mm:ss]"), message, Color.Red);
                     break;
                 default:
-                    ToLog(DateTime.Now.ToString("[dd.MM.yyyy HH:mm:ss]"), message,Color.Blue);
+                    ToLog(DateTime.Now.ToString("[dd.MM.yyyy HH:mm:ss]"), message, Color.Blue);
                     break;
             }
         }
@@ -416,7 +412,7 @@ namespace APKToolGUI
         #region Signapk
         private void InitializeSignapk()
         {
-            signapk = new Signapk(Settings.Default.JavaExe, Program.APKSIGNER_PATH);
+            signapk = new Signapk(JavaUtils.GetJavaPath(), Program.APKSIGNER_PATH);
             signapk.SignapkOutputDataRecieved += SignApkOutputDataRecieved;
             signapk.SignapkErrorDataRecieved += SignApkErrorDataRecieved;
         }
@@ -447,7 +443,7 @@ namespace APKToolGUI
         #region Apktool
         private void InitializeAPKTool()
         {
-            apktool = new Apktool(Settings.Default.JavaExe, Program.APKTOOL_PATH);
+            apktool = new Apktool(JavaUtils.GetJavaPath(), Program.APKTOOL_PATH);
             apktool.ApktoolOutputDataRecieved += apktool_ApktoolOutputDataRecieved;
             apktool.ApktoolErrorDataRecieved += apktool_ApktoolErrorDataRecieved;
         }
@@ -625,7 +621,7 @@ namespace APKToolGUI
         #region Baksmali
         private void InitializeBaksmali()
         {
-            baksmali = new Baksmali(Settings.Default.JavaExe, Program.BAKSMALI_PATH);
+            baksmali = new Baksmali(JavaUtils.GetJavaPath(), Program.BAKSMALI_PATH);
             baksmali.BaksmaliOutputDataRecieved += BaksmaliOutputDataRecieved;
             baksmali.BaksmaliErrorDataRecieved += BaksmaliErrorDataRecieved;
         }
@@ -684,7 +680,7 @@ namespace APKToolGUI
         #region Smali
         private void InitializeSmali()
         {
-            smali = new Smali(Settings.Default.JavaExe, Program.SMALI_PATH);
+            smali = new Smali(JavaUtils.GetJavaPath(), Program.SMALI_PATH);
             smali.SmaliOutputDataRecieved += SmaliOutputDataRecieved;
             smali.SmaliErrorDataRecieved += SmaliErrorDataRecieved;
         }

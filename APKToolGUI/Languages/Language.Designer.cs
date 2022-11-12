@@ -340,15 +340,6 @@ namespace APKToolGUI.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Java is not found. Do you want to select custom location?.
-        /// </summary>
-        internal static string DoYouWantToSelectJavaLocation {
-            get {
-                return ResourceManager.GetString("DoYouWantToSelectJavaLocation", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to You are running as administrator. Drag &amp; drop is not supported.
         /// </summary>
         internal static string DragDropNotSupported {
@@ -421,7 +412,7 @@ namespace APKToolGUI.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Java is not installed or is installed incorrectly. The program will be closed..
+        ///   Looks up a localized string similar to Java is not installed or is installed incorrectly. Please install Java or set custom location in Settings.
         /// </summary>
         internal static string ErrorJavaDetect {
             get {

@@ -112,7 +112,7 @@ namespace Java
             }
             catch
             {
-                throw;
+                return null;
             }
         }
     }

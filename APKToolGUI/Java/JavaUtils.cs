@@ -80,36 +80,50 @@ namespace Java
                 return null;
         }
 
+        public static bool CheckJava()
+        {
+            if (Settings.Default.UseCustomJavaExe)
+            {
+                if (!File.Exists(Settings.Default.JavaExe))
+                {
+                    return false;
+                }
+                return true;
+            }
+            else
+            {
+                string javaExec;
+                if (!JavaUtils.TryGetSystemVariable(out javaExec))
+                {
+                    if (!File.Exists(JavaUtils.SearchPath()))
+                    {
+                        return false;
+                    }
+                    return true;
+                }
+                return true;
+            }
+        }
+
         public static string GetJavaPath()
         {
-            string javaExec;
-            if (!JavaUtils.TryGetSystemVariable(out javaExec))
+            if (Settings.Default.UseCustomJavaExe)
             {
-                javaExec = JavaUtils.SearchPath();
-                if (!File.Exists(javaExec))
-                {
-                    if (MessageBox.Show(Language.DoYouWantToSelectJavaLocation, Application.ProductName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                    {
-                        using (OpenFileDialog openJavaExe = new OpenFileDialog())
-                        {
-                            openJavaExe.Filter = "java.exe|java.exe";
-                            if (openJavaExe.ShowDialog() == DialogResult.OK)
-                            {
-                                javaExec = Program.GetPortablePath(openJavaExe.FileName);
-                            }
-                            else
-                                Environment.Exit(0);
-                        }
-                    }
-                    else
-                        Environment.Exit(0);
-                }
-                else
-                {
-                    return javaExec;
-                }
+                return Settings.Default.JavaExe;
             }
-            return javaExec;
+            else
+            {
+                string javaExec;
+                if (!JavaUtils.TryGetSystemVariable(out javaExec))
+                {
+                    javaExec = JavaUtils.SearchPath();
+                    if (File.Exists(javaExec))
+                    {
+                        return javaExec;
+                    }
+                }
+                return javaExec;
+            }
         }
     }
 }

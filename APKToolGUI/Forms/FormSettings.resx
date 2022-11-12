@@ -128,6 +128,9 @@
   <data name="checkBox4.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="checkBox4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="checkBox4.Location" type="System.Drawing.Point, System.Drawing">
     <value>9, 114</value>
@@ -207,6 +210,9 @@
   <data name="&gt;&gt;textBoxCustomJavaLocation.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="button1.AccessibleName" xml:space="preserve">
+    <value>buttonCustomTempLocation</value>
+  </data>
   <data name="button1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
@@ -243,17 +249,20 @@
   <data name="checkBox3.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="checkBox3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="checkBox3.Location" type="System.Drawing.Point, System.Drawing">
     <value>9, 89</value>
   </data>
   <data name="checkBox3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>128, 17</value>
+    <value>139, 17</value>
   </data>
   <data name="checkBox3.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
   <data name="checkBox3.Text" xml:space="preserve">
-    <value>Custom temp folder</value>
+    <value>Custom temp location</value>
   </data>
   <data name="&gt;&gt;checkBox3.Name" xml:space="preserve">
     <value>checkBox3</value>
