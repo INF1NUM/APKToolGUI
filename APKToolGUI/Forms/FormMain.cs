@@ -15,6 +15,7 @@ using APKToolGUI.Handlers;
 using Microsoft.WindowsAPICodePack.Taskbar;
 using System.Media;
 
+
 namespace APKToolGUI
 {
     public partial class FormMain : Form
@@ -233,7 +234,7 @@ namespace APKToolGUI
                         result = aapt.Parse(file);
 
                     });
-                    
+
                     if (aapt.Parse(file))
                     {
                         if (apkIconPicBox.Image != null)
@@ -320,74 +321,46 @@ namespace APKToolGUI
             }));
         }
 
-        internal void ToLog(string time, string message, Image statusImage, Color backColor)
+        internal void ToLog(string time, string message, Color backColor)
         {
-            Size size = new Size();
-            size.Width = 15;
-            size.Height = 15;
-
-            if (message.Contains(Environment.NewLine))
-            {
-                string[] lines = message.Split(
-                    new string[] { Environment.NewLine },
-                    StringSplitOptions.None
-                );
-                foreach (string line in lines)
+            if (logTxtBox.InvokeRequired)
+                Invoke(new Action(delegate ()
                 {
-                    if (logGridView.InvokeRequired)
-                        logGridView.BeginInvoke(new Action(() =>
-                        {
-                            int i = logGridView.Rows.Add(new Bitmap(statusImage, size), time, line);
-                            logGridView.Rows[i].DefaultCellStyle.BackColor = backColor;
-                            logGridView.FirstDisplayedScrollingRowIndex = i;
-                        }));
-                    else
-                    {
-                        int i = logGridView.Rows.Add(new Bitmap(statusImage, size), time, line);
-                        logGridView.Rows[i].DefaultCellStyle.BackColor = backColor;
-                        logGridView.FirstDisplayedScrollingRowIndex = i;
-                    }
-                }
-            }
+                    //richTextBox1.SelectionColor = color ?? Color.Black;
+                    logTxtBox.SelectionColor = backColor;
+                    logTxtBox.AppendText(time + " " + message + Environment.NewLine);
+                }));
             else
             {
-                if (logGridView.InvokeRequired)
-                    logGridView.BeginInvoke(new Action(() =>
-                    {
-                        int i = logGridView.Rows.Add(new Bitmap(statusImage, size), time, message);
-                        logGridView.Rows[i].DefaultCellStyle.BackColor = backColor;
-                        logGridView.FirstDisplayedScrollingRowIndex = i;
-                    }));
-                else
-                {
-                    int i = logGridView.Rows.Add(new Bitmap(statusImage, size), time, message);
-                    logGridView.Rows[i].DefaultCellStyle.BackColor = backColor;
-                    logGridView.FirstDisplayedScrollingRowIndex = i;
-                }
+                logTxtBox.SelectionColor = backColor;
+                logTxtBox.AppendText(time + " " + message + Environment.NewLine);
             }
         }
 
         internal void ToLog(ApktoolEventType eventType, string message)
         {
+            //LightPink
+            //LightYellow
+            //LightBlue
             if (String.IsNullOrWhiteSpace(message))
                 return;
 
             switch (eventType)
             {
                 case ApktoolEventType.Information:
-                    ToLog(DateTime.Now.ToString("[HH:mm:ss]"), message, Resources.info, Color.FromKnownColor(KnownColor.Window));
+                    ToLog(DateTime.Now.ToString("[HH:mm:ss]"), message, Color.Black);
                     break;
                 case ApktoolEventType.Error:
-                    ToLog(DateTime.Now.ToString("[HH:mm:ss]"), message, Resources.error, Color.FromKnownColor(KnownColor.LightPink));
+                    ToLog(DateTime.Now.ToString("[HH:mm:ss]"), message, Color.Red);
                     break;
                 case ApktoolEventType.Warning:
-                    ToLog(DateTime.Now.ToString("[HH:mm:ss]"), message, Resources.warning, Color.FromKnownColor(KnownColor.LightYellow));
+                    ToLog(DateTime.Now.ToString("[HH:mm:ss]"), message, Color.Goldenrod);
                     break;
                 case ApktoolEventType.Unknown:
-                    ToLog(DateTime.Now.ToString("[HH:mm:ss]"), message, Resources.error, Color.FromKnownColor(KnownColor.LightPink));
+                    ToLog(DateTime.Now.ToString("[HH:mm:ss]"), message, Color.Red);
                     break;
                 default:
-                    ToLog(DateTime.Now.ToString("[dd.MM.yyyy HH:mm:ss]"), message, Resources.info, Color.FromKnownColor(KnownColor.LightBlue));
+                    ToLog(DateTime.Now.ToString("[dd.MM.yyyy HH:mm:ss]"), message,Color.Blue);
                     break;
             }
         }
@@ -434,7 +407,7 @@ namespace APKToolGUI
         internal void ClearLog()
         {
             if (Settings.Default.ClearLogBeforeAction)
-                logGridView.Rows.Clear();
+                logTxtBox.Text = "";
         }
         #endregion
 
@@ -800,15 +773,7 @@ namespace APKToolGUI
 
                 if (sfd.ShowDialog() == DialogResult.OK)
                 {
-                    using (TextWriter TW = new StreamWriter(sfd.FileName))
-                    {
-                        for (int i = 0; i < logGridView.Rows.Count; i++)
-                        {
-                            string dateTime = (string)logGridView.Rows[i].Cells[1].Value;
-                            string text = (string)logGridView.Rows[i].Cells[2].Value;
-                            TW.WriteLine($"{dateTime} {text}");
-                        }
-                    }
+                    File.WriteAllText(sfd.FileName, logTxtBox.Text);
                 }
             }
         }
@@ -844,8 +809,21 @@ namespace APKToolGUI
         #region Control event handlers
         private void clearLogToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            logGridView.Rows.Clear();
+            logTxtBox.Text = "";
         }
+
+        private void copyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Clipboard.SetText(logTxtBox.SelectedText);
+            }
+            catch (Exception ex)
+            {
+                ToLog(ApktoolEventType.Error, ex.Message);
+            }
+        }
+
         private void openAndroidMainfestBtn_Click(object sender, EventArgs e)
         {
             if (File.Exists(Path.Combine(textBox_BUILD_InputProjectDir.Text, "AndroidManifest.xml")))
@@ -934,23 +912,7 @@ namespace APKToolGUI
 
         private void FormMain_FormClosing(object sender, FormClosingEventArgs e)
         {
-            //For debugging purposes
-            try
-            {
-                using (TextWriter TW = new StreamWriter(Path.Combine(Program.TEMP_DIR, "logs.txt")))
-                {
-                    for (int i = 0; i < logGridView.Rows.Count; i++)
-                    {
-                        string dateTime = (string)logGridView.Rows[i].Cells[1].Value;
-                        string text = (string)logGridView.Rows[i].Cells[2].Value;
-                        TW.WriteLine($"{dateTime} {text}");
-                    }
-                }
-            }
-            catch
-            {
-
-            }
+            
         }
 
         private void Application_ApplicationExit(object sender, EventArgs e)

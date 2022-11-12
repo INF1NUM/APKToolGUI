@@ -30,8 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControlMain = new System.Windows.Forms.TabControl();
             this.tabPageMain = new System.Windows.Forms.TabPage();
             this.comApkOpenDir = new System.Windows.Forms.Button();
@@ -66,6 +64,13 @@
             this.tabPageApkInfo = new System.Windows.Forms.TabPage();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.basicInfoTabPage = new System.Windows.Forms.TabPage();
+            this.archSdkTxtBox = new System.Windows.Forms.TextBox();
+            this.label30 = new System.Windows.Forms.Label();
+            this.apkDlLinkBtn = new System.Windows.Forms.Button();
+            this.apkSosLinkBtn = new System.Windows.Forms.Button();
+            this.apkMirrorLinkBtn = new System.Windows.Forms.Button();
+            this.apkSupportLinkBtn = new System.Windows.Forms.Button();
+            this.apkGkLinkBtn = new System.Windows.Forms.Button();
             this.label17 = new System.Windows.Forms.Label();
             this.localsTxtBox = new System.Windows.Forms.RichTextBox();
             this.selApkFileInfoBtn = new System.Windows.Forms.Button();
@@ -214,10 +219,6 @@
             this.toolStripStatusLabelStateImage = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabelStateText = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
-            this.logGridView = new System.Windows.Forms.DataGridView();
-            this.ColumnImage = new System.Windows.Forms.DataGridViewImageColumn();
-            this.ColumnTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnMessage = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.contextMenuStripLog = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.clearLogToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mainMenu1 = new System.Windows.Forms.MainMenu(this.components);
@@ -229,13 +230,8 @@
             this.menuItemCheckUpdate = new System.Windows.Forms.MenuItem();
             this.apktoolIssueItem = new System.Windows.Forms.MenuItem();
             this.menuItemAbout = new System.Windows.Forms.MenuItem();
-            this.apkGkLinkBtn = new System.Windows.Forms.Button();
-            this.apkSupportLinkBtn = new System.Windows.Forms.Button();
-            this.apkMirrorLinkBtn = new System.Windows.Forms.Button();
-            this.apkSosLinkBtn = new System.Windows.Forms.Button();
-            this.apkDlLinkBtn = new System.Windows.Forms.Button();
-            this.label30 = new System.Windows.Forms.Label();
-            this.archSdkTxtBox = new System.Windows.Forms.TextBox();
+            this.logTxtBox = new System.Windows.Forms.RichTextBox();
+            this.copyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControlMain.SuspendLayout();
             this.tabPageMain.SuspendLayout();
             this.signPanel.SuspendLayout();
@@ -265,7 +261,6 @@
             this.smaliGroupBox.SuspendLayout();
             this.bakSmaliGroupBox.SuspendLayout();
             this.statusStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.logGridView)).BeginInit();
             this.contextMenuStripLog.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -565,6 +560,47 @@
             this.basicInfoTabPage.Controls.Add(this.label12);
             this.basicInfoTabPage.Name = "basicInfoTabPage";
             this.basicInfoTabPage.UseVisualStyleBackColor = true;
+            // 
+            // archSdkTxtBox
+            // 
+            resources.ApplyResources(this.archSdkTxtBox, "archSdkTxtBox");
+            this.archSdkTxtBox.Name = "archSdkTxtBox";
+            this.archSdkTxtBox.ReadOnly = true;
+            // 
+            // label30
+            // 
+            resources.ApplyResources(this.label30, "label30");
+            this.label30.Name = "label30";
+            // 
+            // apkDlLinkBtn
+            // 
+            resources.ApplyResources(this.apkDlLinkBtn, "apkDlLinkBtn");
+            this.apkDlLinkBtn.Name = "apkDlLinkBtn";
+            this.apkDlLinkBtn.UseVisualStyleBackColor = true;
+            // 
+            // apkSosLinkBtn
+            // 
+            resources.ApplyResources(this.apkSosLinkBtn, "apkSosLinkBtn");
+            this.apkSosLinkBtn.Name = "apkSosLinkBtn";
+            this.apkSosLinkBtn.UseVisualStyleBackColor = true;
+            // 
+            // apkMirrorLinkBtn
+            // 
+            resources.ApplyResources(this.apkMirrorLinkBtn, "apkMirrorLinkBtn");
+            this.apkMirrorLinkBtn.Name = "apkMirrorLinkBtn";
+            this.apkMirrorLinkBtn.UseVisualStyleBackColor = true;
+            // 
+            // apkSupportLinkBtn
+            // 
+            resources.ApplyResources(this.apkSupportLinkBtn, "apkSupportLinkBtn");
+            this.apkSupportLinkBtn.Name = "apkSupportLinkBtn";
+            this.apkSupportLinkBtn.UseVisualStyleBackColor = true;
+            // 
+            // apkGkLinkBtn
+            // 
+            resources.ApplyResources(this.apkGkLinkBtn, "apkGkLinkBtn");
+            this.apkGkLinkBtn.Name = "apkGkLinkBtn";
+            this.apkGkLinkBtn.UseVisualStyleBackColor = true;
             // 
             // label17
             // 
@@ -1705,69 +1741,11 @@
             this.toolStripProgressBar1.Name = "toolStripProgressBar1";
             this.toolStripProgressBar1.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             // 
-            // logGridView
-            // 
-            this.logGridView.AllowUserToAddRows = false;
-            this.logGridView.AllowUserToDeleteRows = false;
-            this.logGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.logGridView.BackgroundColor = System.Drawing.SystemColors.Window;
-            this.logGridView.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.logGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.logGridView.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableWithoutHeaderText;
-            this.logGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            resources.ApplyResources(this.logGridView, "logGridView");
-            this.logGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.logGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ColumnImage,
-            this.ColumnTime,
-            this.ColumnMessage});
-            this.logGridView.ContextMenuStrip = this.contextMenuStripLog;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.logGridView.DefaultCellStyle = dataGridViewCellStyle2;
-            this.logGridView.Name = "logGridView";
-            this.logGridView.ReadOnly = true;
-            this.logGridView.RowHeadersVisible = false;
-            this.logGridView.RowTemplate.DefaultCellStyle.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.logGridView.RowTemplate.Height = 10;
-            this.logGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.logGridView.ShowEditingIcon = false;
-            // 
-            // ColumnImage
-            // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.NullValue = null;
-            this.ColumnImage.DefaultCellStyle = dataGridViewCellStyle1;
-            this.ColumnImage.Frozen = true;
-            resources.ApplyResources(this.ColumnImage, "ColumnImage");
-            this.ColumnImage.Name = "ColumnImage";
-            this.ColumnImage.ReadOnly = true;
-            this.ColumnImage.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // ColumnTime
-            // 
-            resources.ApplyResources(this.ColumnTime, "ColumnTime");
-            this.ColumnTime.Name = "ColumnTime";
-            this.ColumnTime.ReadOnly = true;
-            this.ColumnTime.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // ColumnMessage
-            // 
-            this.ColumnMessage.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            resources.ApplyResources(this.ColumnMessage, "ColumnMessage");
-            this.ColumnMessage.Name = "ColumnMessage";
-            this.ColumnMessage.ReadOnly = true;
-            this.ColumnMessage.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
             // contextMenuStripLog
             // 
             this.contextMenuStripLog.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuStripLog.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.copyToolStripMenuItem,
             this.clearLogToolStripMenuItem});
             this.contextMenuStripLog.Name = "contextMenuStripLog";
             resources.ApplyResources(this.contextMenuStripLog, "contextMenuStripLog");
@@ -1838,59 +1816,29 @@
             resources.ApplyResources(this.menuItemAbout, "menuItemAbout");
             this.menuItemAbout.Click += new System.EventHandler(this.menuItemAbout_Click);
             // 
-            // apkGkLinkBtn
+            // logTxtBox
             // 
-            resources.ApplyResources(this.apkGkLinkBtn, "apkGkLinkBtn");
-            this.apkGkLinkBtn.Name = "apkGkLinkBtn";
-            this.apkGkLinkBtn.UseVisualStyleBackColor = true;
+            this.logTxtBox.ContextMenuStrip = this.contextMenuStripLog;
+            resources.ApplyResources(this.logTxtBox, "logTxtBox");
+            this.logTxtBox.Name = "logTxtBox";
             // 
-            // apkSupportLinkBtn
+            // copyToolStripMenuItem
             // 
-            resources.ApplyResources(this.apkSupportLinkBtn, "apkSupportLinkBtn");
-            this.apkSupportLinkBtn.Name = "apkSupportLinkBtn";
-            this.apkSupportLinkBtn.UseVisualStyleBackColor = true;
-            // 
-            // apkMirrorLinkBtn
-            // 
-            resources.ApplyResources(this.apkMirrorLinkBtn, "apkMirrorLinkBtn");
-            this.apkMirrorLinkBtn.Name = "apkMirrorLinkBtn";
-            this.apkMirrorLinkBtn.UseVisualStyleBackColor = true;
-            // 
-            // apkSosLinkBtn
-            // 
-            resources.ApplyResources(this.apkSosLinkBtn, "apkSosLinkBtn");
-            this.apkSosLinkBtn.Name = "apkSosLinkBtn";
-            this.apkSosLinkBtn.UseVisualStyleBackColor = true;
-            // 
-            // apkDlLinkBtn
-            // 
-            resources.ApplyResources(this.apkDlLinkBtn, "apkDlLinkBtn");
-            this.apkDlLinkBtn.Name = "apkDlLinkBtn";
-            this.apkDlLinkBtn.UseVisualStyleBackColor = true;
-            // 
-            // label30
-            // 
-            resources.ApplyResources(this.label30, "label30");
-            this.label30.Name = "label30";
-            // 
-            // archSdkTxtBox
-            // 
-            resources.ApplyResources(this.archSdkTxtBox, "archSdkTxtBox");
-            this.archSdkTxtBox.Name = "archSdkTxtBox";
-            this.archSdkTxtBox.ReadOnly = true;
+            this.copyToolStripMenuItem.Name = "copyToolStripMenuItem";
+            resources.ApplyResources(this.copyToolStripMenuItem, "copyToolStripMenuItem");
+            this.copyToolStripMenuItem.Click += new System.EventHandler(this.copyToolStripMenuItem_Click);
             // 
             // FormMain
             // 
             this.AllowDrop = true;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.Controls.Add(this.logGridView);
+            this.Controls.Add(this.logTxtBox);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.tabControlMain);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
-            this.Menu = this.mainMenu1;
             this.Name = "FormMain";
             this.Activated += new System.EventHandler(this.FormMain_Activated);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormMain_FormClosing);
@@ -1938,7 +1886,6 @@
             this.bakSmaliGroupBox.PerformLayout();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.logGridView)).EndInit();
             this.contextMenuStripLog.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -1954,7 +1901,6 @@
         internal System.Windows.Forms.StatusStrip statusStrip1;
         internal System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelStateText;
         internal System.Windows.Forms.ToolStripProgressBar toolStripProgressBar1;
-        internal System.Windows.Forms.DataGridView logGridView;
         internal System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelStateImage;
         internal System.Windows.Forms.ContextMenuStrip contextMenuStripLog;
         internal System.Windows.Forms.ToolStripMenuItem clearLogToolStripMenuItem;
@@ -2137,9 +2083,6 @@
         internal System.Windows.Forms.Button alignApkOpenDirBtn;
         internal System.Windows.Forms.Button decOutOpenDirBtn;
         private System.Windows.Forms.CheckBox useAapt2ChkBox;
-        private System.Windows.Forms.DataGridViewImageColumn ColumnImage;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnTime;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnMessage;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.RichTextBox fullInfoTextBox;
@@ -2151,6 +2094,8 @@
         internal System.Windows.Forms.Button apkGkLinkBtn;
         internal System.Windows.Forms.TextBox archSdkTxtBox;
         internal System.Windows.Forms.Label label30;
+        private System.Windows.Forms.RichTextBox logTxtBox;
+        private System.Windows.Forms.ToolStripMenuItem copyToolStripMenuItem;
     }
 }
 
