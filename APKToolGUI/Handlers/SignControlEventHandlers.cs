@@ -129,13 +129,13 @@ namespace APKToolGUI.Handlers
                     if (main.Sign(inputFile, outputDir) == 0)
                     {
                         if (Settings.Default.Zipalign_UseOutputDir)
-                            main.ToLog(ApktoolEventType.Information, String.Format(Language.SignSuccessfullyCompleted, inputFile));
+                            main.ToLog(ApktoolEventType.None, String.Format(Language.SignSuccessfullyCompleted, inputFile));
                         else
-                            main.ToLog(ApktoolEventType.Information, String.Format(Language.SignSuccessfullyCompleted, outputDir));
+                            main.ToLog(ApktoolEventType.None, String.Format(Language.SignSuccessfullyCompleted, outputDir));
 
                         if (Settings.Default.AutoDeleteIdsigFile)
                         {
-                            main.ToLog(ApktoolEventType.Information, String.Format(Language.DeleteFile, outputDir + ".idsig"));
+                            main.ToLog(ApktoolEventType.None, String.Format(Language.DeleteFile, outputDir + ".idsig"));
                             FileUtils.Delete(outputDir + ".idsig");
                         }
                     }

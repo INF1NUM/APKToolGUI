@@ -254,7 +254,7 @@ namespace APKToolGUI
                         message = mCol[0].Groups[2].Value;
                         break;
                     case "I":
-                        eventType = ApktoolEventType.Information;
+                        eventType = ApktoolEventType.None;
                         message = mCol[0].Groups[2].Value;
                         break;
                     case "Error":
@@ -281,7 +281,8 @@ namespace APKToolGUI
 
     public enum ApktoolEventType
     {
-        Information,
+        None,
+        Infomation,
         Warning,
         Error,
         Unknown

@@ -99,7 +99,7 @@ namespace APKToolGUI.Handlers
                         outputDir = PathUtils.GetDirectoryNameWithoutExtension(outputDir) + " aligned.apk";
 
                     if (main.Align(inputFile, outputDir) == 0)
-                        main.ToLog(ApktoolEventType.Information, String.Format(Language.ZipalignFileSavedTo, outputDir));
+                        main.ToLog(ApktoolEventType.None, String.Format(Language.ZipalignFileSavedTo, outputDir));
                     else
                         main.ToLog(ApktoolEventType.Error, Language.ErrorZipalign);
                 });

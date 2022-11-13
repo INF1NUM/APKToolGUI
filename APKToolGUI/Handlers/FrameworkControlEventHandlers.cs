@@ -79,13 +79,13 @@ namespace APKToolGUI.Handlers
 
 
             main.Running();
-            main.ToLog(ApktoolEventType.Information, Language.InstallingFramework + " " + Path.GetFileName(main.textBox_IF_InputFramePath.Text));
+            main.ToLog(ApktoolEventType.None, Language.InstallingFramework + " " + Path.GetFileName(main.textBox_IF_InputFramePath.Text));
             main.ToStatus(String.Format(Language.InstallingFramework + " \"{0}\"...", Path.GetFileName(main.textBox_IF_InputFramePath.Text)), Resources.waiting);
 
             await Task.Factory.StartNew(() =>
             {
                 if (main.apktool.InstallFramework() == 0)
-                    main.ToLog(ApktoolEventType.Information, Language.FrameworkInstalled);
+                    main.ToLog(ApktoolEventType.None, Language.FrameworkInstalled);
                 else
                     main.ToLog(ApktoolEventType.Error, Language.FrameworkInstallationNotStarted);
             });
@@ -97,7 +97,7 @@ namespace APKToolGUI.Handlers
             await Task.Factory.StartNew(() =>
             {
                 if (main.ClearFramework() == 0)
-                    main.ToLog(ApktoolEventType.Information, Language.Done);
+                    main.ToLog(ApktoolEventType.None, Language.Done);
             });
            
             main.Done();

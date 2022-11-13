@@ -98,10 +98,10 @@ namespace APKToolGUI
             string javaVersion = apktool.GetJavaVersion();
             if (javaVersion != null)
             {
-                ToLog(ApktoolEventType.Information, String.Format("{0}", javaVersion));
+                ToLog(ApktoolEventType.None, String.Format("{0}", javaVersion));
                 string apktoolVersion = apktool.GetVersion();
                 if (!String.IsNullOrWhiteSpace(apktoolVersion))
-                    ToLog(ApktoolEventType.Information, String.Format(Language.APKToolVersion + " \"{0}\"", apktoolVersion));
+                    ToLog(ApktoolEventType.None, String.Format(Language.APKToolVersion + " \"{0}\"", apktoolVersion));
                 else
                     ToLog(ApktoolEventType.Error, Language.CantDetectApktoolVersion);
             }
@@ -111,7 +111,7 @@ namespace APKToolGUI
             if (AdminUtils.IsAdministrator())
                 ToLog(ApktoolEventType.Warning, Language.DragDropNotSupported);
             else
-                ToLog(ApktoolEventType.Information, Language.DragDropSupported);
+                ToLog(ApktoolEventType.None, Language.DragDropSupported);
 
             TimeSpan updateInterval = DateTime.Now - Settings.Default.LastUpdateCheck;
             if (updateInterval.Days > 0 && Settings.Default.CheckForUpdateAtStartup)
@@ -160,13 +160,13 @@ namespace APKToolGUI
                                 if (Sign(inputFile, outputDir) == 0)
                                 {
                                     if (Settings.Default.Zipalign_UseOutputDir && !IgnoreOutputDirContextMenu)
-                                        ToLog(ApktoolEventType.Information, String.Format(Language.SignSuccessfullyCompleted, inputFile));
+                                        ToLog(ApktoolEventType.None, String.Format(Language.SignSuccessfullyCompleted, inputFile));
                                     else
-                                        ToLog(ApktoolEventType.Information, String.Format(Language.SignSuccessfullyCompleted, outputDir));
+                                        ToLog(ApktoolEventType.None, String.Format(Language.SignSuccessfullyCompleted, outputDir));
 
                                     if (Settings.Default.AutoDeleteIdsigFile)
                                     {
-                                        ToLog(ApktoolEventType.Information, String.Format(Language.DeleteFile, outputDir + ".idsig"));
+                                        ToLog(ApktoolEventType.None, String.Format(Language.DeleteFile, outputDir + ".idsig"));
                                         FileUtils.Delete(outputDir + ".idsig");
                                     }
 
@@ -352,8 +352,11 @@ namespace APKToolGUI
 
             switch (eventType)
             {
-                case ApktoolEventType.Information:
+                case ApktoolEventType.None:
                     ToLog(DateTime.Now.ToString("[HH:mm:ss]"), message, Color.Black);
+                    break;
+                case ApktoolEventType.Infomation:
+                    ToLog(DateTime.Now.ToString("[HH:mm:ss]"), message, Color.Blue);
                     break;
                 case ApktoolEventType.Error:
                     ToLog(DateTime.Now.ToString("[HH:mm:ss]"), message, Color.Red);
@@ -392,8 +395,8 @@ namespace APKToolGUI
 
             stopwatch.Stop();
             TimeSpan ts = stopwatch.Elapsed;
-            ToLog(ApktoolEventType.Information, "Time started: " + lastStartedDate);
-            ToLog(ApktoolEventType.Information, "Time elapsed: " + ts.ToString("mm\\:ss"));
+            ToLog(ApktoolEventType.None, "Time started: " + lastStartedDate);
+            ToLog(ApktoolEventType.None, "Time elapsed: " + ts.ToString("mm\\:ss"));
 
             if (Settings.Default.PlaySoundWhenDone)
                 SystemSounds.Beep.Play();
@@ -431,15 +434,15 @@ namespace APKToolGUI
 
         void SignApkOutputDataRecieved(object sender, SignapkDataReceivedEventArgs e)
         {
-            ToLog(ApktoolEventType.Information, e.Message);
+            ToLog(ApktoolEventType.None, e.Message);
         }
 
         internal int Sign(string input, string output)
         {
             Invoke(new Action(delegate ()
             {
-                ToLog(ApktoolEventType.Information, "=====[ " + Language.Signing + " ]=====");
-                ToLog(ApktoolEventType.Information, String.Format(Language.InputFile, input));
+                ToLog(ApktoolEventType.Infomation, "=====[ " + Language.Signing + " ]=====");
+                ToLog(ApktoolEventType.None, String.Format(Language.InputFile, input));
                 ToStatus(String.Format(Language.Signing + " \"{0}\"...", Path.GetFileName(input)), Resources.waiting);
             }));
 
@@ -480,15 +483,15 @@ namespace APKToolGUI
                     if (Settings.Default.Framework_ClearBeforeDecode)
                     {
                         if (ClearFramework() == 0)
-                            ToLog(ApktoolEventType.Information, Language.FrameworkCacheCleared);
+                            ToLog(ApktoolEventType.None, Language.FrameworkCacheCleared);
                         else
                             ToLog(ApktoolEventType.Error, Language.ErrorClearingFw);
                     }
 
                     Invoke(new Action(delegate ()
                     {
-                        ToLog(ApktoolEventType.Information, "=====[ " + Language.Decoding + " ]=====");
-                        ToLog(ApktoolEventType.Information, String.Format(Language.InputFile, inputApk));
+                        ToLog(ApktoolEventType.Infomation, "=====[ " + Language.Decoding + " ]=====");
+                        ToLog(ApktoolEventType.None, String.Format(Language.InputFile, inputApk));
                         ToStatus(String.Format(Language.Decoding + " \"{0}\"...", Path.GetFileName(inputApk)), Resources.waiting);
                     }));
 
@@ -505,17 +508,17 @@ namespace APKToolGUI
                             textBox_BUILD_InputProjectDir.Text = outputDir;
                         }));
 
-                        ToLog(ApktoolEventType.Information, String.Format(Language.DecompilingSuccessfullyCompleted, outputDir));
+                        ToLog(ApktoolEventType.None, String.Format(Language.DecompilingSuccessfullyCompleted, outputDir));
                         if (Settings.Default.Decode_FixError)
                         {
                             if (ApkFixer.ChangeSdkTo29(outputDir))
-                                ToLog(ApktoolEventType.Information, Language.ChangedTargetSdkTo29);
+                                ToLog(ApktoolEventType.None, Language.ChangedTargetSdkTo29);
                             if (ApkFixer.FixAndroidManifest(outputDir))
-                                ToLog(ApktoolEventType.Information, Language.FixAndroidManifest);
+                                ToLog(ApktoolEventType.None, Language.FixAndroidManifest);
                             if (ApkFixer.RemoveApkToolDummies(outputDir))
-                                ToLog(ApktoolEventType.Information, Language.RemoveApkToolDummies);
+                                ToLog(ApktoolEventType.None, Language.RemoveApkToolDummies);
                         }
-                        ToLog(ApktoolEventType.Information, Language.AllDone);
+                        ToLog(ApktoolEventType.None, Language.AllDone);
                     }
                     else
                         ToLog(ApktoolEventType.Error, Language.ErrorDecompiling);
@@ -537,7 +540,7 @@ namespace APKToolGUI
         {
             Invoke(new Action(delegate ()
             {
-                ToLog(ApktoolEventType.Information, "=====[ " + Language.ClearingFramework + " ]=====");
+                ToLog(ApktoolEventType.Infomation, "=====[ " + Language.ClearingFramework + " ]=====");
                 ToStatus(Language.ClearingFramework + "...", Resources.waiting);
             }));
 
@@ -549,8 +552,8 @@ namespace APKToolGUI
             int code = 0;
 
             Running();
-            ToLog(ApktoolEventType.Information, "=====[ " + Language.Build + " ]=====");
-            ToLog(ApktoolEventType.Information, String.Format(Language.InputFile, inputFile));
+            ToLog(ApktoolEventType.Infomation, "=====[ " + Language.Build + " ]=====");
+            ToLog(ApktoolEventType.None, String.Format(Language.InputFile, inputFile));
             ToStatus(String.Format(Language.Build + " \"{0}\"...", Path.GetFileName(textBox_BUILD_InputProjectDir.Text)), Resources.waiting);
 
             try
@@ -570,7 +573,7 @@ namespace APKToolGUI
 
                     if (code == 0)
                     {
-                        ToLog(ApktoolEventType.Information, String.Format(Language.CompilingSuccessfullyCompleted, outputFile));
+                        ToLog(ApktoolEventType.None, String.Format(Language.CompilingSuccessfullyCompleted, outputFile));
 
                         if (Settings.Default.Build_ZipalignAfterBuild)
                         {
@@ -582,15 +585,15 @@ namespace APKToolGUI
                             }
                             else
                             {
-                                ToLog(ApktoolEventType.Information, Language.Done);
+                                ToLog(ApktoolEventType.None, Language.Done);
                                 if (Settings.Default.Build_CreateUnsignedApk)
                                 {
-                                    ToLog(ApktoolEventType.Information, "=====[ " + Language.CreateUnsignedApk + " ]=====");
+                                    ToLog(ApktoolEventType.Infomation, "=====[ " + Language.CreateUnsignedApk + " ]=====");
                                     if (Directory.Exists(Path.Combine(inputFile, "original", "META-INF")))
                                     {
                                         ZipUtils.UpdateDirectory(outputFile, Path.Combine(inputFile, "original", "META-INF"), "META-INF");
                                         File.Copy(outputFile, Path.Combine(Path.GetDirectoryName(outputFile), Path.GetFileName(inputFile) + " unsigned.apk"), true);
-                                        ToLog(ApktoolEventType.Information, Language.Done);
+                                        ToLog(ApktoolEventType.None, Language.Done);
                                     }
                                     else
                                         ToLog(ApktoolEventType.Warning, Language.MetainfNotExist);
@@ -601,11 +604,11 @@ namespace APKToolGUI
                         {
                             if (Sign(outputFile, outputFile) == 0)
                             {
-                                ToLog(ApktoolEventType.Information, Language.Done);
+                                ToLog(ApktoolEventType.None, Language.Done);
 
                                 if (Settings.Default.AutoDeleteIdsigFile)
                                 {
-                                    ToLog(ApktoolEventType.Information, String.Format(Language.DeleteFile, outputFile + ".idsig"));
+                                    ToLog(ApktoolEventType.None, String.Format(Language.DeleteFile, outputFile + ".idsig"));
                                     FileUtils.Delete(outputFile + ".idsig");
                                 }
 
@@ -617,7 +620,7 @@ namespace APKToolGUI
                                 return;
                             }
                         }
-                        ToLog(ApktoolEventType.Information, "=====[ " + Language.AllDone + " ]=====");
+                        ToLog(ApktoolEventType.Infomation, "=====[ " + Language.AllDone + " ]=====");
                     }
                     else
                         ToLog(ApktoolEventType.Error, Language.ErrorCompiling);
@@ -649,7 +652,7 @@ namespace APKToolGUI
 
         void BaksmaliOutputDataRecieved(object sender, BaksmaliDataReceivedEventArgs e)
         {
-            ToLog(ApktoolEventType.Information, e.Message);
+            ToLog(ApktoolEventType.None, e.Message);
         }
 
         internal async Task<int> Baksmali(string inputFile)
@@ -658,8 +661,8 @@ namespace APKToolGUI
             try
             {
                 Running();
-                ToLog(ApktoolEventType.Information, "=====[ " + Language.DecompilingDex + " ]=====");
-                ToLog(ApktoolEventType.Information, String.Format(Language.InputFile, inputFile));
+                ToLog(ApktoolEventType.Infomation, "=====[ " + Language.DecompilingDex + " ]=====");
+                ToLog(ApktoolEventType.None, String.Format(Language.InputFile, inputFile));
 
                 ToStatus(String.Format(Language.DecompilingDex + "...", Path.GetFileName(baksmaliBrowseInputDexTxtBox.Text)), Resources.waiting);
 
@@ -676,7 +679,7 @@ namespace APKToolGUI
                         {
                             smaliBrowseInputDirTxtBox.Text = outputDir;
                         }));
-                        ToLog(ApktoolEventType.Information, String.Format(Language.DecompilingSuccessfullyCompleted, outputDir));
+                        ToLog(ApktoolEventType.None, String.Format(Language.DecompilingSuccessfullyCompleted, outputDir));
                     }
                     else
                         ToLog(ApktoolEventType.Error, Language.ErrorDecompiling);
@@ -708,7 +711,7 @@ namespace APKToolGUI
 
         void SmaliOutputDataRecieved(object sender, SmaliDataReceivedEventArgs e)
         {
-            ToLog(ApktoolEventType.Information, e.Message);
+            ToLog(ApktoolEventType.None, e.Message);
         }
 
         internal async Task<int> Smali(string inputDir)
@@ -717,8 +720,8 @@ namespace APKToolGUI
             try
             {
                 Running();
-                ToLog(ApktoolEventType.Information, "=====[ " + Language.CompilingDex + " ]=====");
-                ToLog(ApktoolEventType.Information, String.Format(Language.InputDirectory, inputDir));
+                ToLog(ApktoolEventType.Infomation, "=====[ " + Language.CompilingDex + " ]=====");
+                ToLog(ApktoolEventType.None, String.Format(Language.InputDirectory, inputDir));
                 ToStatus(String.Format(Language.DecompilingDex + "...", Path.GetFileName(smaliBrowseInputDirTxtBox.Text)), Resources.waiting);
 
                 await Task.Factory.StartNew(() =>
@@ -729,7 +732,7 @@ namespace APKToolGUI
 
                     code = smali.Assemble(outputDir);
                     if (smali.Assemble(outputDir) == 0)
-                        ToLog(ApktoolEventType.Information, String.Format(Language.CompilingSuccessfullyCompleted, outputDir));
+                        ToLog(ApktoolEventType.None, String.Format(Language.CompilingSuccessfullyCompleted, outputDir));
                     else
                         ToLog(ApktoolEventType.Error, Language.ErrorCompiling);
                 });
@@ -755,7 +758,7 @@ namespace APKToolGUI
 
         void zipalign_OutputDataReceived(object sender, DataReceivedEventArgs e)
         {
-            ToLog(ApktoolEventType.Information, e.Data);
+            ToLog(ApktoolEventType.None, e.Data);
         }
 
         void zipalign_ErrorDataReceived(object sender, DataReceivedEventArgs e)
@@ -767,8 +770,8 @@ namespace APKToolGUI
         {
             Invoke(new Action(delegate ()
             {
-                ToLog(ApktoolEventType.Information, "=====[ " + Language.Aligning + " ]=====");
-                ToLog(ApktoolEventType.Information, String.Format(Language.InputFile, input));
+                ToLog(ApktoolEventType.Infomation, "=====[ " + Language.Aligning + " ]=====");
+                ToLog(ApktoolEventType.None, String.Format(Language.InputFile, input));
                 ToStatus(String.Format(Language.Aligning + " \"{0}\"...", Path.GetFileName(input)), Resources.waiting);
             }));
 
@@ -907,7 +910,7 @@ namespace APKToolGUI
 
                     if (activityFound)
                     {
-                        ToLog(ApktoolEventType.Information, String.Format(Language.MainActivityFound, path));
+                        ToLog(ApktoolEventType.None, String.Format(Language.MainActivityFound, path));
                         Process.Start("explorer.exe", path);
                         return;
                     }

@@ -115,7 +115,7 @@ namespace APKToolGUI.Handlers
                             outputDir = PathUtils.GetDirectoryNameWithoutExtension(outputDir) + " aligned.apk";
 
                         if (main.Align(apkFile, outputDir) == 0)
-                            main.ToLog(ApktoolEventType.Information, String.Format(Language.ZipalignFileSavedTo, outputDir));
+                            main.ToLog(ApktoolEventType.None, String.Format(Language.ZipalignFileSavedTo, outputDir));
                         else
                             main.ToLog(ApktoolEventType.Error, Language.ErrorZipalign);
                     });
@@ -150,13 +150,13 @@ namespace APKToolGUI.Handlers
                         if (main.Sign(inputFile, outputDir) == 0)
                         {
                             if (Settings.Default.Zipalign_UseOutputDir)
-                                main.ToLog(ApktoolEventType.Information, String.Format(Language.SignSuccessfullyCompleted, inputFile));
+                                main.ToLog(ApktoolEventType.None, String.Format(Language.SignSuccessfullyCompleted, inputFile));
                             else
-                                main.ToLog(ApktoolEventType.Information, String.Format(Language.SignSuccessfullyCompleted, outputDir));
+                                main.ToLog(ApktoolEventType.None, String.Format(Language.SignSuccessfullyCompleted, outputDir));
 
                             if (Settings.Default.AutoDeleteIdsigFile)
                             {
-                                main.ToLog(ApktoolEventType.Information, String.Format(Language.DeleteFile, outputDir + ".idsig"));
+                                main.ToLog(ApktoolEventType.None, String.Format(Language.DeleteFile, outputDir + ".idsig"));
                                 FileUtils.Delete(outputDir + ".idsig");
                             }
                         }
