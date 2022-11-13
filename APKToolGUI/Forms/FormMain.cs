@@ -163,6 +163,13 @@ namespace APKToolGUI
                                         ToLog(ApktoolEventType.Information, String.Format(Language.SignSuccessfullyCompleted, inputFile));
                                     else
                                         ToLog(ApktoolEventType.Information, String.Format(Language.SignSuccessfullyCompleted, outputDir));
+
+                                    if (Settings.Default.AutoDeleteIdsigFile)
+                                    {
+                                        ToLog(ApktoolEventType.Information, String.Format(Language.DeleteFile, outputDir + ".idsig"));
+                                        FileUtils.Delete(outputDir + ".idsig");
+                                    }
+
                                     Close();
                                 }
                                 else
@@ -592,14 +599,23 @@ namespace APKToolGUI
                         }
                         if (Settings.Default.Build_SignAfterBuild)
                         {
-                            if (Sign(outputFile, outputFile) != 0)
+                            if (Sign(outputFile, outputFile) == 0)
+                            {
+                                ToLog(ApktoolEventType.Information, Language.Done);
+
+                                if (Settings.Default.AutoDeleteIdsigFile)
+                                {
+                                    ToLog(ApktoolEventType.Information, String.Format(Language.DeleteFile, outputFile + ".idsig"));
+                                    FileUtils.Delete(outputFile + ".idsig");
+                                }
+
+                            }
+                            else
                             {
                                 ToLog(ApktoolEventType.Error, Language.ErrorSigning);
                                 Done();
                                 return;
                             }
-                            else
-                                ToLog(ApktoolEventType.Information, Language.Done);
                         }
                         ToLog(ApktoolEventType.Information, "=====[ " + Language.AllDone + " ]=====");
                     }

@@ -408,4 +408,7 @@
   <data name="InputFile" xml:space="preserve">
     <value>Input file: {0}</value>
   </data>
+  <data name="DeleteFile" xml:space="preserve">
+    <value>Delete file "{0}"</value>
+  </data>
 </root>

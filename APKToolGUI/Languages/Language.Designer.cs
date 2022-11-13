@@ -313,6 +313,15 @@ namespace APKToolGUI.Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Delete file &quot;{0}&quot;.
+        /// </summary>
+        internal static string DeleteFile {
+            get {
+                return ResourceManager.GetString("DeleteFile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Done.
         /// </summary>
         internal static string Done {

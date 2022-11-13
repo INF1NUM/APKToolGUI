@@ -148,10 +148,18 @@ namespace APKToolGUI.Handlers
                             outputDir = Path.Combine(Settings.Default.Sign_OutputDir, Path.GetFileName(inputFile));
 
                         if (main.Sign(inputFile, outputDir) == 0)
+                        {
                             if (Settings.Default.Zipalign_UseOutputDir)
                                 main.ToLog(ApktoolEventType.Information, String.Format(Language.SignSuccessfullyCompleted, inputFile));
                             else
                                 main.ToLog(ApktoolEventType.Information, String.Format(Language.SignSuccessfullyCompleted, outputDir));
+
+                            if (Settings.Default.AutoDeleteIdsigFile)
+                            {
+                                main.ToLog(ApktoolEventType.Information, String.Format(Language.DeleteFile, outputDir + ".idsig"));
+                                FileUtils.Delete(outputDir + ".idsig");
+                            }
+                        }
                         else
                             main.ToLog(ApktoolEventType.Error, String.Format(Language.ErrorSigning, outputDir));
                     });
@@ -171,7 +179,7 @@ namespace APKToolGUI.Handlers
             {
                 main.baksmaliBrowseInputDexTxtBox.Text = apkFile;
                 main.bakSmaliGroupBox.BackColor = Color.White;
-               await main.Baksmali(apkFile);
+                await main.Baksmali(apkFile);
             }
         }
 

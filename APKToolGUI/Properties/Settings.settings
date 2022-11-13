@@ -183,7 +183,7 @@
       <Value Profile="(Default)">0</Value>
     </Setting>
     <Setting Name="Sign_Schemev4" Provider="Bluegrams.Application.PortableSettingsProvider" Roaming="true" Type="System.Int32" Scope="User">
-      <Value Profile="(Default)">2</Value>
+      <Value Profile="(Default)">0</Value>
     </Setting>
     <Setting Name="Decode_ApiLevel" Provider="Bluegrams.Application.PortableSettingsProvider" Roaming="true" Type="System.Decimal" Scope="User">
       <Value Profile="(Default)">29</Value>
@@ -235,6 +235,9 @@
     </Setting>
     <Setting Name="UseCustomJavaExe" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="AutoDeleteIdsigFile" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
     </Setting>
   </Settings>
 </SettingsFile>

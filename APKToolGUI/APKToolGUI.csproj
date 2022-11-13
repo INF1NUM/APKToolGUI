@@ -319,6 +319,7 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Java\JavaUtils.cs" />
+    <Compile Include="Utils\FileUtils.cs" />
     <Compile Include="Utils\PathUtils.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -26,6 +26,10 @@ namespace APKToolGUI.Handlers
             main.button_SIGN_BrowsePrivateKey.Click += button_SIGN_BrowsePrivateKey_Click;
             main.button_SIGN_BrowseInputFile.Click += button_SIGN_BrowseInputFile_Click;
             main.button_SIGN_BrowseOutputFile.Click += button_SIGN_BrowseOutputFile_Click;
+            main.schemev1ComboBox.SelectedIndexChanged += schemeComboBoxChanged;
+            main.schemev2ComboBox.SelectedIndexChanged += schemeComboBoxChanged;
+            main.schemev3ComboBox.SelectedIndexChanged += schemeComboBoxChanged;
+            main.schemev4ComboBox.SelectedIndexChanged += schemeComboBoxChanged;
             main.button_SIGN_Sign.Click += button_SIGN_Sign_Click;
             main.selectKeyStoreFileBtn.Click += selectKeyStoreFileBtn_Click;
             main.signApkOpenDirBtn.Click += signApkOpenDirBtn_Click;
@@ -123,10 +127,18 @@ namespace APKToolGUI.Handlers
                         outputDir = Path.Combine(Settings.Default.Sign_OutputDir, Path.GetFileName(inputFile));
 
                     if (main.Sign(inputFile, outputDir) == 0)
+                    {
                         if (Settings.Default.Zipalign_UseOutputDir)
                             main.ToLog(ApktoolEventType.Information, String.Format(Language.SignSuccessfullyCompleted, inputFile));
                         else
                             main.ToLog(ApktoolEventType.Information, String.Format(Language.SignSuccessfullyCompleted, outputDir));
+
+                        if (Settings.Default.AutoDeleteIdsigFile)
+                        {
+                            main.ToLog(ApktoolEventType.Information, String.Format(Language.DeleteFile, outputDir + ".idsig"));
+                            FileUtils.Delete(outputDir + ".idsig");
+                        }
+                    }
                     else
                         main.ToLog(ApktoolEventType.Error, String.Format(Language.ErrorSigning, outputDir));
                 });
@@ -161,6 +173,14 @@ namespace APKToolGUI.Handlers
             {
                 main.ToLog(ApktoolEventType.Error, Language.ErrorSelectedFileNotExist);
             }
+        }
+
+        private void schemeComboBoxChanged(object sender, EventArgs e)
+        {
+            Settings.Default.Sign_Schemev1 = main.schemev1ComboBox.SelectedIndex;
+            Settings.Default.Sign_Schemev2 = main.schemev2ComboBox.SelectedIndex;
+            Settings.Default.Sign_Schemev3 = main.schemev3ComboBox.SelectedIndex;
+            Settings.Default.Sign_Schemev4 = main.schemev4ComboBox.SelectedIndex;
         }
     }
 }
