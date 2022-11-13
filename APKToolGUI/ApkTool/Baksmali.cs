@@ -63,9 +63,9 @@ namespace APKToolGUI
                 Exited(this, new BaksmaliExitedEventArgs(ExitCode));
         }
 
-        public int Disassemble(string output)
+        public int Disassemble(string input, string output)
         {
-            string inputFile = String.Format("\"{0}\"", Settings.Default.Baksmali_InputDexFile);
+            string inputFile = String.Format("\"{0}\"", input);
             string keyOutputDir = String.Format("-o \"{0}\"", output);
 
             string args = String.Format("d {0} {1}", inputFile, keyOutputDir);

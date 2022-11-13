@@ -672,7 +672,7 @@ namespace APKToolGUI
                     if (Settings.Default.Baksmali_UseOutputDir && !IgnoreOutputDirContextMenu)
                         outputDir = String.Format("{0}", Path.Combine(Settings.Default.Baksmali_OutputDir, Path.GetFileNameWithoutExtension(inputFile)));
 
-                    code = baksmali.Disassemble(outputDir);
+                    code = baksmali.Disassemble(inputFile, outputDir);
                     if (code == 0)
                     {
                         textBox_BUILD_InputProjectDir.BeginInvoke(new Action(delegate
