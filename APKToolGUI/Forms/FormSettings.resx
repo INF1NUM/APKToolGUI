@@ -156,31 +156,31 @@
   <data name="&gt;&gt;checkBox4.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="textBox1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="customTempLocationTxtBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
-  <data name="textBox1.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="customTempLocationTxtBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>203, 86</value>
   </data>
-  <data name="textBox1.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="customTempLocationTxtBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>215, 22</value>
   </data>
-  <data name="textBox1.TabIndex" type="System.Int32, mscorlib">
+  <data name="customTempLocationTxtBox.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
   </data>
-  <data name="textBox1.WordWrap" type="System.Boolean, mscorlib">
+  <data name="customTempLocationTxtBox.WordWrap" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="&gt;&gt;textBox1.Name" xml:space="preserve">
-    <value>textBox1</value>
+  <data name="&gt;&gt;customTempLocationTxtBox.Name" xml:space="preserve">
+    <value>customTempLocationTxtBox</value>
   </data>
-  <data name="&gt;&gt;textBox1.Type" xml:space="preserve">
+  <data name="&gt;&gt;customTempLocationTxtBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;textBox1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;customTempLocationTxtBox.Parent" xml:space="preserve">
     <value>groupBox1</value>
   </data>
-  <data name="&gt;&gt;textBox1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;customTempLocationTxtBox.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
   <data name="textBoxCustomJavaLocation.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
@@ -210,40 +210,40 @@
   <data name="&gt;&gt;textBoxCustomJavaLocation.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="button1.AccessibleName" xml:space="preserve">
+  <data name="buttonCustomTempLocation.AccessibleName" xml:space="preserve">
     <value>buttonCustomTempLocation</value>
   </data>
-  <data name="button1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="buttonCustomTempLocation.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
-  <data name="button1.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+  <data name="buttonCustomTempLocation.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>System</value>
   </data>
-  <data name="button1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="buttonCustomTempLocation.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="button1.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="buttonCustomTempLocation.Location" type="System.Drawing.Point, System.Drawing">
     <value>422, 86</value>
   </data>
-  <data name="button1.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="buttonCustomTempLocation.Size" type="System.Drawing.Size, System.Drawing">
     <value>24, 23</value>
   </data>
-  <data name="button1.TabIndex" type="System.Int32, mscorlib">
+  <data name="buttonCustomTempLocation.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
   </data>
-  <data name="button1.Text" xml:space="preserve">
+  <data name="buttonCustomTempLocation.Text" xml:space="preserve">
     <value>...</value>
   </data>
-  <data name="&gt;&gt;button1.Name" xml:space="preserve">
-    <value>button1</value>
+  <data name="&gt;&gt;buttonCustomTempLocation.Name" xml:space="preserve">
+    <value>buttonCustomTempLocation</value>
   </data>
-  <data name="&gt;&gt;button1.Type" xml:space="preserve">
+  <data name="&gt;&gt;buttonCustomTempLocation.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;button1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;buttonCustomTempLocation.Parent" xml:space="preserve">
     <value>groupBox1</value>
   </data>
-  <data name="&gt;&gt;button1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;buttonCustomTempLocation.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
   <data name="checkBox3.AutoSize" type="System.Boolean, mscorlib">
@@ -409,7 +409,7 @@
     <value>12</value>
   </data>
   <data name="groupBox1.Text" xml:space="preserve">
-    <value>2</value>
+    <value>General</value>
   </data>
   <data name="&gt;&gt;groupBox1.Name" xml:space="preserve">
     <value>groupBox1</value>

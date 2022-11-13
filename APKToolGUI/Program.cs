@@ -61,7 +61,7 @@ namespace APKToolGUI
                 }
                 if (FilesCheck() == true)
                 {
-                    Directory.CreateDirectory(TEMP_DIR);
+                    Directory.CreateDirectory(Program.TempDir());
                     PortableSettingsProvider.SettingsFileName = "config.xml";
                     PortableSettingsProvider.ApplyProvider(Settings.Default);
                     Application.Run(new FormMain());
@@ -156,7 +156,7 @@ namespace APKToolGUI
                 return path;
         }
 
-        private static string GetTempDir()
+        public static string TempDir()
         {
             if (Settings.Default.UseCustomTempDir)
                 return Path.Combine(Settings.Default.TempDir, "APKToolGUI" + StringExt.RandStrWithCaps(4));
@@ -165,7 +165,6 @@ namespace APKToolGUI
         }
 
         public static string LOCAL_APPDATA_PATH = Environment.GetEnvironmentVariable("LocalAppData");
-        public static string TEMP_DIR = GetTempDir();
         public static string APP_PATH = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
         public static string APKTOOL_PATH = APP_PATH + @"\Resources\apktool.jar";
         public static string APKSIGNER_PATH = APP_PATH + @"\Resources\apksigner.jar";

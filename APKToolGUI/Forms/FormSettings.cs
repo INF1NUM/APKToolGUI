@@ -4,6 +4,7 @@ using System.Runtime.InteropServices;
 using System.IO;
 using APKToolGUI.Languages;
 using APKToolGUI.Utils;
+using Ookii.Dialogs.WinForms;
 
 namespace APKToolGUI
 {
@@ -117,27 +118,6 @@ namespace APKToolGUI
             }
         }
 
-        //private void button1_Click(object sender, EventArgs e)
-        //{
-        //    FontDialog fontDialog1 = new FontDialog();
-        //    fontDialog1.Font = textBox1.Font;
-        //    if (fontDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
-        //    {
-        //        textBox1.Text = fontDialog1.Font.Name + ", " + fontDialog1.Font.Size;
-        //        textBox1.Font = fontDialog1.Font;
-        //    }
-        //}
-
-        //private void button2_Click(object sender, EventArgs e)
-        //{
-        //    FontDialog fontDialog1 = new FontDialog();
-        //    fontDialog1.Font = textBox2.Font;
-        //    if (fontDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
-        //    {
-        //        textBox2.Text = fontDialog1.Font.Name + ", " + fontDialog1.Font.Size;
-        //        textBox2.Font = fontDialog1.Font;
-        //    }
-        //}
         
         private void buttonCustomJavaLocation_Click(object sender, EventArgs e)
         {
@@ -157,6 +137,17 @@ namespace APKToolGUI
             //{
             //    textBoxCustomJavaLocation.Text = openJavaExe.FileName;
             //}
+        }
+
+        private void buttonCustomTempLocation_Click(object sender, EventArgs e)
+        {
+            using (VistaFolderBrowserDialog fbd = new VistaFolderBrowserDialog())
+            {
+                if (!String.IsNullOrWhiteSpace(customTempLocationTxtBox.Text))
+                    fbd.SelectedPath = customTempLocationTxtBox.Text;
+                if (fbd.ShowDialog() == DialogResult.OK)
+                    customTempLocationTxtBox.Text = fbd.SelectedPath;
+            }
         }
     }
 }

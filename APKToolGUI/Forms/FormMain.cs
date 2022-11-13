@@ -254,8 +254,8 @@ namespace APKToolGUI
 
                         if (aapt.AppIcon != null)
                         {
-                            ZipUtils.ExtractFile(file, aapt.AppIcon, Path.Combine(Program.TEMP_DIR, aapt.PackageName));
-                            string icon = Path.Combine(Program.TEMP_DIR, aapt.PackageName, Path.GetFileName(aapt.AppIcon));
+                            ZipUtils.ExtractFile(file, aapt.AppIcon, Path.Combine(Program.TempDir(), aapt.PackageName));
+                            string icon = Path.Combine(Program.TempDir(), aapt.PackageName, Path.GetFileName(aapt.AppIcon));
                             if (File.Exists(icon))
                             {
                                 apkIconPicBox.Image = Image.FromFile(icon);
@@ -915,9 +915,12 @@ namespace APKToolGUI
 
         private void Application_ApplicationExit(object sender, EventArgs e)
         {
-            apkIconPicBox.Image.Dispose();
-            apkIconPicBox.Image = null;
-            DirectoryUtils.Delete(Program.TEMP_DIR);
+            if (apkIconPicBox.Image != null)
+            {
+                apkIconPicBox.Image.Dispose();
+                apkIconPicBox.Image = null;
+            }
+            DirectoryUtils.Delete(Program.TempDir());
             Save();
         }
 
