@@ -60,9 +60,9 @@ namespace APKToolGUI
                 Exited(this, new SmaliExitedEventArgs(ExitCode));
         }
 
-        public int Assemble(string output)
+        public int Assemble(string input, string output)
         {
-            string inputFile = String.Format("\"{0}\"", Settings.Default.Smali_InputDir);
+            string inputFile = String.Format("\"{0}\"", input);
             string keyOutputDir = String.Format("-o \"{0}\"", output);
 
             string args = String.Format("a {0} {1}", inputFile, keyOutputDir);

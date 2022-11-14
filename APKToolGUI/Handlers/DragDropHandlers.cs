@@ -190,7 +190,7 @@ namespace APKToolGUI.Handlers
             {
                 main.smaliBrowseInputDirTxtBox.Text = dir;
                 main.smaliGroupBox.BackColor = Color.White;
-                await main.Smali(dir + ".dex");
+                await main.Smali(dir);
             }
         }
 

@@ -63,7 +63,7 @@ namespace APKToolGUI.Handlers
                 return;
             }
 
-            main.Smali(Settings.Default.Smali_InputDir + ".dex");
+            main.Smali(Settings.Default.Smali_InputDir);
         }
     }
 }

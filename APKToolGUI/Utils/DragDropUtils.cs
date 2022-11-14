@@ -44,7 +44,7 @@ namespace SaveToGameWpf.Logic.Utils
                     e.Effect = DragDropEffects.Copy;
                     return;
                 }
-                else if (String.IsNullOrEmpty(extensions) && File.Exists(Path.Combine(file, "AndroidManifest.xml")))
+                else if (String.IsNullOrEmpty(extensions))
                 {
                     e.Effect = DragDropEffects.Copy;
                     return;
@@ -65,7 +65,8 @@ namespace SaveToGameWpf.Logic.Utils
                     e.Effect = DragDropEffects.Copy;
                     return true;
                 }
-                else if (String.IsNullOrEmpty(extensions) && File.Exists(Path.Combine(file, "AndroidManifest.xml")))
+                //else if (String.IsNullOrEmpty(extensions) && File.Exists(Path.Combine(file, "AndroidManifest.xml")))
+                else if (String.IsNullOrEmpty(extensions))
                 {
                     e.Effect = DragDropEffects.Copy;
                     return true;

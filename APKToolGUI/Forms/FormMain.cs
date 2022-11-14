@@ -203,7 +203,7 @@ namespace APKToolGUI
                                 Close();
                             break;
                         case "smali":
-                            if (await Smali(file + ".dex") == 0)
+                            if (await Smali(file) == 0)
                                 Close();
                             break;
                         case "apkinfo":
@@ -726,12 +726,12 @@ namespace APKToolGUI
 
                 await Task.Factory.StartNew(() =>
                 {
-                    string outputDir = String.Format("{0}", inputDir);
+                    string outputDir = String.Format("{0}.dex", inputDir);
                     if (Settings.Default.Smali_UseOutputDir && !IgnoreOutputDirContextMenu)
-                        outputDir = String.Format("{0}", Path.Combine(Settings.Default.Smali_OutputDir, Path.GetFileNameWithoutExtension(inputDir)));
+                        outputDir = String.Format("{0}.dex", Path.Combine(Settings.Default.Smali_OutputDir, Path.GetFileNameWithoutExtension(inputDir)));
 
-                    code = smali.Assemble(outputDir);
-                    if (smali.Assemble(outputDir) == 0)
+                    code = smali.Assemble(inputDir, outputDir);
+                    if (code == 0)
                         ToLog(ApktoolEventType.None, String.Format(Language.CompilingSuccessfullyCompleted, outputDir));
                     else
                         ToLog(ApktoolEventType.Error, Language.ErrorCompiling);
