@@ -411,4 +411,19 @@
   <data name="DeleteFile" xml:space="preserve">
     <value>Delete file "{0}"</value>
   </data>
+  <data name="CopyFileToTemp" xml:space="preserve">
+    <value>Copy file "{0}" to temp directory "{1}"</value>
+  </data>
+  <data name="CopyFolderToTemp" xml:space="preserve">
+    <value>Copy decompiled apk folder "{0}" to temp directory "{1}"</value>
+  </data>
+  <data name="DecodeDesDirExists" xml:space="preserve">
+    <value>Destination directory "{0}" already exists. Enable "Force delete destination directory" if you want to overwrite it.</value>
+  </data>
+  <data name="MoveTempApkFileToOutput" xml:space="preserve">
+    <value>Move temp folder "{0}" to output directory "{1}"</value>
+  </data>
+  <data name="MoveTempApkToOutput" xml:space="preserve">
+    <value>Move temp apk "{0}" to output directory "{1}"</value>
+  </data>
 </root>

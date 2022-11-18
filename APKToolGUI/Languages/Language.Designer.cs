@@ -205,6 +205,24 @@ namespace APKToolGUI.Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Copy file &quot;{0}&quot; to temp directory &quot;{1}&quot;.
+        /// </summary>
+        internal static string CopyFileToTemp {
+            get {
+                return ResourceManager.GetString("CopyFileToTemp", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Copy decompiled apk folder &quot;{0}&quot; to temp directory &quot;{1}&quot;.
+        /// </summary>
+        internal static string CopyFolderToTemp {
+            get {
+                return ResourceManager.GetString("CopyFolderToTemp", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Creating Unsigned APK.
         /// </summary>
         internal static string CreateUnsignedApk {
@@ -237,6 +255,15 @@ namespace APKToolGUI.Languages {
         internal static string DecodeCouldNotCreate {
             get {
                 return ResourceManager.GetString("DecodeCouldNotCreate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Destination directory &quot;{0}&quot; already exists. Enable &quot;Force delete destination directory&quot; if you want to overwrite it..
+        /// </summary>
+        internal static string DecodeDesDirExists {
+            get {
+                return ResourceManager.GetString("DecodeDesDirExists", resourceCulture);
             }
         }
         
@@ -705,6 +732,24 @@ namespace APKToolGUI.Languages {
         internal static string MetainfNotExist {
             get {
                 return ResourceManager.GetString("MetainfNotExist", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Move temp folder &quot;{0}&quot; to output directory &quot;{1}&quot;.
+        /// </summary>
+        internal static string MoveTempApkFileToOutput {
+            get {
+                return ResourceManager.GetString("MoveTempApkFileToOutput", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Move temp apk &quot;{0}&quot; to output directory &quot;{1}&quot;.
+        /// </summary>
+        internal static string MoveTempApkToOutput {
+            get {
+                return ResourceManager.GetString("MoveTempApkToOutput", resourceCulture);
             }
         }
         

@@ -18,7 +18,7 @@ namespace APKToolGUI.Utils
 
         public static void Copy(string sourceFileName, string destFileName, bool overwrite = false)
         {
-            if (File.Exists(destFileName) && overwrite)
+            if (File.Exists(sourceFileName))
                 File.Copy(sourceFileName, destFileName, overwrite);
         }
 

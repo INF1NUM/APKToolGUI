@@ -261,11 +261,11 @@ namespace APKToolGUI
 
                         if (aapt.AppIcon != null)
                         {
-                            ZipUtils.ExtractFile(file, aapt.AppIcon, Path.Combine(Program.TempDir(), aapt.PackageName));
-                            string icon = Path.Combine(Program.TempDir(), aapt.PackageName, Path.GetFileName(aapt.AppIcon));
+                            ZipUtils.ExtractFile(file, aapt.AppIcon, Path.Combine(Program.TEMP_PATH, aapt.PackageName));
+                            string icon = Path.Combine(Program.TEMP_PATH, aapt.PackageName, Path.GetFileName(aapt.AppIcon));
                             if (File.Exists(icon))
                             {
-                                apkIconPicBox.Image = Image.FromFile(icon);
+                                apkIconPicBox.Image = BitmapUtils.LoadBitmap(icon);
                             }
                         }
                     }
@@ -419,37 +419,6 @@ namespace APKToolGUI
         }
         #endregion
 
-        #region Signapk
-        private void InitializeSignapk()
-        {
-            signapk = new Signapk(JavaUtils.GetJavaPath(), Program.APKSIGNER_PATH);
-            signapk.SignapkOutputDataRecieved += SignApkOutputDataRecieved;
-            signapk.SignapkErrorDataRecieved += SignApkErrorDataRecieved;
-        }
-
-        void SignApkErrorDataRecieved(object sender, SignapkDataReceivedEventArgs e)
-        {
-            ToLog(ApktoolEventType.Error, e.Message);
-        }
-
-        void SignApkOutputDataRecieved(object sender, SignapkDataReceivedEventArgs e)
-        {
-            ToLog(ApktoolEventType.None, e.Message);
-        }
-
-        internal int Sign(string input, string output)
-        {
-            Invoke(new Action(delegate ()
-            {
-                ToLog(ApktoolEventType.Infomation, "=====[ " + Language.Signing + " ]=====");
-                ToLog(ApktoolEventType.None, String.Format(Language.InputFile, input));
-                ToStatus(String.Format(Language.Signing + " \"{0}\"...", Path.GetFileName(input)), Resources.waiting);
-            }));
-
-            return signapk.Sign(input, output);
-        }
-        #endregion
-
         #region Apktool
         private void InitializeAPKTool()
         {
@@ -474,8 +443,23 @@ namespace APKToolGUI
         internal async Task<int> Decompile(string inputApk)
         {
             int code = 0;
+
+            string apkFileName = Path.GetFileName(inputApk);
+            string outputDir = PathUtils.GetDirectoryNameWithoutExtension(inputApk);
+            if (Settings.Default.Decode_UseOutputDir && !IgnoreOutputDirContextMenu)
+                outputDir = Path.Combine(Settings.Default.Decode_OutputDir, Path.GetFileNameWithoutExtension(inputApk));
+
+            string tempApk = Path.Combine(Program.TEMP_PATH, "tempapk.apk");
+            string outputTempDir = tempApk.Replace(".apk", "");
+
             try
             {
+                if (!Settings.Default.Decode_Force && Directory.Exists(outputDir))
+                {
+                    ToLog(ApktoolEventType.Error, String.Format(Language.DecodeDesDirExists, outputDir));
+                    return 1;
+                }
+
                 Running();
 
                 await Task.Factory.StartNew(() =>
@@ -495,14 +479,26 @@ namespace APKToolGUI
                         ToStatus(String.Format(Language.Decoding + " \"{0}\"...", Path.GetFileName(inputApk)), Resources.waiting);
                     }));
 
-                    string outputDir = PathUtils.GetDirectoryNameWithoutExtension(inputApk);
-                    if (Settings.Default.Decode_UseOutputDir && !IgnoreOutputDirContextMenu)
-                        outputDir = Path.Combine(Settings.Default.Decode_OutputDir, Path.GetFileNameWithoutExtension(inputApk));
+                    if (Settings.Default.Utf8FilenameSupport)
+                    {
+                        ToLog(ApktoolEventType.None, String.Format(Language.CopyFileToTemp, inputApk, tempApk));
 
-                    code = apktool.Decompile(inputApk, outputDir);
+                        FileUtils.Copy(inputApk, tempApk, true);
+
+                        code = apktool.Decompile(tempApk, outputTempDir);
+                    }
+                    else
+                        code = apktool.Decompile(inputApk, outputDir);
 
                     if (code == 0)
                     {
+                        if (Settings.Default.Utf8FilenameSupport)
+                        {
+                            ToLog(ApktoolEventType.None, String.Format(Language.MoveTempApkFileToOutput, outputTempDir, outputDir));
+                            DirectoryUtils.Delete(outputDir);
+                            DirectoryUtils.Move(outputTempDir, outputDir, true);
+                        }
+
                         textBox_BUILD_InputProjectDir.BeginInvoke(new Action(delegate
                         {
                             textBox_BUILD_InputProjectDir.Text = outputDir;
@@ -547,29 +543,44 @@ namespace APKToolGUI
             return apktool.ClearFramework();
         }
 
-        internal async Task<int> Build(string inputFile)
+        internal async Task<int> Build(string inputFolder)
         {
             int code = 0;
 
             Running();
             ToLog(ApktoolEventType.Infomation, "=====[ " + Language.Build + " ]=====");
-            ToLog(ApktoolEventType.None, String.Format(Language.InputFile, inputFile));
+            ToLog(ApktoolEventType.None, String.Format(Language.InputFile, inputFolder));
             ToStatus(String.Format(Language.Build + " \"{0}\"...", Path.GetFileName(textBox_BUILD_InputProjectDir.Text)), Resources.waiting);
 
             try
             {
                 await Task.Factory.StartNew(() =>
                 {
-                    string outputFile = inputFile + " compiled.apk";
+                    string outputFile = inputFolder + " compiled.apk";
                     if (Settings.Default.Build_SignAfterBuild)
-                        outputFile = inputFile + " signed.apk";
+                        outputFile = inputFolder + " signed.apk";
                     if (Settings.Default.Build_UseOutputAppPath && !IgnoreOutputDirContextMenu)
                     {
-                        outputFile = Path.Combine(Settings.Default.Build_OutputAppPath, Path.GetFileName(inputFile)) + ".apk";
+                        outputFile = Path.Combine(Settings.Default.Build_OutputAppPath, Path.GetFileName(inputFolder)) + ".apk";
                         if (Settings.Default.Build_SignAfterBuild)
-                            outputFile = Path.Combine(Settings.Default.Build_OutputAppPath, Path.GetFileName(inputFile)) + " signed.apk";
+                            outputFile = Path.Combine(Settings.Default.Build_OutputAppPath, Path.GetFileName(inputFolder)) + " signed.apk";
                     }
-                    code = apktool.Build(outputFile);
+                    string outputCompiledApkFile = outputFile;
+
+                    string tempDecApkFolder = Path.Combine(Program.TEMP_PATH, "tempdec");
+                    string outputTempApk = tempDecApkFolder + ".apk";
+
+                    if (Settings.Default.Utf8FilenameSupport)
+                    {
+                        ToLog(ApktoolEventType.None, String.Format(Language.CopyFolderToTemp, inputFolder, tempDecApkFolder));
+                        DirectoryUtils.Delete(tempDecApkFolder);
+                        DirectoryUtils.Copy(inputFolder, tempDecApkFolder, true);
+
+                        inputFolder = tempDecApkFolder;
+                        outputFile = outputTempApk;
+                    }
+
+                    code = apktool.Build(inputFolder, outputFile);
 
                     if (code == 0)
                     {
@@ -577,7 +588,14 @@ namespace APKToolGUI
 
                         if (Settings.Default.Build_ZipalignAfterBuild)
                         {
-                            if (Align(outputFile, outputFile) != 0)
+                            Invoke(new Action(delegate ()
+                            {
+                                ToLog(ApktoolEventType.Infomation, "=====[ " + Language.Aligning + " ]=====");
+                                ToLog(ApktoolEventType.None, String.Format(Language.InputFile, inputFolder));
+                                ToStatus(String.Format(Language.Aligning + " \"{0}\"...", Path.GetFileName(inputFolder)), Resources.waiting);
+                            }));
+
+                            if (zipalign.Align(outputFile, outputFile) != 0)
                             {
                                 ToLog(ApktoolEventType.Error, Language.ErrorZipalign);
                                 Done();
@@ -589,10 +607,10 @@ namespace APKToolGUI
                                 if (Settings.Default.Build_CreateUnsignedApk)
                                 {
                                     ToLog(ApktoolEventType.Infomation, "=====[ " + Language.CreateUnsignedApk + " ]=====");
-                                    if (Directory.Exists(Path.Combine(inputFile, "original", "META-INF")))
+                                    if (Directory.Exists(Path.Combine(inputFolder, "original", "META-INF")))
                                     {
-                                        ZipUtils.UpdateDirectory(outputFile, Path.Combine(inputFile, "original", "META-INF"), "META-INF");
-                                        File.Copy(outputFile, Path.Combine(Path.GetDirectoryName(outputFile), Path.GetFileName(inputFile) + " unsigned.apk"), true);
+                                        ZipUtils.UpdateDirectory(outputFile, Path.Combine(inputFolder, "original", "META-INF"), "META-INF");
+                                        File.Copy(outputFile, Path.Combine(Path.GetDirectoryName(outputFile), Path.GetFileName(inputFolder) + " unsigned.apk"), true);
                                         ToLog(ApktoolEventType.None, Language.Done);
                                     }
                                     else
@@ -602,7 +620,14 @@ namespace APKToolGUI
                         }
                         if (Settings.Default.Build_SignAfterBuild)
                         {
-                            if (Sign(outputFile, outputFile) == 0)
+                            Invoke(new Action(delegate ()
+                            {
+                                ToLog(ApktoolEventType.Infomation, "=====[ " + Language.Signing + " ]=====");
+                                ToLog(ApktoolEventType.None, String.Format(Language.InputFile, inputFolder));
+                                ToStatus(String.Format(Language.Signing + " \"{0}\"...", Path.GetFileName(inputFolder)), Resources.waiting);
+                            }));
+
+                            if (signapk.Sign(outputFile, outputFile) == 0)
                             {
                                 ToLog(ApktoolEventType.None, Language.Done);
 
@@ -611,7 +636,6 @@ namespace APKToolGUI
                                     ToLog(ApktoolEventType.None, String.Format(Language.DeleteFile, outputFile + ".idsig"));
                                     FileUtils.Delete(outputFile + ".idsig");
                                 }
-
                             }
                             else
                             {
@@ -620,6 +644,13 @@ namespace APKToolGUI
                                 return;
                             }
                         }
+
+                        if (Settings.Default.Utf8FilenameSupport)
+                        {
+                            ToLog(ApktoolEventType.None, String.Format(Language.MoveTempApkToOutput, outputTempApk, outputCompiledApkFile));
+                            FileUtils.Move(outputTempApk, outputCompiledApkFile, true);
+                        }
+
                         ToLog(ApktoolEventType.Infomation, "=====[ " + Language.AllDone + " ]=====");
                     }
                     else
@@ -775,9 +806,74 @@ namespace APKToolGUI
                 ToStatus(String.Format(Language.Aligning + " \"{0}\"...", Path.GetFileName(input)), Resources.waiting);
             }));
 
-            return zipalign.Align(input, output);
+            string tempApk = Path.Combine(Program.TEMP_PATH, "tempapk.apk");
+            string outputApkFile = output;
+
+            if (Settings.Default.Utf8FilenameSupport)
+            {
+                ToLog(ApktoolEventType.None, String.Format(Language.CopyFileToTemp, input, tempApk));
+                FileUtils.Copy(input, tempApk, true);
+                input = tempApk;
+                output = tempApk;
+            }
+
+            int code = zipalign.Align(input, output);
+            if (code == 0 && Settings.Default.Utf8FilenameSupport)
+            {
+                ToLog(ApktoolEventType.None, String.Format(Language.MoveTempApkToOutput, tempApk, outputApkFile));
+                FileUtils.Move(tempApk, outputApkFile, true);
+            }
+            return code;
         }
         #endregion
+
+        #region Signapk
+        private void InitializeSignapk()
+        {
+            signapk = new Signapk(JavaUtils.GetJavaPath(), Program.APKSIGNER_PATH);
+            signapk.SignapkOutputDataRecieved += SignApkOutputDataRecieved;
+            signapk.SignapkErrorDataRecieved += SignApkErrorDataRecieved;
+        }
+
+        void SignApkErrorDataRecieved(object sender, SignapkDataReceivedEventArgs e)
+        {
+            ToLog(ApktoolEventType.Error, e.Message);
+        }
+
+        void SignApkOutputDataRecieved(object sender, SignapkDataReceivedEventArgs e)
+        {
+            ToLog(ApktoolEventType.None, e.Message);
+        }
+
+        internal int Sign(string input, string output)
+        {
+            Invoke(new Action(delegate ()
+            {
+                ToLog(ApktoolEventType.Infomation, "=====[ " + Language.Signing + " ]=====");
+                ToLog(ApktoolEventType.None, String.Format(Language.InputFile, input));
+                ToStatus(String.Format(Language.Signing + " \"{0}\"...", Path.GetFileName(input)), Resources.waiting);
+            }));
+            string tempApk = Path.Combine(Program.TEMP_PATH, "tempapk.apk");
+            string outputApkFile = output;
+
+            if (Settings.Default.Utf8FilenameSupport)
+            {
+                ToLog(ApktoolEventType.None, String.Format(Language.CopyFileToTemp, input, tempApk));
+                FileUtils.Copy(input, tempApk, true);
+                input = tempApk;
+                output = tempApk;
+            }
+
+            int code = signapk.Sign(input, output);
+            if (code == 0 && Settings.Default.Utf8FilenameSupport)
+            {
+                ToLog(ApktoolEventType.None, String.Format(Language.MoveTempApkToOutput, tempApk, outputApkFile));
+                FileUtils.Move(tempApk, outputApkFile, true);
+            }
+            return code;
+        }
+        #endregion
+
 
         #region Main menu event handlers
         private void saveLogItem_Click(object sender, EventArgs e)
@@ -804,6 +900,11 @@ namespace APKToolGUI
         private void menuItemExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void openTempFolderToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Process.Start(Program.TEMP_PATH);
         }
 
         private void menuItemCheckUpdate_Click(object sender, EventArgs e)
@@ -934,12 +1035,8 @@ namespace APKToolGUI
 
         private void Application_ApplicationExit(object sender, EventArgs e)
         {
-            if (apkIconPicBox.Image != null)
-            {
-                apkIconPicBox.Image.Dispose();
-                apkIconPicBox.Image = null;
-            }
-            DirectoryUtils.Delete(Program.TempDir());
+            //Clear temp folder
+            DirectoryUtils.Delete(Program.TEMP_PATH);
             Save();
         }
 

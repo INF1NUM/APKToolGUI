@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Linq;
+using System.Text;
 using System.Text.RegularExpressions;
 
 namespace Java
@@ -24,6 +25,7 @@ namespace Java
                 StartInfo.FileName = JavaPath;
             else
                 StartInfo.FileName = "cmd.exe";
+            StartInfo.StandardOutputEncoding = Encoding.GetEncoding("UTF-8");
             StartInfo.UseShellExecute = false;
             StartInfo.RedirectStandardOutput = true;
             StartInfo.RedirectStandardError = true;

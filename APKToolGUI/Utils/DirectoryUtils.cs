@@ -43,7 +43,7 @@ namespace APKToolGUI.Utils
                 FileInfo[] files = dir.GetFiles();
                 foreach (FileInfo file in files)
                 {
-                    Debug.WriteLine(file);
+                    //Debug.WriteLine(file);
                     string temppath = Path.Combine(destDirName, file.Name);
                     file.CopyTo(temppath, true);
                 }
@@ -86,7 +86,6 @@ namespace APKToolGUI.Utils
                 FileInfo[] files = dir.GetFiles();
                 foreach (FileInfo file in files)
                 {
-                    //string s = Path.Combine(Path.GetTempPath(), "AutoToaster", "Debugggg.txt");
                     // File.AppendAllText(s, Path.Combine(destDirName, file.Name) + "\n");
                     //HaveError(Environment.NewLine + ex, MainResources.Some_Error_Found);
                     string temppath = Path.Combine(destDirName, file.Name);

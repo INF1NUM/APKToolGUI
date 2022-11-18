@@ -44,13 +44,13 @@ namespace APKToolGUI
 
         private void buttonAddContextMenu_Click(object sender, EventArgs e)
         {
-            if(MessageBox.Show(Language.DoYouRealyWantToInstallCM, Application.ProductName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
+            if(MessageBox.Show(Language.DoYouRealyWantToInstallCM, Application.ProductName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 RunAsAdmin(Application.ExecutablePath, "ccm");
         }
 
         private void buttonRemoveContextMenu_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show(Language.DoYouRealyWantToRemoveCM, Application.ProductName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
+            if (MessageBox.Show(Language.DoYouRealyWantToRemoveCM, Application.ProductName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 RunAsAdmin(Application.ExecutablePath, "rcm");
         }
 
@@ -84,7 +84,6 @@ namespace APKToolGUI
                 var qwe = System.Globalization.CultureInfo.GetCultureInfo(_culture);
                 comboBox1.SelectedItem = qwe;
             }
-            
         }
 
         private void SaveSettings()
@@ -146,7 +145,14 @@ namespace APKToolGUI
                 if (!String.IsNullOrWhiteSpace(customTempLocationTxtBox.Text))
                     fbd.SelectedPath = customTempLocationTxtBox.Text;
                 if (fbd.ShowDialog() == DialogResult.OK)
+                {
                     customTempLocationTxtBox.Text = fbd.SelectedPath;
+                    //Clear temp folder
+                    DirectoryUtils.Delete(Program.TEMP_PATH);
+
+                    //Create new temp folder
+                    Program.TEMP_PATH = Program.TempDir();
+                }
             }
         }
     }

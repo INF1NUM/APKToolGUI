@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
+using System.Text;
 using System.Text.RegularExpressions;
 
 using APKToolGUI.Properties;
@@ -137,10 +138,8 @@ namespace APKToolGUI
             return ExitCode;
         }
 
-        public int Build(string outputFile)
+        public int Build(string inputFolder, string outputFile)
         {
-            string decApkDir = Settings.Default.Build_InputDir;
-
             string keyForceAll = null, keyAapt = null, keyCopyOriginal = null, noCrunch = null, keyFramePath = null, keyOutputAppPath = null, apiLevel = null, useAapt2 = null;
             if (Settings.Default.Build_ForceAll)
                 keyForceAll = BuildKeys.ForceAll;
@@ -158,7 +157,7 @@ namespace APKToolGUI
                 useAapt2 = BuildKeys.UseAapt2;
             keyOutputAppPath = String.Format("{0} \"{1}\"", BuildKeys.OutputAppPath, outputFile);
 
-            string args = String.Format($"b{keyForceAll}{keyAapt}{keyCopyOriginal}{noCrunch}{keyFramePath}{apiLevel}{useAapt2}{keyOutputAppPath} \"{decApkDir}\"");
+            string args = String.Format($"b{keyForceAll}{keyAapt}{keyCopyOriginal}{noCrunch}{keyFramePath}{apiLevel}{useAapt2}{keyOutputAppPath} \"{inputFolder}\"");
 
             Start(args);
             BeginOutputReadLine();

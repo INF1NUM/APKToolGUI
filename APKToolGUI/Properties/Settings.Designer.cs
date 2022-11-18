@@ -1109,5 +1109,17 @@ namespace APKToolGUI.Properties {
                 this["AutoDeleteIdsigFile"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool Utf8FilenameSupport {
+            get {
+                return ((bool)(this["Utf8FilenameSupport"]));
+            }
+            set {
+                this["Utf8FilenameSupport"] = value;
+            }
+        }
     }
 }
