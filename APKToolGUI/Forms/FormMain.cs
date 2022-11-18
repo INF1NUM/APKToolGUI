@@ -355,6 +355,9 @@ namespace APKToolGUI
                 case ApktoolEventType.None:
                     ToLog(DateTime.Now.ToString("[HH:mm:ss]"), message, Color.Black);
                     break;
+                case ApktoolEventType.Done:
+                    ToLog(DateTime.Now.ToString("[HH:mm:ss]"), message, Color.DarkGreen);
+                    break;
                 case ApktoolEventType.Infomation:
                     ToLog(DateTime.Now.ToString("[HH:mm:ss]"), message, Color.Blue);
                     break;
@@ -514,7 +517,7 @@ namespace APKToolGUI
                             if (ApkFixer.RemoveApkToolDummies(outputDir))
                                 ToLog(ApktoolEventType.None, Language.RemoveApkToolDummies);
                         }
-                        ToLog(ApktoolEventType.None, Language.AllDone);
+                        ToLog(ApktoolEventType.Done, Language.AllDone);
                     }
                     else
                         ToLog(ApktoolEventType.Error, Language.ErrorDecompiling);
@@ -651,7 +654,7 @@ namespace APKToolGUI
                             FileUtils.Move(outputTempApk, outputCompiledApkFile, true);
                         }
 
-                        ToLog(ApktoolEventType.Infomation, "=====[ " + Language.AllDone + " ]=====");
+                        ToLog(ApktoolEventType.Done, "=====[ " + Language.AllDone + " ]=====");
                     }
                     else
                         ToLog(ApktoolEventType.Error, Language.ErrorCompiling);
