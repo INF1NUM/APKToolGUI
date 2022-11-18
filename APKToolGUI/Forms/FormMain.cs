@@ -1027,6 +1027,12 @@ namespace APKToolGUI
         #endregion
 
         #region Form handlers
+        private void logTxtBox_TextChanged(object sender, EventArgs e)
+        {
+            logTxtBox.SelectionStart = logTxtBox.Text.Length;
+            logTxtBox.ScrollToCaret();
+        }
+
         private void FormMain_Activated(object sender, EventArgs e)
         {
             if (!isRunning)

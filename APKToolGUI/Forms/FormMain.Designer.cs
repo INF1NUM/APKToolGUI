@@ -237,13 +237,13 @@
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveLogToFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.openTempFolderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.checkForUpdateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.apktoolIssuesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.baksmaliIssuesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.openTempFolderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControlMain.SuspendLayout();
             this.tabPageMain.SuspendLayout();
             this.signPanel.SuspendLayout();
@@ -1850,6 +1850,7 @@
             this.logTxtBox.ContextMenuStrip = this.contextMenuStripLog;
             resources.ApplyResources(this.logTxtBox, "logTxtBox");
             this.logTxtBox.Name = "logTxtBox";
+            this.logTxtBox.TextChanged += new System.EventHandler(this.logTxtBox_TextChanged);
             // 
             // menuStrip1
             // 
@@ -1881,6 +1882,12 @@
             this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
             resources.ApplyResources(this.settingsToolStripMenuItem, "settingsToolStripMenuItem");
             this.settingsToolStripMenuItem.Click += new System.EventHandler(this.menuItemSettings_Click);
+            // 
+            // openTempFolderToolStripMenuItem
+            // 
+            this.openTempFolderToolStripMenuItem.Name = "openTempFolderToolStripMenuItem";
+            resources.ApplyResources(this.openTempFolderToolStripMenuItem, "openTempFolderToolStripMenuItem");
+            this.openTempFolderToolStripMenuItem.Click += new System.EventHandler(this.openTempFolderToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
@@ -1921,12 +1928,6 @@
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
             resources.ApplyResources(this.aboutToolStripMenuItem, "aboutToolStripMenuItem");
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.menuItemAbout_Click);
-            // 
-            // openTempFolderToolStripMenuItem
-            // 
-            this.openTempFolderToolStripMenuItem.Name = "openTempFolderToolStripMenuItem";
-            resources.ApplyResources(this.openTempFolderToolStripMenuItem, "openTempFolderToolStripMenuItem");
-            this.openTempFolderToolStripMenuItem.Click += new System.EventHandler(this.openTempFolderToolStripMenuItem_Click);
             // 
             // FormMain
             // 
