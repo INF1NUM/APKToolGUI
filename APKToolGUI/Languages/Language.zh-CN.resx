@@ -204,9 +204,6 @@
 	<data name="Done" xml:space="preserve">
     <value>完成</value>
   </data>
-	<data name="DoYouWantToSelectJavaLocation" xml:space="preserve">
-    <value>没有找到 Java。你想选择自定义位置吗？</value>
-  </data>
 	<data name="CantDetectApktoolVersion" xml:space="preserve">
     <value>无法检测 apktool 版本。</value>
   </data>
@@ -410,5 +407,23 @@
   </data>
 	<data name="InputFile" xml:space="preserve">
     <value>输入文件：{0}</value>
+  </data>
+  <data name="DeleteFile" xml:space="preserve">
+    <value>删除文件 "{0}"</value>
+  </data>
+  <data name="CopyFileToTemp" xml:space="preserve">
+    <value>复制文件 "{0}" 到临时目录 "{1}"</value>
+  </data>
+  <data name="CopyFolderToTemp" xml:space="preserve">
+    <value>复制反编译的 apk 文件夹 "{0}" 到临时目录 "{1}"</value>
+  </data>
+  <data name="DecodeDesDirExists" xml:space="preserve">
+    <value>目标目录 "{0}" 已经存在。如果你想覆盖它，请启用 "强制删除目标目录"。</value>
+  </data>
+  <data name="MoveTempApkFileToOutput" xml:space="preserve">
+    <value>移动临时文件夹 "{0}" 到输出目录 "{1}"。</value>
+  </data>
+  <data name="MoveTempApkToOutput" xml:space="preserve">
+    <value>移动临时 apk"{0}" 到输出目录 "{1}"</value>
   </data>
 </root>
