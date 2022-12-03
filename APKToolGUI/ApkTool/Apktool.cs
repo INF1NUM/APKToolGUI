@@ -119,7 +119,7 @@ namespace APKToolGUI
                 keyKeepBrokenRes = DecompileKeys.KeepBrokenResource;
             if (Settings.Default.Decode_MatchOriginal)
                 keyMatchOriginal = DecompileKeys.MatchOriginal;
-            if (Settings.Default.Decode_OnlyMainClasses)
+            if (Settings.Default.Decode_OnlyMainClasses && !Settings.Default.Decode_NoSrc)
                 onlyMainClasses = DecompileKeys.OnlyMainClasses;
             if (Settings.Default.Decode_NoDebugInfo)
                 noDebugInfo = DecompileKeys.NoDebugInfo;
