@@ -116,12 +116,14 @@ namespace APKToolGUI.Handlers
             string inputFile = Settings.Default.Zipalign_InputFile;
 
             string outputFile = inputFile;
-            if (Settings.Default.Zipalign_UseOutputDir)
-                outputFile = Path.Combine(Settings.Default.Zipalign_OutputDir, Path.GetFileName(inputFile));
+            if (!String.IsNullOrEmpty(outputFile))
+            {
+                if (Settings.Default.Zipalign_UseOutputDir)
+                    outputFile = Path.Combine(Settings.Default.Zipalign_OutputDir, Path.GetFileName(inputFile));
 
-            if (!Settings.Default.Zipalign_OverwriteOutputFile)
-                outputFile = PathUtils.GetDirectoryNameWithoutExtension(outputFile) + " aligned.apk";
-
+                if (!Settings.Default.Zipalign_OverwriteOutputFile)
+                    outputFile = PathUtils.GetDirectoryNameWithoutExtension(outputFile) + " aligned.apk";
+            }
             if (File.Exists(outputFile))
                 Process.Start("explorer.exe", string.Format("/select,\"{0}\"", outputFile));
             else
