@@ -499,7 +499,7 @@ namespace APKToolGUI
                         {
                             ToLog(ApktoolEventType.None, String.Format(Language.MoveTempApkFileToOutput, outputTempDir, outputDir));
                             DirectoryUtils.Delete(outputDir);
-                            DirectoryUtils.Move(outputTempDir, outputDir, true);
+                            DirectoryUtils.Move(outputTempDir, outputDir);
                         }
 
                         textBox_BUILD_InputProjectDir.BeginInvoke(new Action(delegate
