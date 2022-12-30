@@ -365,7 +365,7 @@ namespace APKToolGUI
                     ToLog(DateTime.Now.ToString("[HH:mm:ss]"), message, Color.Red);
                     break;
                 case ApktoolEventType.Warning:
-                    ToLog(DateTime.Now.ToString("[HH:mm:ss]"), message, Color.Goldenrod);
+                    ToLog(DateTime.Now.ToString("[HH:mm:ss]"), message, Color.DarkOrange);
                     break;
                 case ApktoolEventType.Unknown:
                     ToLog(DateTime.Now.ToString("[HH:mm:ss]"), message, Color.Red);

@@ -1,0 +1,17 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Apktool Issues List
+    url: https://github.com/iBotPeaches/Apktool/issues?q=is%3Aissue
+    about: Check issues on Apktool repo before reporting issue here. Don't report any APKToolGUI issues there though
+  - name: System Apps Modding Support Forum
+    url: https://forum.xda-developers.com/all-forums-by-manufacturer
+    about: For support, questions or help with modding system apps.
+  - name: Android development and modding support forum
+    url: https://forum.xda-developers.com/c/android-development-and-hacking.564/
+    about: For support, questions or help with Android development and modding
+  - name: Android development and modding support forum 2
+    url: https://androidforums.com/forums/android-development.28/
+    about: For support, questions or help with Android development and modding
+  - name: Android development and modding support forum 3
+    url: https://platinmods.com/forums/modding-questions-discussions.11/
+    about: For support, questions or help with Android development and modding
