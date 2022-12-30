@@ -117,7 +117,9 @@ namespace APKToolGUI
                 AAPT_PATH,
                 AAPT2_PATH,
                 SIGNAPK_KEYPRIVATE,
-                SIGNAPK_KEYPUBLIC};
+                SIGNAPK_KEYPUBLIC,
+                AAPT2JNI_PATH
+            };
             for (int i = 0; i < fileList.Length; i++)
                 if (!File.Exists(fileList[i]))
                     missingFiles.Add(Path.GetFileName(fileList[i]));
@@ -167,15 +169,18 @@ namespace APKToolGUI
         public static string LOCAL_APPDATA_PATH = Environment.GetEnvironmentVariable("LocalAppData");
         public static string TEMP_PATH = TempDir();
         public static string APP_PATH = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
-        public static string APKTOOL_PATH = APP_PATH + @"\Resources\apktool.jar";
-        public static string APKSIGNER_PATH = APP_PATH + @"\Resources\apksigner.jar";
-        public static string BAKSMALI_PATH = APP_PATH + @"\Resources\baksmali.jar";
-        public static string SMALI_PATH = APP_PATH + @"\Resources\smali.jar";
-        public static string SIGNAPK_KEYPRIVATE = APP_PATH + @"\Resources\testkey.pk8";
-        public static string SIGNAPK_KEYPUBLIC = APP_PATH + @"\Resources\testkey.x509.pem";
-        public static string ZIPALIGN_PATH = APP_PATH + @"\Resources\zipalign.exe";
-        public static string AAPT_PATH = APP_PATH + @"\Resources\aapt.exe";
-        public static string AAPT2_PATH = APP_PATH + @"\Resources\aapt2.exe";
-        public static string FRAMEWORK_DIR = LOCAL_APPDATA_PATH + @"\apktool\framework";
+        public static string RES_PATH = Path.Combine(APP_PATH, "Resources");
+
+        public static string APKTOOL_PATH = Path.Combine(RES_PATH, "apktool.jar");
+        public static string APKSIGNER_PATH = Path.Combine(RES_PATH, "apksigner.jar");
+        public static string BAKSMALI_PATH = Path.Combine(RES_PATH, "baksmali.jar");
+        public static string SMALI_PATH = Path.Combine(RES_PATH, "smali.jar");
+        public static string SIGNAPK_KEYPRIVATE = Path.Combine(RES_PATH, "testkey.pk8");
+        public static string SIGNAPK_KEYPUBLIC = Path.Combine(RES_PATH, "testkey.x509.pem");
+        public static string ZIPALIGN_PATH = Path.Combine(RES_PATH, "zipalign.exe");
+        public static string AAPT_PATH = Path.Combine(RES_PATH, "aapt.exe");
+        public static string AAPT2_PATH = Path.Combine(RES_PATH, "aapt2.exe");
+        public static string AAPT2JNI_PATH = Path.Combine(RES_PATH, "libaapt2_jni.dll");
+        public static string FRAMEWORK_DIR = Path.Combine(LOCAL_APPDATA_PATH, "apktool", "framework");
     }
 }

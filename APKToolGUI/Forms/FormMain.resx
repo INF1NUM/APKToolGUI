@@ -132,7 +132,7 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="comApkOpenDir.Location" type="System.Drawing.Point, System.Drawing">
-    <value>406, 200</value>
+    <value>406, 197</value>
   </data>
   <data name="comApkOpenDir.Size" type="System.Drawing.Size, System.Drawing">
     <value>175, 24</value>
@@ -166,7 +166,7 @@
     <value>NoControl</value>
   </data>
   <data name="decOutOpenDirBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 228</value>
+    <value>7, 225</value>
   </data>
   <data name="decOutOpenDirBtn.Size" type="System.Drawing.Size, System.Drawing">
     <value>175, 24</value>
@@ -199,7 +199,7 @@
     <value>NoControl</value>
   </data>
   <data name="signApkOpenDirBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>406, 228</value>
+    <value>406, 225</value>
   </data>
   <data name="signApkOpenDirBtn.Size" type="System.Drawing.Size, System.Drawing">
     <value>175, 24</value>
@@ -232,7 +232,7 @@
     <value>NoControl</value>
   </data>
   <data name="alignApkOpenDirBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>206, 228</value>
+    <value>206, 225</value>
   </data>
   <data name="alignApkOpenDirBtn.Size" type="System.Drawing.Size, System.Drawing">
     <value>175, 24</value>
@@ -265,7 +265,7 @@
     <value>NoControl</value>
   </data>
   <data name="decApkOpenDirBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>206, 200</value>
+    <value>206, 197</value>
   </data>
   <data name="decApkOpenDirBtn.Size" type="System.Drawing.Size, System.Drawing">
     <value>175, 24</value>
@@ -298,7 +298,7 @@
     <value>NoControl</value>
   </data>
   <data name="selectedApkOpenDirBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 201</value>
+    <value>7, 198</value>
   </data>
   <data name="selectedApkOpenDirBtn.Size" type="System.Drawing.Size, System.Drawing">
     <value>175, 23</value>
@@ -325,7 +325,7 @@
     <value>NoControl</value>
   </data>
   <data name="button_OpenMainActivity.Location" type="System.Drawing.Point, System.Drawing">
-    <value>406, 256</value>
+    <value>406, 258</value>
   </data>
   <data name="button_OpenMainActivity.Size" type="System.Drawing.Size, System.Drawing">
     <value>175, 23</value>
@@ -352,7 +352,7 @@
     <value>NoControl</value>
   </data>
   <data name="openApktoolYmlBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>206, 256</value>
+    <value>206, 258</value>
   </data>
   <data name="openApktoolYmlBtn.Size" type="System.Drawing.Size, System.Drawing">
     <value>175, 23</value>
@@ -379,7 +379,7 @@
     <value>NoControl</value>
   </data>
   <data name="openAndroidMainfestBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 256</value>
+    <value>7, 258</value>
   </data>
   <data name="openAndroidMainfestBtn.Size" type="System.Drawing.Size, System.Drawing">
     <value>175, 23</value>
