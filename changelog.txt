@@ -7,7 +7,7 @@
 - Prevent error with apkinfo when file is not found
 - Make config fully portable
 - Fixed "Do not decode sources"
-- Added taiwanese language. It is currently incomplete
+- Added chinese language. It is currently incomplete
 - Simple log output
 - Added UTF-8 filename support workaround. It will move to temp folder so it will process slower
 - Fixed paths of baksmali
