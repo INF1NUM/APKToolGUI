@@ -1,5 +1,5 @@
 # APK Tool GUI
-![](https://i.imgur.com/MUuWTdW.png)
+![](Image.png)
 
 [![](https://img.shields.io/github/downloads/AndnixSH/APKToolGUI/total?style=for-the-badge)](https://github.com/AndnixSH/APKToolGUI/releases) [![](https://img.shields.io/github/v/release/andnixsh/APKToolGUI?style=for-the-badge)](https://github.com/AndnixSH/APKToolGUI/releases)
 
@@ -35,9 +35,7 @@ https://github.com/AndnixSH/APKToolGUI/releases
 - Chinese Simplified (Incomplete)
 
 # Issues
-Issues with Apktool, read the log, check if your modification and/or syntax is correct. If not, check this page https://github.com/iBotPeaches/Apktool/issues
-
-Otherwise, report issues here and I will point you to the right direction.
+Issues with Apktool, read the log, check if your modification and/or syntax is correct. If not, check this page https://github.com/iBotPeaches/Apktool/issues. Otherwise, report issues here and I will point you to the right direction.
 
 Framework/system apps related issues, check on [XDA Forum](https://forum.xda-developers.com/)
 
@@ -45,7 +43,7 @@ Framework/system apps related issues, check on [XDA Forum](https://forum.xda-dev
 
 # FAQ
 ##### Q: Can it be ported to other OS like Linux?
-A: Maybe, but it's not easy since Microsoft is dumb for not making it easy for .NET Core unlike Java's GUI which supports all supported platforms
+A: Maybe, but it's not easy since Microsoft is dumb for not supporting it for .NET Core, unlike Java FX which supported all platforms. If you know, feel free to open an issue
 
 ##### Q: How to update Apktool?
 A: Download [Apktool.jar](https://github.com/iBotPeaches/Apktool/releases) and replace it on Resources folder
@@ -54,13 +52,19 @@ A: Download [Apktool.jar](https://github.com/iBotPeaches/Apktool/releases) and r
 A: Download [Baksmali.jar/Smali.jar](https://bitbucket.org/JesusFreke/smali/downloads/) and replace it on Resources folder
 
 ##### Q: How to reset?
-A: Simply delete the config.xml file
+A: Simply delete the config.xml file on the same directory of the executeable
 
 ##### Q: Why this tool is a virus?
 A: It just a false positive, anti-virus always flag tools/softwares like this as virus. Don't always believe what your anti-virus are telling you. Try to compile the source by yourself and you will see
 
 ##### Q: Can you make an automatic APK injecting tool?
-A: No, that's not the point of this tool, and I don't have time for that. However, you can try making it by yourself, or have a look on [SaveToGame](https://github.com/And42/SaveToGame) which can give you ideas how to do it.
+A: No, that's not the scope of this tool, and I don't have time for that. However, you can try making it by yourself, or have a look on [SaveToGame](https://github.com/And42/SaveToGame) which can give you ideas how to do it.
+
+##### Q: Can you implement an option to protect/pack/obfuscate APK?
+A: No, protection is beyond the scope of this tool
+
+##### Q: Can you implement an option to deobfuscate/unpack APK or bypass anti-cheat/security?
+A: No, they are also beyond the scope of this tool. I don't condone bypassing such protections
 
 # Development
 Use Visual Studio 2019 and above. NET Framework 4.8 SDK is required
