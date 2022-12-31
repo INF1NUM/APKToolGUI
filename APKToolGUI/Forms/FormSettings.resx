@@ -550,13 +550,16 @@
     <value>6, 45</value>
   </data>
   <data name="ignoreOutputContextMenuBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>263, 17</value>
+    <value>278, 17</value>
   </data>
   <data name="ignoreOutputContextMenuBox.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
   <data name="ignoreOutputContextMenuBox.Text" xml:space="preserve">
-    <value>Use default output directory for context menu</value>
+    <value>Ignore custom output directory for context menu</value>
+  </data>
+  <data name="ignoreOutputContextMenuBox.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
   </data>
   <data name="&gt;&gt;ignoreOutputContextMenuBox.Name" xml:space="preserve">
     <value>ignoreOutputContextMenuBox</value>

@@ -1121,5 +1121,17 @@ namespace APKToolGUI.Properties {
                 this["Utf8FilenameSupport"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool Sign_OverwriteInputFile {
+            get {
+                return ((bool)(this["Sign_OverwriteInputFile"]));
+            }
+            set {
+                this["Sign_OverwriteInputFile"] = value;
+            }
+        }
     }
 }

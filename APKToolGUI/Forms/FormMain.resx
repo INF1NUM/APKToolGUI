@@ -3283,6 +3283,36 @@ and change target SDK to 29</value>
   <data name="tabPageSign.AutoScroll" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="checkBox1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkBox1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="checkBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 329</value>
+  </data>
+  <data name="checkBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>126, 17</value>
+  </data>
+  <data name="checkBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>30</value>
+  </data>
+  <data name="checkBox1.Text" xml:space="preserve">
+    <value>Overwrite input file</value>
+  </data>
+  <data name="&gt;&gt;checkBox1.Name" xml:space="preserve">
+    <value>checkBox1</value>
+  </data>
+  <data name="&gt;&gt;checkBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkBox1.Parent" xml:space="preserve">
+    <value>groupBox_SIGN_Options</value>
+  </data>
+  <data name="&gt;&gt;checkBox1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="autoDelIdsigChkBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -3311,7 +3341,7 @@ and change target SDK to 29</value>
     <value>groupBox_SIGN_Options</value>
   </data>
   <data name="&gt;&gt;autoDelIdsigChkBox.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="schemev4ComboBox.Items" xml:space="preserve">
     <value>Default</value>
@@ -3341,7 +3371,7 @@ and change target SDK to 29</value>
     <value>groupBox_SIGN_Options</value>
   </data>
   <data name="&gt;&gt;schemev4ComboBox.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="label27.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -3371,7 +3401,7 @@ and change target SDK to 29</value>
     <value>groupBox_SIGN_Options</value>
   </data>
   <data name="&gt;&gt;label27.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="schemev3ComboBox.Items" xml:space="preserve">
     <value>Default</value>
@@ -3401,7 +3431,7 @@ and change target SDK to 29</value>
     <value>groupBox_SIGN_Options</value>
   </data>
   <data name="&gt;&gt;schemev3ComboBox.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="label26.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -3431,7 +3461,7 @@ and change target SDK to 29</value>
     <value>groupBox_SIGN_Options</value>
   </data>
   <data name="&gt;&gt;label26.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="schemev2ComboBox.Items" xml:space="preserve">
     <value>Default</value>
@@ -3461,7 +3491,7 @@ and change target SDK to 29</value>
     <value>groupBox_SIGN_Options</value>
   </data>
   <data name="&gt;&gt;schemev2ComboBox.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="label25.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -3491,7 +3521,7 @@ and change target SDK to 29</value>
     <value>groupBox_SIGN_Options</value>
   </data>
   <data name="&gt;&gt;label25.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="schemev1ComboBox.Items" xml:space="preserve">
     <value>Default</value>
@@ -3521,7 +3551,7 @@ and change target SDK to 29</value>
     <value>groupBox_SIGN_Options</value>
   </data>
   <data name="&gt;&gt;schemev1ComboBox.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="label24.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -3551,7 +3581,7 @@ and change target SDK to 29</value>
     <value>groupBox_SIGN_Options</value>
   </data>
   <data name="&gt;&gt;label24.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="textBox3.Location" type="System.Drawing.Point, System.Drawing">
     <value>249, 180</value>
@@ -3572,7 +3602,7 @@ and change target SDK to 29</value>
     <value>groupBox_SIGN_Options</value>
   </data>
   <data name="&gt;&gt;textBox3.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="selectKeyStoreFileBtn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -3602,7 +3632,7 @@ and change target SDK to 29</value>
     <value>groupBox_SIGN_Options</value>
   </data>
   <data name="&gt;&gt;selectKeyStoreFileBtn.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>11</value>
   </data>
   <data name="aliasTxtBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>247, 98</value>
@@ -3623,7 +3653,7 @@ and change target SDK to 29</value>
     <value>groupBox_SIGN_Options</value>
   </data>
   <data name="&gt;&gt;aliasTxtBox.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>12</value>
   </data>
   <data name="useAliasChkBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -3653,7 +3683,7 @@ and change target SDK to 29</value>
     <value>groupBox_SIGN_Options</value>
   </data>
   <data name="&gt;&gt;useAliasChkBox.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>13</value>
   </data>
   <data name="label22.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -3683,7 +3713,7 @@ and change target SDK to 29</value>
     <value>groupBox_SIGN_Options</value>
   </data>
   <data name="&gt;&gt;label22.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>14</value>
   </data>
   <data name="keyStoreFileTxtBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>249, 152</value>
@@ -3704,7 +3734,7 @@ and change target SDK to 29</value>
     <value>groupBox_SIGN_Options</value>
   </data>
   <data name="&gt;&gt;keyStoreFileTxtBox.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>15</value>
   </data>
   <data name="label21.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -3740,7 +3770,7 @@ and change target SDK to 29</value>
     <value>groupBox_SIGN_Options</value>
   </data>
   <data name="&gt;&gt;label21.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>16</value>
   </data>
   <data name="label20.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -3776,7 +3806,7 @@ and change target SDK to 29</value>
     <value>groupBox_SIGN_Options</value>
   </data>
   <data name="&gt;&gt;label20.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>17</value>
   </data>
   <data name="useKeyStoreChkBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -3806,7 +3836,7 @@ and change target SDK to 29</value>
     <value>groupBox_SIGN_Options</value>
   </data>
   <data name="&gt;&gt;useKeyStoreChkBox.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>18</value>
   </data>
   <data name="useSigningOutputDir.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -3836,7 +3866,7 @@ and change target SDK to 29</value>
     <value>groupBox_SIGN_Options</value>
   </data>
   <data name="&gt;&gt;useSigningOutputDir.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>19</value>
   </data>
   <data name="label_SIGN_PrivateKey.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -3872,7 +3902,7 @@ and change target SDK to 29</value>
     <value>groupBox_SIGN_Options</value>
   </data>
   <data name="&gt;&gt;label_SIGN_PrivateKey.ZOrder" xml:space="preserve">
-    <value>19</value>
+    <value>20</value>
   </data>
   <data name="label_SIGN_PublicKey.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -3908,7 +3938,7 @@ and change target SDK to 29</value>
     <value>groupBox_SIGN_Options</value>
   </data>
   <data name="&gt;&gt;label_SIGN_PublicKey.ZOrder" xml:space="preserve">
-    <value>20</value>
+    <value>21</value>
   </data>
   <data name="button_SIGN_BrowseOutputFile.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -3938,7 +3968,7 @@ and change target SDK to 29</value>
     <value>groupBox_SIGN_Options</value>
   </data>
   <data name="&gt;&gt;button_SIGN_BrowseOutputFile.ZOrder" xml:space="preserve">
-    <value>21</value>
+    <value>22</value>
   </data>
   <data name="textBox_SIGN_OutputFile.Location" type="System.Drawing.Point, System.Drawing">
     <value>247, 208</value>
@@ -3962,7 +3992,7 @@ and change target SDK to 29</value>
     <value>groupBox_SIGN_Options</value>
   </data>
   <data name="&gt;&gt;textBox_SIGN_OutputFile.ZOrder" xml:space="preserve">
-    <value>22</value>
+    <value>23</value>
   </data>
   <data name="button_SIGN_BrowsePublicKey.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -3992,7 +4022,7 @@ and change target SDK to 29</value>
     <value>groupBox_SIGN_Options</value>
   </data>
   <data name="&gt;&gt;button_SIGN_BrowsePublicKey.ZOrder" xml:space="preserve">
-    <value>23</value>
+    <value>24</value>
   </data>
   <data name="button_SIGN_BrowsePrivateKey.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -4022,7 +4052,7 @@ and change target SDK to 29</value>
     <value>groupBox_SIGN_Options</value>
   </data>
   <data name="&gt;&gt;button_SIGN_BrowsePrivateKey.ZOrder" xml:space="preserve">
-    <value>24</value>
+    <value>25</value>
   </data>
   <data name="textBox_SIGN_PublicKey.Location" type="System.Drawing.Point, System.Drawing">
     <value>247, 42</value>
@@ -4046,7 +4076,7 @@ and change target SDK to 29</value>
     <value>groupBox_SIGN_Options</value>
   </data>
   <data name="&gt;&gt;textBox_SIGN_PublicKey.ZOrder" xml:space="preserve">
-    <value>25</value>
+    <value>26</value>
   </data>
   <data name="textBox_SIGN_PrivateKey.Location" type="System.Drawing.Point, System.Drawing">
     <value>247, 69</value>
@@ -4070,13 +4100,13 @@ and change target SDK to 29</value>
     <value>groupBox_SIGN_Options</value>
   </data>
   <data name="&gt;&gt;textBox_SIGN_PrivateKey.ZOrder" xml:space="preserve">
-    <value>26</value>
+    <value>27</value>
   </data>
   <data name="groupBox_SIGN_Options.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 6</value>
+    <value>7, 6</value>
   </data>
   <data name="groupBox_SIGN_Options.Size" type="System.Drawing.Size, System.Drawing">
-    <value>556, 348</value>
+    <value>556, 385</value>
   </data>
   <data name="groupBox_SIGN_Options.TabIndex" type="System.Int32, mscorlib">
     <value>17</value>

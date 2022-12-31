@@ -156,13 +156,12 @@ namespace APKToolGUI
                                 string outputDir = file;
                                 if (Settings.Default.Zipalign_UseOutputDir && !IgnoreOutputDirContextMenu)
                                     outputDir = Path.Combine(Settings.Default.Sign_OutputDir, Path.GetFileName(inputFile));
+                                if (!Settings.Default.Sign_OverwriteInputFile)
+                                    outputDir = PathUtils.GetDirectoryNameWithoutExtension(outputDir) + "_signed.apk";
 
                                 if (Sign(inputFile, outputDir) == 0)
                                 {
-                                    if (Settings.Default.Zipalign_UseOutputDir && !IgnoreOutputDirContextMenu)
-                                        ToLog(ApktoolEventType.None, String.Format(Language.SignSuccessfullyCompleted, inputFile));
-                                    else
-                                        ToLog(ApktoolEventType.None, String.Format(Language.SignSuccessfullyCompleted, outputDir));
+                                    ToLog(ApktoolEventType.None, String.Format(Language.SignSuccessfullyCompleted, outputDir));
 
                                     if (Settings.Default.AutoDeleteIdsigFile)
                                     {
@@ -275,7 +274,7 @@ namespace APKToolGUI
 #if DEBUG
                     ToLog(ApktoolEventType.Warning, Language.ErrorGettingApkInfo + "\n" + ex.ToString());
 #else
-                ToLog(ApktoolEventType.Warning, Language.ErrorGettingApkInfo);
+                    ToLog(ApktoolEventType.Warning, Language.ErrorGettingApkInfo);
 #endif
                 }
             }
@@ -517,7 +516,7 @@ namespace APKToolGUI
                             if (ApkFixer.RemoveApkToolDummies(outputDir))
                                 ToLog(ApktoolEventType.None, Language.RemoveApkToolDummies);
                         }
-                        ToLog(ApktoolEventType.Done, Language.AllDone);
+                        ToLog(ApktoolEventType.Done, "=====[ " + Language.AllDone + " ]=====");
                     }
                     else
                         ToLog(ApktoolEventType.Error, Language.ErrorDecompiling);

@@ -213,6 +213,7 @@
             this.textBox_BUILD_AaptPath = new System.Windows.Forms.TextBox();
             this.textBox_BUILD_FrameDir = new System.Windows.Forms.TextBox();
             this.checkBox_BUILD_UseFramework = new System.Windows.Forms.CheckBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.autoDelIdsigChkBox = new System.Windows.Forms.CheckBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.aliasTxtBox = new System.Windows.Forms.TextBox();
@@ -855,6 +856,7 @@
             // 
             // groupBox_SIGN_Options
             // 
+            this.groupBox_SIGN_Options.Controls.Add(this.checkBox1);
             this.groupBox_SIGN_Options.Controls.Add(this.autoDelIdsigChkBox);
             this.groupBox_SIGN_Options.Controls.Add(this.schemev4ComboBox);
             this.groupBox_SIGN_Options.Controls.Add(this.label27);
@@ -1683,6 +1685,14 @@
             this.checkBox_BUILD_UseFramework.Name = "checkBox_BUILD_UseFramework";
             this.checkBox_BUILD_UseFramework.UseVisualStyleBackColor = true;
             // 
+            // checkBox1
+            // 
+            resources.ApplyResources(this.checkBox1, "checkBox1");
+            this.checkBox1.Checked = global::APKToolGUI.Properties.Settings.Default.Sign_OverwriteInputFile;
+            this.checkBox1.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "Sign_OverwriteInputFile", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
             // autoDelIdsigChkBox
             // 
             resources.ApplyResources(this.autoDelIdsigChkBox, "autoDelIdsigChkBox");
@@ -2212,6 +2222,7 @@
         private System.Windows.Forms.ToolStripMenuItem baksmaliIssuesToolStripMenuItem;
         private System.Windows.Forms.CheckBox autoDelIdsigChkBox;
         private System.Windows.Forms.ToolStripMenuItem openTempFolderToolStripMenuItem;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }
 

@@ -80,7 +80,7 @@ namespace APKToolGUI
                 alias = String.Format("--ks-key-alias {0}", Settings.Default.Sign_Alias);
 
             string outputDir = null;
-            if (Settings.Default.Sign_UseOutputDir)
+            if (Settings.Default.Sign_UseOutputDir || !Settings.Default.Sign_OverwriteInputFile)
                 outputDir = String.Format("--out \"{0}\"", output);
 
             string v1 = null;

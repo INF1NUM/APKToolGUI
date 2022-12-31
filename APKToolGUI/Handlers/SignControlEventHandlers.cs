@@ -125,6 +125,8 @@ namespace APKToolGUI.Handlers
                     string outputDir = inputFile;
                     if (Settings.Default.Zipalign_UseOutputDir)
                         outputDir = Path.Combine(Settings.Default.Sign_OutputDir, Path.GetFileName(inputFile));
+                    if (!Settings.Default.Sign_OverwriteInputFile)
+                        outputDir = PathUtils.GetDirectoryNameWithoutExtension(outputDir) + "_signed.apk";
 
                     if (main.Sign(inputFile, outputDir) == 0)
                     {
