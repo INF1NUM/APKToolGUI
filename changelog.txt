@@ -15,7 +15,8 @@
 - Improved Java logic
 - Improved Apkinfo
 - Added option to overwrite input apk of signing
-
+- Updated apktool to 2.7.0
+- Updated apksigner, aapt, and zipalign
 
 3.0.2.0
 - Bring back status bar. VS kept messing up with the design for some reason
