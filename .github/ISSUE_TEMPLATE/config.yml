@@ -2,8 +2,11 @@ blank_issues_enabled: false
 contact_links:
   - name: Apktool Issues List
     url: https://github.com/iBotPeaches/Apktool/issues?q=is%3Aissue
-    about: Check issues on Apktool repo before reporting issue here. Don't report any APKToolGUI issues there though
-  - name: System Apps Modding Support Forum
+    about: Check Apktool issues before reporting issue here. Your question might be already answered
+  - name: Baksmali Issues List
+    url: https://github.com/JesusFreke/smali/issues?q=is%3Aissue
+    about: Check Baksmali issues before reporting issue here. Your question might be already answered
+  - name: System apps modding support forum
     url: https://forum.xda-developers.com/all-forums-by-manufacturer
     about: For support, questions or help with modding system apps.
   - name: Android development and modding support forum
