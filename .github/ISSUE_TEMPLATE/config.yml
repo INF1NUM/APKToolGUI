@@ -2,10 +2,10 @@ blank_issues_enabled: false
 contact_links:
   - name: Apktool Issues List
     url: https://github.com/iBotPeaches/Apktool/issues?q=is%3Aissue
-    about: Check Apktool issues before reporting issue here. Your question might be already answered
+    about: Check Apktool issues before reporting issue here. Your issue might already exists
   - name: Baksmali Issues List
     url: https://github.com/JesusFreke/smali/issues?q=is%3Aissue
-    about: Check Baksmali issues before reporting issue here. Your question might be already answered
+    about: Check Baksmali issues before reporting issue here. Your issue might already exists
   - name: System apps modding support forum
     url: https://forum.xda-developers.com/all-forums-by-manufacturer
     about: For support, questions or help with modding system apps.
