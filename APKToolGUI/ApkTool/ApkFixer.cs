@@ -26,7 +26,7 @@ namespace APKToolGUI.ApkTool
                 text = text.Replace("<queries>\r\n        <intent>\r\n            <action android:name=\"android.intent.action.MAIN\"/>\r\n        </intent>\r\n    </queries>", "");
                 text = text.Replace("<intent> ​ <action android:name=\"android.intent.action.MAIN\"/> ​ </intent>", "");
                 File.WriteAllText(Path.Combine(path, "AndroidManifest.xml"), text);
-                mani = mani.Replace("STAMP_TYPE_DISTRIBUTION_APK", "STAMP_TYPE_STANDALONE_APK");
+                text = text.Replace("STAMP_TYPE_DISTRIBUTION_APK", "STAMP_TYPE_STANDALONE_APK");
                 return true;
             }
             return false;
