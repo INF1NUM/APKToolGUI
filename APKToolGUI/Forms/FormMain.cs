@@ -257,6 +257,7 @@ namespace APKToolGUI
                         localsTxtBox.Text = aapt.Locales;
                         fullInfoTextBox.Text = aapt.FullInfo;
                         archSdkTxtBox.Text = aapt.NativeCode;
+                        launchActivityTxtBox.Text = aapt.LaunchableActivity;
 
                         if (aapt.AppIcon != null)
                         {
