@@ -32,7 +32,7 @@ namespace APKToolGUI.Utils
                         + sourceDirName);
                 }
 
-                DirectoryInfo[] dirs = dir.GetDirectories();
+                var dirs = dir.EnumerateDirectories().AsParallel();
                 // If the destination directory doesn't exist, create it.
                 if (!Directory.Exists(destDirName))
                 {
@@ -40,7 +40,7 @@ namespace APKToolGUI.Utils
                 }
 
                 // Get the files in the directory and copy them to the new location.
-                FileInfo[] files = dir.GetFiles();
+                var files = dir.EnumerateFiles().AsParallel();
                 foreach (FileInfo file in files)
                 {
                     //Debug.WriteLine(file);
@@ -75,7 +75,7 @@ namespace APKToolGUI.Utils
                     //    + sourceDirName);
                 }
 
-                DirectoryInfo[] dirs = dir.GetDirectories();
+                var dirs = dir.EnumerateDirectories().AsParallel();
                 // If the destination directory doesn't exist, create it.
                 if (!Directory.Exists(destDirName))
                 {
@@ -83,7 +83,7 @@ namespace APKToolGUI.Utils
                 }
 
                 // Get the files in the directory and move them to the new location.
-                FileInfo[] files = dir.GetFiles();
+                var files = dir.EnumerateFiles().AsParallel();
                 foreach (FileInfo file in files)
                 {
                     // File.AppendAllText(s, Path.Combine(destDirName, file.Name) + "\n");
@@ -129,67 +129,86 @@ namespace APKToolGUI.Utils
             Directory.Delete(source, true);
         }
 
-        public static void ReplaceinFiles(string folderPath, string old, string replace, string extenstion = "*")
-        {
-            if (Directory.Exists(folderPath))
-            {
-                string[] filePaths = Directory.GetFiles(folderPath, extenstion, SearchOption.AllDirectories);
-                foreach (string filePath in filePaths)
-                {
-                    if (File.Exists(filePath))
-                    {
-                        string file = File.ReadAllText(filePath);
-                        if (file.Contains(old))
-                        {
-                            file = file.Replace(old, replace);
-                            File.WriteAllText(filePath, file);
-                        }
-                    }
-                }
-            }
-        }
-
-        public static void ReplaceinFilesRegex(string folderPath,string pattern, string replace, string extenstion = "*"
-        )
-        {
-            if (Directory.Exists(folderPath))
-            {
-                string[] filePaths = Directory.GetFiles(folderPath, extenstion, SearchOption.AllDirectories);
-                foreach (string filePath in filePaths)
-                {
-                    if (File.Exists(filePath))
-                    {
-                        string file = File.ReadAllText(filePath);
-                        if (Regex.IsMatch(file, pattern))
-                        {
-                            file = Regex.Replace(file, pattern, replace);
-                            File.WriteAllText(filePath, file);
-                        }
-                    }
-                }
-            }
-        }
-
-        public static void ReplaceinFilesRegex( string folderPath,string[] pattern,string replace,
+        public static void ReplaceinFiles(
+             string folderPath,
+             string old,
+             string replace,
             string extenstion = "*"
         )
         {
             if (Directory.Exists(folderPath))
             {
-                string[] filePaths = Directory.GetFiles(folderPath, extenstion, SearchOption.AllDirectories);
-                foreach (string filePath in filePaths)
+                DirectoryInfo DR = new DirectoryInfo(folderPath);
+                var filePaths = DR.EnumerateFiles(extenstion, SearchOption.AllDirectories).AsParallel();
+                foreach (FileInfo filePath in filePaths)
                 {
-                    if (File.Exists(filePath))
+                    if (File.Exists(filePath.FullName))
                     {
-                        string file = File.ReadAllText(filePath);
+                        string file = File.ReadAllText(filePath.FullName);
+                        if (file.Contains(old))
+                        {
+                            file = file.Replace(old, replace);
+                            File.WriteAllText(filePath.FullName, file);
+                        }
+                    }
+                }
+            }
+        }
+
+        public static void ReplaceinFilesRegex(
+            string folderPath,
+            string pattern,
+            string replace,
+            string extenstion = "*"
+        )
+        {
+            if (Directory.Exists(folderPath))
+            {
+                DirectoryInfo DR = new DirectoryInfo(folderPath);
+                var filePaths = DR.EnumerateFiles(extenstion, SearchOption.AllDirectories).AsParallel();
+                foreach (FileInfo filePath in filePaths)
+                {
+                    if (File.Exists(filePath.FullName))
+                    {
+                        string file = File.ReadAllText(filePath.FullName);
+                        if (Regex.IsMatch(file, pattern))
+                        {
+                            file = Regex.Replace(file, pattern, replace);
+                            File.WriteAllText(filePath.FullName, file);
+                        }
+                    }
+                }
+            }
+        }
+
+
+        public static void ReplaceinFilesRegex(
+            string folderPath,
+            string[] pattern,
+            string replace,
+            string extenstion = "*.*"
+        )
+        {
+            if (Directory.Exists(folderPath))
+            {
+                DirectoryInfo DR = new DirectoryInfo(folderPath);
+                var filePaths = DR.EnumerateFiles(extenstion, SearchOption.AllDirectories).AsParallel();
+                foreach (FileInfo filePath in filePaths)
+                {
+                    if (File.Exists(filePath.FullName))
+                    {
+                        bool match = false;
+                        string file = File.ReadAllText(filePath.FullName);
                         foreach (string pat in pattern)
                         {
                             if (Regex.IsMatch(file, pat))
                             {
                                 file = Regex.Replace(file, pat, replace);
-                                File.WriteAllText(filePath, file);
+                                match = true;
                             }
                         }
+                        if (match)
+                            File.WriteAllText(filePath.FullName, file);
                     }
                 }
             }
