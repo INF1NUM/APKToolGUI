@@ -452,11 +452,13 @@ namespace APKToolGUI
             if (Settings.Default.Decode_UseOutputDir && !IgnoreOutputDirContextMenu)
                 outputDir = Path.Combine(Settings.Default.Decode_OutputDir, Path.GetFileNameWithoutExtension(inputApk));
 
-            string tempApk = Path.Combine(Program.TEMP_PATH, "tempapk.apk");
+            string tempApk = Path.Combine(Program.TEMP_PATH, "dec.apk");
             string outputTempDir = tempApk.Replace(".apk", "");
 
             try
             {
+                DirectoryUtils.Delete(outputTempDir);
+
                 if (!Settings.Default.Decode_Force && Directory.Exists(outputDir))
                 {
                     ToLog(ApktoolEventType.Error, String.Format(Language.DecodeDesDirExists, outputDir));
@@ -499,7 +501,7 @@ namespace APKToolGUI
                         {
                             ToLog(ApktoolEventType.None, String.Format(Language.MoveTempApkFileToOutput, outputTempDir, outputDir));
                             DirectoryUtils.Delete(outputDir);
-                            DirectoryUtils.Move(outputTempDir, outputDir);
+                            DirectoryUtils.Copy(outputTempDir, outputDir);
                         }
 
                         textBox_BUILD_InputProjectDir.BeginInvoke(new Action(delegate
@@ -527,7 +529,7 @@ namespace APKToolGUI
             catch (Exception ex)
             {
                 code = 1;
-                ToLog(ApktoolEventType.Error, ex.Message);
+                ToLog(ApktoolEventType.Error, ex.ToString());
             }
 
             Done();
@@ -570,14 +572,14 @@ namespace APKToolGUI
                     }
                     string outputCompiledApkFile = outputFile;
 
-                    string tempDecApkFolder = Path.Combine(Program.TEMP_PATH, "tempdec");
+                    string tempDecApkFolder = Path.Combine(Program.TEMP_PATH, "dec");
                     string outputTempApk = tempDecApkFolder + ".apk";
 
                     if (Settings.Default.Utf8FilenameSupport)
                     {
                         ToLog(ApktoolEventType.None, String.Format(Language.CopyFolderToTemp, inputFolder, tempDecApkFolder));
                         DirectoryUtils.Delete(tempDecApkFolder);
-                        DirectoryUtils.Copy(inputFolder, tempDecApkFolder, true);
+                        DirectoryUtils.Copy(inputFolder, tempDecApkFolder);
 
                         inputFolder = tempDecApkFolder;
                         outputFile = outputTempApk;

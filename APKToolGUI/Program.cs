@@ -160,10 +160,12 @@ namespace APKToolGUI
 
         public static string TempDir()
         {
+            //Generate new every new instance to avoid conflict
+            //We want to keep obfuscated path short as possible to prevent long path error
             if (Settings.Default.UseCustomTempDir)
-                return Path.Combine(Settings.Default.TempDir, "APKToolGUI" + StringExt.RandStrWithCaps(4));
+                return Path.Combine(Settings.Default.TempDir, StringExt.RandStrWithCaps(5));
             else
-                return Path.Combine(Path.GetTempPath(), "APKToolGUI" + StringExt.RandStrWithCaps(4));
+                return Path.Combine(Path.GetTempPath(), StringExt.RandStrWithCaps(5));
         }
 
         public static string LOCAL_APPDATA_PATH = Environment.GetEnvironmentVariable("LocalAppData");
