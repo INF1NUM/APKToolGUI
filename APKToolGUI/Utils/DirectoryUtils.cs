@@ -33,7 +33,7 @@ namespace APKToolGUI.Utils
                 foreach (var file in folder)
                 {
                     var targetFile = Path.Combine(targetFolder, Path.GetFileName(file));
-                    File.Copy(file, targetFile, true);
+                    File.Copy("\\\\?\\" + file, "\\\\?\\" + targetFile, true);
                 }
             }
         }
