@@ -15,7 +15,7 @@ namespace APKToolGUI.Utils
         public static void Delete(string path)
         {
             if (Directory.Exists(path))
-                Directory.Delete(path, true);
+                Directory.Delete("\\\\?\\" + path, true);
         }
 
         public static void Copy(string source, string target)
