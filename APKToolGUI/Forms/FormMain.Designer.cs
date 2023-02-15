@@ -64,6 +64,8 @@
             this.tabPageApkInfo = new System.Windows.Forms.TabPage();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.basicInfoTabPage = new System.Windows.Forms.TabPage();
+            this.launchActivityTxtBox = new System.Windows.Forms.TextBox();
+            this.label31 = new System.Windows.Forms.Label();
             this.archSdkTxtBox = new System.Windows.Forms.TextBox();
             this.label30 = new System.Windows.Forms.Label();
             this.apkDlLinkBtn = new System.Windows.Forms.Button();
@@ -245,8 +247,6 @@
             this.apktoolIssuesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.baksmaliIssuesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.label31 = new System.Windows.Forms.Label();
-            this.launchActivityTxtBox = new System.Windows.Forms.TextBox();
             this.tabControlMain.SuspendLayout();
             this.tabPageMain.SuspendLayout();
             this.signPanel.SuspendLayout();
@@ -578,6 +578,17 @@
             this.basicInfoTabPage.Controls.Add(this.label12);
             this.basicInfoTabPage.Name = "basicInfoTabPage";
             this.basicInfoTabPage.UseVisualStyleBackColor = true;
+            // 
+            // launchActivityTxtBox
+            // 
+            resources.ApplyResources(this.launchActivityTxtBox, "launchActivityTxtBox");
+            this.launchActivityTxtBox.Name = "launchActivityTxtBox";
+            this.launchActivityTxtBox.ReadOnly = true;
+            // 
+            // label31
+            // 
+            resources.ApplyResources(this.label31, "label31");
+            this.label31.Name = "label31";
             // 
             // archSdkTxtBox
             // 
@@ -1943,17 +1954,6 @@
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
             resources.ApplyResources(this.aboutToolStripMenuItem, "aboutToolStripMenuItem");
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.menuItemAbout_Click);
-            // 
-            // label31
-            // 
-            resources.ApplyResources(this.label31, "label31");
-            this.label31.Name = "label31";
-            // 
-            // launchActivityTxtBox
-            // 
-            resources.ApplyResources(this.launchActivityTxtBox, "launchActivityTxtBox");
-            this.launchActivityTxtBox.Name = "launchActivityTxtBox";
-            this.launchActivityTxtBox.ReadOnly = true;
             // 
             // FormMain
             // 

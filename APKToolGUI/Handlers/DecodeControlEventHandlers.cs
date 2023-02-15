@@ -79,13 +79,13 @@ namespace APKToolGUI.Handlers
                 }
                 if (main.checkBox_DECODE_OutputDirectory.Checked)
                 {
-                    if (String.IsNullOrWhiteSpace(main.textBox_DECODE_OutputDirectory.Text))
+                    if (String.IsNullOrWhiteSpace(Settings.Default.Decode_OutputDir))
                     {
                         main.ShowMessage(Language.DecodeDirNotSelected, MessageBoxIcon.Warning);
                         return;
                     }
                     else
-                        if (!PathUtils.IsValidPath(main.textBox_DECODE_OutputDirectory.Text))
+                        if (!PathUtils.IsValidPath(Settings.Default.Decode_OutputDir))
                     {
                         main.ShowMessage(Language.DecodeCouldNotCreate, MessageBoxIcon.Warning);
                         return;
@@ -110,8 +110,8 @@ namespace APKToolGUI.Handlers
         
         internal void decOutOpenDirBtn_Click(object sender, EventArgs e)
         {
-            if (Directory.Exists(main.textBox_DECODE_OutputDirectory.Text))
-                Process.Start("explorer.exe", main.textBox_DECODE_OutputDirectory.Text);
+            if (Directory.Exists(Settings.Default.Decode_OutputDir))
+                Process.Start("explorer.exe", Settings.Default.Decode_OutputDir);
             else
             {
                 main.ToLog(ApktoolEventType.Error, Language.ErrorSelectedOutputFolderNotExist);
