@@ -426,4 +426,7 @@
   <data name="MoveTempApkToOutput" xml:space="preserve">
     <value>Move temp apk "{0}" to output directory "{1}"</value>
   </data>
+  <data name="ParsingApkInfo" xml:space="preserve">
+    <value>Parsing APK Info...</value>
+  </data>
 </root>

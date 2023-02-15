@@ -89,7 +89,7 @@ namespace APKToolGUI.Handlers
                 else
                     main.ToLog(ApktoolEventType.Error, Language.FrameworkInstallationNotStarted);
             });
-            main.Done();
+            main.Done(printTimer: true);
         }
 
         internal async void clearFwBtn_Click(object sender, EventArgs e)

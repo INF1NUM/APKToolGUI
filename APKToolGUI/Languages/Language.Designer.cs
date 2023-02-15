@@ -781,6 +781,15 @@ namespace APKToolGUI.Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Parsing APK Info....
+        /// </summary>
+        internal static string ParsingApkInfo {
+            get {
+                return ResourceManager.GetString("ParsingApkInfo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Removed all ApkTool dummies.
         /// </summary>
         internal static string RemoveApkToolDummies {

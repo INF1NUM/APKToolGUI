@@ -139,6 +139,8 @@ namespace APKToolGUI.Utils
 
                 result = true;
             }
+            else
+                result = false;
 
             return result;
         }

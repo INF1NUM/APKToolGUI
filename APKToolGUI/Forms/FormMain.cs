@@ -195,7 +195,7 @@ namespace APKToolGUI
                                     ToLog(ApktoolEventType.Error, Language.ErrorZipalign);
                             });
 
-                            Done();
+                            Done(printTimer: true);
                             break;
                         case "baksmali":
                             if (await Baksmali(file) == 0)
@@ -227,17 +227,19 @@ namespace APKToolGUI
         {
             if (File.Exists(file))
             {
+                ToLog(ApktoolEventType.None, Language.ParsingApkInfo);
+                ToStatus(Language.ParsingApkInfo, Resources.waiting);
+
                 try
                 {
-                    bool result = false;
+                    bool parsed = false;
                     await Task.Factory.StartNew(() =>
                     {
                         aapt = new AaptParser();
-                        result = aapt.Parse(file);
-
+                        parsed = aapt.Parse(file);
                     });
 
-                    if (aapt.Parse(file))
+                    if (parsed)
                     {
                         if (apkIconPicBox.Image != null)
                         {
@@ -261,7 +263,10 @@ namespace APKToolGUI
 
                         if (aapt.AppIcon != null)
                         {
-                            ZipUtils.ExtractFile(file, aapt.AppIcon, Path.Combine(Program.TEMP_PATH, aapt.PackageName));
+                            await Task.Factory.StartNew(() =>
+                            {
+                                ZipUtils.ExtractFile(file, aapt.AppIcon, Path.Combine(Program.TEMP_PATH, aapt.PackageName));
+                            });
                             string icon = Path.Combine(Program.TEMP_PATH, aapt.PackageName, Path.GetFileName(aapt.AppIcon));
                             if (File.Exists(icon))
                             {
@@ -278,6 +283,9 @@ namespace APKToolGUI
                     ToLog(ApktoolEventType.Warning, Language.ErrorGettingApkInfo);
 #endif
                 }
+
+                ToLog(ApktoolEventType.Done, Language.Done);
+                Done();
             }
         }
         #endregion
@@ -392,14 +400,18 @@ namespace APKToolGUI
             }));
         }
 
-        internal void Done()
+        internal void Done(bool printTimer = false)
         {
             isRunning = false;
 
             stopwatch.Stop();
             TimeSpan ts = stopwatch.Elapsed;
-            ToLog(ApktoolEventType.None, "Time started: " + lastStartedDate);
-            ToLog(ApktoolEventType.None, "Time elapsed: " + ts.ToString("mm\\:ss"));
+
+            if (printTimer)
+            {
+                ToLog(ApktoolEventType.None, "Time started: " + lastStartedDate);
+                ToLog(ApktoolEventType.None, "Time elapsed: " + ts.ToString("mm\\:ss"));
+            }
 
             if (Settings.Default.PlaySoundWhenDone)
                 SystemSounds.Beep.Play();
@@ -532,7 +544,7 @@ namespace APKToolGUI
                 ToLog(ApktoolEventType.Error, ex.ToString());
             }
 
-            Done();
+            Done(printTimer: true);
 
             return code;
         }
@@ -603,7 +615,7 @@ namespace APKToolGUI
                             if (zipalign.Align(outputFile, outputFile) != 0)
                             {
                                 ToLog(ApktoolEventType.Error, Language.ErrorZipalign);
-                                Done();
+                                Done(printTimer: true);
                                 return;
                             }
                             else
@@ -645,7 +657,7 @@ namespace APKToolGUI
                             else
                             {
                                 ToLog(ApktoolEventType.Error, Language.ErrorSigning);
-                                Done();
+                                Done(printTimer: true);
                                 return;
                             }
                         }
@@ -667,7 +679,7 @@ namespace APKToolGUI
                 code = 1;
                 ToLog(ApktoolEventType.Error, ex.Message);
             }
-            Done();
+            Done(printTimer: true);
 
             return code;
         }
@@ -720,7 +732,7 @@ namespace APKToolGUI
                     else
                         ToLog(ApktoolEventType.Error, Language.ErrorDecompiling);
                 });
-                Done();
+                Done(printTimer: true);
             }
             catch (Exception ex)
             {
@@ -772,7 +784,7 @@ namespace APKToolGUI
                     else
                         ToLog(ApktoolEventType.Error, Language.ErrorCompiling);
                 });
-                Done();
+                Done(printTimer: true);
             }
             catch (Exception ex)
             {

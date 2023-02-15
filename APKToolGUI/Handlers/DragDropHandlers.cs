@@ -124,7 +124,7 @@ namespace APKToolGUI.Handlers
                 {
                     main.ToLog(ApktoolEventType.Error, ex.Message);
                 }
-                main.Done();
+                main.Done(printTimer: true);
             }
         }
 
@@ -170,7 +170,7 @@ namespace APKToolGUI.Handlers
                 {
                     main.ToLog(ApktoolEventType.Error, ex.Message);
                 }
-                main.Done();
+                main.Done(printTimer: true);
             }
         }
 
