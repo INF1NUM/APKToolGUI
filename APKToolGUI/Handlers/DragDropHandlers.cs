@@ -69,7 +69,7 @@ namespace APKToolGUI.Handlers
             string apkFile = null;
             if (e.DropOneByEnd(".apk", file => apkFile = file))
             {
-                main.GetApkInfo(apkFile);
+                await main.GetApkInfo(apkFile);
                 main.textBox_DECODE_InputAppPath.Text = apkFile;
                 main.decPanel.BackColor = Color.White;
 

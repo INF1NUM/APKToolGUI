@@ -223,7 +223,7 @@ namespace APKToolGUI
         #endregion
 
         #region Get APK Info
-        internal async void GetApkInfo(string file)
+        internal async Task GetApkInfo(string file)
         {
             if (File.Exists(file))
             {
