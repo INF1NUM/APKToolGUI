@@ -980,11 +980,11 @@ namespace APKToolGUI
                 ToLog(ApktoolEventType.Error, Language.AndroidManifestNotExist);
         }
 
-        private void selectedApkOpenDirBtn_Click(object sender, EventArgs e)
+        private void compiledApkOpenDirBtn_Click(object sender, EventArgs e)
         {
-            if (File.Exists(Settings.Default.Decode_InputAppPath))
+            if (File.Exists(Settings.Default.Build_OutputAppPath))
             {
-                Process.Start("explorer.exe", string.Format("/select,\"{0}\"", Settings.Default.Decode_InputAppPath));
+                Process.Start("explorer.exe", string.Format("/select,\"{0}\"", Settings.Default.Build_OutputAppPath));
             }
             else
                 ToLog(ApktoolEventType.Error, Language.ErrorSelectedFileNotExist);

@@ -37,7 +37,7 @@
             this.signApkOpenDirBtn = new System.Windows.Forms.Button();
             this.alignApkOpenDirBtn = new System.Windows.Forms.Button();
             this.decApkOpenDirBtn = new System.Windows.Forms.Button();
-            this.selectedApkOpenDirBtn = new System.Windows.Forms.Button();
+            this.compileOutputOpenDirBtn = new System.Windows.Forms.Button();
             this.button_OpenMainActivity = new System.Windows.Forms.Button();
             this.openApktoolYmlBtn = new System.Windows.Forms.Button();
             this.openAndroidMainfestBtn = new System.Windows.Forms.Button();
@@ -303,7 +303,7 @@
             this.tabPageMain.Controls.Add(this.signApkOpenDirBtn);
             this.tabPageMain.Controls.Add(this.alignApkOpenDirBtn);
             this.tabPageMain.Controls.Add(this.decApkOpenDirBtn);
-            this.tabPageMain.Controls.Add(this.selectedApkOpenDirBtn);
+            this.tabPageMain.Controls.Add(this.compileOutputOpenDirBtn);
             this.tabPageMain.Controls.Add(this.button_OpenMainActivity);
             this.tabPageMain.Controls.Add(this.openApktoolYmlBtn);
             this.tabPageMain.Controls.Add(this.openAndroidMainfestBtn);
@@ -344,12 +344,12 @@
             this.decApkOpenDirBtn.Name = "decApkOpenDirBtn";
             this.decApkOpenDirBtn.UseVisualStyleBackColor = true;
             // 
-            // selectedApkOpenDirBtn
+            // compileOutputOpenDirBtn
             // 
-            resources.ApplyResources(this.selectedApkOpenDirBtn, "selectedApkOpenDirBtn");
-            this.selectedApkOpenDirBtn.Name = "selectedApkOpenDirBtn";
-            this.selectedApkOpenDirBtn.UseVisualStyleBackColor = true;
-            this.selectedApkOpenDirBtn.Click += new System.EventHandler(this.selectedApkOpenDirBtn_Click);
+            resources.ApplyResources(this.compileOutputOpenDirBtn, "compileOutputOpenDirBtn");
+            this.compileOutputOpenDirBtn.Name = "compileOutputOpenDirBtn";
+            this.compileOutputOpenDirBtn.UseVisualStyleBackColor = true;
+            this.compileOutputOpenDirBtn.Click += new System.EventHandler(this.compiledApkOpenDirBtn_Click);
             // 
             // button_OpenMainActivity
             // 
@@ -2148,7 +2148,7 @@
         internal System.Windows.Forms.TextBox fileTxtBox;
         internal System.Windows.Forms.Button comApkOpenDir;
         internal System.Windows.Forms.Button decApkOpenDirBtn;
-        internal System.Windows.Forms.Button selectedApkOpenDirBtn;
+        internal System.Windows.Forms.Button compileOutputOpenDirBtn;
         internal System.Windows.Forms.Button apkComboLinkBtn;
         internal System.Windows.Forms.Button apkPureLinkBtn;
         internal System.Windows.Forms.Button psLinkBtn;

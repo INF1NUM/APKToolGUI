@@ -132,7 +132,7 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="comApkOpenDir.Location" type="System.Drawing.Point, System.Drawing">
-    <value>406, 197</value>
+    <value>206, 225</value>
   </data>
   <data name="comApkOpenDir.Size" type="System.Drawing.Size, System.Drawing">
     <value>175, 24</value>
@@ -166,7 +166,7 @@
     <value>NoControl</value>
   </data>
   <data name="decOutOpenDirBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 225</value>
+    <value>8, 196</value>
   </data>
   <data name="decOutOpenDirBtn.Size" type="System.Drawing.Size, System.Drawing">
     <value>175, 24</value>
@@ -232,7 +232,7 @@
     <value>NoControl</value>
   </data>
   <data name="alignApkOpenDirBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>206, 225</value>
+    <value>406, 197</value>
   </data>
   <data name="alignApkOpenDirBtn.Size" type="System.Drawing.Size, System.Drawing">
     <value>175, 24</value>
@@ -288,37 +288,37 @@
   <data name="&gt;&gt;decApkOpenDirBtn.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="selectedApkOpenDirBtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="compileOutputOpenDirBtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
-  <data name="selectedApkOpenDirBtn.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+  <data name="compileOutputOpenDirBtn.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>Center</value>
   </data>
-  <data name="selectedApkOpenDirBtn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="compileOutputOpenDirBtn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="selectedApkOpenDirBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 198</value>
+  <data name="compileOutputOpenDirBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 225</value>
   </data>
-  <data name="selectedApkOpenDirBtn.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="compileOutputOpenDirBtn.Size" type="System.Drawing.Size, System.Drawing">
     <value>175, 23</value>
   </data>
-  <data name="selectedApkOpenDirBtn.TabIndex" type="System.Int32, mscorlib">
+  <data name="compileOutputOpenDirBtn.TabIndex" type="System.Int32, mscorlib">
     <value>13</value>
   </data>
-  <data name="selectedApkOpenDirBtn.Text" xml:space="preserve">
-    <value>Selected APK location</value>
+  <data name="compileOutputOpenDirBtn.Text" xml:space="preserve">
+    <value>Compile output location</value>
   </data>
-  <data name="&gt;&gt;selectedApkOpenDirBtn.Name" xml:space="preserve">
-    <value>selectedApkOpenDirBtn</value>
+  <data name="&gt;&gt;compileOutputOpenDirBtn.Name" xml:space="preserve">
+    <value>compileOutputOpenDirBtn</value>
   </data>
-  <data name="&gt;&gt;selectedApkOpenDirBtn.Type" xml:space="preserve">
+  <data name="&gt;&gt;compileOutputOpenDirBtn.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;selectedApkOpenDirBtn.Parent" xml:space="preserve">
+  <data name="&gt;&gt;compileOutputOpenDirBtn.Parent" xml:space="preserve">
     <value>tabPageMain</value>
   </data>
-  <data name="&gt;&gt;selectedApkOpenDirBtn.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;compileOutputOpenDirBtn.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
   <data name="button_OpenMainActivity.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
@@ -2717,7 +2717,7 @@ and change target SDK to 29</value>
     <value>NoControl</value>
   </data>
   <data name="useAapt2ChkBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 312</value>
+    <value>8, 286</value>
   </data>
   <data name="useAapt2ChkBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>353, 17</value>
@@ -2798,16 +2798,16 @@ and change target SDK to 29</value>
     <value>NoControl</value>
   </data>
   <data name="label23.Location" type="System.Drawing.Point, System.Drawing">
-    <value>26, 291</value>
+    <value>24, 266</value>
   </data>
   <data name="label23.Size" type="System.Drawing.Size, System.Drawing">
-    <value>344, 13</value>
+    <value>357, 13</value>
   </data>
   <data name="label23.TabIndex" type="System.Int32, mscorlib">
     <value>16</value>
   </data>
   <data name="label23.Text" xml:space="preserve">
-    <value>May not work with Lucky Patcher. It works better with CorePatch. </value>
+    <value>Only compatible with Core Patch module. Rooted device is required.</value>
   </data>
   <data name="&gt;&gt;label23.Name" xml:space="preserve">
     <value>label23</value>
@@ -2828,16 +2828,16 @@ and change target SDK to 29</value>
     <value>NoControl</value>
   </data>
   <data name="createUnsignApkChkBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 271</value>
+    <value>8, 245</value>
   </data>
   <data name="createUnsignApkChkBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>190, 17</value>
+    <value>311, 17</value>
   </data>
   <data name="createUnsignApkChkBox.TabIndex" type="System.Int32, mscorlib">
     <value>15</value>
   </data>
   <data name="createUnsignApkChkBox.Text" xml:space="preserve">
-    <value>Create unsigned APK after build</value>
+    <value>Create unsigned APK with original signature after build</value>
   </data>
   <data name="&gt;&gt;createUnsignApkChkBox.Name" xml:space="preserve">
     <value>createUnsignApkChkBox</value>
@@ -2858,7 +2858,7 @@ and change target SDK to 29</value>
     <value>NoControl</value>
   </data>
   <data name="label16.Location" type="System.Drawing.Point, System.Drawing">
-    <value>24, 172</value>
+    <value>24, 146</value>
   </data>
   <data name="label16.Size" type="System.Drawing.Size, System.Drawing">
     <value>378, 13</value>
@@ -2888,7 +2888,7 @@ and change target SDK to 29</value>
     <value>NoControl</value>
   </data>
   <data name="signAfterBuildChkBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 246</value>
+    <value>8, 220</value>
   </data>
   <data name="signAfterBuildChkBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>157, 17</value>
@@ -2918,7 +2918,7 @@ and change target SDK to 29</value>
     <value>NoControl</value>
   </data>
   <data name="zipalignAfterBuildChkBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 221</value>
+    <value>8, 195</value>
   </data>
   <data name="zipalignAfterBuildChkBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>125, 17</value>
@@ -2948,7 +2948,7 @@ and change target SDK to 29</value>
     <value>NoControl</value>
   </data>
   <data name="checkBox_BUILD_NoCrunch.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 195</value>
+    <value>8, 169</value>
   </data>
   <data name="checkBox_BUILD_NoCrunch.Size" type="System.Drawing.Size, System.Drawing">
     <value>320, 17</value>
@@ -2975,7 +2975,7 @@ and change target SDK to 29</value>
     <value>NoControl</value>
   </data>
   <data name="button_BUILD_BrowseOutputAppPath.Location" type="System.Drawing.Point, System.Drawing">
-    <value>524, 144</value>
+    <value>524, 118</value>
   </data>
   <data name="button_BUILD_BrowseOutputAppPath.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>1, 0, 1, 1</value>
@@ -3035,7 +3035,7 @@ and change target SDK to 29</value>
     <value>NoControl</value>
   </data>
   <data name="button_BUILD_BrowseFrameDir.Location" type="System.Drawing.Point, System.Drawing">
-    <value>524, 118</value>
+    <value>524, 92</value>
   </data>
   <data name="button_BUILD_BrowseFrameDir.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>1, 0, 1, 1</value>
@@ -3065,7 +3065,7 @@ and change target SDK to 29</value>
     <value>NoControl</value>
   </data>
   <data name="button_BUILD_BrowseAaptPath.Location" type="System.Drawing.Point, System.Drawing">
-    <value>524, 92</value>
+    <value>524, 66</value>
   </data>
   <data name="button_BUILD_BrowseAaptPath.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>1, 0, 1, 1</value>
@@ -3098,7 +3098,7 @@ and change target SDK to 29</value>
     <value>NoControl</value>
   </data>
   <data name="checkBox_BUILD_OutputAppPath.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 148</value>
+    <value>8, 122</value>
   </data>
   <data name="checkBox_BUILD_OutputAppPath.Size" type="System.Drawing.Size, System.Drawing">
     <value>135, 17</value>
@@ -3128,16 +3128,16 @@ and change target SDK to 29</value>
     <value>NoControl</value>
   </data>
   <data name="checkBox_BUILD_CopyOriginal.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 70</value>
+    <value>8, 310</value>
   </data>
   <data name="checkBox_BUILD_CopyOriginal.Size" type="System.Drawing.Size, System.Drawing">
-    <value>396, 17</value>
+    <value>314, 17</value>
   </data>
   <data name="checkBox_BUILD_CopyOriginal.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
   <data name="checkBox_BUILD_CopyOriginal.Text" xml:space="preserve">
-    <value>Copies original AndroidManifest.xml and META-INF folder into built apk</value>
+    <value>Copy original AndroidManifest.xml and META-INF folder</value>
   </data>
   <data name="&gt;&gt;checkBox_BUILD_CopyOriginal.Name" xml:space="preserve">
     <value>checkBox_BUILD_CopyOriginal</value>
@@ -3152,7 +3152,7 @@ and change target SDK to 29</value>
     <value>14</value>
   </data>
   <data name="textBox_BUILD_OutputAppPath.Location" type="System.Drawing.Point, System.Drawing">
-    <value>255, 145</value>
+    <value>255, 119</value>
   </data>
   <data name="textBox_BUILD_OutputAppPath.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>1, 1, 1, 1</value>
@@ -3182,7 +3182,7 @@ and change target SDK to 29</value>
     <value>NoControl</value>
   </data>
   <data name="checkBox_BUILD_UseAapt.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 95</value>
+    <value>8, 69</value>
   </data>
   <data name="checkBox_BUILD_UseAapt.Size" type="System.Drawing.Size, System.Drawing">
     <value>153, 17</value>
@@ -3206,7 +3206,7 @@ and change target SDK to 29</value>
     <value>16</value>
   </data>
   <data name="textBox_BUILD_AaptPath.Location" type="System.Drawing.Point, System.Drawing">
-    <value>255, 93</value>
+    <value>255, 67</value>
   </data>
   <data name="textBox_BUILD_AaptPath.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>1, 1, 1, 1</value>
@@ -3230,7 +3230,7 @@ and change target SDK to 29</value>
     <value>17</value>
   </data>
   <data name="textBox_BUILD_FrameDir.Location" type="System.Drawing.Point, System.Drawing">
-    <value>255, 119</value>
+    <value>255, 93</value>
   </data>
   <data name="textBox_BUILD_FrameDir.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>1, 1, 1, 1</value>
@@ -3260,7 +3260,7 @@ and change target SDK to 29</value>
     <value>NoControl</value>
   </data>
   <data name="checkBox_BUILD_UseFramework.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 122</value>
+    <value>8, 96</value>
   </data>
   <data name="checkBox_BUILD_UseFramework.Size" type="System.Drawing.Size, System.Drawing">
     <value>189, 17</value>
