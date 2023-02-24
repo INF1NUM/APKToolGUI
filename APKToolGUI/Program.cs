@@ -5,6 +5,7 @@ using Bluegrams.Application;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
@@ -170,9 +171,9 @@ namespace APKToolGUI
 
         public static string LOCAL_APPDATA_PATH = Environment.GetEnvironmentVariable("LocalAppData");
         public static string TEMP_PATH = TempDir();
-        public static string APP_PATH = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
+        public static string APP_PATH = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
         public static string RES_PATH = Path.Combine(APP_PATH, "Resources");
-
+        public static string ASSEMBLY_NAME = AssemblyName.GetAssemblyName(Assembly.GetExecutingAssembly().Location).Name;
         public static string APKTOOL_PATH = Path.Combine(RES_PATH, "apktool.jar");
         public static string APKSIGNER_PATH = Path.Combine(RES_PATH, "apksigner.jar");
         public static string BAKSMALI_PATH = Path.Combine(RES_PATH, "baksmali.jar");
@@ -184,5 +185,6 @@ namespace APKToolGUI
         public static string AAPT2_PATH = Path.Combine(RES_PATH, "aapt2.exe");
         public static string AAPT2JNI_PATH = Path.Combine(RES_PATH, "libaapt2_jni.dll");
         public static string FRAMEWORK_DIR = Path.Combine(LOCAL_APPDATA_PATH, "apktool", "framework");
+        public static string STANDALONE_FRAMEWORK_DIR = Path.Combine(LOCAL_APPDATA_PATH, ASSEMBLY_NAME, "framework");
     }
 }

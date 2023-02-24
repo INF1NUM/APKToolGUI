@@ -77,7 +77,6 @@ namespace APKToolGUI.Handlers
                 return;
             }
 
-
             main.Running();
             main.ToLog(ApktoolEventType.None, Language.InstallingFramework + " " + Path.GetFileName(main.textBox_IF_InputFramePath.Text));
             main.ToStatus(String.Format(Language.InstallingFramework + " \"{0}\"...", Path.GetFileName(main.textBox_IF_InputFramePath.Text)), Resources.waiting);
@@ -94,6 +93,8 @@ namespace APKToolGUI.Handlers
 
         internal async void clearFwBtn_Click(object sender, EventArgs e)
         {
+            main.Running();
+
             await Task.Factory.StartNew(() =>
             {
                 if (main.ClearFramework() == 0)

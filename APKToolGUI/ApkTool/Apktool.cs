@@ -54,6 +54,12 @@ namespace APKToolGUI
             public const string Tag = " -t"; //Tag frameworks using <tag>.
         }
 
+        static class EmptyFrameworkKeys
+        {
+            public const string FrameDir = " -p"; //Stores framework files into <dir>.
+            public const string ForceDelete = " -f"; //Force delete destination directory.
+        }
+
         ApktoolDataReceivedEventHandler onApktoolOutputDataRecieved;
         ApktoolDataReceivedEventHandler onApktoolErrorDataRecieved;
 
@@ -124,7 +130,9 @@ namespace APKToolGUI
             if (Settings.Default.Decode_NoDebugInfo)
                 noDebugInfo = DecompileKeys.NoDebugInfo;
             if (Settings.Default.Decode_UseFramework)
-                keyFramePath = String.Format("{0} \"{1}\"", DecompileKeys.FrameworkPath, Settings.Default.Decode_FrameDir);
+                keyFramePath = String.Format("{0} \"{1}\"", DecompileKeys.FrameworkPath, Settings.Default.Framework_FrameDir);
+            else
+                keyFramePath = String.Format("{0} \"{1}\"", DecompileKeys.FrameworkPath, Program.STANDALONE_FRAMEWORK_DIR);
             if (Settings.Default.Decode_SetApiLevel)
                 apiLevel = String.Format("{0} {1}", DecompileKeys.ApiLevel, Settings.Default.Decode_ApiLevel);
             keyOutputDir = String.Format("{0} \"{1}\"", DecompileKeys.OutputDir, outputDir);
@@ -150,7 +158,9 @@ namespace APKToolGUI
             if (Settings.Default.Build_UseAapt)
                 keyAapt = String.Format("{0} \"{1}\"", BuildKeys.Aapt, Settings.Default.Build_AaptPath);
             if (Settings.Default.Build_UseFramework)
-                keyFramePath = String.Format("{0} \"{1}\"", BuildKeys.FrameworkPath, Settings.Default.Build_FrameDir);
+                keyFramePath = String.Format("{0} \"{1}\"", BuildKeys.FrameworkPath, Settings.Default.Framework_FrameDir);
+            else
+                keyFramePath = String.Format("{0} \"{1}\"", DecompileKeys.FrameworkPath, Program.STANDALONE_FRAMEWORK_DIR);
             if (Settings.Default.Build_SetApiLevel)
                 apiLevel = String.Format("{0} {1}", DecompileKeys.ApiLevel, Settings.Default.Build_ApiLevel);
             if (Settings.Default.Build_UseAapt2)
@@ -171,8 +181,8 @@ namespace APKToolGUI
             string inputPath = Settings.Default.InstallFramework_InputFramePath;
             string keyFrameDir = null, keyTag = null;
 
-            if (Settings.Default.InstallFramework_UseFrameDir)
-                keyFrameDir = String.Format("{0} \"{1}\"", InstallFrameworkKeys.FrameDir, Settings.Default.InstallFramework_FrameDir);
+            if (Settings.Default.Framework_UseFrameDir)
+                keyFrameDir = String.Format("{0} \"{1}\"", InstallFrameworkKeys.FrameDir, Settings.Default.Framework_FrameDir);
             if (Settings.Default.InstallFramework_UseTag)
                 keyTag = String.Format("{0} \"{1}\"", InstallFrameworkKeys.Tag, Settings.Default.InstallFramework_Tag);
 
@@ -187,7 +197,13 @@ namespace APKToolGUI
 
         public int ClearFramework()
         {
-            string args = String.Format("empty-framework-dir --force");
+            string keyFramePath = null;
+            if (Settings.Default.Decode_UseFramework)
+                keyFramePath = String.Format("{0} \"{1}\"", InstallFrameworkKeys.FrameDir, Settings.Default.Framework_FrameDir);
+            else
+                keyFramePath = String.Format("{0} \"{1}\"", DecompileKeys.FrameworkPath, Program.STANDALONE_FRAMEWORK_DIR);
+
+            string args = String.Format($"empty-framework-dir {EmptyFrameworkKeys.ForceDelete} {keyFramePath}");
 
             Start(args);
             BeginOutputReadLine();

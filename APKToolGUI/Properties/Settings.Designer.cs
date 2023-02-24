@@ -12,7 +12,7 @@ namespace APKToolGUI.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.4.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.5.0.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -103,19 +103,6 @@ namespace APKToolGUI.Properties {
             }
             set {
                 this["Decode_InputAppPath"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Configuration.SettingsProviderAttribute(typeof(Bluegrams.Application.PortableSettingsProvider))]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SettingsManageabilityAttribute(global::System.Configuration.SettingsManageability.Roaming)]
-        public string Decode_FrameDir {
-            get {
-                return ((string)(this["Decode_FrameDir"]));
-            }
-            set {
-                this["Decode_FrameDir"] = value;
             }
         }
         
@@ -311,19 +298,6 @@ namespace APKToolGUI.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Configuration.SettingsProviderAttribute(typeof(Bluegrams.Application.PortableSettingsProvider))]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SettingsManageabilityAttribute(global::System.Configuration.SettingsManageability.Roaming)]
-        public string Build_FrameDir {
-            get {
-                return ((string)(this["Build_FrameDir"]));
-            }
-            set {
-                this["Build_FrameDir"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Configuration.SettingsProviderAttribute(typeof(Bluegrams.Application.PortableSettingsProvider))]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("False")]
         [global::System.Configuration.SettingsManageabilityAttribute(global::System.Configuration.SettingsManageability.Roaming)]
         public bool Build_UseFramework {
@@ -409,12 +383,12 @@ namespace APKToolGUI.Properties {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("False")]
         [global::System.Configuration.SettingsManageabilityAttribute(global::System.Configuration.SettingsManageability.Roaming)]
-        public bool InstallFramework_UseFrameDir {
+        public bool Framework_UseFrameDir {
             get {
-                return ((bool)(this["InstallFramework_UseFrameDir"]));
+                return ((bool)(this["Framework_UseFrameDir"]));
             }
             set {
-                this["InstallFramework_UseFrameDir"] = value;
+                this["Framework_UseFrameDir"] = value;
             }
         }
         
@@ -451,12 +425,12 @@ namespace APKToolGUI.Properties {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
         [global::System.Configuration.SettingsManageabilityAttribute(global::System.Configuration.SettingsManageability.Roaming)]
-        public string InstallFramework_FrameDir {
+        public string Framework_FrameDir {
             get {
-                return ((string)(this["InstallFramework_FrameDir"]));
+                return ((string)(this["Framework_FrameDir"]));
             }
             set {
-                this["InstallFramework_FrameDir"] = value;
+                this["Framework_FrameDir"] = value;
             }
         }
         

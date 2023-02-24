@@ -885,11 +885,11 @@
             // textBox_DECODE_FrameDir
             // 
             this.textBox_DECODE_FrameDir.DataBindings.Add(new System.Windows.Forms.Binding("Enabled", global::APKToolGUI.Properties.Settings.Default, "Decode_UseFramework", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.textBox_DECODE_FrameDir.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::APKToolGUI.Properties.Settings.Default, "Decode_FrameDir", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.textBox_DECODE_FrameDir.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::APKToolGUI.Properties.Settings.Default, "Framework_FrameDir", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.textBox_DECODE_FrameDir.Enabled = global::APKToolGUI.Properties.Settings.Default.Decode_UseFramework;
             resources.ApplyResources(this.textBox_DECODE_FrameDir, "textBox_DECODE_FrameDir");
             this.textBox_DECODE_FrameDir.Name = "textBox_DECODE_FrameDir";
-            this.textBox_DECODE_FrameDir.Text = global::APKToolGUI.Properties.Settings.Default.Decode_FrameDir;
+            this.textBox_DECODE_FrameDir.Text = global::APKToolGUI.Properties.Settings.Default.Framework_FrameDir;
             // 
             // button_DECODE_BrowseOutputDirectory
             // 
@@ -1162,11 +1162,11 @@
             // textBox_BUILD_FrameDir
             // 
             this.textBox_BUILD_FrameDir.DataBindings.Add(new System.Windows.Forms.Binding("Enabled", global::APKToolGUI.Properties.Settings.Default, "Build_UseFramework", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.textBox_BUILD_FrameDir.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::APKToolGUI.Properties.Settings.Default, "Build_FrameDir", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.textBox_BUILD_FrameDir.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::APKToolGUI.Properties.Settings.Default, "Framework_FrameDir", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.textBox_BUILD_FrameDir.Enabled = global::APKToolGUI.Properties.Settings.Default.Build_UseFramework;
             resources.ApplyResources(this.textBox_BUILD_FrameDir, "textBox_BUILD_FrameDir");
             this.textBox_BUILD_FrameDir.Name = "textBox_BUILD_FrameDir";
-            this.textBox_BUILD_FrameDir.Text = global::APKToolGUI.Properties.Settings.Default.Build_FrameDir;
+            this.textBox_BUILD_FrameDir.Text = global::APKToolGUI.Properties.Settings.Default.Framework_FrameDir;
             // 
             // checkBox_BUILD_UseFramework
             // 
@@ -1581,8 +1581,8 @@
             // checkBox_IF_FramePath
             // 
             resources.ApplyResources(this.checkBox_IF_FramePath, "checkBox_IF_FramePath");
-            this.checkBox_IF_FramePath.Checked = global::APKToolGUI.Properties.Settings.Default.InstallFramework_UseFrameDir;
-            this.checkBox_IF_FramePath.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "InstallFramework_UseFrameDir", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.checkBox_IF_FramePath.Checked = global::APKToolGUI.Properties.Settings.Default.Framework_UseFrameDir;
+            this.checkBox_IF_FramePath.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "Framework_UseFrameDir", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.checkBox_IF_FramePath.Name = "checkBox_IF_FramePath";
             this.checkBox_IF_FramePath.UseVisualStyleBackColor = true;
             // 
@@ -1603,8 +1603,8 @@
             // 
             // button_IF_BrowseFrameDir
             // 
-            this.button_IF_BrowseFrameDir.DataBindings.Add(new System.Windows.Forms.Binding("Enabled", global::APKToolGUI.Properties.Settings.Default, "InstallFramework_UseFrameDir", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.button_IF_BrowseFrameDir.Enabled = global::APKToolGUI.Properties.Settings.Default.InstallFramework_UseFrameDir;
+            this.button_IF_BrowseFrameDir.DataBindings.Add(new System.Windows.Forms.Binding("Enabled", global::APKToolGUI.Properties.Settings.Default, "Framework_UseFrameDir", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.button_IF_BrowseFrameDir.Enabled = global::APKToolGUI.Properties.Settings.Default.Framework_UseFrameDir;
             resources.ApplyResources(this.button_IF_BrowseFrameDir, "button_IF_BrowseFrameDir");
             this.button_IF_BrowseFrameDir.Name = "button_IF_BrowseFrameDir";
             this.button_IF_BrowseFrameDir.UseVisualStyleBackColor = true;
@@ -1624,12 +1624,12 @@
             // 
             // textBox_IF_FrameDir
             // 
-            this.textBox_IF_FrameDir.DataBindings.Add(new System.Windows.Forms.Binding("Enabled", global::APKToolGUI.Properties.Settings.Default, "InstallFramework_UseFrameDir", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.textBox_IF_FrameDir.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::APKToolGUI.Properties.Settings.Default, "InstallFramework_FrameDir", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.textBox_IF_FrameDir.Enabled = global::APKToolGUI.Properties.Settings.Default.InstallFramework_UseFrameDir;
+            this.textBox_IF_FrameDir.DataBindings.Add(new System.Windows.Forms.Binding("Enabled", global::APKToolGUI.Properties.Settings.Default, "Framework_UseFrameDir", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.textBox_IF_FrameDir.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::APKToolGUI.Properties.Settings.Default, "Framework_FrameDir", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.textBox_IF_FrameDir.Enabled = global::APKToolGUI.Properties.Settings.Default.Framework_UseFrameDir;
             resources.ApplyResources(this.textBox_IF_FrameDir, "textBox_IF_FrameDir");
             this.textBox_IF_FrameDir.Name = "textBox_IF_FrameDir";
-            this.textBox_IF_FrameDir.Text = global::APKToolGUI.Properties.Settings.Default.InstallFramework_FrameDir;
+            this.textBox_IF_FrameDir.Text = global::APKToolGUI.Properties.Settings.Default.Framework_FrameDir;
             // 
             // tabPage1
             // 

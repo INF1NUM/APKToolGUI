@@ -20,9 +20,6 @@
     <Setting Name="Decode_InputAppPath" Provider="Bluegrams.Application.PortableSettingsProvider" Roaming="true" GenerateDefaultValueInCode="false" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="Decode_FrameDir" Provider="Bluegrams.Application.PortableSettingsProvider" Roaming="true" GenerateDefaultValueInCode="false" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
-    </Setting>
     <Setting Name="BuildProjectDir" Provider="Bluegrams.Application.PortableSettingsProvider" Roaming="true" GenerateDefaultValueInCode="false" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
@@ -65,9 +62,6 @@
     <Setting Name="Build_CopyOriginal" Provider="Bluegrams.Application.PortableSettingsProvider" Roaming="true" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
-    <Setting Name="Build_FrameDir" Provider="Bluegrams.Application.PortableSettingsProvider" Roaming="true" GenerateDefaultValueInCode="false" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
-    </Setting>
     <Setting Name="Build_UseFramework" Provider="Bluegrams.Application.PortableSettingsProvider" Roaming="true" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
@@ -86,7 +80,7 @@
     <Setting Name="Build_InputDir" Provider="Bluegrams.Application.PortableSettingsProvider" Roaming="true" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="InstallFramework_UseFrameDir" Provider="Bluegrams.Application.PortableSettingsProvider" Roaming="true" Type="System.Boolean" Scope="User">
+    <Setting Name="Framework_UseFrameDir" Provider="Bluegrams.Application.PortableSettingsProvider" Roaming="true" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
     <Setting Name="InstallFramework_UseTag" Provider="Bluegrams.Application.PortableSettingsProvider" Roaming="true" Type="System.Boolean" Scope="User">
@@ -95,7 +89,7 @@
     <Setting Name="InstallFramework_Tag" Provider="Bluegrams.Application.PortableSettingsProvider" Roaming="true" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="InstallFramework_FrameDir" Provider="Bluegrams.Application.PortableSettingsProvider" Roaming="true" Type="System.String" Scope="User">
+    <Setting Name="Framework_FrameDir" Provider="Bluegrams.Application.PortableSettingsProvider" Roaming="true" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
     <Setting Name="Zipalign_AlignmentInBytes" Provider="Bluegrams.Application.PortableSettingsProvider" Roaming="true" Type="System.Decimal" Scope="User">
