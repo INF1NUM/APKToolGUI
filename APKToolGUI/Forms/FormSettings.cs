@@ -5,11 +5,18 @@ using System.IO;
 using APKToolGUI.Languages;
 using APKToolGUI.Utils;
 using Ookii.Dialogs.WinForms;
+using System.Globalization;
+using System.Reflection;
+using System.Collections.Generic;
+using System.Windows.Shapes;
+using static APKToolGUI.UpdateChecker;
 
 namespace APKToolGUI
 {
     public partial class FormSettings : Form
     {
+        string currentLanguage;
+
         public FormSettings()
         {
             InitializeComponent();
@@ -30,9 +37,9 @@ namespace APKToolGUI
         private void buttonОК_Click(object sender, EventArgs e)
         {
             SaveSettings();
-            this.Close();
+            Close();
         }
-        
+
         [DllImport("user32.dll", CharSet = CharSet.Unicode)]
         public static extern IntPtr SendMessage(HandleRef hWnd, UInt32 Msg, IntPtr wParam, IntPtr lParam);
 
@@ -44,7 +51,7 @@ namespace APKToolGUI
 
         private void buttonAddContextMenu_Click(object sender, EventArgs e)
         {
-            if(MessageBox.Show(Language.DoYouRealyWantToInstallCM, Application.ProductName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show(Language.DoYouRealyWantToInstallCM, Application.ProductName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 RunAsAdmin(Application.ExecutablePath, "ccm");
         }
 
@@ -58,44 +65,58 @@ namespace APKToolGUI
 
         private void LoadSettings()
         {
-            //textBox1.Font = Properties.Settings.Default.FontLogMainWindow;
-            //textBox2.Font = Properties.Settings.Default.FontLogContextMenuWindow;
-            //textBox1.Text = textBox1.Font.Name + ", " + textBox1.Font.Size;
-            //textBox2.Text = textBox2.Font.Name + ", " + textBox2.Font.Size;
-
             String sysLang = Language.SystemLanguage;
+
             comboBox1.Items.Add(sysLang);
-            comboBox1.Items.Add(System.Globalization.CultureInfo.GetCultureInfo("ru"));
-            comboBox1.Items.Add(System.Globalization.CultureInfo.GetCultureInfo("en"));
-            comboBox1.Items.Add(System.Globalization.CultureInfo.GetCultureInfo("zh-CN"));
-            //comboBox1.Items.Add(System.Globalization.CultureInfo.GetCultureInfo("ru-RU"));
-            //comboBox1.Items.Add(System.Globalization.CultureInfo.GetCultureInfo("en-US"));
-            //comboBox1.Items.Add(System.Globalization.CultureInfo.GetCultureInfo("uk-UA"));
-            
+            comboBox1.Items.Add(CultureInfo.GetCultureInfo("en"));
+            CultureInfo[] cultures = CultureInfo.GetCultures(CultureTypes.AllCultures);
+            String _culture = Properties.Settings.Default.Culture;
+            foreach (CultureInfo culture in cultures)
+            {
+                foreach (string resourceName in Assembly.GetExecutingAssembly().GetManifestResourceNames())
+                {
+                    string[] cultNamw = resourceName.Split('.');
+                    if (cultNamw[1] == culture.Name)
+                    {
+                        string lang = String.Format("{0} [{1}]", culture.DisplayName, culture.Name);
+                        comboBox1.Items.Add(lang);
+
+                        if (culture.Name == _culture)
+                            comboBox1.SelectedItem = lang;
+                    }
+                }
+            }
+
             comboBox1.DisplayMember = "NativeName"; // <= System.Globalization.CultureInfo.GetCultureInfo("ru-RU").NativeName
             comboBox1.ValueMember = "Name"; // <= System.Globalization.CultureInfo.GetCultureInfo("ru-RU").Name
 
-            // Если в настройках есть язык, выбираем его в списке.
-            String _culture = Properties.Settings.Default.Culture;
             if (_culture.Equals("Auto"))
+            {
+                currentLanguage = sysLang;
                 comboBox1.SelectedItem = sysLang;
+            }
             else
             {
-                var qwe = System.Globalization.CultureInfo.GetCultureInfo(_culture);
-                comboBox1.SelectedItem = qwe;
+                try
+                {
+                    currentLanguage = Properties.Settings.Default.Culture;
+                    comboBox1.SelectedItem = _culture;
+                }
+                catch { }
             }
         }
 
         private void SaveSettings()
         {
-            //Properties.Settings.Default.FontLogMainWindow = textBox1.Font;
-            //Properties.Settings.Default.FontLogContextMenuWindow = textBox2.Font;
-
             if (Language.SystemLanguage.Equals(comboBox1.SelectedItem.ToString()))
                 Properties.Settings.Default.Culture = "Auto";
             else
-                Properties.Settings.Default.Culture = comboBox1.SelectedItem.ToString();
+                Properties.Settings.Default.Culture = StringExt.Regex(@"(?<=\[)(.*?)(?=\])", comboBox1.SelectedItem.ToString());
             Properties.Settings.Default.Save();
+
+            if (!comboBox1.SelectedItem.ToString().Contains(currentLanguage))
+                if (MessageBox.Show(Language.SetLanguageRestartApplication, Application.ProductName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    Application.Restart();
         }
 
         public static void RunAsAdmin(string aFileName, string anArguments)
@@ -105,7 +126,7 @@ namespace APKToolGUI
             processInfo.FileName = aFileName;
             processInfo.Arguments = anArguments;
             processInfo.UseShellExecute = true;
-            processInfo.Verb = "runas"; // здесь вся соль
+            processInfo.Verb = "runas";
 
             try
             {
@@ -117,10 +138,10 @@ namespace APKToolGUI
             }
         }
 
-        
+
         private void buttonCustomJavaLocation_Click(object sender, EventArgs e)
         {
-            using(OpenFileDialog openJavaExe = new OpenFileDialog())
+            using (OpenFileDialog openJavaExe = new OpenFileDialog())
             {
                 openJavaExe.Filter = "java.exe|java.exe";
                 if (openJavaExe.ShowDialog() == System.Windows.Forms.DialogResult.OK)

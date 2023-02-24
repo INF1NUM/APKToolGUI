@@ -73,17 +73,23 @@ namespace APKToolGUI
         public static void SetLanguage()
         {
             String settingsCulture = Settings.Default.Culture;
-
-            if (settingsCulture.Equals("Auto"))
+            try
             {
-                System.Threading.Thread.CurrentThread.CurrentUICulture = System.Globalization.CultureInfo.InstalledUICulture;
-                System.Threading.Thread.CurrentThread.CurrentCulture = System.Globalization.CultureInfo.InstalledUICulture;
+                if (settingsCulture.Equals("Auto"))
+                {
+                    System.Threading.Thread.CurrentThread.CurrentUICulture = System.Globalization.CultureInfo.InstalledUICulture;
+                    System.Threading.Thread.CurrentThread.CurrentCulture = System.Globalization.CultureInfo.InstalledUICulture;
+                }
+                else
+                {
+                    System.Globalization.CultureInfo _settingsCulture = System.Globalization.CultureInfo.GetCultureInfo(settingsCulture);
+                    System.Threading.Thread.CurrentThread.CurrentUICulture = _settingsCulture;
+                    System.Threading.Thread.CurrentThread.CurrentCulture = _settingsCulture;
+                }
             }
-            else
+            catch
             {
-                System.Globalization.CultureInfo _settingsCulture = System.Globalization.CultureInfo.GetCultureInfo(settingsCulture);
-                System.Threading.Thread.CurrentThread.CurrentUICulture = _settingsCulture;
-                System.Threading.Thread.CurrentThread.CurrentCulture = _settingsCulture;
+
             }
         }
 

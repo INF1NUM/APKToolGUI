@@ -808,6 +808,15 @@ namespace APKToolGUI.Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The language is set. Do you want to restart the application?.
+        /// </summary>
+        internal static string SetLanguageRestartApplication {
+            get {
+                return ResourceManager.GetString("SetLanguageRestartApplication", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Settings.
         /// </summary>
         internal static string Settings {

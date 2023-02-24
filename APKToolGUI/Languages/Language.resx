@@ -429,4 +429,7 @@
   <data name="ParsingApkInfo" xml:space="preserve">
     <value>Parsing APK Info...</value>
   </data>
+  <data name="SetLanguageRestartApplication" xml:space="preserve">
+    <value>The language is set. Do you want to restart the application?</value>
+  </data>
 </root>
