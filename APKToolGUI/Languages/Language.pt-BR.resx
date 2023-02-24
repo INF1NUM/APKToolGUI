@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="About" xml:space="preserve">
+    <value>Sobre</value>
+  </data>
+  <data name="Aligning" xml:space="preserve">
+    <value>Alinhar</value>
+  </data>
+  <data name="AllDone" xml:space="preserve">
+    <value>Tudo concluído!</value>
+  </data>
+  <data name="AndroidManifestNotExist" xml:space="preserve">
+    <value>AndroidManifest.xml não existe</value>
+  </data>
+  <data name="APKSelected" xml:space="preserve">
+    <value>APK selecionado:</value>
+  </data>
+  <data name="APKToolVersion" xml:space="preserve">
+    <value>Versão do apktool</value>
+  </data>
+  <data name="Baksmali" xml:space="preserve">
+    <value>Baksmali</value>
+  </data>
+  <data name="Build" xml:space="preserve">
+    <value>Compilar</value>
+  </data>
+  <data name="CantDetectApktoolVersion" xml:space="preserve">
+    <value>Não foi possível detectar a versão do apktool.</value>
+  </data>
+  <data name="ChangedTargetSdkTo29" xml:space="preserve">
+    <value>SDK de destino alterado para 29</value>
+  </data>
+  <data name="CheckForUpdate" xml:space="preserve">
+    <value>Verificar por atualizações</value>
+  </data>
+  <data name="ClearingFramework" xml:space="preserve">
+    <value>Limpando framework</value>
+  </data>
+  <data name="CompileApk" xml:space="preserve">
+    <value>Compilar APK</value>
+  </data>
+  <data name="CompileDex" xml:space="preserve">
+    <value>Montar DEX</value>
+  </data>
+  <data name="CompilingDex" xml:space="preserve">
+    <value>Compilando DEX</value>
+  </data>
+  <data name="CompilingSuccessfullyCompleted" xml:space="preserve">
+    <value>Compilado com sucesso. Pasta de saída: "{0}"</value>
+  </data>
+  <data name="CopyFileToTemp" xml:space="preserve">
+    <value>Copiar arquivo "{0}" para pasta temporária "{1}"</value>
+  </data>
+  <data name="CopyFolderToTemp" xml:space="preserve">
+    <value>Copiar pasta "{0}" do APK descompilado para pasta temporária "{1}"</value>
+  </data>
+  <data name="CreateUnsignedApk" xml:space="preserve">
+    <value>Criando APK não assinado</value>
+  </data>
+  <data name="DebugMode" xml:space="preserve">
+    <value>Modo de depuração</value>
+  </data>
+  <data name="Decode" xml:space="preserve">
+    <value>Decodificar</value>
+  </data>
+  <data name="DecodeCouldNotCreate" xml:space="preserve">
+    <value>A pasta de descompilação selecionada não pôde ser criado porque contém caracteres inválidos.</value>
+  </data>
+  <data name="DecodeDesDirExists" xml:space="preserve">
+    <value>A pasta de destino "{0}" já existe. Ative "Forçar excluir pasta de destino" se quiser substituí-la.</value>
+  </data>
+  <data name="DecodeDirNotSelected" xml:space="preserve">
+    <value>Pasta de descompilação não selecionada.</value>
+  </data>
+  <data name="DecodeSelectedFrameworkNotExist" xml:space="preserve">
+    <value>A pasta do framework selecionado não existe.</value>
+  </data>
+  <data name="Decoding" xml:space="preserve">
+    <value>Decodificando</value>
+  </data>
+  <data name="DecompileApk" xml:space="preserve">
+    <value>Descompilar APK</value>
+  </data>
+  <data name="DecompiledAPKNotExist" xml:space="preserve">
+    <value>A pasta do APK descompilado não existe</value>
+  </data>
+  <data name="DecompileDex" xml:space="preserve">
+    <value>Desmontar DEX</value>
+  </data>
+  <data name="DecompilingDex" xml:space="preserve">
+    <value>Descompilando DEX</value>
+  </data>
+  <data name="DecompilingSuccessfullyCompleted" xml:space="preserve">
+    <value>Descompilado com sucesso. Pasta de saída "{0}".</value>
+  </data>
+  <data name="DeleteFile" xml:space="preserve">
+    <value>Excluir arquivo "{0}"</value>
+  </data>
+  <data name="Done" xml:space="preserve">
+    <value>Concluído</value>
+  </data>
+  <data name="DoYouRealyWantToInstallCM" xml:space="preserve">
+    <value>Você realmente deseja instalar o menu de contexto?</value>
+  </data>
+  <data name="DoYouRealyWantToRemoveCM" xml:space="preserve">
+    <value>Você realmente deseja remover o menu de contexto?</value>
+  </data>
+  <data name="DragDropNotSupported" xml:space="preserve">
+    <value>Você está executando como Administrador. Arrastar e soltar não é suportado</value>
+  </data>
+  <data name="DragDropSupported" xml:space="preserve">
+    <value>Arrastar e soltar é suportado</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>Erro</value>
+  </data>
+  <data name="ErrorClearingFw" xml:space="preserve">
+    <value>Erro ao limpar o framework</value>
+  </data>
+  <data name="ErrorCompiling" xml:space="preserve">
+    <value>Falha ao compilar</value>
+  </data>
+  <data name="ErrorDecompiling" xml:space="preserve">
+    <value>Falha ao descompilar</value>
+  </data>
+  <data name="ErrorEnteringFrameworkTag" xml:space="preserve">
+    <value>Erro ao entrar etiqueta do framework.</value>
+  </data>
+  <data name="ErrorGettingApkInfo" xml:space="preserve">
+    <value>Ocorreu um erro ao obter as informações do APK</value>
+  </data>
+  <data name="ErrorJavaDetect" xml:space="preserve">
+    <value>O Java não está instalado ou está instalado incorretamente. Instale o Java ou defina um local personalizado em Configurações</value>
+  </data>
+  <data name="ErrorNotAnApk" xml:space="preserve">
+    <value>Esta pasta não é um pacote do Android</value>
+  </data>
+  <data name="ErrorReadSettings" xml:space="preserve">
+    <value>Erro ao ler as configurações!</value>
+  </data>
+  <data name="ErrorSaveSettings" xml:space="preserve">
+    <value>Erro ao salvar as configurações!</value>
+  </data>
+  <data name="ErrorSelectedFileNotExist" xml:space="preserve">
+    <value>O arquivo selecionado não existe.</value>
+  </data>
+  <data name="ErrorSelectedFolderNotExist" xml:space="preserve">
+    <value>A pasta selecionada não existe.</value>
+  </data>
+  <data name="ErrorSelectedOutputFolderNotExist" xml:space="preserve">
+    <value>A pasta de saída selecionada não existe.</value>
+  </data>
+  <data name="ErrorSelectingFrameworkDirectory" xml:space="preserve">
+    <value>Erro ao selecionar a pasta do framework.</value>
+  </data>
+  <data name="ErrorSelectingFrameworkFile" xml:space="preserve">
+    <value>Erro ao selecionar arquivo do framework. O arquivo não existe.</value>
+  </data>
+  <data name="ErrorSigning" xml:space="preserve">
+    <value>Falha ao assinar.</value>
+  </data>
+  <data name="ErrorUpdateChecking" xml:space="preserve">
+    <value>Erro ao verificar por atualizações:</value>
+  </data>
+  <data name="ErrorVersionParsing" xml:space="preserve">
+    <value>Falha ao analisar a versão</value>
+  </data>
+  <data name="ErrorZipalign" xml:space="preserve">
+    <value>Falha ao alinhar ZIP</value>
+  </data>
+  <data name="ExecutableFile" xml:space="preserve">
+    <value>Arquivo executável</value>
+  </data>
+  <data name="Exit" xml:space="preserve">
+    <value>Sair</value>
+  </data>
+  <data name="File" xml:space="preserve">
+    <value>Arquivo</value>
+  </data>
+  <data name="FileNotFound" xml:space="preserve">
+    <value>Arquivo não encontrado</value>
+  </data>
+  <data name="FixAndroidManifest" xml:space="preserve">
+    <value>AndroidManifest.xml corigido</value>
+  </data>
+  <data name="FolderNotExist" xml:space="preserve">
+    <value>A pasta não existe</value>
+  </data>
+  <data name="FrameworkCacheCleared" xml:space="preserve">
+    <value>Cache do framework limpo</value>
+  </data>
+  <data name="FrameworkDirNotExist" xml:space="preserve">
+    <value>A pasta do framework não existe</value>
+  </data>
+  <data name="FrameworkInstallationNotStarted" xml:space="preserve">
+    <value>Erro: A instalação do framewoek não foi iniciada.</value>
+  </data>
+  <data name="FrameworkInstalled" xml:space="preserve">
+    <value>Framework instalado com sucesso</value>
+  </data>
+  <data name="GetApkInfo" xml:space="preserve">
+    <value>Obter informações do APK</value>
+  </data>
+  <data name="Help" xml:space="preserve">
+    <value>Ajuda</value>
+  </data>
+  <data name="InputDirectory" xml:space="preserve">
+    <value>Pasta de entrada: {0}</value>
+  </data>
+  <data name="InputFile" xml:space="preserve">
+    <value>Arquivo de entrada: {0}</value>
+  </data>
+  <data name="InstallFramework" xml:space="preserve">
+    <value>Instalar framework</value>
+  </data>
+  <data name="InstallingFramework" xml:space="preserve">
+    <value>Instalando framework</value>
+  </data>
+  <data name="MainActivityFound" xml:space="preserve">
+    <value>MainActivity encontrado em "{0}"</value>
+  </data>
+  <data name="MainActivityNotFoundPleaseFindManually" xml:space="preserve">
+    <value>Não foi possível localizar MainActivity. Por favor, encontre-o manualmente.</value>
+  </data>
+  <data name="MetainfNotExist" xml:space="preserve">
+    <value>A pasta META-INF não existe. Ignorado</value>
+  </data>
+  <data name="MoveTempApkFileToOutput" xml:space="preserve">
+    <value>Mova a pasta temporária "{0}" para a pasta de saída "{1}"</value>
+  </data>
+  <data name="MoveTempApkToOutput" xml:space="preserve">
+    <value>Mover o APK temporário "{0}" para a pasta de saída "{1}"</value>
+  </data>
+  <data name="NeedRestart" xml:space="preserve">
+    <value>Para que as alterações entrem em vigor, você deve reiniciar o programa. Você quer fazer isso agora?</value>
+  </data>
+  <data name="NotDecompiledApk" xml:space="preserve">
+    <value>Esta pasta não é um APK descompilado</value>
+  </data>
+  <data name="NotDecompiledDex" xml:space="preserve">
+    <value>Esta pasta não é um DEX descompilado</value>
+  </data>
+  <data name="RemoveApkToolDummies" xml:space="preserve">
+    <value>Removidos todos os dummies do apktool</value>
+  </data>
+  <data name="RequiredFilesMissing" xml:space="preserve">
+    <value>Arquivos necessários ausentes</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>Configurações</value>
+  </data>
+  <data name="Sign" xml:space="preserve">
+    <value>Assinar</value>
+  </data>
+  <data name="SignApk" xml:space="preserve">
+    <value>Assinar APK</value>
+  </data>
+  <data name="Signing" xml:space="preserve">
+    <value>Assinando</value>
+  </data>
+  <data name="SignInputFileNotFound" xml:space="preserve">
+    <value>Arquivo de entrada não localizado.</value>
+  </data>
+  <data name="SignPrivateKeyNotFound" xml:space="preserve">
+    <value>Chave privada não localizada.</value>
+  </data>
+  <data name="SignPublicKeyNotFound" xml:space="preserve">
+    <value>Chave pública não localizada.</value>
+  </data>
+  <data name="SignSuccessfullyCompleted" xml:space="preserve">
+    <value>Assinatura concluída com sucesso. Arquivo salvo em "{0}".</value>
+  </data>
+  <data name="Smali" xml:space="preserve">
+    <value>Smali</value>
+  </data>
+  <data name="SystemLanguage" xml:space="preserve">
+    <value>Idioma do sistema</value>
+  </data>
+  <data name="TextFile" xml:space="preserve">
+    <value>Arquivo de texto</value>
+  </data>
+  <data name="UpdateNewVersion" xml:space="preserve">
+    <value>Nova versão disponível. Deseja atualizar?</value>
+  </data>
+  <data name="UpdateNoUpdates" xml:space="preserve">
+    <value>Nenhuma atualização está disponível.</value>
+  </data>
+  <data name="WarningDecodingFolderNotSelected" xml:space="preserve">
+    <value>Pasta de decodificação não selecionada!</value>
+  </data>
+  <data name="WarningFileForDecodingNotSelected" xml:space="preserve">
+    <value>Arquivo para decodificação não selecionado!</value>
+  </data>
+  <data name="WarningFileForSigningNotSelected" xml:space="preserve">
+    <value>Arquivo para assinar não selecionado!</value>
+  </data>
+  <data name="WarningFrameworkNotSelected" xml:space="preserve">
+    <value>Framework não selecionado!</value>
+  </data>
+  <data name="Zipalign" xml:space="preserve">
+    <value>Alinhar ZIP</value>
+  </data>
+  <data name="ZipalignApk" xml:space="preserve">
+    <value>Alinhar ZIP do APK</value>
+  </data>
+  <data name="ZipalignFileSavedTo" xml:space="preserve">
+    <value>Alinhar ZIP concluído com sucesso. Arquivo salvo em "{0}"</value>
+  </data>
+  <data name="ZIPArchives" xml:space="preserve">
+    <value>Arquivos ZIP</value>
+  </data>
+</root>
