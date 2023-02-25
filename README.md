@@ -11,7 +11,7 @@ It is a tool for reverse engineering 3rd party, closed, binary Android apps. It 
 https://github.com/AndnixSH/APKToolGUI/releases
 
 # Requirements
-- Windows 7 and above
+- Windows 7 32-bit/64-bit and above
 - JDK/JRE 8 and above. Highly recommended to use 64-bit version of Java if your system is 64-bit
 - .NET Framework 4.8
 
@@ -23,23 +23,38 @@ https://github.com/AndnixSH/APKToolGUI/releases
 - Framework
 - Drag and drop
 - APK info
-- Log
+- Log output
 - All features from [Apktool](https://ibotpeaches.github.io/Apktool/documentation/).
 - Additional features that can fix some Apktool errors, such as removing DUMMY_APKTOOL, clear framework before decompiling
 - Multi language
 - Right-click context menu
 
 # Languages
+- Brazilian Portuguese (Incomplete)
 - English
+- Hungary (Incomplete)
 - Russian (Incomplete)
 - Chinese Simplified (Incomplete)
 
+### Translation
+If you like to help translate with your native language, use Visual Studio 2022
+
+- Create new resx file under Languages folder within Visual Studio.
+
+- Open any forms. Under properties, scroll down until you see Language, and select any language you would like to translate. It will create new resx file inside cs file
+
+If you can't use Visual Studio, you can use translator tools like [resxtranslator](https://github.com/HakanL/resxtranslator) or [RESX Translator automat](https://www.utilstudio.com/en/resx-translator/), but make sure the .resx file is added to [APKToolGUI.csproj](https://github.com/AndnixSH/APKToolGUI/blob/master/APKToolGUI/APKToolGUI.csproj), otherwise Visual Studio would not compile it
+
+Make pull request when you are done
+
 # Issues
-Issues with Apktool, read the log, check if your modification and/or syntax is correct. If not, check this page https://github.com/iBotPeaches/Apktool/issues. Otherwise, report issues here and I will point you to the right direction.
+Issues with Apktool? read the log, check if your modification and/or syntax is correct.
 
 Framework/system apps related issues, check on [XDA Forum](https://forum.xda-developers.com/)
 
-**Sometimes apps may protect or obfuscate for content protection purposes and so on. Bypassing of such is beyond the scope of this tool, so please DO NOT post an issue regarding to it. This tool does not support bypassing such securities**
+**Some apps may been protected or obfuscated for content protection purposes or against cheaters. Bypassing of such is beyond the scope of this tool, so please DO NOT post an issue regarding to it. This tool does not support bypassing such protections, and never will be!**
+
+Anything else, report here https://github.com/AndnixSH/APKToolGUI/issues
 
 # FAQ
 ##### Q: Can it be ported to other OS like Linux?
@@ -58,7 +73,7 @@ A: Simply delete the config.xml file on the same directory of the executeable
 A: It just a false positive, anti-virus always flag tools/softwares like this as virus. Don't always believe what your anti-virus are telling you. Try to compile the source by yourself and you will see
 
 ##### Q: Can you make an automatic APK injecting tool?
-A: No, that's not the scope of this tool, and I don't have time for that. However, you can try making it by yourself, or have a look on [SaveToGame](https://github.com/And42/SaveToGame) which can give you ideas how to do it.
+A: No, that's not the scope of this tool, and I don't have time for that. However, you can try making it by yourself, or have a look on [SaveToGame](https://github.com/And42/SaveToGame) project which can give you ideas how to do it.
 
 ##### Q: Can you implement an option to protect/pack/obfuscate APK?
 A: No, protection is beyond the scope of this tool
@@ -67,16 +82,9 @@ A: No, protection is beyond the scope of this tool
 A: No, they are also beyond the scope of this tool. I don't condone bypassing such protections
 
 # Development
+This project is written in C#
+
 Use Visual Studio 2019 and above. NET Framework 4.8 SDK is required
-
-### Translation
-If you like to translate a language, you must use Visual Studio 2022.
-
-- Create new resx file under Languages folder within Visual Studio. If you created a resx file outside Visual Studio, it will not detect it
-
-- Open any forms. Under properties, scroll down until you see Language, and select any language you would like to translate. It will create new resx file inside cs file
-
-Make pull request when you are done
 
 # Credits
 - AndnixSH
