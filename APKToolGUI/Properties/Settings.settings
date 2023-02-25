@@ -51,7 +51,7 @@
       <Value Profile="(Default)">True</Value>
     </Setting>
     <Setting Name="ClearLogBeforeAction" Provider="Bluegrams.Application.PortableSettingsProvider" Roaming="true" Type="System.Boolean" Scope="User">
-      <Value Profile="(Default)">False</Value>
+      <Value Profile="(Default)">True</Value>
     </Setting>
     <Setting Name="Decode_MatchOriginal" Provider="Bluegrams.Application.PortableSettingsProvider" Roaming="true" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
