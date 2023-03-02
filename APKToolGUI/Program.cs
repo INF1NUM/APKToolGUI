@@ -62,9 +62,12 @@ namespace APKToolGUI
                 }
                 if (FilesCheck() == true)
                 {
-                    Directory.CreateDirectory(TempDirectory());
                     PortableSettingsProvider.SettingsFileName = "config.xml";
                     PortableSettingsProvider.ApplyProvider(Settings.Default);
+
+                    TEMP_PATH = TempDirectory();
+                    Directory.CreateDirectory(TEMP_PATH);
+
                     Application.Run(new FormMain());
                 }
             }
@@ -175,21 +178,23 @@ namespace APKToolGUI
                 return Path.Combine(LOCAL_APPDATA_PATH, ASSEMBLY_NAME, StringExt.RandStrWithCaps(5));
         }
 
-        public static string LOCAL_APPDATA_PATH = Environment.GetEnvironmentVariable("LocalAppData");
-        public static string APP_PATH = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-        public static string RES_PATH = Path.Combine(APP_PATH, "Resources");
-        public static string ASSEMBLY_NAME = AssemblyName.GetAssemblyName(Assembly.GetExecutingAssembly().Location).Name;
-        public static string APKTOOL_PATH = Path.Combine(RES_PATH, "apktool.jar");
-        public static string APKSIGNER_PATH = Path.Combine(RES_PATH, "apksigner.jar");
-        public static string BAKSMALI_PATH = Path.Combine(RES_PATH, "baksmali.jar");
-        public static string SMALI_PATH = Path.Combine(RES_PATH, "smali.jar");
-        public static string SIGNAPK_KEYPRIVATE = Path.Combine(RES_PATH, "testkey.pk8");
-        public static string SIGNAPK_KEYPUBLIC = Path.Combine(RES_PATH, "testkey.x509.pem");
-        public static string ZIPALIGN_PATH = Path.Combine(RES_PATH, "zipalign.exe");
-        public static string AAPT_PATH = Path.Combine(RES_PATH, "aapt.exe");
-        public static string AAPT2_PATH = Path.Combine(RES_PATH, "aapt2.exe");
-        public static string AAPT2JNI_PATH = Path.Combine(RES_PATH, "libaapt2_jni.dll");
-        public static string FRAMEWORK_DIR = Path.Combine(LOCAL_APPDATA_PATH, "apktool", "framework");
-        public static string STANDALONE_FRAMEWORK_DIR = Path.Combine(LOCAL_APPDATA_PATH, ASSEMBLY_NAME, "framework");
+        public static string TEMP_PATH { get; set; }
+        public static string LOCAL_APPDATA_PATH { get { return Environment.GetEnvironmentVariable("LocalAppData"); } }
+        public static string APP_PATH { get { return Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location); } }
+        public static string RES_PATH { get { return Path.Combine(APP_PATH, "Resources"); } }
+        public static string ASSEMBLY_NAME { get { return AssemblyName.GetAssemblyName(Assembly.GetExecutingAssembly().Location).Name; } }
+
+        public static string APKTOOL_PATH { get { return Path.Combine(RES_PATH, "apktool.jar"); } }
+        public static string APKSIGNER_PATH { get { return Path.Combine(RES_PATH, "apksigner.jar"); } }
+        public static string BAKSMALI_PATH { get { return Path.Combine(RES_PATH, "baksmali.jar"); } }
+        public static string SMALI_PATH { get { return Path.Combine(RES_PATH, "smali.jar"); } }
+        public static string SIGNAPK_KEYPRIVATE { get { return Path.Combine(RES_PATH, "testkey.pk8"); } }
+        public static string SIGNAPK_KEYPUBLIC { get { return Path.Combine(RES_PATH, "testkey.x509.pem"); } }
+        public static string ZIPALIGN_PATH { get { return Path.Combine(RES_PATH, "zipalign.exe"); } }
+        public static string AAPT_PATH { get { return Path.Combine(RES_PATH, "aapt.exe"); } }
+        public static string AAPT2_PATH { get { return Path.Combine(RES_PATH, "aapt2.exe"); } }
+        public static string AAPT2JNI_PATH { get { return Path.Combine(RES_PATH, "libaapt2_jni.dll"); } }
+        public static string FRAMEWORK_DIR { get { return Path.Combine(LOCAL_APPDATA_PATH, "apktool", "framework"); } }
+        public static string STANDALONE_FRAMEWORK_DIR { get { return Path.Combine(LOCAL_APPDATA_PATH, ASSEMBLY_NAME, "framework"); } }
     }
 }

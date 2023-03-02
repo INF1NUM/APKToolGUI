@@ -42,6 +42,7 @@ namespace APKToolGUI
             Instance = this;
 
             Program.SetLanguage();
+
             InitializeComponent();
 
             Text += " - v" + ProductVersion;
@@ -119,7 +120,7 @@ namespace APKToolGUI
             else
                 ToLog(ApktoolEventType.None, Language.DragDropSupported);
 
-            ToLog(ApktoolEventType.None, String.Format(Language.TempDirectory, Program.TempDirectory()));
+            ToLog(ApktoolEventType.None, String.Format(Language.TempDirectory, Program.TEMP_PATH));
 
             TimeSpan updateInterval = DateTime.Now - Settings.Default.LastUpdateCheck;
             if (updateInterval.Days > 0 && Settings.Default.CheckForUpdateAtStartup)
@@ -248,7 +249,7 @@ namespace APKToolGUI
 
                 try
                 {
-                    string splitPath = Path.Combine(Program.TempDirectory(), "SplitInfo");
+                    string splitPath = Path.Combine(Program.TEMP_PATH, "SplitInfo");
                     string arch = null;
 
                     await Task.Factory.StartNew(() =>
@@ -327,9 +328,9 @@ namespace APKToolGUI
                         {
                             await Task.Factory.StartNew(() =>
                             {
-                                ZipUtils.ExtractFile(file, aapt.AppIcon, Path.Combine(Program.TempDirectory(), aapt.PackageName));
+                                ZipUtils.ExtractFile(file, aapt.AppIcon, Path.Combine(Program.TEMP_PATH, aapt.PackageName));
                             });
-                            string icon = Path.Combine(Program.TempDirectory(), aapt.PackageName, Path.GetFileName(aapt.AppIcon));
+                            string icon = Path.Combine(Program.TEMP_PATH, aapt.PackageName, Path.GetFileName(aapt.AppIcon));
                             if (File.Exists(icon))
                             {
                                 apkIconPicBox.Image = BitmapUtils.LoadBitmap(icon);
@@ -504,11 +505,11 @@ namespace APKToolGUI
 
             string apkFileName = Path.GetFileName(inputSplitApk);
 
-            string tempApk = Path.Combine(Program.TempDirectory(), "dec.apk");
+            string tempApk = Path.Combine(Program.TEMP_PATH, "dec.apk");
 
-            string extractedSplitDir = Path.Combine(Program.TempDirectory(), "SplitApk");
-            string decompileDir = Path.Combine(Program.TempDirectory(), "Decompiled");
-            string mergedDir = Path.Combine(Program.TempDirectory(), "Merged");
+            string extractedSplitDir = Path.Combine(Program.TEMP_PATH, "SplitApk");
+            string decompileDir = Path.Combine(Program.TEMP_PATH, "Decompiled");
+            string mergedDir = Path.Combine(Program.TEMP_PATH, "Merged");
 
             string outputDir = PathUtils.GetDirectoryNameWithoutExtension(inputSplitApk);
             if (Settings.Default.Decode_UseOutputDir && !IgnoreOutputDirContextMenu)
@@ -627,7 +628,7 @@ namespace APKToolGUI
             if (Settings.Default.Decode_UseOutputDir && !IgnoreOutputDirContextMenu)
                 outputDir = Path.Combine(Settings.Default.Decode_OutputDir, Path.GetFileNameWithoutExtension(inputApk));
 
-            string tempApk = Path.Combine(Program.TempDirectory(), "dec.apk");
+            string tempApk = Path.Combine(Program.TEMP_PATH, "dec.apk");
             string outputTempDir = tempApk.Replace(".apk", "");
 
             try
@@ -747,7 +748,7 @@ namespace APKToolGUI
                     }
                     string outputCompiledApkFile = outputFile;
 
-                    string tempDecApkFolder = Path.Combine(Program.TempDirectory(), "dec");
+                    string tempDecApkFolder = Path.Combine(Program.TEMP_PATH, "dec");
                     string outputTempApk = tempDecApkFolder + ".apk";
 
                     if (Settings.Default.Utf8FilenameSupport)
@@ -986,7 +987,7 @@ namespace APKToolGUI
                 ToStatus(String.Format(Language.Aligning + " \"{0}\"...", Path.GetFileName(input)), Resources.waiting);
             }));
 
-            string tempApk = Path.Combine(Program.TempDirectory(), "tempapk.apk");
+            string tempApk = Path.Combine(Program.TEMP_PATH, "tempapk.apk");
             string outputApkFile = output;
 
             if (Settings.Default.Utf8FilenameSupport)
@@ -1033,7 +1034,7 @@ namespace APKToolGUI
                 ToLog(ApktoolEventType.None, String.Format(Language.InputFile, input));
                 ToStatus(String.Format(Language.Signing + " \"{0}\"...", Path.GetFileName(input)), Resources.waiting);
             }));
-            string tempApk = Path.Combine(Program.TempDirectory(), "tempapk.apk");
+            string tempApk = Path.Combine(Program.TEMP_PATH, "tempapk.apk");
             string outputApkFile = output;
 
             if (Settings.Default.Utf8FilenameSupport)
@@ -1086,7 +1087,7 @@ namespace APKToolGUI
         {
             try
             {
-                Process.Start("explorer.exe", Program.TempDirectory());
+                Process.Start("explorer.exe", Program.TEMP_PATH);
             }
             catch (Exception ex)
             {
@@ -1231,7 +1232,7 @@ namespace APKToolGUI
             Save();
 
             //Clear temp folder
-            DirectoryUtils.Delete(Program.TempDirectory());
+            DirectoryUtils.Delete(Program.TEMP_PATH);
         }
 
         private bool ActionButtonsEnabled
