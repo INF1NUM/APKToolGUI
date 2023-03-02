@@ -582,7 +582,7 @@ namespace APKToolGUI
                     merger.CollectCapabilities(out locales, out abis, baseDir, splitDirs.ToArray());
                     merger.MergeSplits(baseDir, splitDirs.ToArray());
 
-                    ToLog(ApktoolEventType.None, Language.MergeFinishedMoveDir);
+                    ToLog(ApktoolEventType.None, String.Format(Language.MergeFinishedMoveDir, outputDir));
                     DirectoryUtils.Move(mergedDir, outputDir);
                 });
             }

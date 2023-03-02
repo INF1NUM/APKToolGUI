@@ -376,7 +376,7 @@ namespace APKToolGUI.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Directory {0} does not exist.
+        ///   Looks up a localized string similar to Directory &quot;{0}&quot; does not exist.
         /// </summary>
         internal static string DirNotExist {
             get {
@@ -772,7 +772,7 @@ namespace APKToolGUI.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Merge finished. Moving directory to {0}.
+        ///   Looks up a localized string similar to Merge finished. Moving directory to &quot;{0}&quot;.
         /// </summary>
         internal static string MergeFinishedMoveDir {
             get {
@@ -817,7 +817,7 @@ namespace APKToolGUI.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Moving base directory to {0}.
+        ///   Looks up a localized string similar to Moving base directory to &quot;{0}&quot;.
         /// </summary>
         internal static string MovingBasedirectory {
             get {
@@ -979,7 +979,7 @@ namespace APKToolGUI.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Temp directory: {0}.
+        ///   Looks up a localized string similar to Temp directory: &quot;{0}&quot;.
         /// </summary>
         internal static string TempDirectory {
             get {

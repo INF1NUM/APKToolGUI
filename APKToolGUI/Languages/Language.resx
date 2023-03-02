@@ -445,18 +445,18 @@
     <value>Extracting all APK files</value>
   </data>
   <data name="MergeFinishedMoveDir" xml:space="preserve">
-    <value>Merge finished. Moving directory to {0}</value>
+    <value>Merge finished. Moving directory to "{0}"</value>
   </data>
   <data name="MergingApk" xml:space="preserve">
     <value>Merging APK</value>
   </data>
   <data name="MovingBasedirectory" xml:space="preserve">
-    <value>Moving base directory to {0}</value>
+    <value>Moving base directory to "{0}"</value>
   </data>
   <data name="DirNotExist" xml:space="preserve">
-    <value>Directory {0} does not exist</value>
+    <value>Directory "{0}" does not exist</value>
   </data>
   <data name="TempDirectory" xml:space="preserve">
-    <value>Temp directory: {0}</value>
+    <value>Temp directory: "{0}"</value>
   </data>
 </root>
