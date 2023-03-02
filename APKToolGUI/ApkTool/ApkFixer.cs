@@ -18,14 +18,16 @@ namespace APKToolGUI.ApkTool
             if (File.Exists(manifestPath))
             {
                 string maniFestText = File.ReadAllText(manifestPath);
+                maniFestText = maniFestText.Replace("\\ ", "\\u003");
                 maniFestText = maniFestText.Replace("android:isSplitRequired=\"true\"", "");
                 maniFestText = maniFestText.Replace("android:extractNativeLibs=\"false\"", "");
                 maniFestText = maniFestText.Replace("android:useEmbeddedDex=\"true\"", "");
                 maniFestText = maniFestText.Replace("android:manageSpace=\"true\"", "");
-                maniFestText = maniFestText.Replace("android:manageSpace=\"true\"", "");
+                maniFestText = maniFestText.Replace("android:localeConfig=\"@xml/locales_config\"", "");
                 maniFestText = maniFestText.Replace("<queries>\r\n        <intent>\r\n            <action android:name=\"android.intent.action.MAIN\"/>\r\n        </intent>\r\n    </queries>", "");
                 maniFestText = maniFestText.Replace("<intent> ​ <action android:name=\"android.intent.action.MAIN\"/> ​ </intent>", "");
                 maniFestText = maniFestText.Replace("STAMP_TYPE_DISTRIBUTION_APK", "STAMP_TYPE_STANDALONE_APK");
+
                 File.WriteAllText(Path.Combine(path, "AndroidManifest.xml"), maniFestText);
 
                 return true;
