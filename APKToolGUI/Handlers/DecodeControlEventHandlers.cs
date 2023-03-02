@@ -70,7 +70,8 @@ namespace APKToolGUI.Handlers
 
         internal async void button_DECODE_Decode_Click(object sender, EventArgs e)
         {
-            if (File.Exists(main.textBox_DECODE_InputAppPath.Text))
+            string inputFile = main.textBox_DECODE_InputAppPath.Text;
+            if (File.Exists(inputFile))
             {
                 if (main.checkBox_DECODE_UseFramework.Checked && !Directory.Exists(main.textBox_DECODE_FrameDir.Text))
                 {
@@ -92,7 +93,10 @@ namespace APKToolGUI.Handlers
                     }
                 }
 
-                await main.Decompile(main.textBox_DECODE_InputAppPath.Text);
+                if (inputFile.ContainsAny(".xapk", ".zip", ".apks", ".apkm"))
+                    await main.MergeAPK(inputFile);
+                else
+                    await main.Decompile(inputFile);
             }
             else
                 MessageBox.Show(Language.WarningFileForDecodingNotSelected, Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -107,7 +111,7 @@ namespace APKToolGUI.Handlers
                 main.ToLog(ApktoolEventType.Error, Language.ErrorSelectedFileNotExist);
             }
         }
-        
+
         internal void decOutOpenDirBtn_Click(object sender, EventArgs e)
         {
             if (Directory.Exists(Settings.Default.Decode_OutputDir))

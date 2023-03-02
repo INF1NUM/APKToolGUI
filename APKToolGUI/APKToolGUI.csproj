@@ -267,6 +267,24 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AndroidRes\AndroidResourceMerger.cs" />
+    <Compile Include="AndroidRes\AndroidResources.cs" />
+    <Compile Include="AndroidRes\Model\AndroidAttribute.cs" />
+    <Compile Include="AndroidRes\Model\AndroidBool.cs" />
+    <Compile Include="AndroidRes\Model\AndroidInteger.cs" />
+    <Compile Include="AndroidRes\Model\AndroidPlural.cs" />
+    <Compile Include="AndroidRes\Model\AndroidPublic.cs" />
+    <Compile Include="AndroidRes\Model\AndroidString.cs" />
+    <Compile Include="AndroidRes\Model\AndroidStyle.cs" />
+    <Compile Include="AndroidRes\Model\AndroidStyleable.cs" />
+    <Compile Include="AndroidRes\Model\AndroidTypedItem.cs" />
+    <Compile Include="AndroidRes\Model\GenericArrayTypes.cs" />
+    <Compile Include="AndroidRes\Model\GenericTypes.cs" />
+    <Compile Include="AndroidRes\Model\Generic\AndroidGeneric.cs" />
+    <Compile Include="AndroidRes\Model\Generic\AndroidGenericArray.cs" />
+    <Compile Include="AndroidRes\Model\Generic\AndroidResource.cs" />
+    <Compile Include="AndroidRes\Util\ClassExtensions.cs" />
+    <Compile Include="AndroidRes\Util\Log.cs" />
     <Compile Include="ApkTool\AaptParser.cs" />
     <Compile Include="ApkTool\ApkFixer.cs" />
     <Compile Include="ApkTool\Apktool.cs">

@@ -32,53 +32,27 @@ namespace SaveToGameWpf.Logic.Utils
 
             return filter == null ? items : items.Where(filter).ToArray();
         }
-        public static void CheckDragEnter(this DragEventArgs e, string extensions)
-        {
-            if (!e.Data.GetDataPresent(DataFormats.FileDrop)) return;
-            string[] files = (string[])e.Data.GetData(DataFormats.FileDrop);
-            foreach (var file in files)
-            {
-                var ext = Path.GetExtension(file);
-                if (!String.IsNullOrEmpty(extensions) && ext.Equals(extensions))
-                {
-                    e.Effect = DragDropEffects.Copy;
-                    return;
-                }
-                else if (String.IsNullOrEmpty(extensions))
-                {
-                    e.Effect = DragDropEffects.Copy;
-                    return;
-                }
-            }
-            e.Effect = DragDropEffects.None;
-        }
 
-        public static bool CheckDragOver(this DragEventArgs e, string extensions)
-        {
-            if (!e.Data.GetDataPresent(DataFormats.FileDrop)) return false;
-            string[] files = (string[])e.Data.GetData(DataFormats.FileDrop);
-            foreach (var file in files)
-            {
-                var ext = Path.GetExtension(file);
-                if (!String.IsNullOrEmpty(extensions) && ext.Equals(extensions))
-                {
-                    e.Effect = DragDropEffects.Copy;
-                    return true;
-                }
-                //else if (String.IsNullOrEmpty(extensions) && File.Exists(Path.Combine(file, "AndroidManifest.xml")))
-                else if (String.IsNullOrEmpty(extensions))
-                {
-                    e.Effect = DragDropEffects.Copy;
-                    return true;
-                }
-            }
-            return false;
-        }
-
-        public static bool CheckManyDragOver(this DragEventArgs e, params string[] extensions)
+        public static void CheckDragEnter(this DragEventArgs e, params string[] extensions)
         {
             string[] files = e.GetFilesDrop();
-            if (extensions.Any(ext => files[0].EndsWith(ext, StringComparison.Ordinal)))
+            if (extensions == null && Directory.Exists(files[0]))
+                e.Effect = DragDropEffects.Copy;
+            else if (extensions.Any(ext => files[0].EndsWith(ext, StringComparison.Ordinal)))
+                e.Effect = DragDropEffects.Copy;
+            else
+                e.Effect = DragDropEffects.None;
+        }
+
+        public static bool CheckDragOver(this DragEventArgs e, params string[] extensions)
+        {
+            string[] files = e.GetFilesDrop();
+            if (extensions == null && Directory.Exists(files[0]))
+            {
+                e.Effect = DragDropEffects.Move;
+                return true;
+            }
+            else if (files.Length == 1 && extensions.Any(ext => files[0].EndsWith(ext, StringComparison.Ordinal)))
             {
                 e.Effect = DragDropEffects.Move;
                 return true;
@@ -88,46 +62,41 @@ namespace SaveToGameWpf.Logic.Utils
             return false;
         }
 
-        public static bool DropOneByEnd(this DragEventArgs e, string ext, Action<string> onSuccess)
+
+        public static bool CheckManyDragOver(this DragEventArgs e, params string[] extensions)
         {
-            string[] files = e.GetFilesDrop(ext);
+            string[] files = e.GetFilesDrop();
 
-            if (files.Length == 1)
+            if (extensions == null && Directory.Exists(files[0]))
             {
-                onSuccess(files[0]);
-
+                e.Effect = DragDropEffects.Move;
                 return true;
             }
+            else if (extensions.Any(ext => files[0].EndsWith(ext, StringComparison.Ordinal)))
+            {
+                e.Effect = DragDropEffects.Move;
+                return true;
+            }
+            e.Effect = DragDropEffects.None;
 
             return false;
         }
 
-        public static string DropOneByEnd(this DragEventArgs e, string ext)
+        public static bool DropOneByEnd(this DragEventArgs e, Action<string> onSuccess, params string[] extensions)
         {
-            string[] files = e.GetFilesDrop(ext);
+            string[] files = e.GetFilesDrop();
+            if (extensions == null && Directory.Exists(files[0]))
+            {
+                onSuccess(files[0]);
+                return true;
+            }
+            else if (extensions.Any(ext => files[0].EndsWith(ext, StringComparison.Ordinal)))
+            {
+                onSuccess(files[0]);
+                return true;
+            }
 
-            if (files.Length == 1)
-                return files[0];
-
-            return null;
-        }
-
-        public static void DropManyByEnd(this DragEventArgs e, string ext, Action<string[]> onSuccess)
-        {
-            string[] files = e.GetFilesDrop(ext);
-
-            if (files.Length > 0)
-                onSuccess(files);
-        }
-
-        public static string[] DropManyByEnd(this DragEventArgs e, string ext)
-        {
-            string[] files = e.GetFilesDrop(ext);
-
-            if (files.Length > 0)
-                return files;
-
-            return null;
+            return false;
         }
     }
 }

@@ -62,7 +62,7 @@ namespace APKToolGUI
                 }
                 if (FilesCheck() == true)
                 {
-                    Directory.CreateDirectory(TEMP_PATH);
+                    Directory.CreateDirectory(TempDirectory());
                     PortableSettingsProvider.SettingsFileName = "config.xml";
                     PortableSettingsProvider.ApplyProvider(Settings.Default);
                     Application.Run(new FormMain());
@@ -165,18 +165,17 @@ namespace APKToolGUI
                 return path;
         }
 
-        public static string TempDir()
+        public static string TempDirectory()
         {
             //Generate new every new instance to avoid conflict
             //We want to keep obfuscated path short as possible to prevent long path error
             if (Settings.Default.UseCustomTempDir)
                 return Path.Combine(Settings.Default.TempDir, StringExt.RandStrWithCaps(5));
             else
-                return Path.Combine(Path.GetTempPath(), StringExt.RandStrWithCaps(5));
+                return Path.Combine(LOCAL_APPDATA_PATH, ASSEMBLY_NAME, StringExt.RandStrWithCaps(5));
         }
 
         public static string LOCAL_APPDATA_PATH = Environment.GetEnvironmentVariable("LocalAppData");
-        public static string TEMP_PATH = TempDir();
         public static string APP_PATH = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
         public static string RES_PATH = Path.Combine(APP_PATH, "Resources");
         public static string ASSEMBLY_NAME = AssemblyName.GetAssemblyName(Assembly.GetExecutingAssembly().Location).Name;

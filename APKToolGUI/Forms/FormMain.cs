@@ -14,7 +14,8 @@ using System.Collections.Generic;
 using APKToolGUI.Handlers;
 using Microsoft.WindowsAPICodePack.Taskbar;
 using System.Media;
-
+using APKSMerger.AndroidRes;
+using Ionic.Zip;
 
 namespace APKToolGUI
 {
@@ -34,8 +35,12 @@ namespace APKToolGUI
         private Stopwatch stopwatch;
         private string lastStartedDate;
 
+        internal static FormMain Instance { get; private set; }
+
         public FormMain()
         {
+            Instance = this;
+
             Program.SetLanguage();
             InitializeComponent();
             this.Text += " - v" + ProductVersion;
@@ -113,6 +118,8 @@ namespace APKToolGUI
             else
                 ToLog(ApktoolEventType.None, Language.DragDropSupported);
 
+            ToLog(ApktoolEventType.None, String.Format(Language.TempDirectory, Program.TempDirectory()));
+
             TimeSpan updateInterval = DateTime.Now - Settings.Default.LastUpdateCheck;
             if (updateInterval.Days > 0 && Settings.Default.CheckForUpdateAtStartup)
                 updateCheker.CheckAsync(true);
@@ -140,8 +147,16 @@ namespace APKToolGUI
                     switch (Environment.GetCommandLineArgs()[1])
                     {
                         case "decapk":
-                            if (await Decompile(file) == 0)
-                                Close();
+                            if (file.ContainsAny(".xapk", ".zip", ".apks", ".apkm"))
+                            {
+                                if (await MergeAPK(file) == 0)
+                                    Close();
+                            }
+                            else
+                            {
+                                if (await Decompile(file) == 0)
+                                    Close();
+                            }
                             break;
                         case "comapk":
                             if (await Build(file) == 0)
@@ -232,6 +247,49 @@ namespace APKToolGUI
 
                 try
                 {
+                    string splitPath = Path.Combine(Program.TempDirectory(), "SplitInfo");
+                    string arch = null;
+
+                    await Task.Factory.StartNew(() =>
+                    {
+                        DirectoryUtils.Delete(splitPath);
+                        if (file.ContainsAny(".xapk", ".zip", ".apks", ".apkm"))
+                        {
+                            Directory.CreateDirectory(splitPath);
+
+                            using (ZipFile zipDest = ZipFile.Read(file))
+                            {
+                                bool mainApkFound = false;
+                                foreach (ZipEntry entry in zipDest.Entries)
+                                {
+                                    if (!mainApkFound && !entry.FileName.Contains("config.") && entry.FileName.EndsWith(".apk"))
+                                    {
+                                        Debug.WriteLine("Found main APK" + entry.FileName);
+                                        entry.Extract(splitPath, ExtractExistingFileAction.OverwriteSilently);
+                                        file = Path.Combine(splitPath, entry.FileName);
+                                        mainApkFound = true;
+                                    }
+                                    if (entry.FileName.Contains("lib/armeabi-v7a"))
+                                    {
+                                        arch += "armeabi-v7a, ";
+                                    }
+                                    if (entry.FileName.Contains("lib/arm64-v8a"))
+                                    {
+                                        arch += "arm64-v8a, ";
+                                    }
+                                    if (entry.FileName.Contains("lib/x86"))
+                                    {
+                                        arch += "x86, ";
+                                    }
+                                    if (entry.FileName.Contains("lib/x86_64"))
+                                    {
+                                        arch += "x86_64, ";
+                                    }
+                                }
+                            }
+                        }
+                    });
+
                     bool parsed = false;
                     await Task.Factory.StartNew(() =>
                     {
@@ -258,21 +316,26 @@ namespace APKToolGUI
                         permTxtBox.Text = aapt.Permissions;
                         localsTxtBox.Text = aapt.Locales;
                         fullInfoTextBox.Text = aapt.FullInfo;
-                        archSdkTxtBox.Text = aapt.NativeCode;
+                        if (!String.IsNullOrEmpty(aapt.NativeCode))
+                            archSdkTxtBox.Text = aapt.NativeCode;
+                        else
+                            archSdkTxtBox.Text = arch.RemoveLast(", ");
                         launchActivityTxtBox.Text = aapt.LaunchableActivity;
 
                         if (aapt.AppIcon != null)
                         {
                             await Task.Factory.StartNew(() =>
                             {
-                                ZipUtils.ExtractFile(file, aapt.AppIcon, Path.Combine(Program.TEMP_PATH, aapt.PackageName));
+                                ZipUtils.ExtractFile(file, aapt.AppIcon, Path.Combine(Program.TempDirectory(), aapt.PackageName));
                             });
-                            string icon = Path.Combine(Program.TEMP_PATH, aapt.PackageName, Path.GetFileName(aapt.AppIcon));
+                            string icon = Path.Combine(Program.TempDirectory(), aapt.PackageName, Path.GetFileName(aapt.AppIcon));
                             if (File.Exists(icon))
                             {
                                 apkIconPicBox.Image = BitmapUtils.LoadBitmap(icon);
                             }
                         }
+
+                        DirectoryUtils.Delete(splitPath);
                     }
                 }
                 catch (Exception ex)
@@ -283,9 +346,8 @@ namespace APKToolGUI
                     ToLog(ApktoolEventType.Warning, Language.ErrorGettingApkInfo);
 #endif
                 }
-
                 ToLog(ApktoolEventType.Done, Language.Done);
-                Done();
+                ToStatus(Language.Done, Resources.done);
             }
         }
         #endregion
@@ -434,6 +496,106 @@ namespace APKToolGUI
         }
         #endregion
 
+        #region Merge APK
+        internal async Task<int> MergeAPK(string inputSplitApk)
+        {
+            int code = 0;
+
+            string apkFileName = Path.GetFileName(inputSplitApk);
+
+            string tempApk = Path.Combine(Program.TempDirectory(), "dec.apk");
+
+            string extractedSplitDir = Path.Combine(Program.TempDirectory(), "SplitApk");
+            string decompileDir = Path.Combine(Program.TempDirectory(), "Decompiled");
+            string mergedDir = Path.Combine(Program.TempDirectory(), "Merged");
+
+            string outputDir = PathUtils.GetDirectoryNameWithoutExtension(inputSplitApk);
+            if (Settings.Default.Decode_UseOutputDir && !IgnoreOutputDirContextMenu)
+                outputDir = Path.Combine(Settings.Default.Decode_OutputDir, Path.GetFileNameWithoutExtension(inputSplitApk));
+
+            try
+            {
+                Running();
+
+                DirectoryUtils.Delete(extractedSplitDir);
+                Directory.CreateDirectory(extractedSplitDir);
+                DirectoryUtils.Delete(mergedDir);
+                Directory.CreateDirectory(mergedDir);
+
+                await Task.Factory.StartNew(() =>
+                {
+                    if (Settings.Default.Framework_ClearBeforeDecode)
+                    {
+                        if (ClearFramework() == 0)
+                            ToLog(ApktoolEventType.None, Language.FrameworkCacheCleared);
+                        else
+                            ToLog(ApktoolEventType.Error, Language.ErrorClearingFw);
+                    }
+
+                    ToLog(ApktoolEventType.Infomation, "=====[ " + Language.MergingApk + " ]=====");
+                    ToLog(ApktoolEventType.None, String.Format(Language.InputFile, inputSplitApk));
+                    ToStatus(String.Format(Language.MergingApk + " \"{0}\"...", Path.GetFileName(inputSplitApk)), Resources.waiting);
+
+                    //Extract all apk files
+                    ToLog(ApktoolEventType.None, Language.ExtractingAllApkFiles);
+                    ZipUtils.ExtractAll(inputSplitApk, extractedSplitDir, true);
+
+                    //Decompile all apk files
+                    ToLog(ApktoolEventType.None, Language.DecompilingAllApkFiles);
+
+                    List<DirectoryInfo> splitDirs = new List<DirectoryInfo>();
+                    var apkfiles = Directory.EnumerateFiles(extractedSplitDir, "*.apk");
+
+                    foreach (string apk in apkfiles)
+                    {
+                        string output = Path.Combine(decompileDir, Path.GetFileNameWithoutExtension(apk));
+
+                        code = apktool.Decompile(apk, output);
+                        if (code != 0)
+                        {
+                            ToLog(ApktoolEventType.Error, Language.ErrorDecompiling);
+                            throw new Exception();
+                        }
+
+                        if (Directory.Exists(Path.Combine(output, "smali")) || File.Exists(Path.Combine(output, "classes.dex")))
+                        {
+                            ToLog(ApktoolEventType.Infomation, String.Format(Language.DetectedAsBase, apk));
+
+                            ToLog(ApktoolEventType.None, String.Format(Language.MovingBasedirectory, decompileDir));
+                            DirectoryUtils.Move(output, mergedDir);
+                            continue;
+                        }
+
+                        DirectoryInfo splitI = new DirectoryInfo(output);
+                        ToLog(ApktoolEventType.Infomation, String.Format(Language.DetectedAsSplit, apk));
+                        splitDirs.Add(splitI);
+                    }
+
+                    AndroidMerger merger = new AndroidMerger();
+                    DirectoryInfo baseDir = new DirectoryInfo(mergedDir);
+
+                    Dictionary<string, string> locales, abis;
+
+                    ToLog(ApktoolEventType.None, Language.MergingApk);
+                    merger.CollectCapabilities(out locales, out abis, baseDir, splitDirs.ToArray());
+                    merger.MergeSplits(baseDir, splitDirs.ToArray());
+
+                    ToLog(ApktoolEventType.None, Language.MergeFinishedMoveDir);
+                    DirectoryUtils.Move(mergedDir, outputDir);
+                });
+            }
+            catch (Exception ex)
+            {
+                code = 1;
+                ToLog(ApktoolEventType.Error, ex.ToString());
+            }
+
+            Done(printTimer: true);
+
+            return code;
+        }
+        #endregion
+
         #region Apktool
         private void InitializeAPKTool()
         {
@@ -464,7 +626,7 @@ namespace APKToolGUI
             if (Settings.Default.Decode_UseOutputDir && !IgnoreOutputDirContextMenu)
                 outputDir = Path.Combine(Settings.Default.Decode_OutputDir, Path.GetFileNameWithoutExtension(inputApk));
 
-            string tempApk = Path.Combine(Program.TEMP_PATH, "dec.apk");
+            string tempApk = Path.Combine(Program.TempDirectory(), "dec.apk");
             string outputTempDir = tempApk.Replace(".apk", "");
 
             try
@@ -584,7 +746,7 @@ namespace APKToolGUI
                     }
                     string outputCompiledApkFile = outputFile;
 
-                    string tempDecApkFolder = Path.Combine(Program.TEMP_PATH, "dec");
+                    string tempDecApkFolder = Path.Combine(Program.TempDirectory(), "dec");
                     string outputTempApk = tempDecApkFolder + ".apk";
 
                     if (Settings.Default.Utf8FilenameSupport)
@@ -823,7 +985,7 @@ namespace APKToolGUI
                 ToStatus(String.Format(Language.Aligning + " \"{0}\"...", Path.GetFileName(input)), Resources.waiting);
             }));
 
-            string tempApk = Path.Combine(Program.TEMP_PATH, "tempapk.apk");
+            string tempApk = Path.Combine(Program.TempDirectory(), "tempapk.apk");
             string outputApkFile = output;
 
             if (Settings.Default.Utf8FilenameSupport)
@@ -870,7 +1032,7 @@ namespace APKToolGUI
                 ToLog(ApktoolEventType.None, String.Format(Language.InputFile, input));
                 ToStatus(String.Format(Language.Signing + " \"{0}\"...", Path.GetFileName(input)), Resources.waiting);
             }));
-            string tempApk = Path.Combine(Program.TEMP_PATH, "tempapk.apk");
+            string tempApk = Path.Combine(Program.TempDirectory(), "tempapk.apk");
             string outputApkFile = output;
 
             if (Settings.Default.Utf8FilenameSupport)
@@ -921,7 +1083,14 @@ namespace APKToolGUI
 
         private void openTempFolderToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Process.Start(Program.TEMP_PATH);
+            try
+            {
+                Process.Start(Program.TempDirectory());
+            }
+            catch (Exception ex)
+            {
+                ToLog(ApktoolEventType.Error, ex.Message);
+            }
         }
 
         private void menuItemCheckUpdate_Click(object sender, EventArgs e)
@@ -1058,9 +1227,10 @@ namespace APKToolGUI
 
         private void Application_ApplicationExit(object sender, EventArgs e)
         {
-            //Clear temp folder
-            DirectoryUtils.Delete(Program.TEMP_PATH);
             Save();
+
+            //Clear temp folder
+            DirectoryUtils.Delete(Program.TempDirectory());
         }
 
         private bool ActionButtonsEnabled

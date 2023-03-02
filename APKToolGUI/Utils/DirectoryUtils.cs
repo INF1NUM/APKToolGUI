@@ -52,19 +52,12 @@ namespace APKToolGUI.Utils
                 Directory.CreateDirectory(targetFolder);
                 foreach (var file in folder)
                 {
-                    //try
-                    //{
-                    //Debug.WriteLine("Move file: " + file);
                     var targetFile = Path.Combine(targetFolder, Path.GetFileName(file));
-                    File.Copy(file, targetFile, true);
-                    //}
-                    //catch (Exception ex)
-                    //{
-                    //    Debug.WriteLine("Error moving file: " + file + " (" + ex.Message + ")");
-                    //}
+                    if (File.Exists(targetFile))
+                        File.Delete(targetFile);
+                    File.Move(file, targetFile);
                 }
             }
-            Directory.Delete(source, true);
         }
 
         public static void ReplaceinFiles(

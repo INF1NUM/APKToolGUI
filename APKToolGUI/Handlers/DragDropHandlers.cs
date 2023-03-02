@@ -16,45 +16,48 @@ namespace APKToolGUI.Handlers
     class DragDropHandlers
     {
         private static FormMain main;
+
+        string[] apks = { ".apk", ".xapk", ".zip", ".apks", ".apkm" };
+
         public DragDropHandlers(FormMain Main)
         {
             main = Main;
 
             //Decode
             DragEventHandler decEventHandler = new DragEventHandler((sender, e) => { DropApkToDec(e); });
-            Register(main.decPanel, ".apk", decEventHandler);
-            Register(main.textBox_DECODE_InputAppPath, ".apk", decEventHandler, main.decPanel);
-            Register(main.button_DECODE_Decode, ".apk", decEventHandler, main.decPanel);
+            Register(main.decPanel, null, decEventHandler, apks);
+            Register(main.textBox_DECODE_InputAppPath, main.decPanel, decEventHandler, apks);
+            Register(main.button_DECODE_Decode, main.decPanel, decEventHandler, apks);
 
             DragEventHandler comEventHandler = new DragEventHandler((sender, e) => { DropDirToCom(e); });
-            Register(main.comPanel, "", comEventHandler);
-            Register(main.textBox_BUILD_InputProjectDir, "", comEventHandler, main.comPanel);
-            Register(main.button_BUILD_Build, "", comEventHandler, main.comPanel);
+            Register(main.comPanel, null, comEventHandler, null);
+            Register(main.textBox_BUILD_InputProjectDir, main.comPanel, comEventHandler, null);
+            Register(main.button_BUILD_Build, main.comPanel, comEventHandler, null);
 
             DragEventHandler alignEventHandler = new DragEventHandler((sender, e) => { DropApkToAlign(e); });
-            Register(main.zipalignPanel, ".apk", alignEventHandler);
-            Register(main.textBox_ZIPALIGN_InputFile, ".apk", alignEventHandler, main.zipalignPanel);
-            Register(main.button_ZIPALIGN_Align, ".apk", alignEventHandler, main.zipalignPanel);
+            Register(main.zipalignPanel, null, alignEventHandler, apks);
+            Register(main.textBox_ZIPALIGN_InputFile, main.zipalignPanel, alignEventHandler, apks);
+            Register(main.button_ZIPALIGN_Align, main.zipalignPanel, alignEventHandler, apks);
 
             DragEventHandler signEventHandler = new DragEventHandler((sender, e) => { DropApkToSign(e); });
-            Register(main.signPanel, ".apk", signEventHandler);
-            Register(main.textBox_SIGN_InputFile, ".apk", signEventHandler, main.signPanel);
-            Register(main.button_SIGN_Sign, ".apk", signEventHandler, main.signPanel);
+            Register(main.signPanel, null, signEventHandler, apks);
+            Register(main.textBox_SIGN_InputFile, main.signPanel, signEventHandler, apks);
+            Register(main.button_SIGN_Sign, main.signPanel, signEventHandler, apks);
 
             DragEventHandler baksmaliEventHandler = new DragEventHandler((sender, e) => { DropDexToBaksmali(e); });
-            Register(main.bakSmaliGroupBox, ".dex", baksmaliEventHandler);
+            Register(main.bakSmaliGroupBox, null, baksmaliEventHandler, new string[] { ".dex" });
             main.bakSmaliGroupBox.AllowDrop = true;
 
             DragEventHandler smaliEventHandler = new DragEventHandler((sender, e) => { DropDirToSmali(e); });
-            Register(main.smaliGroupBox, "", smaliEventHandler);
+            Register(main.smaliGroupBox, null, smaliEventHandler, null);
             main.smaliGroupBox.AllowDrop = true;
 
             DragEventHandler apkInfoEventHandler = new DragEventHandler((sender, e) => { DropApkToGetInfo(e); });
-            Register(main.basicInfoTabPage, ".apk", apkInfoEventHandler);
-            Register(main.fileTxtBox, ".apk", apkInfoEventHandler);
+            Register(main.basicInfoTabPage, null, apkInfoEventHandler, apks);
+            Register(main.fileTxtBox, null, apkInfoEventHandler, apks);
         }
 
-        void Register(Control ctrl, string extension, DragEventHandler dragHandler, Control extCtrl = null)
+        void Register(Control ctrl, Control extCtrl, DragEventHandler dragHandler, string[] extension)
         {
             if (extCtrl == null)
                 extCtrl = ctrl;
@@ -67,20 +70,24 @@ namespace APKToolGUI.Handlers
         private async void DropApkToDec(DragEventArgs e)
         {
             string apkFile = null;
-            if (e.DropOneByEnd(".apk", file => apkFile = file))
+            if (e.DropOneByEnd(file => apkFile = file, apks))
             {
-                await main.GetApkInfo(apkFile);
                 main.textBox_DECODE_InputAppPath.Text = apkFile;
                 main.decPanel.BackColor = Color.White;
 
-                await main.Decompile(apkFile);
+                await main.GetApkInfo(apkFile);
+
+                if (apkFile.ContainsAny(".xapk", ".zip", ".apks", ".apkm"))
+                    await main.MergeAPK(apkFile);
+                else
+                    await main.Decompile(apkFile);
             }
         }
 
         private async void DropDirToCom(DragEventArgs e)
         {
             string folder = null;
-            if (e.DropOneByEnd("", file => folder = file))
+            if (e.DropOneByEnd(file => folder = file, null))
             {
                 if (File.Exists(Path.Combine(folder, "AndroidManifest.xml")))
                 {
@@ -96,7 +103,7 @@ namespace APKToolGUI.Handlers
         private async void DropApkToAlign(DragEventArgs e)
         {
             string apkFile = null;
-            if (e.DropOneByEnd(".apk", file => apkFile = file))
+            if (e.DropOneByEnd(file => apkFile = file, apks))
             {
                 main.textBox_ZIPALIGN_InputFile.Text = apkFile;
                 main.zipalignPanel.BackColor = Color.White;
@@ -131,7 +138,7 @@ namespace APKToolGUI.Handlers
         private async void DropApkToSign(DragEventArgs e)
         {
             string apkFile = null;
-            if (e.DropOneByEnd(".apk", file => apkFile = file))
+            if (e.DropOneByEnd(file => apkFile = file, apks))
             {
                 main.textBox_SIGN_InputFile.Text = apkFile;
                 main.signPanel.BackColor = Color.White;
@@ -177,7 +184,7 @@ namespace APKToolGUI.Handlers
         private async void DropDexToBaksmali(DragEventArgs e)
         {
             string apkFile = null;
-            if (e.DropOneByEnd(".dex", file => apkFile = file))
+            if (e.DropOneByEnd(file => apkFile = file, ".dex"))
             {
                 main.baksmaliBrowseInputDexTxtBox.Text = apkFile;
                 main.bakSmaliGroupBox.BackColor = Color.White;
@@ -188,7 +195,7 @@ namespace APKToolGUI.Handlers
         private async void DropDirToSmali(DragEventArgs e)
         {
             string dir = null;
-            if (e.DropOneByEnd("", file => dir = file))
+            if (e.DropOneByEnd(file => dir = file, null))
             {
                 main.smaliBrowseInputDirTxtBox.Text = dir;
                 main.smaliGroupBox.BackColor = Color.White;
@@ -199,7 +206,7 @@ namespace APKToolGUI.Handlers
         private void DropApkToGetInfo(DragEventArgs e)
         {
             string apkFile = null;
-            if (e.DropOneByEnd(".apk", file => apkFile = file))
+            if (e.DropOneByEnd(file => apkFile = file, apks))
             {
                 main.smaliBrowseInputDirTxtBox.Text = apkFile;
                 main.basicInfoTabPage.BackColor = Color.White;

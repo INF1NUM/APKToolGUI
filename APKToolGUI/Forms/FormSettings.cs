@@ -169,10 +169,10 @@ namespace APKToolGUI
                 {
                     customTempLocationTxtBox.Text = fbd.SelectedPath;
                     //Clear temp folder
-                    DirectoryUtils.Delete(Program.TEMP_PATH);
+                    DirectoryUtils.Delete(Program.TempDirectory());
 
                     //Create new temp folder
-                    Program.TEMP_PATH = Program.TempDir();
+                    Directory.CreateDirectory(Program.TempDirectory());
                 }
             }
         }

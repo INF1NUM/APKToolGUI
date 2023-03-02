@@ -322,6 +322,15 @@ namespace APKToolGUI.Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Decompiling all APK files.
+        /// </summary>
+        internal static string DecompilingAllApkFiles {
+            get {
+                return ResourceManager.GetString("DecompilingAllApkFiles", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Decompiling dex.
         /// </summary>
         internal static string DecompilingDex {
@@ -345,6 +354,33 @@ namespace APKToolGUI.Languages {
         internal static string DeleteFile {
             get {
                 return ResourceManager.GetString("DeleteFile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {0} detected as base.
+        /// </summary>
+        internal static string DetectedAsBase {
+            get {
+                return ResourceManager.GetString("DetectedAsBase", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {0} detected as split.
+        /// </summary>
+        internal static string DetectedAsSplit {
+            get {
+                return ResourceManager.GetString("DetectedAsSplit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Directory {0} does not exist.
+        /// </summary>
+        internal static string DirNotExist {
+            get {
+                return ResourceManager.GetString("DirNotExist", resourceCulture);
             }
         }
         
@@ -583,6 +619,15 @@ namespace APKToolGUI.Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Extracting all APK files.
+        /// </summary>
+        internal static string ExtractingAllApkFiles {
+            get {
+                return ResourceManager.GetString("ExtractingAllApkFiles", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to File.
         /// </summary>
         internal static string File {
@@ -727,6 +772,24 @@ namespace APKToolGUI.Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Merge finished. Moving directory to {0}.
+        /// </summary>
+        internal static string MergeFinishedMoveDir {
+            get {
+                return ResourceManager.GetString("MergeFinishedMoveDir", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Merging APK.
+        /// </summary>
+        internal static string MergingApk {
+            get {
+                return ResourceManager.GetString("MergingApk", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to META-INF folder does not exist. Skipped.
         /// </summary>
         internal static string MetainfNotExist {
@@ -750,6 +813,15 @@ namespace APKToolGUI.Languages {
         internal static string MoveTempApkToOutput {
             get {
                 return ResourceManager.GetString("MoveTempApkToOutput", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Moving base directory to {0}.
+        /// </summary>
+        internal static string MovingBasedirectory {
+            get {
+                return ResourceManager.GetString("MovingBasedirectory", resourceCulture);
             }
         }
         
@@ -903,6 +975,15 @@ namespace APKToolGUI.Languages {
         internal static string SystemLanguage {
             get {
                 return ResourceManager.GetString("SystemLanguage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Temp directory: {0}.
+        /// </summary>
+        internal static string TempDirectory {
+            get {
+                return ResourceManager.GetString("TempDirectory", resourceCulture);
             }
         }
         

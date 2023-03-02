@@ -112,6 +112,15 @@ namespace APKToolGUI.Utils
             }
         }
 
+        public static void ExtractAll(string path, string destination, bool flattenFoldersOnExtract = false)
+        {
+            using (ZipFile zip = ZipFile.Read(path))
+            {
+                zip.FlattenFoldersOnExtract = flattenFoldersOnExtract;
+                zip.ExtractAll(destination, ExtractExistingFileAction.OverwriteSilently);
+            }
+        }
+
         public static void AddDirectory(string path, string fileName, string directoryPathInArchive = "")
         {
             ZipFile zip = new ZipFile();
