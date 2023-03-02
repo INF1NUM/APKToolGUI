@@ -1151,9 +1151,9 @@ namespace APKToolGUI
 
         private void compiledApkOpenDirBtn_Click(object sender, EventArgs e)
         {
-            if (File.Exists(Settings.Default.Build_OutputAppPath))
+            if (Directory.Exists(Settings.Default.Build_OutputAppPath))
             {
-                Process.Start("explorer.exe", string.Format("/select,\"{0}\"", Settings.Default.Build_OutputAppPath));
+                Process.Start("explorer.exe", Settings.Default.Build_OutputAppPath);
             }
             else
                 ToLog(ApktoolEventType.Error, Language.ErrorSelectedFileNotExist);
