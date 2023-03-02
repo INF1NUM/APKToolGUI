@@ -87,6 +87,7 @@ namespace APKToolGUI
             new SmaliControlEventHandlers(this);
             new DragDropHandlers(this);
             new ApkinfoControlEventHandlers(this);
+            new MainWindowEventHandlers(this);
 
             stopwatch = new Stopwatch();
         }
@@ -1055,7 +1056,6 @@ namespace APKToolGUI
         }
         #endregion
 
-
         #region Main menu event handlers
         private void saveLogItem_Click(object sender, EventArgs e)
         {
@@ -1114,103 +1114,6 @@ namespace APKToolGUI
         private void baksmaliIssuesLinkItem_Click(object sender, EventArgs e)
         {
             Process.Start("https://github.com/JesusFreke/smali/issues?q=is%3Aissue");
-        }
-        #endregion
-
-        #region Control event handlers
-        private void clearLogToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            logTxtBox.Text = "";
-        }
-
-        private void copyToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                Clipboard.SetText(logTxtBox.SelectedText);
-            }
-            catch (Exception ex)
-            {
-                ToLog(ApktoolEventType.Error, ex.Message);
-            }
-        }
-
-        private void openAndroidMainfestBtn_Click(object sender, EventArgs e)
-        {
-            if (File.Exists(Path.Combine(textBox_BUILD_InputProjectDir.Text, "AndroidManifest.xml")))
-                Process.Start("explorer.exe", Path.Combine(textBox_BUILD_InputProjectDir.Text, "AndroidManifest.xml"));
-            else
-                ToLog(ApktoolEventType.Error, Language.AndroidManifestNotExist);
-        }
-
-        private void openApktoolYmlBtn_Click(object sender, EventArgs e)
-        {
-            if (File.Exists(Path.Combine(textBox_BUILD_InputProjectDir.Text, "apktool.yml")))
-                Process.Start("explorer.exe", Path.Combine(textBox_BUILD_InputProjectDir.Text, "apktool.yml"));
-            else
-                ToLog(ApktoolEventType.Error, Language.AndroidManifestNotExist);
-        }
-
-        private void compiledApkOpenDirBtn_Click(object sender, EventArgs e)
-        {
-            if (Directory.Exists(Settings.Default.Build_OutputAppPath))
-            {
-                Process.Start("explorer.exe", Settings.Default.Build_OutputAppPath);
-            }
-            else
-                ToLog(ApktoolEventType.Error, Language.ErrorSelectedFileNotExist);
-        }
-
-        private void button_OpenMainActivity_Click(object sender, EventArgs e)
-        {
-            string decPath = textBox_BUILD_InputProjectDir.Text;
-            if (Directory.Exists(decPath))
-            {
-                var launchActivityList = new List<string>
-                {
-                    aapt != null ? aapt.LaunchableActivity : CommonUtils.GetActivityFromManifest(decPath),
-                    "com\\unity3d\\player\\UnityPlayerActivity",
-                    CommonUtils.GetApplicationNameFromManifest(decPath)
-                };
-
-                foreach (string launchActivity in launchActivityList)
-                {
-                    if (String.IsNullOrEmpty(launchActivity))
-                        continue;
-
-                    Debug.WriteLine(launchActivity);
-
-                    string path = null;
-                    bool activityFound = false;
-                    for (int i = 1; i < 100; i++)
-                    {
-                        string smaliFolder = (i == 1) ? "smali" : "smali_classes" + i;
-                        path = Path.Combine(decPath, smaliFolder, launchActivity.Replace(".", "\\") + ".smali");
-                        if (File.Exists(path))
-                        {
-                            Debug.WriteLine(path);
-                            activityFound = true;
-                            break;
-                        }
-                    }
-
-                    if (activityFound && !CommonUtils.OnCreateExists(path))
-                        continue;
-
-                    if (activityFound)
-                    {
-                        ToLog(ApktoolEventType.None, String.Format(Language.MainActivityFound, path));
-                        Process.Start("explorer.exe", path);
-                        return;
-                    }
-                    else
-                        continue;
-                }
-
-                ToLog(ApktoolEventType.Warning, Language.MainActivityNotFoundPleaseFindManually);
-            }
-            else
-                ToLog(ApktoolEventType.Error, Language.DecompiledAPKNotExist);
         }
         #endregion
 

@@ -23,8 +23,6 @@ namespace APKToolGUI.Handlers
             main.button_DECODE_BrowseOutputDirectory.Click += button_DECODE_BrowseOutputDirectory_Click;
             main.button_DECODE_BrowseInputAppPath.Click += button_DECODE_BrowseInputAppPath_Click;
             main.button_DECODE_Decode.Click += button_DECODE_Decode_Click;
-            main.decApkOpenDirBtn.Click += decApkOpenDirBtn_Click;
-            main.decOutOpenDirBtn.Click += decOutOpenDirBtn_Click;
         }
 
         internal void button_DECODE_BrowseFrameDir_Click(object sender, EventArgs e)
@@ -100,26 +98,6 @@ namespace APKToolGUI.Handlers
             }
             else
                 MessageBox.Show(Language.WarningFileForDecodingNotSelected, Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
-        }
-
-        internal void decApkOpenDirBtn_Click(object sender, EventArgs e)
-        {
-            if (Directory.Exists(main.textBox_BUILD_InputProjectDir.Text))
-                Process.Start("explorer.exe", main.textBox_BUILD_InputProjectDir.Text);
-            else
-            {
-                main.ToLog(ApktoolEventType.Error, Language.ErrorSelectedFileNotExist);
-            }
-        }
-
-        internal void decOutOpenDirBtn_Click(object sender, EventArgs e)
-        {
-            if (Directory.Exists(Settings.Default.Decode_OutputDir))
-                Process.Start("explorer.exe", Settings.Default.Decode_OutputDir);
-            else
-            {
-                main.ToLog(ApktoolEventType.Error, Language.ErrorSelectedOutputFolderNotExist);
-            }
         }
     }
 }

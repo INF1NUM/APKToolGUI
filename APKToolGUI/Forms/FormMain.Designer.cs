@@ -349,28 +349,24 @@
             resources.ApplyResources(this.compileOutputOpenDirBtn, "compileOutputOpenDirBtn");
             this.compileOutputOpenDirBtn.Name = "compileOutputOpenDirBtn";
             this.compileOutputOpenDirBtn.UseVisualStyleBackColor = true;
-            this.compileOutputOpenDirBtn.Click += new System.EventHandler(this.compiledApkOpenDirBtn_Click);
             // 
             // button_OpenMainActivity
             // 
             resources.ApplyResources(this.button_OpenMainActivity, "button_OpenMainActivity");
             this.button_OpenMainActivity.Name = "button_OpenMainActivity";
             this.button_OpenMainActivity.UseVisualStyleBackColor = true;
-            this.button_OpenMainActivity.Click += new System.EventHandler(this.button_OpenMainActivity_Click);
             // 
             // openApktoolYmlBtn
             // 
             resources.ApplyResources(this.openApktoolYmlBtn, "openApktoolYmlBtn");
             this.openApktoolYmlBtn.Name = "openApktoolYmlBtn";
             this.openApktoolYmlBtn.UseVisualStyleBackColor = true;
-            this.openApktoolYmlBtn.Click += new System.EventHandler(this.openApktoolYmlBtn_Click);
             // 
             // openAndroidMainfestBtn
             // 
             resources.ApplyResources(this.openAndroidMainfestBtn, "openAndroidMainfestBtn");
             this.openAndroidMainfestBtn.Name = "openAndroidMainfestBtn";
             this.openAndroidMainfestBtn.UseVisualStyleBackColor = true;
-            this.openAndroidMainfestBtn.Click += new System.EventHandler(this.openAndroidMainfestBtn_Click);
             // 
             // signPanel
             // 
@@ -1802,13 +1798,11 @@
             // 
             this.copyToolStripMenuItem.Name = "copyToolStripMenuItem";
             resources.ApplyResources(this.copyToolStripMenuItem, "copyToolStripMenuItem");
-            this.copyToolStripMenuItem.Click += new System.EventHandler(this.copyToolStripMenuItem_Click);
             // 
             // clearLogToolStripMenuItem
             // 
             this.clearLogToolStripMenuItem.Name = "clearLogToolStripMenuItem";
             resources.ApplyResources(this.clearLogToolStripMenuItem, "clearLogToolStripMenuItem");
-            this.clearLogToolStripMenuItem.Click += new System.EventHandler(this.clearLogToolStripMenuItem_Click);
             // 
             // mainMenu1
             // 
@@ -2223,8 +2217,6 @@
         internal System.Windows.Forms.Button apkGkLinkBtn;
         internal System.Windows.Forms.TextBox archSdkTxtBox;
         internal System.Windows.Forms.Label label30;
-        private System.Windows.Forms.RichTextBox logTxtBox;
-        private System.Windows.Forms.ToolStripMenuItem copyToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem saveLogToFileToolStripMenuItem;
@@ -2240,6 +2232,8 @@
         private System.Windows.Forms.CheckBox checkBox1;
         internal System.Windows.Forms.TextBox launchActivityTxtBox;
         internal System.Windows.Forms.Label label31;
+        internal System.Windows.Forms.RichTextBox logTxtBox;
+        internal System.Windows.Forms.ToolStripMenuItem copyToolStripMenuItem;
     }
 }
 

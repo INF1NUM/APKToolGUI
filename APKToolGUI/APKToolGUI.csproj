@@ -306,6 +306,7 @@
     <Compile Include="Handlers\DecodeControlEventHandlers.cs" />
     <Compile Include="Handlers\DragDropHandlers.cs" />
     <Compile Include="Handlers\FrameworkControlEventHandlers.cs" />
+    <Compile Include="Handlers\MainWindowEventHandlers.cs" />
     <Compile Include="Handlers\SignControlEventHandlers.cs" />
     <Compile Include="Handlers\SmaliControlEventHandlers.cs" />
     <Compile Include="Handlers\ZipalignControlEventHandlers.cs" />

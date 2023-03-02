@@ -25,7 +25,6 @@ namespace APKToolGUI.Handlers
             main.button_ZIPALIGN_BrowseOutputFile.Click += button_ZIPALIGN_BrowseOutputFile_Click;
             main.button_ZIPALIGN_BrowseInputFile.Click += button_ZIPALIGN_BrowseInputFile_Click;
             main.button_ZIPALIGN_Align.Click += button_ZIPALIGN_Align_Click;
-            main.alignApkOpenDirBtn.Click += alignApkOpenDirBtn_Click;
         }
 
         internal bool CheckAlignSwitch
@@ -109,27 +108,6 @@ namespace APKToolGUI.Handlers
                 main.ToLog(ApktoolEventType.Error, ex.Message);
             }
             main.Done(printTimer: true);
-        }
-
-        internal void alignApkOpenDirBtn_Click(object sender, EventArgs e)
-        {
-            string inputFile = Settings.Default.Zipalign_InputFile;
-
-            string outputFile = inputFile;
-            if (!String.IsNullOrEmpty(outputFile))
-            {
-                if (Settings.Default.Zipalign_UseOutputDir)
-                    outputFile = Path.Combine(Settings.Default.Zipalign_OutputDir, Path.GetFileName(inputFile));
-
-                if (!Settings.Default.Zipalign_OverwriteOutputFile)
-                    outputFile = PathUtils.GetDirectoryNameWithoutExtension(outputFile) + " aligned.apk";
-            }
-            if (File.Exists(outputFile))
-                Process.Start("explorer.exe", string.Format("/select,\"{0}\"", outputFile));
-            else
-            {
-                main.ToLog(ApktoolEventType.Error, Language.ErrorSelectedFileNotExist);
-            }
         }
     }
 }

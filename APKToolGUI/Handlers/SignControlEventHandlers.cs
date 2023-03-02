@@ -32,7 +32,6 @@ namespace APKToolGUI.Handlers
             main.schemev4ComboBox.SelectedIndexChanged += schemeComboBoxChanged;
             main.button_SIGN_Sign.Click += button_SIGN_Sign_Click;
             main.selectKeyStoreFileBtn.Click += selectKeyStoreFileBtn_Click;
-            main.signApkOpenDirBtn.Click += signApkOpenDirBtn_Click;
         }
 
         internal void button_SIGN_BrowsePublicKey_Click(object sender, EventArgs e)
@@ -159,21 +158,6 @@ namespace APKToolGUI.Handlers
                 ofd.Filter = "Keystore|*.keystore;*.jks";
                 if (ofd.ShowDialog() == DialogResult.OK)
                     main.keyStoreFileTxtBox.Text = ofd.FileName;
-            }
-        }
-
-        internal void signApkOpenDirBtn_Click(object sender, EventArgs e)
-        {
-            string inputFile = Settings.Default.Sign_InputFile;
-            string outputFile = inputFile;
-            if (Settings.Default.Zipalign_UseOutputDir)
-                outputFile = Path.Combine(Settings.Default.Sign_OutputDir, Path.GetFileName(inputFile));
-
-            if (File.Exists(outputFile))
-                Process.Start("explorer.exe", string.Format("/select,\"{0}\"", outputFile));
-            else
-            {
-                main.ToLog(ApktoolEventType.Error, Language.ErrorSelectedFileNotExist);
             }
         }
 
