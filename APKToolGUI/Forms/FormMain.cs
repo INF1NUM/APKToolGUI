@@ -43,7 +43,8 @@ namespace APKToolGUI
 
             Program.SetLanguage();
             InitializeComponent();
-            this.Text += " - v" + ProductVersion;
+
+            Text += " - v" + ProductVersion;
             Application.ApplicationExit += new EventHandler(Application_ApplicationExit);
 
             if (!File.Exists(Settings.Default.Decode_InputAppPath))
@@ -1085,7 +1086,7 @@ namespace APKToolGUI
         {
             try
             {
-                Process.Start(Program.TempDirectory());
+                Process.Start("explorer.exe", Program.TempDirectory());
             }
             catch (Exception ex)
             {
