@@ -1115,6 +1115,8 @@ namespace APKToolGUI
 
         internal int Align(string input, string output)
         {
+            Running();
+
             Invoke(new Action(delegate ()
             {
                 ToLog(ApktoolEventType.Infomation, "=====[ " + Language.Aligning + " ]=====");
