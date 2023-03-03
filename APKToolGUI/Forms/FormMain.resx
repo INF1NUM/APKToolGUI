@@ -7628,7 +7628,7 @@ and change target SDK to 29</value>
     <value>99, 97</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>APKTool GUI</value>
+    <value>APK Tool GUI</value>
   </data>
   <data name="&gt;&gt;toolStripStatusLabelStateImage.Name" xml:space="preserve">
     <value>toolStripStatusLabelStateImage</value>

@@ -179,12 +179,13 @@ namespace APKToolGUI
                 return Path.Combine(LOCAL_APPDATA_PATH, ASSEMBLY_NAME, StringExt.RandStrWithCaps(5));
         }
 
+        public static string ASSEMBLY_NAME { get { return AssemblyName.GetAssemblyName(Assembly.GetExecutingAssembly().Location).Name; } }
+        public static string APP_NAME { get { return "APK Tool GUI"; } }
+
         public static string TEMP_PATH { get; set; }
         public static string LOCAL_APPDATA_PATH { get { return Environment.GetEnvironmentVariable("LocalAppData"); } }
         public static string APP_PATH { get { return Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location); } }
         public static string RES_PATH { get { return Path.Combine(APP_PATH, "Resources"); } }
-        public static string ASSEMBLY_NAME { get { return AssemblyName.GetAssemblyName(Assembly.GetExecutingAssembly().Location).Name; } }
-
         public static string APKTOOL_PATH { get { return Path.Combine(RES_PATH, "apktool.jar"); } }
         public static string APKSIGNER_PATH { get { return Path.Combine(RES_PATH, "apksigner.jar"); } }
         public static string BAKSMALI_PATH { get { return Path.Combine(RES_PATH, "baksmali.jar"); } }
