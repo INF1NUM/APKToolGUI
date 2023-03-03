@@ -493,6 +493,15 @@ namespace APKToolGUI.Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Merging failed.
+        /// </summary>
+        internal static string ErrorMerging {
+            get {
+                return ResourceManager.GetString("ErrorMerging", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to This directory is not an Android package.
         /// </summary>
         internal static string ErrorNotAnApk {
@@ -624,6 +633,15 @@ namespace APKToolGUI.Languages {
         internal static string ExtractingAllApkFiles {
             get {
                 return ResourceManager.GetString("ExtractingAllApkFiles", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Extract original signature.
+        /// </summary>
+        internal static string ExtractOrigSignature {
+            get {
+                return ResourceManager.GetString("ExtractOrigSignature", resourceCulture);
             }
         }
         
@@ -786,6 +804,15 @@ namespace APKToolGUI.Languages {
         internal static string MergingApk {
             get {
                 return ResourceManager.GetString("MergingApk", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Merging APK using APKEditor.jar.
+        /// </summary>
+        internal static string MergingApkEditor {
+            get {
+                return ResourceManager.GetString("MergingApkEditor", resourceCulture);
             }
         }
         

@@ -459,4 +459,13 @@
   <data name="TempDirectory" xml:space="preserve">
     <value>Temp directory: "{0}"</value>
   </data>
+  <data name="ErrorMerging" xml:space="preserve">
+    <value>Merging failed</value>
+  </data>
+  <data name="ExtractOrigSignature" xml:space="preserve">
+    <value>Extract original signature</value>
+  </data>
+  <data name="MergingApkEditor" xml:space="preserve">
+    <value>Merging APK using APKEditor.jar</value>
+  </data>
 </root>

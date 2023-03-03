@@ -290,6 +290,9 @@
     <Compile Include="ApkTool\Apktool.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="ApkTool\ApkEditor.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="ApkTool\Smali.cs">
       <SubType>Component</SubType>
     </Compile>

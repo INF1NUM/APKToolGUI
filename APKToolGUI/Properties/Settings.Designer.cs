@@ -1107,5 +1107,17 @@ namespace APKToolGUI.Properties {
                 this["Sign_OverwriteInputFile"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool Decode_UseApkEditorMergeApk {
+            get {
+                return ((bool)(this["Decode_UseApkEditorMergeApk"]));
+            }
+            set {
+                this["Decode_UseApkEditorMergeApk"] = value;
+            }
+        }
     }
 }

@@ -128,7 +128,8 @@ namespace APKToolGUI
                 AAPT2_PATH,
                 SIGNAPK_KEYPRIVATE,
                 SIGNAPK_KEYPUBLIC,
-                AAPT2JNI_PATH
+                AAPT2JNI_PATH,
+                APKEDITOR_PATH
             };
             for (int i = 0; i < fileList.Length; i++)
                 if (!File.Exists(fileList[i]))
@@ -194,6 +195,7 @@ namespace APKToolGUI
         public static string AAPT_PATH { get { return Path.Combine(RES_PATH, "aapt.exe"); } }
         public static string AAPT2_PATH { get { return Path.Combine(RES_PATH, "aapt2.exe"); } }
         public static string AAPT2JNI_PATH { get { return Path.Combine(RES_PATH, "libaapt2_jni.dll"); } }
+        public static string APKEDITOR_PATH { get { return Path.Combine(RES_PATH, "apkeditor.jar"); } }
         public static string FRAMEWORK_DIR { get { return Path.Combine(LOCAL_APPDATA_PATH, "apktool", "framework"); } }
         public static string STANDALONE_FRAMEWORK_DIR { get { return Path.Combine(LOCAL_APPDATA_PATH, ASSEMBLY_NAME, "framework"); } }
     }

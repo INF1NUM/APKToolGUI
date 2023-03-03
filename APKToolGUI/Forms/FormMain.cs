@@ -16,11 +16,13 @@ using Microsoft.WindowsAPICodePack.Taskbar;
 using System.Media;
 using APKSMerger.AndroidRes;
 using Ionic.Zip;
+using System.Linq;
 
 namespace APKToolGUI
 {
     public partial class FormMain : Form
     {
+        internal ApkEditor apkeditor;
         internal Apktool apktool;
         internal Signapk signapk;
         internal Baksmali baksmali;
@@ -102,6 +104,7 @@ namespace APKToolGUI
             InitializeSmali();
             InitializeAPKTool();
             InitializeSignapk();
+            InitializeApkEditor();
 
             string javaVersion = apktool.GetJavaVersion();
             if (javaVersion != null)
@@ -152,8 +155,16 @@ namespace APKToolGUI
                         case "decapk":
                             if (file.ContainsAny(".xapk", ".zip", ".apks", ".apkm"))
                             {
-                                if (await MergeAPK(file) == 0)
-                                    Close();
+                                if (Settings.Default.Decode_UseApkEditorMergeApk)
+                                {
+                                    if (await MergeUsingApkEditor(file) == 0)
+                                        Close();
+                                }
+                                else
+                                {
+                                    if (await Merge(file) == 0)
+                                        Close();
+                                }
                             }
                             else
                             {
@@ -401,6 +412,8 @@ namespace APKToolGUI
 
         internal void ToLog(string time, string message, Color backColor)
         {
+            Debug.WriteLine(time + " " + message);
+
             if (logTxtBox.InvokeRequired)
                 Invoke(new Action(delegate ()
                 {
@@ -417,9 +430,6 @@ namespace APKToolGUI
 
         internal void ToLog(ApktoolEventType eventType, string message)
         {
-            //LightPink
-            //LightYellow
-            //LightBlue
             if (String.IsNullOrWhiteSpace(message))
                 return;
 
@@ -500,7 +510,7 @@ namespace APKToolGUI
         #endregion
 
         #region Merge APK
-        internal async Task<int> MergeAPK(string inputSplitApk)
+        internal async Task<int> Merge(string inputSplitApk)
         {
             int code = 0;
 
@@ -585,6 +595,127 @@ namespace APKToolGUI
 
                     ToLog(ApktoolEventType.None, String.Format(Language.MergeFinishedMoveDir, outputDir));
                     DirectoryUtils.Move(mergedDir, outputDir);
+                });
+            }
+            catch (Exception ex)
+            {
+                code = 1;
+                ToLog(ApktoolEventType.Error, ex.ToString());
+            }
+
+            Done(printTimer: true);
+
+            return code;
+        }
+        #endregion
+
+        #region ApkEditor
+        private void InitializeApkEditor()
+        {
+            apkeditor = new ApkEditor(JavaUtils.GetJavaPath(), Program.APKEDITOR_PATH);
+            apkeditor.ApkEditorOutputDataRecieved += ApkEditorOutputDataRecieved;
+            apkeditor.ApkEditorErrorDataRecieved += ApkEditorErrorDataRecieved;
+        }
+
+        void ApkEditorErrorDataRecieved(object sender, ApkEditorDataReceivedEventArgs e)
+        {
+            ToLog(ApktoolEventType.Error, e.Message);
+        }
+
+        void ApkEditorOutputDataRecieved(object sender, ApkEditorDataReceivedEventArgs e)
+        {
+            ToLog(ApktoolEventType.None, e.Message);
+        }
+
+        internal async Task<int> MergeUsingApkEditor(string inputSplitApk)
+        {
+            int code = 0;
+
+            string apkFileName = Path.GetFileName(inputSplitApk);
+
+            string tempApk = Path.Combine(Program.TEMP_PATH, "dec.apk");
+            string tempDecApk = Path.Combine(Program.TEMP_PATH, "dec");
+            string decOrigDir = Path.Combine(tempDecApk, "original");
+
+            string splitDir = Path.Combine(Program.TEMP_PATH, "SplitTmp");
+            string extractedDir = Path.Combine(splitDir, "ExtractedApks");
+            string mergedDir = Path.Combine(splitDir, "Merged");
+
+            string outputDir = PathUtils.GetDirectoryNameWithoutExtension(inputSplitApk);
+            if (Settings.Default.Decode_UseOutputDir && !IgnoreOutputDirContextMenu)
+                outputDir = Path.Combine(Settings.Default.Decode_OutputDir, Path.GetFileNameWithoutExtension(inputSplitApk));
+
+            try
+            {
+                Running();
+
+                DirectoryUtils.Delete(splitDir);
+                Directory.CreateDirectory(splitDir);
+
+                await Task.Factory.StartNew(() =>
+                {
+                    if (Settings.Default.Framework_ClearBeforeDecode)
+                    {
+                        if (ClearFramework() == 0)
+                            ToLog(ApktoolEventType.None, Language.FrameworkCacheCleared);
+                        else
+                            ToLog(ApktoolEventType.Error, Language.ErrorClearingFw);
+                    }
+
+                    ToLog(ApktoolEventType.Infomation, "=====[ " + Language.MergingApk + " ]=====");
+                    ToLog(ApktoolEventType.None, String.Format(Language.InputFile, inputSplitApk));
+                    ToStatus(String.Format(Language.MergingApk + " \"{0}\"...", Path.GetFileName(inputSplitApk)), Resources.waiting);
+
+                    //Extract all apk files
+                    ToLog(ApktoolEventType.None, Language.ExtractingAllApkFiles);
+                    ZipUtils.ExtractAll(inputSplitApk, extractedDir, true);
+
+                    var apkfiles = Directory.EnumerateFiles(extractedDir, "*.apk");
+
+                    ToLog(ApktoolEventType.None, Language.MergingApkEditor);
+                    code = apkeditor.Merge(extractedDir, tempApk);
+                    if (code == 0)
+                    {
+                        code = apktool.Decompile(tempApk, tempDecApk);
+
+                        if (code == 0)
+                        {
+                            ToLog(ApktoolEventType.None, Language.ExtractOrigSignature);
+
+                            foreach (string apk in apkfiles)
+                            {
+                                ZipUtils.ExtractDirectory(apk, "META-INF", decOrigDir);
+                                ZipUtils.ExtractFile(apk, "stamp-cert-sha256", decOrigDir);
+                                break;
+                            }
+
+                            ToLog(ApktoolEventType.None, String.Format(Language.MoveTempApkFileToOutput, tempDecApk, outputDir));
+                            DirectoryUtils.Delete(outputDir);
+                            DirectoryUtils.Copy(tempDecApk, outputDir);
+
+                            textBox_BUILD_InputProjectDir.BeginInvoke(new Action(delegate
+                            {
+                                textBox_BUILD_InputProjectDir.Text = outputDir;
+                            }));
+
+                            ToLog(ApktoolEventType.None, String.Format(Language.DecompilingSuccessfullyCompleted, outputDir));
+                            if (Settings.Default.Decode_FixError)
+                            {
+                                if (ApkFixer.ChangeSdkTo29(outputDir))
+                                    ToLog(ApktoolEventType.None, Language.ChangedTargetSdkTo29);
+                                if (ApkFixer.FixAndroidManifest(outputDir))
+                                    ToLog(ApktoolEventType.None, Language.FixAndroidManifest);
+                                if (ApkFixer.RemoveApkToolDummies(outputDir))
+                                    ToLog(ApktoolEventType.None, Language.RemoveApkToolDummies);
+                            }
+                            ToLog(ApktoolEventType.None, String.Format(Language.MergeFinishedMoveDir, outputDir));
+                            ToLog(ApktoolEventType.Done, "=====[ " + Language.AllDone + " ]=====");
+                        }
+                        else
+                            ToLog(ApktoolEventType.Error, Language.ErrorDecompiling);
+                    }
+                    else
+                    ToLog(ApktoolEventType.Error, Language.ErrorMerging);
                 });
             }
             catch (Exception ex)
