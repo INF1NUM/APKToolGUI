@@ -1,4 +1,5 @@
-﻿using APKToolGUI.Languages;
+﻿using APKToolGUI.ApkTool;
+using APKToolGUI.Languages;
 using APKToolGUI.Properties;
 using APKToolGUI.Utils;
 using SaveToGameWpf.Logic.Utils;
@@ -63,130 +64,145 @@ namespace APKToolGUI.Handlers
                 extCtrl = ctrl;
             ctrl.DragLeave += new EventHandler((sender, e) => extCtrl.BackColor = Color.White);
             ctrl.DragEnter += new DragEventHandler((sender, e) => e.CheckDragEnter(extension));
-            ctrl.DragOver += new DragEventHandler((sender, e) => { if (e.CheckDragOver(extension)) extCtrl.BackColor = Color.LightGreen; });
+            ctrl.DragOver += new DragEventHandler((sender, e) => { if (e.CheckManyDragOver(extension)) extCtrl.BackColor = Color.LightGreen; });
             ctrl.DragDrop += dragHandler;
         }
 
         private async void DropApkToDec(DragEventArgs e)
         {
-            string apkFile = null;
-            if (e.DropOneByEnd(file => apkFile = file, apks))
+            string[] apkFiles = null;
+            if (e.DropManyByEnd(file => apkFiles = file, apks))
             {
-                main.textBox_DECODE_InputAppPath.Text = apkFile;
                 main.decPanel.BackColor = Color.White;
 
-                await main.GetApkInfo(apkFile);
-
-                if (apkFile.ContainsAny(".xapk", ".zip", ".apks", ".apkm"))
+                foreach (var apkFile in apkFiles)
                 {
-                    if (Settings.Default.Decode_UseApkEditorMergeApk)
+                    main.textBox_DECODE_InputAppPath.Text = apkFile;
+
+                    await main.GetApkInfo(apkFile);
+
+                    if (apkFile.ContainsAny(".xapk", ".zip", ".apks", ".apkm"))
                     {
-                        await main.MergeUsingApkEditor(apkFile);
+                        if (Settings.Default.Decode_UseApkEditorMergeApk)
+                        {
+                            await main.MergeUsingApkEditor(apkFile);
+                        }
+                        else
+                        {
+                            await main.Merge(apkFile);
+                        }
                     }
                     else
-                    {
-                        await main.Merge(apkFile);
-                    }
+                        await main.Decompile(apkFile);
                 }
-                else
-                    await main.Decompile(apkFile);
             }
         }
 
         private async void DropDirToCom(DragEventArgs e)
         {
-            string folder = null;
-            if (e.DropOneByEnd(file => folder = file, null))
+            string[] folders = null;
+            if (e.DropManyByEnd(file => folders = file, null))
             {
-                if (File.Exists(Path.Combine(folder, "AndroidManifest.xml")))
+                foreach (var folder in folders)
                 {
-                    main.textBox_BUILD_InputProjectDir.Text = folder;
-                    main.comPanel.BackColor = Color.White;
-                    await main.Build(folder);
+                    if (File.Exists(Path.Combine(folder, "AndroidManifest.xml")))
+                    {
+                        main.textBox_BUILD_InputProjectDir.Text = folder;
+                        main.comPanel.BackColor = Color.White;
+                        await main.Build(folder);
+                    }
+                    else
+                        main.ToLog(ApktoolEventType.Error, Language.ErrorNotAnApk);
                 }
-                else
-                    main.ToLog(ApktoolEventType.Error, Language.ErrorNotAnApk);
             }
         }
 
         private async void DropApkToAlign(DragEventArgs e)
         {
-            string apkFile = null;
-            if (e.DropOneByEnd(file => apkFile = file, apks))
+            string[] apkFiles = null;
+            if (e.DropManyByEnd(file => apkFiles = file, apks))
             {
-                main.textBox_ZIPALIGN_InputFile.Text = apkFile;
                 main.zipalignPanel.BackColor = Color.White;
 
-                try
+                foreach (var apkFile in apkFiles)
                 {
-                    main.Running();
+                    main.textBox_ZIPALIGN_InputFile.Text = apkFile;
 
-                    await Task.Factory.StartNew(() =>
+                    try
                     {
-                        string outputDir = apkFile;
-                        if (Settings.Default.Zipalign_UseOutputDir)
-                            outputDir = Path.Combine(Settings.Default.Zipalign_OutputDir, Path.GetFileName(apkFile));
+                        main.Running();
 
-                        if (!Settings.Default.Zipalign_OverwriteOutputFile)
-                            outputDir = PathUtils.GetDirectoryNameWithoutExtension(outputDir) + " aligned.apk";
+                        await Task.Factory.StartNew(() =>
+                        {
+                            string outputDir = apkFile;
+                            if (Settings.Default.Zipalign_UseOutputDir)
+                                outputDir = Path.Combine(Settings.Default.Zipalign_OutputDir, Path.GetFileName(apkFile));
 
-                        if (main.Align(apkFile, outputDir) == 0)
-                            main.ToLog(ApktoolEventType.None, String.Format(Language.ZipalignFileSavedTo, outputDir));
-                        else
-                            main.ToLog(ApktoolEventType.Error, Language.ErrorZipalign);
-                    });
+                            if (!Settings.Default.Zipalign_OverwriteOutputFile)
+                                outputDir = PathUtils.GetDirectoryNameWithoutExtension(outputDir) + " aligned.apk";
+
+                            if (main.Align(apkFile, outputDir) == 0)
+                                main.ToLog(ApktoolEventType.None, String.Format(Language.ZipalignFileSavedTo, outputDir));
+                            else
+                                main.ToLog(ApktoolEventType.Error, Language.ErrorZipalign);
+                        });
+                    }
+                    catch (Exception ex)
+                    {
+                        main.ToLog(ApktoolEventType.Error, ex.Message);
+                    }
+                    main.Done(printTimer: true);
                 }
-                catch (Exception ex)
-                {
-                    main.ToLog(ApktoolEventType.Error, ex.Message);
-                }
-                main.Done(printTimer: true);
             }
         }
 
         private async void DropApkToSign(DragEventArgs e)
         {
-            string apkFile = null;
-            if (e.DropOneByEnd(file => apkFile = file, apks))
+            string[] apkFiles = null;
+            if (e.DropManyByEnd(file => apkFiles = file, apks))
             {
-                main.textBox_SIGN_InputFile.Text = apkFile;
                 main.signPanel.BackColor = Color.White;
 
-                try
+                foreach (var apkFile in apkFiles)
                 {
-                    main.Running();
+                    main.textBox_SIGN_InputFile.Text = apkFile;
 
-                    await Task.Factory.StartNew(() =>
+                    try
                     {
-                        string inputFile = apkFile;
-                        string outputDir = apkFile;
-                        if (Settings.Default.Zipalign_UseOutputDir)
-                            outputDir = Path.Combine(Settings.Default.Sign_OutputDir, Path.GetFileName(inputFile));
-                        if (!Settings.Default.Sign_OverwriteInputFile)
-                            outputDir = PathUtils.GetDirectoryNameWithoutExtension(outputDir) + "_signed.apk";
+                        main.Running();
 
-                        if (main.Sign(inputFile, outputDir) == 0)
+                        await Task.Factory.StartNew(() =>
                         {
+                            string inputFile = apkFile;
+                            string outputDir = apkFile;
                             if (Settings.Default.Zipalign_UseOutputDir)
-                                main.ToLog(ApktoolEventType.None, String.Format(Language.SignSuccessfullyCompleted, inputFile));
-                            else
-                                main.ToLog(ApktoolEventType.None, String.Format(Language.SignSuccessfullyCompleted, outputDir));
+                                outputDir = Path.Combine(Settings.Default.Sign_OutputDir, Path.GetFileName(inputFile));
+                            if (!Settings.Default.Sign_OverwriteInputFile)
+                                outputDir = PathUtils.GetDirectoryNameWithoutExtension(outputDir) + "_signed.apk";
 
-                            if (Settings.Default.AutoDeleteIdsigFile)
+                            if (main.Sign(inputFile, outputDir) == 0)
                             {
-                                main.ToLog(ApktoolEventType.None, String.Format(Language.DeleteFile, outputDir + ".idsig"));
-                                FileUtils.Delete(outputDir + ".idsig");
+                                if (Settings.Default.Zipalign_UseOutputDir)
+                                    main.ToLog(ApktoolEventType.None, String.Format(Language.SignSuccessfullyCompleted, inputFile));
+                                else
+                                    main.ToLog(ApktoolEventType.None, String.Format(Language.SignSuccessfullyCompleted, outputDir));
+
+                                if (Settings.Default.AutoDeleteIdsigFile)
+                                {
+                                    main.ToLog(ApktoolEventType.None, String.Format(Language.DeleteFile, outputDir + ".idsig"));
+                                    FileUtils.Delete(outputDir + ".idsig");
+                                }
                             }
-                        }
-                        else
-                            main.ToLog(ApktoolEventType.Error, String.Format(Language.ErrorSigning, outputDir));
-                    });
+                            else
+                                main.ToLog(ApktoolEventType.Error, String.Format(Language.ErrorSigning, outputDir));
+                        });
+                    }
+                    catch (Exception ex)
+                    {
+                        main.ToLog(ApktoolEventType.Error, ex.Message);
+                    }
+                    main.Done(printTimer: true);
                 }
-                catch (Exception ex)
-                {
-                    main.ToLog(ApktoolEventType.Error, ex.Message);
-                }
-                main.Done(printTimer: true);
             }
         }
 

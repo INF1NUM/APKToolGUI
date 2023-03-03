@@ -98,5 +98,19 @@ namespace SaveToGameWpf.Logic.Utils
 
             return false;
         }
+
+        public static bool DropManyByEnd(this DragEventArgs e, Action<string[]> onSuccess, params string[] extensions)
+        {
+            foreach (string apk in extensions)
+            {
+                string[] files = e.GetFilesDrop(apk);
+
+                if (files.Length > 0)
+                    onSuccess(files);
+
+                return true;
+            }
+            return false;
+        }
     }
 }
