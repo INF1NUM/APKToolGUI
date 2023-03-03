@@ -94,47 +94,50 @@ namespace APKToolGUI
             stopwatch = new Stopwatch();
         }
 
-        private void FormMain_Shown(object sender, EventArgs e)
+        private async void FormMain_Shown(object sender, EventArgs e)
         {
             Update();
 
-            InitializeUpdateChecker();
-            InitializeZipalign();
-            InitializeBaksmali();
-            InitializeSmali();
-            InitializeAPKTool();
-            InitializeSignapk();
-            InitializeApkEditor();
-
-            string javaVersion = apktool.GetJavaVersion();
-            if (javaVersion != null)
+            await Task.Factory.StartNew(() =>
             {
-                ToLog(ApktoolEventType.None, String.Format("{0}", javaVersion));
-                string apktoolVersion = apktool.GetVersion();
-                if (!String.IsNullOrWhiteSpace(apktoolVersion))
-                    ToLog(ApktoolEventType.None, String.Format(Language.APKToolVersion + " \"{0}\"", apktoolVersion));
+                InitializeUpdateChecker();
+                InitializeZipalign();
+                InitializeBaksmali();
+                InitializeSmali();
+                InitializeAPKTool();
+                InitializeSignapk();
+                InitializeApkEditor();
+
+                string javaVersion = apktool.GetJavaVersion();
+                if (javaVersion != null)
+                {
+                    ToLog(ApktoolEventType.None, String.Format("{0}", javaVersion));
+                    string apktoolVersion = apktool.GetVersion();
+                    if (!String.IsNullOrWhiteSpace(apktoolVersion))
+                        ToLog(ApktoolEventType.None, String.Format(Language.APKToolVersion + " \"{0}\"", apktoolVersion));
+                    else
+                        ToLog(ApktoolEventType.Error, Language.CantDetectApktoolVersion);
+                }
                 else
-                    ToLog(ApktoolEventType.Error, Language.CantDetectApktoolVersion);
-            }
-            else
-                ToLog(ApktoolEventType.Error, Language.ErrorJavaDetect);
+                    ToLog(ApktoolEventType.Error, Language.ErrorJavaDetect);
 
-            if (AdminUtils.IsAdministrator())
-                ToLog(ApktoolEventType.Warning, Language.DragDropNotSupported);
-            else
-                ToLog(ApktoolEventType.None, Language.DragDropSupported);
+                if (AdminUtils.IsAdministrator())
+                    ToLog(ApktoolEventType.Warning, Language.DragDropNotSupported);
+                else
+                    ToLog(ApktoolEventType.None, Language.DragDropSupported);
 
-            ToLog(ApktoolEventType.None, String.Format(Language.TempDirectory, Program.TEMP_PATH));
+                ToLog(ApktoolEventType.None, String.Format(Language.TempDirectory, Program.TEMP_PATH));
 
-            TimeSpan updateInterval = DateTime.Now - Settings.Default.LastUpdateCheck;
-            if (updateInterval.Days > 0 && Settings.Default.CheckForUpdateAtStartup)
-                updateCheker.CheckAsync(true);
+                TimeSpan updateInterval = DateTime.Now - Settings.Default.LastUpdateCheck;
+                if (updateInterval.Days > 0 && Settings.Default.CheckForUpdateAtStartup)
+                    updateCheker.CheckAsync(true);
+            });
 
             ToStatus(Language.Done, Resources.done);
 
             string decApkPath = Settings.Default.Decode_InputAppPath;
 
-            GetApkInfo(decApkPath);
+            await GetApkInfo(decApkPath);
 
             RunCmdArgs();
         }
@@ -235,7 +238,7 @@ namespace APKToolGUI
                                 Close();
                             break;
                         case "apkinfo":
-                            GetApkInfo(file);
+                            await GetApkInfo(file);
                             tabControlMain.SelectedIndex = 1;
                             break;
                         default: //Fix when running app as Release from Visual studio
@@ -715,7 +718,7 @@ namespace APKToolGUI
                             ToLog(ApktoolEventType.Error, Language.ErrorDecompiling);
                     }
                     else
-                    ToLog(ApktoolEventType.Error, Language.ErrorMerging);
+                        ToLog(ApktoolEventType.Error, Language.ErrorMerging);
                 });
             }
             catch (Exception ex)
