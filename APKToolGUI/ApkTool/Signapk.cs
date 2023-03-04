@@ -65,6 +65,14 @@ namespace APKToolGUI
                 Exited(this, new SignapkExitedEventArgs(base.ExitCode, lastSourceApk, lastOutApk));
         }
 
+        public void Cancel()
+        {
+            if (HasExited == false)
+            {
+                Kill();
+            }
+        }
+
         public int Sign(string input, string output)
         {
             lastSourceApk = input;

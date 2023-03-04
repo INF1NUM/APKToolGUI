@@ -78,36 +78,15 @@ namespace APKToolGUI.Handlers
 
         internal async void button_ZIPALIGN_Align_Click(object sender, EventArgs e)
         {
-            try
+            if (!File.Exists(main.textBox_ZIPALIGN_InputFile.Text))
             {
-                if (!File.Exists(main.textBox_ZIPALIGN_InputFile.Text))
-                {
-                    main.ShowMessage(Language.ErrorSelectedFileNotExist, MessageBoxIcon.Warning);
-                    return;
-                }
-
-                await Task.Factory.StartNew(() =>
-                {
-                    string inputFile = Settings.Default.Zipalign_InputFile;
-
-                    string outputDir = inputFile;
-                    if (Settings.Default.Zipalign_UseOutputDir)
-                        outputDir = Path.Combine(Settings.Default.Zipalign_OutputDir, Path.GetFileName(inputFile));
-
-                    if (!Settings.Default.Zipalign_OverwriteOutputFile)
-                        outputDir = PathUtils.GetDirectoryNameWithoutExtension(outputDir) + " aligned.apk";
-
-                    if (main.Align(inputFile, outputDir) == 0)
-                        main.ToLog(ApktoolEventType.None, String.Format(Language.ZipalignFileSavedTo, outputDir));
-                    else
-                        main.ToLog(ApktoolEventType.Error, Language.ErrorZipalign);
-                });
+                main.ShowMessage(Language.ErrorSelectedFileNotExist, MessageBoxIcon.Warning);
+                return;
             }
-            catch (Exception ex)
-            {
-                main.ToLog(ApktoolEventType.Error, ex.Message);
-            }
-            main.Done(printTimer: true);
+
+            string inputFile = Settings.Default.Zipalign_InputFile;
+
+            await main.Align(inputFile);
         }
     }
 }

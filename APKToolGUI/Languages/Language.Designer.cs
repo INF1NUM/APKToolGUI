@@ -61,6 +61,15 @@ namespace APKToolGUI.Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Aborted.
+        /// </summary>
+        internal static string Aborted {
+            get {
+                return ResourceManager.GetString("Aborted", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to About.
         /// </summary>
         internal static string About {
@@ -129,6 +138,15 @@ namespace APKToolGUI.Languages {
         internal static string Build {
             get {
                 return ResourceManager.GetString("Build", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Are you sure you want to cancel the process?.
+        /// </summary>
+        internal static string CancelProcess {
+            get {
+                return ResourceManager.GetString("CancelProcess", resourceCulture);
             }
         }
         
@@ -885,6 +903,15 @@ namespace APKToolGUI.Languages {
         internal static string ParsingApkInfo {
             get {
                 return ResourceManager.GetString("ParsingApkInfo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Please wait....
+        /// </summary>
+        internal static string PleaseWait {
+            get {
+                return ResourceManager.GetString("PleaseWait", resourceCulture);
             }
         }
         

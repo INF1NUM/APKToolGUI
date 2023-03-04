@@ -468,4 +468,13 @@
   <data name="MergingApkEditor" xml:space="preserve">
     <value>Merging APK using APKEditor.jar</value>
   </data>
+  <data name="Aborted" xml:space="preserve">
+    <value>Aborted</value>
+  </data>
+  <data name="CancelProcess" xml:space="preserve">
+    <value>Are you sure you want to cancel the process?</value>
+  </data>
+  <data name="PleaseWait" xml:space="preserve">
+    <value>Please wait...</value>
+  </data>
 </root>

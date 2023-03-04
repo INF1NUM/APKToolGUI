@@ -248,6 +248,7 @@
             this.apktoolIssuesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.baksmaliIssuesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.tabControlMain.SuspendLayout();
             this.tabPageMain.SuspendLayout();
             this.signPanel.SuspendLayout();
@@ -1787,6 +1788,7 @@
             this.toolStripStatusLabelStateText.Name = "toolStripStatusLabelStateText";
             this.toolStripStatusLabelStateText.Overflow = System.Windows.Forms.ToolStripItemOverflow.Never;
             this.toolStripStatusLabelStateText.Spring = true;
+            this.toolStripStatusLabelStateText.Click += new System.EventHandler(this.toolStripStatusLabelStateText_Click);
             // 
             // toolStripProgressBar1
             // 
@@ -1795,6 +1797,7 @@
             this.toolStripProgressBar1.MarqueeAnimationSpeed = 30;
             this.toolStripProgressBar1.Name = "toolStripProgressBar1";
             this.toolStripProgressBar1.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
+            this.toolStripProgressBar1.Click += new System.EventHandler(this.toolStripProgressBar1_Click);
             // 
             // contextMenuStripLog
             // 
@@ -1959,6 +1962,12 @@
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
             resources.ApplyResources(this.aboutToolStripMenuItem, "aboutToolStripMenuItem");
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.menuItemAbout_Click);
+            // 
+            // toolTip1
+            // 
+            this.toolTip1.AutoPopDelay = 10000;
+            this.toolTip1.InitialDelay = 500;
+            this.toolTip1.ReshowDelay = 100;
             // 
             // FormMain
             // 
@@ -2246,6 +2255,7 @@
         internal System.Windows.Forms.RichTextBox logTxtBox;
         internal System.Windows.Forms.ToolStripMenuItem copyToolStripMenuItem;
         private System.Windows.Forms.CheckBox checkBox_DECODE_UseApkEditorMerge;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
 

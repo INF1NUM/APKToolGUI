@@ -21,7 +21,6 @@ namespace APKToolGUI
             Null
         }
 
-        //Note: I don't use some features and don't use any framework related since I make it simple for game modding purposes
         static class DecompileKeys
         {
             public const string NoSource = " -s"; //Do not decode sources.
@@ -144,6 +143,18 @@ namespace APKToolGUI
             BeginErrorReadLine();
             WaitForExit();
             return ExitCode;
+        }
+
+        public void Cancel()
+        {
+            try
+            {
+                if (HasExited == false)
+                {
+                    Kill();
+                }
+            }
+            catch { }
         }
 
         public int Build(string inputFolder, string outputFile)

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
@@ -103,12 +104,14 @@ namespace SaveToGameWpf.Logic.Utils
         {
             foreach (string apk in extensions)
             {
+                Debug.WriteLine(apk);
                 string[] files = e.GetFilesDrop(apk);
 
                 if (files.Length > 0)
+                {
                     onSuccess(files);
-
-                return true;
+                    return true;
+                }
             }
             return false;
         }

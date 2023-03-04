@@ -63,6 +63,18 @@ namespace APKToolGUI
                 Exited(this, new BaksmaliExitedEventArgs(ExitCode));
         }
 
+        public void Cancel()
+        {
+            try
+            {
+                if (HasExited == false)
+                {
+                    Kill();
+                }
+            }
+            catch { }
+        }
+
         public int Disassemble(string input, string output)
         {
             string inputFile = String.Format("\"{0}\"", input);

@@ -50,6 +50,18 @@ namespace APKToolGUI
                 Exited(this, new EventArgs());
         }
 
+        public void Cancel()
+        {
+            try
+            {
+                if (processZipalign.HasExited == false)
+                {
+                    processZipalign.Kill();
+                }
+            }
+            catch { }
+        }
+
         public int Align(string input, string output)
         {
             string keyCheckOnly = null, keyVerbose = null, keyRecompress = null, keyOverwriteOutputFile = null, keyOutputFile = null;

@@ -128,30 +128,7 @@ namespace APKToolGUI.Handlers
                 {
                     main.textBox_ZIPALIGN_InputFile.Text = apkFile;
 
-                    try
-                    {
-                        main.Running();
-
-                        await Task.Factory.StartNew(() =>
-                        {
-                            string outputDir = apkFile;
-                            if (Settings.Default.Zipalign_UseOutputDir)
-                                outputDir = Path.Combine(Settings.Default.Zipalign_OutputDir, Path.GetFileName(apkFile));
-
-                            if (!Settings.Default.Zipalign_OverwriteOutputFile)
-                                outputDir = PathUtils.GetDirectoryNameWithoutExtension(outputDir) + " aligned.apk";
-
-                            if (main.Align(apkFile, outputDir) == 0)
-                                main.ToLog(ApktoolEventType.None, String.Format(Language.ZipalignFileSavedTo, outputDir));
-                            else
-                                main.ToLog(ApktoolEventType.Error, Language.ErrorZipalign);
-                        });
-                    }
-                    catch (Exception ex)
-                    {
-                        main.ToLog(ApktoolEventType.Error, ex.Message);
-                    }
-                    main.Done(printTimer: true);
+                    await main.Align(apkFile);
                 }
             }
         }
@@ -167,41 +144,7 @@ namespace APKToolGUI.Handlers
                 {
                     main.textBox_SIGN_InputFile.Text = apkFile;
 
-                    try
-                    {
-                        main.Running();
-
-                        await Task.Factory.StartNew(() =>
-                        {
-                            string inputFile = apkFile;
-                            string outputDir = apkFile;
-                            if (Settings.Default.Zipalign_UseOutputDir)
-                                outputDir = Path.Combine(Settings.Default.Sign_OutputDir, Path.GetFileName(inputFile));
-                            if (!Settings.Default.Sign_OverwriteInputFile)
-                                outputDir = PathUtils.GetDirectoryNameWithoutExtension(outputDir) + "_signed.apk";
-
-                            if (main.Sign(inputFile, outputDir) == 0)
-                            {
-                                if (Settings.Default.Zipalign_UseOutputDir)
-                                    main.ToLog(ApktoolEventType.None, String.Format(Language.SignSuccessfullyCompleted, inputFile));
-                                else
-                                    main.ToLog(ApktoolEventType.None, String.Format(Language.SignSuccessfullyCompleted, outputDir));
-
-                                if (Settings.Default.AutoDeleteIdsigFile)
-                                {
-                                    main.ToLog(ApktoolEventType.None, String.Format(Language.DeleteFile, outputDir + ".idsig"));
-                                    FileUtils.Delete(outputDir + ".idsig");
-                                }
-                            }
-                            else
-                                main.ToLog(ApktoolEventType.Error, String.Format(Language.ErrorSigning, outputDir));
-                        });
-                    }
-                    catch (Exception ex)
-                    {
-                        main.ToLog(ApktoolEventType.Error, ex.Message);
-                    }
-                    main.Done(printTimer: true);
+                    await main.Sign(apkFile);
                 }
             }
         }

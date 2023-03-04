@@ -62,6 +62,17 @@ namespace APKToolGUI
             if (Exited != null)
                 Exited(this, new ApkEditorExitedEventArgs(ExitCode));
         }
+        public void Cancel()
+        {
+            try
+            {
+                if (HasExited == false)
+                {
+                    Kill();
+                }
+            }
+            catch { }
+        }
 
         public int Merge(string input, string output)
         {

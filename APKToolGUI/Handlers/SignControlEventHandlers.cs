@@ -1,4 +1,5 @@
-﻿using APKToolGUI.Languages;
+﻿using APKToolGUI.ApkTool;
+using APKToolGUI.Languages;
 using APKToolGUI.Properties;
 using APKToolGUI.Utils;
 using Ookii.Dialogs.WinForms;
@@ -118,37 +119,12 @@ namespace APKToolGUI.Handlers
 
                 main.Running();
 
-                await Task.Factory.StartNew(() =>
-                {
-                    string inputFile = Settings.Default.Sign_InputFile;
-                    string outputDir = inputFile;
-                    if (Settings.Default.Zipalign_UseOutputDir)
-                        outputDir = Path.Combine(Settings.Default.Sign_OutputDir, Path.GetFileName(inputFile));
-                    if (!Settings.Default.Sign_OverwriteInputFile)
-                        outputDir = PathUtils.GetDirectoryNameWithoutExtension(outputDir) + "_signed.apk";
-
-                    if (main.Sign(inputFile, outputDir) == 0)
-                    {
-                        if (Settings.Default.Zipalign_UseOutputDir)
-                            main.ToLog(ApktoolEventType.None, String.Format(Language.SignSuccessfullyCompleted, inputFile));
-                        else
-                            main.ToLog(ApktoolEventType.None, String.Format(Language.SignSuccessfullyCompleted, outputDir));
-
-                        if (Settings.Default.AutoDeleteIdsigFile)
-                        {
-                            main.ToLog(ApktoolEventType.None, String.Format(Language.DeleteFile, outputDir + ".idsig"));
-                            FileUtils.Delete(outputDir + ".idsig");
-                        }
-                    }
-                    else
-                        main.ToLog(ApktoolEventType.Error, String.Format(Language.ErrorSigning, outputDir));
-                });
+                await main.Sign(Settings.Default.Sign_InputFile);
             }
             catch (Exception ex)
             {
                 main.ToLog(ApktoolEventType.Error, ex.Message);
             }
-            main.Done(printTimer: true);
         }
 
         internal void selectKeyStoreFileBtn_Click(object sender, EventArgs e)

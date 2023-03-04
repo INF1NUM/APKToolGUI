@@ -138,7 +138,6 @@ namespace APKToolGUI
             }
         }
 
-
         private void buttonCustomJavaLocation_Click(object sender, EventArgs e)
         {
             using (OpenFileDialog openJavaExe = new OpenFileDialog())
