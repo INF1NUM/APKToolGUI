@@ -107,7 +107,7 @@ namespace Java
                     string output = javaProcess.StandardError.ReadToEnd();
                     javaProcess.WaitForExit(3000);
                     if (!String.IsNullOrEmpty(output))
-                        return output.Split(new[] { '\r', '\n' }).FirstOrDefault().Replace("java", "Java");
+                        return output = output.Remove(output.LastIndexOf(Environment.NewLine));
                     else
                         return null;
                 }

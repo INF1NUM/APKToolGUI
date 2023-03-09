@@ -25,51 +25,58 @@ namespace APKToolGUI
         [STAThread]
         static void Main(String[] arg)
         {
-            if (Environment.OSVersion.Version.Major == 6)
+            try
             {
-                SetProcessDPIAware();
-            }
-
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-
-            if (arg.Length == 1)
-            {
-                switch (arg[0])
+                if (Environment.OSVersion.Version.Major == 6)
                 {
-                    case "ccm":
-                        ExplorerContextMenuMethod(ExplorerContextMenu.Action.Create);
-                        break;
-                    case "rcm":
-                        ExplorerContextMenuMethod(ExplorerContextMenu.Action.Remove);
-                        break;
+                    SetProcessDPIAware();
                 }
-            }
-            else
-            {
-                if (arg.Length == 2)
+
+                Application.EnableVisualStyles();
+                Application.SetCompatibleTextRenderingDefault(false);
+
+                if (arg.Length == 1)
                 {
                     switch (arg[0])
                     {
-                        case "comapk":
-                            if (!File.Exists(Path.Combine(arg[1], "AndroidManifest.xml")))
-                            {
-                                MessageBox.Show(Language.NotDecompiledApk, Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                                return;
-                            }
+                        case "ccm":
+                            ExplorerContextMenuMethod(ExplorerContextMenu.Action.Create);
+                            break;
+                        case "rcm":
+                            ExplorerContextMenuMethod(ExplorerContextMenu.Action.Remove);
                             break;
                     }
                 }
-                if (FilesCheck() == true)
+                else
                 {
-                    PortableSettingsProvider.SettingsFileName = "config.xml";
-                    PortableSettingsProvider.ApplyProvider(Settings.Default);
+                    if (arg.Length == 2)
+                    {
+                        switch (arg[0])
+                        {
+                            case "comapk":
+                                if (!File.Exists(Path.Combine(arg[1], "AndroidManifest.xml")))
+                                {
+                                    MessageBox.Show(Language.NotDecompiledApk, Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                    return;
+                                }
+                                break;
+                        }
+                    }
+                    if (FilesCheck() == true)
+                    {
+                        PortableSettingsProvider.SettingsFileName = "config.xml";
+                        PortableSettingsProvider.ApplyProvider(Settings.Default);
 
-                    TEMP_PATH = TempDirectory();
-                    Directory.CreateDirectory(TEMP_PATH);
+                        TEMP_PATH = TempDirectory();
+                        Directory.CreateDirectory(TEMP_PATH);
 
-                    Application.Run(new FormMain());
+                        Application.Run(new FormMain());
+                    }
                 }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

@@ -343,7 +343,7 @@
     <value>Compiling dex</value>
   </data>
   <data name="DragDropNotSupported" xml:space="preserve">
-    <value>You are running as administrator. Drag &amp; drop is not supported</value>
+    <value>You are running as administrator. Drag &amp; drop may not be supported</value>
   </data>
   <data name="DragDropSupported" xml:space="preserve">
     <value>Drag &amp; drop is supported</value>

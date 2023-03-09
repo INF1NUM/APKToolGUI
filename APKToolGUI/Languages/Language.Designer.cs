@@ -466,7 +466,7 @@ namespace APKToolGUI.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to You are running as administrator. Drag &amp; drop is not supported.
+        ///   Looks up a localized string similar to You are running as administrator. Drag &amp; drop may not be supported.
         /// </summary>
         internal static string DragDropNotSupported {
             get {
