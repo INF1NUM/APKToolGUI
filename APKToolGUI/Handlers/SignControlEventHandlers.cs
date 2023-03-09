@@ -117,8 +117,6 @@ namespace APKToolGUI.Handlers
                     return;
                 }
 
-                main.Running();
-
                 await main.Sign(Settings.Default.Sign_InputFile);
             }
             catch (Exception ex)

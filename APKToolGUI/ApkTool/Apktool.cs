@@ -308,7 +308,7 @@ namespace APKToolGUI
     public enum ApktoolEventType
     {
         None,
-        Done,
+        Success,
         Infomation,
         Warning,
         Error,

@@ -77,31 +77,29 @@ namespace APKToolGUI.Handlers
                 return;
             }
 
-            main.Running();
+            main.Running(Language.InstallingFramework);
             main.ToLog(ApktoolEventType.None, Language.InstallingFramework + " " + Path.GetFileName(main.textBox_IF_InputFramePath.Text));
-            main.ToStatus(String.Format(Language.InstallingFramework + " \"{0}\"...", Path.GetFileName(main.textBox_IF_InputFramePath.Text)), Resources.waiting);
 
             await Task.Factory.StartNew(() =>
             {
                 if (main.apktool.InstallFramework() == 0)
-                    main.ToLog(ApktoolEventType.None, Language.FrameworkInstalled);
+                    main.Done(Language.FrameworkInstalled);
                 else
-                    main.ToLog(ApktoolEventType.Error, Language.FrameworkInstallationNotStarted);
+                    main.Error(Language.FrameworkInstallationNotStarted);
             });
-            main.Done(printTimer: true);
         }
 
         internal async void clearFwBtn_Click(object sender, EventArgs e)
         {
-            main.Running();
+            main.Running(Language.ClearingFramework);
 
             await Task.Factory.StartNew(() =>
             {
                 if (main.ClearFramework() == 0)
-                    main.ToLog(ApktoolEventType.None, Language.Done);
+                    main.Done(Language.Done);
+                else
+                    main.Error(Language.ErrorClearingFw);
             });
-           
-            main.Done();
         }
 
         internal void openFwFolderBtn_Click(object sender, EventArgs e)

@@ -507,4 +507,10 @@
   <data name="NoDevicesFound" xml:space="preserve">
     <value>No devices found. Make sure your device is connected to the computer with the adb debugging turned on. If you use an emulator, restart it and wait until it boot up</value>
   </data>
+  <data name="TimeEnded" xml:space="preserve">
+    <value>Time ended: {0}</value>
+  </data>
+  <data name="TimeStarted" xml:space="preserve">
+    <value>Time started: {0}</value>
+  </data>
 </root>

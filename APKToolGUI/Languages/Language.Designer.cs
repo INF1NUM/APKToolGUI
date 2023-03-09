@@ -1141,6 +1141,24 @@ namespace APKToolGUI.Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Time ended: {0}.
+        /// </summary>
+        internal static string TimeEnded {
+            get {
+                return ResourceManager.GetString("TimeEnded", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Time started: {0}.
+        /// </summary>
+        internal static string TimeStarted {
+            get {
+                return ResourceManager.GetString("TimeStarted", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to New version is available. Do you want to update?.
         /// </summary>
         internal static string UpdateNewVersion {
