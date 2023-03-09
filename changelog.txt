@@ -1,3 +1,18 @@
+3.2.0.0
+- Added split APK merging (Build-in and APKEditor.jar) for decompilation. APKEditor.jar is set to default
+- Added incompleted Hungarian translation
+- Added incompleted Portuguese translation
+- Improve performance
+- Added launcable activity text box
+- Improve directory logic
+- Support high DPI
+- Support long path (Windows 10 and above)
+- Use own framework path to avoid conflict with other tools
+- Allow drop multiple files
+- Status bar is clickable to cancel the process
+- Added ADB to install APK
+- Clean up log calls
+
 3.1.0.0
 - Disable maximize
 - Sign after align settings fixed
