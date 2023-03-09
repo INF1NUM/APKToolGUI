@@ -223,6 +223,15 @@ namespace APKToolGUI.Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Are you sure you want to kill ADB server? You might need to reconnect your device or restart emulator.
+        /// </summary>
+        internal static string ConfirmKillingAdbServer {
+            get {
+                return ResourceManager.GetString("ConfirmKillingAdbServer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Copy file &quot;{0}&quot; to temp directory &quot;{1}&quot;.
         /// </summary>
         internal static string CopyFileToTemp {
@@ -390,6 +399,33 @@ namespace APKToolGUI.Languages {
         internal static string DetectedAsSplit {
             get {
                 return ResourceManager.GetString("DetectedAsSplit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Device is not selected.
+        /// </summary>
+        internal static string DeviceNotSelected {
+            get {
+                return ResourceManager.GetString("DeviceNotSelected", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Device selected &quot;{0}&quot;.
+        /// </summary>
+        internal static string DeviceSelected {
+            get {
+                return ResourceManager.GetString("DeviceSelected", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {0} devices found.
+        /// </summary>
+        internal static string DevicesFound {
+            get {
+                return ResourceManager.GetString("DevicesFound", resourceCulture);
             }
         }
         
@@ -745,6 +781,15 @@ namespace APKToolGUI.Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Getting devices....
+        /// </summary>
+        internal static string GettingDevices {
+            get {
+                return ResourceManager.GetString("GettingDevices", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Help.
         /// </summary>
         internal static string Help {
@@ -772,11 +817,47 @@ namespace APKToolGUI.Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to APK Installation failed.
+        /// </summary>
+        internal static string InstallApkFailed {
+            get {
+                return ResourceManager.GetString("InstallApkFailed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to APK Installation successfully.
+        /// </summary>
+        internal static string InstallApkSuccessful {
+            get {
+                return ResourceManager.GetString("InstallApkSuccessful", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Install framework.
         /// </summary>
         internal static string InstallFramework {
             get {
                 return ResourceManager.GetString("InstallFramework", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Installing APK.
+        /// </summary>
+        internal static string InstallingApk {
+            get {
+                return ResourceManager.GetString("InstallingApk", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Installing APK &quot;{0}&quot;.
+        /// </summary>
+        internal static string InstallingApkPath {
+            get {
+                return ResourceManager.GetString("InstallingApkPath", resourceCulture);
             }
         }
         
@@ -876,6 +957,15 @@ namespace APKToolGUI.Languages {
         internal static string NeedRestart {
             get {
                 return ResourceManager.GetString("NeedRestart", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No devices found. Make sure your device is connected to the computer with the adb debugging turned on. If you use an emulator, restart it and wait until it boot up.
+        /// </summary>
+        internal static string NoDevicesFound {
+            get {
+                return ResourceManager.GetString("NoDevicesFound", resourceCulture);
             }
         }
         

@@ -149,6 +149,7 @@
             this.checkBox_BUILD_UseFramework = new System.Windows.Forms.CheckBox();
             this.tabPageSign = new System.Windows.Forms.TabPage();
             this.groupBox_SIGN_Options = new System.Windows.Forms.GroupBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.autoDelIdsigChkBox = new System.Windows.Forms.CheckBox();
             this.schemev4ComboBox = new System.Windows.Forms.ComboBox();
@@ -203,7 +204,7 @@
             this.button_IF_BrowseInputFramePath = new System.Windows.Forms.Button();
             this.textBox_IF_InputFramePath = new System.Windows.Forms.TextBox();
             this.textBox_IF_FrameDir = new System.Windows.Forms.TextBox();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPageBaksmali = new System.Windows.Forms.TabPage();
             this.smaliGroupBox = new System.Windows.Forms.GroupBox();
             this.label29 = new System.Windows.Forms.Label();
             this.smaliUseOutputChkBox = new System.Windows.Forms.CheckBox();
@@ -220,6 +221,17 @@
             this.decSmaliBtn = new System.Windows.Forms.Button();
             this.baksmaliBrowseInputDexBtn = new System.Windows.Forms.Button();
             this.baksmaliBrowseInputDexTxtBox = new System.Windows.Forms.TextBox();
+            this.tabPageAdb = new System.Windows.Forms.TabPage();
+            this.selAdbDeviceLbl = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
+            this.killAdbBtn = new System.Windows.Forms.Button();
+            this.installApkBtn = new System.Windows.Forms.Button();
+            this.refreshDevicesBtn = new System.Windows.Forms.Button();
+            this.setVendorChkBox = new System.Windows.Forms.CheckBox();
+            this.selApkAdbBtn = new System.Windows.Forms.Button();
+            this.apkPathAdbTxtBox = new System.Windows.Forms.TextBox();
+            this.label32 = new System.Windows.Forms.Label();
+            this.devicesListBox = new System.Windows.Forms.ListBox();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabelStateImage = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabelStateText = new System.Windows.Forms.ToolStripStatusLabel();
@@ -274,9 +286,10 @@
             this.tabPageInstallFramework.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox_IF_Options.SuspendLayout();
-            this.tabPage1.SuspendLayout();
+            this.tabPageBaksmali.SuspendLayout();
             this.smaliGroupBox.SuspendLayout();
             this.bakSmaliGroupBox.SuspendLayout();
+            this.tabPageAdb.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.contextMenuStripLog.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -293,7 +306,8 @@
             this.tabControlMain.Controls.Add(this.tabPageSign);
             this.tabControlMain.Controls.Add(this.tabPageZipAlign);
             this.tabControlMain.Controls.Add(this.tabPageInstallFramework);
-            this.tabControlMain.Controls.Add(this.tabPage1);
+            this.tabControlMain.Controls.Add(this.tabPageBaksmali);
+            this.tabControlMain.Controls.Add(this.tabPageAdb);
             this.tabControlMain.Name = "tabControlMain";
             this.tabControlMain.SelectedIndex = 0;
             // 
@@ -1193,6 +1207,7 @@
             // 
             // groupBox_SIGN_Options
             // 
+            this.groupBox_SIGN_Options.Controls.Add(this.checkBox2);
             this.groupBox_SIGN_Options.Controls.Add(this.checkBox1);
             this.groupBox_SIGN_Options.Controls.Add(this.autoDelIdsigChkBox);
             this.groupBox_SIGN_Options.Controls.Add(this.schemev4ComboBox);
@@ -1224,6 +1239,14 @@
             resources.ApplyResources(this.groupBox_SIGN_Options, "groupBox_SIGN_Options");
             this.groupBox_SIGN_Options.Name = "groupBox_SIGN_Options";
             this.groupBox_SIGN_Options.TabStop = false;
+            // 
+            // checkBox2
+            // 
+            resources.ApplyResources(this.checkBox2, "checkBox2");
+            this.checkBox2.Checked = global::APKToolGUI.Properties.Settings.Default.Sign_InstallApkAfterSign;
+            this.checkBox2.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "Sign_InstallApkAfterSign", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.UseVisualStyleBackColor = true;
             // 
             // checkBox1
             // 
@@ -1639,14 +1662,14 @@
             this.textBox_IF_FrameDir.Name = "textBox_IF_FrameDir";
             this.textBox_IF_FrameDir.Text = global::APKToolGUI.Properties.Settings.Default.Framework_FrameDir;
             // 
-            // tabPage1
+            // tabPageBaksmali
             // 
-            this.tabPage1.AllowDrop = true;
-            this.tabPage1.BackColor = System.Drawing.Color.White;
-            this.tabPage1.Controls.Add(this.smaliGroupBox);
-            this.tabPage1.Controls.Add(this.bakSmaliGroupBox);
-            resources.ApplyResources(this.tabPage1, "tabPage1");
-            this.tabPage1.Name = "tabPage1";
+            this.tabPageBaksmali.AllowDrop = true;
+            this.tabPageBaksmali.BackColor = System.Drawing.Color.White;
+            this.tabPageBaksmali.Controls.Add(this.smaliGroupBox);
+            this.tabPageBaksmali.Controls.Add(this.bakSmaliGroupBox);
+            resources.ApplyResources(this.tabPageBaksmali, "tabPageBaksmali");
+            this.tabPageBaksmali.Name = "tabPageBaksmali";
             // 
             // smaliGroupBox
             // 
@@ -1763,6 +1786,84 @@
             this.baksmaliBrowseInputDexTxtBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::APKToolGUI.Properties.Settings.Default, "Baksmali_InputDexFile", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.baksmaliBrowseInputDexTxtBox.Name = "baksmaliBrowseInputDexTxtBox";
             this.baksmaliBrowseInputDexTxtBox.Text = global::APKToolGUI.Properties.Settings.Default.Baksmali_InputDexFile;
+            // 
+            // tabPageAdb
+            // 
+            this.tabPageAdb.AllowDrop = true;
+            this.tabPageAdb.Controls.Add(this.selAdbDeviceLbl);
+            this.tabPageAdb.Controls.Add(this.label33);
+            this.tabPageAdb.Controls.Add(this.killAdbBtn);
+            this.tabPageAdb.Controls.Add(this.installApkBtn);
+            this.tabPageAdb.Controls.Add(this.refreshDevicesBtn);
+            this.tabPageAdb.Controls.Add(this.setVendorChkBox);
+            this.tabPageAdb.Controls.Add(this.selApkAdbBtn);
+            this.tabPageAdb.Controls.Add(this.apkPathAdbTxtBox);
+            this.tabPageAdb.Controls.Add(this.label32);
+            this.tabPageAdb.Controls.Add(this.devicesListBox);
+            resources.ApplyResources(this.tabPageAdb, "tabPageAdb");
+            this.tabPageAdb.Name = "tabPageAdb";
+            this.tabPageAdb.UseVisualStyleBackColor = true;
+            // 
+            // selAdbDeviceLbl
+            // 
+            this.selAdbDeviceLbl.ForeColor = System.Drawing.Color.ForestGreen;
+            resources.ApplyResources(this.selAdbDeviceLbl, "selAdbDeviceLbl");
+            this.selAdbDeviceLbl.Name = "selAdbDeviceLbl";
+            // 
+            // label33
+            // 
+            resources.ApplyResources(this.label33, "label33");
+            this.label33.Name = "label33";
+            // 
+            // killAdbBtn
+            // 
+            resources.ApplyResources(this.killAdbBtn, "killAdbBtn");
+            this.killAdbBtn.Name = "killAdbBtn";
+            this.killAdbBtn.UseVisualStyleBackColor = true;
+            // 
+            // installApkBtn
+            // 
+            resources.ApplyResources(this.installApkBtn, "installApkBtn");
+            this.installApkBtn.Name = "installApkBtn";
+            this.installApkBtn.UseVisualStyleBackColor = true;
+            // 
+            // refreshDevicesBtn
+            // 
+            resources.ApplyResources(this.refreshDevicesBtn, "refreshDevicesBtn");
+            this.refreshDevicesBtn.Name = "refreshDevicesBtn";
+            this.refreshDevicesBtn.UseVisualStyleBackColor = true;
+            // 
+            // setVendorChkBox
+            // 
+            resources.ApplyResources(this.setVendorChkBox, "setVendorChkBox");
+            this.setVendorChkBox.Checked = global::APKToolGUI.Properties.Settings.Default.Adb_SetVendor;
+            this.setVendorChkBox.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "Adb_SetVendor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.setVendorChkBox.Name = "setVendorChkBox";
+            this.setVendorChkBox.UseVisualStyleBackColor = true;
+            // 
+            // selApkAdbBtn
+            // 
+            resources.ApplyResources(this.selApkAdbBtn, "selApkAdbBtn");
+            this.selApkAdbBtn.Name = "selApkAdbBtn";
+            this.selApkAdbBtn.UseVisualStyleBackColor = true;
+            // 
+            // apkPathAdbTxtBox
+            // 
+            this.apkPathAdbTxtBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::APKToolGUI.Properties.Settings.Default, "Adb_SelectedApkPath", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            resources.ApplyResources(this.apkPathAdbTxtBox, "apkPathAdbTxtBox");
+            this.apkPathAdbTxtBox.Name = "apkPathAdbTxtBox";
+            this.apkPathAdbTxtBox.Text = global::APKToolGUI.Properties.Settings.Default.Adb_SelectedApkPath;
+            // 
+            // label32
+            // 
+            resources.ApplyResources(this.label32, "label32");
+            this.label32.Name = "label32";
+            // 
+            // devicesListBox
+            // 
+            this.devicesListBox.FormattingEnabled = true;
+            resources.ApplyResources(this.devicesListBox, "devicesListBox");
+            this.devicesListBox.Name = "devicesListBox";
             // 
             // statusStrip1
             // 
@@ -2020,11 +2121,13 @@
             this.groupBox1.PerformLayout();
             this.groupBox_IF_Options.ResumeLayout(false);
             this.groupBox_IF_Options.PerformLayout();
-            this.tabPage1.ResumeLayout(false);
+            this.tabPageBaksmali.ResumeLayout(false);
             this.smaliGroupBox.ResumeLayout(false);
             this.smaliGroupBox.PerformLayout();
             this.bakSmaliGroupBox.ResumeLayout(false);
             this.bakSmaliGroupBox.PerformLayout();
+            this.tabPageAdb.ResumeLayout(false);
+            this.tabPageAdb.PerformLayout();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             this.contextMenuStripLog.ResumeLayout(false);
@@ -2199,7 +2302,7 @@
         internal System.Windows.Forms.CheckBox decSetApiLvlChkBox;
         internal System.Windows.Forms.NumericUpDown buildApiLvlUpDown;
         internal System.Windows.Forms.CheckBox buildSetApiLvlChkBox;
-        internal System.Windows.Forms.TabPage tabPage1;
+        internal System.Windows.Forms.TabPage tabPageBaksmali;
         internal System.Windows.Forms.Button openFwFolderBtn;
         internal System.Windows.Forms.Button selApkFileInfoBtn;
         internal System.Windows.Forms.GroupBox smaliGroupBox;
@@ -2256,6 +2359,18 @@
         internal System.Windows.Forms.ToolStripMenuItem copyToolStripMenuItem;
         private System.Windows.Forms.CheckBox checkBox_DECODE_UseApkEditorMerge;
         private System.Windows.Forms.ToolTip toolTip1;
+        internal System.Windows.Forms.Button selApkAdbBtn;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.Label label33;
+        internal System.Windows.Forms.TabPage tabPageAdb;
+        internal System.Windows.Forms.Button installApkBtn;
+        internal System.Windows.Forms.TextBox apkPathAdbTxtBox;
+        internal System.Windows.Forms.ListBox devicesListBox;
+        internal System.Windows.Forms.CheckBox setVendorChkBox;
+        internal System.Windows.Forms.Button killAdbBtn;
+        internal System.Windows.Forms.Button refreshDevicesBtn;
+        internal System.Windows.Forms.Label selAdbDeviceLbl;
+        private System.Windows.Forms.CheckBox checkBox2;
     }
 }
 

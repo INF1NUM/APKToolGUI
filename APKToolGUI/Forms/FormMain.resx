@@ -967,10 +967,10 @@
     <value>12</value>
   </data>
   <data name="tabPageMain.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
+    <value>4, 27</value>
   </data>
   <data name="tabPageMain.Size" type="System.Drawing.Size, System.Drawing">
-    <value>589, 286</value>
+    <value>589, 281</value>
   </data>
   <data name="tabPageMain.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -2005,13 +2005,13 @@
     <value>37</value>
   </data>
   <data name="basicInfoTabPage.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
+    <value>4, 27</value>
   </data>
   <data name="basicInfoTabPage.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 3, 3, 3</value>
   </data>
   <data name="basicInfoTabPage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>576, 261</value>
+    <value>576, 256</value>
   </data>
   <data name="basicInfoTabPage.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -2038,7 +2038,7 @@
     <value>3, 3</value>
   </data>
   <data name="fullInfoTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>570, 255</value>
+    <value>570, 250</value>
   </data>
   <data name="fullInfoTextBox.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -2059,13 +2059,13 @@
     <value>0</value>
   </data>
   <data name="tabPage3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
+    <value>4, 27</value>
   </data>
   <data name="tabPage3.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 3, 3, 3</value>
   </data>
   <data name="tabPage3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>576, 261</value>
+    <value>576, 256</value>
   </data>
   <data name="tabPage3.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -2084,6 +2084,9 @@
   </data>
   <data name="&gt;&gt;tabPage3.ZOrder" xml:space="preserve">
     <value>1</value>
+  </data>
+  <data name="tabControl1.ItemSize" type="System.Drawing.Size, System.Drawing">
+    <value>293, 23</value>
   </data>
   <data name="tabControl1.Location" type="System.Drawing.Point, System.Drawing">
     <value>1, 1</value>
@@ -2110,10 +2113,10 @@
     <value>0</value>
   </data>
   <data name="tabPageApkInfo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
+    <value>4, 27</value>
   </data>
   <data name="tabPageApkInfo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>589, 286</value>
+    <value>589, 281</value>
   </data>
   <data name="tabPageApkInfo.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -2711,13 +2714,13 @@ and change target SDK to 29</value>
     <value>0</value>
   </data>
   <data name="tabPageDecode.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
+    <value>4, 27</value>
   </data>
   <data name="tabPageDecode.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 3, 3, 3</value>
   </data>
   <data name="tabPageDecode.Size" type="System.Drawing.Size, System.Drawing">
-    <value>589, 286</value>
+    <value>589, 281</value>
   </data>
   <data name="tabPageDecode.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -3314,10 +3317,10 @@ and change target SDK to 29</value>
     <value>19</value>
   </data>
   <data name="groupBox_BUILD_Options.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 7</value>
+    <value>4, 3</value>
   </data>
   <data name="groupBox_BUILD_Options.Size" type="System.Drawing.Size, System.Drawing">
-    <value>559, 354</value>
+    <value>559, 358</value>
   </data>
   <data name="groupBox_BUILD_Options.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -3338,10 +3341,10 @@ and change target SDK to 29</value>
     <value>0</value>
   </data>
   <data name="tabPageBuild.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
+    <value>4, 27</value>
   </data>
   <data name="tabPageBuild.Size" type="System.Drawing.Size, System.Drawing">
-    <value>589, 286</value>
+    <value>589, 281</value>
   </data>
   <data name="tabPageBuild.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -3364,6 +3367,33 @@ and change target SDK to 29</value>
   <data name="tabPageSign.AutoScroll" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="checkBox2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkBox2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 346</value>
+  </data>
+  <data name="checkBox2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>401, 17</value>
+  </data>
+  <data name="checkBox2.TabIndex" type="System.Int32, mscorlib">
+    <value>31</value>
+  </data>
+  <data name="checkBox2.Text" xml:space="preserve">
+    <value>Install APK after signing (Make sure the device is selected in ADB tab first)</value>
+  </data>
+  <data name="&gt;&gt;checkBox2.Name" xml:space="preserve">
+    <value>checkBox2</value>
+  </data>
+  <data name="&gt;&gt;checkBox2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkBox2.Parent" xml:space="preserve">
+    <value>groupBox_SIGN_Options</value>
+  </data>
+  <data name="&gt;&gt;checkBox2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="checkBox1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -3371,7 +3401,7 @@ and change target SDK to 29</value>
     <value>NoControl</value>
   </data>
   <data name="checkBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 329</value>
+    <value>8, 320</value>
   </data>
   <data name="checkBox1.Size" type="System.Drawing.Size, System.Drawing">
     <value>126, 17</value>
@@ -3392,7 +3422,7 @@ and change target SDK to 29</value>
     <value>groupBox_SIGN_Options</value>
   </data>
   <data name="&gt;&gt;checkBox1.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="autoDelIdsigChkBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -3401,7 +3431,7 @@ and change target SDK to 29</value>
     <value>NoControl</value>
   </data>
   <data name="autoDelIdsigChkBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 302</value>
+    <value>8, 294</value>
   </data>
   <data name="autoDelIdsigChkBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>133, 17</value>
@@ -3422,7 +3452,7 @@ and change target SDK to 29</value>
     <value>groupBox_SIGN_Options</value>
   </data>
   <data name="&gt;&gt;autoDelIdsigChkBox.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="schemev4ComboBox.Items" xml:space="preserve">
     <value>Default</value>
@@ -3434,7 +3464,7 @@ and change target SDK to 29</value>
     <value>False</value>
   </data>
   <data name="schemev4ComboBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>424, 272</value>
+    <value>424, 265</value>
   </data>
   <data name="schemev4ComboBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>121, 21</value>
@@ -3452,7 +3482,7 @@ and change target SDK to 29</value>
     <value>groupBox_SIGN_Options</value>
   </data>
   <data name="&gt;&gt;schemev4ComboBox.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="label27.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -3461,7 +3491,7 @@ and change target SDK to 29</value>
     <value>NoControl</value>
   </data>
   <data name="label27.Location" type="System.Drawing.Point, System.Drawing">
-    <value>288, 275</value>
+    <value>288, 268</value>
   </data>
   <data name="label27.Size" type="System.Drawing.Size, System.Drawing">
     <value>63, 13</value>
@@ -3482,7 +3512,7 @@ and change target SDK to 29</value>
     <value>groupBox_SIGN_Options</value>
   </data>
   <data name="&gt;&gt;label27.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="schemev3ComboBox.Items" xml:space="preserve">
     <value>Default</value>
@@ -3494,7 +3524,7 @@ and change target SDK to 29</value>
     <value>False</value>
   </data>
   <data name="schemev3ComboBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>143, 272</value>
+    <value>143, 265</value>
   </data>
   <data name="schemev3ComboBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>121, 21</value>
@@ -3512,7 +3542,7 @@ and change target SDK to 29</value>
     <value>groupBox_SIGN_Options</value>
   </data>
   <data name="&gt;&gt;schemev3ComboBox.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="label26.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -3521,7 +3551,7 @@ and change target SDK to 29</value>
     <value>NoControl</value>
   </data>
   <data name="label26.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 275</value>
+    <value>7, 268</value>
   </data>
   <data name="label26.Size" type="System.Drawing.Size, System.Drawing">
     <value>63, 13</value>
@@ -3542,7 +3572,7 @@ and change target SDK to 29</value>
     <value>groupBox_SIGN_Options</value>
   </data>
   <data name="&gt;&gt;label26.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="schemev2ComboBox.Items" xml:space="preserve">
     <value>Default</value>
@@ -3554,7 +3584,7 @@ and change target SDK to 29</value>
     <value>False</value>
   </data>
   <data name="schemev2ComboBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>424, 245</value>
+    <value>424, 238</value>
   </data>
   <data name="schemev2ComboBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>121, 21</value>
@@ -3572,7 +3602,7 @@ and change target SDK to 29</value>
     <value>groupBox_SIGN_Options</value>
   </data>
   <data name="&gt;&gt;schemev2ComboBox.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="label25.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -3581,7 +3611,7 @@ and change target SDK to 29</value>
     <value>NoControl</value>
   </data>
   <data name="label25.Location" type="System.Drawing.Point, System.Drawing">
-    <value>288, 248</value>
+    <value>288, 241</value>
   </data>
   <data name="label25.Size" type="System.Drawing.Size, System.Drawing">
     <value>63, 13</value>
@@ -3602,7 +3632,7 @@ and change target SDK to 29</value>
     <value>groupBox_SIGN_Options</value>
   </data>
   <data name="&gt;&gt;label25.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="schemev1ComboBox.Items" xml:space="preserve">
     <value>Default</value>
@@ -3614,7 +3644,7 @@ and change target SDK to 29</value>
     <value>False</value>
   </data>
   <data name="schemev1ComboBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>143, 245</value>
+    <value>143, 238</value>
   </data>
   <data name="schemev1ComboBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>121, 21</value>
@@ -3632,7 +3662,7 @@ and change target SDK to 29</value>
     <value>groupBox_SIGN_Options</value>
   </data>
   <data name="&gt;&gt;schemev1ComboBox.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="label24.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -3641,7 +3671,7 @@ and change target SDK to 29</value>
     <value>NoControl</value>
   </data>
   <data name="label24.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 248</value>
+    <value>7, 241</value>
   </data>
   <data name="label24.Size" type="System.Drawing.Size, System.Drawing">
     <value>63, 13</value>
@@ -3662,7 +3692,7 @@ and change target SDK to 29</value>
     <value>groupBox_SIGN_Options</value>
   </data>
   <data name="&gt;&gt;label24.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="textBox3.Location" type="System.Drawing.Point, System.Drawing">
     <value>249, 180</value>
@@ -3683,7 +3713,7 @@ and change target SDK to 29</value>
     <value>groupBox_SIGN_Options</value>
   </data>
   <data name="&gt;&gt;textBox3.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>11</value>
   </data>
   <data name="selectKeyStoreFileBtn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -3713,7 +3743,7 @@ and change target SDK to 29</value>
     <value>groupBox_SIGN_Options</value>
   </data>
   <data name="&gt;&gt;selectKeyStoreFileBtn.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>12</value>
   </data>
   <data name="aliasTxtBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>247, 98</value>
@@ -3734,7 +3764,7 @@ and change target SDK to 29</value>
     <value>groupBox_SIGN_Options</value>
   </data>
   <data name="&gt;&gt;aliasTxtBox.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>13</value>
   </data>
   <data name="useAliasChkBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -3764,7 +3794,7 @@ and change target SDK to 29</value>
     <value>groupBox_SIGN_Options</value>
   </data>
   <data name="&gt;&gt;useAliasChkBox.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>14</value>
   </data>
   <data name="label22.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -3794,7 +3824,7 @@ and change target SDK to 29</value>
     <value>groupBox_SIGN_Options</value>
   </data>
   <data name="&gt;&gt;label22.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>15</value>
   </data>
   <data name="keyStoreFileTxtBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>249, 152</value>
@@ -3815,7 +3845,7 @@ and change target SDK to 29</value>
     <value>groupBox_SIGN_Options</value>
   </data>
   <data name="&gt;&gt;keyStoreFileTxtBox.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>16</value>
   </data>
   <data name="label21.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -3851,7 +3881,7 @@ and change target SDK to 29</value>
     <value>groupBox_SIGN_Options</value>
   </data>
   <data name="&gt;&gt;label21.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>17</value>
   </data>
   <data name="label20.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -3887,7 +3917,7 @@ and change target SDK to 29</value>
     <value>groupBox_SIGN_Options</value>
   </data>
   <data name="&gt;&gt;label20.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>18</value>
   </data>
   <data name="useKeyStoreChkBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -3917,7 +3947,7 @@ and change target SDK to 29</value>
     <value>groupBox_SIGN_Options</value>
   </data>
   <data name="&gt;&gt;useKeyStoreChkBox.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>19</value>
   </data>
   <data name="useSigningOutputDir.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -3947,7 +3977,7 @@ and change target SDK to 29</value>
     <value>groupBox_SIGN_Options</value>
   </data>
   <data name="&gt;&gt;useSigningOutputDir.ZOrder" xml:space="preserve">
-    <value>19</value>
+    <value>20</value>
   </data>
   <data name="label_SIGN_PrivateKey.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -3983,7 +4013,7 @@ and change target SDK to 29</value>
     <value>groupBox_SIGN_Options</value>
   </data>
   <data name="&gt;&gt;label_SIGN_PrivateKey.ZOrder" xml:space="preserve">
-    <value>20</value>
+    <value>21</value>
   </data>
   <data name="label_SIGN_PublicKey.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -4019,7 +4049,7 @@ and change target SDK to 29</value>
     <value>groupBox_SIGN_Options</value>
   </data>
   <data name="&gt;&gt;label_SIGN_PublicKey.ZOrder" xml:space="preserve">
-    <value>21</value>
+    <value>22</value>
   </data>
   <data name="button_SIGN_BrowseOutputFile.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -4049,7 +4079,7 @@ and change target SDK to 29</value>
     <value>groupBox_SIGN_Options</value>
   </data>
   <data name="&gt;&gt;button_SIGN_BrowseOutputFile.ZOrder" xml:space="preserve">
-    <value>22</value>
+    <value>23</value>
   </data>
   <data name="textBox_SIGN_OutputFile.Location" type="System.Drawing.Point, System.Drawing">
     <value>247, 208</value>
@@ -4073,7 +4103,7 @@ and change target SDK to 29</value>
     <value>groupBox_SIGN_Options</value>
   </data>
   <data name="&gt;&gt;textBox_SIGN_OutputFile.ZOrder" xml:space="preserve">
-    <value>23</value>
+    <value>24</value>
   </data>
   <data name="button_SIGN_BrowsePublicKey.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -4103,7 +4133,7 @@ and change target SDK to 29</value>
     <value>groupBox_SIGN_Options</value>
   </data>
   <data name="&gt;&gt;button_SIGN_BrowsePublicKey.ZOrder" xml:space="preserve">
-    <value>24</value>
+    <value>25</value>
   </data>
   <data name="button_SIGN_BrowsePrivateKey.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -4133,7 +4163,7 @@ and change target SDK to 29</value>
     <value>groupBox_SIGN_Options</value>
   </data>
   <data name="&gt;&gt;button_SIGN_BrowsePrivateKey.ZOrder" xml:space="preserve">
-    <value>25</value>
+    <value>26</value>
   </data>
   <data name="textBox_SIGN_PublicKey.Location" type="System.Drawing.Point, System.Drawing">
     <value>247, 42</value>
@@ -4157,7 +4187,7 @@ and change target SDK to 29</value>
     <value>groupBox_SIGN_Options</value>
   </data>
   <data name="&gt;&gt;textBox_SIGN_PublicKey.ZOrder" xml:space="preserve">
-    <value>26</value>
+    <value>27</value>
   </data>
   <data name="textBox_SIGN_PrivateKey.Location" type="System.Drawing.Point, System.Drawing">
     <value>247, 69</value>
@@ -4181,13 +4211,13 @@ and change target SDK to 29</value>
     <value>groupBox_SIGN_Options</value>
   </data>
   <data name="&gt;&gt;textBox_SIGN_PrivateKey.ZOrder" xml:space="preserve">
-    <value>27</value>
+    <value>28</value>
   </data>
   <data name="groupBox_SIGN_Options.Location" type="System.Drawing.Point, System.Drawing">
     <value>7, 6</value>
   </data>
   <data name="groupBox_SIGN_Options.Size" type="System.Drawing.Size, System.Drawing">
-    <value>556, 385</value>
+    <value>556, 419</value>
   </data>
   <data name="groupBox_SIGN_Options.TabIndex" type="System.Int32, mscorlib">
     <value>17</value>
@@ -4208,13 +4238,13 @@ and change target SDK to 29</value>
     <value>0</value>
   </data>
   <data name="tabPageSign.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
+    <value>4, 27</value>
   </data>
   <data name="tabPageSign.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 3, 3, 3</value>
   </data>
   <data name="tabPageSign.Size" type="System.Drawing.Size, System.Drawing">
-    <value>589, 286</value>
+    <value>589, 281</value>
   </data>
   <data name="tabPageSign.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -4541,7 +4571,7 @@ and change target SDK to 29</value>
     <value>4, 4</value>
   </data>
   <data name="groupBox_ZIPALIGN_Options.Size" type="System.Drawing.Size, System.Drawing">
-    <value>590, 275</value>
+    <value>579, 275</value>
   </data>
   <data name="groupBox_ZIPALIGN_Options.TabIndex" type="System.Int32, mscorlib">
     <value>16</value>
@@ -4562,13 +4592,13 @@ and change target SDK to 29</value>
     <value>0</value>
   </data>
   <data name="tabPageZipAlign.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
+    <value>4, 27</value>
   </data>
   <data name="tabPageZipAlign.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 3, 3, 3</value>
   </data>
   <data name="tabPageZipAlign.Size" type="System.Drawing.Size, System.Drawing">
-    <value>589, 286</value>
+    <value>589, 281</value>
   </data>
   <data name="tabPageZipAlign.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -4952,10 +4982,10 @@ and change target SDK to 29</value>
     <value>1</value>
   </data>
   <data name="tabPageInstallFramework.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
+    <value>4, 27</value>
   </data>
   <data name="tabPageInstallFramework.Size" type="System.Drawing.Size, System.Drawing">
-    <value>589, 286</value>
+    <value>589, 281</value>
   </data>
   <data name="tabPageInstallFramework.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -5198,7 +5228,7 @@ and change target SDK to 29</value>
     <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;smaliGroupBox.Parent" xml:space="preserve">
-    <value>tabPage1</value>
+    <value>tabPageBaksmali</value>
   </data>
   <data name="&gt;&gt;smaliGroupBox.ZOrder" xml:space="preserve">
     <value>0</value>
@@ -5426,37 +5456,340 @@ and change target SDK to 29</value>
     <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;bakSmaliGroupBox.Parent" xml:space="preserve">
-    <value>tabPage1</value>
+    <value>tabPageBaksmali</value>
   </data>
   <data name="&gt;&gt;bakSmaliGroupBox.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="tabPage1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
+  <data name="tabPageBaksmali.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 27</value>
   </data>
-  <data name="tabPage1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="tabPageBaksmali.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 3, 3, 3</value>
   </data>
-  <data name="tabPage1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>589, 286</value>
+  <data name="tabPageBaksmali.Size" type="System.Drawing.Size, System.Drawing">
+    <value>589, 281</value>
   </data>
-  <data name="tabPage1.TabIndex" type="System.Int32, mscorlib">
+  <data name="tabPageBaksmali.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
   </data>
-  <data name="tabPage1.Text" xml:space="preserve">
+  <data name="tabPageBaksmali.Text" xml:space="preserve">
     <value>Baksmali</value>
   </data>
-  <data name="&gt;&gt;tabPage1.Name" xml:space="preserve">
-    <value>tabPage1</value>
+  <data name="&gt;&gt;tabPageBaksmali.Name" xml:space="preserve">
+    <value>tabPageBaksmali</value>
   </data>
-  <data name="&gt;&gt;tabPage1.Type" xml:space="preserve">
+  <data name="&gt;&gt;tabPageBaksmali.Type" xml:space="preserve">
     <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;tabPage1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;tabPageBaksmali.Parent" xml:space="preserve">
     <value>tabControlMain</value>
   </data>
-  <data name="&gt;&gt;tabPage1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;tabPageBaksmali.ZOrder" xml:space="preserve">
     <value>7</value>
+  </data>
+  <data name="selAdbDeviceLbl.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="selAdbDeviceLbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>147, 6</value>
+  </data>
+  <data name="selAdbDeviceLbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 15</value>
+  </data>
+  <data name="selAdbDeviceLbl.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="selAdbDeviceLbl.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopRight</value>
+  </data>
+  <data name="&gt;&gt;selAdbDeviceLbl.Name" xml:space="preserve">
+    <value>selAdbDeviceLbl</value>
+  </data>
+  <data name="&gt;&gt;selAdbDeviceLbl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;selAdbDeviceLbl.Parent" xml:space="preserve">
+    <value>tabPageAdb</value>
+  </data>
+  <data name="&gt;&gt;selAdbDeviceLbl.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label33.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label33.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label33.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 7</value>
+  </data>
+  <data name="label33.Size" type="System.Drawing.Size, System.Drawing">
+    <value>91, 13</value>
+  </data>
+  <data name="label33.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="label33.Text" xml:space="preserve">
+    <value>Selected device: </value>
+  </data>
+  <data name="&gt;&gt;label33.Name" xml:space="preserve">
+    <value>label33</value>
+  </data>
+  <data name="&gt;&gt;label33.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label33.Parent" xml:space="preserve">
+    <value>tabPageAdb</value>
+  </data>
+  <data name="&gt;&gt;label33.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="killAdbBtn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="killAdbBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 76</value>
+  </data>
+  <data name="killAdbBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 23</value>
+  </data>
+  <data name="killAdbBtn.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="killAdbBtn.Text" xml:space="preserve">
+    <value>Kill adb process</value>
+  </data>
+  <data name="&gt;&gt;killAdbBtn.Name" xml:space="preserve">
+    <value>killAdbBtn</value>
+  </data>
+  <data name="&gt;&gt;killAdbBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;killAdbBtn.Parent" xml:space="preserve">
+    <value>tabPageAdb</value>
+  </data>
+  <data name="&gt;&gt;killAdbBtn.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="installApkBtn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="installApkBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>459, 76</value>
+  </data>
+  <data name="installApkBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 23</value>
+  </data>
+  <data name="installApkBtn.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="installApkBtn.Text" xml:space="preserve">
+    <value>Install APK</value>
+  </data>
+  <data name="&gt;&gt;installApkBtn.Name" xml:space="preserve">
+    <value>installApkBtn</value>
+  </data>
+  <data name="&gt;&gt;installApkBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;installApkBtn.Parent" xml:space="preserve">
+    <value>tabPageAdb</value>
+  </data>
+  <data name="&gt;&gt;installApkBtn.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="refreshDevicesBtn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="refreshDevicesBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>135, 76</value>
+  </data>
+  <data name="refreshDevicesBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 23</value>
+  </data>
+  <data name="refreshDevicesBtn.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="refreshDevicesBtn.Text" xml:space="preserve">
+    <value>Refresh</value>
+  </data>
+  <data name="&gt;&gt;refreshDevicesBtn.Name" xml:space="preserve">
+    <value>refreshDevicesBtn</value>
+  </data>
+  <data name="&gt;&gt;refreshDevicesBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;refreshDevicesBtn.Parent" xml:space="preserve">
+    <value>tabPageAdb</value>
+  </data>
+  <data name="&gt;&gt;refreshDevicesBtn.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="setVendorChkBox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="setVendorChkBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="setVendorChkBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>11, 54</value>
+  </data>
+  <data name="setVendorChkBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>267, 17</value>
+  </data>
+  <data name="setVendorChkBox.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="setVendorChkBox.Text" xml:space="preserve">
+    <value>Set vendor to Play Store (com.android.vending)</value>
+  </data>
+  <data name="&gt;&gt;setVendorChkBox.Name" xml:space="preserve">
+    <value>setVendorChkBox</value>
+  </data>
+  <data name="&gt;&gt;setVendorChkBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;setVendorChkBox.Parent" xml:space="preserve">
+    <value>tabPageAdb</value>
+  </data>
+  <data name="&gt;&gt;setVendorChkBox.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="selApkAdbBtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="selApkAdbBtn.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>System</value>
+  </data>
+  <data name="selApkAdbBtn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="selApkAdbBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>551, 25</value>
+  </data>
+  <data name="selApkAdbBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>28, 24</value>
+  </data>
+  <data name="selApkAdbBtn.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="selApkAdbBtn.Text" xml:space="preserve">
+    <value>...</value>
+  </data>
+  <data name="&gt;&gt;selApkAdbBtn.Name" xml:space="preserve">
+    <value>selApkAdbBtn</value>
+  </data>
+  <data name="&gt;&gt;selApkAdbBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;selApkAdbBtn.Parent" xml:space="preserve">
+    <value>tabPageAdb</value>
+  </data>
+  <data name="&gt;&gt;selApkAdbBtn.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="apkPathAdbTxtBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>147, 26</value>
+  </data>
+  <data name="apkPathAdbTxtBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>398, 22</value>
+  </data>
+  <data name="apkPathAdbTxtBox.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;apkPathAdbTxtBox.Name" xml:space="preserve">
+    <value>apkPathAdbTxtBox</value>
+  </data>
+  <data name="&gt;&gt;apkPathAdbTxtBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;apkPathAdbTxtBox.Parent" xml:space="preserve">
+    <value>tabPageAdb</value>
+  </data>
+  <data name="&gt;&gt;apkPathAdbTxtBox.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="label32.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label32.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label32.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 31</value>
+  </data>
+  <data name="label32.Size" type="System.Drawing.Size, System.Drawing">
+    <value>78, 13</value>
+  </data>
+  <data name="label32.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="label32.Text" xml:space="preserve">
+    <value>Selected APK: </value>
+  </data>
+  <data name="&gt;&gt;label32.Name" xml:space="preserve">
+    <value>label32</value>
+  </data>
+  <data name="&gt;&gt;label32.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label32.Parent" xml:space="preserve">
+    <value>tabPageAdb</value>
+  </data>
+  <data name="&gt;&gt;label32.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="devicesListBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 102</value>
+  </data>
+  <data name="devicesListBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>572, 173</value>
+  </data>
+  <data name="devicesListBox.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;devicesListBox.Name" xml:space="preserve">
+    <value>devicesListBox</value>
+  </data>
+  <data name="&gt;&gt;devicesListBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;devicesListBox.Parent" xml:space="preserve">
+    <value>tabPageAdb</value>
+  </data>
+  <data name="&gt;&gt;devicesListBox.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="tabPageAdb.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 27</value>
+  </data>
+  <data name="tabPageAdb.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="tabPageAdb.Size" type="System.Drawing.Size, System.Drawing">
+    <value>589, 281</value>
+  </data>
+  <data name="tabPageAdb.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="tabPageAdb.Text" xml:space="preserve">
+    <value>ADB</value>
+  </data>
+  <data name="&gt;&gt;tabPageAdb.Name" xml:space="preserve">
+    <value>tabPageAdb</value>
+  </data>
+  <data name="&gt;&gt;tabPageAdb.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabPageAdb.Parent" xml:space="preserve">
+    <value>tabControlMain</value>
+  </data>
+  <data name="&gt;&gt;tabPageAdb.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="tabControlMain.ItemSize" type="System.Drawing.Size, System.Drawing">
+    <value>48, 23</value>
   </data>
   <data name="tabControlMain.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 24</value>
@@ -5737,7 +6070,7 @@ and change target SDK to 29</value>
     <value>None</value>
   </data>
   <data name="toolStripStatusLabelStateText.Size" type="System.Drawing.Size, System.Drawing">
-    <value>448, 17</value>
+    <value>479, 17</value>
   </data>
   <data name="toolStripStatusLabelStateText.Text" xml:space="preserve">
     <value>Loading...</value>

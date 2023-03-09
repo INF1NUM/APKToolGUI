@@ -1119,5 +1119,41 @@ namespace APKToolGUI.Properties {
                 this["Decode_UseApkEditorMergeApk"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool Adb_SetVendor {
+            get {
+                return ((bool)(this["Adb_SetVendor"]));
+            }
+            set {
+                this["Adb_SetVendor"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string Adb_SelectedApkPath {
+            get {
+                return ((string)(this["Adb_SelectedApkPath"]));
+            }
+            set {
+                this["Adb_SelectedApkPath"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool Sign_InstallApkAfterSign {
+            get {
+                return ((bool)(this["Sign_InstallApkAfterSign"]));
+            }
+            set {
+                this["Sign_InstallApkAfterSign"] = value;
+            }
+        }
     }
 }

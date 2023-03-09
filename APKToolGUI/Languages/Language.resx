@@ -474,7 +474,37 @@
   <data name="CancelProcess" xml:space="preserve">
     <value>Are you sure you want to cancel the process?</value>
   </data>
+  <data name="GettingDevices" xml:space="preserve">
+    <value>Getting devices...</value>
+  </data>
   <data name="PleaseWait" xml:space="preserve">
     <value>Please wait...</value>
+  </data>
+  <data name="ConfirmKillingAdbServer" xml:space="preserve">
+    <value>Are you sure you want to kill ADB server? You might need to reconnect your device or restart emulator</value>
+  </data>
+  <data name="DeviceNotSelected" xml:space="preserve">
+    <value>Device is not selected</value>
+  </data>
+  <data name="DeviceSelected" xml:space="preserve">
+    <value>Device selected "{0}"</value>
+  </data>
+  <data name="DevicesFound" xml:space="preserve">
+    <value>{0} devices found</value>
+  </data>
+  <data name="InstallApkFailed" xml:space="preserve">
+    <value>APK Installation failed</value>
+  </data>
+  <data name="InstallApkSuccessful" xml:space="preserve">
+    <value>APK Installation successfully</value>
+  </data>
+  <data name="InstallingApk" xml:space="preserve">
+    <value>Installing APK</value>
+  </data>
+  <data name="InstallingApkPath" xml:space="preserve">
+    <value>Installing APK "{0}"</value>
+  </data>
+  <data name="NoDevicesFound" xml:space="preserve">
+    <value>No devices found. Make sure your device is connected to the computer with the adb debugging turned on. If you use an emulator, restart it and wait until it boot up</value>
   </data>
 </root>

@@ -302,7 +302,9 @@
     <Compile Include="ApkTool\Signapk.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="ApkTool\Adb.cs" />
     <Compile Include="ApkTool\Zipalign.cs" />
+    <Compile Include="Handlers\AdbControlEventHandlers.cs" />
     <Compile Include="Handlers\ApkinfoControlEventHandlers.cs" />
     <Compile Include="Handlers\BaksmaliControlEventHandlers.cs" />
     <Compile Include="Handlers\BuildControlEventHandlers.cs" />

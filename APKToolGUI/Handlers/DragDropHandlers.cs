@@ -56,6 +56,10 @@ namespace APKToolGUI.Handlers
             DragEventHandler apkInfoEventHandler = new DragEventHandler((sender, e) => { DropApkToGetInfo(e); });
             Register(main.basicInfoTabPage, null, apkInfoEventHandler, apks);
             Register(main.fileTxtBox, null, apkInfoEventHandler, apks);
+
+            DragEventHandler adbEventHandler = new DragEventHandler((sender, e) => { DropApkToInstall(e); });
+            Register(main.tabPageAdb, null, adbEventHandler, new string[] { ".apk" });
+            Register(main.installApkBtn, null, adbEventHandler, new string[] { ".apk" });
         }
 
         void Register(Control ctrl, Control extCtrl, DragEventHandler dragHandler, string[] extension)
@@ -168,6 +172,17 @@ namespace APKToolGUI.Handlers
                 main.smaliBrowseInputDirTxtBox.Text = dir;
                 main.smaliGroupBox.BackColor = Color.White;
                 await main.Smali(dir);
+            }
+        }
+        
+        private async void DropApkToInstall(DragEventArgs e)
+        {
+            string dir = null;
+            if (e.DropOneByEnd(file => dir = file, ".apk"))
+            {
+                main.apkPathAdbTxtBox.Text = dir;
+                main.tabPageAdb.BackColor = Color.White;
+                await main.Install(dir);
             }
         }
 

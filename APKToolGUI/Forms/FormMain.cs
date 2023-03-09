@@ -17,12 +17,12 @@ using System.Media;
 using APKSMerger.AndroidRes;
 using Ionic.Zip;
 using System.Linq;
-using System.Threading;
 
 namespace APKToolGUI
 {
     public partial class FormMain : Form
     {
+        internal Adb adb;
         internal ApkEditor apkeditor;
         internal Apktool apktool;
         internal Signapk signapk;
@@ -34,8 +34,9 @@ namespace APKToolGUI
 
         private bool IgnoreOutputDirContextMenu;
         private bool isRunning;
+        private bool adbTabVisited;
 
-        private Stopwatch stopwatch;
+        private Stopwatch stopwatch = new Stopwatch();
         private string lastStartedDate;
 
         internal static FormMain Instance { get; private set; }
@@ -88,27 +89,25 @@ namespace APKToolGUI
             new FrameworkControlEventHandlers(this);
             new BaksmaliControlEventHandlers(this);
             new SmaliControlEventHandlers(this);
+            new AdbControlEventHandlers(this);
             new DragDropHandlers(this);
             new ApkinfoControlEventHandlers(this);
             new MainWindowEventHandlers(this);
 
-            stopwatch = new Stopwatch();
+            InitializeUpdateChecker();
+            InitializeZipalign();
+            InitializeBaksmali();
+            InitializeSmali();
+            InitializeAPKTool();
+            InitializeSignapk();
+            InitializeApkEditor();
+            InitializeAdb();
         }
 
         private async void FormMain_Shown(object sender, EventArgs e)
         {
-            Update();
-
             await Task.Factory.StartNew(() =>
             {
-                InitializeUpdateChecker();
-                InitializeZipalign();
-                InitializeBaksmali();
-                InitializeSmali();
-                InitializeAPKTool();
-                InitializeSignapk();
-                InitializeApkEditor();
-
                 string javaVersion = apktool.GetJavaVersion();
                 if (javaVersion != null)
                 {
@@ -141,6 +140,8 @@ namespace APKToolGUI
             await GetApkInfo(decApkPath);
 
             RunCmdArgs();
+
+            await ListDevices();
         }
 
         #region Context menu args
@@ -431,7 +432,7 @@ namespace APKToolGUI
             Invoke(new Action(delegate ()
             {
                 TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Indeterminate, Handle);
-                toolStripProgressBar1.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
+                toolStripProgressBar1.Style = ProgressBarStyle.Marquee;
                 ActionButtonsEnabled = false;
                 ClearLog();
             }));
@@ -455,13 +456,38 @@ namespace APKToolGUI
 
             TaskbarManager.Instance.SetProgressValue(1, 1);
             if (statusStrip1.InvokeRequired)
-                statusStrip1.BeginInvoke(new Action(delegate { toolStripProgressBar1.Style = System.Windows.Forms.ProgressBarStyle.Continuous; }));
+                statusStrip1.BeginInvoke(new Action(delegate { toolStripProgressBar1.Style = ProgressBarStyle.Continuous; }));
             else
-                toolStripProgressBar1.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
+                toolStripProgressBar1.Style = ProgressBarStyle.Continuous;
 
             ActionButtonsEnabled = true;
 
             ToStatus(Language.Done, Resources.done);
+        }
+
+        internal void Error(string msg)
+        {
+            isRunning = false;
+
+            stopwatch.Stop();
+            TimeSpan ts = stopwatch.Elapsed;
+
+            ToLog(ApktoolEventType.Error, msg);
+            ToLog(ApktoolEventType.None, "Time started: " + lastStartedDate);
+            ToLog(ApktoolEventType.None, "Time elapsed: " + ts.ToString("mm\\:ss"));
+
+            if (Settings.Default.PlaySoundWhenDone)
+                SystemSounds.Beep.Play();
+
+            TaskbarManager.Instance.SetProgressValue(1, 1);
+            if (statusStrip1.InvokeRequired)
+                statusStrip1.BeginInvoke(new Action(delegate { toolStripProgressBar1.Style = ProgressBarStyle.Continuous; }));
+            else
+                toolStripProgressBar1.Style = ProgressBarStyle.Continuous;
+
+            ActionButtonsEnabled = true;
+
+            ToStatus(msg, Resources.error);
         }
 
         internal void ClearLog()
@@ -910,6 +936,21 @@ namespace APKToolGUI
                                     ToLog(ApktoolEventType.None, String.Format(Language.DeleteFile, outputFile + ".idsig"));
                                     FileUtils.Delete(outputFile + ".idsig");
                                 }
+
+                                string device = selAdbDeviceLbl.Text;
+                                if (!String.IsNullOrEmpty(device) && Settings.Default.Sign_InstallApkAfterSign)
+                                {
+                                    ToLog(ApktoolEventType.Infomation, "=====[ " + Language.InstallingApk + " ]=====");
+                                    if (adb.Install(device, outputFile) == 0)
+                                    {
+                                        ToLog(ApktoolEventType.None, Language.InstallApkSuccessful);
+                                        Done(true);
+                                    }
+                                    else
+                                        Error(Language.InstallApkFailed);
+                                }
+                                else
+                                    ToLog(ApktoolEventType.Error, String.Format(Language.DeviceNotSelected, outputFile));
                             }
                             else
                             {
@@ -1152,14 +1193,14 @@ namespace APKToolGUI
 
             Running();
 
-            string outputDir = input;
+            string outputFile = input;
             if (Settings.Default.Zipalign_UseOutputDir && !IgnoreOutputDirContextMenu)
-                outputDir = Path.Combine(Settings.Default.Sign_OutputDir, Path.GetFileName(input));
+                outputFile = Path.Combine(Settings.Default.Sign_OutputDir, Path.GetFileName(input));
             if (!Settings.Default.Sign_OverwriteInputFile)
-                outputDir = PathUtils.GetDirectoryNameWithoutExtension(outputDir) + "_signed.apk";
+                outputFile = PathUtils.GetDirectoryNameWithoutExtension(outputFile) + "_signed.apk";
 
             string tempApk = Path.Combine(Program.TEMP_PATH, "tempapk.apk");
-            string outputApkFile = outputDir;
+            string outputApkFile = outputFile;
 
             ToLog(ApktoolEventType.Infomation, "=====[ " + Language.Signing + " ]=====");
             ToLog(ApktoolEventType.None, String.Format(Language.InputFile, input));
@@ -1174,19 +1215,36 @@ namespace APKToolGUI
                         ToLog(ApktoolEventType.None, String.Format(Language.CopyFileToTemp, input, tempApk));
                         FileUtils.Copy(input, tempApk, true);
                         input = tempApk;
-                        outputDir = tempApk;
+                        outputFile = tempApk;
                     }
 
-                    code = signapk.Sign(input, outputDir);
+                    code = signapk.Sign(input, outputFile);
 
                     if (code == 0)
                     {
-                        ToLog(ApktoolEventType.None, String.Format(Language.SignSuccessfullyCompleted, outputDir));
+                        ToLog(ApktoolEventType.None, String.Format(Language.SignSuccessfullyCompleted, outputFile));
+
+                        string device = selAdbDeviceLbl.Text;
+
+                        if (!String.IsNullOrEmpty(device) && Settings.Default.Sign_InstallApkAfterSign)
+                        {
+                            ToLog(ApktoolEventType.Infomation, "=====[ " + Language.InstallingApk + " ]=====");
+                            if (adb.Install(device, outputFile) == 0)
+                            {
+                                ToLog(ApktoolEventType.None, Language.InstallApkSuccessful);
+                                Done(true);
+                            }
+                            else
+                                Error(Language.InstallApkFailed);
+                        }
+                        else
+                            ToLog(ApktoolEventType.Error, String.Format(Language.DeviceNotSelected, outputFile));
+                   
 
                         if (Settings.Default.AutoDeleteIdsigFile)
                         {
-                            ToLog(ApktoolEventType.None, String.Format(Language.DeleteFile, outputDir + ".idsig"));
-                            FileUtils.Delete(outputDir + ".idsig");
+                            ToLog(ApktoolEventType.None, String.Format(Language.DeleteFile, outputFile + ".idsig"));
+                            FileUtils.Delete(outputFile + ".idsig");
                         }
 
                         if (Settings.Default.Utf8FilenameSupport)
@@ -1196,7 +1254,7 @@ namespace APKToolGUI
                         }
                     }
                     else
-                        ToLog(ApktoolEventType.Error, String.Format(Language.ErrorSigning, outputDir));
+                        ToLog(ApktoolEventType.Error, String.Format(Language.ErrorSigning, outputFile));
                 });
             }
             catch (Exception ex)
@@ -1206,6 +1264,115 @@ namespace APKToolGUI
             }
 
             Done(printTimer: true);
+
+            return code;
+        }
+        #endregion
+
+        #region Adb
+        private void InitializeAdb()
+        {
+            adb = new Adb(Program.ADB_PATH);
+            adb.OutputDataReceived += AdbOutputDataReceived;
+            adb.ErrorDataReceived += AdbErrorDataReceived;
+        }
+
+        void AdbErrorDataReceived(object sender, DataReceivedEventArgs e)
+        {
+            ToLog(ApktoolEventType.Error, e.Data);
+        }
+
+        void AdbOutputDataReceived(object sender, DataReceivedEventArgs e)
+        {
+            ToLog(ApktoolEventType.None, e.Data);
+        }
+
+        internal async Task<int> ListDevices()
+        {
+            int code = 0;
+            AdbActionButtonsEnabled = false;
+            ToLog(ApktoolEventType.None, Language.GettingDevices);
+            ToStatus(Language.GettingDevices, Resources.waiting);
+
+            string devices = null;
+            int numOfDevices = 0;
+
+            try
+            {
+                devicesListBox.Items.Clear();
+
+                await Task.Factory.StartNew(() =>
+                {
+                    devices = adb.GetDevices();
+                });
+                if (!String.IsNullOrEmpty(devices))
+                {
+                    string[] deviceLines = devices.Split(new[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries);
+                    foreach (string line in deviceLines.Skip(1))
+                    {
+                        numOfDevices++;
+                        devicesListBox.Items.Add(line);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                code = 1;
+                ToLog(ApktoolEventType.Error, ex.ToString());
+            }
+
+            if (numOfDevices != 0)
+                ToLog(ApktoolEventType.None, String.Format(Language.DevicesFound, numOfDevices));
+            else
+                ToLog(ApktoolEventType.None, Language.NoDevicesFound);
+
+            ToStatus(Language.Done, Resources.done);
+            AdbActionButtonsEnabled = true;
+
+            return code;
+        }
+
+        internal async Task<int> Install(string inputApk)
+        {
+            string device = selAdbDeviceLbl.Text;
+            if (String.IsNullOrEmpty(device))
+            {
+                ToLog(ApktoolEventType.Error, String.Format(Language.DeviceNotSelected, inputApk));
+                return 1;
+            }
+
+            int code = 0;
+
+            Running();
+
+            AdbActionButtonsEnabled = false;
+
+            ToLog(ApktoolEventType.Infomation, "=====[ " + Language.InstallingApk + " ]=====");
+            ToLog(ApktoolEventType.None, String.Format(Language.InstallingApkPath, inputApk));
+            ToStatus(String.Format(Language.InstallingApk, inputApk), Resources.waiting);
+
+            try
+            {
+                await Task.Factory.StartNew(() =>
+                {
+                    code = adb.Install(device, inputApk);
+                    if (code == 0)
+                    {
+                        ToLog(ApktoolEventType.None, Language.InstallApkSuccessful);
+                        Done(true);
+                    }
+                    else
+                        Error(Language.InstallApkFailed);
+                });
+            }
+            catch (Exception ex)
+            {
+                code = 1;
+                ToLog(ApktoolEventType.Error, ex.ToString());
+                Error(ex.Message);
+            }
+
+            AdbActionButtonsEnabled = true;
 
             return code;
         }
@@ -1355,6 +1522,19 @@ namespace APKToolGUI
             }
         }
 
+        private bool AdbActionButtonsEnabled
+        {
+            set
+            {
+                killAdbBtn.Enabled = value;
+                refreshDevicesBtn.Enabled = value;
+                installApkBtn.Enabled = value;
+                devicesListBox.Enabled = value;
+                apkPathAdbTxtBox.Enabled = value;
+                selApkAdbBtn.Enabled = value;
+                setVendorChkBox.Enabled = value;
+            }
+        }
         internal void ShowMessage(string message, MessageBoxIcon status)
         {
             MessageBox.Show(message, Application.ProductName, MessageBoxButtons.OK, status);
