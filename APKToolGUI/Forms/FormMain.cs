@@ -128,7 +128,12 @@ namespace APKToolGUI
                         ToLog(ApktoolEventType.Error, Language.ErrorJavaDetect);
                 }
                 else
+                {
                     ToLog(ApktoolEventType.Error, Language.ErrorJavaDetect);
+                    tabPageMain.Enabled = false;
+                    tabPageBaksmali.Enabled = false;
+                    tabPageInstallFramework.Enabled = false;
+                }
 
                 InitializeAdb();
 
