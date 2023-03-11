@@ -32,6 +32,9 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.customApkToolTxtBox = new System.Windows.Forms.TextBox();
+            this.customApktoolBtn = new System.Windows.Forms.Button();
+            this.useCustomApktoolChk = new System.Windows.Forms.CheckBox();
             this.label6 = new System.Windows.Forms.Label();
             this.checkBox5 = new System.Windows.Forms.CheckBox();
             this.checkBox4 = new System.Windows.Forms.CheckBox();
@@ -78,6 +81,9 @@
             // groupBox1
             // 
             resources.ApplyResources(this.groupBox1, "groupBox1");
+            this.groupBox1.Controls.Add(this.customApkToolTxtBox);
+            this.groupBox1.Controls.Add(this.customApktoolBtn);
+            this.groupBox1.Controls.Add(this.useCustomApktoolChk);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.checkBox5);
             this.groupBox1.Controls.Add(this.checkBox4);
@@ -91,6 +97,29 @@
             this.groupBox1.Controls.Add(this.checkBoxCheckUpdateStartup);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.TabStop = false;
+            // 
+            // customApkToolTxtBox
+            // 
+            resources.ApplyResources(this.customApkToolTxtBox, "customApkToolTxtBox");
+            this.customApkToolTxtBox.BackColor = System.Drawing.SystemColors.Window;
+            this.customApkToolTxtBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::APKToolGUI.Properties.Settings.Default, "ApktoolPath", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.customApkToolTxtBox.Name = "customApkToolTxtBox";
+            this.customApkToolTxtBox.Text = global::APKToolGUI.Properties.Settings.Default.ApktoolPath;
+            // 
+            // customApktoolBtn
+            // 
+            resources.ApplyResources(this.customApktoolBtn, "customApktoolBtn");
+            this.customApktoolBtn.Name = "customApktoolBtn";
+            this.customApktoolBtn.UseVisualStyleBackColor = true;
+            this.customApktoolBtn.Click += new System.EventHandler(this.customApktoolBtn_Click);
+            // 
+            // useCustomApktoolChk
+            // 
+            resources.ApplyResources(this.useCustomApktoolChk, "useCustomApktoolChk");
+            this.useCustomApktoolChk.Checked = global::APKToolGUI.Properties.Settings.Default.UseCustomApktool;
+            this.useCustomApktoolChk.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "UseCustomApktool", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.useCustomApktoolChk.Name = "useCustomApktoolChk";
+            this.useCustomApktoolChk.UseVisualStyleBackColor = true;
             // 
             // label6
             // 
@@ -164,6 +193,7 @@
             // 
             resources.ApplyResources(this.checkBox1, "checkBox1");
             this.checkBox1.Checked = global::APKToolGUI.Properties.Settings.Default.ClearLogBeforeAction;
+            this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox1.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "ClearLogBeforeAction", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -290,5 +320,8 @@
         private System.Windows.Forms.CheckBox checkBox3;
         internal System.Windows.Forms.Label label6;
         private System.Windows.Forms.CheckBox checkBox5;
+        private System.Windows.Forms.TextBox customApkToolTxtBox;
+        private System.Windows.Forms.Button customApktoolBtn;
+        private System.Windows.Forms.CheckBox useCustomApktoolChk;
     }
 }

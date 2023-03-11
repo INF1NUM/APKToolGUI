@@ -178,6 +178,15 @@ namespace APKToolGUI.Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to It is required to clear framework cache after changing Apktool version to avoid unexpected errors. Do you want to clear it now?.
+        /// </summary>
+        internal static string ClearFrameworkPrompt {
+            get {
+                return ResourceManager.GetString("ClearFrameworkPrompt", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Clearing Framework.
         /// </summary>
         internal static string ClearingFramework {

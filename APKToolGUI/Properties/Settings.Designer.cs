@@ -1155,5 +1155,29 @@ namespace APKToolGUI.Properties {
                 this["Sign_InstallApkAfterSign"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool UseCustomApktool {
+            get {
+                return ((bool)(this["UseCustomApktool"]));
+            }
+            set {
+                this["UseCustomApktool"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string ApktoolPath {
+            get {
+                return ((string)(this["ApktoolPath"]));
+            }
+            set {
+                this["ApktoolPath"] = value;
+            }
+        }
     }
 }

@@ -16,10 +16,16 @@ namespace APKToolGUI
     public partial class FormSettings : Form
     {
         string currentLanguage;
+        bool currentUseApktoolChk;
+        string currentApktoolPath;
 
         public FormSettings()
         {
             InitializeComponent();
+
+            currentUseApktoolChk = useCustomApktoolChk.Checked;
+            currentApktoolPath = customApkToolTxtBox.Text;
+
             if (!AdminUtils.IsAdministrator())
             {
                 SetButtonShield(buttonAddContextMenu, true);
@@ -117,6 +123,11 @@ namespace APKToolGUI
             if (!comboBox1.SelectedItem.ToString().Contains(currentLanguage))
                 if (MessageBox.Show(Language.SetLanguageRestartApplication, Application.ProductName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     Application.Restart();
+
+            if (currentUseApktoolChk != useCustomApktoolChk.Checked || currentApktoolPath != customApkToolTxtBox.Text)
+            {
+                FormMain.Instance.SetApktoolPath();
+            }
         }
 
         public static void RunAsAdmin(string aFileName, string anArguments)
@@ -143,19 +154,9 @@ namespace APKToolGUI
             using (OpenFileDialog openJavaExe = new OpenFileDialog())
             {
                 openJavaExe.Filter = "java.exe|java.exe";
-                if (openJavaExe.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                if (openJavaExe.ShowDialog() == DialogResult.OK)
                     textBoxCustomJavaLocation.Text = Program.GetPortablePath(openJavaExe.FileName);
             }
-
-            //OpenFileDialog openJavaExe = new OpenFileDialog()
-            //{
-            //    Multiselect = false,
-            //    Filter = "java.exe|java.exe"
-            //};
-            //if (openJavaExe.ShowDialog() == System.Windows.Forms.DialogResult.OK)
-            //{
-            //    textBoxCustomJavaLocation.Text = openJavaExe.FileName;
-            //}
         }
 
         private void buttonCustomTempLocation_Click(object sender, EventArgs e)
@@ -174,6 +175,18 @@ namespace APKToolGUI
 
                     Program.TEMP_PATH = Program.TempDirectory();
                     Directory.CreateDirectory(Program.TEMP_PATH);
+                }
+            }
+        }
+
+        private async void customApktoolBtn_Click(object sender, EventArgs e)
+        {
+            using (OpenFileDialog ofd = new OpenFileDialog())
+            {
+                ofd.Filter = "Apktool (*.jar)|*.jar";
+                if (ofd.ShowDialog() == DialogResult.OK)
+                {
+                    customApkToolTxtBox.Text = ofd.FileName;
                 }
             }
         }

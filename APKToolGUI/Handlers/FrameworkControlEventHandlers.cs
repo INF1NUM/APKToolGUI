@@ -93,13 +93,7 @@ namespace APKToolGUI.Handlers
         {
             main.Running(Language.ClearingFramework);
 
-            await Task.Factory.StartNew(() =>
-            {
-                if (main.ClearFramework() == 0)
-                    main.Done(Language.Done);
-                else
-                    main.Error(Language.ErrorClearingFw);
-            });
+            await main.ClearFramework();
         }
 
         internal void openFwFolderBtn_Click(object sender, EventArgs e)

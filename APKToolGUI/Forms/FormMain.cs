@@ -18,6 +18,7 @@ using APKSMerger.AndroidRes;
 using Ionic.Zip;
 using System.Linq;
 using System.Windows.Interop;
+using System.Security.Cryptography;
 
 namespace APKToolGUI
 {
@@ -35,7 +36,6 @@ namespace APKToolGUI
 
         private bool IgnoreOutputDirContextMenu;
         private bool isRunning;
-        private bool adbTabVisited;
 
         private string javaPath;
 
@@ -549,8 +549,11 @@ namespace APKToolGUI
                 {
                     if (Settings.Default.Framework_ClearBeforeDecode)
                     {
-                        if (ClearFramework() == 0)
-                            ToLog(ApktoolEventType.None, Language.FrameworkCacheCleared);
+                        ToLog(ApktoolEventType.Infomation, Language.ClearingFramework);
+                        if (apktool.ClearFramework() == 0)
+                        {
+                            ToLog(ApktoolEventType.Success, Language.FrameworkCacheCleared);
+                        }
                         else
                             ToLog(ApktoolEventType.Error, Language.ErrorClearingFw);
                     }
@@ -663,8 +666,11 @@ namespace APKToolGUI
                 {
                     if (Settings.Default.Framework_ClearBeforeDecode)
                     {
-                        if (ClearFramework() == 0)
-                            ToLog(ApktoolEventType.None, Language.FrameworkCacheCleared);
+                        ToLog(ApktoolEventType.Infomation, Language.ClearingFramework);
+                        if (apktool.ClearFramework() == 0)
+                        {
+                            ToLog(ApktoolEventType.Success, Language.FrameworkCacheCleared);
+                        }
                         else
                             ToLog(ApktoolEventType.Error, Language.ErrorClearingFw);
                     }
@@ -741,9 +747,34 @@ namespace APKToolGUI
         #endregion
 
         #region Apktool
+        public async void SetApktoolPath()
+        {
+            apktool.JarPath = Program.APKTOOL_PATH;
+            if (Settings.Default.UseCustomApktool)
+            {
+                apktool.JarPath = Settings.Default.ApktoolPath;
+            }
+
+            string apktoolVersion = apktool.GetVersion();
+            if (!String.IsNullOrWhiteSpace(apktoolVersion))
+                ToLog(ApktoolEventType.None, String.Format(Language.APKToolVersion + " \"{0}\"", apktoolVersion));
+            else
+                ToLog(ApktoolEventType.Error, Language.CantDetectApktoolVersion);
+
+            if (MessageBox.Show(Language.ClearFrameworkPrompt, Application.ProductName, MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+            {
+                await ClearFramework();
+            }
+        }
+
         private void InitializeAPKTool()
         {
-            apktool = new Apktool(javaPath, Program.APKTOOL_PATH);
+            string apktoolPath = Program.APKTOOL_PATH;
+            if (Settings.Default.UseCustomApktool)
+            {
+                apktoolPath = Settings.Default.ApktoolPath;
+            }
+            apktool = new Apktool(javaPath, apktoolPath);
             apktool.ApktoolOutputDataRecieved += apktool_ApktoolOutputDataRecieved;
             apktool.ApktoolErrorDataRecieved += apktool_ApktoolErrorDataRecieved;
         }
@@ -788,8 +819,11 @@ namespace APKToolGUI
 
                     if (Settings.Default.Framework_ClearBeforeDecode)
                     {
-                        if (ClearFramework() == 0)
+                        ToLog(ApktoolEventType.Infomation, Language.ClearingFramework);
+                        if (apktool.ClearFramework() == 0)
+                        {
                             ToLog(ApktoolEventType.Success, Language.FrameworkCacheCleared);
+                        }
                         else
                             ToLog(ApktoolEventType.Error, Language.ErrorClearingFw);
                     }
@@ -845,15 +879,32 @@ namespace APKToolGUI
             return code;
         }
 
-        internal int ClearFramework()
+        internal async Task<int> ClearFramework()
         {
-            Invoke(new Action(delegate ()
-            {
-                ToLog(ApktoolEventType.Infomation, Language.ClearingFramework);
-                ToStatus(Language.ClearingFramework + "...", Resources.waiting);
-            }));
+            int code = 0;
 
-            return apktool.ClearFramework();
+            ToLog(ApktoolEventType.Infomation, "=====[ " + Language.ClearingFramework + " ]=====");
+            ToStatus(Language.ClearingFramework, Resources.waiting);
+
+            try
+            {
+                await Task.Factory.StartNew(() =>
+                {
+                    if (apktool.ClearFramework() == 0)
+                    {
+                        Done(Language.FrameworkCacheCleared);
+                    }
+                    else
+                        Error(Language.ErrorClearingFw);
+                });
+            }
+            catch (Exception ex)
+            {
+                Error(ex.Message);
+                code = 1;
+            }
+
+            return code;
         }
 
         internal async Task<int> Build(string inputFolder)
