@@ -12,14 +12,16 @@ https://github.com/AndnixSH/APKToolGUI/releases
 
 # Requirements
 - Windows 7 32-bit/64-bit and above
-- JDK/JRE 8 and above. Highly recommended to use 64-bit version of Java if your system is 64-bit
-- .NET Framework 4.8
+- [Java Runtime Environment](https://www.java.com/en/)/[Java SE Development Kit](https://www.oracle.com/java/technologies/downloads/) 8 and above. Highly recommended to use 64-bit version if your system is 64-bit
+- [.NET Framework 4.8](https://dotnet.microsoft.com/en-us/download/dotnet-framework/net48) (Windows 10 and above have it preinstalled)
 
 # Features
 - Decompile APK
+- Decompile and merge split APK/XAPK/APKS/ZIP/APKM using build-in split merging and APKEditor.jar (Default)
 - Compile APK
 - Sign APK
 - Zipalign APK
+- Adb
 - Framework
 - Drag and drop
 - APK info
@@ -28,6 +30,9 @@ https://github.com/AndnixSH/APKToolGUI/releases
 - Additional features that can fix some Apktool errors, such as removing DUMMY_APKTOOL, clear framework before decompiling
 - Multi language
 - Right-click context menu
+- Create unsigned APK for Core Patch
+- High DPI support
+- Long path support (Windows 10 and above) 
 
 # Languages
 - Brazilian Portuguese (Incomplete)
@@ -48,13 +53,13 @@ If you can't use Visual Studio, you can use translator tools like [resxtranslato
 Make pull request when you are done
 
 # Issues
-Issues with Apktool? read the log, check if your modification and/or syntax is correct.
+Issues with Apktool? Please do cursory search of the issue tracker of [Apktool](https://github.com/iBotPeaches/Apktool/issues?q=is%3Aissue) and [Baksmali](https://github.com/JesusFreke/smali/issues?q=is%3Aissue), see if your question may be answered
 
-Framework/system apps related issues, check on [XDA Forum](https://forum.xda-developers.com/)
+For Framework/system apps related issues, check on [XDA Forum](https://forum.xda-developers.com/)
 
 **Some apps may been protected or obfuscated for content protection purposes or against cheaters. Bypassing of such is beyond the scope of this tool, so please DO NOT post an issue regarding to it. This tool does not support bypassing such protections, and never will be!**
 
-Anything else, report here https://github.com/AndnixSH/APKToolGUI/issues
+Anything else, [create a new issue](https://github.com/AndnixSH/APKToolGUI/issues)
 
 # FAQ
 ##### Q: Can it be ported to other OS like Linux?
@@ -67,19 +72,25 @@ A: Download [Apktool.jar](https://github.com/iBotPeaches/Apktool/releases) and r
 A: Download [Baksmali.jar/Smali.jar](https://bitbucket.org/JesusFreke/smali/downloads/) and replace it on Resources folder
 
 ##### Q: How to reset?
-A: Simply delete the config.xml file on the same directory of the executeable
+A: Simply delete the config.xml file from the directory of the executeable
 
 ##### Q: Why this tool is a virus?
 A: It just a false positive, anti-virus always flag tools/softwares like this as virus. Don't always believe what your anti-virus are telling you. Try to compile the source by yourself and you will see
 
 ##### Q: Can you make an automatic APK injecting tool?
-A: No, that's not the scope of this tool, and I don't have time for that. However, you can try making it by yourself, or have a look on [SaveToGame](https://github.com/And42/SaveToGame) project which can give you ideas how to do it.
+A: No, that's out of scope of this tool, and I'm not interested.
 
 ##### Q: Can you implement an option to protect/pack/obfuscate APK?
-A: No, protection is beyond the scope of this tool
+A: No, APK protection is beyond the scope of this tool
 
 ##### Q: Can you implement an option to deobfuscate/unpack APK or bypass anti-cheat/security?
 A: No, they are also beyond the scope of this tool. I don't condone bypassing such protections
+
+##### Q: I don't like split APK. Where can I get single APK instead?
+A: Download from [Apkcombo's APK downloader](https://apkcombo.com/downloader/), or [Apkpure](https://apkpure.com/) (Choose APK instead XAPK)
+
+##### Q: Can you help me with modding APK in general?
+A: Sorry, I don't offer support with it.
 
 # Development
 This project is written in C#
