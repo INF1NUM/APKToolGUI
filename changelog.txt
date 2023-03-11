@@ -3,6 +3,7 @@
 - Added incompleted Hungarian translation
 - Added incompleted Portuguese translation
 - Improve performance
+- Improve Java logic
 - Added launcable activity text box
 - Improve directory logic
 - Support high DPI
@@ -12,6 +13,8 @@
 - Status bar is clickable to cancel the process
 - Added ADB to install APK
 - Clean up log calls
+- Kill process by clicking on status bar
+- Option to use custom apktool path
 
 3.1.0.0
 - Disable maximize
