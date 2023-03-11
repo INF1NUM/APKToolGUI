@@ -54,9 +54,13 @@ namespace APKToolGUI
         {
             try
             {
-                if (processZipalign.HasExited == false)
+                foreach (var process in Process.GetProcessesByName("zipalign"))
                 {
-                    processZipalign.Kill();
+                    if (process.Id == processZipalign.Id)
+                    {
+                        ProcessUtils.KillAllProcessesSpawnedBy((uint)processZipalign.Id);
+                        process.Kill();
+                    }
                 }
             }
             catch { }

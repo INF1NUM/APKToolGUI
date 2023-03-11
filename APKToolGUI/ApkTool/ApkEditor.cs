@@ -3,6 +3,7 @@ using Java;
 using System.Diagnostics;
 using APKToolGUI.Properties;
 using System.IO;
+using APKToolGUI.Utils;
 
 namespace APKToolGUI
 {
@@ -66,9 +67,13 @@ namespace APKToolGUI
         {
             try
             {
-                if (HasExited == false)
+                foreach (var process in Process.GetProcessesByName("java"))
                 {
-                    Kill();
+                    if (process.Id == Id)
+                    {
+                        ProcessUtils.KillAllProcessesSpawnedBy((uint)Id);
+                        process.Kill();
+                    }
                 }
             }
             catch { }

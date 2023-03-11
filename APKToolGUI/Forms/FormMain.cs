@@ -130,9 +130,12 @@ namespace APKToolGUI
                 else
                 {
                     ToLog(ApktoolEventType.Error, Language.ErrorJavaDetect);
-                    tabPageMain.Enabled = false;
-                    tabPageBaksmali.Enabled = false;
-                    tabPageInstallFramework.Enabled = false;
+                    BeginInvoke(new MethodInvoker(delegate
+                    {
+                        tabPageMain.Enabled = false;
+                        tabPageBaksmali.Enabled = false;
+                        tabPageInstallFramework.Enabled = false;
+                    }));
                 }
 
                 InitializeAdb();
@@ -1494,7 +1497,6 @@ namespace APKToolGUI
         {
             Save();
 
-            //Clear temp folder
             DirectoryUtils.Delete(Program.TEMP_PATH);
         }
 
@@ -1614,6 +1616,7 @@ namespace APKToolGUI
                 baksmali.Cancel();
                 smali.Cancel();
                 zipalign.Cancel();
+                signapk.Cancel();
             }
             catch (Exception ex)
             {

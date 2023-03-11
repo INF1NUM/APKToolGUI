@@ -61,9 +61,13 @@ namespace APKToolGUI
         {
             try
             {
-                if (processAdb.HasExited == false)
+                foreach (var process in Process.GetProcessesByName("adb"))
                 {
-                    processAdb.Kill();
+                    if (process.Id == processAdb.Id)
+                    {
+                        ProcessUtils.KillAllProcessesSpawnedBy((uint)processAdb.Id);
+                        process.Kill();
+                    }
                 }
             }
             catch { }

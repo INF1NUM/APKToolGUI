@@ -21,10 +21,7 @@ namespace Java
         private void Initialize()
         {
             EnableRaisingEvents = true;
-            if (!String.IsNullOrEmpty(JavaPath))
-                StartInfo.FileName = JavaPath;
-            else
-                StartInfo.FileName = "cmd.exe";
+            StartInfo.FileName = JavaPath;
             StartInfo.StandardOutputEncoding = Encoding.GetEncoding("UTF-8");
             StartInfo.UseShellExecute = false;
             StartInfo.RedirectStandardOutput = true;
@@ -35,16 +32,8 @@ namespace Java
         public new bool Start(string args)
         {
             EnableRaisingEvents = true;
-            if (!String.IsNullOrEmpty(JavaPath))
-            {
-                StartInfo.Arguments = String.Format("-jar \"{0}\" {1}", JarPath, args);
-                Debug.WriteLine(String.Format("-jar \"{0}\" {1}", JarPath, args));
-            }
-            else
-            {
-                StartInfo.Arguments = String.Format("/c \" java -jar \"{0}\" {1} \"", JarPath, args);
-                Debug.WriteLine(String.Format("CMD: java -jar \"{0}\" {1} \"", JarPath, args));
-            }
+            StartInfo.Arguments = String.Format("-jar \"{0}\" {1}", JarPath, args);
+            Debug.WriteLine(String.Format("-jar \"{0}\" {1}", JarPath, args));
             return base.Start();
         }
 
@@ -54,17 +43,8 @@ namespace Java
             {
                 using (Process javaProcess = new Process())
                 {
-                    if (!String.IsNullOrEmpty(JavaPath))
-                    {
-                        javaProcess.StartInfo.FileName = JavaPath;
-                        javaProcess.StartInfo.Arguments = String.Format("-jar \"{0}\" {1}", JarPath, args);
-
-                    }
-                    else
-                    {
-                        javaProcess.StartInfo.FileName = "cmd.exe";
-                        javaProcess.StartInfo.Arguments = String.Format("/c \" java -jar \"{0}\" {1} \"", JarPath, args);
-                    }
+                    javaProcess.StartInfo.FileName = JavaPath;
+                    javaProcess.StartInfo.Arguments = String.Format("-jar \"{0}\" {1}", JarPath, args);
                     javaProcess.StartInfo.CreateNoWindow = true;
                     javaProcess.StartInfo.UseShellExecute = false;
                     javaProcess.StartInfo.RedirectStandardError = true;
@@ -90,16 +70,8 @@ namespace Java
             {
                 using (Process javaProcess = new Process())
                 {
-                    if (!String.IsNullOrEmpty(JavaPath))
-                    {
-                        javaProcess.StartInfo.FileName = JavaPath;
-                        javaProcess.StartInfo.Arguments = "-version";
-                    }
-                    else
-                    {
-                        javaProcess.StartInfo.FileName = "cmd.exe";
-                        javaProcess.StartInfo.Arguments = "/c \"java -version \"";
-                    }
+                    javaProcess.StartInfo.FileName = JavaPath;
+                    javaProcess.StartInfo.Arguments = "-version";
                     javaProcess.StartInfo.CreateNoWindow = true;
                     javaProcess.StartInfo.UseShellExecute = false;
                     javaProcess.StartInfo.RedirectStandardError = true;

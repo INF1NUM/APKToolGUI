@@ -2,6 +2,7 @@
 using Java;
 using System.Diagnostics;
 using APKToolGUI.Properties;
+using APKToolGUI.Utils;
 
 namespace APKToolGUI
 {
@@ -67,10 +68,18 @@ namespace APKToolGUI
 
         public void Cancel()
         {
-            if (HasExited == false)
+            try
             {
-                Kill();
+                foreach (var process in Process.GetProcessesByName("java"))
+                {
+                    if (process.Id == Id)
+                    {
+                        ProcessUtils.KillAllProcessesSpawnedBy((uint)Id);
+                        process.Kill();
+                    }
+                }
             }
+            catch { }
         }
 
         public int Sign(string input, string output)

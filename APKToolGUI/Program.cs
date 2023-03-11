@@ -4,6 +4,7 @@ using APKToolGUI.Utils;
 using Bluegrams.Application;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Reflection;
 using System.Runtime.InteropServices;
@@ -76,7 +77,8 @@ namespace APKToolGUI
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.ToString(), Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Debug.WriteLine(ex);
+                //MessageBox.Show(ex.ToString(), Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

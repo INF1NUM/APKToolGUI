@@ -4,8 +4,9 @@ using System.Diagnostics;
 using System.IO;
 using System.Text;
 using System.Text.RegularExpressions;
-
+using System.Windows.Forms;
 using APKToolGUI.Properties;
+using APKToolGUI.Utils;
 using Java;
 
 namespace APKToolGUI
@@ -149,12 +150,19 @@ namespace APKToolGUI
         {
             try
             {
-                if (HasExited == false)
+                foreach (var process in Process.GetProcessesByName("java"))
                 {
-                    Kill();
+                    if (process.Id == Id)
+                    {
+                        ProcessUtils.KillAllProcessesSpawnedBy((uint)Id);
+                        process.Kill();
+                    }
                 }
             }
-            catch { }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex);
+            }
         }
 
         public int Build(string inputFolder, string outputFile)

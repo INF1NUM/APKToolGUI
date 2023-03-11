@@ -4,40 +4,44 @@ using APKToolGUI.Properties;
 using System;
 using System.Diagnostics;
 using System.IO;
+using System.Linq;
 using System.Windows.Forms;
+using static Microsoft.WindowsAPICodePack.Shell.PropertySystem.SystemProperties.System;
 
 namespace Java
 {
     public class JavaUtils
     {
-        public static bool TryGetSystemVariable(out string javaExeLocation)
+        public static string GetSystemVariable()
         {
             try
             {
-                ProcessStartInfo procStartInfo = new ProcessStartInfo("java", "-version ");
-                procStartInfo.RedirectStandardOutput = true;
-                procStartInfo.RedirectStandardError = true;
-                procStartInfo.UseShellExecute = false;
-                procStartInfo.CreateNoWindow = true;
-                Process proc = new Process();
-                proc.StartInfo = procStartInfo;
-                proc.Start();
-                if (!String.IsNullOrEmpty(proc.StandardError.ReadToEnd()))
+                using (Process javaProcess = new Process())
                 {
-                    javaExeLocation = "java";
-                    return true;
-                }
-                else
-                {
-                    javaExeLocation = null;
-                    return false;
+                    javaProcess.StartInfo.FileName = "where";
+                    javaProcess.StartInfo.Arguments = "java";
+                    javaProcess.StartInfo.CreateNoWindow = true;
+                    javaProcess.StartInfo.UseShellExecute = false;
+                    javaProcess.StartInfo.RedirectStandardError = true;
+                    javaProcess.StartInfo.RedirectStandardOutput = true;
+                    javaProcess.Start();
+                    string output = javaProcess.StandardOutput.ReadToEnd();
+                    javaProcess.WaitForExit();
+                    if (!String.IsNullOrEmpty(output))
+                    {
+                        string[] paths = output.Split(new[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries);
+                        foreach (string path in paths)
+                        {
+                            return path;
+                        }
+                    }
                 }
             }
             catch
             {
-                javaExeLocation = null;
-                return false;
+                return null;
             }
+            return null;
         }
         private static string GetJavaInstallationPath()
         {
@@ -80,31 +84,6 @@ namespace Java
                 return null;
         }
 
-        public static bool CheckJava()
-        {
-            if (Settings.Default.UseCustomJavaExe)
-            {
-                if (!File.Exists(Settings.Default.JavaExe))
-                {
-                    return false;
-                }
-                return true;
-            }
-            else
-            {
-                string javaExec;
-                if (!JavaUtils.TryGetSystemVariable(out javaExec))
-                {
-                    if (!File.Exists(JavaUtils.SearchPath()))
-                    {
-                        return false;
-                    }
-                    return true;
-                }
-                return true;
-            }
-        }
-
         public static string GetJavaPath()
         {
             if (Settings.Default.UseCustomJavaExe)
@@ -113,8 +92,8 @@ namespace Java
             }
             else
             {
-                string javaExec;
-                if (!JavaUtils.TryGetSystemVariable(out javaExec))
+                string javaExec = JavaUtils.GetSystemVariable();
+                if (String.IsNullOrEmpty(javaExec))
                 {
                     javaExec = JavaUtils.SearchPath();
                     if (File.Exists(javaExec))
