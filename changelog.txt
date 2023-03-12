@@ -15,6 +15,7 @@
 - Clean up log calls
 - Kill process by clicking on status bar
 - Option to use custom apktool path
+- Added menu item "Report an issue"
 
 3.1.0.0
 - Disable maximize
