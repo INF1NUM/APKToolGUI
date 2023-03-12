@@ -1478,6 +1478,11 @@ namespace APKToolGUI
         {
             Process.Start("https://github.com/JesusFreke/smali/issues?q=is%3Aissue");
         }
+
+        private void reportAnIsuueToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://github.com/AndnixSH/APKToolGUI/issues/new/choose");
+        }
         #endregion
 
         #region Form handlers
@@ -1625,5 +1630,6 @@ namespace APKToolGUI
             }
         }
         #endregion
+
     }
 }

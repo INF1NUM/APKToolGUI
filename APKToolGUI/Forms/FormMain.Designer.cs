@@ -261,6 +261,7 @@
             this.baksmaliIssuesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.reportAnIsuueToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControlMain.SuspendLayout();
             this.tabPageMain.SuspendLayout();
             this.signPanel.SuspendLayout();
@@ -2034,6 +2035,7 @@
             // 
             this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.checkForUpdateToolStripMenuItem,
+            this.reportAnIsuueToolStripMenuItem,
             this.apktoolIssuesToolStripMenuItem,
             this.baksmaliIssuesToolStripMenuItem,
             this.aboutToolStripMenuItem});
@@ -2069,6 +2071,12 @@
             this.toolTip1.AutoPopDelay = 10000;
             this.toolTip1.InitialDelay = 500;
             this.toolTip1.ReshowDelay = 100;
+            // 
+            // reportAnIsuueToolStripMenuItem
+            // 
+            this.reportAnIsuueToolStripMenuItem.Name = "reportAnIsuueToolStripMenuItem";
+            resources.ApplyResources(this.reportAnIsuueToolStripMenuItem, "reportAnIsuueToolStripMenuItem");
+            this.reportAnIsuueToolStripMenuItem.Click += new System.EventHandler(this.reportAnIsuueToolStripMenuItem_Click);
             // 
             // FormMain
             // 
@@ -2371,6 +2379,7 @@
         internal System.Windows.Forms.Button refreshDevicesBtn;
         internal System.Windows.Forms.Label selAdbDeviceLbl;
         private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.ToolStripMenuItem reportAnIsuueToolStripMenuItem;
     }
 }
 
