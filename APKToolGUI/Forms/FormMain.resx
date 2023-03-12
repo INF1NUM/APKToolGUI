@@ -8436,33 +8436,6 @@ and change target SDK to 29</value>
   <data name="clearLogToolStripMenuItem.Text" xml:space="preserve">
     <value>Clear log</value>
   </data>
-  <metadata name="mainMenu1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>317, 12</value>
-  </metadata>
-  <data name="menuItemFile.Text" xml:space="preserve">
-    <value>File</value>
-  </data>
-  <data name="saveLogItem.Text" xml:space="preserve">
-    <value>Save log to file</value>
-  </data>
-  <data name="menuItemSettings.Text" xml:space="preserve">
-    <value>Settings</value>
-  </data>
-  <data name="menuItemExit.Text" xml:space="preserve">
-    <value>Exit</value>
-  </data>
-  <data name="menuItemHelp.Text" xml:space="preserve">
-    <value>Help</value>
-  </data>
-  <data name="menuItemCheckUpdate.Text" xml:space="preserve">
-    <value>Check for update</value>
-  </data>
-  <data name="apktoolIssueItem.Text" xml:space="preserve">
-    <value>Apktool issues</value>
-  </data>
-  <data name="menuItemAbout.Text" xml:space="preserve">
-    <value>About</value>
-  </data>
   <data name="logTxtBox.Font" type="System.Drawing.Font, System.Drawing">
     <value>Consolas, 8.25pt</value>
   </data>
@@ -8491,43 +8464,13 @@ and change target SDK to 29</value>
     <value>1</value>
   </data>
   <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>423, 13</value>
+    <value>309, 13</value>
   </metadata>
   <data name="fileToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>37, 20</value>
   </data>
   <data name="fileToolStripMenuItem.Text" xml:space="preserve">
     <value>File</value>
-  </data>
-  <data name="checkForUpdateToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>189, 22</value>
-  </data>
-  <data name="checkForUpdateToolStripMenuItem.Text" xml:space="preserve">
-    <value>Check for update</value>
-  </data>
-  <data name="reportAnIsuueToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>189, 22</value>
-  </data>
-  <data name="reportAnIsuueToolStripMenuItem.Text" xml:space="preserve">
-    <value>Report an issue</value>
-  </data>
-  <data name="apktoolIssuesToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>189, 22</value>
-  </data>
-  <data name="apktoolIssuesToolStripMenuItem.Text" xml:space="preserve">
-    <value>Apktool issue tracker</value>
-  </data>
-  <data name="baksmaliIssuesToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>189, 22</value>
-  </data>
-  <data name="baksmaliIssuesToolStripMenuItem.Text" xml:space="preserve">
-    <value>Baksmali issue tracker</value>
-  </data>
-  <data name="aboutToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>189, 22</value>
-  </data>
-  <data name="aboutToolStripMenuItem.Text" xml:space="preserve">
-    <value>About</value>
   </data>
   <data name="helpToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>44, 20</value>
@@ -8563,31 +8506,61 @@ and change target SDK to 29</value>
     <value>3</value>
   </data>
   <data name="saveLogToFileToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>168, 22</value>
+    <value>180, 22</value>
   </data>
   <data name="saveLogToFileToolStripMenuItem.Text" xml:space="preserve">
     <value>Save log to file</value>
   </data>
   <data name="settingsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>168, 22</value>
+    <value>180, 22</value>
   </data>
   <data name="settingsToolStripMenuItem.Text" xml:space="preserve">
     <value>Settings</value>
   </data>
   <data name="openTempFolderToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>168, 22</value>
+    <value>180, 22</value>
   </data>
   <data name="openTempFolderToolStripMenuItem.Text" xml:space="preserve">
     <value>Open temp folder</value>
   </data>
   <data name="exitToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>168, 22</value>
+    <value>180, 22</value>
   </data>
   <data name="exitToolStripMenuItem.Text" xml:space="preserve">
     <value>Exit</value>
   </data>
+  <data name="checkForUpdateToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>189, 22</value>
+  </data>
+  <data name="checkForUpdateToolStripMenuItem.Text" xml:space="preserve">
+    <value>Check for update</value>
+  </data>
+  <data name="reportAnIsuueToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>189, 22</value>
+  </data>
+  <data name="reportAnIsuueToolStripMenuItem.Text" xml:space="preserve">
+    <value>Report an issue</value>
+  </data>
+  <data name="apktoolIssuesToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>189, 22</value>
+  </data>
+  <data name="apktoolIssuesToolStripMenuItem.Text" xml:space="preserve">
+    <value>Apktool issue tracker</value>
+  </data>
+  <data name="baksmaliIssuesToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>189, 22</value>
+  </data>
+  <data name="baksmaliIssuesToolStripMenuItem.Text" xml:space="preserve">
+    <value>Baksmali issue tracker</value>
+  </data>
+  <data name="aboutToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>189, 22</value>
+  </data>
+  <data name="aboutToolStripMenuItem.Text" xml:space="preserve">
+    <value>About</value>
+  </data>
   <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>538, 13</value>
+    <value>454, 16</value>
   </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -10306,60 +10279,6 @@ and change target SDK to 29</value>
   <data name="&gt;&gt;clearLogToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;mainMenu1.Name" xml:space="preserve">
-    <value>mainMenu1</value>
-  </data>
-  <data name="&gt;&gt;mainMenu1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MainMenu, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;menuItemFile.Name" xml:space="preserve">
-    <value>menuItemFile</value>
-  </data>
-  <data name="&gt;&gt;menuItemFile.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;saveLogItem.Name" xml:space="preserve">
-    <value>saveLogItem</value>
-  </data>
-  <data name="&gt;&gt;saveLogItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;menuItemSettings.Name" xml:space="preserve">
-    <value>menuItemSettings</value>
-  </data>
-  <data name="&gt;&gt;menuItemSettings.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;menuItemExit.Name" xml:space="preserve">
-    <value>menuItemExit</value>
-  </data>
-  <data name="&gt;&gt;menuItemExit.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;menuItemHelp.Name" xml:space="preserve">
-    <value>menuItemHelp</value>
-  </data>
-  <data name="&gt;&gt;menuItemHelp.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;menuItemCheckUpdate.Name" xml:space="preserve">
-    <value>menuItemCheckUpdate</value>
-  </data>
-  <data name="&gt;&gt;menuItemCheckUpdate.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;apktoolIssueItem.Name" xml:space="preserve">
-    <value>apktoolIssueItem</value>
-  </data>
-  <data name="&gt;&gt;apktoolIssueItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;menuItemAbout.Name" xml:space="preserve">
-    <value>menuItemAbout</value>
-  </data>
-  <data name="&gt;&gt;menuItemAbout.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;fileToolStripMenuItem.Name" xml:space="preserve">
     <value>fileToolStripMenuItem</value>
   </data>
@@ -10402,6 +10321,12 @@ and change target SDK to 29</value>
   <data name="&gt;&gt;checkForUpdateToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;reportAnIsuueToolStripMenuItem.Name" xml:space="preserve">
+    <value>reportAnIsuueToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;reportAnIsuueToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;apktoolIssuesToolStripMenuItem.Name" xml:space="preserve">
     <value>apktoolIssuesToolStripMenuItem</value>
   </data>
@@ -10425,12 +10350,6 @@ and change target SDK to 29</value>
   </data>
   <data name="&gt;&gt;toolTip1.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;reportAnIsuueToolStripMenuItem.Name" xml:space="preserve">
-    <value>reportAnIsuueToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;reportAnIsuueToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>FormMain</value>

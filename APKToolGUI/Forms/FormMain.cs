@@ -96,6 +96,7 @@ namespace APKToolGUI
             new DragDropHandlers(this);
             new ApkinfoControlEventHandlers(this);
             new MainWindowEventHandlers(this);
+            new MenuItemHandlers(this);
         }
 
         private async void FormMain_Shown(object sender, EventArgs e)
@@ -1420,69 +1421,7 @@ namespace APKToolGUI
         #endregion
 
         #region Main menu event handlers
-        private void saveLogItem_Click(object sender, EventArgs e)
-        {
-            using (var sfd = new SaveFileDialog())
-            {
-                sfd.FileName = "APK Tool GUI logs";
-                sfd.Filter = Language.TextFile + " (*.txt)|*.txt";
-                sfd.FilterIndex = 2;
-
-                if (sfd.ShowDialog() == DialogResult.OK)
-                {
-                    File.WriteAllText(sfd.FileName, logTxtBox.Text);
-                }
-            }
-        }
-
-        private void menuItemSettings_Click(object sender, EventArgs e)
-        {
-            FormSettings frm = new FormSettings();
-            frm.ShowDialog();
-        }
-
-        private void menuItemExit_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void openTempFolderToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                Process.Start("explorer.exe", Program.TEMP_PATH);
-            }
-            catch (Exception ex)
-            {
-                ToLog(ApktoolEventType.Error, ex.Message);
-            }
-        }
-
-        private void menuItemCheckUpdate_Click(object sender, EventArgs e)
-        {
-            updateCheker.CheckAsync();
-        }
-
-        private void menuItemAbout_Click(object sender, EventArgs e)
-        {
-            FormAboutBox frm = new FormAboutBox();
-            frm.ShowDialog();
-        }
-
-        private void apktoolIssuesLinkItem_Click(object sender, EventArgs e)
-        {
-            Process.Start("https://github.com/iBotPeaches/Apktool/issues?q=is%3Aissue");
-        }
-
-        private void baksmaliIssuesLinkItem_Click(object sender, EventArgs e)
-        {
-            Process.Start("https://github.com/JesusFreke/smali/issues?q=is%3Aissue");
-        }
-
-        private void reportAnIsuueToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Process.Start("https://github.com/AndnixSH/APKToolGUI/issues/new/choose");
-        }
+ 
         #endregion
 
         #region Form handlers

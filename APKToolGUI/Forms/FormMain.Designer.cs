@@ -239,15 +239,6 @@
             this.contextMenuStripLog = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.copyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clearLogToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.mainMenu1 = new System.Windows.Forms.MainMenu(this.components);
-            this.menuItemFile = new System.Windows.Forms.MenuItem();
-            this.saveLogItem = new System.Windows.Forms.MenuItem();
-            this.menuItemSettings = new System.Windows.Forms.MenuItem();
-            this.menuItemExit = new System.Windows.Forms.MenuItem();
-            this.menuItemHelp = new System.Windows.Forms.MenuItem();
-            this.menuItemCheckUpdate = new System.Windows.Forms.MenuItem();
-            this.apktoolIssueItem = new System.Windows.Forms.MenuItem();
-            this.menuItemAbout = new System.Windows.Forms.MenuItem();
             this.logTxtBox = new System.Windows.Forms.RichTextBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -257,11 +248,11 @@
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.checkForUpdateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reportAnIsuueToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.apktoolIssuesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.baksmaliIssuesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.reportAnIsuueToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControlMain.SuspendLayout();
             this.tabPageMain.SuspendLayout();
             this.signPanel.SuspendLayout();
@@ -1920,66 +1911,6 @@
             this.clearLogToolStripMenuItem.Name = "clearLogToolStripMenuItem";
             resources.ApplyResources(this.clearLogToolStripMenuItem, "clearLogToolStripMenuItem");
             // 
-            // mainMenu1
-            // 
-            this.mainMenu1.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
-            this.menuItemFile,
-            this.menuItemHelp});
-            // 
-            // menuItemFile
-            // 
-            this.menuItemFile.Index = 0;
-            this.menuItemFile.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
-            this.saveLogItem,
-            this.menuItemSettings,
-            this.menuItemExit});
-            resources.ApplyResources(this.menuItemFile, "menuItemFile");
-            // 
-            // saveLogItem
-            // 
-            this.saveLogItem.Index = 0;
-            resources.ApplyResources(this.saveLogItem, "saveLogItem");
-            this.saveLogItem.Click += new System.EventHandler(this.saveLogItem_Click);
-            // 
-            // menuItemSettings
-            // 
-            this.menuItemSettings.Index = 1;
-            resources.ApplyResources(this.menuItemSettings, "menuItemSettings");
-            this.menuItemSettings.Click += new System.EventHandler(this.menuItemSettings_Click);
-            // 
-            // menuItemExit
-            // 
-            this.menuItemExit.Index = 2;
-            resources.ApplyResources(this.menuItemExit, "menuItemExit");
-            this.menuItemExit.Click += new System.EventHandler(this.menuItemExit_Click);
-            // 
-            // menuItemHelp
-            // 
-            this.menuItemHelp.Index = 1;
-            this.menuItemHelp.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
-            this.menuItemCheckUpdate,
-            this.apktoolIssueItem,
-            this.menuItemAbout});
-            resources.ApplyResources(this.menuItemHelp, "menuItemHelp");
-            // 
-            // menuItemCheckUpdate
-            // 
-            this.menuItemCheckUpdate.Index = 0;
-            resources.ApplyResources(this.menuItemCheckUpdate, "menuItemCheckUpdate");
-            this.menuItemCheckUpdate.Click += new System.EventHandler(this.menuItemCheckUpdate_Click);
-            // 
-            // apktoolIssueItem
-            // 
-            this.apktoolIssueItem.Index = 1;
-            resources.ApplyResources(this.apktoolIssueItem, "apktoolIssueItem");
-            this.apktoolIssueItem.Click += new System.EventHandler(this.apktoolIssuesLinkItem_Click);
-            // 
-            // menuItemAbout
-            // 
-            this.menuItemAbout.Index = 2;
-            resources.ApplyResources(this.menuItemAbout, "menuItemAbout");
-            this.menuItemAbout.Click += new System.EventHandler(this.menuItemAbout_Click);
-            // 
             // logTxtBox
             // 
             this.logTxtBox.ContextMenuStrip = this.contextMenuStripLog;
@@ -2011,25 +1942,21 @@
             // 
             this.saveLogToFileToolStripMenuItem.Name = "saveLogToFileToolStripMenuItem";
             resources.ApplyResources(this.saveLogToFileToolStripMenuItem, "saveLogToFileToolStripMenuItem");
-            this.saveLogToFileToolStripMenuItem.Click += new System.EventHandler(this.saveLogItem_Click);
             // 
             // settingsToolStripMenuItem
             // 
             this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
             resources.ApplyResources(this.settingsToolStripMenuItem, "settingsToolStripMenuItem");
-            this.settingsToolStripMenuItem.Click += new System.EventHandler(this.menuItemSettings_Click);
             // 
             // openTempFolderToolStripMenuItem
             // 
             this.openTempFolderToolStripMenuItem.Name = "openTempFolderToolStripMenuItem";
             resources.ApplyResources(this.openTempFolderToolStripMenuItem, "openTempFolderToolStripMenuItem");
-            this.openTempFolderToolStripMenuItem.Click += new System.EventHandler(this.openTempFolderToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             resources.ApplyResources(this.exitToolStripMenuItem, "exitToolStripMenuItem");
-            this.exitToolStripMenuItem.Click += new System.EventHandler(this.menuItemExit_Click);
             // 
             // helpToolStripMenuItem
             // 
@@ -2046,37 +1973,32 @@
             // 
             this.checkForUpdateToolStripMenuItem.Name = "checkForUpdateToolStripMenuItem";
             resources.ApplyResources(this.checkForUpdateToolStripMenuItem, "checkForUpdateToolStripMenuItem");
-            this.checkForUpdateToolStripMenuItem.Click += new System.EventHandler(this.menuItemCheckUpdate_Click);
+            // 
+            // reportAnIsuueToolStripMenuItem
+            // 
+            this.reportAnIsuueToolStripMenuItem.Name = "reportAnIsuueToolStripMenuItem";
+            resources.ApplyResources(this.reportAnIsuueToolStripMenuItem, "reportAnIsuueToolStripMenuItem");
             // 
             // apktoolIssuesToolStripMenuItem
             // 
             this.apktoolIssuesToolStripMenuItem.Name = "apktoolIssuesToolStripMenuItem";
             resources.ApplyResources(this.apktoolIssuesToolStripMenuItem, "apktoolIssuesToolStripMenuItem");
-            this.apktoolIssuesToolStripMenuItem.Click += new System.EventHandler(this.apktoolIssuesLinkItem_Click);
             // 
             // baksmaliIssuesToolStripMenuItem
             // 
             this.baksmaliIssuesToolStripMenuItem.Name = "baksmaliIssuesToolStripMenuItem";
             resources.ApplyResources(this.baksmaliIssuesToolStripMenuItem, "baksmaliIssuesToolStripMenuItem");
-            this.baksmaliIssuesToolStripMenuItem.Click += new System.EventHandler(this.baksmaliIssuesLinkItem_Click);
             // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
             resources.ApplyResources(this.aboutToolStripMenuItem, "aboutToolStripMenuItem");
-            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.menuItemAbout_Click);
             // 
             // toolTip1
             // 
             this.toolTip1.AutoPopDelay = 10000;
             this.toolTip1.InitialDelay = 500;
             this.toolTip1.ReshowDelay = 100;
-            // 
-            // reportAnIsuueToolStripMenuItem
-            // 
-            this.reportAnIsuueToolStripMenuItem.Name = "reportAnIsuueToolStripMenuItem";
-            resources.ApplyResources(this.reportAnIsuueToolStripMenuItem, "reportAnIsuueToolStripMenuItem");
-            this.reportAnIsuueToolStripMenuItem.Click += new System.EventHandler(this.reportAnIsuueToolStripMenuItem_Click);
             // 
             // FormMain
             // 
@@ -2163,13 +2085,6 @@
         internal System.Windows.Forms.TextBox textBox_IF_InputFramePath;
         internal System.Windows.Forms.Button button_IF_BrowseInputFramePath;
         internal System.Windows.Forms.Button button_IF_InstallFramework;
-        internal System.Windows.Forms.MainMenu mainMenu1;
-        internal System.Windows.Forms.MenuItem menuItemFile;
-        internal System.Windows.Forms.MenuItem menuItemHelp;
-        internal System.Windows.Forms.MenuItem menuItemSettings;
-        internal System.Windows.Forms.MenuItem menuItemExit;
-        internal System.Windows.Forms.MenuItem menuItemCheckUpdate;
-        internal System.Windows.Forms.MenuItem menuItemAbout;
         internal System.Windows.Forms.GroupBox groupBox_BUILD_Options;
         internal System.Windows.Forms.Button button_BUILD_BrowseOutputAppPath;
         internal System.Windows.Forms.CheckBox checkBox_BUILD_OutputAppPath;
@@ -2331,8 +2246,6 @@
         internal System.Windows.Forms.Button apkAioLinkBtn;
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.MenuItem apktoolIssueItem;
-        private System.Windows.Forms.MenuItem saveLogItem;
         internal System.Windows.Forms.Button signApkOpenDirBtn;
         internal System.Windows.Forms.Button alignApkOpenDirBtn;
         internal System.Windows.Forms.Button decOutOpenDirBtn;
@@ -2350,16 +2263,7 @@
         internal System.Windows.Forms.Label label30;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem saveLogToFileToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem settingsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem checkForUpdateToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem apktoolIssuesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem baksmaliIssuesToolStripMenuItem;
         private System.Windows.Forms.CheckBox autoDelIdsigChkBox;
-        private System.Windows.Forms.ToolStripMenuItem openTempFolderToolStripMenuItem;
         private System.Windows.Forms.CheckBox checkBox1;
         internal System.Windows.Forms.TextBox launchActivityTxtBox;
         internal System.Windows.Forms.Label label31;
@@ -2379,7 +2283,16 @@
         internal System.Windows.Forms.Button refreshDevicesBtn;
         internal System.Windows.Forms.Label selAdbDeviceLbl;
         private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.ToolStripMenuItem reportAnIsuueToolStripMenuItem;
+        internal System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
+        internal System.Windows.Forms.ToolStripMenuItem settingsToolStripMenuItem;
+        internal System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
+        internal System.Windows.Forms.ToolStripMenuItem checkForUpdateToolStripMenuItem;
+        internal System.Windows.Forms.ToolStripMenuItem apktoolIssuesToolStripMenuItem;
+        internal System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
+        internal System.Windows.Forms.ToolStripMenuItem baksmaliIssuesToolStripMenuItem;
+        internal System.Windows.Forms.ToolStripMenuItem openTempFolderToolStripMenuItem;
+        internal System.Windows.Forms.ToolStripMenuItem reportAnIsuueToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem saveLogToFileToolStripMenuItem;
     }
 }
 
