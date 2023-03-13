@@ -1,0 +1,94 @@
+name: Bug report
+description: Report a bug in APK Tool GUI
+labels: bug
+body:
+  - type: checkboxes
+    attributes:
+      label: Prerequisites
+      description: To rule out invalid issues, confirm and check each one of the checkboxes.
+      options:
+        - label: This is not a support issue or a question. For support, questions, or help, see [support links](https://github.com/AndnixSH/APKToolGUI/issues/new/choose).
+          required: true
+        - label: I performed a cursory search of the issue tracker on [APK Tool GUI](https://github.com/AndnixSH/APKToolGUI/issues?q=is%3Aissue) to avoid opening a duplicate issue
+          required: true
+        - label: I performed a cursory search of the issue tracker on [Apktool] (https://github.com/iBotPeaches/Apktool/issues?q=is%3Aissue) and [Baksmali](https://github.com/JesusFreke/smali/issues?q=is%3Aissue) but did not found an answer
+          required: true
+        - label: I am running the latest version of [APK Tool GUI](https://github.com/AndnixSH/APKToolGUI/releases) and [Apktool.jar](https://github.com/iBotPeaches/Apktool/releases).
+          required: true
+        - label: I have tried to decompile and compile without changing anything.
+          required: true
+        - label: I have checked using [APKiD](https://github.com/rednaga/APKiD) and verified that the app does not have protection(s) like packer, obfuscation, anti-tamper, anti-cheats etc
+          required: false
+
+  - type: textarea
+    attributes:
+      label: Describe the bug
+      description: |
+        A clear and concise description of what the bug is.
+        Feel free to upload/attach link to screenshot or video
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: To Reproduce
+      description: Steps to reproduce the behavior
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Logs
+      description: Please surround the logs with 3 backticks (```) to format it properly
+      placeholder: |
+        Copy and paste the logs here
+        
+        This is an example how you should surround the logs with 3 backticks (```)
+        ```
+        [12:50:54]java version "19.0.2" 2023-01-17
+        Java(TM) SE Runtime Environment (build 19.0.2+7-44)
+        Java HotSpot(TM) 64-Bit Server VM (build 19.0.2+7-44, mixed mode, sharing)
+        [12:50:55] Apktool version "2.7.0"
+        [12:50:55] Drag & drop is supported
+        [12:50:55] Temp directory: "D:\Temp\ATG\xeaMO"
+        [12:50:55] Parsing APK Info...
+        [12:50:55] Done
+        [12:50:55] Getting devices...
+        [12:50:57] No devices found. Make sure your device is connected to the computer with the adb debugging turned on. If you use an emulator, restart it and wait until it boot up
+        ```
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: APK
+      description: If this APK can be freely shared, please upload/attach a link to it.
+      placeholder: |
+        https://apkcombo.com/downloader/
+    validations:
+      required: false
+
+  - type: input
+    attributes:
+      label: APK Tool GUI version
+    validations:
+      required: true
+
+  - type: input
+    attributes:
+      label: Apktool version
+    validations:
+      required: true
+
+  - type: input
+    attributes:
+      label: Java version
+    validations:
+      required: true
+
+  - type: input
+    attributes:
+      label: Operating System and version
+      placeholder: Windows 11 2h22
+    validations:
+      required: true
