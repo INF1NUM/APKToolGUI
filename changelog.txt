@@ -16,7 +16,8 @@
 - Kill process by clicking on status bar
 - Option to use custom apktool path
 - Added menu item "Report an issue"
-- Bypass anti-virus false positive
+- Fixed issue that caused some anti-virus to detect as virus. It's false positive
+- Fixed crash if Java is not installed
 
 3.1.0.0
 - Disable maximize
