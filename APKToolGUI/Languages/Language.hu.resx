@@ -142,7 +142,7 @@
     <value>Beállítások</value>
   </data>
   <data name="ErrorJavaDetect" xml:space="preserve">
-    <value>Java nincs vagy rosszul van telepítve. Telepítse a Javát, vagy adja meg az egyéni helyét a Beállításokban</value>
+    <value>Java nincs vagy rosszul van telepítve. Telepítse a Javát vagy adja meg az egyéni helyét a Beállításokban</value>
   </data>
   <data name="ErrorReadSettings" xml:space="preserve">
     <value>Hiba a beállítások olvasásakor!</value>
@@ -249,18 +249,6 @@
   <data name="SignInputFileNotFound" xml:space="preserve">
     <value>A bemeneti fájl nem található.</value>
   </data>
-  <data name="Decoding" xml:space="preserve">
-    <value>Dekódolás</value>
-  </data>
-  <data name="DecodeDesDirExists" xml:space="preserve">
-    <value>"{0}" célkönyvtár már létezik. Ha felül kívánja írni a célkönyvtárat, kapcsolja be a "Célkönyvtár törlésének kikényszerítése" opciót.</value>
-  </data>
-  <data name="MoveTempApkFileToOutput" xml:space="preserve">
-    <value>"{0}" ideiglenes mappa áthelyezése "{1}" kimeneti könyvtárba.</value>
-  </data>
-  <data name="MoveTempApkToOutput" xml:space="preserve">
-    <value>"{0}" ideiglenes apk fájl áthelyezése "{1}" kimeneti könyvtárba.</value>
-  </data>
   <data name="SignPrivateKeyNotFound" xml:space="preserve">
     <value>Privát kulcs nem található.</value>
   </data>
@@ -278,6 +266,9 @@
   </data>
   <data name="DecodeSelectedFrameworkNotExist" xml:space="preserve">
     <value>A kiválasztott keretkönyvtár nem létezik.</value>
+  </data>
+  <data name="Decoding" xml:space="preserve">
+    <value>Dekódolás</value>
   </data>
   <data name="ErrorDecompiling" xml:space="preserve">
     <value>A dekompilálás sikertelen</value>
@@ -391,7 +382,7 @@
     <value>Ez a mappa nem dekompilált DEX</value>
   </data>
   <data name="RequiredFilesMissing" xml:space="preserve">
-    <value>A szükséges fájlok hiányoznak</value>
+    <value>Szükséges fájlok hiányoznak</value>
   </data>
   <data name="SignApk" xml:space="preserve">
     <value>APK aláírása</value>
@@ -425,5 +416,104 @@
   </data>
   <data name="CopyFolderToTemp" xml:space="preserve">
     <value>Dekompilált apk mappa "{0}" másolása "{1}" ideiglenes könyvtárba.</value>
+  </data>
+  <data name="DecodeDesDirExists" xml:space="preserve">
+    <value>A "{0}" célkönyvtár már létezik. Ha felül szeretné írni, engedélyezze a "Célkönyvtár kényszerített törlésének" beállítását.</value>
+  </data>
+  <data name="MoveTempApkFileToOutput" xml:space="preserve">
+    <value>A "{0}" ideiglenes mappa áthelyezése a "{1}" kimeneti könyvtárba</value>
+  </data>
+  <data name="MoveTempApkToOutput" xml:space="preserve">
+    <value>A(z) "{0}" ideiglenes apk áthelyezése a "{1}" kimeneti könyvtárba</value>
+  </data>
+  <data name="ParsingApkInfo" xml:space="preserve">
+    <value>APK információk elemzése...</value>
+  </data>
+  <data name="SetLanguageRestartApplication" xml:space="preserve">
+    <value>A nyelv be van állítva. Újra akarja indítani az alkalmazást?</value>
+  </data>
+  <data name="DecompilingAllApkFiles" xml:space="preserve">
+    <value>Az összes APK fájl visszafejtése</value>
+  </data>
+  <data name="DetectedAsBase" xml:space="preserve">
+    <value>{0} bázisként észlelve</value>
+  </data>
+  <data name="DetectedAsSplit" xml:space="preserve">
+    <value>{0} részeként észlelve</value>
+  </data>
+  <data name="ExtractingAllApkFiles" xml:space="preserve">
+    <value>Az összes APK fájl kicsomagolása</value>
+  </data>
+  <data name="MergeFinishedMoveDir" xml:space="preserve">
+    <value>Egyesítés kész. Könyvtár áthelyezése ide: "{0}"</value>
+  </data>
+  <data name="MergingApk" xml:space="preserve">
+    <value>APK egyesítése</value>
+  </data>
+  <data name="MovingBasedirectory" xml:space="preserve">
+    <value>Bázis könyvtár áthelyezése ide: "{0}"</value>
+  </data>
+  <data name="DirNotExist" xml:space="preserve">
+    <value>A(z) "{0}" könyvtár nem létezik</value>
+  </data>
+  <data name="TempDirectory" xml:space="preserve">
+    <value>Temp könyvtár: "{0}"</value>
+  </data>
+  <data name="ErrorMerging" xml:space="preserve">
+    <value>Az ˘egyesítés nem sikerült</value>
+  </data>
+  <data name="ExtractOrigSignature" xml:space="preserve">
+    <value>Az eredeti aláírás kibontása</value>
+  </data>
+  <data name="MergingApkEditor" xml:space="preserve">
+    <value>APK egyesítése az APKEditor.jar használatával</value>
+  </data>
+  <data name="Aborted" xml:space="preserve">
+    <value>Megszakítva</value>
+  </data>
+  <data name="CancelProcess" xml:space="preserve">
+    <value>Biztosan megszakítja a folyamatot?</value>
+  </data>
+  <data name="GettingDevices" xml:space="preserve">
+    <value>Eszközök keresése...</value>
+  </data>
+  <data name="PleaseWait" xml:space="preserve">
+    <value>Kis türelmet...</value>
+  </data>
+  <data name="ConfirmKillingAdbServer" xml:space="preserve">
+    <value>Biztosan leállítja az ADB szervert? Lehet, hogy újra kell csatlakoztatnia az eszközt, vagy újra kell indítania az emulátort</value>
+  </data>
+  <data name="DeviceNotSelected" xml:space="preserve">
+    <value>Az eszköz nincs kiválasztva</value>
+  </data>
+  <data name="DeviceSelected" xml:space="preserve">
+    <value>Kiválasztott eszköz: "{0}"</value>
+  </data>
+  <data name="DevicesFound" xml:space="preserve">
+    <value>{0} eszköz található</value>
+  </data>
+  <data name="InstallApkFailed" xml:space="preserve">
+    <value>Az APK telepítése nem sikerült</value>
+  </data>
+  <data name="InstallApkSuccessful" xml:space="preserve">
+    <value>Az APK telepítése sikeres volt</value>
+  </data>
+  <data name="InstallingApk" xml:space="preserve">
+    <value>APK telepítése</value>
+  </data>
+  <data name="InstallingApkPath" xml:space="preserve">
+    <value>"{0}" APK telepítése</value>
+  </data>
+  <data name="NoDevicesFound" xml:space="preserve">
+    <value>Nem találhatók eszközök. Győződjön meg róla, hogy eszközén be van kapcsolva az adb hibakeresés. Ha emulátort használ, indítsa újra és várja meg amíg elindul</value>
+  </data>
+  <data name="TimeEnded" xml:space="preserve">
+    <value>Befejezve: {0}</value>
+  </data>
+  <data name="TimeStarted" xml:space="preserve">
+    <value>Elkezdve: {0}</value>
+  </data>
+  <data name="ClearFrameworkPrompt" xml:space="preserve">
+    <value>A váratlan hibák elkerülése érdekében az Apktool verziójának módosítása után törölni kell a framework gyorsítótárát. Szeretné most törölni?</value>
   </data>
 </root>
