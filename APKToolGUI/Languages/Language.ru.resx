@@ -117,31 +117,403 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="SystemLanguage" xml:space="preserve">
-    <value>Язык системы</value>
+  <data name="About" xml:space="preserve">
+    <value>О программе</value>
   </data>
-  <data name="UpdateNewVersion" xml:space="preserve">
-    <value>Доступна новая версия. Выполнить обновление?</value>
+  <data name="APKToolVersion" xml:space="preserve">
+    <value>Версия Apktool</value>
   </data>
-  <data name="Done" xml:space="preserve">
-    <value>Готово</value>
+  <data name="CheckForUpdate" xml:space="preserve">
+    <value>Проверить обновления</value>
+  </data>
+  <data name="DebugMode" xml:space="preserve">
+    <value>Режим Debug</value>
+  </data>
+  <data name="Exit" xml:space="preserve">
+    <value>Выход</value>
+  </data>
+  <data name="File" xml:space="preserve">
+    <value>Файл</value>
+  </data>
+  <data name="Help" xml:space="preserve">
+    <value>Помощь</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>Настройки</value>
   </data>
   <data name="ErrorJavaDetect" xml:space="preserve">
-    <value>Java не установлена или установлена не корректно. Программа будет закрыта.</value>
+    <value>Java не установлена или установлена некорректно. Пожалуйста, установите Java или укажите путь в настройках</value>
+  </data>
+  <data name="ErrorReadSettings" xml:space="preserve">
+    <value>Ошибка при чтении файла настроек!</value>
+  </data>
+  <data name="UpdateNewVersion" xml:space="preserve">
+    <value>Доступна новая версия. Загрузить обновление?</value>
   </data>
   <data name="UpdateNoUpdates" xml:space="preserve">
-    <value>Нет доступных обновлений.</value>
+    <value>Нет обновлений.</value>
   </data>
-  <data name="DoYouWantToSelectJavaLocation" xml:space="preserve">
-    <value>Java не найдена. Хотите указать расположение вручную?</value>
+  <data name="WarningDecodingFolderNotSelected" xml:space="preserve">
+    <value>Папка для декодирования не выбрана!</value>
+  </data>
+  <data name="WarningFileForDecodingNotSelected" xml:space="preserve">
+    <value>Файл для декодирования не выбран!</value>
+  </data>
+  <data name="WarningFileForSigningNotSelected" xml:space="preserve">
+    <value>Файл для подписи не выбран!</value>
   </data>
   <data name="WarningFrameworkNotSelected" xml:space="preserve">
-    <value>Фреймворк не выбран!</value>
+    <value>Не выбраны необходимые компоненты!</value>
+  </data>
+  <data name="ErrorSaveSettings" xml:space="preserve">
+    <value>Ошибка при сохранении файла настроек!</value>
+  </data>
+  <data name="NeedRestart" xml:space="preserve">
+    <value>Для завершения обновления необходим перезапуск. Перезапустить сейчас?</value>
+  </data>
+  <data name="FileNotFound" xml:space="preserve">
+    <value>Файл не найден</value>
+  </data>
+  <data name="FolderNotExist" xml:space="preserve">
+    <value>Папка не найдена</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>Ошибка</value>
+  </data>
+  <data name="Build" xml:space="preserve">
+    <value>Build</value>
+  </data>
+  <data name="Decode" xml:space="preserve">
+    <value>Декодирование</value>
+  </data>
+  <data name="InstallFramework" xml:space="preserve">
+    <value>Установка</value>
+  </data>
+  <data name="Sign" xml:space="preserve">
+    <value>Подпись</value>
+  </data>
+  <data name="SystemLanguage" xml:space="preserve">
+    <value>Язык системы</value>
   </data>
   <data name="DoYouRealyWantToInstallCM" xml:space="preserve">
     <value>Вы действительно хотите установить контекстное меню?</value>
   </data>
   <data name="DoYouRealyWantToRemoveCM" xml:space="preserve">
     <value>Вы действительно хотите удалить контекстное меню?</value>
+  </data>
+  <data name="Done" xml:space="preserve">
+    <value>Готово</value>
+  </data>
+  <data name="CantDetectApktoolVersion" xml:space="preserve">
+    <value>Не определена версия apktool.</value>
+  </data>
+  <data name="DecompilingSuccessfullyCompleted" xml:space="preserve">
+    <value>Декомпиляция успешно завершена. Выходная директория "{0}".</value>
+  </data>
+  <data name="ErrorUpdateChecking" xml:space="preserve">
+    <value>Ошибка при проверке обновлений:</value>
+  </data>
+  <data name="SignSuccessfullyCompleted" xml:space="preserve">
+    <value>Операция успешно завершена. Файл сохранен в "{0}".</value>
+  </data>
+  <data name="Aligning" xml:space="preserve">
+    <value>Aligning</value>
+  </data>
+  <data name="ErrorCompiling" xml:space="preserve">
+    <value>Ошибка при компиляции</value>
+  </data>
+  <data name="ErrorEnteringFrameworkTag" xml:space="preserve">
+    <value>Ошибка ввода тегов</value>
+  </data>
+  <data name="ErrorSelectedFileNotExist" xml:space="preserve">
+    <value>Выбранный файл не существует.</value>
+  </data>
+  <data name="ErrorSelectingFrameworkDirectory" xml:space="preserve">
+    <value>Ошибка при выборе папки.</value>
+  </data>
+  <data name="ErrorSelectingFrameworkFile" xml:space="preserve">
+    <value>Ошибка при выборе файла. Файл не существует.</value>
+  </data>
+  <data name="ErrorSigning" xml:space="preserve">
+    <value>Sign: ошибка</value>
+  </data>
+  <data name="FrameworkInstallationNotStarted" xml:space="preserve">
+    <value>Ошибка. Установка не запущена.</value>
+  </data>
+  <data name="InstallingFramework" xml:space="preserve">
+    <value>Установка</value>
+  </data>
+  <data name="Signing" xml:space="preserve">
+    <value>Подписывание</value>
+  </data>
+  <data name="SignInputFileNotFound" xml:space="preserve">
+    <value>Входной файл не найден.</value>
+  </data>
+  <data name="SignPrivateKeyNotFound" xml:space="preserve">
+    <value>Приватный ключ не найден.</value>
+  </data>
+  <data name="SignPublicKeyNotFound" xml:space="preserve">
+    <value>Публичный ключ не найден.</value>
+  </data>
+  <data name="ZIPArchives" xml:space="preserve">
+    <value>ZIP архивы</value>
+  </data>
+  <data name="DecodeCouldNotCreate" xml:space="preserve">
+    <value>Выбранная директория содержит недопустимые символы и не может быть создана.</value>
+  </data>
+  <data name="DecodeDirNotSelected" xml:space="preserve">
+    <value>Папка для декомпиляции не выбрана.</value>
+  </data>
+  <data name="DecodeSelectedFrameworkNotExist" xml:space="preserve">
+    <value>Выбранная папка не существует</value>
+  </data>
+  <data name="Decoding" xml:space="preserve">
+    <value>Декодирование</value>
+  </data>
+  <data name="ErrorDecompiling" xml:space="preserve">
+    <value>Ошибка при декодировании</value>
+  </data>
+  <data name="ExecutableFile" xml:space="preserve">
+    <value>Исполняемый файл</value>
+  </data>
+  <data name="ChangedTargetSdkTo29" xml:space="preserve">
+    <value>Изменена версия SDK на 29</value>
+  </data>
+  <data name="ErrorVersionParsing" xml:space="preserve">
+    <value>Ошибка при считывании версии</value>
+  </data>
+  <data name="FixAndroidManifest" xml:space="preserve">
+    <value>Измененный AndroidManifest.xml</value>
+  </data>
+  <data name="RemoveApkToolDummies" xml:space="preserve">
+    <value>Удалены все дополнения для ApkTool</value>
+  </data>
+  <data name="APKSelected" xml:space="preserve">
+    <value>Выбранный APK:</value>
+  </data>
+  <data name="ErrorSelectedFolderNotExist" xml:space="preserve">
+    <value>Выбранная папка не существует.</value>
+  </data>
+  <data name="AndroidManifestNotExist" xml:space="preserve">
+    <value>AndroidManifest.xml не найден</value>
+  </data>
+  <data name="DecompiledAPKNotExist" xml:space="preserve">
+    <value>Декомпилированный каталог APK не существует</value>
+  </data>
+  <data name="MainActivityFound" xml:space="preserve">
+    <value>MainActivity найден в "{0}"</value>
+  </data>
+  <data name="MainActivityNotFoundPleaseFindManually" xml:space="preserve">
+    <value>Не найден MainActivity. Попробуйте выполнить поиск вручную</value>
+  </data>
+  <data name="ClearingFramework" xml:space="preserve">
+    <value>Очистка</value>
+  </data>
+  <data name="CompilingSuccessfullyCompleted" xml:space="preserve">
+    <value>Компиляция успешно завершена. Выходная папка "{0}"</value>
+  </data>
+  <data name="ErrorZipalign" xml:space="preserve">
+    <value>Zipalign: ошибка</value>
+  </data>
+  <data name="ZipalignFileSavedTo" xml:space="preserve">
+    <value>Zipalign: успешно завершено. Файл сохранен в "{0}"</value>
+  </data>
+  <data name="ErrorClearingFw" xml:space="preserve">
+    <value>Ошибка при очистке</value>
+  </data>
+  <data name="FrameworkCacheCleared" xml:space="preserve">
+    <value>Кеш очищен</value>
+  </data>
+  <data name="AllDone" xml:space="preserve">
+    <value>Завершено!</value>
+  </data>
+  <data name="FrameworkInstalled" xml:space="preserve">
+    <value>Успешно установлено</value>
+  </data>
+  <data name="FrameworkDirNotExist" xml:space="preserve">
+    <value>Папка не существует</value>
+  </data>
+  <data name="DecompilingDex" xml:space="preserve">
+    <value>Декомпиляция DEX</value>
+  </data>
+  <data name="ErrorSelectedOutputFolderNotExist" xml:space="preserve">
+    <value>Выбранная выходная папка не существует.</value>
+  </data>
+  <data name="CompilingDex" xml:space="preserve">
+    <value>Компиляция DEX</value>
+  </data>
+  <data name="DragDropNotSupported" xml:space="preserve">
+    <value>Программа запущена в режиме администратора. Drag &amp; drop не поддерживается</value>
+  </data>
+  <data name="DragDropSupported" xml:space="preserve">
+    <value>Drag &amp; drop поддерживается</value>
+  </data>
+  <data name="ErrorNotAnApk" xml:space="preserve">
+    <value>Эта папка не является пакетом Android</value>
+  </data>
+  <data name="Baksmali" xml:space="preserve">
+    <value>Baksmali</value>
+  </data>
+  <data name="Smali" xml:space="preserve">
+    <value>Smali</value>
+  </data>
+  <data name="Zipalign" xml:space="preserve">
+    <value>Zipalign</value>
+  </data>
+  <data name="CompileApk" xml:space="preserve">
+    <value>Компиляция APK</value>
+  </data>
+  <data name="CompileDex" xml:space="preserve">
+    <value>Assemble DEX</value>
+  </data>
+  <data name="DecompileApk" xml:space="preserve">
+    <value>Декомпиляция APK</value>
+  </data>
+  <data name="DecompileDex" xml:space="preserve">
+    <value>Дизассемблирование DEX</value>
+  </data>
+  <data name="GetApkInfo" xml:space="preserve">
+    <value>Информация о APK</value>
+  </data>
+  <data name="NotDecompiledApk" xml:space="preserve">
+    <value>Эта папка не является декомпилированным АРК</value>
+  </data>
+  <data name="NotDecompiledDex" xml:space="preserve">
+    <value>Эта папка не является декомпилированным DEX</value>
+  </data>
+  <data name="RequiredFilesMissing" xml:space="preserve">
+    <value>Отсутствуют необходимые файлы</value>
+  </data>
+  <data name="SignApk" xml:space="preserve">
+    <value>Подпись APK</value>
+  </data>
+  <data name="TextFile" xml:space="preserve">
+    <value>Текстовый файл</value>
+  </data>
+  <data name="ZipalignApk" xml:space="preserve">
+    <value>Zipalign APK</value>
+  </data>
+  <data name="CreateUnsignedApk" xml:space="preserve">
+    <value>Создание APK (unsigned)</value>
+  </data>
+  <data name="MetainfNotExist" xml:space="preserve">
+    <value>Папка META-INF не существует.</value>
+  </data>
+  <data name="ErrorGettingApkInfo" xml:space="preserve">
+    <value>Ошибка при получении информации о APK</value>
+  </data>
+  <data name="InputDirectory" xml:space="preserve">
+    <value>Входная папка: {0}</value>
+  </data>
+  <data name="InputFile" xml:space="preserve">
+    <value>Входной файл: {0}</value>
+  </data>
+  <data name="DeleteFile" xml:space="preserve">
+    <value>Удален файл "{0}"</value>
+  </data>
+  <data name="CopyFileToTemp" xml:space="preserve">
+    <value>Файл "{0}" скопирован во временную папку "{1}"</value>
+  </data>
+  <data name="CopyFolderToTemp" xml:space="preserve">
+    <value>Копирование декомпилированного АРК "{0}" во временную папку "{1}"</value>
+  </data>
+  <data name="DecodeDesDirExists" xml:space="preserve">
+    <value>Целевая папка "{0}" уже существует. Используйте опцию принудительного удаления, если вы хотите ее перезаписать.</value>
+  </data>
+  <data name="MoveTempApkFileToOutput" xml:space="preserve">
+    <value>Перемещение временной папки "{0}" в выходной каталог "{1}"</value>
+  </data>
+  <data name="MoveTempApkToOutput" xml:space="preserve">
+    <value>Перемещение временного АРК "{0}" в выходной каталог "{1}"</value>
+  </data>
+  <data name="ParsingApkInfo" xml:space="preserve">
+    <value>Чтение информации о APK...</value>
+  </data>
+  <data name="SetLanguageRestartApplication" xml:space="preserve">
+    <value>Язык установлен. Хотите перезапустить программу?</value>
+  </data>
+  <data name="DecompilingAllApkFiles" xml:space="preserve">
+    <value>Декомпиляция всех APK файлов</value>
+  </data>
+  <data name="DetectedAsBase" xml:space="preserve">
+    <value>{0} определен как базовый</value>
+  </data>
+  <data name="DetectedAsSplit" xml:space="preserve">
+    <value>{0} определен как split</value>
+  </data>
+  <data name="ExtractingAllApkFiles" xml:space="preserve">
+    <value>Извлечение всех APK файлов</value>
+  </data>
+  <data name="MergeFinishedMoveDir" xml:space="preserve">
+    <value>Слияние завершено. Перемещение каталога в "{0}"</value>
+  </data>
+  <data name="MergingApk" xml:space="preserve">
+    <value>Слияние APK</value>
+  </data>
+  <data name="MovingBasedirectory" xml:space="preserve">
+    <value>Перемещение базового каталога в "{0}"</value>
+  </data>
+  <data name="DirNotExist" xml:space="preserve">
+    <value>Папка "{0}" не существует</value>
+  </data>
+  <data name="TempDirectory" xml:space="preserve">
+    <value>Временная папка: "{0}"</value>
+  </data>
+  <data name="ErrorMerging" xml:space="preserve">
+    <value>Ошибка при слиянии</value>
+  </data>
+  <data name="ExtractOrigSignature" xml:space="preserve">
+    <value>Извлечение оригинальной подписи</value>
+  </data>
+  <data name="MergingApkEditor" xml:space="preserve">
+    <value>Слияние APK с помощью APKEditor.jar</value>
+  </data>
+  <data name="Aborted" xml:space="preserve">
+    <value>Отменено</value>
+  </data>
+  <data name="CancelProcess" xml:space="preserve">
+    <value>Вы действительно хотите прервать процесс?</value>
+  </data>
+  <data name="GettingDevices" xml:space="preserve">
+    <value>Получение устройств...</value>
+  </data>
+  <data name="PleaseWait" xml:space="preserve">
+    <value>Пожалуйста, подождите...</value>
+  </data>
+  <data name="ConfirmKillingAdbServer" xml:space="preserve">
+    <value>Вы действительно хотите завершить работу ADB сервера? После завершения работы необходимо переподключить устройство или перезапустить эмулятор</value>
+  </data>
+  <data name="DeviceNotSelected" xml:space="preserve">
+    <value>Устройство не выбрано</value>
+  </data>
+  <data name="DeviceSelected" xml:space="preserve">
+    <value>Выбрано устройство "{0}"</value>
+  </data>
+  <data name="DevicesFound" xml:space="preserve">
+    <value>Найдено {0} устройств</value>
+  </data>
+  <data name="InstallApkFailed" xml:space="preserve">
+    <value>Ошибка при установке АРК</value>
+  </data>
+  <data name="InstallApkSuccessful" xml:space="preserve">
+    <value>Установка АРК успешно завершена</value>
+  </data>
+  <data name="InstallingApk" xml:space="preserve">
+    <value>Установка APK</value>
+  </data>
+  <data name="InstallingApkPath" xml:space="preserve">
+    <value>Установлено APK "{0}"</value>
+  </data>
+  <data name="NoDevicesFound" xml:space="preserve">
+    <value>Устройств не обнаружено. Убедитесь, что ваше устройство подключено к компьютеру с включенной отладкой ADB. Если вы используете эмулятор, перезапустите его и дождитесь завершения загрузки</value>
+  </data>
+  <data name="TimeEnded" xml:space="preserve">
+    <value>Время завершения: {0}</value>
+  </data>
+  <data name="TimeStarted" xml:space="preserve">
+    <value>Время начала: {0}</value>
+  </data>
+  <data name="ClearFrameworkPrompt" xml:space="preserve">
+    <value>После изменения версии Apktool необходимо очистить кеш. Вы хотите очистить его сейчас?</value>
   </data>
 </root>
