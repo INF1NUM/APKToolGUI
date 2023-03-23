@@ -638,7 +638,7 @@ namespace APKToolGUI
 
         void ApkEditorOutputDataRecieved(object sender, ApkEditorDataReceivedEventArgs e)
         {
-            ToLog(ApktoolEventType.None, e.Message);
+           ToLog(ApktoolEventType.None, e.Message);
         }
 
         internal async Task<int> MergeUsingApkEditor(string inputSplitApk)
@@ -1425,12 +1425,6 @@ namespace APKToolGUI
         #endregion
 
         #region Form handlers
-        private void logTxtBox_TextChanged(object sender, EventArgs e)
-        {
-            logTxtBox.SelectionStart = logTxtBox.Text.Length;
-            logTxtBox.ScrollToCaret();
-        }
-
         private void FormMain_Activated(object sender, EventArgs e)
         {
             if (!isRunning)

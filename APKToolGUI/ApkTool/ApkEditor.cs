@@ -16,7 +16,7 @@ namespace APKToolGUI
         {
             base.Exited += ApkEditor_Exited;
             OutputDataReceived += ApkEditor_OutputDataReceived;
-            //ErrorDataReceived += ApkEditor_ErrorDataReceived; //Output makes process way slower
+            ErrorDataReceived += ApkEditor_ErrorDataReceived; //Output makes process way slower
         }
 
         ApkEditorDataReceivedEventHandler onApkEditorOutputDataRecieved;

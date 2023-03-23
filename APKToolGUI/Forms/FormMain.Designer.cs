@@ -1915,9 +1915,9 @@
             // 
             this.logTxtBox.ContextMenuStrip = this.contextMenuStripLog;
             resources.ApplyResources(this.logTxtBox, "logTxtBox");
+            this.logTxtBox.HideSelection = false;
             this.logTxtBox.Name = "logTxtBox";
             this.logTxtBox.TabStop = false;
-            this.logTxtBox.TextChanged += new System.EventHandler(this.logTxtBox_TextChanged);
             // 
             // menuStrip1
             // 
