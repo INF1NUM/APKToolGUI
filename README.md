@@ -50,7 +50,7 @@ Create new `.resx` file under `Languages` folder, and `Forms/FormXXX.cs/`. To cr
 
 <summary>Video tutorial</summary>
 
-<video src='Assets/add-language-VS2022.mp4' />
+<video src='/Assets/add-language-VS2022.mp4' />
 
 </details>
 
