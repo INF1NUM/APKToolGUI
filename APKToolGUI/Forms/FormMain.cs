@@ -413,7 +413,7 @@ namespace APKToolGUI
 
         internal void ToLog(ApktoolEventType eventType, string message)
         {
-            if (String.IsNullOrWhiteSpace(message))
+            if (String.IsNullOrWhiteSpace(message) || message.Contains("_JAVA_OPTIONS"))
                 return;
 
             switch (eventType)

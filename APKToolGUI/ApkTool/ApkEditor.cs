@@ -84,7 +84,7 @@ namespace APKToolGUI
             string inputFile = String.Format("-i \"{0}\"", input);
             string keyOutputDir = String.Format("-o \"{0}\"", output);
 
-            string args = String.Format("m {0} {1}", inputFile, keyOutputDir);
+            string args = String.Format("m {0} {1} -f", inputFile, keyOutputDir);
 
             Start(args);
 
