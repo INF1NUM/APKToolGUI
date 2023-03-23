@@ -50,7 +50,7 @@ Create new `.resx` file under `Languages` folder, and `Forms/FormXXX.cs/`. To cr
 
 <summary>Video tutorial</summary>
 
-<video src='/Assets/add-language-VS2022.mp4' />
+https://github.com/AndnixSH/APKToolGUI/blob/master/Assets/add-language-VS2022.mp4?raw=true
 
 </details>
 
