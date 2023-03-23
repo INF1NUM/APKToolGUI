@@ -50,8 +50,8 @@ Create new `.resx` file under `Languages` folder, and `Forms/FormXXX.cs/`. To cr
 
 <summary>Video tutorial</summary>
 
-https://github.com/AndnixSH/APKToolGUI/blob/master/Assets/add-language-VS2022.mp4?raw=true
-
+https://user-images.githubusercontent.com/40742924/227244601-6f796141-ac2d-4c60-b5cd-7f6872604cd7.mp4
+  
 </details>
 
 If you can't use Visual Studio, you can use translator tools like [resxtranslator](https://github.com/HakanL/resxtranslator) or [RESX Translator automat](https://www.utilstudio.com/en/resx-translator/), but make sure the `.resx` file is added to [APKToolGUI.csproj](https://github.com/AndnixSH/APKToolGUI/blob/master/APKToolGUI/APKToolGUI.csproj), otherwise Visual Studio would not be able to detect it
