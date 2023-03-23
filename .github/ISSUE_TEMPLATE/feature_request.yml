@@ -11,8 +11,6 @@ body:
           required: true
         - label: I performed a cursory search of the issue tracker on [APK Tool GUI](https://github.com/AndnixSH/APKToolGUI/issues?q=is%3Aissue) to avoid opening a duplicate issue
           required: true
-        - label: This is not about an issue with APK Tool GUI
-          required: true
 
   - type: textarea
     attributes:
