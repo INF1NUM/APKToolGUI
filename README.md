@@ -86,6 +86,9 @@ A: It just a false positive, anti-virus always flag tools/softwares like this as
 ##### Q: Can you make an automatic APK injecting tool?
 A: No, that's out of scope of this tool, and I'm not interested.
 
+##### Q: Can you implement to convert APK to AAB?
+A: No, apktool is about recompiling, not about converting to other formats. AAB is only used for distributing an application to Play Store. It is not directly installable.
+
 ##### Q: Can you implement an option to protect/pack/obfuscate APK?
 A: No, APK protection is beyond the scope of this tool
 

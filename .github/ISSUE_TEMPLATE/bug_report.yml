@@ -17,6 +17,8 @@ body:
           required: true
         - label: I have tried to decompile and compile without changing anything.
           required: true
+        - label: I have read the [FAQ](https://github.com/AndnixSH/APKToolGUI#faq)
+          required: true
         - label: I have checked using [APKiD](https://github.com/rednaga/APKiD) and verified that the app does not have protection(s) like packer, obfuscation, anti-tamper, anti-cheats etc
           required: false
 
