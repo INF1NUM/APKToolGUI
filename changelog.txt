@@ -1,3 +1,9 @@
+3.2.1.0
+- Fixed an error when decompiling split APK for the second time
+- Updated Russian language
+- Updated Hungarian language
+- Updated dependencies
+
 3.2.0.0
 - Added split APK merging (Build-in and APKEditor.jar) for decompilation. APKEditor.jar is set to default
 - Added incompleted Hungarian translation
