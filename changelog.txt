@@ -4,6 +4,8 @@
 - Updated Hungarian language
 - Updated dependencies
 - Make log output read only
+- Updated resources: aapt.exe, aapt2.exe, apksigner.jar, zipalign.exe, adb.exe
+- Removed libaapt2_jni.dll
 
 3.2.0.0
 - Added split APK merging (Build-in and APKEditor.jar) for decompilation. APKEditor.jar is set to default
