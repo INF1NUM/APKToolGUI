@@ -373,7 +373,7 @@
     <value>Disassemble DEX</value>
   </data>
   <data name="GetApkInfo" xml:space="preserve">
-    <value>Get APK Info</value>
+    <value>View APK Info</value>
   </data>
   <data name="NotDecompiledApk" xml:space="preserve">
     <value>This folder is not a decompiled APK</value>

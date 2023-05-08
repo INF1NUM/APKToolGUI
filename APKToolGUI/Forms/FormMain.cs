@@ -19,6 +19,7 @@ using Ionic.Zip;
 using System.Linq;
 using System.Windows.Interop;
 using System.Security.Cryptography;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace APKToolGUI
 {
@@ -155,10 +156,6 @@ namespace APKToolGUI
 
             ToStatus(Language.Done, Resources.done);
 
-            string decApkPath = Settings.Default.Decode_InputAppPath;
-
-            await GetApkInfo(decApkPath);
-
             RunCmdArgs();
 
             await ListDevices();
@@ -217,11 +214,11 @@ namespace APKToolGUI
                             if (await Smali(file) == 0)
                                 Close();
                             break;
-                        case "apkinfo":
-                            await GetApkInfo(file);
+                        case "viewinfo":
                             tabControlMain.SelectedIndex = 1;
+                            await GetApkInfo(file);
                             break;
-                        default: //Fix when running app as Release from Visual studio
+                        default:
                             IgnoreOutputDirContextMenu = false;
                             break;
                     }
@@ -1423,11 +1420,15 @@ namespace APKToolGUI
         }
         #endregion
 
-        #region Main menu event handlers
- 
-        #endregion
-
         #region Form handlers
+        private async void tabControlMain_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (tabControlMain.SelectedIndex == 1 && String.IsNullOrEmpty(appTxtBox.Text) && Environment.GetCommandLineArgs().Length == 1)
+            {
+                await GetApkInfo(Settings.Default.Decode_InputAppPath);
+            }
+        }
+
         private void FormMain_Activated(object sender, EventArgs e)
         {
             if (!isRunning)
@@ -1566,6 +1567,5 @@ namespace APKToolGUI
             }
         }
         #endregion
-
     }
 }

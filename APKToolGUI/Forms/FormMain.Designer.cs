@@ -302,6 +302,7 @@
             this.tabControlMain.Controls.Add(this.tabPageAdb);
             this.tabControlMain.Name = "tabControlMain";
             this.tabControlMain.SelectedIndex = 0;
+            this.tabControlMain.SelectedIndexChanged += new System.EventHandler(this.tabControlMain_SelectedIndexChanged);
             // 
             // tabPageMain
             // 

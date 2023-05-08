@@ -781,7 +781,7 @@ namespace APKToolGUI.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Get APK Info.
+        ///   Looks up a localized string similar to View APK Info.
         /// </summary>
         internal static string GetApkInfo {
             get {

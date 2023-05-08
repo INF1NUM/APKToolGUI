@@ -30,7 +30,7 @@ namespace APKToolGUI
                 apkToolGUIFolderShell.SetValue("SubCommands", "APKToolGUI.Build;APKToolGUI.Smali");
                 apkToolGUIFolderShell.Close();
 
-                CreateFileAssociationsSubKey(executablePath, ".apk", "APKToolGUI.Decompile;APKToolGUI.Sign;APKToolGUI.Zipalign");
+                CreateFileAssociationsSubKey(executablePath, ".apk", "APKToolGUI.Apkinfo;APKToolGUI.Decompile;APKToolGUI.Sign;APKToolGUI.Zipalign");
                 CreateFileAssociationsSubKey(executablePath, ".xapk", "APKToolGUI.Decompile");
                 CreateFileAssociationsSubKey(executablePath, ".apks", "APKToolGUI.Decompile");
                 CreateFileAssociationsSubKey(executablePath, ".zip", "APKToolGUI.Decompile");
@@ -85,7 +85,7 @@ namespace APKToolGUI
                 RegistryKey apkinfo = shell.CreateSubKey("APKToolGUI.Apkinfo", RegistryKeyPermissionCheck.ReadWriteSubTree);
                 apkinfo.SetValue("", Language.GetApkInfo, RegistryValueKind.String);
                 apkinfo.SetValue("Icon", executablePath, RegistryValueKind.String);
-                apkinfo.CreateSubKey("command").SetValue("", "\"" + executablePath + "\" \"apkinfo\" \"%1\"", RegistryValueKind.String);
+                apkinfo.CreateSubKey("command").SetValue("", "\"" + executablePath + "\" \"viewinfo\" \"%1\"", RegistryValueKind.String);
                 apkinfo.Close();
 
                 shell.Close();
