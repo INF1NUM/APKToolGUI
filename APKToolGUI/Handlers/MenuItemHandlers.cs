@@ -1,4 +1,6 @@
 ﻿using APKToolGUI.Languages;
+using APKToolGUI.Properties;
+using Dark.Net;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -44,7 +46,15 @@ namespace APKToolGUI.Handlers
 
         private void menuItemSettings_Click(object sender, EventArgs e)
         {
+            Theme theme = (Theme)Settings.Default.Theme;
+
+            if (Program.IsWin10OrAbove())
+                DarkNet.Instance.SetCurrentProcessTheme(theme);
+
             FormSettings frm = new FormSettings();
+
+            if (Program.IsWin10OrAbove())
+                DarkNet.Instance.SetWindowThemeForms(frm, theme);
             frm.ShowDialog();
         }
 
@@ -66,7 +76,14 @@ namespace APKToolGUI.Handlers
 
         private void menuItemAbout_Click(object sender, EventArgs e)
         {
+            Theme theme = (Theme)Settings.Default.Theme;
+
+            if (Program.IsWin10OrAbove())
+                DarkNet.Instance.SetCurrentProcessTheme(theme);
+
             FormAboutBox frm = new FormAboutBox();
+            if (Program.IsWin10OrAbove())
+                DarkNet.Instance.SetWindowThemeForms(frm, theme);
             frm.ShowDialog();
         }
 

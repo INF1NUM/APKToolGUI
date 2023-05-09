@@ -2,6 +2,8 @@
 using APKToolGUI.Properties;
 using APKToolGUI.Utils;
 using Bluegrams.Application;
+using Dark.Net;
+using OSVersionExtension;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -28,13 +30,13 @@ namespace APKToolGUI
         {
             try
             {
+                Application.EnableVisualStyles();
+                Application.SetCompatibleTextRenderingDefault(false);
+
                 if (Environment.OSVersion.Version.Major == 6)
                 {
                     SetProcessDPIAware();
                 }
-
-                Application.EnableVisualStyles();
-                Application.SetCompatibleTextRenderingDefault(false);
 
                 if (arg.Length == 1)
                 {
@@ -71,7 +73,16 @@ namespace APKToolGUI
                         TEMP_PATH = TempDirectory();
                         Directory.CreateDirectory(TEMP_PATH);
 
-                        Application.Run(new FormMain());
+                        Theme theme = (Theme)Settings.Default.Theme;
+                        if (IsWin10OrAbove())
+                            DarkNet.Instance.SetCurrentProcessTheme(theme);
+
+                        Form mainForm = new FormMain();
+
+                        if (IsWin10OrAbove())
+                            DarkNet.Instance.SetWindowThemeForms(mainForm, theme);
+
+                        Application.Run(mainForm);
                     }
                 }
             }
@@ -80,6 +91,29 @@ namespace APKToolGUI
                 Debug.WriteLine(ex);
                 //MessageBox.Show(ex.ToString(), Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        public static bool IsWin10OrAbove()
+        {
+            // Check if the operating system is Windows 10 or above
+            if (OSVersion.GetOSVersion().Version.Major >= 10 && OSVersion.GetOSVersion().Version.Minor >= 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+
+        public static bool IsDarkTheme()
+        {
+            if (IsWin10OrAbove())
+                return DarkNet.Instance.EffectiveCurrentProcessThemeIsDark;
+            else if (Settings.Default.Theme == 2)
+                return true;
+            return false;
         }
 
         public static void SetLanguage()

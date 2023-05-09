@@ -235,7 +235,7 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabelStateImage = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabelStateText = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
+            this.progressBar = new System.Windows.Forms.ToolStripProgressBar();
             this.contextMenuStripLog = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.copyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clearLogToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -1864,7 +1864,7 @@
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabelStateImage,
             this.toolStripStatusLabelStateText,
-            this.toolStripProgressBar1});
+            this.progressBar});
             resources.ApplyResources(this.statusStrip1, "statusStrip1");
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.SizingGrip = false;
@@ -1884,14 +1884,14 @@
             this.toolStripStatusLabelStateText.Spring = true;
             this.toolStripStatusLabelStateText.Click += new System.EventHandler(this.toolStripStatusLabelStateText_Click);
             // 
-            // toolStripProgressBar1
+            // progressBar
             // 
-            this.toolStripProgressBar1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            resources.ApplyResources(this.toolStripProgressBar1, "toolStripProgressBar1");
-            this.toolStripProgressBar1.MarqueeAnimationSpeed = 30;
-            this.toolStripProgressBar1.Name = "toolStripProgressBar1";
-            this.toolStripProgressBar1.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
-            this.toolStripProgressBar1.Click += new System.EventHandler(this.toolStripProgressBar1_Click);
+            this.progressBar.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            resources.ApplyResources(this.progressBar, "progressBar");
+            this.progressBar.MarqueeAnimationSpeed = 30;
+            this.progressBar.Name = "progressBar";
+            this.progressBar.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
+            this.progressBar.Click += new System.EventHandler(this.toolStripProgressBar1_Click);
             // 
             // contextMenuStripLog
             // 
@@ -2078,7 +2078,7 @@
         internal System.Windows.Forms.TabPage tabPageZipAlign;
         internal System.Windows.Forms.StatusStrip statusStrip1;
         internal System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelStateText;
-        internal System.Windows.Forms.ToolStripProgressBar toolStripProgressBar1;
+        internal System.Windows.Forms.ToolStripProgressBar progressBar;
         internal System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelStateImage;
         internal System.Windows.Forms.ContextMenuStrip contextMenuStripLog;
         internal System.Windows.Forms.ToolStripMenuItem clearLogToolStripMenuItem;

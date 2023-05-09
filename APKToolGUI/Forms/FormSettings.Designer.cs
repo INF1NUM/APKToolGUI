@@ -55,6 +55,8 @@
             this.buttonRemoveContextMenu = new System.Windows.Forms.Button();
             this.buttonCancel = new System.Windows.Forms.Button();
             this.buttonОК = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.themeComboBox = new System.Windows.Forms.ComboBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -81,6 +83,8 @@
             // groupBox1
             // 
             resources.ApplyResources(this.groupBox1, "groupBox1");
+            this.groupBox1.Controls.Add(this.themeComboBox);
+            this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.customApkToolTxtBox);
             this.groupBox1.Controls.Add(this.customApktoolBtn);
             this.groupBox1.Controls.Add(this.useCustomApktoolChk);
@@ -272,6 +276,21 @@
             this.buttonОК.UseVisualStyleBackColor = true;
             this.buttonОК.Click += new System.EventHandler(this.buttonОК_Click);
             // 
+            // label1
+            // 
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.Name = "label1";
+            // 
+            // themeComboBox
+            // 
+            this.themeComboBox.FormattingEnabled = true;
+            this.themeComboBox.Items.AddRange(new object[] {
+            resources.GetString("themeComboBox.Items"),
+            resources.GetString("themeComboBox.Items1"),
+            resources.GetString("themeComboBox.Items2")});
+            resources.ApplyResources(this.themeComboBox, "themeComboBox");
+            this.themeComboBox.Name = "themeComboBox";
+            // 
             // FormSettings
             // 
             resources.ApplyResources(this, "$this");
@@ -323,5 +342,7 @@
         private System.Windows.Forms.TextBox customApkToolTxtBox;
         private System.Windows.Forms.Button customApktoolBtn;
         private System.Windows.Forms.CheckBox useCustomApktoolChk;
+        private System.Windows.Forms.ComboBox themeComboBox;
+        private System.Windows.Forms.Label label1;
     }
 }

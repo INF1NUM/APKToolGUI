@@ -1033,11 +1033,11 @@ namespace APKToolGUI.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The language is set. Do you want to restart the application?.
+        ///   Looks up a localized string similar to Restart is required to apply changes. Do you want to restart the application?.
         /// </summary>
-        internal static string SetLanguageRestartApplication {
+        internal static string RestartApplicationPrompt {
             get {
-                return ResourceManager.GetString("SetLanguageRestartApplication", resourceCulture);
+                return ResourceManager.GetString("RestartApplicationPrompt", resourceCulture);
             }
         }
         

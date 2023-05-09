@@ -429,8 +429,8 @@
   <data name="ParsingApkInfo" xml:space="preserve">
     <value>Parsing APK Info...</value>
   </data>
-  <data name="SetLanguageRestartApplication" xml:space="preserve">
-    <value>The language is set. Do you want to restart the application?</value>
+  <data name="RestartApplicationPrompt" xml:space="preserve">
+    <value>Restart is required to apply changes. Do you want to restart the application?</value>
   </data>
   <data name="DecompilingAllApkFiles" xml:space="preserve">
     <value>Decompiling all APK files</value>

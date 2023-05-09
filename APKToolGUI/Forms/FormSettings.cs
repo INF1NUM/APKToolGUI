@@ -10,6 +10,8 @@ using System.Reflection;
 using System.Collections.Generic;
 using System.Windows.Shapes;
 using static APKToolGUI.UpdateChecker;
+using APKToolGUI.Properties;
+using APKToolGUI.Controls;
 
 namespace APKToolGUI
 {
@@ -18,10 +20,14 @@ namespace APKToolGUI
         string currentLanguage;
         bool currentUseApktoolChk;
         string currentApktoolPath;
+        int currentTheme;
 
         public FormSettings()
         {
             InitializeComponent();
+
+            if (Program.IsDarkTheme())
+                DarkTheme.SetTheme(Controls, this);
 
             currentUseApktoolChk = useCustomApktoolChk.Checked;
             currentApktoolPath = customApkToolTxtBox.Text;
@@ -31,6 +37,10 @@ namespace APKToolGUI
                 SetButtonShield(buttonAddContextMenu, true);
                 SetButtonShield(buttonRemoveContextMenu, true);
             }
+
+            int themeInt = (themeComboBox.Items.Count + 1 > Settings.Default.Theme) ? Settings.Default.Theme : 0;
+            themeComboBox.SelectedIndex = themeInt;
+            currentTheme = themeInt;
         }
 
         #region GUI
@@ -115,13 +125,15 @@ namespace APKToolGUI
         private void SaveSettings()
         {
             if (Language.SystemLanguage.Equals(comboBox1.SelectedItem.ToString()))
-                Properties.Settings.Default.Culture = "Auto";
+                Settings.Default.Culture = "Auto";
             else
-                Properties.Settings.Default.Culture = StringExt.Regex(@"(?<=\[)(.*?)(?=\])", comboBox1.SelectedItem.ToString());
-            Properties.Settings.Default.Save();
+                Settings.Default.Culture = StringExt.Regex(@"(?<=\[)(.*?)(?=\])", comboBox1.SelectedItem.ToString());
 
-            if (!comboBox1.SelectedItem.ToString().Contains(currentLanguage))
-                if (MessageBox.Show(Language.SetLanguageRestartApplication, Application.ProductName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            Settings.Default.Theme = themeComboBox.SelectedIndex;
+            Settings.Default.Save();
+
+            if (!comboBox1.SelectedItem.ToString().Contains(currentLanguage) || themeComboBox.SelectedIndex != currentTheme)
+                if (MessageBox.Show(Language.RestartApplicationPrompt, Application.ProductName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     Application.Restart();
 
             if (currentUseApktoolChk != useCustomApktoolChk.Checked || currentApktoolPath != customApkToolTxtBox.Text)
@@ -172,7 +184,6 @@ namespace APKToolGUI
                     DirectoryUtils.Delete(Program.TEMP_PATH);
 
                     //Create new temp folder
-
                     Program.TEMP_PATH = Program.TempDirectory();
                     Directory.CreateDirectory(Program.TEMP_PATH);
                 }

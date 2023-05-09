@@ -166,7 +166,7 @@
     <value>NoControl</value>
   </data>
   <data name="decOutOpenDirBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 196</value>
+    <value>7, 197</value>
   </data>
   <data name="decOutOpenDirBtn.Size" type="System.Drawing.Size, System.Drawing">
     <value>175, 24</value>
@@ -298,7 +298,7 @@
     <value>NoControl</value>
   </data>
   <data name="compileOutputOpenDirBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 225</value>
+    <value>7, 225</value>
   </data>
   <data name="compileOutputOpenDirBtn.Size" type="System.Drawing.Size, System.Drawing">
     <value>175, 23</value>
@@ -325,7 +325,7 @@
     <value>NoControl</value>
   </data>
   <data name="button_OpenMainActivity.Location" type="System.Drawing.Point, System.Drawing">
-    <value>406, 258</value>
+    <value>406, 253</value>
   </data>
   <data name="button_OpenMainActivity.Size" type="System.Drawing.Size, System.Drawing">
     <value>175, 23</value>
@@ -352,7 +352,7 @@
     <value>NoControl</value>
   </data>
   <data name="openApktoolYmlBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>206, 258</value>
+    <value>206, 253</value>
   </data>
   <data name="openApktoolYmlBtn.Size" type="System.Drawing.Size, System.Drawing">
     <value>175, 23</value>
@@ -379,7 +379,7 @@
     <value>NoControl</value>
   </data>
   <data name="openAndroidMainfestBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 258</value>
+    <value>7, 253</value>
   </data>
   <data name="openAndroidMainfestBtn.Size" type="System.Drawing.Size, System.Drawing">
     <value>175, 23</value>
@@ -4571,7 +4571,7 @@ and change target SDK to 29</value>
     <value>4, 4</value>
   </data>
   <data name="groupBox_ZIPALIGN_Options.Size" type="System.Drawing.Size, System.Drawing">
-    <value>579, 275</value>
+    <value>579, 271</value>
   </data>
   <data name="groupBox_ZIPALIGN_Options.TabIndex" type="System.Int32, mscorlib">
     <value>16</value>
@@ -6070,7 +6070,7 @@ and change target SDK to 29</value>
     <value>None</value>
   </data>
   <data name="toolStripStatusLabelStateText.Size" type="System.Drawing.Size, System.Drawing">
-    <value>479, 17</value>
+    <value>581, 17</value>
   </data>
   <data name="toolStripStatusLabelStateText.Text" xml:space="preserve">
     <value>Loading...</value>
@@ -6078,11 +6078,14 @@ and change target SDK to 29</value>
   <data name="toolStripStatusLabelStateText.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
   </data>
-  <data name="toolStripProgressBar1.AutoSize" type="System.Boolean, mscorlib">
+  <data name="progressBar.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="toolStripProgressBar1.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="progressBar.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 16</value>
+  </data>
+  <data name="progressBar.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="statusStrip1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 543</value>
@@ -7957,10 +7960,10 @@ and change target SDK to 29</value>
   <data name="&gt;&gt;toolStripStatusLabelStateText.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;toolStripProgressBar1.Name" xml:space="preserve">
-    <value>toolStripProgressBar1</value>
+  <data name="&gt;&gt;progressBar.Name" xml:space="preserve">
+    <value>progressBar</value>
   </data>
-  <data name="&gt;&gt;toolStripProgressBar1.Type" xml:space="preserve">
+  <data name="&gt;&gt;progressBar.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripProgressBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;copyToolStripMenuItem.Name" xml:space="preserve">

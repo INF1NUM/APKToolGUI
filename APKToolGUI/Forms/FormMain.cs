@@ -20,6 +20,8 @@ using System.Linq;
 using System.Windows.Interop;
 using System.Security.Cryptography;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using APKToolGUI.Controls;
+using Dark.Net;
 
 namespace APKToolGUI
 {
@@ -52,6 +54,9 @@ namespace APKToolGUI
             Program.SetLanguage();
 
             InitializeComponent();
+
+            if (Program.IsDarkTheme())
+                DarkTheme.SetTheme(Controls, this);
 
             Text += " - v" + ProductVersion;
             Application.ApplicationExit += new EventHandler(Application_ApplicationExit);
@@ -153,7 +158,6 @@ namespace APKToolGUI
                 if (updateInterval.Days > 0 && Settings.Default.CheckForUpdateAtStartup)
                     updateCheker.CheckAsync(true);
             });
-
             ToStatus(Language.Done, Resources.done);
 
             RunCmdArgs();
@@ -385,7 +389,7 @@ namespace APKToolGUI
         {
             BeginInvoke(new MethodInvoker(delegate
             {
-                toolStripStatusLabelStateText.Text = message;
+                toolStripStatusLabelStateText.Text = message.Replace("\n", "").Replace("\r", "");
                 toolStripStatusLabelStateImage.Image = statusImage;
             }));
         }
@@ -413,30 +417,45 @@ namespace APKToolGUI
             if (String.IsNullOrWhiteSpace(message) || message.Contains("_JAVA_OPTIONS"))
                 return;
 
+            Color color = Color.Black;
+
             switch (eventType)
             {
                 case ApktoolEventType.None:
-                    ToLog(DateTime.Now.ToString("[HH:mm:ss]"), message, Color.Black);
+                    if (Program.IsDarkTheme())
+                        color = Color.White;
                     break;
                 case ApktoolEventType.Success:
-                    ToLog(DateTime.Now.ToString("[HH:mm:ss]"), message, Color.DarkGreen);
+                    if (Program.IsDarkTheme())
+                        color = Color.LightGreen;
+                    else
+                        color = Color.DarkGreen;
                     break;
                 case ApktoolEventType.Infomation:
-                    ToLog(DateTime.Now.ToString("[HH:mm:ss]"), message, Color.Blue);
+                    if (Program.IsDarkTheme())
+                        color = Color.LightBlue;
+                    else
+                        color = Color.Blue;
                     break;
                 case ApktoolEventType.Error:
-                    ToLog(DateTime.Now.ToString("[HH:mm:ss]"), message, Color.Red);
+                    if (Program.IsDarkTheme())
+                        color = Color.LightPink;
+                    else
+                        color = Color.Red;
                     break;
                 case ApktoolEventType.Warning:
-                    ToLog(DateTime.Now.ToString("[HH:mm:ss]"), message, Color.DarkOrange);
+                    if (Program.IsDarkTheme())
+                        color = Color.DarkOrange;
+                    else
+                        color = Color.Orange;
                     break;
                 case ApktoolEventType.Unknown:
-                    ToLog(DateTime.Now.ToString("[HH:mm:ss]"), message, Color.Red);
-                    break;
-                default:
-                    ToLog(DateTime.Now.ToString("[dd.MM.yyyy HH:mm:ss]"), message, Color.Blue);
+                    if (Program.IsDarkTheme())
+                        color = Color.White;
                     break;
             }
+
+            ToLog(DateTime.Now.ToString("[dd.MM.yyyy HH:mm:ss]"), message, color);
         }
 
         internal void Running(string msg)
@@ -444,7 +463,8 @@ namespace APKToolGUI
             Invoke(new Action(delegate ()
             {
                 TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Indeterminate, Handle);
-                toolStripProgressBar1.Style = ProgressBarStyle.Marquee;
+                progressBar.Style = ProgressBarStyle.Marquee;
+                progressBar.Visible = true;
                 ActionButtonsEnabled = false;
                 ClearLog();
             }));
@@ -476,16 +496,21 @@ namespace APKToolGUI
 
             TaskbarManager.Instance.SetProgressValue(1, 1);
             if (statusStrip1.InvokeRequired)
-                statusStrip1.BeginInvoke(new Action(delegate { toolStripProgressBar1.Style = ProgressBarStyle.Continuous; }));
+                statusStrip1.BeginInvoke(new Action(delegate { progressBar.Style = ProgressBarStyle.Continuous; }));
             else
-                toolStripProgressBar1.Style = ProgressBarStyle.Continuous;
+                progressBar.Style = ProgressBarStyle.Continuous;
+
+            Invoke(new Action(delegate ()
+            {
+                progressBar.Visible = false;
+            }));
 
             ActionButtonsEnabled = true;
 
             ToStatus(Language.Done, Resources.done);
         }
 
-        internal void Error(string msg)
+        internal void Error(string msg, string status = null)
         {
             isRunning = false;
 
@@ -502,13 +527,21 @@ namespace APKToolGUI
 
             TaskbarManager.Instance.SetProgressValue(1, 1);
             if (statusStrip1.InvokeRequired)
-                statusStrip1.BeginInvoke(new Action(delegate { toolStripProgressBar1.Style = ProgressBarStyle.Continuous; }));
+                statusStrip1.BeginInvoke(new Action(delegate { progressBar.Style = ProgressBarStyle.Continuous; }));
             else
-                toolStripProgressBar1.Style = ProgressBarStyle.Continuous;
+                progressBar.Style = ProgressBarStyle.Continuous;
+
+            Invoke(new Action(delegate ()
+            {
+                progressBar.Visible = false;
+            }));
 
             ActionButtonsEnabled = true;
 
-            ToStatus(msg, Resources.error);
+            if (status == null)
+                ToStatus(msg, Resources.error);
+            else
+                ToStatus(status, Resources.error);
         }
 
         internal void ClearLog()
@@ -635,7 +668,7 @@ namespace APKToolGUI
 
         void ApkEditorOutputDataRecieved(object sender, ApkEditorDataReceivedEventArgs e)
         {
-           ToLog(ApktoolEventType.None, e.Message);
+            ToLog(ApktoolEventType.None, e.Message);
         }
 
         internal async Task<int> MergeUsingApkEditor(string inputSplitApk)
@@ -874,7 +907,7 @@ namespace APKToolGUI
             catch (Exception ex)
             {
                 code = 1;
-                Error(ex.ToString());
+                Error(ex.ToString(), Language.ErrorDecompiling);
             }
 
             return code;

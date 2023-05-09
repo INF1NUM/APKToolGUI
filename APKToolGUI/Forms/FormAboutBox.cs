@@ -1,4 +1,5 @@
-﻿using System;
+﻿using APKToolGUI.Controls;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
@@ -13,6 +14,10 @@ namespace APKToolGUI
         public FormAboutBox()
         {
             InitializeComponent();
+
+            if (Program.IsDarkTheme())
+                DarkTheme.SetTheme(Controls, this);
+
             this.Text = String.Format("{0} {1}", this.Text, AssemblyTitle);
             this.labelProductName.Text = AssemblyProduct;
             this.labelVersion.Text = String.Format("{0} {1}", labelVersion.Text, AssemblyVersion);
