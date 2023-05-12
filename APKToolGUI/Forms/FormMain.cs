@@ -455,7 +455,7 @@ namespace APKToolGUI
                     break;
             }
 
-            ToLog(DateTime.Now.ToString("[dd.MM.yyyy HH:mm:ss]"), message, color);
+            ToLog(DateTime.Now.ToString("[HH:mm:ss]"), message, color);
         }
 
         internal void Running(string msg)
