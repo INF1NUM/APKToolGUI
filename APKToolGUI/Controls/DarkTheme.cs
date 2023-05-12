@@ -13,13 +13,13 @@ namespace APKToolGUI.Controls
 {
     internal class DarkTheme
     {
-        static Color bgColor = Color.FromArgb(32, 32, 32);
-        static Color txtBoxColor = Color.FromArgb(64, 64, 64);
-        static Color btnColor = Color.FromArgb(51, 51, 51);
-        static Color btnBorderColor = Color.FromArgb(155, 155, 155);
-        static Color tabBorderColor = Color.FromArgb(45, 45, 45);
-        static Color menuItemHoverColor = Color.FromArgb(51, 51, 51);
-        static Color menuItemSelectedColor = Color.FromArgb(41, 41, 41);
+        public static Color bgColor = Color.FromArgb(32, 32, 32);
+        public static Color txtBoxColor = Color.FromArgb(64, 64, 64);
+        public static Color btnColor = Color.FromArgb(51, 51, 51);
+        public static Color btnBorderColor = Color.FromArgb(155, 155, 155);
+        public static Color tabBorderColor = Color.FromArgb(45, 45, 45);
+        public static Color menuItemHoverColor = Color.FromArgb(51, 51, 51);
+        public static Color menuItemSelectedColor = Color.FromArgb(41, 41, 41);
 
         public static void SetTheme(Control.ControlCollection container, Form form)
         {

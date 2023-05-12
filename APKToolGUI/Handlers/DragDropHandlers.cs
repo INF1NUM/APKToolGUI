@@ -1,4 +1,5 @@
 ﻿using APKToolGUI.ApkTool;
+using APKToolGUI.Controls;
 using APKToolGUI.Languages;
 using APKToolGUI.Properties;
 using APKToolGUI.Utils;
@@ -66,9 +67,9 @@ namespace APKToolGUI.Handlers
         {
             if (extCtrl == null)
                 extCtrl = ctrl;
-            ctrl.DragLeave += new EventHandler((sender, e) => extCtrl.BackColor = Color.White);
+            ctrl.DragLeave += new EventHandler((sender, e) => extCtrl.BackColor = PanelBackColor());
             ctrl.DragEnter += new DragEventHandler((sender, e) => e.CheckDragEnter(extension));
-            ctrl.DragOver += new DragEventHandler((sender, e) => { if (e.CheckManyDragOver(extension)) extCtrl.BackColor = Color.LightGreen; });
+            ctrl.DragOver += new DragEventHandler((sender, e) => { if (e.CheckManyDragOver(extension)) extCtrl.BackColor = PanelHoverBackColor(); });
             ctrl.DragDrop += dragHandler;
         }
 
@@ -77,7 +78,7 @@ namespace APKToolGUI.Handlers
             string[] apkFiles = null;
             if (e.DropManyByEnd(file => apkFiles = file, apks))
             {
-                main.decPanel.BackColor = Color.White;
+                main.decPanel.BackColor = PanelBackColor();
 
                 foreach (var apkFile in apkFiles)
                 {
@@ -112,7 +113,7 @@ namespace APKToolGUI.Handlers
                     if (File.Exists(Path.Combine(folder, "AndroidManifest.xml")))
                     {
                         main.textBox_BUILD_InputProjectDir.Text = folder;
-                        main.comPanel.BackColor = Color.White;
+                        main.comPanel.BackColor = PanelBackColor();
                         await main.Build(folder);
                     }
                     else
@@ -126,7 +127,7 @@ namespace APKToolGUI.Handlers
             string[] apkFiles = null;
             if (e.DropManyByEnd(file => apkFiles = file, apks))
             {
-                main.zipalignPanel.BackColor = Color.White;
+                main.zipalignPanel.BackColor = PanelBackColor();
 
                 foreach (var apkFile in apkFiles)
                 {
@@ -142,7 +143,7 @@ namespace APKToolGUI.Handlers
             string[] apkFiles = null;
             if (e.DropManyByEnd(file => apkFiles = file, apks))
             {
-                main.signPanel.BackColor = Color.White;
+                main.signPanel.BackColor = PanelBackColor();
 
                 foreach (var apkFile in apkFiles)
                 {
@@ -159,7 +160,7 @@ namespace APKToolGUI.Handlers
             if (e.DropOneByEnd(file => apkFile = file, ".dex"))
             {
                 main.baksmaliBrowseInputDexTxtBox.Text = apkFile;
-                main.bakSmaliGroupBox.BackColor = Color.White;
+                main.bakSmaliGroupBox.BackColor = PanelBackColor();
                 await main.Baksmali(apkFile);
             }
         }
@@ -170,7 +171,7 @@ namespace APKToolGUI.Handlers
             if (e.DropOneByEnd(file => dir = file, null))
             {
                 main.smaliBrowseInputDirTxtBox.Text = dir;
-                main.smaliGroupBox.BackColor = Color.White;
+                main.smaliGroupBox.BackColor = PanelBackColor();
                 await main.Smali(dir);
             }
         }
@@ -181,7 +182,7 @@ namespace APKToolGUI.Handlers
             if (e.DropOneByEnd(file => dir = file, ".apk"))
             {
                 main.apkPathAdbTxtBox.Text = dir;
-                main.tabPageAdb.BackColor = Color.White;
+                main.tabPageAdb.BackColor = PanelBackColor();
                 await main.Install(dir);
             }
         }
@@ -192,9 +193,23 @@ namespace APKToolGUI.Handlers
             if (e.DropOneByEnd(file => apkFile = file, apks))
             {
                 main.smaliBrowseInputDirTxtBox.Text = apkFile;
-                main.basicInfoTabPage.BackColor = Color.White;
+                main.basicInfoTabPage.BackColor = PanelBackColor();
                 main.GetApkInfo(apkFile);
             }
+        }
+
+        Color PanelBackColor()
+        {
+            if (Program.IsDarkTheme())
+                return DarkTheme.bgColor;
+            return Color.White;
+        }
+
+        Color PanelHoverBackColor()
+        {
+            if (Program.IsDarkTheme())
+                return Color.Gray;
+            return Color.LightGreen;
         }
     }
 }
