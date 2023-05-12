@@ -1308,18 +1308,21 @@ namespace APKToolGUI
 
                         string device = selAdbDeviceLbl.Text;
 
-                        if (!String.IsNullOrEmpty(device) && Settings.Default.Sign_InstallApkAfterSign)
+                        if (Settings.Default.Sign_InstallApkAfterSign)
                         {
-                            ToLog(ApktoolEventType.Infomation, "=====[ " + Language.InstallingApk + " ]=====");
-                            if (adb.Install(device, outputFile) == 0)
+                            if (!string.IsNullOrEmpty(device))
                             {
-                                ToLog(ApktoolEventType.Success, Language.InstallApkSuccessful);
+                                ToLog(ApktoolEventType.Infomation, "=====[ " + Language.InstallingApk + " ]=====");
+                                if (adb.Install(device, outputFile) == 0)
+                                {
+                                    ToLog(ApktoolEventType.Success, Language.InstallApkSuccessful);
+                                }
+                                else
+                                    ToLog(ApktoolEventType.Error, Language.InstallApkFailed);
                             }
                             else
-                                ToLog(ApktoolEventType.Error, Language.InstallApkFailed);
+                                ToLog(ApktoolEventType.Error, String.Format(Language.DeviceNotSelected, outputFile));
                         }
-                        else
-                            ToLog(ApktoolEventType.Error, String.Format(Language.DeviceNotSelected, outputFile));
 
                         if (Settings.Default.AutoDeleteIdsigFile)
                         {
