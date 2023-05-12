@@ -1,3 +1,10 @@
+3.2.2.0
+- Dark theme (Currently there is no dark scrollbar, and tabs looks quite ugly)
+- Fix crash when dropping decompiled APK on compile panel
+- Added View APK info in context menu (You must reinstall context menu)
+- Fixed attempting to install APK even it's disabled
+- Updated APKEditor.jar to 1.2.0
+
 3.2.1.0
 - Fixed an error when decompiling split APK for the second time
 - Updated Russian language
