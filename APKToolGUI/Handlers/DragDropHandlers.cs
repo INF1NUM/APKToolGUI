@@ -106,7 +106,7 @@ namespace APKToolGUI.Handlers
         private async void DropDirToCom(DragEventArgs e)
         {
             string[] folders = null;
-            if (e.DropManyByEnd(file => folders = file, null))
+            if (e.DropManyByEnd(file => folders = file, ""))
             {
                 foreach (var folder in folders)
                 {
