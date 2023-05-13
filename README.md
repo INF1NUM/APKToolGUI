@@ -1,4 +1,4 @@
-# APK Tool GUI
++++´´´+# APK Tool GUI
 ![](Assets/Image.png)
 
 [![](https://img.shields.io/github/downloads/AndnixSH/APKToolGUI/total?style=for-the-badge)](https://github.com/AndnixSH/APKToolGUI/releases) [![](https://img.shields.io/github/v/release/andnixsh/APKToolGUI?style=for-the-badge)](https://github.com/AndnixSH/APKToolGUI/releases)
@@ -115,3 +115,6 @@ Use Visual Studio 2019 and above. NET Framework 4.8 SDK is required
 
 # Disclaimer
 Same as Apktool by iBotPeaches, It is NOT intended for piracy and other non-legal uses. It could be used for localizing, adding some features or support for custom platforms and other GOOD purposes. Just try to be fair with authors of an app, that you use and probably like.
+
+# License
+The original repo does not have a license but I have permission from the author to use ane distriute this project as open source. I'm not sure what license fits so I'll just add license as unlicensed
