@@ -117,4 +117,4 @@ Use Visual Studio 2019 and above. NET Framework 4.8 SDK is required
 Same as Apktool by iBotPeaches, It is NOT intended for piracy and other non-legal uses. It could be used for localizing, adding some features or support for custom platforms and other GOOD purposes. Just try to be fair with authors of an app, that you use and probably like.
 
 # License
-The original repo does not have a license but I have permission from the author to use ane distriute this project as open source, without license. He doesn't seems to know much about license. For this project, I'll just add license as unlicensed
+The original repo does not have a license but I have permission from the author to use ane distriute this project as open source, without license. He doesn't seems to know much about licensing. For this project, I'll just add license as unlicensed
