@@ -426,4 +426,94 @@
   <data name="MoveTempApkToOutput" xml:space="preserve">
     <value>移动临时 apk"{0}" 到输出目录 "{1}"</value>
   </data>
+  <data name="ParsingApkInfo" xml:space="preserve">
+    <value>正在解析 APK 信息...</value>
+  </data>
+  <data name="RestartApplicationPrompt" xml:space="preserve">
+    <value>需要重新启动才能应用更改。 是否要重新启动应用程序？</value>
+  </data>
+  <data name="DecompilingAllApkFiles" xml:space="preserve">
+    <value>正在反编译所有 APK 文件</value>
+  </data>
+  <data name="DetectedAsBase" xml:space="preserve">
+    <value>{0} 检测为基本模块</value>
+  </data>
+  <data name="DetectedAsSplit" xml:space="preserve">
+    <value>{0} 检测为拆分</value>
+  </data>
+  <data name="ExtractingAllApkFiles" xml:space="preserve">
+    <value>提取所有 APK 文件</value>
+  </data>
+  <data name="MergeFinishedMoveDir" xml:space="preserve">
+    <value>合并完成。移动目录到 "{0}"</value>
+  </data>
+  <data name="MergingApk" xml:space="preserve">
+    <value>正在合并 APK</value>
+  </data>
+  <data name="MovingBasedirectory" xml:space="preserve">
+    <value>正在基本模块目录到 "{0}"</value>
+  </data>
+  <data name="DirNotExist" xml:space="preserve">
+    <value>目录 "{0}" 不存在</value>
+  </data>
+  <data name="TempDirectory" xml:space="preserve">
+    <value>临时目录: "{0}"</value>
+  </data>
+  <data name="ErrorMerging" xml:space="preserve">
+    <value>合并失败</value>
+  </data>
+  <data name="ExtractOrigSignature" xml:space="preserve">
+    <value>提取原始签名</value>
+  </data>
+  <data name="MergingApkEditor" xml:space="preserve">
+    <value>使用 APKEditor.jar 合并 APK</value>
+  </data>
+  <data name="Aborted" xml:space="preserve">
+    <value>已终止</value>
+  </data>
+  <data name="CancelProcess" xml:space="preserve">
+    <value>您确定要取消该进程吗？</value>
+  </data>
+  <data name="GettingDevices" xml:space="preserve">
+    <value>正在获取设备...</value>
+  </data>
+  <data name="PleaseWait" xml:space="preserve">
+    <value>请稍候...</value>
+  </data>
+  <data name="ConfirmKillingAdbServer" xml:space="preserve">
+    <value>您确定要终止 ADB 服务器吗？ 您可能需要重新连接您的设备或重新启动模拟器</value>
+  </data>
+  <data name="DeviceNotSelected" xml:space="preserve">
+    <value>未选择设备</value>
+  </data>
+  <data name="DeviceSelected" xml:space="preserve">
+    <value>已选择 "{0}" 设备</value>
+  </data>
+  <data name="DevicesFound" xml:space="preserve">
+    <value>发现 {0} 设备</value>
+  </data>
+  <data name="InstallApkFailed" xml:space="preserve">
+    <value>APK 安装失败</value>
+  </data>
+  <data name="InstallApkSuccessful" xml:space="preserve">
+    <value>APK 安装成功</value>
+  </data>
+  <data name="InstallingApk" xml:space="preserve">
+    <value>正在安装 APK</value>
+  </data>
+  <data name="InstallingApkPath" xml:space="preserve">
+    <value>正在安装 APK "{0}"</value>
+  </data>
+  <data name="NoDevicesFound" xml:space="preserve">
+    <value>未找到设备。 确保您的设备已连接到计算机并打开了 adb 调试。 如果您使用模拟器，请重新启动它并等待它启动</value>
+  </data>
+  <data name="TimeEnded" xml:space="preserve">
+    <value>结束时间: {0}</value>
+  </data>
+  <data name="TimeStarted" xml:space="preserve">
+    <value>开始时间: {0}</value>
+  </data>
+  <data name="ClearFrameworkPrompt" xml:space="preserve">
+    <value>更改 Apktool 版本后需要清除框架缓存以避免意外错误。 你想现在清除它吗？</value>
+  </data>
 </root>
