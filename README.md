@@ -1,4 +1,4 @@
-+++´´´+# APK Tool GUI
+# APK Tool GUI
 ![](Assets/Image.png)
 
 [![](https://img.shields.io/github/downloads/AndnixSH/APKToolGUI/total?style=for-the-badge)](https://github.com/AndnixSH/APKToolGUI/releases) [![](https://img.shields.io/github/v/release/andnixsh/APKToolGUI?style=for-the-badge)](https://github.com/AndnixSH/APKToolGUI/releases)
