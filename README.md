@@ -87,7 +87,7 @@ A: It just a false positive, anti-virus always flag tools/softwares like this as
 A: No, that's out of scope of this tool, and I'm not interested.
 
 ##### Q: Can you implement to convert APK to AAB?
-A: No, apktool is about recompiling, not about converting to other formats. AAB is only used for distributing an application to Play Store. It is not directly installable.
+A: No, apktool is about recompiling, not converting to other formats. AAB is only used for distributing an application to Play Store, so it is not directly installable. If you really want to convert APK to ABB, try APK2AAB tool https://github.com/sensei-z/APK2AAB
 
 ##### Q: Can you implement an option to protect/pack/obfuscate APK?
 A: No, APK protection is beyond the scope of this tool
