@@ -17,7 +17,7 @@ https://github.com/AndnixSH/APKToolGUI/releases
 
 # Features
 - Decompile APK
-- Decompile and merge split APK/XAPK/APKS/ZIP/APKM using build-in split merging and APKEditor.jar (Default)
+- Decompile and merge split APK/XAPK/APKS/ZIP/APKM using build-in split merging or APKEditor.jar (Default)
 - Compile APK
 - Sign APK
 - Zipalign APK
@@ -69,7 +69,7 @@ Anything else, [create a new issue](https://github.com/AndnixSH/APKToolGUI/issue
 
 # FAQ
 ##### Q: Can it be ported to other OS like Linux?
-A: Maybe, but it's not easy since Microsoft is dumb for not supporting it for .NET Core, unlike Java FX which supported all platforms. If you know, feel free to open an issue
+A: Notthing is impossible, but it's not easy as long as Microsoft not supporting WinForm for other platforms, making .NET Core useless, unlike Java FX that supports other platforms since decades. If you know, feel free to open an issue. Until then, use [WineHQ](https://www.winehq.org/) or similar to run exe
 
 ##### Q: How to update Apktool?
 A: Download [Apktool.jar](https://github.com/iBotPeaches/Apktool/releases) and replace it on Resources folder
@@ -84,22 +84,22 @@ A: Simply delete the config.xml file from the directory of the executeable
 A: It just a false positive, anti-virus always flag tools/softwares like this as virus. Don't always believe what your anti-virus are telling you. Try to compile the source by yourself and you will see
 
 ##### Q: Can you make an automatic APK injecting tool?
-A: No, that's out of scope of this tool, and I'm not interested.
+A: No, I'm not interested.
 
 ##### Q: Can you implement to convert APK to AAB?
 A: No, apktool is about recompiling, not converting to other formats. AAB is only used for distributing an application to Play Store, so it is not directly installable. If you really want to convert APK to ABB, try APK2AAB tool https://github.com/sensei-z/APK2AAB
-
-##### Q: Can you implement an option to protect/pack/obfuscate APK?
-A: No, APK protection is beyond the scope of this tool
-
-##### Q: Can you implement an option to deobfuscate/unpack APK or bypass anti-cheat/security?
-A: No, they are also beyond the scope of this tool. I don't condone bypassing such protections
 
 ##### Q: I don't like split APK. Where can I get single APK instead?
 A: Download from [Apkcombo's APK downloader](https://apkcombo.com/downloader/), or [Apkpure](https://apkpure.com/) (Choose APK instead XAPK)
 
 ##### Q: Can you help me with modding APK in general?
 A: Sorry, I don't offer support with it.
+
+##### Q: Can you implement features to protect/pack/obfuscate APK?
+A: No, APK protection is beyond the scope of this tool
+
+##### Q: Can you implement features to deobfuscate/unpack APK or bypass anti-cheat/security?
+A: No, they are also beyond the scope of this tool. I don't condone bypassing such protections
 
 # Development
 This project is written in C#
