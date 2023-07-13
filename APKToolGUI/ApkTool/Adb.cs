@@ -1,6 +1,7 @@
 ﻿using APKToolGUI.Properties;
 using APKToolGUI.Utils;
 using Java;
+using Microsoft.Build.Framework.XamlTypes;
 using System;
 using System.Diagnostics;
 using System.IO;
@@ -84,6 +85,7 @@ namespace APKToolGUI
 
             string args = String.Format($"{Keys.Serial} {mdevice.Groups[1].Value} install {setVendor} \"{inputApk}\"");
 
+            Log.d("ADB: " + adbFileName + " " + args);
             Debug.WriteLine("Adb: " + args);
 
             processAdb.EnableRaisingEvents = false;
@@ -98,6 +100,8 @@ namespace APKToolGUI
 
         public string GetDevices()
         {
+            Log.d("ADB: " + adbFileName + " " + Keys.Devices);
+
             Process process = new Process();
             process.EnableRaisingEvents = true;
             process.StartInfo.FileName = adbFileName;

@@ -124,21 +124,28 @@ namespace APKToolGUI
 
         private void SaveSettings()
         {
-            if (Language.SystemLanguage.Equals(comboBox1.SelectedItem.ToString()))
-                Settings.Default.Culture = "Auto";
-            else
-                Settings.Default.Culture = StringExt.Regex(@"(?<=\[)(.*?)(?=\])", comboBox1.SelectedItem.ToString());
-
-            Settings.Default.Theme = themeComboBox.SelectedIndex;
-            Settings.Default.Save();
-
-            if (!comboBox1.SelectedItem.ToString().Contains(currentLanguage) || themeComboBox.SelectedIndex != currentTheme)
-                if (MessageBox.Show(Language.RestartApplicationPrompt, Application.ProductName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                    Application.Restart();
-
-            if (currentUseApktoolChk != useCustomApktoolChk.Checked || currentApktoolPath != customApkToolTxtBox.Text)
+            try
             {
-                FormMain.Instance.SetApktoolPath();
+                if (Language.SystemLanguage.Equals(comboBox1.SelectedItem.ToString()))
+                    Settings.Default.Culture = "Auto";
+                else
+                    Settings.Default.Culture = StringExt.Regex(@"(?<=\[)(.*?)(?=\])", comboBox1.SelectedItem.ToString());
+
+                Settings.Default.Theme = themeComboBox.SelectedIndex;
+                Settings.Default.Save();
+
+                if (!comboBox1.SelectedItem.ToString().Contains(currentLanguage) || themeComboBox.SelectedIndex != currentTheme)
+                    if (MessageBox.Show(Language.RestartApplicationPrompt, Application.ProductName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                        Application.Restart();
+
+                if (currentUseApktoolChk != useCustomApktoolChk.Checked || currentApktoolPath != customApkToolTxtBox.Text)
+                {
+                    FormMain.Instance.SetApktoolPath();
+                }
+            }
+            catch (Exception ex)
+            {
+                Log.e(ex.ToString());
             }
         }
 

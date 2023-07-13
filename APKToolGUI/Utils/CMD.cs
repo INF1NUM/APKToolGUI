@@ -18,7 +18,7 @@ namespace APKToolGUI.Utils
 
         public static string ProcessStartWithOutput(string FileName, string Arguments)
         {
-            // Debug.WriteLine("CMD: " + FileName + " " + Arguments);
+            Log.d("CMD: " + FileName + " " + Arguments);
             string result = string.Empty;
             try
             {

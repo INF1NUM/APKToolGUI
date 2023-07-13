@@ -40,9 +40,11 @@ namespace APKToolGUI
             }
         }
 
+        string _jarPath;
         public Signapk(string javaPath, string jarPath)
             : base(javaPath, jarPath)
         {
+            _jarPath = jarPath;
             Exited += Signapk_Exited;
             OutputDataReceived += Signapk_OutputDataReceived;
             ErrorDataReceived += Signapk_ErrorDataReceived;
@@ -125,6 +127,9 @@ namespace APKToolGUI
                 v4 = "--v4-signing-enabled false";
 
             string args = String.Format("sign {0} {1} {2} {3} {4} {5} {6} \"{7}\"", key, alias, v1, v2, v3, v4, outputDir, lastSourceApk);
+
+            Log.v("Signapk CMD: " + _jarPath + " " + args);
+
             Start(args);
             BeginOutputReadLine();
             BeginErrorReadLine();

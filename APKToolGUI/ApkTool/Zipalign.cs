@@ -30,8 +30,10 @@ namespace APKToolGUI
         public event EventHandler Exited;
         public int ExitCode { get { return processZipalign.ExitCode; } }
 
+        string _zipalignFileName;
         public Zipalign(string zipalignFileName)
         {
+            _zipalignFileName = zipalignFileName;
             processZipalign = new Process();
             processZipalign.EnableRaisingEvents = true;
             processZipalign.StartInfo.FileName = zipalignFileName;
@@ -92,7 +94,7 @@ namespace APKToolGUI
 
             string args = String.Format("{0}{1}{2}{3} {4} \"{5}\" {6}", keyCheckOnly, keyOverwriteOutputFile, keyVerbose, keyRecompress, Settings.Default.Zipalign_AlignmentInBytes, input, keyOutputFile);
 
-            Debug.WriteLine("Zipalign: " + args);
+            Log.v("Zipalign: " + _zipalignFileName + " " + args);
 
             processZipalign.StartInfo.Arguments = args;
             processZipalign.Start();

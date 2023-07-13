@@ -11,9 +11,11 @@ namespace APKToolGUI
     {
         public new event SmaliExitedEventHandler Exited;
 
+        string _jarPath;
         public Smali(string javaPath, string jarPath)
             : base(javaPath, jarPath)
         {
+            _jarPath = jarPath;
             base.Exited += Smali_Exited;
         }
 
@@ -83,6 +85,9 @@ namespace APKToolGUI
             string keyOutputDir = String.Format("-o \"{0}\"", output);
 
             string args = String.Format("a {0} {1}", inputFile, keyOutputDir);
+
+            Log.v("Smali CMD: " + _jarPath + " " + args);
+
             Start(args);
             BeginOutputReadLine();
             BeginErrorReadLine();

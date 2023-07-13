@@ -291,7 +291,7 @@
     <Compile Include="AndroidRes\Model\Generic\AndroidGenericArray.cs" />
     <Compile Include="AndroidRes\Model\Generic\AndroidResource.cs" />
     <Compile Include="AndroidRes\Util\ClassExtensions.cs" />
-    <Compile Include="AndroidRes\Util\Log.cs" />
+    <Compile Include="Utils\Log.cs" />
     <Compile Include="ApkTool\AaptParser.cs" />
     <Compile Include="ApkTool\ApkFixer.cs" />
     <Compile Include="ApkTool\Apktool.cs">

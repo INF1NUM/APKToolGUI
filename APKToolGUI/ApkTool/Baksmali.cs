@@ -11,9 +11,11 @@ namespace APKToolGUI
     {
         public new event BaksmaliExitedEventHandler Exited;
 
+        string _jarPath;
         public Baksmali(string javaPath, string jarPath)
             : base(javaPath, jarPath)
         {
+            _jarPath = jarPath;
             base.Exited += Baksmali_Exited;
             OutputDataReceived += Baksmali_OutputDataReceived;
             ErrorDataReceived += Baksmali_ErrorDataReceived;
@@ -86,6 +88,9 @@ namespace APKToolGUI
             string keyOutputDir = String.Format("-o \"{0}\"", output);
 
             string args = String.Format("d {0} {1}", inputFile, keyOutputDir);
+
+            Log.v("Baksmali CMD: " + _jarPath + " " + args);
+
             Start(args);
             BeginOutputReadLine();
             BeginErrorReadLine();

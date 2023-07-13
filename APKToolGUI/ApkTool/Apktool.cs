@@ -86,8 +86,10 @@ namespace APKToolGUI
             }
         }
 
+        string _jarPath;
         public Apktool(string javaPath, string jarPath) : base(javaPath, jarPath)
         {
+            _jarPath = jarPath;
             Exited += Apktool_Exited;
             OutputDataReceived += Apktool_OutputDataReceived;
             ErrorDataReceived += Apktool_ErrorDataReceived;
@@ -139,6 +141,8 @@ namespace APKToolGUI
 
             string args = String.Format($"d{keyNoSrc}{keyNoRes}{keyForce}{onlyMainClasses}{noDebugInfo}{keyMatchOriginal}{keyFramePath}{keyKeepBrokenRes}{apiLevel}{keyOutputDir} \"{inputPath}\"");
 
+            Log.d("Apktool CMD: " + _jarPath + " " + args);
+
             Start(args);
             BeginOutputReadLine();
             BeginErrorReadLine();
@@ -188,6 +192,8 @@ namespace APKToolGUI
 
             string args = String.Format($"b{keyForceAll}{keyAapt}{keyCopyOriginal}{noCrunch}{keyFramePath}{apiLevel}{useAapt2}{keyOutputAppPath} \"{inputFolder}\"");
 
+            Log.d("Apktool CMD: " + _jarPath + " " + args);
+
             Start(args);
             BeginOutputReadLine();
             BeginErrorReadLine();
@@ -207,6 +213,8 @@ namespace APKToolGUI
 
             string args = String.Format($"if{keyFrameDir}{keyTag} \"{inputPath}\"");
 
+            Log.d("Apktool CMD: " + _jarPath + " " + args);
+
             Start(args);
             BeginOutputReadLine();
             BeginErrorReadLine();
@@ -223,6 +231,8 @@ namespace APKToolGUI
                 keyFramePath = String.Format("{0} \"{1}\"", DecompileKeys.FrameworkPath, Program.STANDALONE_FRAMEWORK_DIR);
 
             string args = String.Format($"empty-framework-dir {EmptyFrameworkKeys.ForceDelete} {keyFramePath}");
+
+            Log.d("Apktool CMD: " + _jarPath + " " + args);
 
             Start(args);
             BeginOutputReadLine();

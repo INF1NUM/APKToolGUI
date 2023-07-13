@@ -4,6 +4,7 @@ using System.Diagnostics;
 using APKToolGUI.Properties;
 using System.IO;
 using APKToolGUI.Utils;
+using System.Windows.Forms;
 
 namespace APKToolGUI
 {
@@ -11,9 +12,11 @@ namespace APKToolGUI
     {
         public new event ApkEditorExitedEventHandler Exited;
 
+        string _jarPath;
         public ApkEditor(string javaPath, string jarPath)
             : base(javaPath, jarPath)
         {
+            this._jarPath = jarPath;
             base.Exited += ApkEditor_Exited;
             OutputDataReceived += ApkEditor_OutputDataReceived;
             ErrorDataReceived += ApkEditor_ErrorDataReceived; //Output makes process way slower
@@ -85,6 +88,8 @@ namespace APKToolGUI
             string keyOutputDir = String.Format("-o \"{0}\"", output);
 
             string args = String.Format("m {0} {1} -f", inputFile, keyOutputDir);
+
+            Log.d("ApkEditor CMD: " + _jarPath + " " + args);
 
             Start(args);
 
