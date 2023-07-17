@@ -78,8 +78,21 @@ namespace Java
                     javaProcess.Start();
                     string output = javaProcess.StandardError.ReadToEnd();
                     javaProcess.WaitForExit(3000);
+
+                    //I use _JAVA_OPTIONS so I want the prompt removed
+                    if (output.Contains("_JAVA_OPTIONS"))
+                    {
+                        int n = 2;
+                        string[] lines = output
+                            .Split(Environment.NewLine.ToCharArray())
+                            .Skip(n)
+                            .ToArray();
+
+                       output = string.Join(Environment.NewLine, lines);
+                    }
+
                     if (!String.IsNullOrEmpty(output))
-                        return output = output.Remove(output.LastIndexOf(Environment.NewLine));
+                        return output.Replace("\r\n\r\n", "\n").Trim();
                     else
                         return null;
                 }

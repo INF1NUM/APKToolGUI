@@ -127,7 +127,7 @@ namespace APKToolGUI
                         ToLog(ApktoolEventType.None, javaVersion);
                         string apktoolVersion = apktool.GetVersion();
                         if (!String.IsNullOrWhiteSpace(apktoolVersion))
-                            ToLog(ApktoolEventType.None, String.Format(Language.APKToolVersion + " \"{0}\"", apktoolVersion));
+                            ToLog(ApktoolEventType.None, String.Format(Language.APKToolVersion + " {0}", apktoolVersion));
                         else
                             ToLog(ApktoolEventType.Error, Language.CantDetectApktoolVersion);
                     }
