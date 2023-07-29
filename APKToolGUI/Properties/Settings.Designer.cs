@@ -1203,5 +1203,17 @@ namespace APKToolGUI.Properties {
                 this["DebugMode"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool Build_NetSecConf {
+            get {
+                return ((bool)(this["Build_NetSecConf"]));
+            }
+            set {
+                this["Build_NetSecConf"] = value;
+            }
+        }
     }
 }

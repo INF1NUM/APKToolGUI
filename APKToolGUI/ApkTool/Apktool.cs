@@ -46,6 +46,7 @@ namespace APKToolGUI
             public const string NoCrunch = " -nc"; // Disable crunching of resource files during the build step.
             public const string ApiLevel = " -api"; //The numeric api-level of the file to generate, e.g. 14 for ICS.
             public const string UseAapt2 = " --use-aapt2"; //Upgrades apktool to use experimental aapt2 binary.
+            public const string NetSecConf = " --net-sec-conf"; //Add a generic Network Security Configuration file in the output APK
         }
 
         static class InstallFrameworkKeys
@@ -171,7 +172,8 @@ namespace APKToolGUI
 
         public int Build(string inputFolder, string outputFile)
         {
-            string keyForceAll = null, keyAapt = null, keyCopyOriginal = null, noCrunch = null, keyFramePath = null, keyOutputAppPath = null, apiLevel = null, useAapt2 = null;
+            string keyForceAll = null, keyAapt = null, keyCopyOriginal = null, noCrunch = null, keyFramePath = null, keyOutputAppPath = null, apiLevel = null, useAapt2 = null, netSecConf = null;
+
             if (Settings.Default.Build_ForceAll)
                 keyForceAll = BuildKeys.ForceAll;
             if (Settings.Default.Build_CopyOriginal)
@@ -188,9 +190,11 @@ namespace APKToolGUI
                 apiLevel = String.Format("{0} {1}", DecompileKeys.ApiLevel, Settings.Default.Build_ApiLevel);
             if (Settings.Default.Build_UseAapt2)
                 useAapt2 = BuildKeys.UseAapt2;
+            if (Settings.Default.Build_NetSecConf)
+                netSecConf = BuildKeys.NetSecConf;
             keyOutputAppPath = String.Format("{0} \"{1}\"", BuildKeys.OutputAppPath, outputFile);
 
-            string args = String.Format($"b{keyForceAll}{keyAapt}{keyCopyOriginal}{noCrunch}{keyFramePath}{apiLevel}{useAapt2}{keyOutputAppPath} \"{inputFolder}\"");
+            string args = String.Format($"b{keyForceAll}{keyAapt}{keyCopyOriginal}{noCrunch}{keyFramePath}{apiLevel}{useAapt2}{netSecConf}{keyOutputAppPath} \"{inputFolder}\"");
 
             Log.d("Apktool CMD: " + _jarPath + " " + args);
 
