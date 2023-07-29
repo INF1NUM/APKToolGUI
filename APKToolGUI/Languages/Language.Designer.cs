@@ -196,6 +196,15 @@ namespace APKToolGUI.Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Clearing temp folder.
+        /// </summary>
+        internal static string ClearTempFolder {
+            get {
+                return ResourceManager.GetString("ClearTempFolder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Compile APK.
         /// </summary>
         internal static string CompileApk {
@@ -390,6 +399,15 @@ namespace APKToolGUI.Languages {
         internal static string DeleteFile {
             get {
                 return ResourceManager.GetString("DeleteFile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Deleting folder: {0}.
+        /// </summary>
+        internal static string DeletingFolder {
+            get {
+                return ResourceManager.GetString("DeletingFolder", resourceCulture);
             }
         }
         

@@ -516,4 +516,10 @@
   <data name="ClearFrameworkPrompt" xml:space="preserve">
     <value>It is required to clear framework cache after changing Apktool version to avoid unexpected errors. Do you want to clear it now?</value>
   </data>
+  <data name="ClearTempFolder" xml:space="preserve">
+    <value>Clearing temp folder</value>
+  </data>
+  <data name="DeletingFolder" xml:space="preserve">
+    <value>Deleting folder: {0}</value>
+  </data>
 </root>

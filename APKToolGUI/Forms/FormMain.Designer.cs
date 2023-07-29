@@ -253,6 +253,9 @@
             this.baksmaliIssuesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
+            this.clearTempFolderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControlMain.SuspendLayout();
             this.tabPageMain.SuspendLayout();
             this.signPanel.SuspendLayout();
@@ -1935,7 +1938,10 @@
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.saveLogToFileToolStripMenuItem,
             this.settingsToolStripMenuItem,
+            this.toolStripMenuItem1,
             this.openTempFolderToolStripMenuItem,
+            this.clearTempFolderToolStripMenuItem,
+            this.toolStripMenuItem2,
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             resources.ApplyResources(this.fileToolStripMenuItem, "fileToolStripMenuItem");
@@ -2001,6 +2007,22 @@
             this.toolTip1.AutoPopDelay = 10000;
             this.toolTip1.InitialDelay = 500;
             this.toolTip1.ReshowDelay = 100;
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            resources.ApplyResources(this.toolStripMenuItem1, "toolStripMenuItem1");
+            // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            resources.ApplyResources(this.toolStripMenuItem2, "toolStripMenuItem2");
+            // 
+            // clearTempFolderToolStripMenuItem
+            // 
+            this.clearTempFolderToolStripMenuItem.Name = "clearTempFolderToolStripMenuItem";
+            resources.ApplyResources(this.clearTempFolderToolStripMenuItem, "clearTempFolderToolStripMenuItem");
+            this.clearTempFolderToolStripMenuItem.Click += new System.EventHandler(this.clearTempFolderToolStripMenuItem_Click);
             // 
             // FormMain
             // 
@@ -2295,6 +2317,9 @@
         internal System.Windows.Forms.ToolStripMenuItem openTempFolderToolStripMenuItem;
         internal System.Windows.Forms.ToolStripMenuItem reportAnIsuueToolStripMenuItem;
         public System.Windows.Forms.ToolStripMenuItem saveLogToFileToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem clearTempFolderToolStripMenuItem;
     }
 }
 

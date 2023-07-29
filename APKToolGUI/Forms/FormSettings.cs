@@ -191,7 +191,7 @@ namespace APKToolGUI
                     DirectoryUtils.Delete(Program.TEMP_PATH);
 
                     //Create new temp folder
-                    Program.TEMP_PATH = Program.TempDirectory();
+                    Program.TEMP_PATH = Program.RandTempDirectory();
                     Directory.CreateDirectory(Program.TEMP_PATH);
                 }
             }

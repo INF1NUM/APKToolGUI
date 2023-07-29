@@ -1453,6 +1453,24 @@ namespace APKToolGUI
         #endregion
 
         #region Form handlers
+        private void clearTempFolderToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Running(Language.ClearTempFolder);
+            try
+            {
+                foreach (var subDir in new DirectoryInfo(Program.TEMP_MAIN).EnumerateDirectories())
+                {
+                    ToLog(ApktoolEventType.None, String.Format(Language.DeletingFolder, subDir));
+                    subDir.Delete(true);
+                }
+                Done();
+            }
+            catch (Exception ex)
+            {
+                ToLog(ApktoolEventType.Error, ex.Message);
+            }
+        }
+
         private async void tabControlMain_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (tabControlMain.SelectedIndex == 1 && String.IsNullOrEmpty(appTxtBox.Text) && Environment.GetCommandLineArgs().Length == 1)

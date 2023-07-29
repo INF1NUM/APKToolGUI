@@ -111,7 +111,7 @@ namespace APKToolGUI.Controls
                 {
                     if (item is ToolStripMenuItem toolStripMenuItem)
                     {
-                        foreach (ToolStripMenuItem dditem in toolStripMenuItem.DropDownItems)
+                        foreach (ToolStripMenuItem dditem in toolStripMenuItem.DropDownItems.OfType<ToolStripMenuItem>())
                         {
                             dditem.BackColor = bgColor;
                             dditem.ForeColor = Color.White;
