@@ -2260,14 +2260,13 @@
     <value>24, 280</value>
   </data>
   <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>445, 26</value>
+    <value>445, 13</value>
   </data>
   <data name="label5.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
   </data>
   <data name="label5.Text" xml:space="preserve">
-    <value>It will remove isSplitRequired, extractNativeLibs, useEmbeddedDex, APKTOOL_DUMMY
-and change target SDK to 29</value>
+    <value>It will remove isSplitRequired, extractNativeLibs, useEmbeddedDex, APKTOOL_DUMMY</value>
   </data>
   <data name="&gt;&gt;label5.Name" xml:space="preserve">
     <value>label5</value>

@@ -747,8 +747,6 @@ namespace APKToolGUI
                             ToLog(ApktoolEventType.None, String.Format(Language.DecompilingSuccessfullyCompleted, outputDir));
                             if (Settings.Default.Decode_FixError)
                             {
-                                if (ApkFixer.ChangeSdkTo29(outputDir))
-                                    ToLog(ApktoolEventType.None, Language.ChangedTargetSdkTo29);
                                 if (ApkFixer.FixAndroidManifest(outputDir))
                                     ToLog(ApktoolEventType.None, Language.FixAndroidManifest);
                                 if (ApkFixer.RemoveApkToolDummies(outputDir))
@@ -890,8 +888,6 @@ namespace APKToolGUI
                         ToLog(ApktoolEventType.None, String.Format(Language.DecompilingSuccessfullyCompleted, outputDir));
                         if (Settings.Default.Decode_FixError)
                         {
-                            if (ApkFixer.ChangeSdkTo29(outputDir))
-                                ToLog(ApktoolEventType.None, Language.ChangedTargetSdkTo29);
                             if (ApkFixer.FixAndroidManifest(outputDir))
                                 ToLog(ApktoolEventType.None, Language.FixAndroidManifest);
                             if (ApkFixer.RemoveApkToolDummies(outputDir))
