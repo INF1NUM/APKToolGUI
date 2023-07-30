@@ -20,23 +20,23 @@ namespace APKToolGUI.Controls
         public static Color tabBorderColor = Color.FromArgb(45, 45, 45);
         public static Color menuItemHoverColor = Color.FromArgb(51, 51, 51);
         public static Color menuItemSelectedColor = Color.FromArgb(41, 41, 41);
+        public static Color separatorColor = Color.FromArgb(62, 62, 62);
 
         public static void SetTheme(Control.ControlCollection container, Form form)
         {
             form.BackColor = bgColor;
             form.ForeColor = Color.White;
-
             foreach (Control component in container)
             {
                 Debug.WriteLine(component.GetType());
                 component.BackColor = bgColor;
                 component.ForeColor = Color.White;
 
-                SetThemeTabControl(component);
+                SetThemeTabControl(component, container);
             }
         }
 
-        public static void SetThemeTabControl(Control component)
+        public static void SetThemeTabControl(Control component, Control.ControlCollection container)
         {
             if (component is TabControl)
             {
@@ -44,9 +44,9 @@ namespace APKToolGUI.Controls
 
                 foreach (Control tabControl in component.Controls)
                 {
-                    SetThemeTabControl(tabControl);
+                    SetThemeTabControl(tabControl, container);
 
-                    Debug.WriteLine("tabPage " + tabControl.GetType());
+                    //Debug.WriteLine("tabPage " + tabControl.GetType());
 
                     ((TabControl)component).DrawItem += (sender, e) =>
                     {
@@ -90,7 +90,7 @@ namespace APKToolGUI.Controls
 
                     foreach (Control tabPage in tabControl.Controls)
                     {
-                        SetThemeTabControl(tabPage);
+                        SetThemeTabControl(tabPage, container);
                     }
                 }
             }
@@ -98,7 +98,7 @@ namespace APKToolGUI.Controls
             {
                 foreach (Control control in component.Controls)
                 {
-                    SetThemeTabControl(control);
+                    SetThemeTabControl(control, container);
                 }
                 component.BackColor = bgColor;
                 component.ForeColor = Color.White;
@@ -115,7 +115,13 @@ namespace APKToolGUI.Controls
                         {
                             dditem.BackColor = bgColor;
                             dditem.ForeColor = Color.White;
-                            Debug.WriteLine(dditem.Text);
+                            //Debug.WriteLine(dditem.Text);
+                        }
+                        foreach (ToolStripSeparator toolStripSeparator in toolStripMenuItem.DropDownItems.OfType<ToolStripSeparator>())
+                        {
+                            toolStripSeparator.BackColor = Color.Blue;
+                            toolStripSeparator.ForeColor = Color.Blue;
+                            Debug.WriteLine(toolStripSeparator.Name);
                         }
 
                         toolStripMenuItem.BackColor = bgColor;
@@ -127,7 +133,7 @@ namespace APKToolGUI.Controls
             {
                 foreach (Control control in component.Controls)
                 {
-                    SetThemeTabControl(control);
+                    SetThemeTabControl(control, container);
                 }
                 component.BackColor = bgColor;
                 component.ForeColor = Color.White;
@@ -148,17 +154,14 @@ namespace APKToolGUI.Controls
             }
             else if (component is TextBox)
             {
-                foreach (Control panel in component.Controls)
-                {
-                    SetThemeTabControl(panel);
-                }
                 component.BackColor = txtBoxColor;
                 component.ForeColor = Color.White;
                 ((TextBox)component).BorderStyle = BorderStyle.FixedSingle;
             }
             else if (component is RichTextBox)
             {
-                ((RichTextBox)component).BorderStyle = BorderStyle.None;
+                if (component.Name == "logTxtBox")
+                    ((RichTextBox)component).BorderStyle = BorderStyle.None;
                 component.BackColor = bgColor;
                 component.ForeColor = Color.White;
             }
@@ -171,54 +174,77 @@ namespace APKToolGUI.Controls
 
         public class MenuItemColorTable : ProfessionalColorTable
         {
-            public override Color ImageMarginGradientBegin
-            {
-                get { return bgColor; }
-            }
+            /// <summary>
+            /// Gets the starting color of the gradient used when 
+            /// a top-level System.Windows.Forms.ToolStripMenuItem is pressed.
+            /// </summary>
+            public override Color MenuItemPressedGradientBegin => menuItemSelectedColor;
 
-            public override Color ImageMarginGradientEnd
-            {
-                get { return bgColor; }
-            }
+            /// <summary>
+            /// Gets the end color of the gradient used when a top-level 
+            /// System.Windows.Forms.ToolStripMenuItem is pressed.
+            /// </summary>
+            public override Color MenuItemPressedGradientEnd => menuItemSelectedColor;
 
-            public override Color ToolStripDropDownBackground
-            {
-                get { return bgColor; }
-            }
+            /// <summary>
+            /// Gets the border color to use with a 
+            /// System.Windows.Forms.ToolStripMenuItem.
+            /// </summary>
+            public override Color MenuItemBorder => menuItemSelectedColor;
 
-            public override Color MenuItemSelected
-            {
-                get { return menuItemHoverColor; }
-            }
+            /// <summary>
+            /// Gets the starting color of the gradient used when the 
+            /// System.Windows.Forms.ToolStripMenuItem is selected.
+            /// </summary>
+            public override Color MenuItemSelectedGradientBegin => menuItemSelectedColor;
 
-            public override Color MenuBorder
-            {
-                get { return menuItemHoverColor; }
-            }
+            /// <summary>
+            /// Gets the end color of the gradient used when the 
+            /// System.Windows.Forms.ToolStripMenuItem is selected.
+            /// </summary>
+            public override Color MenuItemSelectedGradientEnd => menuItemSelectedColor;
 
-            public override Color MenuItemBorder
-            {
-                get { return menuItemHoverColor; }
-            }
+            /// <summary>
+            /// Gets the border color to use with a 
+            /// System.Windows.Forms.ToolStripMenuItem.
+            /// </summary>
+            public override Color MenuItemSelected => menuItemHoverColor;
 
-            public override Color MenuItemSelectedGradientBegin
-            {
-                get { return menuItemSelectedColor; }
-            }
+            /// <summary>
+            /// Gets the solid background color of the 
+            /// System.Windows.Forms.ToolStripDropDown.
+            /// </summary>
+            public override Color ToolStripDropDownBackground => bgColor;
 
-            public override Color MenuItemSelectedGradientEnd
-            {
-                get { return menuItemSelectedColor; }
-            }
-            public override Color MenuItemPressedGradientBegin
-            {
-                get { return menuItemSelectedColor; }
-            }
+            /// <summary>
+            /// Gets the starting color of the gradient used in the image 
+            /// margin of a System.Windows.Forms.ToolStripDropDownMenu.
+            /// </summary>
+            public override Color ImageMarginGradientBegin => bgColor;
 
-            public override Color MenuItemPressedGradientEnd
-            {
-                get { return menuItemSelectedColor; }
-            }
+            /// <summary>
+            /// Gets the middle color of the gradient used in the image 
+            /// margin of a System.Windows.Forms.ToolStripDropDownMenu.
+            /// </summary>
+            public override Color ImageMarginGradientMiddle => bgColor;
+
+            /// <summary>
+            /// Gets the end color of the gradient used in the image 
+            /// margin of a System.Windows.Forms.ToolStripDropDownMenu.
+            /// </summary>
+            public override Color ImageMarginGradientEnd => bgColor;
+
+            /// <summary>
+            /// Gets the color to use to for shadow effects on 
+            /// the System.Windows.Forms.ToolStripSeparator.
+            /// </summary>
+            public override Color SeparatorDark => separatorColor;
+
+            /// <summary>
+            /// Gets the color that is the border color to use 
+            /// on a System.Windows.Forms.MenuStrip.
+            /// </summary>
+            public override Color MenuBorder => menuItemHoverColor;
         }
     }
 }
