@@ -43,18 +43,22 @@
             this.openAndroidMainfestBtn = new System.Windows.Forms.Button();
             this.signPanel = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
+            this.textBox_SIGN_InputFile = new System.Windows.Forms.TextBox();
             this.button_SIGN_BrowseInputFile = new System.Windows.Forms.Button();
             this.button_SIGN_Sign = new System.Windows.Forms.Button();
             this.zipalignPanel = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.button_ZIPALIGN_Align = new System.Windows.Forms.Button();
             this.button_ZIPALIGN_BrowseInputFile = new System.Windows.Forms.Button();
+            this.textBox_ZIPALIGN_InputFile = new System.Windows.Forms.TextBox();
             this.comPanel = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.button_BUILD_BrowseInputProjectDir = new System.Windows.Forms.Button();
             this.button_BUILD_Build = new System.Windows.Forms.Button();
+            this.textBox_BUILD_InputProjectDir = new System.Windows.Forms.TextBox();
             this.decPanel = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.textBox_DECODE_InputAppPath = new System.Windows.Forms.TextBox();
             this.button_DECODE_Decode = new System.Windows.Forms.Button();
             this.button_DECODE_BrowseInputAppPath = new System.Windows.Forms.Button();
             this.tabPageApkInfo = new System.Windows.Forms.TabPage();
@@ -103,14 +107,54 @@
             this.fullInfoTextBox = new System.Windows.Forms.RichTextBox();
             this.tabPageDecode = new System.Windows.Forms.TabPage();
             this.groupBox_DECODE_Options = new System.Windows.Forms.GroupBox();
+            this.checkBox7 = new System.Windows.Forms.CheckBox();
+            this.checkBox_DECODE_UseApkEditorMerge = new System.Windows.Forms.CheckBox();
+            this.decApiLvlUpDown = new System.Windows.Forms.NumericUpDown();
+            this.decSetApiLvlChkBox = new System.Windows.Forms.CheckBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.checkBox_DECODE_FixError = new System.Windows.Forms.CheckBox();
+            this.checkBox_DECODE_OnlyMainClasses = new System.Windows.Forms.CheckBox();
+            this.textBox_DECODE_FrameDir = new System.Windows.Forms.TextBox();
+            this.button_DECODE_BrowseOutputDirectory = new System.Windows.Forms.Button();
+            this.checkBox_DECODE_UseFramework = new System.Windows.Forms.CheckBox();
+            this.button_DECODE_BrowseFrameDir = new System.Windows.Forms.Button();
+            this.checkBox_DECODE_MatchOriginal = new System.Windows.Forms.CheckBox();
+            this.checkBox_DECODE_OutputDirectory = new System.Windows.Forms.CheckBox();
+            this.textBox_DECODE_OutputDirectory = new System.Windows.Forms.TextBox();
+            this.checkBox_DECODE_KeepBrokenRes = new System.Windows.Forms.CheckBox();
+            this.checkBox_DECODE_NoSrc = new System.Windows.Forms.CheckBox();
+            this.checkBox_DECODE_Force = new System.Windows.Forms.CheckBox();
+            this.checkBox_DECODE_NoRes = new System.Windows.Forms.CheckBox();
+            this.checkBox_DECODE_NoDebugInfo = new System.Windows.Forms.CheckBox();
             this.tabPageBuild = new System.Windows.Forms.TabPage();
             this.groupBox_BUILD_Options = new System.Windows.Forms.GroupBox();
+            this.checkBox_BUILD_NetSecConf = new System.Windows.Forms.CheckBox();
+            this.useAapt2ChkBox = new System.Windows.Forms.CheckBox();
+            this.buildApiLvlUpDown = new System.Windows.Forms.NumericUpDown();
+            this.buildSetApiLvlChkBox = new System.Windows.Forms.CheckBox();
             this.label23 = new System.Windows.Forms.Label();
+            this.createUnsignApkChkBox = new System.Windows.Forms.CheckBox();
             this.label16 = new System.Windows.Forms.Label();
+            this.signAfterBuildChkBox = new System.Windows.Forms.CheckBox();
+            this.zipalignAfterBuildChkBox = new System.Windows.Forms.CheckBox();
+            this.checkBox_BUILD_NoCrunch = new System.Windows.Forms.CheckBox();
+            this.button_BUILD_BrowseOutputAppPath = new System.Windows.Forms.Button();
+            this.checkBox_BUILD_ForceAll = new System.Windows.Forms.CheckBox();
+            this.button_BUILD_BrowseFrameDir = new System.Windows.Forms.Button();
+            this.button_BUILD_BrowseAaptPath = new System.Windows.Forms.Button();
+            this.checkBox_BUILD_OutputAppPath = new System.Windows.Forms.CheckBox();
+            this.checkBox_BUILD_CopyOriginal = new System.Windows.Forms.CheckBox();
+            this.textBox_BUILD_OutputAppPath = new System.Windows.Forms.TextBox();
+            this.checkBox_BUILD_UseAapt = new System.Windows.Forms.CheckBox();
+            this.textBox_BUILD_AaptPath = new System.Windows.Forms.TextBox();
+            this.textBox_BUILD_FrameDir = new System.Windows.Forms.TextBox();
+            this.checkBox_BUILD_UseFramework = new System.Windows.Forms.CheckBox();
             this.tabPageSign = new System.Windows.Forms.TabPage();
             this.groupBox_SIGN_Options = new System.Windows.Forms.GroupBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.autoDelIdsigChkBox = new System.Windows.Forms.CheckBox();
             this.schemev4ComboBox = new System.Windows.Forms.ComboBox();
             this.label27 = new System.Windows.Forms.Label();
             this.schemev3ComboBox = new System.Windows.Forms.ComboBox();
@@ -119,37 +163,67 @@
             this.label25 = new System.Windows.Forms.Label();
             this.schemev1ComboBox = new System.Windows.Forms.ComboBox();
             this.label24 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             this.selectKeyStoreFileBtn = new System.Windows.Forms.Button();
+            this.aliasTxtBox = new System.Windows.Forms.TextBox();
+            this.useAliasChkBox = new System.Windows.Forms.CheckBox();
             this.label22 = new System.Windows.Forms.Label();
+            this.keyStoreFileTxtBox = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
+            this.useKeyStoreChkBox = new System.Windows.Forms.CheckBox();
+            this.useSigningOutputDir = new System.Windows.Forms.CheckBox();
             this.label_SIGN_PrivateKey = new System.Windows.Forms.Label();
             this.label_SIGN_PublicKey = new System.Windows.Forms.Label();
             this.button_SIGN_BrowseOutputFile = new System.Windows.Forms.Button();
+            this.textBox_SIGN_OutputFile = new System.Windows.Forms.TextBox();
             this.button_SIGN_BrowsePublicKey = new System.Windows.Forms.Button();
             this.button_SIGN_BrowsePrivateKey = new System.Windows.Forms.Button();
+            this.textBox_SIGN_PublicKey = new System.Windows.Forms.TextBox();
+            this.textBox_SIGN_PrivateKey = new System.Windows.Forms.TextBox();
             this.tabPageZipAlign = new System.Windows.Forms.TabPage();
             this.groupBox_ZIPALIGN_Options = new System.Windows.Forms.GroupBox();
+            this.zipalignOutputDirChkBox = new System.Windows.Forms.CheckBox();
+            this.signAfterZipalignChkBox = new System.Windows.Forms.CheckBox();
+            this.checkBox_ZIPALIGN_Recompress = new System.Windows.Forms.CheckBox();
             this.label_ZIPALIGN_AlignmentBytes = new System.Windows.Forms.Label();
             this.button_ZIPALIGN_BrowseOutputFile = new System.Windows.Forms.Button();
+            this.checkBox_ZIPALIGN_CheckAlignment = new System.Windows.Forms.CheckBox();
+            this.textBox_ZIPALIGN_OutputFile = new System.Windows.Forms.TextBox();
+            this.checkBox_ZIPALIGN_VerboseOutput = new System.Windows.Forms.CheckBox();
+            this.numericUpDown_ZIPALIGN_AlignmentBytes = new System.Windows.Forms.NumericUpDown();
+            this.checkBox_ZIPALIGN_OverwriteOutputFile = new System.Windows.Forms.CheckBox();
             this.tabPageInstallFramework = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.openFwFolderBtn = new System.Windows.Forms.Button();
             this.clearFwBtn = new System.Windows.Forms.Button();
+            this.clearFwBeforeDecodeChkBox = new System.Windows.Forms.CheckBox();
             this.groupBox_IF_Options = new System.Windows.Forms.GroupBox();
+            this.checkBox_IF_Tag = new System.Windows.Forms.CheckBox();
+            this.checkBox_IF_FramePath = new System.Windows.Forms.CheckBox();
+            this.textBox_IF_Tag = new System.Windows.Forms.TextBox();
             this.button_IF_InstallFramework = new System.Windows.Forms.Button();
+            this.button_IF_BrowseFrameDir = new System.Windows.Forms.Button();
             this.button_IF_BrowseInputFramePath = new System.Windows.Forms.Button();
+            this.textBox_IF_InputFramePath = new System.Windows.Forms.TextBox();
+            this.textBox_IF_FrameDir = new System.Windows.Forms.TextBox();
             this.tabPageBaksmali = new System.Windows.Forms.TabPage();
             this.smaliGroupBox = new System.Windows.Forms.GroupBox();
             this.label29 = new System.Windows.Forms.Label();
+            this.smaliUseOutputChkBox = new System.Windows.Forms.CheckBox();
             this.comSmaliBtn = new System.Windows.Forms.Button();
             this.smaliBrowseOutputBtn = new System.Windows.Forms.Button();
+            this.smaliBrowseInputDirTxtBox = new System.Windows.Forms.TextBox();
+            this.smaliBrowseOutputTxtBox = new System.Windows.Forms.TextBox();
             this.smaliBrowseInputDirBtn = new System.Windows.Forms.Button();
             this.bakSmaliGroupBox = new System.Windows.Forms.GroupBox();
             this.label28 = new System.Windows.Forms.Label();
+            this.baksmaliUseOutputChkBox = new System.Windows.Forms.CheckBox();
             this.baksmaliBrowseOutputBtn = new System.Windows.Forms.Button();
+            this.baksmaliBrowseOutputTxtBox = new System.Windows.Forms.TextBox();
             this.decSmaliBtn = new System.Windows.Forms.Button();
             this.baksmaliBrowseInputDexBtn = new System.Windows.Forms.Button();
+            this.baksmaliBrowseInputDexTxtBox = new System.Windows.Forms.TextBox();
             this.tabPageAdb = new System.Windows.Forms.TabPage();
             this.selAdbDeviceLbl = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
@@ -157,6 +231,8 @@
             this.installApkBtn = new System.Windows.Forms.Button();
             this.refreshDevicesBtn = new System.Windows.Forms.Button();
             this.selApkAdbBtn = new System.Windows.Forms.Button();
+            this.setVendorChkBox = new System.Windows.Forms.CheckBox();
+            this.apkPathAdbTxtBox = new System.Windows.Forms.TextBox();
             this.label32 = new System.Windows.Forms.Label();
             this.devicesListBox = new System.Windows.Forms.ListBox();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
@@ -183,82 +259,6 @@
             this.baksmaliIssuesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.textBox_SIGN_InputFile = new System.Windows.Forms.TextBox();
-            this.textBox_ZIPALIGN_InputFile = new System.Windows.Forms.TextBox();
-            this.textBox_BUILD_InputProjectDir = new System.Windows.Forms.TextBox();
-            this.textBox_DECODE_InputAppPath = new System.Windows.Forms.TextBox();
-            this.checkBox7 = new System.Windows.Forms.CheckBox();
-            this.checkBox_DECODE_UseApkEditorMerge = new System.Windows.Forms.CheckBox();
-            this.decApiLvlUpDown = new System.Windows.Forms.NumericUpDown();
-            this.decSetApiLvlChkBox = new System.Windows.Forms.CheckBox();
-            this.checkBox_DECODE_FixError = new System.Windows.Forms.CheckBox();
-            this.checkBox_DECODE_OnlyMainClasses = new System.Windows.Forms.CheckBox();
-            this.textBox_DECODE_FrameDir = new System.Windows.Forms.TextBox();
-            this.button_DECODE_BrowseOutputDirectory = new System.Windows.Forms.Button();
-            this.checkBox_DECODE_UseFramework = new System.Windows.Forms.CheckBox();
-            this.button_DECODE_BrowseFrameDir = new System.Windows.Forms.Button();
-            this.checkBox_DECODE_MatchOriginal = new System.Windows.Forms.CheckBox();
-            this.checkBox_DECODE_OutputDirectory = new System.Windows.Forms.CheckBox();
-            this.textBox_DECODE_OutputDirectory = new System.Windows.Forms.TextBox();
-            this.checkBox_DECODE_KeepBrokenRes = new System.Windows.Forms.CheckBox();
-            this.checkBox_DECODE_NoSrc = new System.Windows.Forms.CheckBox();
-            this.checkBox_DECODE_Force = new System.Windows.Forms.CheckBox();
-            this.checkBox_DECODE_NoRes = new System.Windows.Forms.CheckBox();
-            this.checkBox_DECODE_NoDebugInfo = new System.Windows.Forms.CheckBox();
-            this.checkBox_BUILD_NetSecConf = new System.Windows.Forms.CheckBox();
-            this.useAapt2ChkBox = new System.Windows.Forms.CheckBox();
-            this.buildApiLvlUpDown = new System.Windows.Forms.NumericUpDown();
-            this.buildSetApiLvlChkBox = new System.Windows.Forms.CheckBox();
-            this.createUnsignApkChkBox = new System.Windows.Forms.CheckBox();
-            this.signAfterBuildChkBox = new System.Windows.Forms.CheckBox();
-            this.zipalignAfterBuildChkBox = new System.Windows.Forms.CheckBox();
-            this.checkBox_BUILD_NoCrunch = new System.Windows.Forms.CheckBox();
-            this.button_BUILD_BrowseOutputAppPath = new System.Windows.Forms.Button();
-            this.checkBox_BUILD_ForceAll = new System.Windows.Forms.CheckBox();
-            this.button_BUILD_BrowseFrameDir = new System.Windows.Forms.Button();
-            this.button_BUILD_BrowseAaptPath = new System.Windows.Forms.Button();
-            this.checkBox_BUILD_OutputAppPath = new System.Windows.Forms.CheckBox();
-            this.checkBox_BUILD_CopyOriginal = new System.Windows.Forms.CheckBox();
-            this.textBox_BUILD_OutputAppPath = new System.Windows.Forms.TextBox();
-            this.checkBox_BUILD_UseAapt = new System.Windows.Forms.CheckBox();
-            this.textBox_BUILD_AaptPath = new System.Windows.Forms.TextBox();
-            this.textBox_BUILD_FrameDir = new System.Windows.Forms.TextBox();
-            this.checkBox_BUILD_UseFramework = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.autoDelIdsigChkBox = new System.Windows.Forms.CheckBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.aliasTxtBox = new System.Windows.Forms.TextBox();
-            this.useAliasChkBox = new System.Windows.Forms.CheckBox();
-            this.keyStoreFileTxtBox = new System.Windows.Forms.TextBox();
-            this.useKeyStoreChkBox = new System.Windows.Forms.CheckBox();
-            this.useSigningOutputDir = new System.Windows.Forms.CheckBox();
-            this.textBox_SIGN_OutputFile = new System.Windows.Forms.TextBox();
-            this.textBox_SIGN_PublicKey = new System.Windows.Forms.TextBox();
-            this.textBox_SIGN_PrivateKey = new System.Windows.Forms.TextBox();
-            this.zipalignOutputDirChkBox = new System.Windows.Forms.CheckBox();
-            this.signAfterZipalignChkBox = new System.Windows.Forms.CheckBox();
-            this.checkBox_ZIPALIGN_Recompress = new System.Windows.Forms.CheckBox();
-            this.checkBox_ZIPALIGN_CheckAlignment = new System.Windows.Forms.CheckBox();
-            this.textBox_ZIPALIGN_OutputFile = new System.Windows.Forms.TextBox();
-            this.checkBox_ZIPALIGN_VerboseOutput = new System.Windows.Forms.CheckBox();
-            this.numericUpDown_ZIPALIGN_AlignmentBytes = new System.Windows.Forms.NumericUpDown();
-            this.checkBox_ZIPALIGN_OverwriteOutputFile = new System.Windows.Forms.CheckBox();
-            this.clearFwBeforeDecodeChkBox = new System.Windows.Forms.CheckBox();
-            this.checkBox_IF_Tag = new System.Windows.Forms.CheckBox();
-            this.checkBox_IF_FramePath = new System.Windows.Forms.CheckBox();
-            this.textBox_IF_Tag = new System.Windows.Forms.TextBox();
-            this.button_IF_BrowseFrameDir = new System.Windows.Forms.Button();
-            this.textBox_IF_InputFramePath = new System.Windows.Forms.TextBox();
-            this.textBox_IF_FrameDir = new System.Windows.Forms.TextBox();
-            this.smaliUseOutputChkBox = new System.Windows.Forms.CheckBox();
-            this.smaliBrowseInputDirTxtBox = new System.Windows.Forms.TextBox();
-            this.smaliBrowseOutputTxtBox = new System.Windows.Forms.TextBox();
-            this.baksmaliUseOutputChkBox = new System.Windows.Forms.CheckBox();
-            this.baksmaliBrowseOutputTxtBox = new System.Windows.Forms.TextBox();
-            this.baksmaliBrowseInputDexTxtBox = new System.Windows.Forms.TextBox();
-            this.setVendorChkBox = new System.Windows.Forms.CheckBox();
-            this.apkPathAdbTxtBox = new System.Windows.Forms.TextBox();
             this.tabControlMain.SuspendLayout();
             this.tabPageMain.SuspendLayout();
             this.signPanel.SuspendLayout();
@@ -272,12 +272,15 @@
             this.tabPage3.SuspendLayout();
             this.tabPageDecode.SuspendLayout();
             this.groupBox_DECODE_Options.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.decApiLvlUpDown)).BeginInit();
             this.tabPageBuild.SuspendLayout();
             this.groupBox_BUILD_Options.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.buildApiLvlUpDown)).BeginInit();
             this.tabPageSign.SuspendLayout();
             this.groupBox_SIGN_Options.SuspendLayout();
             this.tabPageZipAlign.SuspendLayout();
             this.groupBox_ZIPALIGN_Options.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ZIPALIGN_AlignmentBytes)).BeginInit();
             this.tabPageInstallFramework.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox_IF_Options.SuspendLayout();
@@ -288,9 +291,6 @@
             this.statusStrip1.SuspendLayout();
             this.contextMenuStripLog.SuspendLayout();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.decApiLvlUpDown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.buildApiLvlUpDown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ZIPALIGN_AlignmentBytes)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControlMain
@@ -398,6 +398,14 @@
             resources.ApplyResources(this.label4, "label4");
             this.label4.Name = "label4";
             // 
+            // textBox_SIGN_InputFile
+            // 
+            this.textBox_SIGN_InputFile.AllowDrop = true;
+            resources.ApplyResources(this.textBox_SIGN_InputFile, "textBox_SIGN_InputFile");
+            this.textBox_SIGN_InputFile.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::APKToolGUI.Properties.Settings.Default, "Sign_InputFile", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.textBox_SIGN_InputFile.Name = "textBox_SIGN_InputFile";
+            this.textBox_SIGN_InputFile.Text = global::APKToolGUI.Properties.Settings.Default.Sign_InputFile;
+            // 
             // button_SIGN_BrowseInputFile
             // 
             resources.ApplyResources(this.button_SIGN_BrowseInputFile, "button_SIGN_BrowseInputFile");
@@ -439,6 +447,14 @@
             this.button_ZIPALIGN_BrowseInputFile.Name = "button_ZIPALIGN_BrowseInputFile";
             this.button_ZIPALIGN_BrowseInputFile.UseVisualStyleBackColor = true;
             // 
+            // textBox_ZIPALIGN_InputFile
+            // 
+            this.textBox_ZIPALIGN_InputFile.AllowDrop = true;
+            resources.ApplyResources(this.textBox_ZIPALIGN_InputFile, "textBox_ZIPALIGN_InputFile");
+            this.textBox_ZIPALIGN_InputFile.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::APKToolGUI.Properties.Settings.Default, "Zipalign_InputFile", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.textBox_ZIPALIGN_InputFile.Name = "textBox_ZIPALIGN_InputFile";
+            this.textBox_ZIPALIGN_InputFile.Text = global::APKToolGUI.Properties.Settings.Default.Zipalign_InputFile;
+            // 
             // comPanel
             // 
             this.comPanel.AllowDrop = true;
@@ -467,6 +483,14 @@
             this.button_BUILD_Build.Name = "button_BUILD_Build";
             this.button_BUILD_Build.UseVisualStyleBackColor = true;
             // 
+            // textBox_BUILD_InputProjectDir
+            // 
+            this.textBox_BUILD_InputProjectDir.AllowDrop = true;
+            resources.ApplyResources(this.textBox_BUILD_InputProjectDir, "textBox_BUILD_InputProjectDir");
+            this.textBox_BUILD_InputProjectDir.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::APKToolGUI.Properties.Settings.Default, "Build_InputDir", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.textBox_BUILD_InputProjectDir.Name = "textBox_BUILD_InputProjectDir";
+            this.textBox_BUILD_InputProjectDir.Text = global::APKToolGUI.Properties.Settings.Default.Build_InputDir;
+            // 
             // decPanel
             // 
             this.decPanel.AllowDrop = true;
@@ -482,6 +506,14 @@
             // 
             resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
+            // 
+            // textBox_DECODE_InputAppPath
+            // 
+            this.textBox_DECODE_InputAppPath.AllowDrop = true;
+            resources.ApplyResources(this.textBox_DECODE_InputAppPath, "textBox_DECODE_InputAppPath");
+            this.textBox_DECODE_InputAppPath.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::APKToolGUI.Properties.Settings.Default, "Decode_InputAppPath", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.textBox_DECODE_InputAppPath.Name = "textBox_DECODE_InputAppPath";
+            this.textBox_DECODE_InputAppPath.Text = global::APKToolGUI.Properties.Settings.Default.Decode_InputAppPath;
             // 
             // button_DECODE_Decode
             // 
@@ -824,6 +856,38 @@
             this.groupBox_DECODE_Options.Name = "groupBox_DECODE_Options";
             this.groupBox_DECODE_Options.TabStop = false;
             // 
+            // checkBox7
+            // 
+            resources.ApplyResources(this.checkBox7, "checkBox7");
+            this.checkBox7.Checked = global::APKToolGUI.Properties.Settings.Default.Decode_DontParseApkInfo;
+            this.checkBox7.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "Decode_DontParseApkInfo", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.checkBox7.Name = "checkBox7";
+            this.checkBox7.UseVisualStyleBackColor = true;
+            // 
+            // checkBox_DECODE_UseApkEditorMerge
+            // 
+            resources.ApplyResources(this.checkBox_DECODE_UseApkEditorMerge, "checkBox_DECODE_UseApkEditorMerge");
+            this.checkBox_DECODE_UseApkEditorMerge.Checked = global::APKToolGUI.Properties.Settings.Default.Decode_UseApkEditorMergeApk;
+            this.checkBox_DECODE_UseApkEditorMerge.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox_DECODE_UseApkEditorMerge.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "Decode_UseApkEditorMergeApk", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.checkBox_DECODE_UseApkEditorMerge.Name = "checkBox_DECODE_UseApkEditorMerge";
+            this.checkBox_DECODE_UseApkEditorMerge.UseVisualStyleBackColor = true;
+            // 
+            // decApiLvlUpDown
+            // 
+            this.decApiLvlUpDown.DataBindings.Add(new System.Windows.Forms.Binding("Value", global::APKToolGUI.Properties.Settings.Default, "Decode_ApiLevel", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            resources.ApplyResources(this.decApiLvlUpDown, "decApiLvlUpDown");
+            this.decApiLvlUpDown.Name = "decApiLvlUpDown";
+            this.decApiLvlUpDown.Value = global::APKToolGUI.Properties.Settings.Default.Decode_ApiLevel;
+            // 
+            // decSetApiLvlChkBox
+            // 
+            resources.ApplyResources(this.decSetApiLvlChkBox, "decSetApiLvlChkBox");
+            this.decSetApiLvlChkBox.Checked = global::APKToolGUI.Properties.Settings.Default.Decode_SetApiLevel;
+            this.decSetApiLvlChkBox.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "Decode_SetApiLevel", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.decSetApiLvlChkBox.Name = "decSetApiLvlChkBox";
+            this.decSetApiLvlChkBox.UseVisualStyleBackColor = true;
+            // 
             // label6
             // 
             resources.ApplyResources(this.label6, "label6");
@@ -835,6 +899,123 @@
             resources.ApplyResources(this.label5, "label5");
             this.label5.ForeColor = System.Drawing.Color.DimGray;
             this.label5.Name = "label5";
+            // 
+            // checkBox_DECODE_FixError
+            // 
+            resources.ApplyResources(this.checkBox_DECODE_FixError, "checkBox_DECODE_FixError");
+            this.checkBox_DECODE_FixError.Checked = global::APKToolGUI.Properties.Settings.Default.Decode_FixError;
+            this.checkBox_DECODE_FixError.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox_DECODE_FixError.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "Decode_FixError", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.checkBox_DECODE_FixError.Name = "checkBox_DECODE_FixError";
+            this.checkBox_DECODE_FixError.UseVisualStyleBackColor = true;
+            // 
+            // checkBox_DECODE_OnlyMainClasses
+            // 
+            resources.ApplyResources(this.checkBox_DECODE_OnlyMainClasses, "checkBox_DECODE_OnlyMainClasses");
+            this.checkBox_DECODE_OnlyMainClasses.Checked = global::APKToolGUI.Properties.Settings.Default.Decode_OnlyMainClasses;
+            this.checkBox_DECODE_OnlyMainClasses.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox_DECODE_OnlyMainClasses.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "Decode_OnlyMainClasses", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.checkBox_DECODE_OnlyMainClasses.Name = "checkBox_DECODE_OnlyMainClasses";
+            this.checkBox_DECODE_OnlyMainClasses.UseVisualStyleBackColor = true;
+            // 
+            // textBox_DECODE_FrameDir
+            // 
+            this.textBox_DECODE_FrameDir.DataBindings.Add(new System.Windows.Forms.Binding("Enabled", global::APKToolGUI.Properties.Settings.Default, "Decode_UseFramework", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.textBox_DECODE_FrameDir.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::APKToolGUI.Properties.Settings.Default, "Framework_FrameDir", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.textBox_DECODE_FrameDir.Enabled = global::APKToolGUI.Properties.Settings.Default.Decode_UseFramework;
+            resources.ApplyResources(this.textBox_DECODE_FrameDir, "textBox_DECODE_FrameDir");
+            this.textBox_DECODE_FrameDir.Name = "textBox_DECODE_FrameDir";
+            this.textBox_DECODE_FrameDir.Text = global::APKToolGUI.Properties.Settings.Default.Framework_FrameDir;
+            // 
+            // button_DECODE_BrowseOutputDirectory
+            // 
+            this.button_DECODE_BrowseOutputDirectory.DataBindings.Add(new System.Windows.Forms.Binding("Enabled", global::APKToolGUI.Properties.Settings.Default, "Decode_UseOutputDir", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.button_DECODE_BrowseOutputDirectory.Enabled = global::APKToolGUI.Properties.Settings.Default.Decode_UseOutputDir;
+            resources.ApplyResources(this.button_DECODE_BrowseOutputDirectory, "button_DECODE_BrowseOutputDirectory");
+            this.button_DECODE_BrowseOutputDirectory.Name = "button_DECODE_BrowseOutputDirectory";
+            this.button_DECODE_BrowseOutputDirectory.UseVisualStyleBackColor = true;
+            // 
+            // checkBox_DECODE_UseFramework
+            // 
+            resources.ApplyResources(this.checkBox_DECODE_UseFramework, "checkBox_DECODE_UseFramework");
+            this.checkBox_DECODE_UseFramework.Checked = global::APKToolGUI.Properties.Settings.Default.Decode_UseFramework;
+            this.checkBox_DECODE_UseFramework.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "Decode_UseFramework", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.checkBox_DECODE_UseFramework.Name = "checkBox_DECODE_UseFramework";
+            this.checkBox_DECODE_UseFramework.UseVisualStyleBackColor = true;
+            // 
+            // button_DECODE_BrowseFrameDir
+            // 
+            this.button_DECODE_BrowseFrameDir.DataBindings.Add(new System.Windows.Forms.Binding("Enabled", global::APKToolGUI.Properties.Settings.Default, "Decode_UseFramework", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.button_DECODE_BrowseFrameDir.Enabled = global::APKToolGUI.Properties.Settings.Default.Decode_UseFramework;
+            resources.ApplyResources(this.button_DECODE_BrowseFrameDir, "button_DECODE_BrowseFrameDir");
+            this.button_DECODE_BrowseFrameDir.Name = "button_DECODE_BrowseFrameDir";
+            this.button_DECODE_BrowseFrameDir.UseVisualStyleBackColor = true;
+            // 
+            // checkBox_DECODE_MatchOriginal
+            // 
+            resources.ApplyResources(this.checkBox_DECODE_MatchOriginal, "checkBox_DECODE_MatchOriginal");
+            this.checkBox_DECODE_MatchOriginal.Checked = global::APKToolGUI.Properties.Settings.Default.Decode_MatchOriginal;
+            this.checkBox_DECODE_MatchOriginal.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "Decode_MatchOriginal", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.checkBox_DECODE_MatchOriginal.Name = "checkBox_DECODE_MatchOriginal";
+            this.checkBox_DECODE_MatchOriginal.UseVisualStyleBackColor = true;
+            // 
+            // checkBox_DECODE_OutputDirectory
+            // 
+            resources.ApplyResources(this.checkBox_DECODE_OutputDirectory, "checkBox_DECODE_OutputDirectory");
+            this.checkBox_DECODE_OutputDirectory.Checked = global::APKToolGUI.Properties.Settings.Default.Decode_UseOutputDir;
+            this.checkBox_DECODE_OutputDirectory.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "Decode_UseOutputDir", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.checkBox_DECODE_OutputDirectory.Name = "checkBox_DECODE_OutputDirectory";
+            this.checkBox_DECODE_OutputDirectory.UseVisualStyleBackColor = true;
+            // 
+            // textBox_DECODE_OutputDirectory
+            // 
+            this.textBox_DECODE_OutputDirectory.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::APKToolGUI.Properties.Settings.Default, "Decode_OutputDir", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.textBox_DECODE_OutputDirectory.DataBindings.Add(new System.Windows.Forms.Binding("Enabled", global::APKToolGUI.Properties.Settings.Default, "Decode_UseOutputDir", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.textBox_DECODE_OutputDirectory.Enabled = global::APKToolGUI.Properties.Settings.Default.Decode_UseOutputDir;
+            resources.ApplyResources(this.textBox_DECODE_OutputDirectory, "textBox_DECODE_OutputDirectory");
+            this.textBox_DECODE_OutputDirectory.Name = "textBox_DECODE_OutputDirectory";
+            this.textBox_DECODE_OutputDirectory.Text = global::APKToolGUI.Properties.Settings.Default.Decode_OutputDir;
+            // 
+            // checkBox_DECODE_KeepBrokenRes
+            // 
+            resources.ApplyResources(this.checkBox_DECODE_KeepBrokenRes, "checkBox_DECODE_KeepBrokenRes");
+            this.checkBox_DECODE_KeepBrokenRes.Checked = global::APKToolGUI.Properties.Settings.Default.Decode_KeepBrokenRes;
+            this.checkBox_DECODE_KeepBrokenRes.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "Decode_KeepBrokenRes", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.checkBox_DECODE_KeepBrokenRes.Name = "checkBox_DECODE_KeepBrokenRes";
+            this.checkBox_DECODE_KeepBrokenRes.UseVisualStyleBackColor = true;
+            // 
+            // checkBox_DECODE_NoSrc
+            // 
+            resources.ApplyResources(this.checkBox_DECODE_NoSrc, "checkBox_DECODE_NoSrc");
+            this.checkBox_DECODE_NoSrc.Checked = global::APKToolGUI.Properties.Settings.Default.Decode_NoSrc;
+            this.checkBox_DECODE_NoSrc.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "Decode_NoSrc", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.checkBox_DECODE_NoSrc.Name = "checkBox_DECODE_NoSrc";
+            this.checkBox_DECODE_NoSrc.UseVisualStyleBackColor = true;
+            // 
+            // checkBox_DECODE_Force
+            // 
+            resources.ApplyResources(this.checkBox_DECODE_Force, "checkBox_DECODE_Force");
+            this.checkBox_DECODE_Force.Checked = global::APKToolGUI.Properties.Settings.Default.Decode_Force;
+            this.checkBox_DECODE_Force.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox_DECODE_Force.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "Decode_Force", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.checkBox_DECODE_Force.Name = "checkBox_DECODE_Force";
+            this.checkBox_DECODE_Force.UseVisualStyleBackColor = true;
+            // 
+            // checkBox_DECODE_NoRes
+            // 
+            resources.ApplyResources(this.checkBox_DECODE_NoRes, "checkBox_DECODE_NoRes");
+            this.checkBox_DECODE_NoRes.Checked = global::APKToolGUI.Properties.Settings.Default.Decode_NoRes;
+            this.checkBox_DECODE_NoRes.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "Decode_NoRes", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.checkBox_DECODE_NoRes.Name = "checkBox_DECODE_NoRes";
+            this.checkBox_DECODE_NoRes.UseVisualStyleBackColor = true;
+            // 
+            // checkBox_DECODE_NoDebugInfo
+            // 
+            resources.ApplyResources(this.checkBox_DECODE_NoDebugInfo, "checkBox_DECODE_NoDebugInfo");
+            this.checkBox_DECODE_NoDebugInfo.Checked = global::APKToolGUI.Properties.Settings.Default.Decode_NoDebugInfo;
+            this.checkBox_DECODE_NoDebugInfo.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "Decode_NoDebugInfo", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.checkBox_DECODE_NoDebugInfo.Name = "checkBox_DECODE_NoDebugInfo";
+            this.checkBox_DECODE_NoDebugInfo.UseVisualStyleBackColor = true;
             // 
             // tabPageBuild
             // 
@@ -870,17 +1051,175 @@
             this.groupBox_BUILD_Options.Name = "groupBox_BUILD_Options";
             this.groupBox_BUILD_Options.TabStop = false;
             // 
+            // checkBox_BUILD_NetSecConf
+            // 
+            resources.ApplyResources(this.checkBox_BUILD_NetSecConf, "checkBox_BUILD_NetSecConf");
+            this.checkBox_BUILD_NetSecConf.Checked = global::APKToolGUI.Properties.Settings.Default.Build_NetSecConf;
+            this.checkBox_BUILD_NetSecConf.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "Build_NetSecConf", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.checkBox_BUILD_NetSecConf.Name = "checkBox_BUILD_NetSecConf";
+            this.checkBox_BUILD_NetSecConf.UseVisualStyleBackColor = true;
+            // 
+            // useAapt2ChkBox
+            // 
+            resources.ApplyResources(this.useAapt2ChkBox, "useAapt2ChkBox");
+            this.useAapt2ChkBox.Checked = global::APKToolGUI.Properties.Settings.Default.Build_UseAapt2;
+            this.useAapt2ChkBox.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.useAapt2ChkBox.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "Build_UseAapt2", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.useAapt2ChkBox.Name = "useAapt2ChkBox";
+            this.useAapt2ChkBox.UseVisualStyleBackColor = true;
+            // 
+            // buildApiLvlUpDown
+            // 
+            this.buildApiLvlUpDown.DataBindings.Add(new System.Windows.Forms.Binding("Value", global::APKToolGUI.Properties.Settings.Default, "Build_ApiLevel", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            resources.ApplyResources(this.buildApiLvlUpDown, "buildApiLvlUpDown");
+            this.buildApiLvlUpDown.Name = "buildApiLvlUpDown";
+            this.buildApiLvlUpDown.Value = global::APKToolGUI.Properties.Settings.Default.Build_ApiLevel;
+            // 
+            // buildSetApiLvlChkBox
+            // 
+            resources.ApplyResources(this.buildSetApiLvlChkBox, "buildSetApiLvlChkBox");
+            this.buildSetApiLvlChkBox.Checked = global::APKToolGUI.Properties.Settings.Default.Build_SetApiLevel;
+            this.buildSetApiLvlChkBox.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "Build_SetApiLevel", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.buildSetApiLvlChkBox.Name = "buildSetApiLvlChkBox";
+            this.buildSetApiLvlChkBox.UseVisualStyleBackColor = true;
+            // 
             // label23
             // 
             resources.ApplyResources(this.label23, "label23");
             this.label23.ForeColor = System.Drawing.Color.DimGray;
             this.label23.Name = "label23";
             // 
+            // createUnsignApkChkBox
+            // 
+            resources.ApplyResources(this.createUnsignApkChkBox, "createUnsignApkChkBox");
+            this.createUnsignApkChkBox.Checked = global::APKToolGUI.Properties.Settings.Default.Build_CreateUnsignedApk;
+            this.createUnsignApkChkBox.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "Build_CreateUnsignedApk", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.createUnsignApkChkBox.Name = "createUnsignApkChkBox";
+            this.createUnsignApkChkBox.UseVisualStyleBackColor = true;
+            // 
             // label16
             // 
             resources.ApplyResources(this.label16, "label16");
             this.label16.ForeColor = System.Drawing.Color.DimGray;
             this.label16.Name = "label16";
+            // 
+            // signAfterBuildChkBox
+            // 
+            resources.ApplyResources(this.signAfterBuildChkBox, "signAfterBuildChkBox");
+            this.signAfterBuildChkBox.Checked = global::APKToolGUI.Properties.Settings.Default.Build_SignAfterBuild;
+            this.signAfterBuildChkBox.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.signAfterBuildChkBox.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "Build_SignAfterBuild", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.signAfterBuildChkBox.Name = "signAfterBuildChkBox";
+            this.signAfterBuildChkBox.UseVisualStyleBackColor = true;
+            // 
+            // zipalignAfterBuildChkBox
+            // 
+            resources.ApplyResources(this.zipalignAfterBuildChkBox, "zipalignAfterBuildChkBox");
+            this.zipalignAfterBuildChkBox.Checked = global::APKToolGUI.Properties.Settings.Default.Build_ZipalignAfterBuild;
+            this.zipalignAfterBuildChkBox.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.zipalignAfterBuildChkBox.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "Build_ZipalignAfterBuild", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.zipalignAfterBuildChkBox.Name = "zipalignAfterBuildChkBox";
+            this.zipalignAfterBuildChkBox.UseVisualStyleBackColor = true;
+            // 
+            // checkBox_BUILD_NoCrunch
+            // 
+            resources.ApplyResources(this.checkBox_BUILD_NoCrunch, "checkBox_BUILD_NoCrunch");
+            this.checkBox_BUILD_NoCrunch.Checked = global::APKToolGUI.Properties.Settings.Default.Build_NoCrunch;
+            this.checkBox_BUILD_NoCrunch.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "Build_NoCrunch", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.checkBox_BUILD_NoCrunch.Name = "checkBox_BUILD_NoCrunch";
+            this.checkBox_BUILD_NoCrunch.UseVisualStyleBackColor = true;
+            // 
+            // button_BUILD_BrowseOutputAppPath
+            // 
+            this.button_BUILD_BrowseOutputAppPath.DataBindings.Add(new System.Windows.Forms.Binding("Enabled", global::APKToolGUI.Properties.Settings.Default, "Build_UseOutputAppPath", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.button_BUILD_BrowseOutputAppPath.Enabled = global::APKToolGUI.Properties.Settings.Default.Build_UseOutputAppPath;
+            resources.ApplyResources(this.button_BUILD_BrowseOutputAppPath, "button_BUILD_BrowseOutputAppPath");
+            this.button_BUILD_BrowseOutputAppPath.Name = "button_BUILD_BrowseOutputAppPath";
+            this.button_BUILD_BrowseOutputAppPath.UseVisualStyleBackColor = true;
+            // 
+            // checkBox_BUILD_ForceAll
+            // 
+            resources.ApplyResources(this.checkBox_BUILD_ForceAll, "checkBox_BUILD_ForceAll");
+            this.checkBox_BUILD_ForceAll.Checked = global::APKToolGUI.Properties.Settings.Default.Build_ForceAll;
+            this.checkBox_BUILD_ForceAll.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox_BUILD_ForceAll.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "Build_ForceAll", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.checkBox_BUILD_ForceAll.Name = "checkBox_BUILD_ForceAll";
+            this.checkBox_BUILD_ForceAll.UseVisualStyleBackColor = true;
+            // 
+            // button_BUILD_BrowseFrameDir
+            // 
+            this.button_BUILD_BrowseFrameDir.DataBindings.Add(new System.Windows.Forms.Binding("Enabled", global::APKToolGUI.Properties.Settings.Default, "Build_UseFramework", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.button_BUILD_BrowseFrameDir.Enabled = global::APKToolGUI.Properties.Settings.Default.Build_UseFramework;
+            resources.ApplyResources(this.button_BUILD_BrowseFrameDir, "button_BUILD_BrowseFrameDir");
+            this.button_BUILD_BrowseFrameDir.Name = "button_BUILD_BrowseFrameDir";
+            this.button_BUILD_BrowseFrameDir.UseVisualStyleBackColor = true;
+            // 
+            // button_BUILD_BrowseAaptPath
+            // 
+            this.button_BUILD_BrowseAaptPath.DataBindings.Add(new System.Windows.Forms.Binding("Enabled", global::APKToolGUI.Properties.Settings.Default, "Build_UseAapt", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.button_BUILD_BrowseAaptPath.Enabled = global::APKToolGUI.Properties.Settings.Default.Build_UseAapt;
+            resources.ApplyResources(this.button_BUILD_BrowseAaptPath, "button_BUILD_BrowseAaptPath");
+            this.button_BUILD_BrowseAaptPath.Name = "button_BUILD_BrowseAaptPath";
+            this.button_BUILD_BrowseAaptPath.UseVisualStyleBackColor = true;
+            // 
+            // checkBox_BUILD_OutputAppPath
+            // 
+            resources.ApplyResources(this.checkBox_BUILD_OutputAppPath, "checkBox_BUILD_OutputAppPath");
+            this.checkBox_BUILD_OutputAppPath.Checked = global::APKToolGUI.Properties.Settings.Default.Build_UseOutputAppPath;
+            this.checkBox_BUILD_OutputAppPath.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "Build_UseOutputAppPath", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.checkBox_BUILD_OutputAppPath.Name = "checkBox_BUILD_OutputAppPath";
+            this.checkBox_BUILD_OutputAppPath.UseVisualStyleBackColor = true;
+            // 
+            // checkBox_BUILD_CopyOriginal
+            // 
+            resources.ApplyResources(this.checkBox_BUILD_CopyOriginal, "checkBox_BUILD_CopyOriginal");
+            this.checkBox_BUILD_CopyOriginal.Checked = global::APKToolGUI.Properties.Settings.Default.Build_CopyOriginal;
+            this.checkBox_BUILD_CopyOriginal.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "Build_CopyOriginal", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.checkBox_BUILD_CopyOriginal.Name = "checkBox_BUILD_CopyOriginal";
+            this.checkBox_BUILD_CopyOriginal.UseVisualStyleBackColor = true;
+            // 
+            // textBox_BUILD_OutputAppPath
+            // 
+            this.textBox_BUILD_OutputAppPath.DataBindings.Add(new System.Windows.Forms.Binding("Enabled", global::APKToolGUI.Properties.Settings.Default, "Build_UseOutputAppPath", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.textBox_BUILD_OutputAppPath.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::APKToolGUI.Properties.Settings.Default, "Build_OutputAppPath", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.textBox_BUILD_OutputAppPath.Enabled = global::APKToolGUI.Properties.Settings.Default.Build_UseOutputAppPath;
+            resources.ApplyResources(this.textBox_BUILD_OutputAppPath, "textBox_BUILD_OutputAppPath");
+            this.textBox_BUILD_OutputAppPath.Name = "textBox_BUILD_OutputAppPath";
+            this.textBox_BUILD_OutputAppPath.Text = global::APKToolGUI.Properties.Settings.Default.Build_OutputAppPath;
+            // 
+            // checkBox_BUILD_UseAapt
+            // 
+            resources.ApplyResources(this.checkBox_BUILD_UseAapt, "checkBox_BUILD_UseAapt");
+            this.checkBox_BUILD_UseAapt.Checked = global::APKToolGUI.Properties.Settings.Default.Build_UseAapt;
+            this.checkBox_BUILD_UseAapt.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "Build_UseAapt", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.checkBox_BUILD_UseAapt.Name = "checkBox_BUILD_UseAapt";
+            this.checkBox_BUILD_UseAapt.UseVisualStyleBackColor = true;
+            // 
+            // textBox_BUILD_AaptPath
+            // 
+            this.textBox_BUILD_AaptPath.DataBindings.Add(new System.Windows.Forms.Binding("Enabled", global::APKToolGUI.Properties.Settings.Default, "Build_UseAapt", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.textBox_BUILD_AaptPath.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::APKToolGUI.Properties.Settings.Default, "Build_AaptPath", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.textBox_BUILD_AaptPath.Enabled = global::APKToolGUI.Properties.Settings.Default.Build_UseAapt;
+            resources.ApplyResources(this.textBox_BUILD_AaptPath, "textBox_BUILD_AaptPath");
+            this.textBox_BUILD_AaptPath.Name = "textBox_BUILD_AaptPath";
+            this.textBox_BUILD_AaptPath.Text = global::APKToolGUI.Properties.Settings.Default.Build_AaptPath;
+            // 
+            // textBox_BUILD_FrameDir
+            // 
+            this.textBox_BUILD_FrameDir.DataBindings.Add(new System.Windows.Forms.Binding("Enabled", global::APKToolGUI.Properties.Settings.Default, "Build_UseFramework", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.textBox_BUILD_FrameDir.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::APKToolGUI.Properties.Settings.Default, "Framework_FrameDir", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.textBox_BUILD_FrameDir.Enabled = global::APKToolGUI.Properties.Settings.Default.Build_UseFramework;
+            resources.ApplyResources(this.textBox_BUILD_FrameDir, "textBox_BUILD_FrameDir");
+            this.textBox_BUILD_FrameDir.Name = "textBox_BUILD_FrameDir";
+            this.textBox_BUILD_FrameDir.Text = global::APKToolGUI.Properties.Settings.Default.Framework_FrameDir;
+            // 
+            // checkBox_BUILD_UseFramework
+            // 
+            resources.ApplyResources(this.checkBox_BUILD_UseFramework, "checkBox_BUILD_UseFramework");
+            this.checkBox_BUILD_UseFramework.Checked = global::APKToolGUI.Properties.Settings.Default.Build_UseFramework;
+            this.checkBox_BUILD_UseFramework.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "Build_UseFramework", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.checkBox_BUILD_UseFramework.Name = "checkBox_BUILD_UseFramework";
+            this.checkBox_BUILD_UseFramework.UseVisualStyleBackColor = true;
             // 
             // tabPageSign
             // 
@@ -923,6 +1262,31 @@
             resources.ApplyResources(this.groupBox_SIGN_Options, "groupBox_SIGN_Options");
             this.groupBox_SIGN_Options.Name = "groupBox_SIGN_Options";
             this.groupBox_SIGN_Options.TabStop = false;
+            // 
+            // checkBox2
+            // 
+            resources.ApplyResources(this.checkBox2, "checkBox2");
+            this.checkBox2.Checked = global::APKToolGUI.Properties.Settings.Default.Sign_InstallApkAfterSign;
+            this.checkBox2.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "Sign_InstallApkAfterSign", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            // 
+            // checkBox1
+            // 
+            resources.ApplyResources(this.checkBox1, "checkBox1");
+            this.checkBox1.Checked = global::APKToolGUI.Properties.Settings.Default.Sign_OverwriteInputFile;
+            this.checkBox1.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "Sign_OverwriteInputFile", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // autoDelIdsigChkBox
+            // 
+            resources.ApplyResources(this.autoDelIdsigChkBox, "autoDelIdsigChkBox");
+            this.autoDelIdsigChkBox.Checked = global::APKToolGUI.Properties.Settings.Default.AutoDeleteIdsigFile;
+            this.autoDelIdsigChkBox.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.autoDelIdsigChkBox.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "AutoDeleteIdsigFile", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.autoDelIdsigChkBox.Name = "autoDelIdsigChkBox";
+            this.autoDelIdsigChkBox.UseVisualStyleBackColor = true;
             // 
             // schemev4ComboBox
             // 
@@ -988,17 +1352,48 @@
             resources.ApplyResources(this.label24, "label24");
             this.label24.Name = "label24";
             // 
+            // textBox3
+            // 
+            this.textBox3.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::APKToolGUI.Properties.Settings.Default, "Sign_KeystorePassword", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            resources.ApplyResources(this.textBox3, "textBox3");
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Text = global::APKToolGUI.Properties.Settings.Default.Sign_KeystorePassword;
+            this.textBox3.UseSystemPasswordChar = true;
+            // 
             // selectKeyStoreFileBtn
             // 
             resources.ApplyResources(this.selectKeyStoreFileBtn, "selectKeyStoreFileBtn");
             this.selectKeyStoreFileBtn.Name = "selectKeyStoreFileBtn";
             this.selectKeyStoreFileBtn.UseVisualStyleBackColor = true;
             // 
+            // aliasTxtBox
+            // 
+            this.aliasTxtBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::APKToolGUI.Properties.Settings.Default, "Sign_Alias", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            resources.ApplyResources(this.aliasTxtBox, "aliasTxtBox");
+            this.aliasTxtBox.Name = "aliasTxtBox";
+            this.aliasTxtBox.Text = global::APKToolGUI.Properties.Settings.Default.Sign_Alias;
+            // 
+            // useAliasChkBox
+            // 
+            resources.ApplyResources(this.useAliasChkBox, "useAliasChkBox");
+            this.useAliasChkBox.Checked = global::APKToolGUI.Properties.Settings.Default.Sign_SetAlias;
+            this.useAliasChkBox.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.useAliasChkBox.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "Sign_SetAlias", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.useAliasChkBox.Name = "useAliasChkBox";
+            this.useAliasChkBox.UseVisualStyleBackColor = true;
+            // 
             // label22
             // 
             resources.ApplyResources(this.label22, "label22");
             this.label22.ForeColor = System.Drawing.Color.Maroon;
             this.label22.Name = "label22";
+            // 
+            // keyStoreFileTxtBox
+            // 
+            this.keyStoreFileTxtBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::APKToolGUI.Properties.Settings.Default, "Sign_KeystoreFilePath", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            resources.ApplyResources(this.keyStoreFileTxtBox, "keyStoreFileTxtBox");
+            this.keyStoreFileTxtBox.Name = "keyStoreFileTxtBox";
+            this.keyStoreFileTxtBox.Text = global::APKToolGUI.Properties.Settings.Default.Sign_KeystoreFilePath;
             // 
             // label21
             // 
@@ -1009,6 +1404,22 @@
             // 
             resources.ApplyResources(this.label20, "label20");
             this.label20.Name = "label20";
+            // 
+            // useKeyStoreChkBox
+            // 
+            resources.ApplyResources(this.useKeyStoreChkBox, "useKeyStoreChkBox");
+            this.useKeyStoreChkBox.Checked = global::APKToolGUI.Properties.Settings.Default.Sign_UseKeystoreFile;
+            this.useKeyStoreChkBox.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "Sign_UseKeystoreFile", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.useKeyStoreChkBox.Name = "useKeyStoreChkBox";
+            this.useKeyStoreChkBox.UseVisualStyleBackColor = true;
+            // 
+            // useSigningOutputDir
+            // 
+            resources.ApplyResources(this.useSigningOutputDir, "useSigningOutputDir");
+            this.useSigningOutputDir.Checked = global::APKToolGUI.Properties.Settings.Default.Sign_UseOutputDir;
+            this.useSigningOutputDir.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "Sign_UseOutputDir", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.useSigningOutputDir.Name = "useSigningOutputDir";
+            this.useSigningOutputDir.UseVisualStyleBackColor = true;
             // 
             // label_SIGN_PrivateKey
             // 
@@ -1026,6 +1437,13 @@
             this.button_SIGN_BrowseOutputFile.Name = "button_SIGN_BrowseOutputFile";
             this.button_SIGN_BrowseOutputFile.UseVisualStyleBackColor = true;
             // 
+            // textBox_SIGN_OutputFile
+            // 
+            this.textBox_SIGN_OutputFile.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::APKToolGUI.Properties.Settings.Default, "Sign_OutputDir", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            resources.ApplyResources(this.textBox_SIGN_OutputFile, "textBox_SIGN_OutputFile");
+            this.textBox_SIGN_OutputFile.Name = "textBox_SIGN_OutputFile";
+            this.textBox_SIGN_OutputFile.Text = global::APKToolGUI.Properties.Settings.Default.Sign_OutputDir;
+            // 
             // button_SIGN_BrowsePublicKey
             // 
             resources.ApplyResources(this.button_SIGN_BrowsePublicKey, "button_SIGN_BrowsePublicKey");
@@ -1037,6 +1455,20 @@
             resources.ApplyResources(this.button_SIGN_BrowsePrivateKey, "button_SIGN_BrowsePrivateKey");
             this.button_SIGN_BrowsePrivateKey.Name = "button_SIGN_BrowsePrivateKey";
             this.button_SIGN_BrowsePrivateKey.UseVisualStyleBackColor = true;
+            // 
+            // textBox_SIGN_PublicKey
+            // 
+            this.textBox_SIGN_PublicKey.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::APKToolGUI.Properties.Settings.Default, "Sign_PublicKey", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            resources.ApplyResources(this.textBox_SIGN_PublicKey, "textBox_SIGN_PublicKey");
+            this.textBox_SIGN_PublicKey.Name = "textBox_SIGN_PublicKey";
+            this.textBox_SIGN_PublicKey.Text = global::APKToolGUI.Properties.Settings.Default.Sign_PublicKey;
+            // 
+            // textBox_SIGN_PrivateKey
+            // 
+            this.textBox_SIGN_PrivateKey.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::APKToolGUI.Properties.Settings.Default, "Sign_PrivateKey", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            resources.ApplyResources(this.textBox_SIGN_PrivateKey, "textBox_SIGN_PrivateKey");
+            this.textBox_SIGN_PrivateKey.Name = "textBox_SIGN_PrivateKey";
+            this.textBox_SIGN_PrivateKey.Text = global::APKToolGUI.Properties.Settings.Default.Sign_PrivateKey;
             // 
             // tabPageZipAlign
             // 
@@ -1061,6 +1493,31 @@
             this.groupBox_ZIPALIGN_Options.Name = "groupBox_ZIPALIGN_Options";
             this.groupBox_ZIPALIGN_Options.TabStop = false;
             // 
+            // zipalignOutputDirChkBox
+            // 
+            resources.ApplyResources(this.zipalignOutputDirChkBox, "zipalignOutputDirChkBox");
+            this.zipalignOutputDirChkBox.Checked = global::APKToolGUI.Properties.Settings.Default.Zipalign_UseOutputDir;
+            this.zipalignOutputDirChkBox.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "Zipalign_UseOutputDir", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.zipalignOutputDirChkBox.Name = "zipalignOutputDirChkBox";
+            this.zipalignOutputDirChkBox.UseVisualStyleBackColor = true;
+            // 
+            // signAfterZipalignChkBox
+            // 
+            resources.ApplyResources(this.signAfterZipalignChkBox, "signAfterZipalignChkBox");
+            this.signAfterZipalignChkBox.Checked = global::APKToolGUI.Properties.Settings.Default.Zipalign_SignAfterZipAlign;
+            this.signAfterZipalignChkBox.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.signAfterZipalignChkBox.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "Zipalign_SignAfterZipAlign", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.signAfterZipalignChkBox.Name = "signAfterZipalignChkBox";
+            this.signAfterZipalignChkBox.UseVisualStyleBackColor = true;
+            // 
+            // checkBox_ZIPALIGN_Recompress
+            // 
+            resources.ApplyResources(this.checkBox_ZIPALIGN_Recompress, "checkBox_ZIPALIGN_Recompress");
+            this.checkBox_ZIPALIGN_Recompress.Checked = global::APKToolGUI.Properties.Settings.Default.Zipalign_Recompress;
+            this.checkBox_ZIPALIGN_Recompress.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "Zipalign_Recompress", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.checkBox_ZIPALIGN_Recompress.Name = "checkBox_ZIPALIGN_Recompress";
+            this.checkBox_ZIPALIGN_Recompress.UseVisualStyleBackColor = true;
+            // 
             // label_ZIPALIGN_AlignmentBytes
             // 
             resources.ApplyResources(this.label_ZIPALIGN_AlignmentBytes, "label_ZIPALIGN_AlignmentBytes");
@@ -1071,6 +1528,49 @@
             resources.ApplyResources(this.button_ZIPALIGN_BrowseOutputFile, "button_ZIPALIGN_BrowseOutputFile");
             this.button_ZIPALIGN_BrowseOutputFile.Name = "button_ZIPALIGN_BrowseOutputFile";
             this.button_ZIPALIGN_BrowseOutputFile.UseVisualStyleBackColor = true;
+            // 
+            // checkBox_ZIPALIGN_CheckAlignment
+            // 
+            resources.ApplyResources(this.checkBox_ZIPALIGN_CheckAlignment, "checkBox_ZIPALIGN_CheckAlignment");
+            this.checkBox_ZIPALIGN_CheckAlignment.Checked = global::APKToolGUI.Properties.Settings.Default.Zipalign_CheckOnly;
+            this.checkBox_ZIPALIGN_CheckAlignment.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "Zipalign_CheckOnly", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.checkBox_ZIPALIGN_CheckAlignment.Name = "checkBox_ZIPALIGN_CheckAlignment";
+            this.checkBox_ZIPALIGN_CheckAlignment.UseVisualStyleBackColor = true;
+            // 
+            // textBox_ZIPALIGN_OutputFile
+            // 
+            this.textBox_ZIPALIGN_OutputFile.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::APKToolGUI.Properties.Settings.Default, "Zipalign_OutputDir", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            resources.ApplyResources(this.textBox_ZIPALIGN_OutputFile, "textBox_ZIPALIGN_OutputFile");
+            this.textBox_ZIPALIGN_OutputFile.Name = "textBox_ZIPALIGN_OutputFile";
+            this.textBox_ZIPALIGN_OutputFile.Text = global::APKToolGUI.Properties.Settings.Default.Zipalign_OutputDir;
+            // 
+            // checkBox_ZIPALIGN_VerboseOutput
+            // 
+            resources.ApplyResources(this.checkBox_ZIPALIGN_VerboseOutput, "checkBox_ZIPALIGN_VerboseOutput");
+            this.checkBox_ZIPALIGN_VerboseOutput.Checked = global::APKToolGUI.Properties.Settings.Default.Zipalign_Verbose;
+            this.checkBox_ZIPALIGN_VerboseOutput.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "Zipalign_Verbose", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.checkBox_ZIPALIGN_VerboseOutput.Name = "checkBox_ZIPALIGN_VerboseOutput";
+            this.checkBox_ZIPALIGN_VerboseOutput.UseVisualStyleBackColor = true;
+            // 
+            // numericUpDown_ZIPALIGN_AlignmentBytes
+            // 
+            this.numericUpDown_ZIPALIGN_AlignmentBytes.DataBindings.Add(new System.Windows.Forms.Binding("Value", global::APKToolGUI.Properties.Settings.Default, "Zipalign_AlignmentInBytes", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            resources.ApplyResources(this.numericUpDown_ZIPALIGN_AlignmentBytes, "numericUpDown_ZIPALIGN_AlignmentBytes");
+            this.numericUpDown_ZIPALIGN_AlignmentBytes.Maximum = new decimal(new int[] {
+            32,
+            0,
+            0,
+            0});
+            this.numericUpDown_ZIPALIGN_AlignmentBytes.Name = "numericUpDown_ZIPALIGN_AlignmentBytes";
+            this.numericUpDown_ZIPALIGN_AlignmentBytes.Value = global::APKToolGUI.Properties.Settings.Default.Zipalign_AlignmentInBytes;
+            // 
+            // checkBox_ZIPALIGN_OverwriteOutputFile
+            // 
+            resources.ApplyResources(this.checkBox_ZIPALIGN_OverwriteOutputFile, "checkBox_ZIPALIGN_OverwriteOutputFile");
+            this.checkBox_ZIPALIGN_OverwriteOutputFile.Checked = global::APKToolGUI.Properties.Settings.Default.Zipalign_OverwriteOutputFile;
+            this.checkBox_ZIPALIGN_OverwriteOutputFile.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "Zipalign_OverwriteOutputFile", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.checkBox_ZIPALIGN_OverwriteOutputFile.Name = "checkBox_ZIPALIGN_OverwriteOutputFile";
+            this.checkBox_ZIPALIGN_OverwriteOutputFile.UseVisualStyleBackColor = true;
             // 
             // tabPageInstallFramework
             // 
@@ -1101,6 +1601,15 @@
             this.clearFwBtn.Name = "clearFwBtn";
             this.clearFwBtn.UseVisualStyleBackColor = true;
             // 
+            // clearFwBeforeDecodeChkBox
+            // 
+            resources.ApplyResources(this.clearFwBeforeDecodeChkBox, "clearFwBeforeDecodeChkBox");
+            this.clearFwBeforeDecodeChkBox.Checked = global::APKToolGUI.Properties.Settings.Default.Framework_ClearBeforeDecode;
+            this.clearFwBeforeDecodeChkBox.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.clearFwBeforeDecodeChkBox.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "Framework_ClearBeforeDecode", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.clearFwBeforeDecodeChkBox.Name = "clearFwBeforeDecodeChkBox";
+            this.clearFwBeforeDecodeChkBox.UseVisualStyleBackColor = true;
+            // 
             // groupBox_IF_Options
             // 
             resources.ApplyResources(this.groupBox_IF_Options, "groupBox_IF_Options");
@@ -1115,17 +1624,66 @@
             this.groupBox_IF_Options.Name = "groupBox_IF_Options";
             this.groupBox_IF_Options.TabStop = false;
             // 
+            // checkBox_IF_Tag
+            // 
+            resources.ApplyResources(this.checkBox_IF_Tag, "checkBox_IF_Tag");
+            this.checkBox_IF_Tag.Checked = global::APKToolGUI.Properties.Settings.Default.InstallFramework_UseTag;
+            this.checkBox_IF_Tag.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "InstallFramework_UseTag", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.checkBox_IF_Tag.Name = "checkBox_IF_Tag";
+            this.checkBox_IF_Tag.UseVisualStyleBackColor = true;
+            // 
+            // checkBox_IF_FramePath
+            // 
+            resources.ApplyResources(this.checkBox_IF_FramePath, "checkBox_IF_FramePath");
+            this.checkBox_IF_FramePath.Checked = global::APKToolGUI.Properties.Settings.Default.Framework_UseFrameDir;
+            this.checkBox_IF_FramePath.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "Framework_UseFrameDir", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.checkBox_IF_FramePath.Name = "checkBox_IF_FramePath";
+            this.checkBox_IF_FramePath.UseVisualStyleBackColor = true;
+            // 
+            // textBox_IF_Tag
+            // 
+            this.textBox_IF_Tag.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::APKToolGUI.Properties.Settings.Default, "InstallFramework_Tag", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.textBox_IF_Tag.DataBindings.Add(new System.Windows.Forms.Binding("Enabled", global::APKToolGUI.Properties.Settings.Default, "InstallFramework_UseTag", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.textBox_IF_Tag.Enabled = global::APKToolGUI.Properties.Settings.Default.InstallFramework_UseTag;
+            resources.ApplyResources(this.textBox_IF_Tag, "textBox_IF_Tag");
+            this.textBox_IF_Tag.Name = "textBox_IF_Tag";
+            this.textBox_IF_Tag.Text = global::APKToolGUI.Properties.Settings.Default.InstallFramework_Tag;
+            // 
             // button_IF_InstallFramework
             // 
             resources.ApplyResources(this.button_IF_InstallFramework, "button_IF_InstallFramework");
             this.button_IF_InstallFramework.Name = "button_IF_InstallFramework";
             this.button_IF_InstallFramework.UseVisualStyleBackColor = true;
             // 
+            // button_IF_BrowseFrameDir
+            // 
+            this.button_IF_BrowseFrameDir.DataBindings.Add(new System.Windows.Forms.Binding("Enabled", global::APKToolGUI.Properties.Settings.Default, "Framework_UseFrameDir", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.button_IF_BrowseFrameDir.Enabled = global::APKToolGUI.Properties.Settings.Default.Framework_UseFrameDir;
+            resources.ApplyResources(this.button_IF_BrowseFrameDir, "button_IF_BrowseFrameDir");
+            this.button_IF_BrowseFrameDir.Name = "button_IF_BrowseFrameDir";
+            this.button_IF_BrowseFrameDir.UseVisualStyleBackColor = true;
+            // 
             // button_IF_BrowseInputFramePath
             // 
             resources.ApplyResources(this.button_IF_BrowseInputFramePath, "button_IF_BrowseInputFramePath");
             this.button_IF_BrowseInputFramePath.Name = "button_IF_BrowseInputFramePath";
             this.button_IF_BrowseInputFramePath.UseVisualStyleBackColor = true;
+            // 
+            // textBox_IF_InputFramePath
+            // 
+            resources.ApplyResources(this.textBox_IF_InputFramePath, "textBox_IF_InputFramePath");
+            this.textBox_IF_InputFramePath.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::APKToolGUI.Properties.Settings.Default, "InstallFramework_InputFramePath", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.textBox_IF_InputFramePath.Name = "textBox_IF_InputFramePath";
+            this.textBox_IF_InputFramePath.Text = global::APKToolGUI.Properties.Settings.Default.InstallFramework_InputFramePath;
+            // 
+            // textBox_IF_FrameDir
+            // 
+            this.textBox_IF_FrameDir.DataBindings.Add(new System.Windows.Forms.Binding("Enabled", global::APKToolGUI.Properties.Settings.Default, "Framework_UseFrameDir", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.textBox_IF_FrameDir.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::APKToolGUI.Properties.Settings.Default, "Framework_FrameDir", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.textBox_IF_FrameDir.Enabled = global::APKToolGUI.Properties.Settings.Default.Framework_UseFrameDir;
+            resources.ApplyResources(this.textBox_IF_FrameDir, "textBox_IF_FrameDir");
+            this.textBox_IF_FrameDir.Name = "textBox_IF_FrameDir";
+            this.textBox_IF_FrameDir.Text = global::APKToolGUI.Properties.Settings.Default.Framework_FrameDir;
             // 
             // tabPageBaksmali
             // 
@@ -1154,6 +1712,14 @@
             resources.ApplyResources(this.label29, "label29");
             this.label29.Name = "label29";
             // 
+            // smaliUseOutputChkBox
+            // 
+            resources.ApplyResources(this.smaliUseOutputChkBox, "smaliUseOutputChkBox");
+            this.smaliUseOutputChkBox.Checked = global::APKToolGUI.Properties.Settings.Default.Smali_UseOutputDir;
+            this.smaliUseOutputChkBox.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "Smali_UseOutputDir", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.smaliUseOutputChkBox.Name = "smaliUseOutputChkBox";
+            this.smaliUseOutputChkBox.UseVisualStyleBackColor = true;
+            // 
             // comSmaliBtn
             // 
             resources.ApplyResources(this.comSmaliBtn, "comSmaliBtn");
@@ -1165,6 +1731,20 @@
             resources.ApplyResources(this.smaliBrowseOutputBtn, "smaliBrowseOutputBtn");
             this.smaliBrowseOutputBtn.Name = "smaliBrowseOutputBtn";
             this.smaliBrowseOutputBtn.UseVisualStyleBackColor = true;
+            // 
+            // smaliBrowseInputDirTxtBox
+            // 
+            resources.ApplyResources(this.smaliBrowseInputDirTxtBox, "smaliBrowseInputDirTxtBox");
+            this.smaliBrowseInputDirTxtBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::APKToolGUI.Properties.Settings.Default, "Smali_InputDir", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.smaliBrowseInputDirTxtBox.Name = "smaliBrowseInputDirTxtBox";
+            this.smaliBrowseInputDirTxtBox.Text = global::APKToolGUI.Properties.Settings.Default.Smali_InputDir;
+            // 
+            // smaliBrowseOutputTxtBox
+            // 
+            this.smaliBrowseOutputTxtBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::APKToolGUI.Properties.Settings.Default, "Smali_OutputDir", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            resources.ApplyResources(this.smaliBrowseOutputTxtBox, "smaliBrowseOutputTxtBox");
+            this.smaliBrowseOutputTxtBox.Name = "smaliBrowseOutputTxtBox";
+            this.smaliBrowseOutputTxtBox.Text = global::APKToolGUI.Properties.Settings.Default.Smali_OutputDir;
             // 
             // smaliBrowseInputDirBtn
             // 
@@ -1190,11 +1770,26 @@
             resources.ApplyResources(this.label28, "label28");
             this.label28.Name = "label28";
             // 
+            // baksmaliUseOutputChkBox
+            // 
+            resources.ApplyResources(this.baksmaliUseOutputChkBox, "baksmaliUseOutputChkBox");
+            this.baksmaliUseOutputChkBox.Checked = global::APKToolGUI.Properties.Settings.Default.Baksmali_UseOutputDir;
+            this.baksmaliUseOutputChkBox.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "Baksmali_UseOutputDir", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.baksmaliUseOutputChkBox.Name = "baksmaliUseOutputChkBox";
+            this.baksmaliUseOutputChkBox.UseVisualStyleBackColor = true;
+            // 
             // baksmaliBrowseOutputBtn
             // 
             resources.ApplyResources(this.baksmaliBrowseOutputBtn, "baksmaliBrowseOutputBtn");
             this.baksmaliBrowseOutputBtn.Name = "baksmaliBrowseOutputBtn";
             this.baksmaliBrowseOutputBtn.UseVisualStyleBackColor = true;
+            // 
+            // baksmaliBrowseOutputTxtBox
+            // 
+            this.baksmaliBrowseOutputTxtBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::APKToolGUI.Properties.Settings.Default, "Baksmali_OutputDir", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            resources.ApplyResources(this.baksmaliBrowseOutputTxtBox, "baksmaliBrowseOutputTxtBox");
+            this.baksmaliBrowseOutputTxtBox.Name = "baksmaliBrowseOutputTxtBox";
+            this.baksmaliBrowseOutputTxtBox.Text = global::APKToolGUI.Properties.Settings.Default.Baksmali_OutputDir;
             // 
             // decSmaliBtn
             // 
@@ -1207,6 +1802,13 @@
             resources.ApplyResources(this.baksmaliBrowseInputDexBtn, "baksmaliBrowseInputDexBtn");
             this.baksmaliBrowseInputDexBtn.Name = "baksmaliBrowseInputDexBtn";
             this.baksmaliBrowseInputDexBtn.UseVisualStyleBackColor = true;
+            // 
+            // baksmaliBrowseInputDexTxtBox
+            // 
+            resources.ApplyResources(this.baksmaliBrowseInputDexTxtBox, "baksmaliBrowseInputDexTxtBox");
+            this.baksmaliBrowseInputDexTxtBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::APKToolGUI.Properties.Settings.Default, "Baksmali_InputDexFile", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.baksmaliBrowseInputDexTxtBox.Name = "baksmaliBrowseInputDexTxtBox";
+            this.baksmaliBrowseInputDexTxtBox.Text = global::APKToolGUI.Properties.Settings.Default.Baksmali_InputDexFile;
             // 
             // tabPageAdb
             // 
@@ -1259,6 +1861,21 @@
             resources.ApplyResources(this.selApkAdbBtn, "selApkAdbBtn");
             this.selApkAdbBtn.Name = "selApkAdbBtn";
             this.selApkAdbBtn.UseVisualStyleBackColor = true;
+            // 
+            // setVendorChkBox
+            // 
+            resources.ApplyResources(this.setVendorChkBox, "setVendorChkBox");
+            this.setVendorChkBox.Checked = global::APKToolGUI.Properties.Settings.Default.Adb_SetVendor;
+            this.setVendorChkBox.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "Adb_SetVendor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.setVendorChkBox.Name = "setVendorChkBox";
+            this.setVendorChkBox.UseVisualStyleBackColor = true;
+            // 
+            // apkPathAdbTxtBox
+            // 
+            this.apkPathAdbTxtBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::APKToolGUI.Properties.Settings.Default, "Adb_SelectedApkPath", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            resources.ApplyResources(this.apkPathAdbTxtBox, "apkPathAdbTxtBox");
+            this.apkPathAdbTxtBox.Name = "apkPathAdbTxtBox";
+            this.apkPathAdbTxtBox.Text = global::APKToolGUI.Properties.Settings.Default.Adb_SelectedApkPath;
             // 
             // label32
             // 
@@ -1434,623 +2051,6 @@
             this.toolTip1.InitialDelay = 500;
             this.toolTip1.ReshowDelay = 100;
             // 
-            // textBox_SIGN_InputFile
-            // 
-            this.textBox_SIGN_InputFile.AllowDrop = true;
-            resources.ApplyResources(this.textBox_SIGN_InputFile, "textBox_SIGN_InputFile");
-            this.textBox_SIGN_InputFile.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::APKToolGUI.Properties.Settings.Default, "Sign_InputFile", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.textBox_SIGN_InputFile.Name = "textBox_SIGN_InputFile";
-            this.textBox_SIGN_InputFile.Text = global::APKToolGUI.Properties.Settings.Default.Sign_InputFile;
-            // 
-            // textBox_ZIPALIGN_InputFile
-            // 
-            this.textBox_ZIPALIGN_InputFile.AllowDrop = true;
-            resources.ApplyResources(this.textBox_ZIPALIGN_InputFile, "textBox_ZIPALIGN_InputFile");
-            this.textBox_ZIPALIGN_InputFile.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::APKToolGUI.Properties.Settings.Default, "Zipalign_InputFile", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.textBox_ZIPALIGN_InputFile.Name = "textBox_ZIPALIGN_InputFile";
-            this.textBox_ZIPALIGN_InputFile.Text = global::APKToolGUI.Properties.Settings.Default.Zipalign_InputFile;
-            // 
-            // textBox_BUILD_InputProjectDir
-            // 
-            this.textBox_BUILD_InputProjectDir.AllowDrop = true;
-            resources.ApplyResources(this.textBox_BUILD_InputProjectDir, "textBox_BUILD_InputProjectDir");
-            this.textBox_BUILD_InputProjectDir.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::APKToolGUI.Properties.Settings.Default, "Build_InputDir", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.textBox_BUILD_InputProjectDir.Name = "textBox_BUILD_InputProjectDir";
-            this.textBox_BUILD_InputProjectDir.Text = global::APKToolGUI.Properties.Settings.Default.Build_InputDir;
-            // 
-            // textBox_DECODE_InputAppPath
-            // 
-            this.textBox_DECODE_InputAppPath.AllowDrop = true;
-            resources.ApplyResources(this.textBox_DECODE_InputAppPath, "textBox_DECODE_InputAppPath");
-            this.textBox_DECODE_InputAppPath.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::APKToolGUI.Properties.Settings.Default, "Decode_InputAppPath", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.textBox_DECODE_InputAppPath.Name = "textBox_DECODE_InputAppPath";
-            this.textBox_DECODE_InputAppPath.Text = global::APKToolGUI.Properties.Settings.Default.Decode_InputAppPath;
-            // 
-            // checkBox7
-            // 
-            resources.ApplyResources(this.checkBox7, "checkBox7");
-            this.checkBox7.Checked = global::APKToolGUI.Properties.Settings.Default.Decode_DontParseApkInfo;
-            this.checkBox7.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "Decode_DontParseApkInfo", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.checkBox7.Name = "checkBox7";
-            this.checkBox7.UseVisualStyleBackColor = true;
-            // 
-            // checkBox_DECODE_UseApkEditorMerge
-            // 
-            resources.ApplyResources(this.checkBox_DECODE_UseApkEditorMerge, "checkBox_DECODE_UseApkEditorMerge");
-            this.checkBox_DECODE_UseApkEditorMerge.Checked = global::APKToolGUI.Properties.Settings.Default.Decode_UseApkEditorMergeApk;
-            this.checkBox_DECODE_UseApkEditorMerge.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox_DECODE_UseApkEditorMerge.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "Decode_UseApkEditorMergeApk", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.checkBox_DECODE_UseApkEditorMerge.Name = "checkBox_DECODE_UseApkEditorMerge";
-            this.checkBox_DECODE_UseApkEditorMerge.UseVisualStyleBackColor = true;
-            // 
-            // decApiLvlUpDown
-            // 
-            this.decApiLvlUpDown.DataBindings.Add(new System.Windows.Forms.Binding("Value", global::APKToolGUI.Properties.Settings.Default, "Decode_ApiLevel", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            resources.ApplyResources(this.decApiLvlUpDown, "decApiLvlUpDown");
-            this.decApiLvlUpDown.Name = "decApiLvlUpDown";
-            this.decApiLvlUpDown.Value = global::APKToolGUI.Properties.Settings.Default.Decode_ApiLevel;
-            // 
-            // decSetApiLvlChkBox
-            // 
-            resources.ApplyResources(this.decSetApiLvlChkBox, "decSetApiLvlChkBox");
-            this.decSetApiLvlChkBox.Checked = global::APKToolGUI.Properties.Settings.Default.Decode_SetApiLevel;
-            this.decSetApiLvlChkBox.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "Decode_SetApiLevel", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.decSetApiLvlChkBox.Name = "decSetApiLvlChkBox";
-            this.decSetApiLvlChkBox.UseVisualStyleBackColor = true;
-            // 
-            // checkBox_DECODE_FixError
-            // 
-            resources.ApplyResources(this.checkBox_DECODE_FixError, "checkBox_DECODE_FixError");
-            this.checkBox_DECODE_FixError.Checked = global::APKToolGUI.Properties.Settings.Default.Decode_FixError;
-            this.checkBox_DECODE_FixError.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox_DECODE_FixError.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "Decode_FixError", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.checkBox_DECODE_FixError.Name = "checkBox_DECODE_FixError";
-            this.checkBox_DECODE_FixError.UseVisualStyleBackColor = true;
-            // 
-            // checkBox_DECODE_OnlyMainClasses
-            // 
-            resources.ApplyResources(this.checkBox_DECODE_OnlyMainClasses, "checkBox_DECODE_OnlyMainClasses");
-            this.checkBox_DECODE_OnlyMainClasses.Checked = global::APKToolGUI.Properties.Settings.Default.Decode_OnlyMainClasses;
-            this.checkBox_DECODE_OnlyMainClasses.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox_DECODE_OnlyMainClasses.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "Decode_OnlyMainClasses", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.checkBox_DECODE_OnlyMainClasses.Name = "checkBox_DECODE_OnlyMainClasses";
-            this.checkBox_DECODE_OnlyMainClasses.UseVisualStyleBackColor = true;
-            // 
-            // textBox_DECODE_FrameDir
-            // 
-            this.textBox_DECODE_FrameDir.DataBindings.Add(new System.Windows.Forms.Binding("Enabled", global::APKToolGUI.Properties.Settings.Default, "Decode_UseFramework", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.textBox_DECODE_FrameDir.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::APKToolGUI.Properties.Settings.Default, "Framework_FrameDir", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.textBox_DECODE_FrameDir.Enabled = global::APKToolGUI.Properties.Settings.Default.Decode_UseFramework;
-            resources.ApplyResources(this.textBox_DECODE_FrameDir, "textBox_DECODE_FrameDir");
-            this.textBox_DECODE_FrameDir.Name = "textBox_DECODE_FrameDir";
-            this.textBox_DECODE_FrameDir.Text = global::APKToolGUI.Properties.Settings.Default.Framework_FrameDir;
-            // 
-            // button_DECODE_BrowseOutputDirectory
-            // 
-            this.button_DECODE_BrowseOutputDirectory.DataBindings.Add(new System.Windows.Forms.Binding("Enabled", global::APKToolGUI.Properties.Settings.Default, "Decode_UseOutputDir", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.button_DECODE_BrowseOutputDirectory.Enabled = global::APKToolGUI.Properties.Settings.Default.Decode_UseOutputDir;
-            resources.ApplyResources(this.button_DECODE_BrowseOutputDirectory, "button_DECODE_BrowseOutputDirectory");
-            this.button_DECODE_BrowseOutputDirectory.Name = "button_DECODE_BrowseOutputDirectory";
-            this.button_DECODE_BrowseOutputDirectory.UseVisualStyleBackColor = true;
-            // 
-            // checkBox_DECODE_UseFramework
-            // 
-            resources.ApplyResources(this.checkBox_DECODE_UseFramework, "checkBox_DECODE_UseFramework");
-            this.checkBox_DECODE_UseFramework.Checked = global::APKToolGUI.Properties.Settings.Default.Decode_UseFramework;
-            this.checkBox_DECODE_UseFramework.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "Decode_UseFramework", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.checkBox_DECODE_UseFramework.Name = "checkBox_DECODE_UseFramework";
-            this.checkBox_DECODE_UseFramework.UseVisualStyleBackColor = true;
-            // 
-            // button_DECODE_BrowseFrameDir
-            // 
-            this.button_DECODE_BrowseFrameDir.DataBindings.Add(new System.Windows.Forms.Binding("Enabled", global::APKToolGUI.Properties.Settings.Default, "Decode_UseFramework", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.button_DECODE_BrowseFrameDir.Enabled = global::APKToolGUI.Properties.Settings.Default.Decode_UseFramework;
-            resources.ApplyResources(this.button_DECODE_BrowseFrameDir, "button_DECODE_BrowseFrameDir");
-            this.button_DECODE_BrowseFrameDir.Name = "button_DECODE_BrowseFrameDir";
-            this.button_DECODE_BrowseFrameDir.UseVisualStyleBackColor = true;
-            // 
-            // checkBox_DECODE_MatchOriginal
-            // 
-            resources.ApplyResources(this.checkBox_DECODE_MatchOriginal, "checkBox_DECODE_MatchOriginal");
-            this.checkBox_DECODE_MatchOriginal.Checked = global::APKToolGUI.Properties.Settings.Default.Decode_MatchOriginal;
-            this.checkBox_DECODE_MatchOriginal.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "Decode_MatchOriginal", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.checkBox_DECODE_MatchOriginal.Name = "checkBox_DECODE_MatchOriginal";
-            this.checkBox_DECODE_MatchOriginal.UseVisualStyleBackColor = true;
-            // 
-            // checkBox_DECODE_OutputDirectory
-            // 
-            resources.ApplyResources(this.checkBox_DECODE_OutputDirectory, "checkBox_DECODE_OutputDirectory");
-            this.checkBox_DECODE_OutputDirectory.Checked = global::APKToolGUI.Properties.Settings.Default.Decode_UseOutputDir;
-            this.checkBox_DECODE_OutputDirectory.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "Decode_UseOutputDir", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.checkBox_DECODE_OutputDirectory.Name = "checkBox_DECODE_OutputDirectory";
-            this.checkBox_DECODE_OutputDirectory.UseVisualStyleBackColor = true;
-            // 
-            // textBox_DECODE_OutputDirectory
-            // 
-            this.textBox_DECODE_OutputDirectory.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::APKToolGUI.Properties.Settings.Default, "Decode_OutputDir", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.textBox_DECODE_OutputDirectory.DataBindings.Add(new System.Windows.Forms.Binding("Enabled", global::APKToolGUI.Properties.Settings.Default, "Decode_UseOutputDir", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.textBox_DECODE_OutputDirectory.Enabled = global::APKToolGUI.Properties.Settings.Default.Decode_UseOutputDir;
-            resources.ApplyResources(this.textBox_DECODE_OutputDirectory, "textBox_DECODE_OutputDirectory");
-            this.textBox_DECODE_OutputDirectory.Name = "textBox_DECODE_OutputDirectory";
-            this.textBox_DECODE_OutputDirectory.Text = global::APKToolGUI.Properties.Settings.Default.Decode_OutputDir;
-            // 
-            // checkBox_DECODE_KeepBrokenRes
-            // 
-            resources.ApplyResources(this.checkBox_DECODE_KeepBrokenRes, "checkBox_DECODE_KeepBrokenRes");
-            this.checkBox_DECODE_KeepBrokenRes.Checked = global::APKToolGUI.Properties.Settings.Default.Decode_KeepBrokenRes;
-            this.checkBox_DECODE_KeepBrokenRes.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "Decode_KeepBrokenRes", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.checkBox_DECODE_KeepBrokenRes.Name = "checkBox_DECODE_KeepBrokenRes";
-            this.checkBox_DECODE_KeepBrokenRes.UseVisualStyleBackColor = true;
-            // 
-            // checkBox_DECODE_NoSrc
-            // 
-            resources.ApplyResources(this.checkBox_DECODE_NoSrc, "checkBox_DECODE_NoSrc");
-            this.checkBox_DECODE_NoSrc.Checked = global::APKToolGUI.Properties.Settings.Default.Decode_NoSrc;
-            this.checkBox_DECODE_NoSrc.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "Decode_NoSrc", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.checkBox_DECODE_NoSrc.Name = "checkBox_DECODE_NoSrc";
-            this.checkBox_DECODE_NoSrc.UseVisualStyleBackColor = true;
-            // 
-            // checkBox_DECODE_Force
-            // 
-            resources.ApplyResources(this.checkBox_DECODE_Force, "checkBox_DECODE_Force");
-            this.checkBox_DECODE_Force.Checked = global::APKToolGUI.Properties.Settings.Default.Decode_Force;
-            this.checkBox_DECODE_Force.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox_DECODE_Force.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "Decode_Force", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.checkBox_DECODE_Force.Name = "checkBox_DECODE_Force";
-            this.checkBox_DECODE_Force.UseVisualStyleBackColor = true;
-            // 
-            // checkBox_DECODE_NoRes
-            // 
-            resources.ApplyResources(this.checkBox_DECODE_NoRes, "checkBox_DECODE_NoRes");
-            this.checkBox_DECODE_NoRes.Checked = global::APKToolGUI.Properties.Settings.Default.Decode_NoRes;
-            this.checkBox_DECODE_NoRes.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "Decode_NoRes", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.checkBox_DECODE_NoRes.Name = "checkBox_DECODE_NoRes";
-            this.checkBox_DECODE_NoRes.UseVisualStyleBackColor = true;
-            // 
-            // checkBox_DECODE_NoDebugInfo
-            // 
-            resources.ApplyResources(this.checkBox_DECODE_NoDebugInfo, "checkBox_DECODE_NoDebugInfo");
-            this.checkBox_DECODE_NoDebugInfo.Checked = global::APKToolGUI.Properties.Settings.Default.Decode_NoDebugInfo;
-            this.checkBox_DECODE_NoDebugInfo.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "Decode_NoDebugInfo", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.checkBox_DECODE_NoDebugInfo.Name = "checkBox_DECODE_NoDebugInfo";
-            this.checkBox_DECODE_NoDebugInfo.UseVisualStyleBackColor = true;
-            // 
-            // checkBox_BUILD_NetSecConf
-            // 
-            resources.ApplyResources(this.checkBox_BUILD_NetSecConf, "checkBox_BUILD_NetSecConf");
-            this.checkBox_BUILD_NetSecConf.Checked = global::APKToolGUI.Properties.Settings.Default.Build_NetSecConf;
-            this.checkBox_BUILD_NetSecConf.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "Build_NetSecConf", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.checkBox_BUILD_NetSecConf.Name = "checkBox_BUILD_NetSecConf";
-            this.checkBox_BUILD_NetSecConf.UseVisualStyleBackColor = true;
-            // 
-            // useAapt2ChkBox
-            // 
-            resources.ApplyResources(this.useAapt2ChkBox, "useAapt2ChkBox");
-            this.useAapt2ChkBox.Checked = global::APKToolGUI.Properties.Settings.Default.Build_UseAapt2;
-            this.useAapt2ChkBox.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.useAapt2ChkBox.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "Build_UseAapt2", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.useAapt2ChkBox.Name = "useAapt2ChkBox";
-            this.useAapt2ChkBox.UseVisualStyleBackColor = true;
-            // 
-            // buildApiLvlUpDown
-            // 
-            this.buildApiLvlUpDown.DataBindings.Add(new System.Windows.Forms.Binding("Value", global::APKToolGUI.Properties.Settings.Default, "Build_ApiLevel", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            resources.ApplyResources(this.buildApiLvlUpDown, "buildApiLvlUpDown");
-            this.buildApiLvlUpDown.Name = "buildApiLvlUpDown";
-            this.buildApiLvlUpDown.Value = global::APKToolGUI.Properties.Settings.Default.Build_ApiLevel;
-            // 
-            // buildSetApiLvlChkBox
-            // 
-            resources.ApplyResources(this.buildSetApiLvlChkBox, "buildSetApiLvlChkBox");
-            this.buildSetApiLvlChkBox.Checked = global::APKToolGUI.Properties.Settings.Default.Build_SetApiLevel;
-            this.buildSetApiLvlChkBox.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "Build_SetApiLevel", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.buildSetApiLvlChkBox.Name = "buildSetApiLvlChkBox";
-            this.buildSetApiLvlChkBox.UseVisualStyleBackColor = true;
-            // 
-            // createUnsignApkChkBox
-            // 
-            resources.ApplyResources(this.createUnsignApkChkBox, "createUnsignApkChkBox");
-            this.createUnsignApkChkBox.Checked = global::APKToolGUI.Properties.Settings.Default.Build_CreateUnsignedApk;
-            this.createUnsignApkChkBox.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "Build_CreateUnsignedApk", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.createUnsignApkChkBox.Name = "createUnsignApkChkBox";
-            this.createUnsignApkChkBox.UseVisualStyleBackColor = true;
-            // 
-            // signAfterBuildChkBox
-            // 
-            resources.ApplyResources(this.signAfterBuildChkBox, "signAfterBuildChkBox");
-            this.signAfterBuildChkBox.Checked = global::APKToolGUI.Properties.Settings.Default.Build_SignAfterBuild;
-            this.signAfterBuildChkBox.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.signAfterBuildChkBox.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "Build_SignAfterBuild", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.signAfterBuildChkBox.Name = "signAfterBuildChkBox";
-            this.signAfterBuildChkBox.UseVisualStyleBackColor = true;
-            // 
-            // zipalignAfterBuildChkBox
-            // 
-            resources.ApplyResources(this.zipalignAfterBuildChkBox, "zipalignAfterBuildChkBox");
-            this.zipalignAfterBuildChkBox.Checked = global::APKToolGUI.Properties.Settings.Default.Build_ZipalignAfterBuild;
-            this.zipalignAfterBuildChkBox.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.zipalignAfterBuildChkBox.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "Build_ZipalignAfterBuild", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.zipalignAfterBuildChkBox.Name = "zipalignAfterBuildChkBox";
-            this.zipalignAfterBuildChkBox.UseVisualStyleBackColor = true;
-            // 
-            // checkBox_BUILD_NoCrunch
-            // 
-            resources.ApplyResources(this.checkBox_BUILD_NoCrunch, "checkBox_BUILD_NoCrunch");
-            this.checkBox_BUILD_NoCrunch.Checked = global::APKToolGUI.Properties.Settings.Default.Build_NoCrunch;
-            this.checkBox_BUILD_NoCrunch.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "Build_NoCrunch", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.checkBox_BUILD_NoCrunch.Name = "checkBox_BUILD_NoCrunch";
-            this.checkBox_BUILD_NoCrunch.UseVisualStyleBackColor = true;
-            // 
-            // button_BUILD_BrowseOutputAppPath
-            // 
-            this.button_BUILD_BrowseOutputAppPath.DataBindings.Add(new System.Windows.Forms.Binding("Enabled", global::APKToolGUI.Properties.Settings.Default, "Build_UseOutputAppPath", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.button_BUILD_BrowseOutputAppPath.Enabled = global::APKToolGUI.Properties.Settings.Default.Build_UseOutputAppPath;
-            resources.ApplyResources(this.button_BUILD_BrowseOutputAppPath, "button_BUILD_BrowseOutputAppPath");
-            this.button_BUILD_BrowseOutputAppPath.Name = "button_BUILD_BrowseOutputAppPath";
-            this.button_BUILD_BrowseOutputAppPath.UseVisualStyleBackColor = true;
-            // 
-            // checkBox_BUILD_ForceAll
-            // 
-            resources.ApplyResources(this.checkBox_BUILD_ForceAll, "checkBox_BUILD_ForceAll");
-            this.checkBox_BUILD_ForceAll.Checked = global::APKToolGUI.Properties.Settings.Default.Build_ForceAll;
-            this.checkBox_BUILD_ForceAll.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox_BUILD_ForceAll.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "Build_ForceAll", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.checkBox_BUILD_ForceAll.Name = "checkBox_BUILD_ForceAll";
-            this.checkBox_BUILD_ForceAll.UseVisualStyleBackColor = true;
-            // 
-            // button_BUILD_BrowseFrameDir
-            // 
-            this.button_BUILD_BrowseFrameDir.DataBindings.Add(new System.Windows.Forms.Binding("Enabled", global::APKToolGUI.Properties.Settings.Default, "Build_UseFramework", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.button_BUILD_BrowseFrameDir.Enabled = global::APKToolGUI.Properties.Settings.Default.Build_UseFramework;
-            resources.ApplyResources(this.button_BUILD_BrowseFrameDir, "button_BUILD_BrowseFrameDir");
-            this.button_BUILD_BrowseFrameDir.Name = "button_BUILD_BrowseFrameDir";
-            this.button_BUILD_BrowseFrameDir.UseVisualStyleBackColor = true;
-            // 
-            // button_BUILD_BrowseAaptPath
-            // 
-            this.button_BUILD_BrowseAaptPath.DataBindings.Add(new System.Windows.Forms.Binding("Enabled", global::APKToolGUI.Properties.Settings.Default, "Build_UseAapt", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.button_BUILD_BrowseAaptPath.Enabled = global::APKToolGUI.Properties.Settings.Default.Build_UseAapt;
-            resources.ApplyResources(this.button_BUILD_BrowseAaptPath, "button_BUILD_BrowseAaptPath");
-            this.button_BUILD_BrowseAaptPath.Name = "button_BUILD_BrowseAaptPath";
-            this.button_BUILD_BrowseAaptPath.UseVisualStyleBackColor = true;
-            // 
-            // checkBox_BUILD_OutputAppPath
-            // 
-            resources.ApplyResources(this.checkBox_BUILD_OutputAppPath, "checkBox_BUILD_OutputAppPath");
-            this.checkBox_BUILD_OutputAppPath.Checked = global::APKToolGUI.Properties.Settings.Default.Build_UseOutputAppPath;
-            this.checkBox_BUILD_OutputAppPath.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "Build_UseOutputAppPath", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.checkBox_BUILD_OutputAppPath.Name = "checkBox_BUILD_OutputAppPath";
-            this.checkBox_BUILD_OutputAppPath.UseVisualStyleBackColor = true;
-            // 
-            // checkBox_BUILD_CopyOriginal
-            // 
-            resources.ApplyResources(this.checkBox_BUILD_CopyOriginal, "checkBox_BUILD_CopyOriginal");
-            this.checkBox_BUILD_CopyOriginal.Checked = global::APKToolGUI.Properties.Settings.Default.Build_CopyOriginal;
-            this.checkBox_BUILD_CopyOriginal.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "Build_CopyOriginal", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.checkBox_BUILD_CopyOriginal.Name = "checkBox_BUILD_CopyOriginal";
-            this.checkBox_BUILD_CopyOriginal.UseVisualStyleBackColor = true;
-            // 
-            // textBox_BUILD_OutputAppPath
-            // 
-            this.textBox_BUILD_OutputAppPath.DataBindings.Add(new System.Windows.Forms.Binding("Enabled", global::APKToolGUI.Properties.Settings.Default, "Build_UseOutputAppPath", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.textBox_BUILD_OutputAppPath.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::APKToolGUI.Properties.Settings.Default, "Build_OutputAppPath", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.textBox_BUILD_OutputAppPath.Enabled = global::APKToolGUI.Properties.Settings.Default.Build_UseOutputAppPath;
-            resources.ApplyResources(this.textBox_BUILD_OutputAppPath, "textBox_BUILD_OutputAppPath");
-            this.textBox_BUILD_OutputAppPath.Name = "textBox_BUILD_OutputAppPath";
-            this.textBox_BUILD_OutputAppPath.Text = global::APKToolGUI.Properties.Settings.Default.Build_OutputAppPath;
-            // 
-            // checkBox_BUILD_UseAapt
-            // 
-            resources.ApplyResources(this.checkBox_BUILD_UseAapt, "checkBox_BUILD_UseAapt");
-            this.checkBox_BUILD_UseAapt.Checked = global::APKToolGUI.Properties.Settings.Default.Build_UseAapt;
-            this.checkBox_BUILD_UseAapt.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "Build_UseAapt", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.checkBox_BUILD_UseAapt.Name = "checkBox_BUILD_UseAapt";
-            this.checkBox_BUILD_UseAapt.UseVisualStyleBackColor = true;
-            // 
-            // textBox_BUILD_AaptPath
-            // 
-            this.textBox_BUILD_AaptPath.DataBindings.Add(new System.Windows.Forms.Binding("Enabled", global::APKToolGUI.Properties.Settings.Default, "Build_UseAapt", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.textBox_BUILD_AaptPath.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::APKToolGUI.Properties.Settings.Default, "Build_AaptPath", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.textBox_BUILD_AaptPath.Enabled = global::APKToolGUI.Properties.Settings.Default.Build_UseAapt;
-            resources.ApplyResources(this.textBox_BUILD_AaptPath, "textBox_BUILD_AaptPath");
-            this.textBox_BUILD_AaptPath.Name = "textBox_BUILD_AaptPath";
-            this.textBox_BUILD_AaptPath.Text = global::APKToolGUI.Properties.Settings.Default.Build_AaptPath;
-            // 
-            // textBox_BUILD_FrameDir
-            // 
-            this.textBox_BUILD_FrameDir.DataBindings.Add(new System.Windows.Forms.Binding("Enabled", global::APKToolGUI.Properties.Settings.Default, "Build_UseFramework", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.textBox_BUILD_FrameDir.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::APKToolGUI.Properties.Settings.Default, "Framework_FrameDir", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.textBox_BUILD_FrameDir.Enabled = global::APKToolGUI.Properties.Settings.Default.Build_UseFramework;
-            resources.ApplyResources(this.textBox_BUILD_FrameDir, "textBox_BUILD_FrameDir");
-            this.textBox_BUILD_FrameDir.Name = "textBox_BUILD_FrameDir";
-            this.textBox_BUILD_FrameDir.Text = global::APKToolGUI.Properties.Settings.Default.Framework_FrameDir;
-            // 
-            // checkBox_BUILD_UseFramework
-            // 
-            resources.ApplyResources(this.checkBox_BUILD_UseFramework, "checkBox_BUILD_UseFramework");
-            this.checkBox_BUILD_UseFramework.Checked = global::APKToolGUI.Properties.Settings.Default.Build_UseFramework;
-            this.checkBox_BUILD_UseFramework.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "Build_UseFramework", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.checkBox_BUILD_UseFramework.Name = "checkBox_BUILD_UseFramework";
-            this.checkBox_BUILD_UseFramework.UseVisualStyleBackColor = true;
-            // 
-            // checkBox2
-            // 
-            resources.ApplyResources(this.checkBox2, "checkBox2");
-            this.checkBox2.Checked = global::APKToolGUI.Properties.Settings.Default.Sign_InstallApkAfterSign;
-            this.checkBox2.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "Sign_InstallApkAfterSign", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            // 
-            // checkBox1
-            // 
-            resources.ApplyResources(this.checkBox1, "checkBox1");
-            this.checkBox1.Checked = global::APKToolGUI.Properties.Settings.Default.Sign_OverwriteInputFile;
-            this.checkBox1.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "Sign_OverwriteInputFile", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // autoDelIdsigChkBox
-            // 
-            resources.ApplyResources(this.autoDelIdsigChkBox, "autoDelIdsigChkBox");
-            this.autoDelIdsigChkBox.Checked = global::APKToolGUI.Properties.Settings.Default.AutoDeleteIdsigFile;
-            this.autoDelIdsigChkBox.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.autoDelIdsigChkBox.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "AutoDeleteIdsigFile", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.autoDelIdsigChkBox.Name = "autoDelIdsigChkBox";
-            this.autoDelIdsigChkBox.UseVisualStyleBackColor = true;
-            // 
-            // textBox3
-            // 
-            this.textBox3.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::APKToolGUI.Properties.Settings.Default, "Sign_KeystorePassword", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            resources.ApplyResources(this.textBox3, "textBox3");
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Text = global::APKToolGUI.Properties.Settings.Default.Sign_KeystorePassword;
-            this.textBox3.UseSystemPasswordChar = true;
-            // 
-            // aliasTxtBox
-            // 
-            this.aliasTxtBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::APKToolGUI.Properties.Settings.Default, "Sign_Alias", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            resources.ApplyResources(this.aliasTxtBox, "aliasTxtBox");
-            this.aliasTxtBox.Name = "aliasTxtBox";
-            this.aliasTxtBox.Text = global::APKToolGUI.Properties.Settings.Default.Sign_Alias;
-            // 
-            // useAliasChkBox
-            // 
-            resources.ApplyResources(this.useAliasChkBox, "useAliasChkBox");
-            this.useAliasChkBox.Checked = global::APKToolGUI.Properties.Settings.Default.Sign_SetAlias;
-            this.useAliasChkBox.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.useAliasChkBox.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "Sign_SetAlias", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.useAliasChkBox.Name = "useAliasChkBox";
-            this.useAliasChkBox.UseVisualStyleBackColor = true;
-            // 
-            // keyStoreFileTxtBox
-            // 
-            this.keyStoreFileTxtBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::APKToolGUI.Properties.Settings.Default, "Sign_KeystoreFilePath", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            resources.ApplyResources(this.keyStoreFileTxtBox, "keyStoreFileTxtBox");
-            this.keyStoreFileTxtBox.Name = "keyStoreFileTxtBox";
-            this.keyStoreFileTxtBox.Text = global::APKToolGUI.Properties.Settings.Default.Sign_KeystoreFilePath;
-            // 
-            // useKeyStoreChkBox
-            // 
-            resources.ApplyResources(this.useKeyStoreChkBox, "useKeyStoreChkBox");
-            this.useKeyStoreChkBox.Checked = global::APKToolGUI.Properties.Settings.Default.Sign_UseKeystoreFile;
-            this.useKeyStoreChkBox.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "Sign_UseKeystoreFile", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.useKeyStoreChkBox.Name = "useKeyStoreChkBox";
-            this.useKeyStoreChkBox.UseVisualStyleBackColor = true;
-            // 
-            // useSigningOutputDir
-            // 
-            resources.ApplyResources(this.useSigningOutputDir, "useSigningOutputDir");
-            this.useSigningOutputDir.Checked = global::APKToolGUI.Properties.Settings.Default.Sign_UseOutputDir;
-            this.useSigningOutputDir.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "Sign_UseOutputDir", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.useSigningOutputDir.Name = "useSigningOutputDir";
-            this.useSigningOutputDir.UseVisualStyleBackColor = true;
-            // 
-            // textBox_SIGN_OutputFile
-            // 
-            this.textBox_SIGN_OutputFile.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::APKToolGUI.Properties.Settings.Default, "Sign_OutputDir", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            resources.ApplyResources(this.textBox_SIGN_OutputFile, "textBox_SIGN_OutputFile");
-            this.textBox_SIGN_OutputFile.Name = "textBox_SIGN_OutputFile";
-            this.textBox_SIGN_OutputFile.Text = global::APKToolGUI.Properties.Settings.Default.Sign_OutputDir;
-            // 
-            // textBox_SIGN_PublicKey
-            // 
-            this.textBox_SIGN_PublicKey.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::APKToolGUI.Properties.Settings.Default, "Sign_PublicKey", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            resources.ApplyResources(this.textBox_SIGN_PublicKey, "textBox_SIGN_PublicKey");
-            this.textBox_SIGN_PublicKey.Name = "textBox_SIGN_PublicKey";
-            this.textBox_SIGN_PublicKey.Text = global::APKToolGUI.Properties.Settings.Default.Sign_PublicKey;
-            // 
-            // textBox_SIGN_PrivateKey
-            // 
-            this.textBox_SIGN_PrivateKey.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::APKToolGUI.Properties.Settings.Default, "Sign_PrivateKey", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            resources.ApplyResources(this.textBox_SIGN_PrivateKey, "textBox_SIGN_PrivateKey");
-            this.textBox_SIGN_PrivateKey.Name = "textBox_SIGN_PrivateKey";
-            this.textBox_SIGN_PrivateKey.Text = global::APKToolGUI.Properties.Settings.Default.Sign_PrivateKey;
-            // 
-            // zipalignOutputDirChkBox
-            // 
-            resources.ApplyResources(this.zipalignOutputDirChkBox, "zipalignOutputDirChkBox");
-            this.zipalignOutputDirChkBox.Checked = global::APKToolGUI.Properties.Settings.Default.Zipalign_UseOutputDir;
-            this.zipalignOutputDirChkBox.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "Zipalign_UseOutputDir", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.zipalignOutputDirChkBox.Name = "zipalignOutputDirChkBox";
-            this.zipalignOutputDirChkBox.UseVisualStyleBackColor = true;
-            // 
-            // signAfterZipalignChkBox
-            // 
-            resources.ApplyResources(this.signAfterZipalignChkBox, "signAfterZipalignChkBox");
-            this.signAfterZipalignChkBox.Checked = global::APKToolGUI.Properties.Settings.Default.Zipalign_SignAfterZipAlign;
-            this.signAfterZipalignChkBox.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.signAfterZipalignChkBox.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "Zipalign_SignAfterZipAlign", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.signAfterZipalignChkBox.Name = "signAfterZipalignChkBox";
-            this.signAfterZipalignChkBox.UseVisualStyleBackColor = true;
-            // 
-            // checkBox_ZIPALIGN_Recompress
-            // 
-            resources.ApplyResources(this.checkBox_ZIPALIGN_Recompress, "checkBox_ZIPALIGN_Recompress");
-            this.checkBox_ZIPALIGN_Recompress.Checked = global::APKToolGUI.Properties.Settings.Default.Zipalign_Recompress;
-            this.checkBox_ZIPALIGN_Recompress.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "Zipalign_Recompress", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.checkBox_ZIPALIGN_Recompress.Name = "checkBox_ZIPALIGN_Recompress";
-            this.checkBox_ZIPALIGN_Recompress.UseVisualStyleBackColor = true;
-            // 
-            // checkBox_ZIPALIGN_CheckAlignment
-            // 
-            resources.ApplyResources(this.checkBox_ZIPALIGN_CheckAlignment, "checkBox_ZIPALIGN_CheckAlignment");
-            this.checkBox_ZIPALIGN_CheckAlignment.Checked = global::APKToolGUI.Properties.Settings.Default.Zipalign_CheckOnly;
-            this.checkBox_ZIPALIGN_CheckAlignment.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "Zipalign_CheckOnly", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.checkBox_ZIPALIGN_CheckAlignment.Name = "checkBox_ZIPALIGN_CheckAlignment";
-            this.checkBox_ZIPALIGN_CheckAlignment.UseVisualStyleBackColor = true;
-            // 
-            // textBox_ZIPALIGN_OutputFile
-            // 
-            this.textBox_ZIPALIGN_OutputFile.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::APKToolGUI.Properties.Settings.Default, "Zipalign_OutputDir", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            resources.ApplyResources(this.textBox_ZIPALIGN_OutputFile, "textBox_ZIPALIGN_OutputFile");
-            this.textBox_ZIPALIGN_OutputFile.Name = "textBox_ZIPALIGN_OutputFile";
-            this.textBox_ZIPALIGN_OutputFile.Text = global::APKToolGUI.Properties.Settings.Default.Zipalign_OutputDir;
-            // 
-            // checkBox_ZIPALIGN_VerboseOutput
-            // 
-            resources.ApplyResources(this.checkBox_ZIPALIGN_VerboseOutput, "checkBox_ZIPALIGN_VerboseOutput");
-            this.checkBox_ZIPALIGN_VerboseOutput.Checked = global::APKToolGUI.Properties.Settings.Default.Zipalign_Verbose;
-            this.checkBox_ZIPALIGN_VerboseOutput.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "Zipalign_Verbose", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.checkBox_ZIPALIGN_VerboseOutput.Name = "checkBox_ZIPALIGN_VerboseOutput";
-            this.checkBox_ZIPALIGN_VerboseOutput.UseVisualStyleBackColor = true;
-            // 
-            // numericUpDown_ZIPALIGN_AlignmentBytes
-            // 
-            this.numericUpDown_ZIPALIGN_AlignmentBytes.DataBindings.Add(new System.Windows.Forms.Binding("Value", global::APKToolGUI.Properties.Settings.Default, "Zipalign_AlignmentInBytes", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            resources.ApplyResources(this.numericUpDown_ZIPALIGN_AlignmentBytes, "numericUpDown_ZIPALIGN_AlignmentBytes");
-            this.numericUpDown_ZIPALIGN_AlignmentBytes.Maximum = new decimal(new int[] {
-            32,
-            0,
-            0,
-            0});
-            this.numericUpDown_ZIPALIGN_AlignmentBytes.Name = "numericUpDown_ZIPALIGN_AlignmentBytes";
-            this.numericUpDown_ZIPALIGN_AlignmentBytes.Value = global::APKToolGUI.Properties.Settings.Default.Zipalign_AlignmentInBytes;
-            // 
-            // checkBox_ZIPALIGN_OverwriteOutputFile
-            // 
-            resources.ApplyResources(this.checkBox_ZIPALIGN_OverwriteOutputFile, "checkBox_ZIPALIGN_OverwriteOutputFile");
-            this.checkBox_ZIPALIGN_OverwriteOutputFile.Checked = global::APKToolGUI.Properties.Settings.Default.Zipalign_OverwriteOutputFile;
-            this.checkBox_ZIPALIGN_OverwriteOutputFile.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "Zipalign_OverwriteOutputFile", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.checkBox_ZIPALIGN_OverwriteOutputFile.Name = "checkBox_ZIPALIGN_OverwriteOutputFile";
-            this.checkBox_ZIPALIGN_OverwriteOutputFile.UseVisualStyleBackColor = true;
-            // 
-            // clearFwBeforeDecodeChkBox
-            // 
-            resources.ApplyResources(this.clearFwBeforeDecodeChkBox, "clearFwBeforeDecodeChkBox");
-            this.clearFwBeforeDecodeChkBox.Checked = global::APKToolGUI.Properties.Settings.Default.Framework_ClearBeforeDecode;
-            this.clearFwBeforeDecodeChkBox.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.clearFwBeforeDecodeChkBox.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "Framework_ClearBeforeDecode", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.clearFwBeforeDecodeChkBox.Name = "clearFwBeforeDecodeChkBox";
-            this.clearFwBeforeDecodeChkBox.UseVisualStyleBackColor = true;
-            // 
-            // checkBox_IF_Tag
-            // 
-            resources.ApplyResources(this.checkBox_IF_Tag, "checkBox_IF_Tag");
-            this.checkBox_IF_Tag.Checked = global::APKToolGUI.Properties.Settings.Default.InstallFramework_UseTag;
-            this.checkBox_IF_Tag.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "InstallFramework_UseTag", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.checkBox_IF_Tag.Name = "checkBox_IF_Tag";
-            this.checkBox_IF_Tag.UseVisualStyleBackColor = true;
-            // 
-            // checkBox_IF_FramePath
-            // 
-            resources.ApplyResources(this.checkBox_IF_FramePath, "checkBox_IF_FramePath");
-            this.checkBox_IF_FramePath.Checked = global::APKToolGUI.Properties.Settings.Default.Framework_UseFrameDir;
-            this.checkBox_IF_FramePath.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "Framework_UseFrameDir", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.checkBox_IF_FramePath.Name = "checkBox_IF_FramePath";
-            this.checkBox_IF_FramePath.UseVisualStyleBackColor = true;
-            // 
-            // textBox_IF_Tag
-            // 
-            this.textBox_IF_Tag.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::APKToolGUI.Properties.Settings.Default, "InstallFramework_Tag", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.textBox_IF_Tag.DataBindings.Add(new System.Windows.Forms.Binding("Enabled", global::APKToolGUI.Properties.Settings.Default, "InstallFramework_UseTag", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.textBox_IF_Tag.Enabled = global::APKToolGUI.Properties.Settings.Default.InstallFramework_UseTag;
-            resources.ApplyResources(this.textBox_IF_Tag, "textBox_IF_Tag");
-            this.textBox_IF_Tag.Name = "textBox_IF_Tag";
-            this.textBox_IF_Tag.Text = global::APKToolGUI.Properties.Settings.Default.InstallFramework_Tag;
-            // 
-            // button_IF_BrowseFrameDir
-            // 
-            this.button_IF_BrowseFrameDir.DataBindings.Add(new System.Windows.Forms.Binding("Enabled", global::APKToolGUI.Properties.Settings.Default, "Framework_UseFrameDir", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.button_IF_BrowseFrameDir.Enabled = global::APKToolGUI.Properties.Settings.Default.Framework_UseFrameDir;
-            resources.ApplyResources(this.button_IF_BrowseFrameDir, "button_IF_BrowseFrameDir");
-            this.button_IF_BrowseFrameDir.Name = "button_IF_BrowseFrameDir";
-            this.button_IF_BrowseFrameDir.UseVisualStyleBackColor = true;
-            // 
-            // textBox_IF_InputFramePath
-            // 
-            resources.ApplyResources(this.textBox_IF_InputFramePath, "textBox_IF_InputFramePath");
-            this.textBox_IF_InputFramePath.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::APKToolGUI.Properties.Settings.Default, "InstallFramework_InputFramePath", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.textBox_IF_InputFramePath.Name = "textBox_IF_InputFramePath";
-            this.textBox_IF_InputFramePath.Text = global::APKToolGUI.Properties.Settings.Default.InstallFramework_InputFramePath;
-            // 
-            // textBox_IF_FrameDir
-            // 
-            this.textBox_IF_FrameDir.DataBindings.Add(new System.Windows.Forms.Binding("Enabled", global::APKToolGUI.Properties.Settings.Default, "Framework_UseFrameDir", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.textBox_IF_FrameDir.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::APKToolGUI.Properties.Settings.Default, "Framework_FrameDir", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.textBox_IF_FrameDir.Enabled = global::APKToolGUI.Properties.Settings.Default.Framework_UseFrameDir;
-            resources.ApplyResources(this.textBox_IF_FrameDir, "textBox_IF_FrameDir");
-            this.textBox_IF_FrameDir.Name = "textBox_IF_FrameDir";
-            this.textBox_IF_FrameDir.Text = global::APKToolGUI.Properties.Settings.Default.Framework_FrameDir;
-            // 
-            // smaliUseOutputChkBox
-            // 
-            resources.ApplyResources(this.smaliUseOutputChkBox, "smaliUseOutputChkBox");
-            this.smaliUseOutputChkBox.Checked = global::APKToolGUI.Properties.Settings.Default.Smali_UseOutputDir;
-            this.smaliUseOutputChkBox.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "Smali_UseOutputDir", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.smaliUseOutputChkBox.Name = "smaliUseOutputChkBox";
-            this.smaliUseOutputChkBox.UseVisualStyleBackColor = true;
-            // 
-            // smaliBrowseInputDirTxtBox
-            // 
-            resources.ApplyResources(this.smaliBrowseInputDirTxtBox, "smaliBrowseInputDirTxtBox");
-            this.smaliBrowseInputDirTxtBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::APKToolGUI.Properties.Settings.Default, "Smali_InputDir", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.smaliBrowseInputDirTxtBox.Name = "smaliBrowseInputDirTxtBox";
-            this.smaliBrowseInputDirTxtBox.Text = global::APKToolGUI.Properties.Settings.Default.Smali_InputDir;
-            // 
-            // smaliBrowseOutputTxtBox
-            // 
-            this.smaliBrowseOutputTxtBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::APKToolGUI.Properties.Settings.Default, "Smali_OutputDir", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            resources.ApplyResources(this.smaliBrowseOutputTxtBox, "smaliBrowseOutputTxtBox");
-            this.smaliBrowseOutputTxtBox.Name = "smaliBrowseOutputTxtBox";
-            this.smaliBrowseOutputTxtBox.Text = global::APKToolGUI.Properties.Settings.Default.Smali_OutputDir;
-            // 
-            // baksmaliUseOutputChkBox
-            // 
-            resources.ApplyResources(this.baksmaliUseOutputChkBox, "baksmaliUseOutputChkBox");
-            this.baksmaliUseOutputChkBox.Checked = global::APKToolGUI.Properties.Settings.Default.Baksmali_UseOutputDir;
-            this.baksmaliUseOutputChkBox.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "Baksmali_UseOutputDir", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.baksmaliUseOutputChkBox.Name = "baksmaliUseOutputChkBox";
-            this.baksmaliUseOutputChkBox.UseVisualStyleBackColor = true;
-            // 
-            // baksmaliBrowseOutputTxtBox
-            // 
-            this.baksmaliBrowseOutputTxtBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::APKToolGUI.Properties.Settings.Default, "Baksmali_OutputDir", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            resources.ApplyResources(this.baksmaliBrowseOutputTxtBox, "baksmaliBrowseOutputTxtBox");
-            this.baksmaliBrowseOutputTxtBox.Name = "baksmaliBrowseOutputTxtBox";
-            this.baksmaliBrowseOutputTxtBox.Text = global::APKToolGUI.Properties.Settings.Default.Baksmali_OutputDir;
-            // 
-            // baksmaliBrowseInputDexTxtBox
-            // 
-            resources.ApplyResources(this.baksmaliBrowseInputDexTxtBox, "baksmaliBrowseInputDexTxtBox");
-            this.baksmaliBrowseInputDexTxtBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::APKToolGUI.Properties.Settings.Default, "Baksmali_InputDexFile", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.baksmaliBrowseInputDexTxtBox.Name = "baksmaliBrowseInputDexTxtBox";
-            this.baksmaliBrowseInputDexTxtBox.Text = global::APKToolGUI.Properties.Settings.Default.Baksmali_InputDexFile;
-            // 
-            // setVendorChkBox
-            // 
-            resources.ApplyResources(this.setVendorChkBox, "setVendorChkBox");
-            this.setVendorChkBox.Checked = global::APKToolGUI.Properties.Settings.Default.Adb_SetVendor;
-            this.setVendorChkBox.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "Adb_SetVendor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.setVendorChkBox.Name = "setVendorChkBox";
-            this.setVendorChkBox.UseVisualStyleBackColor = true;
-            // 
-            // apkPathAdbTxtBox
-            // 
-            this.apkPathAdbTxtBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::APKToolGUI.Properties.Settings.Default, "Adb_SelectedApkPath", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            resources.ApplyResources(this.apkPathAdbTxtBox, "apkPathAdbTxtBox");
-            this.apkPathAdbTxtBox.Name = "apkPathAdbTxtBox";
-            this.apkPathAdbTxtBox.Text = global::APKToolGUI.Properties.Settings.Default.Adb_SelectedApkPath;
-            // 
             // FormMain
             // 
             this.AllowDrop = true;
@@ -2085,15 +2085,18 @@
             this.tabPageDecode.ResumeLayout(false);
             this.groupBox_DECODE_Options.ResumeLayout(false);
             this.groupBox_DECODE_Options.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.decApiLvlUpDown)).EndInit();
             this.tabPageBuild.ResumeLayout(false);
             this.groupBox_BUILD_Options.ResumeLayout(false);
             this.groupBox_BUILD_Options.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.buildApiLvlUpDown)).EndInit();
             this.tabPageSign.ResumeLayout(false);
             this.groupBox_SIGN_Options.ResumeLayout(false);
             this.groupBox_SIGN_Options.PerformLayout();
             this.tabPageZipAlign.ResumeLayout(false);
             this.groupBox_ZIPALIGN_Options.ResumeLayout(false);
             this.groupBox_ZIPALIGN_Options.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ZIPALIGN_AlignmentBytes)).EndInit();
             this.tabPageInstallFramework.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -2111,9 +2114,6 @@
             this.contextMenuStripLog.ResumeLayout(false);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.decApiLvlUpDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.buildApiLvlUpDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ZIPALIGN_AlignmentBytes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

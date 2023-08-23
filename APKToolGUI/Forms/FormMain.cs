@@ -1226,6 +1226,23 @@ namespace APKToolGUI
                     code = zipalign.Align(inputFile, outputDir);
                     if (code == 0)
                     {
+                        if (Settings.Default.Zipalign_SignAfterZipAlign)
+                        {
+                            ToLog(ApktoolEventType.Infomation, "=====[ " + Language.Signing + " ]=====");
+                            if (signapk.Sign(outputDir, outputDir) == 0)
+                            {
+                                ToLog(ApktoolEventType.None, Language.Done);
+
+                                if (Settings.Default.AutoDeleteIdsigFile)
+                                {
+                                    ToLog(ApktoolEventType.None, String.Format(Language.DeleteFile, outputDir + ".idsig"));
+                                    FileUtils.Delete(outputDir + ".idsig");
+                                }
+                            }
+                            else
+                                ToLog(ApktoolEventType.Error, Language.ErrorSigning);
+                        }
+
                         ToLog(ApktoolEventType.None, String.Format(Language.ZipalignFileSavedTo, outputDir));
                         if (Settings.Default.Utf8FilenameSupport)
                         {
