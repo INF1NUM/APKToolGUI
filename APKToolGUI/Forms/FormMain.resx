@@ -2169,6 +2169,36 @@
   <data name="tabPageDecode.AutoScroll" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="checkBox7.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkBox7.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="checkBox7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 363</value>
+  </data>
+  <data name="checkBox7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>320, 17</value>
+  </data>
+  <data name="checkBox7.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="checkBox7.Text" xml:space="preserve">
+    <value>Don't parse APK info when selecting APK for decompiling</value>
+  </data>
+  <data name="&gt;&gt;checkBox7.Name" xml:space="preserve">
+    <value>checkBox7</value>
+  </data>
+  <data name="&gt;&gt;checkBox7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkBox7.Parent" xml:space="preserve">
+    <value>groupBox_DECODE_Options</value>
+  </data>
+  <data name="&gt;&gt;checkBox7.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="checkBox_DECODE_UseApkEditorMerge.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -2197,7 +2227,7 @@
     <value>groupBox_DECODE_Options</value>
   </data>
   <data name="&gt;&gt;checkBox_DECODE_UseApkEditorMerge.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="decApiLvlUpDown.Location" type="System.Drawing.Point, System.Drawing">
     <value>490, 18</value>
@@ -2218,7 +2248,7 @@
     <value>groupBox_DECODE_Options</value>
   </data>
   <data name="&gt;&gt;decApiLvlUpDown.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="decSetApiLvlChkBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2248,7 +2278,7 @@
     <value>groupBox_DECODE_Options</value>
   </data>
   <data name="&gt;&gt;decSetApiLvlChkBox.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="label6.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2278,7 +2308,7 @@
     <value>groupBox_DECODE_Options</value>
   </data>
   <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="label5.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2308,7 +2338,7 @@
     <value>groupBox_DECODE_Options</value>
   </data>
   <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="checkBox_DECODE_FixError.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2338,7 +2368,7 @@
     <value>groupBox_DECODE_Options</value>
   </data>
   <data name="&gt;&gt;checkBox_DECODE_FixError.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="checkBox_DECODE_OnlyMainClasses.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2368,7 +2398,7 @@
     <value>groupBox_DECODE_Options</value>
   </data>
   <data name="&gt;&gt;checkBox_DECODE_OnlyMainClasses.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="textBox_DECODE_FrameDir.Location" type="System.Drawing.Point, System.Drawing">
     <value>255, 165</value>
@@ -2392,7 +2422,7 @@
     <value>groupBox_DECODE_Options</value>
   </data>
   <data name="&gt;&gt;textBox_DECODE_FrameDir.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="button_DECODE_BrowseOutputDirectory.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -2422,7 +2452,7 @@
     <value>groupBox_DECODE_Options</value>
   </data>
   <data name="&gt;&gt;button_DECODE_BrowseOutputDirectory.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="checkBox_DECODE_UseFramework.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2452,7 +2482,7 @@
     <value>groupBox_DECODE_Options</value>
   </data>
   <data name="&gt;&gt;checkBox_DECODE_UseFramework.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="button_DECODE_BrowseFrameDir.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -2482,7 +2512,7 @@
     <value>groupBox_DECODE_Options</value>
   </data>
   <data name="&gt;&gt;button_DECODE_BrowseFrameDir.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>11</value>
   </data>
   <data name="checkBox_DECODE_MatchOriginal.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2512,7 +2542,7 @@
     <value>groupBox_DECODE_Options</value>
   </data>
   <data name="&gt;&gt;checkBox_DECODE_MatchOriginal.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>12</value>
   </data>
   <data name="checkBox_DECODE_OutputDirectory.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2542,7 +2572,7 @@
     <value>groupBox_DECODE_Options</value>
   </data>
   <data name="&gt;&gt;checkBox_DECODE_OutputDirectory.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>13</value>
   </data>
   <data name="textBox_DECODE_OutputDirectory.Location" type="System.Drawing.Point, System.Drawing">
     <value>255, 191</value>
@@ -2566,7 +2596,7 @@
     <value>groupBox_DECODE_Options</value>
   </data>
   <data name="&gt;&gt;textBox_DECODE_OutputDirectory.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>14</value>
   </data>
   <data name="checkBox_DECODE_KeepBrokenRes.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2596,7 +2626,7 @@
     <value>groupBox_DECODE_Options</value>
   </data>
   <data name="&gt;&gt;checkBox_DECODE_KeepBrokenRes.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>15</value>
   </data>
   <data name="checkBox_DECODE_NoSrc.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2626,7 +2656,7 @@
     <value>groupBox_DECODE_Options</value>
   </data>
   <data name="&gt;&gt;checkBox_DECODE_NoSrc.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>16</value>
   </data>
   <data name="checkBox_DECODE_Force.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2656,7 +2686,7 @@
     <value>groupBox_DECODE_Options</value>
   </data>
   <data name="&gt;&gt;checkBox_DECODE_Force.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>17</value>
   </data>
   <data name="checkBox_DECODE_NoRes.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2686,7 +2716,7 @@
     <value>groupBox_DECODE_Options</value>
   </data>
   <data name="&gt;&gt;checkBox_DECODE_NoRes.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>18</value>
   </data>
   <data name="checkBox_DECODE_NoDebugInfo.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2716,7 +2746,7 @@
     <value>groupBox_DECODE_Options</value>
   </data>
   <data name="&gt;&gt;checkBox_DECODE_NoDebugInfo.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>19</value>
   </data>
   <data name="groupBox_DECODE_Options.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 4</value>
@@ -6228,37 +6258,37 @@
     <value>309, 13</value>
   </metadata>
   <data name="saveLogToFileToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
+    <value>168, 22</value>
   </data>
   <data name="saveLogToFileToolStripMenuItem.Text" xml:space="preserve">
     <value>Save log to file</value>
   </data>
   <data name="settingsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
+    <value>168, 22</value>
   </data>
   <data name="settingsToolStripMenuItem.Text" xml:space="preserve">
     <value>Settings</value>
   </data>
   <data name="toolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>177, 6</value>
+    <value>165, 6</value>
   </data>
   <data name="openTempFolderToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
+    <value>168, 22</value>
   </data>
   <data name="openTempFolderToolStripMenuItem.Text" xml:space="preserve">
     <value>Open temp folder</value>
   </data>
   <data name="clearTempFolderToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
+    <value>168, 22</value>
   </data>
   <data name="clearTempFolderToolStripMenuItem.Text" xml:space="preserve">
     <value>Clear temp folder</value>
   </data>
   <data name="toolStripMenuItem2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>177, 6</value>
+    <value>165, 6</value>
   </data>
   <data name="exitToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
+    <value>168, 22</value>
   </data>
   <data name="exitToolStripMenuItem.Text" xml:space="preserve">
     <value>Exit</value>
@@ -8015,6 +8045,9 @@
         ///2AAAAAAAAb////////////EAAAAAAAj////////////+QAAAAAAn/////////////8gAAAABP////
         //////////w4AAAcP///////
 </value>
+  </data>
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
     <value>99, 97</value>

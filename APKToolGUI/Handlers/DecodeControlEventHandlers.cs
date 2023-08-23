@@ -57,7 +57,10 @@ namespace APKToolGUI.Handlers
                 if (ofd.ShowDialog() == DialogResult.OK)
                 {
                     main.textBox_DECODE_InputAppPath.Text = ofd.FileName;
-                    main.GetApkInfo(ofd.FileName);
+
+                    if (!Settings.Default.Decode_DontParseApkInfo)
+                        main.GetApkInfo(ofd.FileName);
+
                     if (main.checkBox_DECODE_OutputDirectory.Checked)
                     {
                         main.textBox_DECODE_OutputDirectory.Text = Path.Combine(Path.GetDirectoryName(main.textBox_DECODE_InputAppPath.Text), Path.GetFileNameWithoutExtension(main.textBox_DECODE_InputAppPath.Text));

@@ -84,7 +84,8 @@ namespace APKToolGUI.Handlers
                 {
                     main.textBox_DECODE_InputAppPath.Text = apkFile;
 
-                    await main.GetApkInfo(apkFile);
+                    if (!Settings.Default.Decode_DontParseApkInfo)
+                        await main.GetApkInfo(apkFile);
 
                     if (apkFile.ContainsAny(".xapk", ".zip", ".apks", ".apkm"))
                     {
@@ -175,7 +176,7 @@ namespace APKToolGUI.Handlers
                 await main.Smali(dir);
             }
         }
-        
+
         private async void DropApkToInstall(DragEventArgs e)
         {
             string dir = null;
