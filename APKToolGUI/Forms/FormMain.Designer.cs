@@ -245,6 +245,7 @@
             this.logTxtBox = new System.Windows.Forms.RichTextBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.newInsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveLogToFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
@@ -1963,6 +1964,7 @@
             // fileToolStripMenuItem
             // 
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.newInsToolStripMenuItem,
             this.saveLogToFileToolStripMenuItem,
             this.settingsToolStripMenuItem,
             this.toolStripMenuItem1,
@@ -1972,6 +1974,11 @@
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             resources.ApplyResources(this.fileToolStripMenuItem, "fileToolStripMenuItem");
+            // 
+            // newInsToolStripMenuItem
+            // 
+            this.newInsToolStripMenuItem.Name = "newInsToolStripMenuItem";
+            resources.ApplyResources(this.newInsToolStripMenuItem, "newInsToolStripMenuItem");
             // 
             // saveLogToFileToolStripMenuItem
             // 
@@ -2350,6 +2357,7 @@
         internal System.Windows.Forms.CheckBox checkBox_BUILD_NetSecConf;
         internal System.Windows.Forms.Label label34;
         private System.Windows.Forms.CheckBox checkBox7;
+        internal System.Windows.Forms.ToolStripMenuItem newInsToolStripMenuItem;
     }
 }
 

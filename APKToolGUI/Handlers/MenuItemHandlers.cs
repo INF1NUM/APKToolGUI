@@ -27,8 +27,14 @@ namespace APKToolGUI.Handlers
             main.apktoolIssuesToolStripMenuItem.Click += apktoolIssuesLinkItem_Click;
             main.baksmaliIssuesToolStripMenuItem.Click += baksmaliIssuesLinkItem_Click;
             main.reportAnIsuueToolStripMenuItem.Click += reportAnIsuueToolStripMenuItem_Click;
-
+            main.newInsToolStripMenuItem.Click += newInsToolStripMenuItem_Click;
         }
+
+        private void newInsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Process.Start(System.Reflection.Assembly.GetExecutingAssembly().Location);
+        }
+
         private void saveLogItem_Click(object sender, EventArgs e)
         {
             using (var sfd = new SaveFileDialog())
