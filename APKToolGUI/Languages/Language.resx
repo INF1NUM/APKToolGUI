@@ -522,4 +522,13 @@
   <data name="DeletingFolder" xml:space="preserve">
     <value>Deleting folder: {0}</value>
   </data>
+  <data name="DirectoryNotExist" xml:space="preserve">
+    <value>The directory "{0}" does not exist</value>
+  </data>
+  <data name="OpenComFolder" xml:space="preserve">
+    <value>Open compile output folder</value>
+  </data>
+  <data name="OpenDecFolder" xml:space="preserve">
+    <value>Open decompile output folder</value>
+  </data>
 </root>

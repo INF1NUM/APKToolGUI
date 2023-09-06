@@ -3,6 +3,7 @@ using Microsoft.Win32;
 using APKToolGUI.Languages;
 using APKToolGUI.Utils;
 using Microsoft.Build.Framework.XamlTypes;
+using System.Windows.Forms;
 
 namespace APKToolGUI
 {
@@ -24,9 +25,9 @@ namespace APKToolGUI
             try
             {
                 #region Add context menu to registry
-                RegistryKey apkToolGUIFolderShell = Registry.ClassesRoot.OpenSubKey(@"Directory\shell", RegistryKeyPermissionCheck.ReadWriteSubTree, System.Security.AccessControl.RegistryRights.FullControl).CreateSubKey(Program.APP_NAME, RegistryKeyPermissionCheck.ReadWriteSubTree);
+                RegistryKey apkToolGUIFolderShell = Registry.ClassesRoot.OpenSubKey(@"Directory\shell", RegistryKeyPermissionCheck.ReadWriteSubTree, System.Security.AccessControl.RegistryRights.FullControl).CreateSubKey(Application.ProductName, RegistryKeyPermissionCheck.ReadWriteSubTree);
                 apkToolGUIFolderShell.SetValue("Icon", executablePath);
-                apkToolGUIFolderShell.SetValue("MUIVerb", Program.APP_NAME);
+                apkToolGUIFolderShell.SetValue("MUIVerb", Application.ProductName);
                 apkToolGUIFolderShell.SetValue("SubCommands", "APKToolGUI.Build;APKToolGUI.Smali");
                 apkToolGUIFolderShell.Close();
 
@@ -103,10 +104,10 @@ namespace APKToolGUI
         {
             Registry.ClassesRoot.OpenSubKey("SystemFileAssociations", RegistryKeyPermissionCheck.ReadWriteSubTree, System.Security.AccessControl.RegistryRights.FullControl).CreateSubKey(fileExtension, RegistryKeyPermissionCheck.ReadWriteSubTree).CreateSubKey("DefaultIcon", RegistryKeyPermissionCheck.ReadWriteSubTree).SetValue("", executablePath, RegistryValueKind.ExpandString);
 
-            RegistryKey shell = Registry.ClassesRoot.OpenSubKey(@"SystemFileAssociations\" + fileExtension, RegistryKeyPermissionCheck.ReadWriteSubTree, System.Security.AccessControl.RegistryRights.CreateSubKey).CreateSubKey("shell", RegistryKeyPermissionCheck.ReadWriteSubTree).CreateSubKey(Program.APP_NAME, RegistryKeyPermissionCheck.ReadWriteSubTree);
+            RegistryKey shell = Registry.ClassesRoot.OpenSubKey(@"SystemFileAssociations\" + fileExtension, RegistryKeyPermissionCheck.ReadWriteSubTree, System.Security.AccessControl.RegistryRights.CreateSubKey).CreateSubKey("shell", RegistryKeyPermissionCheck.ReadWriteSubTree).CreateSubKey(Application.ProductName, RegistryKeyPermissionCheck.ReadWriteSubTree);
 
             shell.SetValue("Icon", "\"" + executablePath + "\"");
-            shell.SetValue("MUIVerb", Program.APP_NAME);
+            shell.SetValue("MUIVerb", Application.ProductName);
             shell.SetValue("SubCommands", subCommands);
             shell.Close();
         }

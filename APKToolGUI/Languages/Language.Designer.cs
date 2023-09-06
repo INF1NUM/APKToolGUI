@@ -457,6 +457,15 @@ namespace APKToolGUI.Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The directory &quot;{0}&quot; does not exist.
+        /// </summary>
+        internal static string DirectoryNotExist {
+            get {
+                return ResourceManager.GetString("DirectoryNotExist", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Directory &quot;{0}&quot; does not exist.
         /// </summary>
         internal static string DirNotExist {
@@ -1011,6 +1020,24 @@ namespace APKToolGUI.Languages {
         internal static string NotDecompiledDex {
             get {
                 return ResourceManager.GetString("NotDecompiledDex", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Open compile output folder.
+        /// </summary>
+        internal static string OpenComFolder {
+            get {
+                return ResourceManager.GetString("OpenComFolder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Open decompile output folder.
+        /// </summary>
+        internal static string OpenDecFolder {
+            get {
+                return ResourceManager.GetString("OpenDecFolder", resourceCulture);
             }
         }
         

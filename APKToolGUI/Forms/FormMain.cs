@@ -22,6 +22,7 @@ using System.Security.Cryptography;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using APKToolGUI.Controls;
 using Dark.Net;
+using APKEasyTool;
 
 namespace APKToolGUI
 {
@@ -103,6 +104,7 @@ namespace APKToolGUI
             new ApkinfoControlEventHandlers(this);
             new MainWindowEventHandlers(this);
             new MenuItemHandlers(this);
+            new TaskBarJumpList(Handle);
         }
 
         private async void FormMain_Shown(object sender, EventArgs e)

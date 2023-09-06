@@ -30,6 +30,7 @@ namespace APKToolGUI
         {
             try
             {
+                //Debug.WriteLine(Application.ProductName);
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
 
@@ -37,6 +38,9 @@ namespace APKToolGUI
                 {
                     SetProcessDPIAware();
                 }
+
+                PortableSettingsProvider.SettingsFileName = "config.xml";
+                PortableSettingsProvider.ApplyProvider(Settings.Default);
 
                 if (arg.Length == 1)
                 {
@@ -47,6 +51,26 @@ namespace APKToolGUI
                             break;
                         case "rcm":
                             ExplorerContextMenuMethod(ExplorerContextMenu.Action.Remove);
+                            break;
+                        case "opendecfolder":
+                            if (Settings.Default.Decode_UseOutputDir)
+                            {
+                                string outDir = Settings.Default.Decode_OutputDir;
+                                if (Directory.Exists(outDir))
+                                    Process.Start(outDir);
+                                else
+                                    MessageBox.Show(String.Format(Language.DirectoryNotExist, outDir), Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                            break;
+                        case "opencomfolder":
+                            if (Settings.Default.Build_UseOutputAppPath)
+                            {
+                                string outDir = Settings.Default.Build_OutputAppPath;
+                                if (Directory.Exists(outDir))
+                                    Process.Start(outDir);
+                                else
+                                    MessageBox.Show(String.Format(Language.DirectoryNotExist, outDir), Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
                             break;
                     }
                 }
@@ -67,9 +91,6 @@ namespace APKToolGUI
                     }
                     if (FilesCheck() == true)
                     {
-                        PortableSettingsProvider.SettingsFileName = "config.xml";
-                        PortableSettingsProvider.ApplyProvider(Settings.Default);
-
                         TEMP_PATH = RandTempDirectory();
                         TEMP_MAIN = TempDirectory();
                         Directory.CreateDirectory(TEMP_PATH);
@@ -232,8 +253,6 @@ namespace APKToolGUI
         }
 
         public static string ASSEMBLY_NAME { get { return AssemblyName.GetAssemblyName(Assembly.GetExecutingAssembly().Location).Name; } }
-        public static string APP_NAME { get { return "APK Tool GUI"; } }
-
         public static string TEMP_PATH { get; set; }
         public static string TEMP_MAIN { get; set; }
         public static string LOCAL_APPDATA_PATH { get { return Environment.GetEnvironmentVariable("LocalAppData"); } }
