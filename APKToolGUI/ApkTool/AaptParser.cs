@@ -1,10 +1,12 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Windows.Documents;
 
 namespace APKToolGUI.Utils
 {
@@ -83,6 +85,8 @@ namespace APKToolGUI.Utils
                     new string[] { "\r\n", "\r", "\n" },
                     StringSplitOptions.None);
 
+                List<string> nativecode = new List<string> { };
+                List<string> nativecode2 = new List<string> { };
                 foreach (string line in lines)
                 {
                     switch (line.Split(':')[0])
@@ -124,13 +128,16 @@ namespace APKToolGUI.Utils
                             var densities = Regex.Matches(line.Split(':')[1], @"(?<= \')(.*?)(?=\')").Cast<Match>().Select(m => m.Value).ToList();
                             Densities = string.Join(", ", densities);
                             break;
+                        case "alt-native-code":
+                            nativecode2 = Regex.Matches(line.Split(':')[1], @"(?<= \')(.*?)(?=\')").Cast<Match>().Select(m => m.Value).ToList();
+                            break;
                         case "native-code":
-                            var nativecode = Regex.Matches(line.Split(':')[1], @"(?<= \')(.*?)(?=\')").Cast<Match>().Select(m => m.Value).ToList();
-                            NativeCode = string.Join(", ", nativecode);
+                            nativecode = Regex.Matches(line.Split(':')[1], @"(?<= \')(.*?)(?=\')").Cast<Match>().Select(m => m.Value).ToList();
                             break;
                     }
                 }
-
+                List<string> combinedList = nativecode2.Concat(nativecode).ToList();
+                NativeCode += string.Join(", ", combinedList);
                 ApkFile = file;
                 PlayStoreLink = "https://play.google.com/store/apps/details?id=" + PackageName;
                 ApkComboLink = "https://apkcombo.com/a/" + PackageName;
