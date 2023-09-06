@@ -12,8 +12,8 @@ https://github.com/AndnixSH/APKToolGUI/releases
 
 # Requirements
 - Windows 7 32-bit/64-bit and above
-- [Java Runtime Environment](https://www.java.com/en/)/[Java SE Development Kit](https://www.oracle.com/java/technologies/downloads/) 8 and above. Highly recommended to use 64-bit version if your system is 64-bit
-- [.NET Framework 4.8](https://dotnet.microsoft.com/en-us/download/dotnet-framework/net48) (Windows 10 and above have it preinstalled)
+- [Java](https://www.java.com/en/) or [JDK](https://www.oracle.com/java/technologies/downloads/) 8 or above. Using latest JDK is not really necessary, it tends to cause unexpected issues. Java 8 and 17 (long-term support release) is enough. Use 64-bit version if your system is 64-bit
+- [.NET Framework 4.8](https://dotnet.microsoft.com/en-us/download/dotnet-framework/net48) (Windows 8 and above already have it preinstalled)
 
 # Features
 - Decompile APK

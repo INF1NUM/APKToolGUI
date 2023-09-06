@@ -28,6 +28,7 @@ body:
       description: |
         A clear and concise description of what the bug is.
         Feel free to upload/attach link to screenshot or video
+        Only place logs in 'Logs' box
     validations:
       required: true
 
@@ -64,7 +65,7 @@ body:
   - type: textarea
     attributes:
       label: APK
-      description: If this APK can be freely shared, please upload/attach a link to it.
+      description: If this APK can be freely shared, please upload/attach a link to it. Please warn with "NSFW" where applicable, if the APK or the link contains adult content
       placeholder: |
         https://apkcombo.com/downloader/
     validations:
@@ -90,7 +91,7 @@ body:
 
   - type: input
     attributes:
-      label: Operating System and version
-      placeholder: Windows 11 2h22
+      label: Operating system and version
+      placeholder: (Example: Windows 11 2h22)
     validations:
       required: true
