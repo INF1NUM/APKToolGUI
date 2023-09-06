@@ -1227,5 +1227,30 @@ namespace APKToolGUI.Properties {
                 this["Decode_DontParseApkInfo"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool UseCustomJVMArgs {
+            get {
+                return ((bool)(this["UseCustomJVMArgs"]));
+            }
+            set {
+                this["UseCustomJVMArgs"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("-Dfile.encoding=UTF8 -Djdk.util.zip.disableZip64ExtraFieldValidation=true -Djdk.n" +
+            "io.zipfs.allowDotZipEntry=true")]
+        public string CustomJVMArgs {
+            get {
+                return ((string)(this["CustomJVMArgs"]));
+            }
+            set {
+                this["CustomJVMArgs"] = value;
+            }
+        }
     }
 }

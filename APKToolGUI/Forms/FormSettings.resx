@@ -128,15 +128,69 @@
   <data name="groupBox1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="textBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>230, 139</value>
+  </data>
+  <data name="textBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>265, 22</value>
+  </data>
+  <data name="textBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="textBox1.WordWrap" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;textBox1.Name" xml:space="preserve">
+    <value>textBox1</value>
+  </data>
+  <data name="&gt;&gt;textBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBox1.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;textBox1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="checkBox7.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkBox7.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="checkBox7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 141</value>
+  </data>
+  <data name="checkBox7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>147, 17</value>
+  </data>
+  <data name="checkBox7.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="checkBox7.Text" xml:space="preserve">
+    <value>Custom JVM arguments</value>
+  </data>
+  <data name="&gt;&gt;checkBox7.Name" xml:space="preserve">
+    <value>checkBox7</value>
+  </data>
+  <data name="&gt;&gt;checkBox7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkBox7.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;checkBox7.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="checkBox6.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="checkBox6.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="checkBox6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 240</value>
+    <value>9, 265</value>
   </data>
   <data name="checkBox6.Size" type="System.Drawing.Size, System.Drawing">
     <value>93, 17</value>
@@ -157,7 +211,7 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;checkBox6.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>2</value>
   </data>
   <data name="themeComboBox.Items" xml:space="preserve">
     <value>Auto</value>
@@ -169,7 +223,7 @@
     <value>Dark</value>
   </data>
   <data name="themeComboBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>128, 213</value>
+    <value>128, 238</value>
   </data>
   <data name="themeComboBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>121, 21</value>
@@ -187,7 +241,7 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;themeComboBox.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
   </data>
   <data name="label1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -196,7 +250,7 @@
     <value>NoControl</value>
   </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 216</value>
+    <value>6, 241</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>41, 13</value>
@@ -217,10 +271,10 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>4</value>
   </data>
   <data name="customApkToolTxtBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>230, 180</value>
+    <value>230, 205</value>
   </data>
   <data name="customApkToolTxtBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>215, 22</value>
@@ -241,7 +295,7 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;customApkToolTxtBox.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>5</value>
   </data>
   <data name="customApktoolBtn.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>System</value>
@@ -250,7 +304,7 @@
     <value>NoControl</value>
   </data>
   <data name="customApktoolBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>448, 180</value>
+    <value>448, 205</value>
   </data>
   <data name="customApktoolBtn.Size" type="System.Drawing.Size, System.Drawing">
     <value>30, 23</value>
@@ -271,7 +325,7 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;customApktoolBtn.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>6</value>
   </data>
   <data name="useCustomApktoolChk.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -280,7 +334,7 @@
     <value>NoControl</value>
   </data>
   <data name="useCustomApktoolChk.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 182</value>
+    <value>9, 207</value>
   </data>
   <data name="useCustomApktoolChk.Size" type="System.Drawing.Size, System.Drawing">
     <value>153, 17</value>
@@ -301,7 +355,7 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;useCustomApktoolChk.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>7</value>
   </data>
   <data name="label6.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -310,7 +364,7 @@
     <value>NoControl</value>
   </data>
   <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>24, 160</value>
+    <value>24, 185</value>
   </data>
   <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
     <value>349, 13</value>
@@ -331,7 +385,7 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>8</value>
   </data>
   <data name="checkBox5.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -340,7 +394,7 @@
     <value>NoControl</value>
   </data>
   <data name="checkBox5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 140</value>
+    <value>9, 165</value>
   </data>
   <data name="checkBox5.Size" type="System.Drawing.Size, System.Drawing">
     <value>147, 17</value>
@@ -361,7 +415,7 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;checkBox5.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>9</value>
   </data>
   <data name="checkBox4.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -370,7 +424,7 @@
     <value>NoControl</value>
   </data>
   <data name="checkBox4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 114</value>
+    <value>9, 115</value>
   </data>
   <data name="checkBox4.Size" type="System.Drawing.Size, System.Drawing">
     <value>134, 17</value>
@@ -391,7 +445,7 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;checkBox4.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>10</value>
   </data>
   <data name="customTempLocationTxtBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>230, 86</value>
@@ -415,7 +469,7 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;customTempLocationTxtBox.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>11</value>
   </data>
   <data name="textBoxCustomJavaLocation.Location" type="System.Drawing.Point, System.Drawing">
     <value>230, 112</value>
@@ -439,7 +493,7 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;textBoxCustomJavaLocation.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>12</value>
   </data>
   <data name="buttonCustomTempLocation.AccessibleName" xml:space="preserve">
     <value>buttonCustomTempLocation</value>
@@ -472,7 +526,7 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;buttonCustomTempLocation.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>13</value>
   </data>
   <data name="checkBox3.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -481,7 +535,7 @@
     <value>NoControl</value>
   </data>
   <data name="checkBox3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 89</value>
+    <value>9, 90</value>
   </data>
   <data name="checkBox3.Size" type="System.Drawing.Size, System.Drawing">
     <value>139, 17</value>
@@ -502,7 +556,7 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;checkBox3.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>14</value>
   </data>
   <data name="buttonCustomJavaLocation.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>System</value>
@@ -532,7 +586,7 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;buttonCustomJavaLocation.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>15</value>
   </data>
   <data name="checkBox2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -562,7 +616,7 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;checkBox2.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>16</value>
   </data>
   <data name="checkBox1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -592,7 +646,7 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;checkBox1.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>17</value>
   </data>
   <data name="checkBoxCheckUpdateStartup.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -622,13 +676,13 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;checkBoxCheckUpdateStartup.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>18</value>
   </data>
   <data name="groupBox1.Location" type="System.Drawing.Point, System.Drawing">
     <value>8, 6</value>
   </data>
   <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>513, 272</value>
+    <value>511, 299</value>
   </data>
   <data name="groupBox1.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
@@ -676,10 +730,10 @@
     <value>0</value>
   </data>
   <data name="groupBoxLanguage.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 284</value>
+    <value>8, 311</value>
   </data>
   <data name="groupBoxLanguage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>513, 47</value>
+    <value>512, 47</value>
   </data>
   <data name="groupBoxLanguage.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -829,7 +883,7 @@
     <value>3</value>
   </data>
   <data name="groupBoxContextMenu.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 336</value>
+    <value>8, 364</value>
   </data>
   <data name="groupBoxContextMenu.Size" type="System.Drawing.Size, System.Drawing">
     <value>513, 74</value>
@@ -859,7 +913,7 @@
     <value>3, 3, 3, 3</value>
   </data>
   <data name="tabPage1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>525, 417</value>
+    <value>525, 442</value>
   </data>
   <data name="tabPage1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -886,7 +940,7 @@
     <value>0, 1</value>
   </data>
   <data name="tabControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>533, 443</value>
+    <value>533, 468</value>
   </data>
   <data name="tabControl1.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -913,7 +967,7 @@
     <value>NoControl</value>
   </data>
   <data name="buttonCancel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>451, 450</value>
+    <value>451, 475</value>
   </data>
   <data name="buttonCancel.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
@@ -946,7 +1000,7 @@
     <value>NoControl</value>
   </data>
   <data name="buttonОК.Location" type="System.Drawing.Point, System.Drawing">
-    <value>370, 450</value>
+    <value>370, 475</value>
   </data>
   <data name="buttonОК.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
@@ -976,7 +1030,10 @@
     <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>532, 478</value>
+    <value>532, 503</value>
+  </data>
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterParent</value>

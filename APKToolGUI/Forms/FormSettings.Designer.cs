@@ -32,32 +32,34 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
             this.themeComboBox = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.customApkToolTxtBox = new System.Windows.Forms.TextBox();
             this.customApktoolBtn = new System.Windows.Forms.Button();
-            this.useCustomApktoolChk = new System.Windows.Forms.CheckBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.customTempLocationTxtBox = new System.Windows.Forms.TextBox();
-            this.textBoxCustomJavaLocation = new System.Windows.Forms.TextBox();
             this.buttonCustomTempLocation = new System.Windows.Forms.Button();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
             this.buttonCustomJavaLocation = new System.Windows.Forms.Button();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBoxCheckUpdateStartup = new System.Windows.Forms.CheckBox();
             this.groupBoxLanguage = new System.Windows.Forms.GroupBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.groupBoxContextMenu = new System.Windows.Forms.GroupBox();
-            this.ignoreOutputContextMenuBox = new System.Windows.Forms.CheckBox();
             this.labelAdminRights = new System.Windows.Forms.Label();
             this.buttonAddContextMenu = new System.Windows.Forms.Button();
             this.buttonRemoveContextMenu = new System.Windows.Forms.Button();
             this.buttonCancel = new System.Windows.Forms.Button();
             this.buttonОК = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.checkBox7 = new System.Windows.Forms.CheckBox();
+            this.checkBox6 = new System.Windows.Forms.CheckBox();
+            this.customApkToolTxtBox = new System.Windows.Forms.TextBox();
+            this.useCustomApktoolChk = new System.Windows.Forms.CheckBox();
+            this.checkBox5 = new System.Windows.Forms.CheckBox();
+            this.checkBox4 = new System.Windows.Forms.CheckBox();
+            this.customTempLocationTxtBox = new System.Windows.Forms.TextBox();
+            this.textBoxCustomJavaLocation = new System.Windows.Forms.TextBox();
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.checkBoxCheckUpdateStartup = new System.Windows.Forms.CheckBox();
+            this.ignoreOutputContextMenuBox = new System.Windows.Forms.CheckBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -84,6 +86,8 @@
             // groupBox1
             // 
             resources.ApplyResources(this.groupBox1, "groupBox1");
+            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.checkBox7);
             this.groupBox1.Controls.Add(this.checkBox6);
             this.groupBox1.Controls.Add(this.themeComboBox);
             this.groupBox1.Controls.Add(this.label1);
@@ -104,14 +108,6 @@
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.TabStop = false;
             // 
-            // checkBox6
-            // 
-            resources.ApplyResources(this.checkBox6, "checkBox6");
-            this.checkBox6.Checked = global::APKToolGUI.Properties.Settings.Default.DebugMode;
-            this.checkBox6.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "DebugMode", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.UseVisualStyleBackColor = true;
-            // 
             // themeComboBox
             // 
             this.themeComboBox.FormattingEnabled = true;
@@ -127,14 +123,6 @@
             resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
             // 
-            // customApkToolTxtBox
-            // 
-            this.customApkToolTxtBox.BackColor = System.Drawing.SystemColors.Window;
-            this.customApkToolTxtBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::APKToolGUI.Properties.Settings.Default, "ApktoolPath", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            resources.ApplyResources(this.customApkToolTxtBox, "customApkToolTxtBox");
-            this.customApkToolTxtBox.Name = "customApkToolTxtBox";
-            this.customApkToolTxtBox.Text = global::APKToolGUI.Properties.Settings.Default.ApktoolPath;
-            // 
             // customApktoolBtn
             // 
             resources.ApplyResources(this.customApktoolBtn, "customApktoolBtn");
@@ -142,51 +130,11 @@
             this.customApktoolBtn.UseVisualStyleBackColor = true;
             this.customApktoolBtn.Click += new System.EventHandler(this.customApktoolBtn_Click);
             // 
-            // useCustomApktoolChk
-            // 
-            resources.ApplyResources(this.useCustomApktoolChk, "useCustomApktoolChk");
-            this.useCustomApktoolChk.Checked = global::APKToolGUI.Properties.Settings.Default.UseCustomApktool;
-            this.useCustomApktoolChk.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "UseCustomApktool", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.useCustomApktoolChk.Name = "useCustomApktoolChk";
-            this.useCustomApktoolChk.UseVisualStyleBackColor = true;
-            // 
             // label6
             // 
             resources.ApplyResources(this.label6, "label6");
             this.label6.ForeColor = System.Drawing.Color.DimGray;
             this.label6.Name = "label6";
-            // 
-            // checkBox5
-            // 
-            resources.ApplyResources(this.checkBox5, "checkBox5");
-            this.checkBox5.Checked = global::APKToolGUI.Properties.Settings.Default.Utf8FilenameSupport;
-            this.checkBox5.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "Utf8FilenameSupport", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.UseVisualStyleBackColor = true;
-            // 
-            // checkBox4
-            // 
-            resources.ApplyResources(this.checkBox4, "checkBox4");
-            this.checkBox4.Checked = global::APKToolGUI.Properties.Settings.Default.UseCustomJavaExe;
-            this.checkBox4.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "UseCustomJavaExe", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.UseVisualStyleBackColor = true;
-            // 
-            // customTempLocationTxtBox
-            // 
-            this.customTempLocationTxtBox.BackColor = System.Drawing.SystemColors.Window;
-            this.customTempLocationTxtBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::APKToolGUI.Properties.Settings.Default, "TempDir", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            resources.ApplyResources(this.customTempLocationTxtBox, "customTempLocationTxtBox");
-            this.customTempLocationTxtBox.Name = "customTempLocationTxtBox";
-            this.customTempLocationTxtBox.Text = global::APKToolGUI.Properties.Settings.Default.TempDir;
-            // 
-            // textBoxCustomJavaLocation
-            // 
-            this.textBoxCustomJavaLocation.BackColor = System.Drawing.SystemColors.Window;
-            this.textBoxCustomJavaLocation.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::APKToolGUI.Properties.Settings.Default, "JavaExe", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            resources.ApplyResources(this.textBoxCustomJavaLocation, "textBoxCustomJavaLocation");
-            this.textBoxCustomJavaLocation.Name = "textBoxCustomJavaLocation";
-            this.textBoxCustomJavaLocation.Text = global::APKToolGUI.Properties.Settings.Default.JavaExe;
             // 
             // buttonCustomTempLocation
             // 
@@ -195,46 +143,12 @@
             this.buttonCustomTempLocation.UseVisualStyleBackColor = true;
             this.buttonCustomTempLocation.Click += new System.EventHandler(this.buttonCustomTempLocation_Click);
             // 
-            // checkBox3
-            // 
-            resources.ApplyResources(this.checkBox3, "checkBox3");
-            this.checkBox3.Checked = global::APKToolGUI.Properties.Settings.Default.UseCustomTempDir;
-            this.checkBox3.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "UseCustomTempDir", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.UseVisualStyleBackColor = true;
-            // 
             // buttonCustomJavaLocation
             // 
             resources.ApplyResources(this.buttonCustomJavaLocation, "buttonCustomJavaLocation");
             this.buttonCustomJavaLocation.Name = "buttonCustomJavaLocation";
             this.buttonCustomJavaLocation.UseVisualStyleBackColor = true;
             this.buttonCustomJavaLocation.Click += new System.EventHandler(this.buttonCustomJavaLocation_Click);
-            // 
-            // checkBox2
-            // 
-            resources.ApplyResources(this.checkBox2, "checkBox2");
-            this.checkBox2.Checked = global::APKToolGUI.Properties.Settings.Default.PlaySoundWhenDone;
-            this.checkBox2.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "PlaySoundWhenDone", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            // 
-            // checkBox1
-            // 
-            resources.ApplyResources(this.checkBox1, "checkBox1");
-            this.checkBox1.Checked = global::APKToolGUI.Properties.Settings.Default.ClearLogBeforeAction;
-            this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox1.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "ClearLogBeforeAction", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxCheckUpdateStartup
-            // 
-            resources.ApplyResources(this.checkBoxCheckUpdateStartup, "checkBoxCheckUpdateStartup");
-            this.checkBoxCheckUpdateStartup.Checked = global::APKToolGUI.Properties.Settings.Default.CheckForUpdateAtStartup;
-            this.checkBoxCheckUpdateStartup.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBoxCheckUpdateStartup.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "CheckForUpdateAtStartup", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.checkBoxCheckUpdateStartup.Name = "checkBoxCheckUpdateStartup";
-            this.checkBoxCheckUpdateStartup.UseVisualStyleBackColor = true;
             // 
             // groupBoxLanguage
             // 
@@ -259,14 +173,6 @@
             this.groupBoxContextMenu.Controls.Add(this.buttonRemoveContextMenu);
             this.groupBoxContextMenu.Name = "groupBoxContextMenu";
             this.groupBoxContextMenu.TabStop = false;
-            // 
-            // ignoreOutputContextMenuBox
-            // 
-            resources.ApplyResources(this.ignoreOutputContextMenuBox, "ignoreOutputContextMenuBox");
-            this.ignoreOutputContextMenuBox.Checked = global::APKToolGUI.Properties.Settings.Default.IgnoreOutputDirContextMenu;
-            this.ignoreOutputContextMenuBox.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "IgnoreOutputDirContextMenu", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.ignoreOutputContextMenuBox.Name = "ignoreOutputContextMenuBox";
-            this.ignoreOutputContextMenuBox.UseVisualStyleBackColor = true;
             // 
             // labelAdminRights
             // 
@@ -300,6 +206,120 @@
             this.buttonОК.Name = "buttonОК";
             this.buttonОК.UseVisualStyleBackColor = true;
             this.buttonОК.Click += new System.EventHandler(this.buttonОК_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.SystemColors.Window;
+            this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::APKToolGUI.Properties.Settings.Default, "CustomJVMArgs", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            resources.ApplyResources(this.textBox1, "textBox1");
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Text = global::APKToolGUI.Properties.Settings.Default.CustomJVMArgs;
+            // 
+            // checkBox7
+            // 
+            resources.ApplyResources(this.checkBox7, "checkBox7");
+            this.checkBox7.Checked = global::APKToolGUI.Properties.Settings.Default.UseCustomJVMArgs;
+            this.checkBox7.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "UseCustomJVMArgs", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.checkBox7.Name = "checkBox7";
+            this.checkBox7.UseVisualStyleBackColor = true;
+            // 
+            // checkBox6
+            // 
+            resources.ApplyResources(this.checkBox6, "checkBox6");
+            this.checkBox6.Checked = global::APKToolGUI.Properties.Settings.Default.DebugMode;
+            this.checkBox6.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "DebugMode", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.checkBox6.Name = "checkBox6";
+            this.checkBox6.UseVisualStyleBackColor = true;
+            // 
+            // customApkToolTxtBox
+            // 
+            this.customApkToolTxtBox.BackColor = System.Drawing.SystemColors.Window;
+            this.customApkToolTxtBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::APKToolGUI.Properties.Settings.Default, "ApktoolPath", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            resources.ApplyResources(this.customApkToolTxtBox, "customApkToolTxtBox");
+            this.customApkToolTxtBox.Name = "customApkToolTxtBox";
+            this.customApkToolTxtBox.Text = global::APKToolGUI.Properties.Settings.Default.ApktoolPath;
+            // 
+            // useCustomApktoolChk
+            // 
+            resources.ApplyResources(this.useCustomApktoolChk, "useCustomApktoolChk");
+            this.useCustomApktoolChk.Checked = global::APKToolGUI.Properties.Settings.Default.UseCustomApktool;
+            this.useCustomApktoolChk.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "UseCustomApktool", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.useCustomApktoolChk.Name = "useCustomApktoolChk";
+            this.useCustomApktoolChk.UseVisualStyleBackColor = true;
+            // 
+            // checkBox5
+            // 
+            resources.ApplyResources(this.checkBox5, "checkBox5");
+            this.checkBox5.Checked = global::APKToolGUI.Properties.Settings.Default.Utf8FilenameSupport;
+            this.checkBox5.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "Utf8FilenameSupport", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.checkBox5.Name = "checkBox5";
+            this.checkBox5.UseVisualStyleBackColor = true;
+            // 
+            // checkBox4
+            // 
+            resources.ApplyResources(this.checkBox4, "checkBox4");
+            this.checkBox4.Checked = global::APKToolGUI.Properties.Settings.Default.UseCustomJavaExe;
+            this.checkBox4.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "UseCustomJavaExe", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.checkBox4.Name = "checkBox4";
+            this.checkBox4.UseVisualStyleBackColor = true;
+            // 
+            // customTempLocationTxtBox
+            // 
+            this.customTempLocationTxtBox.BackColor = System.Drawing.SystemColors.Window;
+            this.customTempLocationTxtBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::APKToolGUI.Properties.Settings.Default, "TempDir", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            resources.ApplyResources(this.customTempLocationTxtBox, "customTempLocationTxtBox");
+            this.customTempLocationTxtBox.Name = "customTempLocationTxtBox";
+            this.customTempLocationTxtBox.Text = global::APKToolGUI.Properties.Settings.Default.TempDir;
+            // 
+            // textBoxCustomJavaLocation
+            // 
+            this.textBoxCustomJavaLocation.BackColor = System.Drawing.SystemColors.Window;
+            this.textBoxCustomJavaLocation.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::APKToolGUI.Properties.Settings.Default, "JavaExe", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            resources.ApplyResources(this.textBoxCustomJavaLocation, "textBoxCustomJavaLocation");
+            this.textBoxCustomJavaLocation.Name = "textBoxCustomJavaLocation";
+            this.textBoxCustomJavaLocation.Text = global::APKToolGUI.Properties.Settings.Default.JavaExe;
+            // 
+            // checkBox3
+            // 
+            resources.ApplyResources(this.checkBox3, "checkBox3");
+            this.checkBox3.Checked = global::APKToolGUI.Properties.Settings.Default.UseCustomTempDir;
+            this.checkBox3.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "UseCustomTempDir", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.checkBox3.Name = "checkBox3";
+            this.checkBox3.UseVisualStyleBackColor = true;
+            // 
+            // checkBox2
+            // 
+            resources.ApplyResources(this.checkBox2, "checkBox2");
+            this.checkBox2.Checked = global::APKToolGUI.Properties.Settings.Default.PlaySoundWhenDone;
+            this.checkBox2.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "PlaySoundWhenDone", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            // 
+            // checkBox1
+            // 
+            resources.ApplyResources(this.checkBox1, "checkBox1");
+            this.checkBox1.Checked = global::APKToolGUI.Properties.Settings.Default.ClearLogBeforeAction;
+            this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox1.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "ClearLogBeforeAction", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxCheckUpdateStartup
+            // 
+            resources.ApplyResources(this.checkBoxCheckUpdateStartup, "checkBoxCheckUpdateStartup");
+            this.checkBoxCheckUpdateStartup.Checked = global::APKToolGUI.Properties.Settings.Default.CheckForUpdateAtStartup;
+            this.checkBoxCheckUpdateStartup.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxCheckUpdateStartup.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "CheckForUpdateAtStartup", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.checkBoxCheckUpdateStartup.Name = "checkBoxCheckUpdateStartup";
+            this.checkBoxCheckUpdateStartup.UseVisualStyleBackColor = true;
+            // 
+            // ignoreOutputContextMenuBox
+            // 
+            resources.ApplyResources(this.ignoreOutputContextMenuBox, "ignoreOutputContextMenuBox");
+            this.ignoreOutputContextMenuBox.Checked = global::APKToolGUI.Properties.Settings.Default.IgnoreOutputDirContextMenu;
+            this.ignoreOutputContextMenuBox.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "IgnoreOutputDirContextMenu", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.ignoreOutputContextMenuBox.Name = "ignoreOutputContextMenuBox";
+            this.ignoreOutputContextMenuBox.UseVisualStyleBackColor = true;
             // 
             // FormSettings
             // 
@@ -355,5 +375,7 @@
         private System.Windows.Forms.ComboBox themeComboBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.CheckBox checkBox6;
+        private System.Windows.Forms.CheckBox checkBox7;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

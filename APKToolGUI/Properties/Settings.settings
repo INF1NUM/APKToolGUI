@@ -269,5 +269,11 @@
     <Setting Name="Decode_DontParseApkInfo" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
+    <Setting Name="UseCustomJVMArgs" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="CustomJVMArgs" Type="System.String" Scope="User">
+      <Value Profile="(Default)">-Dfile.encoding=UTF8 -Djdk.util.zip.disableZip64ExtraFieldValidation=true -Djdk.nio.zipfs.allowDotZipEntry=true</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

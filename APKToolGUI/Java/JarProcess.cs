@@ -1,4 +1,5 @@
-﻿using System;
+﻿using APKToolGUI.Properties;
+using System;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
@@ -32,8 +33,13 @@ namespace Java
         public new bool Start(string args)
         {
             EnableRaisingEvents = true;
-            StartInfo.Arguments = String.Format("-jar \"{0}\" {1}", JarPath, args);
-            Debug.WriteLine(String.Format("-jar \"{0}\" {1}", JarPath, args));
+            string customArgs = null;
+
+            if (Settings.Default.UseCustomJVMArgs)
+                customArgs = Settings.Default.CustomJVMArgs;
+
+            StartInfo.Arguments = String.Format("-jar {0} \"{1}\" {2}", customArgs, JarPath, args);
+            Debug.WriteLine(String.Format("-jar {0} \"{1}\" {2}", customArgs, JarPath, args));
             return base.Start();
         }
 
@@ -88,7 +94,7 @@ namespace Java
                             .Skip(n)
                             .ToArray();
 
-                       output = string.Join(Environment.NewLine, lines);
+                        output = string.Join(Environment.NewLine, lines);
                     }
 
                     if (!String.IsNullOrEmpty(output))
