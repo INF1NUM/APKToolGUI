@@ -221,58 +221,58 @@
     <Setting Name="PlaySoundWhenDone" Provider="Bluegrams.Application.PortableSettingsProvider" Roaming="true" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
-    <Setting Name="UseCustomTempDir" Type="System.Boolean" Scope="User">
+    <Setting Name="UseCustomTempDir" Roaming="true" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
-    <Setting Name="TempDir" Type="System.String" Scope="User">
+    <Setting Name="TempDir" Roaming="true" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="UseCustomJavaExe" Type="System.Boolean" Scope="User">
+    <Setting Name="UseCustomJavaExe" Roaming="true" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
-    <Setting Name="AutoDeleteIdsigFile" Type="System.Boolean" Scope="User">
+    <Setting Name="AutoDeleteIdsigFile" Roaming="true" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>
     </Setting>
-    <Setting Name="Utf8FilenameSupport" Type="System.Boolean" Scope="User">
+    <Setting Name="Utf8FilenameSupport" Roaming="true" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
-    <Setting Name="Sign_OverwriteInputFile" Type="System.Boolean" Scope="User">
+    <Setting Name="Sign_OverwriteInputFile" Roaming="true" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
-    <Setting Name="Decode_UseApkEditorMergeApk" Type="System.Boolean" Scope="User">
+    <Setting Name="Decode_UseApkEditorMergeApk" Roaming="true" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>
     </Setting>
-    <Setting Name="Adb_SetVendor" Type="System.Boolean" Scope="User">
+    <Setting Name="Adb_SetVendor" Roaming="true" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
-    <Setting Name="Adb_SelectedApkPath" Type="System.String" Scope="User">
+    <Setting Name="Adb_SelectedApkPath" Roaming="true" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="Sign_InstallApkAfterSign" Type="System.Boolean" Scope="User">
+    <Setting Name="Sign_InstallApkAfterSign" Roaming="true" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
-    <Setting Name="UseCustomApktool" Type="System.Boolean" Scope="User">
+    <Setting Name="UseCustomApktool" Roaming="true" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
-    <Setting Name="ApktoolPath" Type="System.String" Scope="User">
+    <Setting Name="ApktoolPath" Roaming="true" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="Theme" Type="System.Int32" Scope="User">
+    <Setting Name="Theme" Roaming="true" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">0</Value>
     </Setting>
-    <Setting Name="DebugMode" Type="System.Boolean" Scope="User">
+    <Setting Name="DebugMode" Roaming="true" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
-    <Setting Name="Build_NetSecConf" Type="System.Boolean" Scope="User">
+    <Setting Name="Build_NetSecConf" Roaming="true" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
-    <Setting Name="Decode_DontParseApkInfo" Type="System.Boolean" Scope="User">
+    <Setting Name="Decode_DontParseApkInfo" Roaming="true" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
-    <Setting Name="UseCustomJVMArgs" Type="System.Boolean" Scope="User">
+    <Setting Name="UseCustomJVMArgs" Roaming="true" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
-    <Setting Name="CustomJVMArgs" Type="System.String" Scope="User">
+    <Setting Name="CustomJVMArgs" Roaming="true" Type="System.String" Scope="User">
       <Value Profile="(Default)">-Dfile.encoding=UTF8 -Djdk.util.zip.disableZip64ExtraFieldValidation=true -Djdk.nio.zipfs.allowDotZipEntry=true</Value>
     </Setting>
   </Settings>

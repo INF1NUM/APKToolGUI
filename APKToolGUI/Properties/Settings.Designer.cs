@@ -1039,6 +1039,7 @@ namespace APKToolGUI.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        [global::System.Configuration.SettingsManageabilityAttribute(global::System.Configuration.SettingsManageability.Roaming)]
         public bool UseCustomTempDir {
             get {
                 return ((bool)(this["UseCustomTempDir"]));
@@ -1051,6 +1052,7 @@ namespace APKToolGUI.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
+        [global::System.Configuration.SettingsManageabilityAttribute(global::System.Configuration.SettingsManageability.Roaming)]
         public string TempDir {
             get {
                 return ((string)(this["TempDir"]));
@@ -1063,6 +1065,7 @@ namespace APKToolGUI.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        [global::System.Configuration.SettingsManageabilityAttribute(global::System.Configuration.SettingsManageability.Roaming)]
         public bool UseCustomJavaExe {
             get {
                 return ((bool)(this["UseCustomJavaExe"]));
@@ -1075,6 +1078,7 @@ namespace APKToolGUI.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        [global::System.Configuration.SettingsManageabilityAttribute(global::System.Configuration.SettingsManageability.Roaming)]
         public bool AutoDeleteIdsigFile {
             get {
                 return ((bool)(this["AutoDeleteIdsigFile"]));
@@ -1087,6 +1091,7 @@ namespace APKToolGUI.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        [global::System.Configuration.SettingsManageabilityAttribute(global::System.Configuration.SettingsManageability.Roaming)]
         public bool Utf8FilenameSupport {
             get {
                 return ((bool)(this["Utf8FilenameSupport"]));
@@ -1099,6 +1104,7 @@ namespace APKToolGUI.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        [global::System.Configuration.SettingsManageabilityAttribute(global::System.Configuration.SettingsManageability.Roaming)]
         public bool Sign_OverwriteInputFile {
             get {
                 return ((bool)(this["Sign_OverwriteInputFile"]));
@@ -1111,6 +1117,7 @@ namespace APKToolGUI.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        [global::System.Configuration.SettingsManageabilityAttribute(global::System.Configuration.SettingsManageability.Roaming)]
         public bool Decode_UseApkEditorMergeApk {
             get {
                 return ((bool)(this["Decode_UseApkEditorMergeApk"]));
@@ -1123,6 +1130,7 @@ namespace APKToolGUI.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        [global::System.Configuration.SettingsManageabilityAttribute(global::System.Configuration.SettingsManageability.Roaming)]
         public bool Adb_SetVendor {
             get {
                 return ((bool)(this["Adb_SetVendor"]));
@@ -1135,6 +1143,7 @@ namespace APKToolGUI.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
+        [global::System.Configuration.SettingsManageabilityAttribute(global::System.Configuration.SettingsManageability.Roaming)]
         public string Adb_SelectedApkPath {
             get {
                 return ((string)(this["Adb_SelectedApkPath"]));
@@ -1147,6 +1156,7 @@ namespace APKToolGUI.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        [global::System.Configuration.SettingsManageabilityAttribute(global::System.Configuration.SettingsManageability.Roaming)]
         public bool Sign_InstallApkAfterSign {
             get {
                 return ((bool)(this["Sign_InstallApkAfterSign"]));
@@ -1159,6 +1169,7 @@ namespace APKToolGUI.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        [global::System.Configuration.SettingsManageabilityAttribute(global::System.Configuration.SettingsManageability.Roaming)]
         public bool UseCustomApktool {
             get {
                 return ((bool)(this["UseCustomApktool"]));
@@ -1171,6 +1182,7 @@ namespace APKToolGUI.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
+        [global::System.Configuration.SettingsManageabilityAttribute(global::System.Configuration.SettingsManageability.Roaming)]
         public string ApktoolPath {
             get {
                 return ((string)(this["ApktoolPath"]));
@@ -1183,6 +1195,7 @@ namespace APKToolGUI.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        [global::System.Configuration.SettingsManageabilityAttribute(global::System.Configuration.SettingsManageability.Roaming)]
         public int Theme {
             get {
                 return ((int)(this["Theme"]));
@@ -1195,6 +1208,7 @@ namespace APKToolGUI.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        [global::System.Configuration.SettingsManageabilityAttribute(global::System.Configuration.SettingsManageability.Roaming)]
         public bool DebugMode {
             get {
                 return ((bool)(this["DebugMode"]));
@@ -1207,6 +1221,7 @@ namespace APKToolGUI.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        [global::System.Configuration.SettingsManageabilityAttribute(global::System.Configuration.SettingsManageability.Roaming)]
         public bool Build_NetSecConf {
             get {
                 return ((bool)(this["Build_NetSecConf"]));
@@ -1219,6 +1234,7 @@ namespace APKToolGUI.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        [global::System.Configuration.SettingsManageabilityAttribute(global::System.Configuration.SettingsManageability.Roaming)]
         public bool Decode_DontParseApkInfo {
             get {
                 return ((bool)(this["Decode_DontParseApkInfo"]));
@@ -1231,6 +1247,7 @@ namespace APKToolGUI.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        [global::System.Configuration.SettingsManageabilityAttribute(global::System.Configuration.SettingsManageability.Roaming)]
         public bool UseCustomJVMArgs {
             get {
                 return ((bool)(this["UseCustomJVMArgs"]));
@@ -1244,6 +1261,7 @@ namespace APKToolGUI.Properties {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("-Dfile.encoding=UTF8 -Djdk.util.zip.disableZip64ExtraFieldValidation=true -Djdk.n" +
             "io.zipfs.allowDotZipEntry=true")]
+        [global::System.Configuration.SettingsManageabilityAttribute(global::System.Configuration.SettingsManageability.Roaming)]
         public string CustomJVMArgs {
             get {
                 return ((string)(this["CustomJVMArgs"]));
