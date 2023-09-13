@@ -2176,7 +2176,7 @@
     <value>NoControl</value>
   </data>
   <data name="checkBox7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 363</value>
+    <value>8, 321</value>
   </data>
   <data name="checkBox7.Size" type="System.Drawing.Size, System.Drawing">
     <value>320, 17</value>
@@ -2206,7 +2206,7 @@
     <value>NoControl</value>
   </data>
   <data name="checkBox_DECODE_UseApkEditorMerge.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 337</value>
+    <value>8, 295</value>
   </data>
   <data name="checkBox_DECODE_UseApkEditorMerge.Size" type="System.Drawing.Size, System.Drawing">
     <value>250, 17</value>
@@ -2280,66 +2280,6 @@
   <data name="&gt;&gt;decSetApiLvlChkBox.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="label6.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label6.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>25, 241</value>
-  </data>
-  <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>186, 13</value>
-  </data>
-  <data name="label6.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="label6.Text" xml:space="preserve">
-    <value>Enable to fix strange ApkTool error</value>
-  </data>
-  <data name="&gt;&gt;label6.Name" xml:space="preserve">
-    <value>label6</value>
-  </data>
-  <data name="&gt;&gt;label6.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label6.Parent" xml:space="preserve">
-    <value>groupBox_DECODE_Options</value>
-  </data>
-  <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="label5.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>24, 280</value>
-  </data>
-  <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>445, 13</value>
-  </data>
-  <data name="label5.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="label5.Text" xml:space="preserve">
-    <value>It will remove isSplitRequired, extractNativeLibs, useEmbeddedDex, APKTOOL_DUMMY</value>
-  </data>
-  <data name="&gt;&gt;label5.Name" xml:space="preserve">
-    <value>label5</value>
-  </data>
-  <data name="&gt;&gt;label5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label5.Parent" xml:space="preserve">
-    <value>groupBox_DECODE_Options</value>
-  </data>
-  <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
   <data name="checkBox_DECODE_FixError.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -2347,16 +2287,22 @@
     <value>NoControl</value>
   </data>
   <data name="checkBox_DECODE_FixError.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 260</value>
+    <value>8, 246</value>
   </data>
   <data name="checkBox_DECODE_FixError.Size" type="System.Drawing.Size, System.Drawing">
-    <value>313, 17</value>
+    <value>201, 17</value>
   </data>
   <data name="checkBox_DECODE_FixError.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
   </data>
   <data name="checkBox_DECODE_FixError.Text" xml:space="preserve">
-    <value>Fix ApkTool errors and installation error after decompile</value>
+    <value>Fix ApkTool errors after decompile</value>
+  </data>
+  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>454, 16</value>
+  </metadata>
+  <data name="checkBox_DECODE_FixError.ToolTip" xml:space="preserve">
+    <value>It will remove isSplitRequired, extractNativeLibs, useEmbeddedDex, APKTOOL_DUMMY and set </value>
   </data>
   <data name="&gt;&gt;checkBox_DECODE_FixError.Name" xml:space="preserve">
     <value>checkBox_DECODE_FixError</value>
@@ -2368,7 +2314,7 @@
     <value>groupBox_DECODE_Options</value>
   </data>
   <data name="&gt;&gt;checkBox_DECODE_FixError.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>4</value>
   </data>
   <data name="checkBox_DECODE_OnlyMainClasses.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2388,6 +2334,9 @@
   <data name="checkBox_DECODE_OnlyMainClasses.Text" xml:space="preserve">
     <value>Only disassemble the main dex classes (classes[0-9]*.dex) in the root.</value>
   </data>
+  <data name="checkBox_DECODE_OnlyMainClasses.ToolTip" xml:space="preserve">
+    <value>Enable to fix strange ApkTool error</value>
+  </data>
   <data name="&gt;&gt;checkBox_DECODE_OnlyMainClasses.Name" xml:space="preserve">
     <value>checkBox_DECODE_OnlyMainClasses</value>
   </data>
@@ -2398,7 +2347,7 @@
     <value>groupBox_DECODE_Options</value>
   </data>
   <data name="&gt;&gt;checkBox_DECODE_OnlyMainClasses.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>5</value>
   </data>
   <data name="textBox_DECODE_FrameDir.Location" type="System.Drawing.Point, System.Drawing">
     <value>255, 165</value>
@@ -2422,7 +2371,7 @@
     <value>groupBox_DECODE_Options</value>
   </data>
   <data name="&gt;&gt;textBox_DECODE_FrameDir.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>6</value>
   </data>
   <data name="button_DECODE_BrowseOutputDirectory.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -2452,7 +2401,7 @@
     <value>groupBox_DECODE_Options</value>
   </data>
   <data name="&gt;&gt;button_DECODE_BrowseOutputDirectory.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>7</value>
   </data>
   <data name="checkBox_DECODE_UseFramework.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2482,7 +2431,7 @@
     <value>groupBox_DECODE_Options</value>
   </data>
   <data name="&gt;&gt;checkBox_DECODE_UseFramework.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>8</value>
   </data>
   <data name="button_DECODE_BrowseFrameDir.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -2512,7 +2461,7 @@
     <value>groupBox_DECODE_Options</value>
   </data>
   <data name="&gt;&gt;button_DECODE_BrowseFrameDir.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>9</value>
   </data>
   <data name="checkBox_DECODE_MatchOriginal.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2542,7 +2491,7 @@
     <value>groupBox_DECODE_Options</value>
   </data>
   <data name="&gt;&gt;checkBox_DECODE_MatchOriginal.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>10</value>
   </data>
   <data name="checkBox_DECODE_OutputDirectory.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2572,7 +2521,7 @@
     <value>groupBox_DECODE_Options</value>
   </data>
   <data name="&gt;&gt;checkBox_DECODE_OutputDirectory.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>11</value>
   </data>
   <data name="textBox_DECODE_OutputDirectory.Location" type="System.Drawing.Point, System.Drawing">
     <value>255, 191</value>
@@ -2596,7 +2545,7 @@
     <value>groupBox_DECODE_Options</value>
   </data>
   <data name="&gt;&gt;textBox_DECODE_OutputDirectory.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>12</value>
   </data>
   <data name="checkBox_DECODE_KeepBrokenRes.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2626,7 +2575,7 @@
     <value>groupBox_DECODE_Options</value>
   </data>
   <data name="&gt;&gt;checkBox_DECODE_KeepBrokenRes.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>13</value>
   </data>
   <data name="checkBox_DECODE_NoSrc.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2656,7 +2605,7 @@
     <value>groupBox_DECODE_Options</value>
   </data>
   <data name="&gt;&gt;checkBox_DECODE_NoSrc.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>14</value>
   </data>
   <data name="checkBox_DECODE_Force.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2686,7 +2635,7 @@
     <value>groupBox_DECODE_Options</value>
   </data>
   <data name="&gt;&gt;checkBox_DECODE_Force.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>15</value>
   </data>
   <data name="checkBox_DECODE_NoRes.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2716,7 +2665,7 @@
     <value>groupBox_DECODE_Options</value>
   </data>
   <data name="&gt;&gt;checkBox_DECODE_NoRes.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>16</value>
   </data>
   <data name="checkBox_DECODE_NoDebugInfo.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2725,7 +2674,7 @@
     <value>NoControl</value>
   </data>
   <data name="checkBox_DECODE_NoDebugInfo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 311</value>
+    <value>8, 269</value>
   </data>
   <data name="checkBox_DECODE_NoDebugInfo.Size" type="System.Drawing.Size, System.Drawing">
     <value>295, 17</value>
@@ -2746,13 +2695,13 @@
     <value>groupBox_DECODE_Options</value>
   </data>
   <data name="&gt;&gt;checkBox_DECODE_NoDebugInfo.ZOrder" xml:space="preserve">
-    <value>19</value>
+    <value>17</value>
   </data>
   <data name="groupBox_DECODE_Options.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 4</value>
+    <value>4, 3</value>
   </data>
   <data name="groupBox_DECODE_Options.Size" type="System.Drawing.Size, System.Drawing">
-    <value>559, 431</value>
+    <value>559, 379</value>
   </data>
   <data name="groupBox_DECODE_Options.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -2809,7 +2758,7 @@
     <value>NoControl</value>
   </data>
   <data name="checkBox_BUILD_NetSecConf.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 194</value>
+    <value>8, 172</value>
   </data>
   <data name="checkBox_BUILD_NetSecConf.Size" type="System.Drawing.Size, System.Drawing">
     <value>376, 17</value>
@@ -2839,7 +2788,7 @@
     <value>NoControl</value>
   </data>
   <data name="useAapt2ChkBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 310</value>
+    <value>8, 273</value>
   </data>
   <data name="useAapt2ChkBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>353, 17</value>
@@ -2913,36 +2862,6 @@
   <data name="&gt;&gt;buildSetApiLvlChkBox.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="label23.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label23.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label23.Location" type="System.Drawing.Point, System.Drawing">
-    <value>24, 290</value>
-  </data>
-  <data name="label23.Size" type="System.Drawing.Size, System.Drawing">
-    <value>357, 13</value>
-  </data>
-  <data name="label23.TabIndex" type="System.Int32, mscorlib">
-    <value>16</value>
-  </data>
-  <data name="label23.Text" xml:space="preserve">
-    <value>Only compatible with Core Patch module. Rooted device is required.</value>
-  </data>
-  <data name="&gt;&gt;label23.Name" xml:space="preserve">
-    <value>label23</value>
-  </data>
-  <data name="&gt;&gt;label23.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label23.Parent" xml:space="preserve">
-    <value>groupBox_BUILD_Options</value>
-  </data>
-  <data name="&gt;&gt;label23.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
   <data name="createUnsignApkChkBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -2950,7 +2869,7 @@
     <value>NoControl</value>
   </data>
   <data name="createUnsignApkChkBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 269</value>
+    <value>8, 247</value>
   </data>
   <data name="createUnsignApkChkBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>311, 17</value>
@@ -2960,6 +2879,9 @@
   </data>
   <data name="createUnsignApkChkBox.Text" xml:space="preserve">
     <value>Create unsigned APK with original signature after build</value>
+  </data>
+  <data name="createUnsignApkChkBox.ToolTip" xml:space="preserve">
+    <value>Only compatible with Core Patch module. Rooted device is required.</value>
   </data>
   <data name="&gt;&gt;createUnsignApkChkBox.Name" xml:space="preserve">
     <value>createUnsignApkChkBox</value>
@@ -2971,37 +2893,7 @@
     <value>groupBox_BUILD_Options</value>
   </data>
   <data name="&gt;&gt;createUnsignApkChkBox.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="label16.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label16.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label16.Location" type="System.Drawing.Point, System.Drawing">
-    <value>24, 146</value>
-  </data>
-  <data name="label16.Size" type="System.Drawing.Size, System.Drawing">
-    <value>378, 13</value>
-  </data>
-  <data name="label16.TabIndex" type="System.Int32, mscorlib">
-    <value>14</value>
-  </data>
-  <data name="label16.Text" xml:space="preserve">
-    <value>Output directory will be used for Zipalign and Signing too after compile</value>
-  </data>
-  <data name="&gt;&gt;label16.Name" xml:space="preserve">
-    <value>label16</value>
-  </data>
-  <data name="&gt;&gt;label16.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label16.Parent" xml:space="preserve">
-    <value>groupBox_BUILD_Options</value>
-  </data>
-  <data name="&gt;&gt;label16.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>4</value>
   </data>
   <data name="signAfterBuildChkBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -3010,7 +2902,7 @@
     <value>NoControl</value>
   </data>
   <data name="signAfterBuildChkBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 244</value>
+    <value>8, 222</value>
   </data>
   <data name="signAfterBuildChkBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>157, 17</value>
@@ -3031,7 +2923,7 @@
     <value>groupBox_BUILD_Options</value>
   </data>
   <data name="&gt;&gt;signAfterBuildChkBox.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>5</value>
   </data>
   <data name="zipalignAfterBuildChkBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -3040,7 +2932,7 @@
     <value>NoControl</value>
   </data>
   <data name="zipalignAfterBuildChkBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 219</value>
+    <value>8, 197</value>
   </data>
   <data name="zipalignAfterBuildChkBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>125, 17</value>
@@ -3061,7 +2953,7 @@
     <value>groupBox_BUILD_Options</value>
   </data>
   <data name="&gt;&gt;zipalignAfterBuildChkBox.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>6</value>
   </data>
   <data name="checkBox_BUILD_NoCrunch.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -3070,7 +2962,7 @@
     <value>NoControl</value>
   </data>
   <data name="checkBox_BUILD_NoCrunch.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 169</value>
+    <value>8, 147</value>
   </data>
   <data name="checkBox_BUILD_NoCrunch.Size" type="System.Drawing.Size, System.Drawing">
     <value>320, 17</value>
@@ -3091,7 +2983,7 @@
     <value>groupBox_BUILD_Options</value>
   </data>
   <data name="&gt;&gt;checkBox_BUILD_NoCrunch.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>7</value>
   </data>
   <data name="button_BUILD_BrowseOutputAppPath.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -3121,7 +3013,7 @@
     <value>groupBox_BUILD_Options</value>
   </data>
   <data name="&gt;&gt;button_BUILD_BrowseOutputAppPath.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>8</value>
   </data>
   <data name="checkBox_BUILD_ForceAll.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -3151,7 +3043,7 @@
     <value>groupBox_BUILD_Options</value>
   </data>
   <data name="&gt;&gt;checkBox_BUILD_ForceAll.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>9</value>
   </data>
   <data name="button_BUILD_BrowseFrameDir.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -3181,7 +3073,7 @@
     <value>groupBox_BUILD_Options</value>
   </data>
   <data name="&gt;&gt;button_BUILD_BrowseFrameDir.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>10</value>
   </data>
   <data name="button_BUILD_BrowseAaptPath.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -3211,7 +3103,7 @@
     <value>groupBox_BUILD_Options</value>
   </data>
   <data name="&gt;&gt;button_BUILD_BrowseAaptPath.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>11</value>
   </data>
   <data name="checkBox_BUILD_OutputAppPath.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -3231,6 +3123,9 @@
   <data name="checkBox_BUILD_OutputAppPath.Text" xml:space="preserve">
     <value>APK output directory:</value>
   </data>
+  <data name="checkBox_BUILD_OutputAppPath.ToolTip" xml:space="preserve">
+    <value>Output directory will be used for Zipalign and Signing too after compile</value>
+  </data>
   <data name="&gt;&gt;checkBox_BUILD_OutputAppPath.Name" xml:space="preserve">
     <value>checkBox_BUILD_OutputAppPath</value>
   </data>
@@ -3241,7 +3136,7 @@
     <value>groupBox_BUILD_Options</value>
   </data>
   <data name="&gt;&gt;checkBox_BUILD_OutputAppPath.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>12</value>
   </data>
   <data name="checkBox_BUILD_CopyOriginal.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -3250,7 +3145,7 @@
     <value>NoControl</value>
   </data>
   <data name="checkBox_BUILD_CopyOriginal.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 334</value>
+    <value>8, 297</value>
   </data>
   <data name="checkBox_BUILD_CopyOriginal.Size" type="System.Drawing.Size, System.Drawing">
     <value>314, 17</value>
@@ -3271,7 +3166,7 @@
     <value>groupBox_BUILD_Options</value>
   </data>
   <data name="&gt;&gt;checkBox_BUILD_CopyOriginal.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>13</value>
   </data>
   <data name="textBox_BUILD_OutputAppPath.Location" type="System.Drawing.Point, System.Drawing">
     <value>255, 119</value>
@@ -3295,7 +3190,7 @@
     <value>groupBox_BUILD_Options</value>
   </data>
   <data name="&gt;&gt;textBox_BUILD_OutputAppPath.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>14</value>
   </data>
   <data name="checkBox_BUILD_UseAapt.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -3325,7 +3220,7 @@
     <value>groupBox_BUILD_Options</value>
   </data>
   <data name="&gt;&gt;checkBox_BUILD_UseAapt.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>15</value>
   </data>
   <data name="textBox_BUILD_AaptPath.Location" type="System.Drawing.Point, System.Drawing">
     <value>255, 67</value>
@@ -3349,7 +3244,7 @@
     <value>groupBox_BUILD_Options</value>
   </data>
   <data name="&gt;&gt;textBox_BUILD_AaptPath.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>16</value>
   </data>
   <data name="textBox_BUILD_FrameDir.Location" type="System.Drawing.Point, System.Drawing">
     <value>255, 93</value>
@@ -3373,7 +3268,7 @@
     <value>groupBox_BUILD_Options</value>
   </data>
   <data name="&gt;&gt;textBox_BUILD_FrameDir.ZOrder" xml:space="preserve">
-    <value>19</value>
+    <value>17</value>
   </data>
   <data name="checkBox_BUILD_UseFramework.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -3403,7 +3298,7 @@
     <value>groupBox_BUILD_Options</value>
   </data>
   <data name="&gt;&gt;checkBox_BUILD_UseFramework.ZOrder" xml:space="preserve">
-    <value>20</value>
+    <value>18</value>
   </data>
   <data name="groupBox_BUILD_Options.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 3</value>
@@ -6368,9 +6263,6 @@
   <data name="&gt;&gt;menuStrip1.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>454, 16</value>
-  </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>

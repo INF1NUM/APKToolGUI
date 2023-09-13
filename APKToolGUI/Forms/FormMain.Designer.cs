@@ -111,8 +111,6 @@
             this.checkBox_DECODE_UseApkEditorMerge = new System.Windows.Forms.CheckBox();
             this.decApiLvlUpDown = new System.Windows.Forms.NumericUpDown();
             this.decSetApiLvlChkBox = new System.Windows.Forms.CheckBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.checkBox_DECODE_FixError = new System.Windows.Forms.CheckBox();
             this.checkBox_DECODE_OnlyMainClasses = new System.Windows.Forms.CheckBox();
             this.textBox_DECODE_FrameDir = new System.Windows.Forms.TextBox();
@@ -133,9 +131,7 @@
             this.useAapt2ChkBox = new System.Windows.Forms.CheckBox();
             this.buildApiLvlUpDown = new System.Windows.Forms.NumericUpDown();
             this.buildSetApiLvlChkBox = new System.Windows.Forms.CheckBox();
-            this.label23 = new System.Windows.Forms.Label();
             this.createUnsignApkChkBox = new System.Windows.Forms.CheckBox();
-            this.label16 = new System.Windows.Forms.Label();
             this.signAfterBuildChkBox = new System.Windows.Forms.CheckBox();
             this.zipalignAfterBuildChkBox = new System.Windows.Forms.CheckBox();
             this.checkBox_BUILD_NoCrunch = new System.Windows.Forms.CheckBox();
@@ -837,8 +833,6 @@
             this.groupBox_DECODE_Options.Controls.Add(this.checkBox_DECODE_UseApkEditorMerge);
             this.groupBox_DECODE_Options.Controls.Add(this.decApiLvlUpDown);
             this.groupBox_DECODE_Options.Controls.Add(this.decSetApiLvlChkBox);
-            this.groupBox_DECODE_Options.Controls.Add(this.label6);
-            this.groupBox_DECODE_Options.Controls.Add(this.label5);
             this.groupBox_DECODE_Options.Controls.Add(this.checkBox_DECODE_FixError);
             this.groupBox_DECODE_Options.Controls.Add(this.checkBox_DECODE_OnlyMainClasses);
             this.groupBox_DECODE_Options.Controls.Add(this.textBox_DECODE_FrameDir);
@@ -889,18 +883,6 @@
             this.decSetApiLvlChkBox.Name = "decSetApiLvlChkBox";
             this.decSetApiLvlChkBox.UseVisualStyleBackColor = true;
             // 
-            // label6
-            // 
-            resources.ApplyResources(this.label6, "label6");
-            this.label6.ForeColor = System.Drawing.Color.DimGray;
-            this.label6.Name = "label6";
-            // 
-            // label5
-            // 
-            resources.ApplyResources(this.label5, "label5");
-            this.label5.ForeColor = System.Drawing.Color.DimGray;
-            this.label5.Name = "label5";
-            // 
             // checkBox_DECODE_FixError
             // 
             resources.ApplyResources(this.checkBox_DECODE_FixError, "checkBox_DECODE_FixError");
@@ -908,6 +890,7 @@
             this.checkBox_DECODE_FixError.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox_DECODE_FixError.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "Decode_FixError", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.checkBox_DECODE_FixError.Name = "checkBox_DECODE_FixError";
+            this.toolTip1.SetToolTip(this.checkBox_DECODE_FixError, resources.GetString("checkBox_DECODE_FixError.ToolTip"));
             this.checkBox_DECODE_FixError.UseVisualStyleBackColor = true;
             // 
             // checkBox_DECODE_OnlyMainClasses
@@ -917,6 +900,7 @@
             this.checkBox_DECODE_OnlyMainClasses.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox_DECODE_OnlyMainClasses.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "Decode_OnlyMainClasses", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.checkBox_DECODE_OnlyMainClasses.Name = "checkBox_DECODE_OnlyMainClasses";
+            this.toolTip1.SetToolTip(this.checkBox_DECODE_OnlyMainClasses, resources.GetString("checkBox_DECODE_OnlyMainClasses.ToolTip"));
             this.checkBox_DECODE_OnlyMainClasses.UseVisualStyleBackColor = true;
             // 
             // textBox_DECODE_FrameDir
@@ -1031,9 +1015,7 @@
             this.groupBox_BUILD_Options.Controls.Add(this.useAapt2ChkBox);
             this.groupBox_BUILD_Options.Controls.Add(this.buildApiLvlUpDown);
             this.groupBox_BUILD_Options.Controls.Add(this.buildSetApiLvlChkBox);
-            this.groupBox_BUILD_Options.Controls.Add(this.label23);
             this.groupBox_BUILD_Options.Controls.Add(this.createUnsignApkChkBox);
-            this.groupBox_BUILD_Options.Controls.Add(this.label16);
             this.groupBox_BUILD_Options.Controls.Add(this.signAfterBuildChkBox);
             this.groupBox_BUILD_Options.Controls.Add(this.zipalignAfterBuildChkBox);
             this.groupBox_BUILD_Options.Controls.Add(this.checkBox_BUILD_NoCrunch);
@@ -1084,25 +1066,14 @@
             this.buildSetApiLvlChkBox.Name = "buildSetApiLvlChkBox";
             this.buildSetApiLvlChkBox.UseVisualStyleBackColor = true;
             // 
-            // label23
-            // 
-            resources.ApplyResources(this.label23, "label23");
-            this.label23.ForeColor = System.Drawing.Color.DimGray;
-            this.label23.Name = "label23";
-            // 
             // createUnsignApkChkBox
             // 
             resources.ApplyResources(this.createUnsignApkChkBox, "createUnsignApkChkBox");
             this.createUnsignApkChkBox.Checked = global::APKToolGUI.Properties.Settings.Default.Build_CreateUnsignedApk;
             this.createUnsignApkChkBox.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "Build_CreateUnsignedApk", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.createUnsignApkChkBox.Name = "createUnsignApkChkBox";
+            this.toolTip1.SetToolTip(this.createUnsignApkChkBox, resources.GetString("createUnsignApkChkBox.ToolTip"));
             this.createUnsignApkChkBox.UseVisualStyleBackColor = true;
-            // 
-            // label16
-            // 
-            resources.ApplyResources(this.label16, "label16");
-            this.label16.ForeColor = System.Drawing.Color.DimGray;
-            this.label16.Name = "label16";
             // 
             // signAfterBuildChkBox
             // 
@@ -1169,6 +1140,7 @@
             this.checkBox_BUILD_OutputAppPath.Checked = global::APKToolGUI.Properties.Settings.Default.Build_UseOutputAppPath;
             this.checkBox_BUILD_OutputAppPath.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "Build_UseOutputAppPath", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.checkBox_BUILD_OutputAppPath.Name = "checkBox_BUILD_OutputAppPath";
+            this.toolTip1.SetToolTip(this.checkBox_BUILD_OutputAppPath, resources.GetString("checkBox_BUILD_OutputAppPath.ToolTip"));
             this.checkBox_BUILD_OutputAppPath.UseVisualStyleBackColor = true;
             // 
             // checkBox_BUILD_CopyOriginal
@@ -2216,8 +2188,6 @@
         internal System.Windows.Forms.Button openAndroidMainfestBtn;
         internal System.Windows.Forms.CheckBox checkBox_DECODE_OnlyMainClasses;
         internal System.Windows.Forms.CheckBox checkBox_BUILD_NoCrunch;
-        internal System.Windows.Forms.Label label6;
-        internal System.Windows.Forms.Label label5;
         internal System.Windows.Forms.CheckBox checkBox_DECODE_FixError;
         internal System.Windows.Forms.TabPage tabPageApkInfo;
         internal System.Windows.Forms.RichTextBox permTxtBox;
@@ -2255,7 +2225,6 @@
         internal System.Windows.Forms.CheckBox clearFwBeforeDecodeChkBox;
         internal System.Windows.Forms.Button clearFwBtn;
         internal System.Windows.Forms.GroupBox groupBox1;
-        internal System.Windows.Forms.Label label16;
         internal System.Windows.Forms.CheckBox signAfterBuildChkBox;
         internal System.Windows.Forms.CheckBox signAfterZipalignChkBox;
         internal System.Windows.Forms.CheckBox zipalignOutputDirChkBox;
@@ -2269,7 +2238,6 @@
         internal System.Windows.Forms.Button selectKeyStoreFileBtn;
         internal System.Windows.Forms.TextBox aliasTxtBox;
         internal System.Windows.Forms.CheckBox useAliasChkBox;
-        internal System.Windows.Forms.Label label23;
         internal System.Windows.Forms.CheckBox createUnsignApkChkBox;
         internal System.Windows.Forms.ComboBox schemev4ComboBox;
         internal System.Windows.Forms.Label label27;
