@@ -751,6 +751,8 @@ namespace APKToolGUI
                             {
                                 if (ApkFixer.FixAndroidManifest(outputDir))
                                     ToLog(ApktoolEventType.None, Language.FixAndroidManifest);
+                                if (ApkFixer.FixApktoolYml(outputDir))
+                                    ToLog(ApktoolEventType.None, Language.FixApktoolYml);
                                 if (ApkFixer.RemoveApkToolDummies(outputDir))
                                     ToLog(ApktoolEventType.None, Language.RemoveApkToolDummies);
                             }
@@ -892,6 +894,8 @@ namespace APKToolGUI
                         {
                             if (ApkFixer.FixAndroidManifest(outputDir))
                                 ToLog(ApktoolEventType.None, Language.FixAndroidManifest);
+                            if (ApkFixer.FixApktoolYml(outputDir))
+                                ToLog(ApktoolEventType.None, Language.FixApktoolYml);
                             if (ApkFixer.RemoveApkToolDummies(outputDir))
                                 ToLog(ApktoolEventType.None, Language.RemoveApkToolDummies);
                         }

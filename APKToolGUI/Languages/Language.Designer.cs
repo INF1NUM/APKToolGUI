@@ -763,6 +763,15 @@ namespace APKToolGUI.Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Fixed apktool.yml.
+        /// </summary>
+        internal static string FixApktoolYml {
+            get {
+                return ResourceManager.GetString("FixApktoolYml", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Folder does not exist.
         /// </summary>
         internal static string FolderNotExist {

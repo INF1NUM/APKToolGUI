@@ -12,9 +12,9 @@ namespace APKToolGUI.ApkTool
 {
     public class ApkFixer
     {
-        public static bool FixAndroidManifest(string path)
+        public static bool FixAndroidManifest(string decompilePath)
         {
-            string manifestPath = Path.Combine(path, "AndroidManifest.xml");
+            string manifestPath = Path.Combine(decompilePath, "AndroidManifest.xml");
             if (File.Exists(manifestPath))
             {
                 string maniFestText = File.ReadAllText(manifestPath);
@@ -26,8 +26,22 @@ namespace APKToolGUI.ApkTool
                 maniFestText = maniFestText.Replace("android:localeConfig=\"@xml/locales_config\"", "");
                 maniFestText = maniFestText.Replace("STAMP_TYPE_DISTRIBUTION_APK", "STAMP_TYPE_STANDALONE_APK");
 
-                File.WriteAllText(Path.Combine(path, "AndroidManifest.xml"), maniFestText);
+                File.WriteAllText(manifestPath, maniFestText);
 
+                return true;
+            }
+            return false;
+        }
+
+        public static bool FixApktoolYml(string decompilePath)
+        {
+            string ymlPath = Path.Combine(decompilePath, "apktool.yml");
+            if (File.Exists(ymlPath))
+            {
+                string yml = File.ReadAllText(ymlPath);
+                yml = yml.Replace("sparseResources: true", "sparseResources: false");
+
+                File.WriteAllText(ymlPath, yml);
                 return true;
             }
             return false;
@@ -40,25 +54,6 @@ namespace APKToolGUI.ApkTool
             {
                 DirectoryUtils.ReplaceinFilesRegex(resPath, "(.*(?:APKTOOL_DUMMY).*)", "");
                 return true;
-            }
-            return false;
-        }
-
-        public static bool ChangeSdkTo29(string path)
-        {
-            string ymlPath = Path.Combine(path, "apktool.yml");
-            if (File.Exists(ymlPath))
-            {
-                string ymll = File.ReadAllText(ymlPath);
-
-                int sdk = 30;
-                int.TryParse(StringExt.Regex(@"(?<= targetSdkVersion: \')(.*?)(?=\')", ymll), out sdk);
-                if (sdk >= 30)
-                {
-                    ymll = ymll.Replace("targetSdkVersion: '" + sdk + "'", "targetSdkVersion: '29'");
-                    File.WriteAllText(ymlPath, ymll);
-                    return true;
-                }
             }
             return false;
         }

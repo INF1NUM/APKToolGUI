@@ -2302,7 +2302,7 @@
     <value>454, 16</value>
   </metadata>
   <data name="checkBox_DECODE_FixError.ToolTip" xml:space="preserve">
-    <value>It will remove isSplitRequired, extractNativeLibs, useEmbeddedDex, APKTOOL_DUMMY and set </value>
+    <value>It will remove extractNativeLibs, useEmbeddedDex, APKTOOL_DUMMY, split related attributes and set sparseResources to false</value>
   </data>
   <data name="&gt;&gt;checkBox_DECODE_FixError.Name" xml:space="preserve">
     <value>checkBox_DECODE_FixError</value>

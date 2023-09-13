@@ -531,4 +531,7 @@
   <data name="OpenDecFolder" xml:space="preserve">
     <value>Open decompile output folder</value>
   </data>
+  <data name="FixApktoolYml" xml:space="preserve">
+    <value>Fixed apktool.yml</value>
+  </data>
 </root>
