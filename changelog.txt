@@ -1,3 +1,25 @@
+3.3.0.0
+- Updated Simplified Chinese translation
+- Removed android.intent.action.MAIN from "Fix ApkTool errors after decompile"
+- Updated tools (apktool.jar (2.8.1), APKEditor.jar (1.3.2), aapt.exe (SDK 34), aapt2.exe (SDK 34), adb.exe (34.0.4-10411341), apksigner.jar (SDK 34), zipalign.exe (SDK 34))
+- Added debug mode to print more logs
+- Fixed java version
+- "Fix ApkTool errors after decompile" No longer change target SDK to 29
+- Added option to clear temp folder
+- Improve dark theme a bit
+- Added option to not parse APK info when selecting APK for decompiling
+- Fixed sign after zipalign
+- Added option to open new Instance
+- Added jump list
+- Parse alt-native-code from aapt
+- Added custom JVM args
+- All settings portable
+- Move labels to tooltips to keep UI clean
+- Change sparseResources to false for "Fix ApkTool errors after decompile"
+- Fix crash when drag and dropping APK file
+
+If you are using Java 20 and encountered "Invalid CEN header (invalid zip64 extra data field size)" error, enable "custom JVM arguments" in settings to temporary fix this issue. See issue #13 on Github repo
+
 3.2.2.0
 - Dark theme (Currently there is no dark scrollbar, and tabs looks quite ugly)
 - Fix crash when dropping decompiled APK on compile panel
