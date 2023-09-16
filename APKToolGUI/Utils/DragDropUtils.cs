@@ -3,6 +3,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
+using System.Windows.Markup;
 
 namespace SaveToGameWpf.Logic.Utils
 {
@@ -39,7 +40,7 @@ namespace SaveToGameWpf.Logic.Utils
             string[] files = e.GetFilesDrop();
             if (extensions == null && Directory.Exists(files[0]))
                 e.Effect = DragDropEffects.Copy;
-            else if (extensions.Any(ext => files[0].EndsWith(ext, StringComparison.Ordinal)))
+            else if (extensions != null && extensions.Any(ext => files[0].EndsWith(ext, StringComparison.Ordinal)))
                 e.Effect = DragDropEffects.Copy;
             else
                 e.Effect = DragDropEffects.None;
@@ -73,7 +74,7 @@ namespace SaveToGameWpf.Logic.Utils
                 e.Effect = DragDropEffects.Move;
                 return true;
             }
-            else if (extensions.Any(ext => files[0].EndsWith(ext, StringComparison.Ordinal)))
+            else if (extensions != null && extensions.Any(ext => files[0].EndsWith(ext, StringComparison.Ordinal)))
             {
                 e.Effect = DragDropEffects.Move;
                 return true;

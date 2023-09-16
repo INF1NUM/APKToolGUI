@@ -248,7 +248,7 @@ namespace APKToolGUI
                 try
                 {
                     string splitPath = Path.Combine(Program.TEMP_PATH, "SplitInfo");
-                    string arch = null;
+                    string arch = "";
 
                     await Task.Factory.StartNew(() =>
                     {
