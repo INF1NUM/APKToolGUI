@@ -250,6 +250,15 @@ namespace APKToolGUI.Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Copy file &quot;{0}&quot; to &quot;{1}&quot;.
+        /// </summary>
+        internal static string CopyFileTo {
+            get {
+                return ResourceManager.GetString("CopyFileTo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Copy file &quot;{0}&quot; to temp directory &quot;{1}&quot;.
         /// </summary>
         internal static string CopyFileToTemp {

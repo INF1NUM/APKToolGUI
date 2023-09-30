@@ -955,6 +955,7 @@ namespace APKToolGUI
                 await Task.Factory.StartNew(() =>
                 {
                     string outputFile = inputFolder + " compiled.apk";
+                    string outputUnsignedApk = inputFolder + " unsigned.apk";
                     if (Settings.Default.Build_SignAfterBuild)
                         outputFile = inputFolder + " signed.apk";
                     if (Settings.Default.Build_UseOutputAppPath && !IgnoreOutputDirContextMenu)
@@ -985,6 +986,22 @@ namespace APKToolGUI
                     {
                         ToLog(ApktoolEventType.None, String.Format(Language.CompilingSuccessfullyCompleted, outputFile));
 
+                        if (Settings.Default.Build_CreateUnsignedApk)
+                        {
+                            ToStatus(Language.CreateUnsignedApk, Resources.waiting);
+                            ToLog(ApktoolEventType.Infomation, "=====[ " + Language.CreateUnsignedApk + " ]=====");
+
+                            if (Directory.Exists(Path.Combine(inputFolder, "original", "META-INF")))
+                            {
+                                string unsignedApkPath = Path.Combine(Path.GetDirectoryName(outputCompiledApkFile), Path.GetFileName(outputUnsignedApk));
+                                ZipUtils.UpdateDirectory(outputFile, Path.Combine(inputFolder, "original", "META-INF"), "META-INF");
+                                ToLog(ApktoolEventType.Infomation, String.Format(Language.CopyFileTo, outputFile, unsignedApkPath));
+                                File.Copy(outputFile, unsignedApkPath, true);
+                            }
+                            else
+                                ToLog(ApktoolEventType.Warning, Language.MetainfNotExist);
+                        }
+
                         if (Settings.Default.Build_ZipalignAfterBuild)
                         {
                             ToStatus(Language.Aligning, Resources.waiting);
@@ -994,20 +1011,6 @@ namespace APKToolGUI
                             if (zipalign.Align(outputFile, outputFile) == 0)
                             {
                                 ToLog(ApktoolEventType.None, Language.Done);
-                                if (Settings.Default.Build_CreateUnsignedApk)
-                                {
-                                    ToStatus(Language.CreateUnsignedApk, Resources.waiting);
-                                    ToLog(ApktoolEventType.Infomation, "=====[ " + Language.CreateUnsignedApk + " ]=====");
-
-                                    if (Directory.Exists(Path.Combine(inputFolder, "original", "META-INF")))
-                                    {
-                                        ZipUtils.UpdateDirectory(outputFile, Path.Combine(inputFolder, "original", "META-INF"), "META-INF");
-                                        File.Copy(outputFile, Path.Combine(Path.GetDirectoryName(outputFile), Path.GetFileName(inputFolder) + " unsigned.apk"), true);
-                                        ToLog(ApktoolEventType.None, Language.Done);
-                                    }
-                                    else
-                                        ToLog(ApktoolEventType.Warning, Language.MetainfNotExist);
-                                }
                             }
                             else
                             {

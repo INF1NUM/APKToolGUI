@@ -534,4 +534,7 @@
   <data name="FixApktoolYml" xml:space="preserve">
     <value>Fixed apktool.yml</value>
   </data>
+  <data name="CopyFileTo" xml:space="preserve">
+    <value>Copy file "{0}" to "{1}"</value>
+  </data>
 </root>
