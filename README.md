@@ -10,6 +10,10 @@ It is a tool for reverse engineering 3rd party, closed, binary Android apps. It 
 # Download links
 https://github.com/AndnixSH/APKToolGUI/releases
 
+Any such report from your antivirus is a false positive and is due to how the application works. You must manually add APKToolGUI.exe to your antivirus's whitelist/exclusion list.
+
+If you don't believe this then try to compile the app by yourself or simply don't use it until you can confirm it is safe by working directly with your antiirus provider.
+
 # Requirements
 - Windows 7 32-bit/64-bit and above
 - [Java](https://www.java.com/en/) or [JDK](https://www.oracle.com/java/technologies/downloads/) 8 or above. Using latest JDK is not really necessary, it tends to cause unexpected issues. Java 8 and 17 (long-term support release) is enough. Use 64-bit version if your system is 64-bit
@@ -79,9 +83,6 @@ A: Download [Baksmali.jar/Smali.jar](https://bitbucket.org/JesusFreke/smali/down
 
 ##### Q: How to reset?
 A: Simply delete the config.xml file from the directory of the executeable
-
-##### Q: Why this tool is a virus?
-A: It just a false positive, anti-virus always flag tools/softwares like this as virus. Don't always believe what your anti-virus are telling you. Try to compile the source by yourself and you will see
 
 ##### Q: Can you make an automatic APK injecting tool?
 A: No, I'm not interested.
