@@ -1,3 +1,6 @@
+3.3.0.1
+- Fixed an issue that caused installation fail after compiling
+
 3.3.0.0
 - Updated Simplified Chinese translation
 - Removed android.intent.action.MAIN from "Fix ApkTool errors after decompile"
