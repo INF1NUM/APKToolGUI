@@ -45,7 +45,7 @@ namespace APKToolGUI.Handlers
             Register(main.signPanel, null, signEventHandler, apks);
             Register(main.textBox_SIGN_InputFile, main.signPanel, signEventHandler, apks);
             Register(main.button_SIGN_Sign, main.signPanel, signEventHandler, apks);
-            
+
             DragEventHandler mergeEventHandler = new DragEventHandler((sender, e) => { DropApkToMerge(e); });
             Register(main.splitApkTxt, null, signEventHandler, apks);
             Register(main.splitApkPathTxtBox, main.mergePanel, mergeEventHandler, apks);
@@ -94,14 +94,7 @@ namespace APKToolGUI.Handlers
 
                     if (apkFile.ContainsAny(".xapk", ".zip", ".apks", ".apkm"))
                     {
-                        if (Settings.Default.Decode_UseApkEditorMergeApk)
-                        {
-                            await main.ApkEditor_MergeAndDecompile(apkFile);
-                        }
-                        else
-                        {
-                            await main.MergeAndDecompile(apkFile);
-                        }
+                        await main.MergeAndDecompile(apkFile);
                     }
                     else
                         await main.Decompile(apkFile);
@@ -171,7 +164,7 @@ namespace APKToolGUI.Handlers
                 {
                     main.splitApkPathTxtBox.Text = apkFile;
 
-                    await main.ApkEditor_Merge(apkFile);
+                    await main.Merge(apkFile);
                 }
             }
         }

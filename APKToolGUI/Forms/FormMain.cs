@@ -14,7 +14,6 @@ using System.Collections.Generic;
 using APKToolGUI.Handlers;
 using Microsoft.WindowsAPICodePack.Taskbar;
 using System.Media;
-using APKSMerger.AndroidRes;
 using Ionic.Zip;
 using System.Linq;
 using System.Windows.Interop;
@@ -183,16 +182,8 @@ namespace APKToolGUI
                         case "decapk":
                             if (file.ContainsAny(".xapk", ".zip", ".apks", ".apkm"))
                             {
-                                if (Settings.Default.Decode_UseApkEditorMergeApk)
-                                {
-                                    if (await ApkEditor_MergeAndDecompile(file) == 0)
-                                        Close();
-                                }
-                                else
-                                {
-                                    if (await MergeAndDecompile(file) == 0)
-                                        Close();
-                                }
+                                if (await MergeAndDecompile(file) == 0)
+                                    Close();
                             }
                             else
                             {
@@ -553,108 +544,6 @@ namespace APKToolGUI
         }
         #endregion
 
-        #region Merge APK
-        internal async Task<int> MergeAndDecompile(string inputSplitApk)
-        {
-            int code = 0;
-
-            Running(Language.MergingApk);
-
-            ToLog(ApktoolEventType.None, String.Format(Language.InputFile, inputSplitApk));
-
-            string apkFileName = Path.GetFileName(inputSplitApk);
-
-            string tempApk = Path.Combine(Program.TEMP_PATH, "dec.apk");
-
-            string extractedSplitDir = Path.Combine(Program.TEMP_PATH, "SplitApk");
-            string decompileDir = Path.Combine(Program.TEMP_PATH, "Decompiled");
-            string mergedDir = Path.Combine(Program.TEMP_PATH, "Merged");
-
-            string outputDir = PathUtils.GetDirectoryNameWithoutExtension(inputSplitApk);
-            if (Settings.Default.Decode_UseOutputDir && !IgnoreOutputDirContextMenu)
-                outputDir = Path.Combine(Settings.Default.Decode_OutputDir, Path.GetFileNameWithoutExtension(inputSplitApk));
-
-            try
-            {
-                DirectoryUtils.Delete(extractedSplitDir);
-                Directory.CreateDirectory(extractedSplitDir);
-                DirectoryUtils.Delete(mergedDir);
-                Directory.CreateDirectory(mergedDir);
-
-                await Task.Factory.StartNew(() =>
-                {
-                    if (Settings.Default.Framework_ClearBeforeDecode)
-                    {
-                        ToLog(ApktoolEventType.Infomation, Language.ClearingFramework);
-                        if (apktool.ClearFramework() == 0)
-                        {
-                            ToLog(ApktoolEventType.Success, Language.FrameworkCacheCleared);
-                        }
-                        else
-                            ToLog(ApktoolEventType.Error, Language.ErrorClearingFw);
-                    }
-
-                    //Extract all apk files
-                    ToLog(ApktoolEventType.None, Language.ExtractingAllApkFiles);
-                    ZipUtils.ExtractAll(inputSplitApk, extractedSplitDir, true);
-
-                    //Decompile all apk files
-                    ToLog(ApktoolEventType.None, Language.DecompilingAllApkFiles);
-
-                    List<DirectoryInfo> splitDirs = new List<DirectoryInfo>();
-                    var apkfiles = Directory.EnumerateFiles(extractedSplitDir, "*.apk");
-
-                    foreach (string apk in apkfiles)
-                    {
-                        string output = Path.Combine(decompileDir, Path.GetFileNameWithoutExtension(apk));
-
-                        code = apktool.Decompile(apk, output);
-                        if (code != 0)
-                        {
-                            Error(Language.ErrorDecompiling);
-                            return;
-                        }
-
-                        if (Directory.Exists(Path.Combine(output, "smali")) || File.Exists(Path.Combine(output, "classes.dex")))
-                        {
-                            ToLog(ApktoolEventType.Infomation, String.Format(Language.DetectedAsBase, apk));
-
-                            ToLog(ApktoolEventType.None, String.Format(Language.MovingBasedirectory, decompileDir));
-                            DirectoryUtils.Move(output, mergedDir);
-                            continue;
-                        }
-
-                        DirectoryInfo splitI = new DirectoryInfo(output);
-                        ToLog(ApktoolEventType.Infomation, String.Format(Language.DetectedAsSplit, apk));
-                        splitDirs.Add(splitI);
-                    }
-
-                    AndroidMerger merger = new AndroidMerger();
-                    DirectoryInfo baseDir = new DirectoryInfo(mergedDir);
-
-                    Dictionary<string, string> locales, abis;
-
-                    ToLog(ApktoolEventType.None, Language.MergingApk);
-                    merger.CollectCapabilities(out locales, out abis, baseDir, splitDirs.ToArray());
-                    merger.MergeSplits(baseDir, splitDirs.ToArray());
-
-                    ToLog(ApktoolEventType.None, String.Format(Language.MergeFinishedMoveDir, outputDir));
-                    DirectoryUtils.Move(mergedDir, outputDir);
-                });
-
-                Done();
-            }
-            catch (Exception ex)
-            {
-                code = 1;
-                ToLog(ApktoolEventType.Error, ex.ToString());
-                Error(ex.Message);
-            }
-
-            return code;
-        }
-        #endregion
-
         #region ApkEditor
         private void InitializeApkEditor()
         {
@@ -673,7 +562,7 @@ namespace APKToolGUI
             ToLog(ApktoolEventType.None, e.Message);
         }
 
-        internal async Task<int> ApkEditor_MergeAndDecompile(string inputSplitApk)
+        internal async Task<int> MergeAndDecompile(string inputSplitApk)
         {
             int code = 0;
 
@@ -781,7 +670,7 @@ namespace APKToolGUI
             return code;
         }
 
-        internal async Task<int> ApkEditor_Merge(string inputSplitApk)
+        internal async Task<int> Merge(string inputSplitApk)
         {
             int code = 0;
 
@@ -798,7 +687,7 @@ namespace APKToolGUI
                 await Task.Factory.StartNew(() =>
                 {
                     ToLog(ApktoolEventType.None, String.Format(Language.InputFile, inputSplitApk));
-                   
+
                     ToLog(ApktoolEventType.None, Language.MergingApkEditor);
 
                     ToLog(ApktoolEventType.None, String.Format(Language.CopyFileToTemp, inputSplitApk, tempFile));

@@ -113,7 +113,6 @@
             this.tabPageDecode = new System.Windows.Forms.TabPage();
             this.groupBox_DECODE_Options = new System.Windows.Forms.GroupBox();
             this.checkBox7 = new System.Windows.Forms.CheckBox();
-            this.checkBox_DECODE_UseApkEditorMerge = new System.Windows.Forms.CheckBox();
             this.decApiLvlUpDown = new System.Windows.Forms.NumericUpDown();
             this.decSetApiLvlChkBox = new System.Windows.Forms.CheckBox();
             this.checkBox_DECODE_FixError = new System.Windows.Forms.CheckBox();
@@ -873,7 +872,6 @@
             // groupBox_DECODE_Options
             // 
             this.groupBox_DECODE_Options.Controls.Add(this.checkBox7);
-            this.groupBox_DECODE_Options.Controls.Add(this.checkBox_DECODE_UseApkEditorMerge);
             this.groupBox_DECODE_Options.Controls.Add(this.decApiLvlUpDown);
             this.groupBox_DECODE_Options.Controls.Add(this.decSetApiLvlChkBox);
             this.groupBox_DECODE_Options.Controls.Add(this.checkBox_DECODE_FixError);
@@ -901,15 +899,6 @@
             this.checkBox7.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "Decode_DontParseApkInfo", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.checkBox7.Name = "checkBox7";
             this.checkBox7.UseVisualStyleBackColor = true;
-            // 
-            // checkBox_DECODE_UseApkEditorMerge
-            // 
-            resources.ApplyResources(this.checkBox_DECODE_UseApkEditorMerge, "checkBox_DECODE_UseApkEditorMerge");
-            this.checkBox_DECODE_UseApkEditorMerge.Checked = global::APKToolGUI.Properties.Settings.Default.Decode_UseApkEditorMergeApk;
-            this.checkBox_DECODE_UseApkEditorMerge.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox_DECODE_UseApkEditorMerge.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "Decode_UseApkEditorMergeApk", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.checkBox_DECODE_UseApkEditorMerge.Name = "checkBox_DECODE_UseApkEditorMerge";
-            this.checkBox_DECODE_UseApkEditorMerge.UseVisualStyleBackColor = true;
             // 
             // decApiLvlUpDown
             // 
@@ -2340,7 +2329,6 @@
         internal System.Windows.Forms.Label label31;
         internal System.Windows.Forms.RichTextBox logTxtBox;
         internal System.Windows.Forms.ToolStripMenuItem copyToolStripMenuItem;
-        private System.Windows.Forms.CheckBox checkBox_DECODE_UseApkEditorMerge;
         private System.Windows.Forms.ToolTip toolTip1;
         internal System.Windows.Forms.Button selApkAdbBtn;
         private System.Windows.Forms.Label label32;

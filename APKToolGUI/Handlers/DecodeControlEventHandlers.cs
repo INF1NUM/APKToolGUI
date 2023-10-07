@@ -98,14 +98,7 @@ namespace APKToolGUI.Handlers
 
                 if (inputFile.ContainsAny(".xapk", ".zip", ".apks", ".apkm"))
                 {
-                    if (Settings.Default.Decode_UseApkEditorMergeApk)
-                    {
-                        await main.ApkEditor_MergeAndDecompile(inputFile);
-                    }
-                    else
-                    {
-                        await main.MergeAndDecompile(inputFile);
-                    }
+                    await main.MergeAndDecompile(inputFile);
                 }
                 else
                     await main.Decompile(inputFile);

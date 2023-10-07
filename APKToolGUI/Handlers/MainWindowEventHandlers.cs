@@ -54,7 +54,7 @@ namespace APKToolGUI.Handlers
                     return;
                 }
 
-                await main.ApkEditor_Merge(Settings.Default.SplitApk_InputFile);
+                await main.Merge(Settings.Default.SplitApk_InputFile);
             }
             catch (Exception ex)
             {
