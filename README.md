@@ -112,7 +112,6 @@ Use Visual Studio 2019 and above. NET Framework 4.8 SDK is required
 - INF1NUM (Original author of [APKToolGUI](https://github.com/INF1NUM/APKToolGUI))
 - iBotPeaches ([Apktool CLI](https://ibotpeaches.github.io/Apktool/))
 - REAndroid ([APKEditor](https://github.com/REAndroid/APKEditor))
-- shadow578 ([ApksMerger](https://github.com/shadow578/ApksMerger))
 
 # Disclaimer
 Same as Apktool by iBotPeaches, It is NOT intended for piracy and other non-legal uses. It could be used for localizing, adding some features or support for custom platforms and other GOOD purposes. Just try to be fair with authors of an app, that you use and probably like.
