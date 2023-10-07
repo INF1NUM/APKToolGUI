@@ -54,6 +54,8 @@ namespace APKToolGUI.Handlers
         {
             using (OpenFileDialog ofd = new OpenFileDialog())
             {
+                ofd.Filter = "Android Package (*.apk;*.xapk;*.zip*.apkm;*.apks)|*.apk;*.xapk;*.zip*.apkm;*.apks";
+
                 if (ofd.ShowDialog() == DialogResult.OK)
                 {
                     main.textBox_DECODE_InputAppPath.Text = ofd.FileName;
@@ -98,11 +100,11 @@ namespace APKToolGUI.Handlers
                 {
                     if (Settings.Default.Decode_UseApkEditorMergeApk)
                     {
-                        await main.MergeUsingApkEditor(inputFile);
+                        await main.ApkEditor_MergeAndDecompile(inputFile);
                     }
                     else
                     {
-                        await main.Merge(inputFile);
+                        await main.MergeAndDecompile(inputFile);
                     }
                 }
                 else

@@ -275,5 +275,8 @@
     <Setting Name="CustomJVMArgs" Roaming="true" Type="System.String" Scope="User">
       <Value Profile="(Default)">-Dfile.encoding=UTF8 -Djdk.util.zip.disableZip64ExtraFieldValidation=true -Djdk.nio.zipfs.allowDotZipEntry=true</Value>
     </Setting>
+    <Setting Name="SplitApk_InputFile" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
   </Settings>
 </SettingsFile>

@@ -32,6 +32,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.tabControlMain = new System.Windows.Forms.TabControl();
             this.tabPageMain = new System.Windows.Forms.TabPage();
+            this.mergePanel = new System.Windows.Forms.Panel();
+            this.splitApkTxt = new System.Windows.Forms.Label();
+            this.splitApkPathTxtBox = new System.Windows.Forms.TextBox();
+            this.selSplitApkBtn = new System.Windows.Forms.Button();
+            this.mergeApkBtn = new System.Windows.Forms.Button();
             this.comApkOpenDir = new System.Windows.Forms.Button();
             this.decOutOpenDirBtn = new System.Windows.Forms.Button();
             this.signApkOpenDirBtn = new System.Windows.Forms.Button();
@@ -258,6 +263,7 @@
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.tabControlMain.SuspendLayout();
             this.tabPageMain.SuspendLayout();
+            this.mergePanel.SuspendLayout();
             this.signPanel.SuspendLayout();
             this.zipalignPanel.SuspendLayout();
             this.comPanel.SuspendLayout();
@@ -293,7 +299,6 @@
             // tabControlMain
             // 
             this.tabControlMain.AllowDrop = true;
-            resources.ApplyResources(this.tabControlMain, "tabControlMain");
             this.tabControlMain.Controls.Add(this.tabPageMain);
             this.tabControlMain.Controls.Add(this.tabPageApkInfo);
             this.tabControlMain.Controls.Add(this.tabPageDecode);
@@ -303,6 +308,7 @@
             this.tabControlMain.Controls.Add(this.tabPageInstallFramework);
             this.tabControlMain.Controls.Add(this.tabPageBaksmali);
             this.tabControlMain.Controls.Add(this.tabPageAdb);
+            resources.ApplyResources(this.tabControlMain, "tabControlMain");
             this.tabControlMain.Name = "tabControlMain";
             this.tabControlMain.SelectedIndex = 0;
             this.tabControlMain.SelectedIndexChanged += new System.EventHandler(this.tabControlMain_SelectedIndexChanged);
@@ -310,6 +316,7 @@
             // tabPageMain
             // 
             this.tabPageMain.BackColor = System.Drawing.Color.White;
+            this.tabPageMain.Controls.Add(this.mergePanel);
             this.tabPageMain.Controls.Add(this.comApkOpenDir);
             this.tabPageMain.Controls.Add(this.decOutOpenDirBtn);
             this.tabPageMain.Controls.Add(this.signApkOpenDirBtn);
@@ -325,6 +332,42 @@
             this.tabPageMain.Controls.Add(this.decPanel);
             resources.ApplyResources(this.tabPageMain, "tabPageMain");
             this.tabPageMain.Name = "tabPageMain";
+            // 
+            // mergePanel
+            // 
+            this.mergePanel.AllowDrop = true;
+            resources.ApplyResources(this.mergePanel, "mergePanel");
+            this.mergePanel.Controls.Add(this.splitApkTxt);
+            this.mergePanel.Controls.Add(this.splitApkPathTxtBox);
+            this.mergePanel.Controls.Add(this.selSplitApkBtn);
+            this.mergePanel.Controls.Add(this.mergeApkBtn);
+            this.mergePanel.Name = "mergePanel";
+            // 
+            // splitApkTxt
+            // 
+            resources.ApplyResources(this.splitApkTxt, "splitApkTxt");
+            this.splitApkTxt.Name = "splitApkTxt";
+            // 
+            // splitApkPathTxtBox
+            // 
+            this.splitApkPathTxtBox.AllowDrop = true;
+            resources.ApplyResources(this.splitApkPathTxtBox, "splitApkPathTxtBox");
+            this.splitApkPathTxtBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::APKToolGUI.Properties.Settings.Default, "SplitApk_InputFile", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.splitApkPathTxtBox.Name = "splitApkPathTxtBox";
+            this.splitApkPathTxtBox.Text = global::APKToolGUI.Properties.Settings.Default.SplitApk_InputFile;
+            // 
+            // selSplitApkBtn
+            // 
+            resources.ApplyResources(this.selSplitApkBtn, "selSplitApkBtn");
+            this.selSplitApkBtn.Name = "selSplitApkBtn";
+            this.selSplitApkBtn.UseVisualStyleBackColor = true;
+            // 
+            // mergeApkBtn
+            // 
+            this.mergeApkBtn.AllowDrop = true;
+            resources.ApplyResources(this.mergeApkBtn, "mergeApkBtn");
+            this.mergeApkBtn.Name = "mergeApkBtn";
+            this.mergeApkBtn.UseVisualStyleBackColor = true;
             // 
             // comApkOpenDir
             // 
@@ -383,11 +426,11 @@
             // signPanel
             // 
             this.signPanel.AllowDrop = true;
+            resources.ApplyResources(this.signPanel, "signPanel");
             this.signPanel.Controls.Add(this.label4);
             this.signPanel.Controls.Add(this.textBox_SIGN_InputFile);
             this.signPanel.Controls.Add(this.button_SIGN_BrowseInputFile);
             this.signPanel.Controls.Add(this.button_SIGN_Sign);
-            resources.ApplyResources(this.signPanel, "signPanel");
             this.signPanel.Name = "signPanel";
             // 
             // label4
@@ -419,11 +462,11 @@
             // zipalignPanel
             // 
             this.zipalignPanel.AllowDrop = true;
+            resources.ApplyResources(this.zipalignPanel, "zipalignPanel");
             this.zipalignPanel.Controls.Add(this.label3);
             this.zipalignPanel.Controls.Add(this.button_ZIPALIGN_Align);
             this.zipalignPanel.Controls.Add(this.button_ZIPALIGN_BrowseInputFile);
             this.zipalignPanel.Controls.Add(this.textBox_ZIPALIGN_InputFile);
-            resources.ApplyResources(this.zipalignPanel, "zipalignPanel");
             this.zipalignPanel.Name = "zipalignPanel";
             // 
             // label3
@@ -455,11 +498,11 @@
             // comPanel
             // 
             this.comPanel.AllowDrop = true;
+            resources.ApplyResources(this.comPanel, "comPanel");
             this.comPanel.Controls.Add(this.label2);
             this.comPanel.Controls.Add(this.button_BUILD_BrowseInputProjectDir);
             this.comPanel.Controls.Add(this.button_BUILD_Build);
             this.comPanel.Controls.Add(this.textBox_BUILD_InputProjectDir);
-            resources.ApplyResources(this.comPanel, "comPanel");
             this.comPanel.Name = "comPanel";
             // 
             // label2
@@ -491,12 +534,12 @@
             // decPanel
             // 
             this.decPanel.AllowDrop = true;
+            resources.ApplyResources(this.decPanel, "decPanel");
             this.decPanel.BackColor = System.Drawing.Color.White;
             this.decPanel.Controls.Add(this.label1);
             this.decPanel.Controls.Add(this.textBox_DECODE_InputAppPath);
             this.decPanel.Controls.Add(this.button_DECODE_Decode);
             this.decPanel.Controls.Add(this.button_DECODE_BrowseInputAppPath);
-            resources.ApplyResources(this.decPanel, "decPanel");
             this.decPanel.Name = "decPanel";
             // 
             // label1
@@ -1917,8 +1960,8 @@
             // 
             // logTxtBox
             // 
-            this.logTxtBox.ContextMenuStrip = this.contextMenuStripLog;
             resources.ApplyResources(this.logTxtBox, "logTxtBox");
+            this.logTxtBox.ContextMenuStrip = this.contextMenuStripLog;
             this.logTxtBox.HideSelection = false;
             this.logTxtBox.Name = "logTxtBox";
             this.logTxtBox.ReadOnly = true;
@@ -2047,6 +2090,8 @@
             this.Shown += new System.EventHandler(this.FormMain_Shown);
             this.tabControlMain.ResumeLayout(false);
             this.tabPageMain.ResumeLayout(false);
+            this.mergePanel.ResumeLayout(false);
+            this.mergePanel.PerformLayout();
             this.signPanel.ResumeLayout(false);
             this.signPanel.PerformLayout();
             this.zipalignPanel.ResumeLayout(false);
@@ -2326,6 +2371,11 @@
         internal System.Windows.Forms.Label label34;
         private System.Windows.Forms.CheckBox checkBox7;
         internal System.Windows.Forms.ToolStripMenuItem newInsToolStripMenuItem;
+        internal System.Windows.Forms.Panel mergePanel;
+        internal System.Windows.Forms.Label splitApkTxt;
+        internal System.Windows.Forms.TextBox splitApkPathTxtBox;
+        internal System.Windows.Forms.Button selSplitApkBtn;
+        internal System.Windows.Forms.Button mergeApkBtn;
     }
 }
 

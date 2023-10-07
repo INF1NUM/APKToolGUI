@@ -185,12 +185,12 @@ namespace APKToolGUI
                             {
                                 if (Settings.Default.Decode_UseApkEditorMergeApk)
                                 {
-                                    if (await MergeUsingApkEditor(file) == 0)
+                                    if (await ApkEditor_MergeAndDecompile(file) == 0)
                                         Close();
                                 }
                                 else
                                 {
-                                    if (await Merge(file) == 0)
+                                    if (await MergeAndDecompile(file) == 0)
                                         Close();
                                 }
                             }
@@ -554,7 +554,7 @@ namespace APKToolGUI
         #endregion
 
         #region Merge APK
-        internal async Task<int> Merge(string inputSplitApk)
+        internal async Task<int> MergeAndDecompile(string inputSplitApk)
         {
             int code = 0;
 
@@ -673,7 +673,7 @@ namespace APKToolGUI
             ToLog(ApktoolEventType.None, e.Message);
         }
 
-        internal async Task<int> MergeUsingApkEditor(string inputSplitApk)
+        internal async Task<int> ApkEditor_MergeAndDecompile(string inputSplitApk)
         {
             int code = 0;
 
@@ -764,6 +764,52 @@ namespace APKToolGUI
                         {
                             Error(Language.ErrorDecompiling);
                         }
+                    }
+                    else
+                    {
+                        Error(Language.ErrorMerging);
+                    }
+                });
+            }
+            catch (Exception ex)
+            {
+                code = 1;
+                ToLog(ApktoolEventType.Error, ex.Message);
+                Error(ex.Message);
+            }
+
+            return code;
+        }
+
+        internal async Task<int> ApkEditor_Merge(string inputSplitApk)
+        {
+            int code = 0;
+
+            Running(Language.MergingApk);
+
+            string apkFileName = Path.GetFileName(inputSplitApk);
+            string tempFile = Path.Combine(Program.TEMP_PATH, "tempsplit");
+            string tempFileMerged = Path.Combine(Program.TEMP_PATH, "tempsplitmerged");
+
+            string outputFile = PathUtils.GetDirectoryNameWithoutExtension(inputSplitApk) + " merged.apk";
+
+            try
+            {
+                await Task.Factory.StartNew(() =>
+                {
+                    ToLog(ApktoolEventType.None, String.Format(Language.InputFile, inputSplitApk));
+                   
+                    ToLog(ApktoolEventType.None, Language.MergingApkEditor);
+
+                    ToLog(ApktoolEventType.None, String.Format(Language.CopyFileToTemp, inputSplitApk, tempFile));
+                    FileUtils.Copy(inputSplitApk, tempFile, true);
+
+                    code = apkeditor.Merge(tempFile, tempFileMerged);
+                    if (code == 0)
+                    {
+                        ToLog(ApktoolEventType.None, String.Format(Language.MoveTempApkToOutput, tempFile, outputFile));
+                        FileUtils.Move(tempFileMerged, outputFile, true);
+                        Done();
                     }
                     else
                     {
@@ -1593,6 +1639,7 @@ namespace APKToolGUI
                 setVendorChkBox.Enabled = value;
             }
         }
+
         internal void ShowMessage(string message, MessageBoxIcon status)
         {
             MessageBox.Show(message, Application.ProductName, MessageBoxButtons.OK, status);

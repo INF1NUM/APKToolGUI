@@ -118,8 +118,151 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="tabControlMain.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="mergePanel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="splitApkTxt.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="splitApkTxt.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="splitApkTxt.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 4</value>
+  </data>
+  <data name="splitApkTxt.Size" type="System.Drawing.Size, System.Drawing">
+    <value>170, 13</value>
+  </data>
+  <data name="splitApkTxt.TabIndex" type="System.Int32, mscorlib">
+    <value>23</value>
+  </data>
+  <data name="splitApkTxt.Text" xml:space="preserve">
+    <value>Merge split APK into single APK:</value>
+  </data>
+  <data name="&gt;&gt;splitApkTxt.Name" xml:space="preserve">
+    <value>splitApkTxt</value>
+  </data>
+  <data name="&gt;&gt;splitApkTxt.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;splitApkTxt.Parent" xml:space="preserve">
+    <value>mergePanel</value>
+  </data>
+  <data name="&gt;&gt;splitApkTxt.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="splitApkPathTxtBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="splitApkPathTxtBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 20</value>
+  </data>
+  <data name="splitApkPathTxtBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>439, 22</value>
+  </data>
+  <data name="splitApkPathTxtBox.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;splitApkPathTxtBox.Name" xml:space="preserve">
+    <value>splitApkPathTxtBox</value>
+  </data>
+  <data name="&gt;&gt;splitApkPathTxtBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;splitApkPathTxtBox.Parent" xml:space="preserve">
+    <value>mergePanel</value>
+  </data>
+  <data name="&gt;&gt;splitApkPathTxtBox.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="selSplitApkBtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="selSplitApkBtn.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>System</value>
+  </data>
+  <data name="selSplitApkBtn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="selSplitApkBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>449, 19</value>
+  </data>
+  <data name="selSplitApkBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>28, 24</value>
+  </data>
+  <data name="selSplitApkBtn.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="selSplitApkBtn.Text" xml:space="preserve">
+    <value>...</value>
+  </data>
+  <data name="&gt;&gt;selSplitApkBtn.Name" xml:space="preserve">
+    <value>selSplitApkBtn</value>
+  </data>
+  <data name="&gt;&gt;selSplitApkBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;selSplitApkBtn.Parent" xml:space="preserve">
+    <value>mergePanel</value>
+  </data>
+  <data name="&gt;&gt;selSplitApkBtn.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="mergeApkBtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="mergeApkBtn.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>System</value>
+  </data>
+  <data name="mergeApkBtn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="mergeApkBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>482, 19</value>
+  </data>
+  <data name="mergeApkBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>105, 24</value>
+  </data>
+  <data name="mergeApkBtn.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="mergeApkBtn.Text" xml:space="preserve">
+    <value>Merge</value>
+  </data>
+  <data name="&gt;&gt;mergeApkBtn.Name" xml:space="preserve">
+    <value>mergeApkBtn</value>
+  </data>
+  <data name="&gt;&gt;mergeApkBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mergeApkBtn.Parent" xml:space="preserve">
+    <value>mergePanel</value>
+  </data>
+  <data name="&gt;&gt;mergeApkBtn.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="mergePanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 176</value>
+  </data>
+  <data name="mergePanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>589, 45</value>
+  </data>
+  <data name="mergePanel.TabIndex" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <data name="&gt;&gt;mergePanel.Name" xml:space="preserve">
+    <value>mergePanel</value>
+  </data>
+  <data name="&gt;&gt;mergePanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mergePanel.Parent" xml:space="preserve">
+    <value>tabPageMain</value>
+  </data>
+  <data name="&gt;&gt;mergePanel.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="comApkOpenDir.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -130,14 +273,12 @@
   <data name="comApkOpenDir.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="comApkOpenDir.Location" type="System.Drawing.Point, System.Drawing">
-    <value>206, 225</value>
+    <value>206, 253</value>
   </data>
   <data name="comApkOpenDir.Size" type="System.Drawing.Size, System.Drawing">
     <value>175, 24</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="comApkOpenDir.TabIndex" type="System.Int32, mscorlib">
     <value>24</value>
   </data>
@@ -154,7 +295,7 @@
     <value>tabPageMain</value>
   </data>
   <data name="&gt;&gt;comApkOpenDir.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="decOutOpenDirBtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -166,7 +307,7 @@
     <value>NoControl</value>
   </data>
   <data name="decOutOpenDirBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 197</value>
+    <value>7, 225</value>
   </data>
   <data name="decOutOpenDirBtn.Size" type="System.Drawing.Size, System.Drawing">
     <value>175, 24</value>
@@ -187,7 +328,7 @@
     <value>tabPageMain</value>
   </data>
   <data name="&gt;&gt;decOutOpenDirBtn.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="signApkOpenDirBtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -199,7 +340,7 @@
     <value>NoControl</value>
   </data>
   <data name="signApkOpenDirBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>406, 225</value>
+    <value>406, 253</value>
   </data>
   <data name="signApkOpenDirBtn.Size" type="System.Drawing.Size, System.Drawing">
     <value>175, 24</value>
@@ -220,7 +361,7 @@
     <value>tabPageMain</value>
   </data>
   <data name="&gt;&gt;signApkOpenDirBtn.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="alignApkOpenDirBtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -232,7 +373,7 @@
     <value>NoControl</value>
   </data>
   <data name="alignApkOpenDirBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>406, 197</value>
+    <value>406, 225</value>
   </data>
   <data name="alignApkOpenDirBtn.Size" type="System.Drawing.Size, System.Drawing">
     <value>175, 24</value>
@@ -253,7 +394,7 @@
     <value>tabPageMain</value>
   </data>
   <data name="&gt;&gt;alignApkOpenDirBtn.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="decApkOpenDirBtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -265,7 +406,7 @@
     <value>NoControl</value>
   </data>
   <data name="decApkOpenDirBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>206, 197</value>
+    <value>206, 225</value>
   </data>
   <data name="decApkOpenDirBtn.Size" type="System.Drawing.Size, System.Drawing">
     <value>175, 24</value>
@@ -286,7 +427,7 @@
     <value>tabPageMain</value>
   </data>
   <data name="&gt;&gt;decApkOpenDirBtn.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="compileOutputOpenDirBtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -298,7 +439,7 @@
     <value>NoControl</value>
   </data>
   <data name="compileOutputOpenDirBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 225</value>
+    <value>7, 253</value>
   </data>
   <data name="compileOutputOpenDirBtn.Size" type="System.Drawing.Size, System.Drawing">
     <value>175, 23</value>
@@ -319,13 +460,13 @@
     <value>tabPageMain</value>
   </data>
   <data name="&gt;&gt;compileOutputOpenDirBtn.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="button_OpenMainActivity.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="button_OpenMainActivity.Location" type="System.Drawing.Point, System.Drawing">
-    <value>406, 253</value>
+    <value>406, 281</value>
   </data>
   <data name="button_OpenMainActivity.Size" type="System.Drawing.Size, System.Drawing">
     <value>175, 23</value>
@@ -346,13 +487,13 @@
     <value>tabPageMain</value>
   </data>
   <data name="&gt;&gt;button_OpenMainActivity.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="openApktoolYmlBtn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="openApktoolYmlBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>206, 253</value>
+    <value>206, 281</value>
   </data>
   <data name="openApktoolYmlBtn.Size" type="System.Drawing.Size, System.Drawing">
     <value>175, 23</value>
@@ -373,13 +514,13 @@
     <value>tabPageMain</value>
   </data>
   <data name="&gt;&gt;openApktoolYmlBtn.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="openAndroidMainfestBtn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="openAndroidMainfestBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 253</value>
+    <value>7, 281</value>
   </data>
   <data name="openAndroidMainfestBtn.Size" type="System.Drawing.Size, System.Drawing">
     <value>175, 23</value>
@@ -400,7 +541,10 @@
     <value>tabPageMain</value>
   </data>
   <data name="&gt;&gt;openAndroidMainfestBtn.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
+  </data>
+  <data name="signPanel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
   </data>
   <data name="label4.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -439,7 +583,7 @@
     <value>4, 20</value>
   </data>
   <data name="textBox_SIGN_InputFile.Size" type="System.Drawing.Size, System.Drawing">
-    <value>435, 22</value>
+    <value>439, 22</value>
   </data>
   <data name="textBox_SIGN_InputFile.TabIndex" type="System.Int32, mscorlib">
     <value>15</value>
@@ -466,7 +610,7 @@
     <value>NoControl</value>
   </data>
   <data name="button_SIGN_BrowseInputFile.Location" type="System.Drawing.Point, System.Drawing">
-    <value>445, 19</value>
+    <value>449, 19</value>
   </data>
   <data name="button_SIGN_BrowseInputFile.Size" type="System.Drawing.Size, System.Drawing">
     <value>28, 24</value>
@@ -499,7 +643,7 @@
     <value>NoControl</value>
   </data>
   <data name="button_SIGN_Sign.Location" type="System.Drawing.Point, System.Drawing">
-    <value>478, 19</value>
+    <value>482, 19</value>
   </data>
   <data name="button_SIGN_Sign.Size" type="System.Drawing.Size, System.Drawing">
     <value>105, 24</value>
@@ -523,10 +667,10 @@
     <value>3</value>
   </data>
   <data name="signPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 148</value>
+    <value>0, 132</value>
   </data>
   <data name="signPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>585, 45</value>
+    <value>589, 45</value>
   </data>
   <data name="signPanel.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -541,7 +685,10 @@
     <value>tabPageMain</value>
   </data>
   <data name="&gt;&gt;signPanel.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
+  </data>
+  <data name="zipalignPanel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
   </data>
   <data name="label3.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -583,7 +730,7 @@
     <value>NoControl</value>
   </data>
   <data name="button_ZIPALIGN_Align.Location" type="System.Drawing.Point, System.Drawing">
-    <value>477, 19</value>
+    <value>481, 19</value>
   </data>
   <data name="button_ZIPALIGN_Align.Size" type="System.Drawing.Size, System.Drawing">
     <value>105, 24</value>
@@ -616,7 +763,7 @@
     <value>NoControl</value>
   </data>
   <data name="button_ZIPALIGN_BrowseInputFile.Location" type="System.Drawing.Point, System.Drawing">
-    <value>444, 19</value>
+    <value>448, 19</value>
   </data>
   <data name="button_ZIPALIGN_BrowseInputFile.Size" type="System.Drawing.Size, System.Drawing">
     <value>28, 24</value>
@@ -646,7 +793,7 @@
     <value>3, 20</value>
   </data>
   <data name="textBox_ZIPALIGN_InputFile.Size" type="System.Drawing.Size, System.Drawing">
-    <value>437, 22</value>
+    <value>441, 22</value>
   </data>
   <data name="textBox_ZIPALIGN_InputFile.TabIndex" type="System.Int32, mscorlib">
     <value>20</value>
@@ -664,10 +811,10 @@
     <value>3</value>
   </data>
   <data name="zipalignPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 100</value>
+    <value>0, 88</value>
   </data>
   <data name="zipalignPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>585, 45</value>
+    <value>589, 45</value>
   </data>
   <data name="zipalignPanel.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -682,7 +829,10 @@
     <value>tabPageMain</value>
   </data>
   <data name="&gt;&gt;zipalignPanel.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>11</value>
+  </data>
+  <data name="comPanel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
   </data>
   <data name="label2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -724,7 +874,7 @@
     <value>NoControl</value>
   </data>
   <data name="button_BUILD_BrowseInputProjectDir.Location" type="System.Drawing.Point, System.Drawing">
-    <value>445, 18</value>
+    <value>449, 18</value>
   </data>
   <data name="button_BUILD_BrowseInputProjectDir.Size" type="System.Drawing.Size, System.Drawing">
     <value>28, 24</value>
@@ -757,7 +907,7 @@
     <value>NoControl</value>
   </data>
   <data name="button_BUILD_Build.Location" type="System.Drawing.Point, System.Drawing">
-    <value>478, 18</value>
+    <value>482, 18</value>
   </data>
   <data name="button_BUILD_Build.Size" type="System.Drawing.Size, System.Drawing">
     <value>105, 24</value>
@@ -787,7 +937,7 @@
     <value>4, 19</value>
   </data>
   <data name="textBox_BUILD_InputProjectDir.Size" type="System.Drawing.Size, System.Drawing">
-    <value>436, 22</value>
+    <value>440, 22</value>
   </data>
   <data name="textBox_BUILD_InputProjectDir.TabIndex" type="System.Int32, mscorlib">
     <value>13</value>
@@ -805,10 +955,10 @@
     <value>3</value>
   </data>
   <data name="comPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 52</value>
+    <value>0, 44</value>
   </data>
   <data name="comPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>585, 45</value>
+    <value>589, 45</value>
   </data>
   <data name="comPanel.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -823,7 +973,10 @@
     <value>tabPageMain</value>
   </data>
   <data name="&gt;&gt;comPanel.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>12</value>
+  </data>
+  <data name="decPanel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
   </data>
   <data name="label1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -862,7 +1015,7 @@
     <value>3, 19</value>
   </data>
   <data name="textBox_DECODE_InputAppPath.Size" type="System.Drawing.Size, System.Drawing">
-    <value>437, 22</value>
+    <value>441, 22</value>
   </data>
   <data name="textBox_DECODE_InputAppPath.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
@@ -889,7 +1042,7 @@
     <value>NoControl</value>
   </data>
   <data name="button_DECODE_Decode.Location" type="System.Drawing.Point, System.Drawing">
-    <value>477, 18</value>
+    <value>481, 18</value>
   </data>
   <data name="button_DECODE_Decode.Size" type="System.Drawing.Size, System.Drawing">
     <value>105, 24</value>
@@ -922,7 +1075,7 @@
     <value>NoControl</value>
   </data>
   <data name="button_DECODE_BrowseInputAppPath.Location" type="System.Drawing.Point, System.Drawing">
-    <value>444, 18</value>
+    <value>448, 18</value>
   </data>
   <data name="button_DECODE_BrowseInputAppPath.Size" type="System.Drawing.Size, System.Drawing">
     <value>28, 24</value>
@@ -946,10 +1099,10 @@
     <value>3</value>
   </data>
   <data name="decPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 4</value>
+    <value>0, 0</value>
   </data>
   <data name="decPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>585, 45</value>
+    <value>589, 45</value>
   </data>
   <data name="decPanel.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -964,13 +1117,13 @@
     <value>tabPageMain</value>
   </data>
   <data name="&gt;&gt;decPanel.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>13</value>
   </data>
   <data name="tabPageMain.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 27</value>
   </data>
   <data name="tabPageMain.Size" type="System.Drawing.Size, System.Drawing">
-    <value>589, 281</value>
+    <value>589, 309</value>
   </data>
   <data name="tabPageMain.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -2146,7 +2299,7 @@
     <value>4, 27</value>
   </data>
   <data name="tabPageApkInfo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>589, 281</value>
+    <value>589, 309</value>
   </data>
   <data name="tabPageApkInfo.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -2728,7 +2881,7 @@
     <value>3, 3, 3, 3</value>
   </data>
   <data name="tabPageDecode.Size" type="System.Drawing.Size, System.Drawing">
-    <value>589, 281</value>
+    <value>589, 309</value>
   </data>
   <data name="tabPageDecode.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -3328,7 +3481,7 @@
     <value>4, 27</value>
   </data>
   <data name="tabPageBuild.Size" type="System.Drawing.Size, System.Drawing">
-    <value>589, 281</value>
+    <value>589, 309</value>
   </data>
   <data name="tabPageBuild.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -4231,7 +4384,7 @@
     <value>3, 3, 3, 3</value>
   </data>
   <data name="tabPageSign.Size" type="System.Drawing.Size, System.Drawing">
-    <value>589, 281</value>
+    <value>589, 309</value>
   </data>
   <data name="tabPageSign.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -4585,7 +4738,7 @@
     <value>3, 3, 3, 3</value>
   </data>
   <data name="tabPageZipAlign.Size" type="System.Drawing.Size, System.Drawing">
-    <value>589, 281</value>
+    <value>589, 309</value>
   </data>
   <data name="tabPageZipAlign.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -4972,7 +5125,7 @@
     <value>4, 27</value>
   </data>
   <data name="tabPageInstallFramework.Size" type="System.Drawing.Size, System.Drawing">
-    <value>589, 281</value>
+    <value>589, 309</value>
   </data>
   <data name="tabPageInstallFramework.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -5455,7 +5608,7 @@
     <value>3, 3, 3, 3</value>
   </data>
   <data name="tabPageBaksmali.Size" type="System.Drawing.Size, System.Drawing">
-    <value>589, 281</value>
+    <value>589, 309</value>
   </data>
   <data name="tabPageBaksmali.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -5755,7 +5908,7 @@
     <value>3, 3, 3, 3</value>
   </data>
   <data name="tabPageAdb.Size" type="System.Drawing.Size, System.Drawing">
-    <value>589, 281</value>
+    <value>589, 309</value>
   </data>
   <data name="tabPageAdb.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -5785,7 +5938,7 @@
     <value>0, 0, 0, 0</value>
   </data>
   <data name="tabControlMain.Size" type="System.Drawing.Size, System.Drawing">
-    <value>597, 312</value>
+    <value>597, 340</value>
   </data>
   <data name="tabControlMain.TabIndex" type="System.Int32, mscorlib">
     <value>15</value>
@@ -6075,7 +6228,7 @@
     <value>False</value>
   </data>
   <data name="statusStrip1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 543</value>
+    <value>0, 542</value>
   </data>
   <data name="statusStrip1.Size" type="System.Drawing.Size, System.Drawing">
     <value>596, 22</value>
@@ -6122,14 +6275,17 @@
   <data name="&gt;&gt;contextMenuStripLog.Type" xml:space="preserve">
     <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="logTxtBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left</value>
+  </data>
   <data name="logTxtBox.Font" type="System.Drawing.Font, System.Drawing">
     <value>Consolas, 8.25pt</value>
   </data>
   <data name="logTxtBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1, 338</value>
+    <value>0, 363</value>
   </data>
   <data name="logTxtBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>593, 203</value>
+    <value>593, 179</value>
   </data>
   <data name="logTxtBox.TabIndex" type="System.Int32, mscorlib">
     <value>18</value>
@@ -6273,7 +6429,7 @@
     <value>96, 96</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>596, 565</value>
+    <value>596, 564</value>
   </data>
   <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 8.25pt</value>

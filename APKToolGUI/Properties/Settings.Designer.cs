@@ -1270,5 +1270,17 @@ namespace APKToolGUI.Properties {
                 this["CustomJVMArgs"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string SplitApk_InputFile {
+            get {
+                return ((string)(this["SplitApk_InputFile"]));
+            }
+            set {
+                this["SplitApk_InputFile"] = value;
+            }
+        }
     }
 }

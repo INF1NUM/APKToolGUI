@@ -537,4 +537,7 @@
   <data name="CopyFileTo" xml:space="preserve">
     <value>Copy file "{0}" to "{1}"</value>
   </data>
+  <data name="SplitApkNotFound" xml:space="preserve">
+    <value>Split APK is not selected</value>
+  </data>
 </root>

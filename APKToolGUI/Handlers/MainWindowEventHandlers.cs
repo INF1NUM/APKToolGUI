@@ -5,10 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+using System.Windows.Forms;
 
 namespace APKToolGUI.Handlers
 {
@@ -29,6 +26,40 @@ namespace APKToolGUI.Handlers
             main.comApkOpenDir.Click += comApkOpenDir_Click;
             main.signApkOpenDirBtn.Click += signApkOpenDirBtn_Click;
             main.alignApkOpenDirBtn.Click += alignApkOpenDirBtn_Click;
+            main.mergeApkBtn.Click += mergeApkBtn_Click;
+            main.selSplitApkBtn.Click += selSplitApkBtn_Click;
+        }
+
+        internal void selSplitApkBtn_Click(object sender, EventArgs e)
+        {
+            using (OpenFileDialog ofd = new OpenFileDialog())
+            {
+                ofd.Filter = "Split APK Package (*.xapk;*.zip*.apkm;*.apks)|*.xapk;*.zip*.apkm;*.apks";
+
+                if (ofd.ShowDialog() == DialogResult.OK)
+                {
+                    main.splitApkPathTxtBox.Text = ofd.FileName;
+                }
+            }
+        }
+
+        internal async void mergeApkBtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                main.Save();
+                if (!File.Exists(Settings.Default.SplitApk_InputFile))
+                {
+                    main.ShowMessage(Language.SplitApkNotFound, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                await main.ApkEditor_Merge(Settings.Default.SplitApk_InputFile);
+            }
+            catch (Exception ex)
+            {
+                main.ToLog(ApktoolEventType.Error, ex.Message);
+            }
         }
 
         private void clearLogToolStripMenuItem_Click(object sender, EventArgs e)
@@ -40,14 +71,13 @@ namespace APKToolGUI.Handlers
         {
             try
             {
-                Clipboard.SetText(main.logTxtBox.SelectedText);
+                System.Windows.Forms.Clipboard.SetText(main.logTxtBox.SelectedText);
             }
             catch (Exception ex)
             {
                 main.ToLog(ApktoolEventType.Error, ex.Message);
             }
         }
-
 
         internal void decApkOpenDirBtn_Click(object sender, EventArgs e)
         {

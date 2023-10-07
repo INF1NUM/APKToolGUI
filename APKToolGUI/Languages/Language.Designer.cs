@@ -1186,6 +1186,15 @@ namespace APKToolGUI.Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Split APK is not selected.
+        /// </summary>
+        internal static string SplitApkNotFound {
+            get {
+                return ResourceManager.GetString("SplitApkNotFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to System language.
         /// </summary>
         internal static string SystemLanguage {

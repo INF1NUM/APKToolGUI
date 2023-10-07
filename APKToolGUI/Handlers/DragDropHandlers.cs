@@ -45,6 +45,11 @@ namespace APKToolGUI.Handlers
             Register(main.signPanel, null, signEventHandler, apks);
             Register(main.textBox_SIGN_InputFile, main.signPanel, signEventHandler, apks);
             Register(main.button_SIGN_Sign, main.signPanel, signEventHandler, apks);
+            
+            DragEventHandler mergeEventHandler = new DragEventHandler((sender, e) => { DropApkToMerge(e); });
+            Register(main.splitApkTxt, null, signEventHandler, apks);
+            Register(main.splitApkPathTxtBox, main.mergePanel, mergeEventHandler, apks);
+            Register(main.mergeApkBtn, main.mergePanel, mergeEventHandler, apks);
 
             DragEventHandler baksmaliEventHandler = new DragEventHandler((sender, e) => { DropDexToBaksmali(e); });
             Register(main.bakSmaliGroupBox, null, baksmaliEventHandler, new string[] { ".dex" });
@@ -91,11 +96,11 @@ namespace APKToolGUI.Handlers
                     {
                         if (Settings.Default.Decode_UseApkEditorMergeApk)
                         {
-                            await main.MergeUsingApkEditor(apkFile);
+                            await main.ApkEditor_MergeAndDecompile(apkFile);
                         }
                         else
                         {
-                            await main.Merge(apkFile);
+                            await main.MergeAndDecompile(apkFile);
                         }
                     }
                     else
@@ -151,6 +156,22 @@ namespace APKToolGUI.Handlers
                     main.textBox_SIGN_InputFile.Text = apkFile;
 
                     await main.Sign(apkFile);
+                }
+            }
+        }
+
+        private async void DropApkToMerge(DragEventArgs e)
+        {
+            string[] apkFiles = null;
+            if (e.DropManyByEnd(file => apkFiles = file, apks))
+            {
+                main.mergePanel.BackColor = PanelBackColor();
+
+                foreach (var apkFile in apkFiles)
+                {
+                    main.splitApkPathTxtBox.Text = apkFile;
+
+                    await main.ApkEditor_Merge(apkFile);
                 }
             }
         }
