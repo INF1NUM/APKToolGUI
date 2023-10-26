@@ -142,49 +142,49 @@
     <value>Einstellungen</value>
   </data>
   <data name="ErrorJavaDetect" xml:space="preserve">
-    <value>Java ist nicht oder nicht korrekt installiert. Bitte installiere Java oder einen eigenen Speicherort in den Einstellungen festlegen.</value>
+    <value>Java ist nicht oder nicht korrekt installiert. Java installieren oder einen eigenen Speicherort in den Einstellungen festlegen.</value>
   </data>
   <data name="ErrorReadSettings" xml:space="preserve">
     <value>Einstellungen für das Fehlerlesen</value>
   </data>
   <data name="UpdateNewVersion" xml:space="preserve">
-    <value>New version is available. Do you want to update?</value>
+    <value>Eine neue Version ist verfügbar. Möchtest du aktualisieren?</value>
   </data>
   <data name="UpdateNoUpdates" xml:space="preserve">
-    <value>No update is available.</value>
+    <value>Aktualisierung verfügbar</value>
   </data>
   <data name="WarningDecodingFolderNotSelected" xml:space="preserve">
-    <value>Decoding folder not selected!</value>
+    <value>Dekompilierungsordner nicht ausgewählt!</value>
   </data>
   <data name="WarningFileForDecodingNotSelected" xml:space="preserve">
-    <value>File for decoding not selected!</value>
+    <value>Datei zum Dekompilieren nicht ausgewählt!</value>
   </data>
   <data name="WarningFileForSigningNotSelected" xml:space="preserve">
-    <value>File for signing not selected!</value>
+    <value>Datei zum Signieren nicht ausgewählt!</value>
   </data>
   <data name="WarningFrameworkNotSelected" xml:space="preserve">
-    <value>Framework not selected!</value>
+    <value>Framework nicht ausgewählt!</value>
   </data>
   <data name="ErrorSaveSettings" xml:space="preserve">
-    <value>Error saving settings!</value>
+    <value>Fehler beim Einstellungen speichern!</value>
   </data>
   <data name="NeedRestart" xml:space="preserve">
-    <value>For the changes to take effect you must restart the program. You want to do it now?</value>
+    <value>Damit die Änderungen wirksam werden, musst du das Programm neu starten. Willst du es jetzt tun?</value>
   </data>
   <data name="FileNotFound" xml:space="preserve">
-    <value>File is not found</value>
+    <value>Datei wird nicht gefunden</value>
   </data>
   <data name="FolderNotExist" xml:space="preserve">
-    <value>Folder does not exist</value>
+    <value>Der Ordner existiert nicht</value>
   </data>
   <data name="Error" xml:space="preserve">
-    <value>Error</value>
+    <value>Fehler</value>
   </data>
   <data name="Build" xml:space="preserve">
     <value>Build</value>
   </data>
   <data name="Decode" xml:space="preserve">
-    <value>Decodieren</value>
+    <value>Dekompilieren</value>
   </data>
   <data name="InstallFramework" xml:space="preserve">
     <value>Framework installieren</value>
@@ -196,160 +196,160 @@
     <value>Systemsprache</value>
   </data>
   <data name="DoYouRealyWantToInstallCM" xml:space="preserve">
-    <value>Do you realy want to install context menu?</value>
+    <value>Möchtest du das Kontextmenü wirklich installieren?</value>
   </data>
   <data name="DoYouRealyWantToRemoveCM" xml:space="preserve">
-    <value>Do you realy want to remove context menu?</value>
+    <value>Möchtest du das Kontextmenü wirklich entfernen?</value>
   </data>
   <data name="Done" xml:space="preserve">
-    <value>Done</value>
+    <value>Fertig</value>
   </data>
   <data name="CantDetectApktoolVersion" xml:space="preserve">
-    <value>Can't detect apktool version.</value>
+    <value>Apktool-Version wird nicht erkannt</value>
   </data>
   <data name="DecompilingSuccessfullyCompleted" xml:space="preserve">
-    <value>Decompiling successfully completed. Output directory "{0}".</value>
+    <value>Dekompilieren erfolgreich abgeschlossen. Ausgabeverzeichnis "{0}"</value>
   </data>
   <data name="ErrorUpdateChecking" xml:space="preserve">
-    <value>Error update checking:</value>
+    <value>Fehlerhafte Aktualisierungsprüfung:</value>
   </data>
   <data name="SignSuccessfullyCompleted" xml:space="preserve">
-    <value>Signing successfully completed. File saved to "{0}".</value>
+    <value>Signieren erfolgreich abgeschlossen. Datei gespeichert unter "{0}"</value>
   </data>
   <data name="Aligning" xml:space="preserve">
-    <value>Aligning</value>
+    <value>Abgleichen</value>
   </data>
   <data name="ErrorCompiling" xml:space="preserve">
-    <value>Compiling failed</value>
+    <value>Kompilieren fehlgeschlagen</value>
   </data>
   <data name="ErrorEnteringFrameworkTag" xml:space="preserve">
-    <value>Error entering framework tag.</value>
+    <value>Fehler bei der Eingabe des Framework-Tags</value>
   </data>
   <data name="ErrorSelectedFileNotExist" xml:space="preserve">
-    <value>The selected file does not exist.</value>
+    <value>Ausgewählte Datei nicht vorhanden</value>
   </data>
   <data name="ErrorSelectingFrameworkDirectory" xml:space="preserve">
-    <value>Error selecting framework directory.</value>
+    <value>Fehler bei Auswahl des Framework-Verzeichnisses</value>
   </data>
   <data name="ErrorSelectingFrameworkFile" xml:space="preserve">
-    <value>Error selecting framework file. The file does not exist.</value>
+    <value>Fehler bei Auswahl der Framework-Datei. Datei existiert nicht.</value>
   </data>
   <data name="ErrorSigning" xml:space="preserve">
-    <value>Signing failed.</value>
+    <value>Signieren fehlgeschlagen</value>
   </data>
   <data name="FrameworkInstallationNotStarted" xml:space="preserve">
-    <value>Error. Framework installation is not started.</value>
+    <value>Fehler - Framework-Installation wird nicht gestartet</value>
   </data>
   <data name="InstallingFramework" xml:space="preserve">
-    <value>Installing framework</value>
+    <value>Framework installieren</value>
   </data>
   <data name="Signing" xml:space="preserve">
-    <value>Signing</value>
+    <value>Signieren</value>
   </data>
   <data name="SignInputFileNotFound" xml:space="preserve">
-    <value>Input file not found.</value>
+    <value>Eingabedatei nicht gefunden</value>
   </data>
   <data name="SignPrivateKeyNotFound" xml:space="preserve">
-    <value>Private key not found.</value>
+    <value>Privater Schlüssel nicht gefunden</value>
   </data>
   <data name="SignPublicKeyNotFound" xml:space="preserve">
-    <value>Public key not found.</value>
+    <value>Öffentlicher Schlüssel nicht gefunden</value>
   </data>
   <data name="ZIPArchives" xml:space="preserve">
-    <value>ZIP archives</value>
+    <value>ZIP archivieren</value>
   </data>
   <data name="DecodeCouldNotCreate" xml:space="preserve">
-    <value>The selected decompilation directory could not be created because contains invalid characters.</value>
+    <value>Ausgewähltes Dekompilierungsverzeichnis konnte nicht erstellt werden, da es ungültige Zeichen enthält.</value>
   </data>
   <data name="DecodeDirNotSelected" xml:space="preserve">
-    <value>Decompilation directory not selected.</value>
+    <value>Dekompilierungsverzeichnis nicht ausgewählt</value>
   </data>
   <data name="DecodeSelectedFrameworkNotExist" xml:space="preserve">
-    <value>The selected framework directory does not exist.</value>
+    <value>Ausgewähltes Framework-Verzeichnis nicht vorhanden</value>
   </data>
   <data name="Decoding" xml:space="preserve">
-    <value>Decoding</value>
+    <value>Dekompilieren</value>
   </data>
   <data name="ErrorDecompiling" xml:space="preserve">
-    <value>Decompiling failed</value>
+    <value>Dekompilieren fehlgeschlagen</value>
   </data>
   <data name="ExecutableFile" xml:space="preserve">
-    <value>Executable file</value>
+    <value>Ausführbare Datei</value>
   </data>
   <data name="ChangedTargetSdkTo29" xml:space="preserve">
-    <value>Changed target SDK to 29</value>
+    <value>Ziel-SDK auf 29 geändert</value>
   </data>
   <data name="ErrorVersionParsing" xml:space="preserve">
-    <value>Failed to parse version</value>
+    <value>Version parsen nicht möglich</value>
   </data>
   <data name="FixAndroidManifest" xml:space="preserve">
-    <value>Fixed AndroidManifest.xml</value>
+    <value>AndroidManifest.xml repariert</value>
   </data>
   <data name="RemoveApkToolDummies" xml:space="preserve">
-    <value>Removed all ApkTool dummies</value>
+    <value>Alle Apk-Tool-Dummys entfernt</value>
   </data>
   <data name="APKSelected" xml:space="preserve">
-    <value>APK Selected:</value>
+    <value>APK ausgewählt:</value>
   </data>
   <data name="ErrorSelectedFolderNotExist" xml:space="preserve">
-    <value>The selected folder does not exist.</value>
+    <value>Ausgewählter Ordner nicht vorhanden</value>
   </data>
   <data name="AndroidManifestNotExist" xml:space="preserve">
-    <value>AndroidManifest.xml does not exist</value>
+    <value>AndroidManifest.xml nicht vorhanden</value>
   </data>
   <data name="DecompiledAPKNotExist" xml:space="preserve">
-    <value>Decompiled APK directory does not exist</value>
+    <value>Dekompiliertes APK-Verzeichnis existiert nicht</value>
   </data>
   <data name="MainActivityFound" xml:space="preserve">
-    <value>Main activity found in "{0}"</value>
+    <value>Hauptaktivität gefunden in "{0}"</value>
   </data>
   <data name="MainActivityNotFoundPleaseFindManually" xml:space="preserve">
-    <value>Could not find MainActivity. Please find it manually</value>
+    <value>MainActivity konnte nicht gefunden werden, manuell suchen.</value>
   </data>
   <data name="ClearingFramework" xml:space="preserve">
-    <value>Clearing Framework</value>
+    <value>Framework bereinigen</value>
   </data>
   <data name="CompilingSuccessfullyCompleted" xml:space="preserve">
-    <value>Compiling successfully completed. Output directory "{0}"</value>
+    <value>Kompilieren erfolgreich abgeschlossen. Ausgabeverzeichnis "{0}"</value>
   </data>
   <data name="ErrorZipalign" xml:space="preserve">
-    <value>Zipaligning failed</value>
+    <value>Zipaligning fehlgeschlagen</value>
   </data>
   <data name="ZipalignFileSavedTo" xml:space="preserve">
-    <value>Zipalign successfully completed. File saved to "{0}"</value>
+    <value>Zipalign erfolgreich abgeschlossen. Datei gespeichert unter "{0}"</value>
   </data>
   <data name="ErrorClearingFw" xml:space="preserve">
-    <value>Error clearing framework</value>
+    <value>Rahmen für die Fehlerbehebung</value>
   </data>
   <data name="FrameworkCacheCleared" xml:space="preserve">
-    <value>Framework cache cleared</value>
+    <value>Framework Fehlerbereinigung</value>
   </data>
   <data name="AllDone" xml:space="preserve">
-    <value>All done!</value>
+    <value>Alles fertig!</value>
   </data>
   <data name="FrameworkInstalled" xml:space="preserve">
-    <value>Framework has been installed successfully</value>
+    <value>Framework erfolgreich installiert</value>
   </data>
   <data name="FrameworkDirNotExist" xml:space="preserve">
-    <value>Framework directory does not exist</value>
+    <value>Framework-Verzeichnis nicht vorhanden</value>
   </data>
   <data name="DecompilingDex" xml:space="preserve">
-    <value>Decompiling dex</value>
+    <value>Dex dekompilieren</value>
   </data>
   <data name="ErrorSelectedOutputFolderNotExist" xml:space="preserve">
-    <value>The selected output folder does not exist.</value>
+    <value>Ausgewählter Ausgabeordner nicht vorhanden</value>
   </data>
   <data name="CompilingDex" xml:space="preserve">
-    <value>Compiling dex</value>
+    <value>Dex dekompilieren</value>
   </data>
   <data name="DragDropNotSupported" xml:space="preserve">
-    <value>You are running as administrator. Drag &amp; drop may not be supported</value>
+    <value>Wird als Administrator ausgeführt. Drag &amp; Drop wird möglicherweise nicht unterstützt</value>
   </data>
   <data name="DragDropSupported" xml:space="preserve">
-    <value>Drag &amp; drop is supported</value>
+    <value>Drag &amp; Drop wird unterstützt</value>
   </data>
   <data name="ErrorNotAnApk" xml:space="preserve">
-    <value>This directory is not an Android package</value>
+    <value>Verzeichnis ist kein Android-Paket</value>
   </data>
   <data name="Baksmali" xml:space="preserve">
     <value>Baksmali</value>
@@ -364,13 +364,13 @@
     <value>APK kompilieren</value>
   </data>
   <data name="CompileDex" xml:space="preserve">
-    <value>Assemble DEX</value>
+    <value>DEX kompilieren</value>
   </data>
   <data name="DecompileApk" xml:space="preserve">
     <value>APK dekompilieren</value>
   </data>
   <data name="DecompileDex" xml:space="preserve">
-    <value>Disassemble DEX</value>
+    <value>DEX dekompilieren</value>
   </data>
   <data name="GetApkInfo" xml:space="preserve">
     <value>APK-Info anzeigen</value>
@@ -397,25 +397,25 @@
     <value>Unsignierte APK erstellen</value>
   </data>
   <data name="MetainfNotExist" xml:space="preserve">
-    <value>META-INF folder does not exist. Skipped</value>
+    <value>Ordner META-INF existiert nicht. Übersprungen</value>
   </data>
   <data name="ErrorGettingApkInfo" xml:space="preserve">
-    <value>There was an error getting APK infomation</value>
+    <value>Fehler beim Abrufen von APK-Informationen</value>
   </data>
   <data name="InputDirectory" xml:space="preserve">
-    <value>Input directory: {0}</value>
+    <value>Eingabeverzeichnis: {0}</value>
   </data>
   <data name="InputFile" xml:space="preserve">
-    <value>Input file: {0}</value>
+    <value>Eingabedatei: {0}</value>
   </data>
   <data name="DeleteFile" xml:space="preserve">
-    <value>Delete file "{0}"</value>
+    <value>Datei löschen "{0}"</value>
   </data>
   <data name="CopyFileToTemp" xml:space="preserve">
-    <value>Copy file "{0}" to temp directory "{1}"</value>
+    <value>Datei "{0}" in temporäres Verzeichnis "{1}" kopieren</value>
   </data>
   <data name="CopyFolderToTemp" xml:space="preserve">
-    <value>Copy decompiled apk folder "{0}" to temp directory "{1}"</value>
+    <value>Dekompilierten Apk-Ordner "{0}" in temporäre Verzeichnis "{1}" kopieren</value>
   </data>
   <data name="DecodeDesDirExists" xml:space="preserve">
     <value>Zielverzeichnis "{0}" existiert bereits. Aktivieren "Löschen des Zielverzeichnisses erzwingen", wenn du es überschreiben möchtest.</value>
@@ -424,7 +424,7 @@
     <value>Temporären Ordner "{0}" in das Ausgabeverzeichnis "{1}" verschieben</value>
   </data>
   <data name="MoveTempApkToOutput" xml:space="preserve">
-    <value>Temporäre apk "{0}" in das Ausgabeverzeichnis "{1}" verschieben</value>
+    <value>Temporäre Apk "{0}" in das Ausgabeverzeichnis "{1}" verschieben</value>
   </data>
   <data name="ParsingApkInfo" xml:space="preserve">
     <value>APK-Informationen parsen …</value>
@@ -439,19 +439,19 @@
     <value>{0} als Basis erkannt</value>
   </data>
   <data name="DetectedAsSplit" xml:space="preserve">
-    <value>{0} als gesplitet erkannt</value>
+    <value>{0} als gesplittet erkannt</value>
   </data>
   <data name="ExtractingAllApkFiles" xml:space="preserve">
     <value>Alle APK-Dateien extrahieren</value>
   </data>
   <data name="MergeFinishedMoveDir" xml:space="preserve">
-    <value>Zusammenführung abgeschlossen. Verzeichnis verschieben nach "{0}"</value>
+    <value>Zusammenführen abgeschlossen. Verzeichnis verschieben nach "{0}"</value>
   </data>
   <data name="MergingApk" xml:space="preserve">
     <value>APK zusammenführen</value>
   </data>
   <data name="MovingBasedirectory" xml:space="preserve">
-    <value>Moving base directory to "{0}"</value>
+    <value>Basisverzeichniss verschieben nach "{0}"</value>
   </data>
   <data name="DirNotExist" xml:space="preserve">
     <value>Verzeichnis "{0}" existiert nicht</value>
@@ -481,7 +481,7 @@
     <value>Bitte warten …</value>
   </data>
   <data name="ConfirmKillingAdbServer" xml:space="preserve">
-    <value>Sicher, dass du den ADB-Server beenden willst? Möglicherweise musst du dein Gerät neu anschließen oder den Emulator neu starten</value>
+    <value>Sicher, dass du den ADB-Server beenden willst? Möglicherweise musst du dein Gerät neu anschließen oder den Emulator neu starten.</value>
   </data>
   <data name="DeviceNotSelected" xml:space="preserve">
     <value>Kein Gerät ausgewählt</value>
@@ -532,7 +532,7 @@
     <value>Ausgabeordner Dekompilierung öffnen</value>
   </data>
   <data name="FixApktoolYml" xml:space="preserve">
-    <value>apktool.yml korrigiert</value>
+    <value>Apktool.yml repariert</value>
   </data>
   <data name="CopyFileTo" xml:space="preserve">
     <value>Datei "{0}" nach "{1}" kopieren</value>
