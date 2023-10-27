@@ -250,10 +250,10 @@
     <value>Eingabedatei nicht gefunden</value>
   </data>
   <data name="SignPrivateKeyNotFound" xml:space="preserve">
-    <value>Privater Schlüssel nicht gefunden</value>
+    <value>Privater Schlüssel - nicht gefunden</value>
   </data>
   <data name="SignPublicKeyNotFound" xml:space="preserve">
-    <value>Öffentlicher Schlüssel nicht gefunden</value>
+    <value>Öffentlicher Schlüssel - nicht gefunden</value>
   </data>
   <data name="ZIPArchives" xml:space="preserve">
     <value>ZIP archivieren</value>
@@ -319,7 +319,7 @@
     <value>Zipalign erfolgreich abgeschlossen. Datei gespeichert unter "{0}"</value>
   </data>
   <data name="ErrorClearingFw" xml:space="preserve">
-    <value>Rahmen für die Fehlerbehebung</value>
+    <value>Framework-Fehler bereinigen</value>
   </data>
   <data name="FrameworkCacheCleared" xml:space="preserve">
     <value>Framework Fehlerbereinigung</value>
@@ -379,7 +379,7 @@
     <value>Ordner ist keine dekompilierte APK</value>
   </data>
   <data name="NotDecompiledDex" xml:space="preserve">
-    <value>Ordner ist kein dekompiliertes DEX</value>
+    <value>Ordner ist kein dekompilierte DEX</value>
   </data>
   <data name="RequiredFilesMissing" xml:space="preserve">
     <value>Erforderliche Dateien fehlen</value>
@@ -451,13 +451,13 @@
     <value>APK zusammenführen</value>
   </data>
   <data name="MovingBasedirectory" xml:space="preserve">
-    <value>Basisverzeichniss verschieben nach "{0}"</value>
+    <value>Basisverzeichnis verschieben nach "{0}"</value>
   </data>
   <data name="DirNotExist" xml:space="preserve">
     <value>Verzeichnis "{0}" existiert nicht</value>
   </data>
   <data name="TempDirectory" xml:space="preserve">
-    <value>Temp-Verzeichniss: "{0}"</value>
+    <value>Temp-Verzeichnis: "{0}"</value>
   </data>
   <data name="ErrorMerging" xml:space="preserve">
     <value>Zusammenführen fehlgeschlagen</value>
@@ -508,16 +508,16 @@
     <value>Keine Geräte gefunden. Vergewissere dich, dass dein Gerät mit dem Computer verbunden ist und das ADB-Debugging aktiviert ist. Wenn du einen Emulator verwendest, starte ihn neu und warte, bis er hochgefahren ist</value>
   </data>
   <data name="TimeEnded" xml:space="preserve">
-    <value>Zeit beendet: {0}</value>
+    <value>Beendet Zeit: {0}</value>
   </data>
   <data name="TimeStarted" xml:space="preserve">
-    <value>Zeit gestartet: {0}</value>
+    <value>Gestartet Zeit: {0}</value>
   </data>
   <data name="ClearFrameworkPrompt" xml:space="preserve">
     <value>Es ist erforderlich, den Framework-Cache nach einer Änderung der Apktool-Version zu löschen, um unerwartete Fehler zu vermeiden. Möchtest du ihn jetzt löschen?</value>
   </data>
   <data name="ClearTempFolder" xml:space="preserve">
-    <value>Temp-Ordners löschen</value>
+    <value>Temp-Ordner löschen</value>
   </data>
   <data name="DeletingFolder" xml:space="preserve">
     <value>Ordner löschen: {0}</value>
@@ -529,7 +529,7 @@
     <value>Kompilier-Ausgabeordner öffnen</value>
   </data>
   <data name="OpenDecFolder" xml:space="preserve">
-    <value>Ausgabeordner Dekompilierung öffnen</value>
+    <value>Dekompilier-Ausgabeordner öffnen</value>
   </data>
   <data name="FixApktoolYml" xml:space="preserve">
     <value>Apktool.yml repariert</value>
@@ -538,6 +538,6 @@
     <value>Datei "{0}" nach "{1}" kopieren</value>
   </data>
   <data name="SplitApkNotFound" xml:space="preserve">
-    <value>Split-APK ist nicht ausgewählt</value>
+    <value>Split-APK nicht ausgewählt</value>
   </data>
 </root>
