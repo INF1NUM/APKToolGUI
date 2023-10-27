@@ -508,10 +508,10 @@
     <value>Keine Geräte gefunden. Vergewissere dich, dass dein Gerät mit dem Computer verbunden ist und das ADB-Debugging aktiviert ist. Wenn du einen Emulator verwendest, starte ihn neu und warte, bis er hochgefahren ist</value>
   </data>
   <data name="TimeEnded" xml:space="preserve">
-    <value>Beendet Zeit: {0}</value>
+    <value>Beendet: {0}</value>
   </data>
   <data name="TimeStarted" xml:space="preserve">
-    <value>Gestartet Zeit: {0}</value>
+    <value>Gestartet: {0}</value>
   </data>
   <data name="ClearFrameworkPrompt" xml:space="preserve">
     <value>Es ist erforderlich, den Framework-Cache nach einer Änderung der Apktool-Version zu löschen, um unerwartete Fehler zu vermeiden. Möchtest du ihn jetzt löschen?</value>
