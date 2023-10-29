@@ -352,10 +352,10 @@
     <value>Aktivieren, um seltsame ApkTool Fehler zu beheben</value>
   </data>
   <data name="comApkOpenDir.Text" xml:space="preserve">
-    <value>Kompilierter APK-Speicherort</value>
+    <value>APK-Ort kompilieren</value>
   </data>
   <data name="compileOutputOpenDirBtn.Text" xml:space="preserve">
-    <value>Ausgabespeicherort kompilieren</value>
+    <value>Ausgabeort kompilieren</value>
   </data>
   <data name="comSmaliBtn.Text" xml:space="preserve">
     <value>Kompilieren</value>
@@ -367,10 +367,10 @@
     <value>Nach Build eine unsignierte APK mit der Originalsignatur erstellen</value>
   </data>
   <data name="decApkOpenDirBtn.Text" xml:space="preserve">
-    <value>Dekompilierter APK-Speicherort</value>
+    <value>APK-Ort dekompilieren</value>
   </data>
   <data name="decOutOpenDirBtn.Text" xml:space="preserve">
-    <value>Ausgabespeicherort dekompilieren</value>
+    <value>Ausgabeort dekompilieren</value>
   </data>
   <data name="decSmaliBtn.Text" xml:space="preserve">
     <value>Dekompilieren</value>
