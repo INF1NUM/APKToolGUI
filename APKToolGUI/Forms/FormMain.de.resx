@@ -124,7 +124,7 @@
     <value>Über</value>
   </data>
   <data name="alignApkOpenDirBtn.Text" xml:space="preserve">
-    <value>Zipalign APK-Verzeichnis</value>
+    <value>APK-Verzeichnis zipalign</value>
   </data>
   <data name="apkAioLinkBtn.Text" xml:space="preserve">
     <value>ApkAio</value>
@@ -559,7 +559,7 @@
     <value>Nach Zipalign signieren</value>
   </data>
   <data name="signApkOpenDirBtn.Text" xml:space="preserve">
-    <value>APK-Standort signieren</value>
+    <value>APK-Ort signieren</value>
   </data>
   <data name="smaliBrowseInputDirBtn.Text" xml:space="preserve">
     <value>…</value>
