@@ -544,7 +544,7 @@
     <value>Einstellungen</value>
   </data>
   <data name="buttonAddContextMenu.Text" xml:space="preserve">
-    <value>Installieren</value>
+    <value>Install …</value>
   </data>
   <data name="buttonCancel.Text" xml:space="preserve">
     <value>Abbrechen</value>
@@ -556,7 +556,7 @@
     <value>…</value>
   </data>
   <data name="buttonRemoveContextMenu.Text" xml:space="preserve">
-    <value>Deinstallieren</value>
+    <value>Deinstall …</value>
   </data>
   <data name="buttonОК.Text" xml:space="preserve">
     <value>ОК</value>
