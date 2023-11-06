@@ -12,17 +12,6 @@ namespace APKToolGUI.Utils
     /// </summary>
     public static class Log
     {
-        #region direct logs
-        /// <summary>
-        /// log message with level VERY VERBOSE (may be disabled)
-        /// </summary>
-        /// <param name="s">the string to log</param>
-        public static void vv(string s)
-        {
-            if (!Settings.Default.DebugMode) return;
-            FormMain.Instance.ToLog(ApktoolEventType.None, s);
-        }
-
         /// <summary>
         /// log message with level VERBOSE (may be disabled)
         /// </summary>
@@ -37,10 +26,10 @@ namespace APKToolGUI.Utils
         /// log message with level DEBUG (may be disabled)
         /// </summary>
         /// <param name="s">the string to log</param>
-        public static void d(string s)
+        public static void d(ApktoolEventType eventType, string s)
         {
             if (!Settings.Default.DebugMode) return;
-            FormMain.Instance.ToLog(ApktoolEventType.None, s);
+            FormMain.Instance.ToLog(eventType, s);
         }
 
         /// <summary>
@@ -69,6 +58,5 @@ namespace APKToolGUI.Utils
         {
             FormMain.Instance.ToLog(ApktoolEventType.Error, s);
         }
-        #endregion
     }
 }
