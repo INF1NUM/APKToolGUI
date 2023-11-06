@@ -110,9 +110,9 @@
             // 
             // textBox1
             // 
+            resources.ApplyResources(this.textBox1, "textBox1");
             this.textBox1.BackColor = System.Drawing.SystemColors.Window;
             this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::APKToolGUI.Properties.Settings.Default, "CustomJVMArgs", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            resources.ApplyResources(this.textBox1, "textBox1");
             this.textBox1.Name = "textBox1";
             this.textBox1.Text = global::APKToolGUI.Properties.Settings.Default.CustomJVMArgs;
             // 
@@ -134,12 +134,12 @@
             // 
             // themeComboBox
             // 
+            resources.ApplyResources(this.themeComboBox, "themeComboBox");
             this.themeComboBox.FormattingEnabled = true;
             this.themeComboBox.Items.AddRange(new object[] {
             resources.GetString("themeComboBox.Items"),
             resources.GetString("themeComboBox.Items1"),
             resources.GetString("themeComboBox.Items2")});
-            resources.ApplyResources(this.themeComboBox, "themeComboBox");
             this.themeComboBox.Name = "themeComboBox";
             // 
             // label1
@@ -149,9 +149,9 @@
             // 
             // customApkToolTxtBox
             // 
+            resources.ApplyResources(this.customApkToolTxtBox, "customApkToolTxtBox");
             this.customApkToolTxtBox.BackColor = System.Drawing.SystemColors.Window;
             this.customApkToolTxtBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::APKToolGUI.Properties.Settings.Default, "ApktoolPath", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            resources.ApplyResources(this.customApkToolTxtBox, "customApkToolTxtBox");
             this.customApkToolTxtBox.Name = "customApkToolTxtBox";
             this.customApkToolTxtBox.Text = global::APKToolGUI.Properties.Settings.Default.ApktoolPath;
             // 
@@ -194,17 +194,17 @@
             // 
             // customTempLocationTxtBox
             // 
+            resources.ApplyResources(this.customTempLocationTxtBox, "customTempLocationTxtBox");
             this.customTempLocationTxtBox.BackColor = System.Drawing.SystemColors.Window;
             this.customTempLocationTxtBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::APKToolGUI.Properties.Settings.Default, "TempDir", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            resources.ApplyResources(this.customTempLocationTxtBox, "customTempLocationTxtBox");
             this.customTempLocationTxtBox.Name = "customTempLocationTxtBox";
             this.customTempLocationTxtBox.Text = global::APKToolGUI.Properties.Settings.Default.TempDir;
             // 
             // textBoxCustomJavaLocation
             // 
+            resources.ApplyResources(this.textBoxCustomJavaLocation, "textBoxCustomJavaLocation");
             this.textBoxCustomJavaLocation.BackColor = System.Drawing.SystemColors.Window;
             this.textBoxCustomJavaLocation.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::APKToolGUI.Properties.Settings.Default, "JavaExe", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            resources.ApplyResources(this.textBoxCustomJavaLocation, "textBoxCustomJavaLocation");
             this.textBoxCustomJavaLocation.Name = "textBoxCustomJavaLocation";
             this.textBoxCustomJavaLocation.Text = global::APKToolGUI.Properties.Settings.Default.JavaExe;
             // 
@@ -265,8 +265,8 @@
             // 
             // comboBox1
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             resources.ApplyResources(this.comboBox1, "comboBox1");
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Name = "comboBox1";
             // 

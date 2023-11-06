@@ -3484,7 +3484,7 @@
     <value>NoControl</value>
   </data>
   <data name="checkBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 346</value>
+    <value>8, 357</value>
   </data>
   <data name="checkBox2.Size" type="System.Drawing.Size, System.Drawing">
     <value>401, 17</value>
@@ -3514,7 +3514,7 @@
     <value>NoControl</value>
   </data>
   <data name="checkBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 320</value>
+    <value>8, 331</value>
   </data>
   <data name="checkBox1.Size" type="System.Drawing.Size, System.Drawing">
     <value>126, 17</value>
@@ -3544,7 +3544,7 @@
     <value>NoControl</value>
   </data>
   <data name="autoDelIdsigChkBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 294</value>
+    <value>8, 305</value>
   </data>
   <data name="autoDelIdsigChkBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>133, 17</value>
@@ -3577,7 +3577,7 @@
     <value>False</value>
   </data>
   <data name="schemev4ComboBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>437, 265</value>
+    <value>437, 276</value>
   </data>
   <data name="schemev4ComboBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>121, 21</value>
@@ -3604,7 +3604,7 @@
     <value>NoControl</value>
   </data>
   <data name="label27.Location" type="System.Drawing.Point, System.Drawing">
-    <value>292, 268</value>
+    <value>292, 279</value>
   </data>
   <data name="label27.Size" type="System.Drawing.Size, System.Drawing">
     <value>63, 13</value>
@@ -3637,7 +3637,7 @@
     <value>False</value>
   </data>
   <data name="schemev3ComboBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>155, 265</value>
+    <value>155, 276</value>
   </data>
   <data name="schemev3ComboBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>121, 21</value>
@@ -3664,7 +3664,7 @@
     <value>NoControl</value>
   </data>
   <data name="label26.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 268</value>
+    <value>7, 279</value>
   </data>
   <data name="label26.Size" type="System.Drawing.Size, System.Drawing">
     <value>63, 13</value>
@@ -3697,7 +3697,7 @@
     <value>False</value>
   </data>
   <data name="schemev2ComboBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>437, 238</value>
+    <value>437, 249</value>
   </data>
   <data name="schemev2ComboBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>121, 21</value>
@@ -3724,7 +3724,7 @@
     <value>NoControl</value>
   </data>
   <data name="label25.Location" type="System.Drawing.Point, System.Drawing">
-    <value>292, 241</value>
+    <value>292, 252</value>
   </data>
   <data name="label25.Size" type="System.Drawing.Size, System.Drawing">
     <value>63, 13</value>
@@ -3757,7 +3757,7 @@
     <value>False</value>
   </data>
   <data name="schemev1ComboBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>155, 238</value>
+    <value>155, 249</value>
   </data>
   <data name="schemev1ComboBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>121, 21</value>
@@ -3784,7 +3784,7 @@
     <value>NoControl</value>
   </data>
   <data name="label24.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 241</value>
+    <value>7, 252</value>
   </data>
   <data name="label24.Size" type="System.Drawing.Size, System.Drawing">
     <value>63, 13</value>
@@ -3808,7 +3808,7 @@
     <value>10</value>
   </data>
   <data name="textBox3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>262, 180</value>
+    <value>262, 191</value>
   </data>
   <data name="textBox3.Size" type="System.Drawing.Size, System.Drawing">
     <value>296, 22</value>
@@ -3832,7 +3832,7 @@
     <value>NoControl</value>
   </data>
   <data name="selectKeyStoreFileBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>530, 151</value>
+    <value>530, 162</value>
   </data>
   <data name="selectKeyStoreFileBtn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>1, 0, 1, 1</value>
@@ -3859,7 +3859,7 @@
     <value>12</value>
   </data>
   <data name="aliasTxtBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>260, 98</value>
+    <value>260, 109</value>
   </data>
   <data name="aliasTxtBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>298, 22</value>
@@ -3886,7 +3886,7 @@
     <value>NoControl</value>
   </data>
   <data name="useAliasChkBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 100</value>
+    <value>8, 111</value>
   </data>
   <data name="useAliasChkBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>53, 17</value>
@@ -3909,17 +3909,14 @@
   <data name="&gt;&gt;useAliasChkBox.ZOrder" xml:space="preserve">
     <value>14</value>
   </data>
-  <data name="label22.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
   <data name="label22.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="label22.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 19</value>
+    <value>5, 16</value>
   </data>
   <data name="label22.Size" type="System.Drawing.Size, System.Drawing">
-    <value>502, 13</value>
+    <value>555, 26</value>
   </data>
   <data name="label22.TabIndex" type="System.Int32, mscorlib">
     <value>16</value>
@@ -3940,7 +3937,7 @@
     <value>15</value>
   </data>
   <data name="keyStoreFileTxtBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>262, 152</value>
+    <value>262, 163</value>
   </data>
   <data name="keyStoreFileTxtBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>265, 22</value>
@@ -3967,7 +3964,7 @@
     <value>NoControl</value>
   </data>
   <data name="label21.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 183</value>
+    <value>7, 194</value>
   </data>
   <data name="label21.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
@@ -4003,7 +4000,7 @@
     <value>NoControl</value>
   </data>
   <data name="label20.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 155</value>
+    <value>7, 166</value>
   </data>
   <data name="label20.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
@@ -4039,7 +4036,7 @@
     <value>NoControl</value>
   </data>
   <data name="useKeyStoreChkBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 128</value>
+    <value>8, 139</value>
   </data>
   <data name="useKeyStoreChkBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>91, 17</value>
@@ -4069,7 +4066,7 @@
     <value>NoControl</value>
   </data>
   <data name="useSigningOutputDir.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 212</value>
+    <value>9, 223</value>
   </data>
   <data name="useSigningOutputDir.Size" type="System.Drawing.Size, System.Drawing">
     <value>135, 17</value>
@@ -4099,7 +4096,7 @@
     <value>NoControl</value>
   </data>
   <data name="label_SIGN_PrivateKey.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 74</value>
+    <value>7, 85</value>
   </data>
   <data name="label_SIGN_PrivateKey.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
@@ -4135,7 +4132,7 @@
     <value>NoControl</value>
   </data>
   <data name="label_SIGN_PublicKey.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 46</value>
+    <value>7, 57</value>
   </data>
   <data name="label_SIGN_PublicKey.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
@@ -4168,7 +4165,7 @@
     <value>NoControl</value>
   </data>
   <data name="button_SIGN_BrowseOutputFile.Location" type="System.Drawing.Point, System.Drawing">
-    <value>530, 207</value>
+    <value>530, 218</value>
   </data>
   <data name="button_SIGN_BrowseOutputFile.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>1, 0, 1, 1</value>
@@ -4195,7 +4192,7 @@
     <value>23</value>
   </data>
   <data name="textBox_SIGN_OutputFile.Location" type="System.Drawing.Point, System.Drawing">
-    <value>262, 208</value>
+    <value>262, 219</value>
   </data>
   <data name="textBox_SIGN_OutputFile.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>1, 1, 1, 1</value>
@@ -4222,7 +4219,7 @@
     <value>NoControl</value>
   </data>
   <data name="button_SIGN_BrowsePublicKey.Location" type="System.Drawing.Point, System.Drawing">
-    <value>530, 41</value>
+    <value>530, 52</value>
   </data>
   <data name="button_SIGN_BrowsePublicKey.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>1, 0, 1, 1</value>
@@ -4252,7 +4249,7 @@
     <value>NoControl</value>
   </data>
   <data name="button_SIGN_BrowsePrivateKey.Location" type="System.Drawing.Point, System.Drawing">
-    <value>530, 68</value>
+    <value>530, 79</value>
   </data>
   <data name="button_SIGN_BrowsePrivateKey.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>1, 0, 1, 1</value>
@@ -4279,7 +4276,7 @@
     <value>26</value>
   </data>
   <data name="textBox_SIGN_PublicKey.Location" type="System.Drawing.Point, System.Drawing">
-    <value>260, 42</value>
+    <value>260, 53</value>
   </data>
   <data name="textBox_SIGN_PublicKey.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>1, 1, 1, 1</value>
@@ -4303,7 +4300,7 @@
     <value>27</value>
   </data>
   <data name="textBox_SIGN_PrivateKey.Location" type="System.Drawing.Point, System.Drawing">
-    <value>260, 69</value>
+    <value>260, 80</value>
   </data>
   <data name="textBox_SIGN_PrivateKey.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>1, 1, 1, 1</value>
@@ -8090,9 +8087,6 @@
         ///2AAAAAAAAb////////////EAAAAAAAj////////////+QAAAAAAn/////////////8gAAAABP////
         //////////w4AAAcP///////
 </value>
-  </data>
-  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
   </data>
   <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
     <value>99, 97</value>

@@ -1389,8 +1389,8 @@
             // 
             // label22
             // 
-            resources.ApplyResources(this.label22, "label22");
             this.label22.ForeColor = System.Drawing.Color.Maroon;
+            resources.ApplyResources(this.label22, "label22");
             this.label22.Name = "label22";
             // 
             // keyStoreFileTxtBox
