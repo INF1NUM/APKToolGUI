@@ -81,12 +81,12 @@ namespace APKToolGUI
 
         private void LoadSettings()
         {
-            String sysLang = Language.SystemLanguage;
+            string sysLang = Language.SystemLanguage;
 
             comboBox1.Items.Add(sysLang);
             comboBox1.Items.Add(CultureInfo.GetCultureInfo("en"));
             CultureInfo[] cultures = CultureInfo.GetCultures(CultureTypes.AllCultures);
-            String _culture = Properties.Settings.Default.Culture;
+            string _culture = Settings.Default.Culture;
             foreach (CultureInfo culture in cultures)
             {
                 foreach (string resourceName in Assembly.GetExecutingAssembly().GetManifestResourceNames())
@@ -94,7 +94,7 @@ namespace APKToolGUI
                     string[] cultNamw = resourceName.Split('.');
                     if (cultNamw[1] == culture.Name)
                     {
-                        string lang = String.Format("{0} [{1}]", culture.DisplayName, culture.Name);
+                        string lang = string.Format("{0} [{1}]", culture.DisplayName, culture.Name);
                         comboBox1.Items.Add(lang);
 
                         if (culture.Name == _culture)
@@ -111,11 +111,15 @@ namespace APKToolGUI
                 currentLanguage = sysLang;
                 comboBox1.SelectedItem = sysLang;
             }
+            else if (string.IsNullOrEmpty(_culture))
+            {
+                comboBox1.SelectedIndex = 1;
+            }
             else
             {
                 try
                 {
-                    currentLanguage = Properties.Settings.Default.Culture;
+                    currentLanguage = Settings.Default.Culture;
                     comboBox1.SelectedItem = _culture;
                 }
                 catch { }
@@ -134,9 +138,13 @@ namespace APKToolGUI
                 Settings.Default.Theme = themeComboBox.SelectedIndex;
                 Settings.Default.Save();
 
+                if (string.IsNullOrEmpty(currentLanguage))
+                    currentLanguage = "English";
+
                 if (!comboBox1.SelectedItem.ToString().Contains(currentLanguage) || themeComboBox.SelectedIndex != currentTheme)
                     if (MessageBox.Show(Language.RestartApplicationPrompt, Application.ProductName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                         Application.Restart();
+
 
                 if (currentUseApktoolChk != useCustomApktoolChk.Checked || currentApktoolPath != customApkToolTxtBox.Text)
                 {
