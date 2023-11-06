@@ -298,6 +298,7 @@
             // tabControlMain
             // 
             this.tabControlMain.AllowDrop = true;
+            resources.ApplyResources(this.tabControlMain, "tabControlMain");
             this.tabControlMain.Controls.Add(this.tabPageMain);
             this.tabControlMain.Controls.Add(this.tabPageApkInfo);
             this.tabControlMain.Controls.Add(this.tabPageDecode);
@@ -307,7 +308,6 @@
             this.tabControlMain.Controls.Add(this.tabPageInstallFramework);
             this.tabControlMain.Controls.Add(this.tabPageBaksmali);
             this.tabControlMain.Controls.Add(this.tabPageAdb);
-            resources.ApplyResources(this.tabControlMain, "tabControlMain");
             this.tabControlMain.Name = "tabControlMain";
             this.tabControlMain.SelectedIndex = 0;
             this.tabControlMain.SelectedIndexChanged += new System.EventHandler(this.tabControlMain_SelectedIndexChanged);
@@ -582,7 +582,7 @@
             resources.ApplyResources(this.tabControl1, "tabControl1");
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.SizeMode = System.Windows.Forms.TabSizeMode.FillToRight;
+            this.tabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             // 
             // basicInfoTabPage
             // 
@@ -902,8 +902,8 @@
             // 
             // decApiLvlUpDown
             // 
-            this.decApiLvlUpDown.DataBindings.Add(new System.Windows.Forms.Binding("Value", global::APKToolGUI.Properties.Settings.Default, "Decode_ApiLevel", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             resources.ApplyResources(this.decApiLvlUpDown, "decApiLvlUpDown");
+            this.decApiLvlUpDown.DataBindings.Add(new System.Windows.Forms.Binding("Value", global::APKToolGUI.Properties.Settings.Default, "Decode_ApiLevel", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.decApiLvlUpDown.Name = "decApiLvlUpDown";
             this.decApiLvlUpDown.Value = global::APKToolGUI.Properties.Settings.Default.Decode_ApiLevel;
             // 
@@ -937,18 +937,18 @@
             // 
             // textBox_DECODE_FrameDir
             // 
+            resources.ApplyResources(this.textBox_DECODE_FrameDir, "textBox_DECODE_FrameDir");
             this.textBox_DECODE_FrameDir.DataBindings.Add(new System.Windows.Forms.Binding("Enabled", global::APKToolGUI.Properties.Settings.Default, "Decode_UseFramework", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.textBox_DECODE_FrameDir.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::APKToolGUI.Properties.Settings.Default, "Framework_FrameDir", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.textBox_DECODE_FrameDir.Enabled = global::APKToolGUI.Properties.Settings.Default.Decode_UseFramework;
-            resources.ApplyResources(this.textBox_DECODE_FrameDir, "textBox_DECODE_FrameDir");
             this.textBox_DECODE_FrameDir.Name = "textBox_DECODE_FrameDir";
             this.textBox_DECODE_FrameDir.Text = global::APKToolGUI.Properties.Settings.Default.Framework_FrameDir;
             // 
             // button_DECODE_BrowseOutputDirectory
             // 
+            resources.ApplyResources(this.button_DECODE_BrowseOutputDirectory, "button_DECODE_BrowseOutputDirectory");
             this.button_DECODE_BrowseOutputDirectory.DataBindings.Add(new System.Windows.Forms.Binding("Enabled", global::APKToolGUI.Properties.Settings.Default, "Decode_UseOutputDir", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.button_DECODE_BrowseOutputDirectory.Enabled = global::APKToolGUI.Properties.Settings.Default.Decode_UseOutputDir;
-            resources.ApplyResources(this.button_DECODE_BrowseOutputDirectory, "button_DECODE_BrowseOutputDirectory");
             this.button_DECODE_BrowseOutputDirectory.Name = "button_DECODE_BrowseOutputDirectory";
             this.button_DECODE_BrowseOutputDirectory.UseVisualStyleBackColor = true;
             // 
@@ -962,9 +962,9 @@
             // 
             // button_DECODE_BrowseFrameDir
             // 
+            resources.ApplyResources(this.button_DECODE_BrowseFrameDir, "button_DECODE_BrowseFrameDir");
             this.button_DECODE_BrowseFrameDir.DataBindings.Add(new System.Windows.Forms.Binding("Enabled", global::APKToolGUI.Properties.Settings.Default, "Decode_UseFramework", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.button_DECODE_BrowseFrameDir.Enabled = global::APKToolGUI.Properties.Settings.Default.Decode_UseFramework;
-            resources.ApplyResources(this.button_DECODE_BrowseFrameDir, "button_DECODE_BrowseFrameDir");
             this.button_DECODE_BrowseFrameDir.Name = "button_DECODE_BrowseFrameDir";
             this.button_DECODE_BrowseFrameDir.UseVisualStyleBackColor = true;
             // 
@@ -986,10 +986,10 @@
             // 
             // textBox_DECODE_OutputDirectory
             // 
+            resources.ApplyResources(this.textBox_DECODE_OutputDirectory, "textBox_DECODE_OutputDirectory");
             this.textBox_DECODE_OutputDirectory.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::APKToolGUI.Properties.Settings.Default, "Decode_OutputDir", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.textBox_DECODE_OutputDirectory.DataBindings.Add(new System.Windows.Forms.Binding("Enabled", global::APKToolGUI.Properties.Settings.Default, "Decode_UseOutputDir", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.textBox_DECODE_OutputDirectory.Enabled = global::APKToolGUI.Properties.Settings.Default.Decode_UseOutputDir;
-            resources.ApplyResources(this.textBox_DECODE_OutputDirectory, "textBox_DECODE_OutputDirectory");
             this.textBox_DECODE_OutputDirectory.Name = "textBox_DECODE_OutputDirectory";
             this.textBox_DECODE_OutputDirectory.Text = global::APKToolGUI.Properties.Settings.Default.Decode_OutputDir;
             // 
@@ -1587,10 +1587,10 @@
             // 
             // groupBox1
             // 
+            resources.ApplyResources(this.groupBox1, "groupBox1");
             this.groupBox1.Controls.Add(this.openFwFolderBtn);
             this.groupBox1.Controls.Add(this.clearFwBtn);
             this.groupBox1.Controls.Add(this.clearFwBeforeDecodeChkBox);
-            resources.ApplyResources(this.groupBox1, "groupBox1");
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.TabStop = false;
             // 
@@ -1701,6 +1701,7 @@
             // 
             // smaliGroupBox
             // 
+            resources.ApplyResources(this.smaliGroupBox, "smaliGroupBox");
             this.smaliGroupBox.Controls.Add(this.label29);
             this.smaliGroupBox.Controls.Add(this.smaliUseOutputChkBox);
             this.smaliGroupBox.Controls.Add(this.comSmaliBtn);
@@ -1708,7 +1709,6 @@
             this.smaliGroupBox.Controls.Add(this.smaliBrowseInputDirTxtBox);
             this.smaliGroupBox.Controls.Add(this.smaliBrowseOutputTxtBox);
             this.smaliGroupBox.Controls.Add(this.smaliBrowseInputDirBtn);
-            resources.ApplyResources(this.smaliGroupBox, "smaliGroupBox");
             this.smaliGroupBox.Name = "smaliGroupBox";
             this.smaliGroupBox.TabStop = false;
             // 
@@ -1759,6 +1759,7 @@
             // 
             // bakSmaliGroupBox
             // 
+            resources.ApplyResources(this.bakSmaliGroupBox, "bakSmaliGroupBox");
             this.bakSmaliGroupBox.Controls.Add(this.label28);
             this.bakSmaliGroupBox.Controls.Add(this.baksmaliUseOutputChkBox);
             this.bakSmaliGroupBox.Controls.Add(this.baksmaliBrowseOutputBtn);
@@ -1766,7 +1767,6 @@
             this.bakSmaliGroupBox.Controls.Add(this.decSmaliBtn);
             this.bakSmaliGroupBox.Controls.Add(this.baksmaliBrowseInputDexBtn);
             this.bakSmaliGroupBox.Controls.Add(this.baksmaliBrowseInputDexTxtBox);
-            resources.ApplyResources(this.bakSmaliGroupBox, "bakSmaliGroupBox");
             this.bakSmaliGroupBox.Name = "bakSmaliGroupBox";
             this.bakSmaliGroupBox.TabStop = false;
             // 
@@ -1877,8 +1877,8 @@
             // 
             // apkPathAdbTxtBox
             // 
-            this.apkPathAdbTxtBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::APKToolGUI.Properties.Settings.Default, "Adb_SelectedApkPath", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             resources.ApplyResources(this.apkPathAdbTxtBox, "apkPathAdbTxtBox");
+            this.apkPathAdbTxtBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::APKToolGUI.Properties.Settings.Default, "Adb_SelectedApkPath", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.apkPathAdbTxtBox.Name = "apkPathAdbTxtBox";
             this.apkPathAdbTxtBox.Text = global::APKToolGUI.Properties.Settings.Default.Adb_SelectedApkPath;
             // 
@@ -1889,8 +1889,8 @@
             // 
             // devicesListBox
             // 
-            this.devicesListBox.FormattingEnabled = true;
             resources.ApplyResources(this.devicesListBox, "devicesListBox");
+            this.devicesListBox.FormattingEnabled = true;
             this.devicesListBox.Name = "devicesListBox";
             // 
             // statusStrip1

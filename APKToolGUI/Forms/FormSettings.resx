@@ -130,10 +130,10 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="textBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>230, 139</value>
+    <value>274, 139</value>
   </data>
   <data name="textBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>265, 22</value>
+    <value>250, 22</value>
   </data>
   <data name="textBox1.TabIndex" type="System.Int32, mscorlib">
     <value>20</value>
@@ -223,10 +223,10 @@
     <value>Dark</value>
   </data>
   <data name="themeComboBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>128, 238</value>
+    <value>283, 234</value>
   </data>
   <data name="themeComboBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>121, 21</value>
+    <value>153, 21</value>
   </data>
   <data name="themeComboBox.TabIndex" type="System.Int32, mscorlib">
     <value>17</value>
@@ -250,7 +250,7 @@
     <value>NoControl</value>
   </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 241</value>
+    <value>7, 239</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>41, 13</value>
@@ -274,10 +274,10 @@
     <value>4</value>
   </data>
   <data name="customApkToolTxtBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>230, 205</value>
+    <value>283, 205</value>
   </data>
   <data name="customApkToolTxtBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>215, 22</value>
+    <value>205, 22</value>
   </data>
   <data name="customApkToolTxtBox.TabIndex" type="System.Int32, mscorlib">
     <value>15</value>
@@ -304,7 +304,7 @@
     <value>NoControl</value>
   </data>
   <data name="customApktoolBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>448, 205</value>
+    <value>494, 205</value>
   </data>
   <data name="customApktoolBtn.Size" type="System.Drawing.Size, System.Drawing">
     <value>30, 23</value>
@@ -364,7 +364,7 @@
     <value>NoControl</value>
   </data>
   <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>24, 185</value>
+    <value>6, 185</value>
   </data>
   <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
     <value>349, 13</value>
@@ -448,10 +448,10 @@
     <value>10</value>
   </data>
   <data name="customTempLocationTxtBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>230, 86</value>
+    <value>274, 86</value>
   </data>
   <data name="customTempLocationTxtBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>215, 22</value>
+    <value>214, 22</value>
   </data>
   <data name="customTempLocationTxtBox.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -472,10 +472,10 @@
     <value>11</value>
   </data>
   <data name="textBoxCustomJavaLocation.Location" type="System.Drawing.Point, System.Drawing">
-    <value>230, 112</value>
+    <value>274, 112</value>
   </data>
   <data name="textBoxCustomJavaLocation.Size" type="System.Drawing.Size, System.Drawing">
-    <value>215, 22</value>
+    <value>214, 22</value>
   </data>
   <data name="textBoxCustomJavaLocation.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -505,7 +505,7 @@
     <value>NoControl</value>
   </data>
   <data name="buttonCustomTempLocation.Location" type="System.Drawing.Point, System.Drawing">
-    <value>448, 86</value>
+    <value>494, 86</value>
   </data>
   <data name="buttonCustomTempLocation.Size" type="System.Drawing.Size, System.Drawing">
     <value>30, 23</value>
@@ -565,7 +565,7 @@
     <value>NoControl</value>
   </data>
   <data name="buttonCustomJavaLocation.Location" type="System.Drawing.Point, System.Drawing">
-    <value>448, 112</value>
+    <value>494, 112</value>
   </data>
   <data name="buttonCustomJavaLocation.Size" type="System.Drawing.Size, System.Drawing">
     <value>30, 23</value>
@@ -682,7 +682,7 @@
     <value>8, 6</value>
   </data>
   <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>511, 299</value>
+    <value>532, 299</value>
   </data>
   <data name="groupBox1.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
@@ -709,10 +709,10 @@
     <value>System</value>
   </data>
   <data name="comboBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>156, 17</value>
+    <value>9, 17</value>
   </data>
   <data name="comboBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>319, 21</value>
+    <value>347, 21</value>
   </data>
   <data name="comboBox1.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -733,7 +733,7 @@
     <value>8, 311</value>
   </data>
   <data name="groupBoxLanguage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>512, 47</value>
+    <value>533, 47</value>
   </data>
   <data name="groupBoxLanguage.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -826,7 +826,7 @@
     <value>NoControl</value>
   </data>
   <data name="buttonAddContextMenu.Location" type="System.Drawing.Point, System.Drawing">
-    <value>303, 18</value>
+    <value>343, 18</value>
   </data>
   <data name="buttonAddContextMenu.Size" type="System.Drawing.Size, System.Drawing">
     <value>83, 23</value>
@@ -859,7 +859,7 @@
     <value>NoControl</value>
   </data>
   <data name="buttonRemoveContextMenu.Location" type="System.Drawing.Point, System.Drawing">
-    <value>392, 18</value>
+    <value>432, 18</value>
   </data>
   <data name="buttonRemoveContextMenu.Size" type="System.Drawing.Size, System.Drawing">
     <value>83, 23</value>
@@ -886,7 +886,7 @@
     <value>8, 364</value>
   </data>
   <data name="groupBoxContextMenu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>513, 74</value>
+    <value>534, 74</value>
   </data>
   <data name="groupBoxContextMenu.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -913,7 +913,7 @@
     <value>3, 3, 3, 3</value>
   </data>
   <data name="tabPage1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>525, 442</value>
+    <value>546, 442</value>
   </data>
   <data name="tabPage1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -940,7 +940,7 @@
     <value>0, 1</value>
   </data>
   <data name="tabControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>533, 468</value>
+    <value>554, 468</value>
   </data>
   <data name="tabControl1.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -967,7 +967,7 @@
     <value>NoControl</value>
   </data>
   <data name="buttonCancel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>451, 475</value>
+    <value>472, 475</value>
   </data>
   <data name="buttonCancel.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
@@ -1000,7 +1000,7 @@
     <value>NoControl</value>
   </data>
   <data name="buttonОК.Location" type="System.Drawing.Point, System.Drawing">
-    <value>370, 475</value>
+    <value>391, 475</value>
   </data>
   <data name="buttonОК.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
@@ -1030,10 +1030,7 @@
     <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>532, 503</value>
-  </data>
-  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+    <value>553, 503</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterParent</value>

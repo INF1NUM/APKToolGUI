@@ -32,34 +32,34 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.checkBox7 = new System.Windows.Forms.CheckBox();
+            this.checkBox6 = new System.Windows.Forms.CheckBox();
             this.themeComboBox = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.customApkToolTxtBox = new System.Windows.Forms.TextBox();
             this.customApktoolBtn = new System.Windows.Forms.Button();
+            this.useCustomApktoolChk = new System.Windows.Forms.CheckBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.checkBox5 = new System.Windows.Forms.CheckBox();
+            this.checkBox4 = new System.Windows.Forms.CheckBox();
+            this.customTempLocationTxtBox = new System.Windows.Forms.TextBox();
+            this.textBoxCustomJavaLocation = new System.Windows.Forms.TextBox();
             this.buttonCustomTempLocation = new System.Windows.Forms.Button();
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
             this.buttonCustomJavaLocation = new System.Windows.Forms.Button();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.checkBoxCheckUpdateStartup = new System.Windows.Forms.CheckBox();
             this.groupBoxLanguage = new System.Windows.Forms.GroupBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.groupBoxContextMenu = new System.Windows.Forms.GroupBox();
+            this.ignoreOutputContextMenuBox = new System.Windows.Forms.CheckBox();
             this.labelAdminRights = new System.Windows.Forms.Label();
             this.buttonAddContextMenu = new System.Windows.Forms.Button();
             this.buttonRemoveContextMenu = new System.Windows.Forms.Button();
             this.buttonCancel = new System.Windows.Forms.Button();
             this.buttonОК = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.checkBox7 = new System.Windows.Forms.CheckBox();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
-            this.customApkToolTxtBox = new System.Windows.Forms.TextBox();
-            this.useCustomApktoolChk = new System.Windows.Forms.CheckBox();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.customTempLocationTxtBox = new System.Windows.Forms.TextBox();
-            this.textBoxCustomJavaLocation = new System.Windows.Forms.TextBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBoxCheckUpdateStartup = new System.Windows.Forms.CheckBox();
-            this.ignoreOutputContextMenuBox = new System.Windows.Forms.CheckBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -108,105 +108,6 @@
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.TabStop = false;
             // 
-            // themeComboBox
-            // 
-            this.themeComboBox.FormattingEnabled = true;
-            this.themeComboBox.Items.AddRange(new object[] {
-            resources.GetString("themeComboBox.Items"),
-            resources.GetString("themeComboBox.Items1"),
-            resources.GetString("themeComboBox.Items2")});
-            resources.ApplyResources(this.themeComboBox, "themeComboBox");
-            this.themeComboBox.Name = "themeComboBox";
-            // 
-            // label1
-            // 
-            resources.ApplyResources(this.label1, "label1");
-            this.label1.Name = "label1";
-            // 
-            // customApktoolBtn
-            // 
-            resources.ApplyResources(this.customApktoolBtn, "customApktoolBtn");
-            this.customApktoolBtn.Name = "customApktoolBtn";
-            this.customApktoolBtn.UseVisualStyleBackColor = true;
-            this.customApktoolBtn.Click += new System.EventHandler(this.customApktoolBtn_Click);
-            // 
-            // label6
-            // 
-            resources.ApplyResources(this.label6, "label6");
-            this.label6.ForeColor = System.Drawing.Color.DimGray;
-            this.label6.Name = "label6";
-            // 
-            // buttonCustomTempLocation
-            // 
-            resources.ApplyResources(this.buttonCustomTempLocation, "buttonCustomTempLocation");
-            this.buttonCustomTempLocation.Name = "buttonCustomTempLocation";
-            this.buttonCustomTempLocation.UseVisualStyleBackColor = true;
-            this.buttonCustomTempLocation.Click += new System.EventHandler(this.buttonCustomTempLocation_Click);
-            // 
-            // buttonCustomJavaLocation
-            // 
-            resources.ApplyResources(this.buttonCustomJavaLocation, "buttonCustomJavaLocation");
-            this.buttonCustomJavaLocation.Name = "buttonCustomJavaLocation";
-            this.buttonCustomJavaLocation.UseVisualStyleBackColor = true;
-            this.buttonCustomJavaLocation.Click += new System.EventHandler(this.buttonCustomJavaLocation_Click);
-            // 
-            // groupBoxLanguage
-            // 
-            resources.ApplyResources(this.groupBoxLanguage, "groupBoxLanguage");
-            this.groupBoxLanguage.Controls.Add(this.comboBox1);
-            this.groupBoxLanguage.Name = "groupBoxLanguage";
-            this.groupBoxLanguage.TabStop = false;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            resources.ApplyResources(this.comboBox1, "comboBox1");
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Name = "comboBox1";
-            // 
-            // groupBoxContextMenu
-            // 
-            resources.ApplyResources(this.groupBoxContextMenu, "groupBoxContextMenu");
-            this.groupBoxContextMenu.Controls.Add(this.ignoreOutputContextMenuBox);
-            this.groupBoxContextMenu.Controls.Add(this.labelAdminRights);
-            this.groupBoxContextMenu.Controls.Add(this.buttonAddContextMenu);
-            this.groupBoxContextMenu.Controls.Add(this.buttonRemoveContextMenu);
-            this.groupBoxContextMenu.Name = "groupBoxContextMenu";
-            this.groupBoxContextMenu.TabStop = false;
-            // 
-            // labelAdminRights
-            // 
-            resources.ApplyResources(this.labelAdminRights, "labelAdminRights");
-            this.labelAdminRights.Name = "labelAdminRights";
-            // 
-            // buttonAddContextMenu
-            // 
-            resources.ApplyResources(this.buttonAddContextMenu, "buttonAddContextMenu");
-            this.buttonAddContextMenu.Name = "buttonAddContextMenu";
-            this.buttonAddContextMenu.UseVisualStyleBackColor = true;
-            this.buttonAddContextMenu.Click += new System.EventHandler(this.buttonAddContextMenu_Click);
-            // 
-            // buttonRemoveContextMenu
-            // 
-            resources.ApplyResources(this.buttonRemoveContextMenu, "buttonRemoveContextMenu");
-            this.buttonRemoveContextMenu.Name = "buttonRemoveContextMenu";
-            this.buttonRemoveContextMenu.UseVisualStyleBackColor = true;
-            this.buttonRemoveContextMenu.Click += new System.EventHandler(this.buttonRemoveContextMenu_Click);
-            // 
-            // buttonCancel
-            // 
-            resources.ApplyResources(this.buttonCancel, "buttonCancel");
-            this.buttonCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonCancel.Name = "buttonCancel";
-            this.buttonCancel.UseVisualStyleBackColor = true;
-            // 
-            // buttonОК
-            // 
-            resources.ApplyResources(this.buttonОК, "buttonОК");
-            this.buttonОК.Name = "buttonОК";
-            this.buttonОК.UseVisualStyleBackColor = true;
-            this.buttonОК.Click += new System.EventHandler(this.buttonОК_Click);
-            // 
             // textBox1
             // 
             this.textBox1.BackColor = System.Drawing.SystemColors.Window;
@@ -231,6 +132,21 @@
             this.checkBox6.Name = "checkBox6";
             this.checkBox6.UseVisualStyleBackColor = true;
             // 
+            // themeComboBox
+            // 
+            this.themeComboBox.FormattingEnabled = true;
+            this.themeComboBox.Items.AddRange(new object[] {
+            resources.GetString("themeComboBox.Items"),
+            resources.GetString("themeComboBox.Items1"),
+            resources.GetString("themeComboBox.Items2")});
+            resources.ApplyResources(this.themeComboBox, "themeComboBox");
+            this.themeComboBox.Name = "themeComboBox";
+            // 
+            // label1
+            // 
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.Name = "label1";
+            // 
             // customApkToolTxtBox
             // 
             this.customApkToolTxtBox.BackColor = System.Drawing.SystemColors.Window;
@@ -239,6 +155,13 @@
             this.customApkToolTxtBox.Name = "customApkToolTxtBox";
             this.customApkToolTxtBox.Text = global::APKToolGUI.Properties.Settings.Default.ApktoolPath;
             // 
+            // customApktoolBtn
+            // 
+            resources.ApplyResources(this.customApktoolBtn, "customApktoolBtn");
+            this.customApktoolBtn.Name = "customApktoolBtn";
+            this.customApktoolBtn.UseVisualStyleBackColor = true;
+            this.customApktoolBtn.Click += new System.EventHandler(this.customApktoolBtn_Click);
+            // 
             // useCustomApktoolChk
             // 
             resources.ApplyResources(this.useCustomApktoolChk, "useCustomApktoolChk");
@@ -246,6 +169,12 @@
             this.useCustomApktoolChk.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "UseCustomApktool", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.useCustomApktoolChk.Name = "useCustomApktoolChk";
             this.useCustomApktoolChk.UseVisualStyleBackColor = true;
+            // 
+            // label6
+            // 
+            resources.ApplyResources(this.label6, "label6");
+            this.label6.ForeColor = System.Drawing.Color.DimGray;
+            this.label6.Name = "label6";
             // 
             // checkBox5
             // 
@@ -279,6 +208,13 @@
             this.textBoxCustomJavaLocation.Name = "textBoxCustomJavaLocation";
             this.textBoxCustomJavaLocation.Text = global::APKToolGUI.Properties.Settings.Default.JavaExe;
             // 
+            // buttonCustomTempLocation
+            // 
+            resources.ApplyResources(this.buttonCustomTempLocation, "buttonCustomTempLocation");
+            this.buttonCustomTempLocation.Name = "buttonCustomTempLocation";
+            this.buttonCustomTempLocation.UseVisualStyleBackColor = true;
+            this.buttonCustomTempLocation.Click += new System.EventHandler(this.buttonCustomTempLocation_Click);
+            // 
             // checkBox3
             // 
             resources.ApplyResources(this.checkBox3, "checkBox3");
@@ -286,6 +222,13 @@
             this.checkBox3.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "UseCustomTempDir", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.checkBox3.Name = "checkBox3";
             this.checkBox3.UseVisualStyleBackColor = true;
+            // 
+            // buttonCustomJavaLocation
+            // 
+            resources.ApplyResources(this.buttonCustomJavaLocation, "buttonCustomJavaLocation");
+            this.buttonCustomJavaLocation.Name = "buttonCustomJavaLocation";
+            this.buttonCustomJavaLocation.UseVisualStyleBackColor = true;
+            this.buttonCustomJavaLocation.Click += new System.EventHandler(this.buttonCustomJavaLocation_Click);
             // 
             // checkBox2
             // 
@@ -313,6 +256,30 @@
             this.checkBoxCheckUpdateStartup.Name = "checkBoxCheckUpdateStartup";
             this.checkBoxCheckUpdateStartup.UseVisualStyleBackColor = true;
             // 
+            // groupBoxLanguage
+            // 
+            resources.ApplyResources(this.groupBoxLanguage, "groupBoxLanguage");
+            this.groupBoxLanguage.Controls.Add(this.comboBox1);
+            this.groupBoxLanguage.Name = "groupBoxLanguage";
+            this.groupBoxLanguage.TabStop = false;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            resources.ApplyResources(this.comboBox1, "comboBox1");
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Name = "comboBox1";
+            // 
+            // groupBoxContextMenu
+            // 
+            resources.ApplyResources(this.groupBoxContextMenu, "groupBoxContextMenu");
+            this.groupBoxContextMenu.Controls.Add(this.ignoreOutputContextMenuBox);
+            this.groupBoxContextMenu.Controls.Add(this.labelAdminRights);
+            this.groupBoxContextMenu.Controls.Add(this.buttonAddContextMenu);
+            this.groupBoxContextMenu.Controls.Add(this.buttonRemoveContextMenu);
+            this.groupBoxContextMenu.Name = "groupBoxContextMenu";
+            this.groupBoxContextMenu.TabStop = false;
+            // 
             // ignoreOutputContextMenuBox
             // 
             resources.ApplyResources(this.ignoreOutputContextMenuBox, "ignoreOutputContextMenuBox");
@@ -320,6 +287,39 @@
             this.ignoreOutputContextMenuBox.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "IgnoreOutputDirContextMenu", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.ignoreOutputContextMenuBox.Name = "ignoreOutputContextMenuBox";
             this.ignoreOutputContextMenuBox.UseVisualStyleBackColor = true;
+            // 
+            // labelAdminRights
+            // 
+            resources.ApplyResources(this.labelAdminRights, "labelAdminRights");
+            this.labelAdminRights.Name = "labelAdminRights";
+            // 
+            // buttonAddContextMenu
+            // 
+            resources.ApplyResources(this.buttonAddContextMenu, "buttonAddContextMenu");
+            this.buttonAddContextMenu.Name = "buttonAddContextMenu";
+            this.buttonAddContextMenu.UseVisualStyleBackColor = true;
+            this.buttonAddContextMenu.Click += new System.EventHandler(this.buttonAddContextMenu_Click);
+            // 
+            // buttonRemoveContextMenu
+            // 
+            resources.ApplyResources(this.buttonRemoveContextMenu, "buttonRemoveContextMenu");
+            this.buttonRemoveContextMenu.Name = "buttonRemoveContextMenu";
+            this.buttonRemoveContextMenu.UseVisualStyleBackColor = true;
+            this.buttonRemoveContextMenu.Click += new System.EventHandler(this.buttonRemoveContextMenu_Click);
+            // 
+            // buttonCancel
+            // 
+            resources.ApplyResources(this.buttonCancel, "buttonCancel");
+            this.buttonCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.buttonCancel.Name = "buttonCancel";
+            this.buttonCancel.UseVisualStyleBackColor = true;
+            // 
+            // buttonОК
+            // 
+            resources.ApplyResources(this.buttonОК, "buttonОК");
+            this.buttonОК.Name = "buttonОК";
+            this.buttonОК.UseVisualStyleBackColor = true;
+            this.buttonОК.Click += new System.EventHandler(this.buttonОК_Click);
             // 
             // FormSettings
             // 
