@@ -390,7 +390,7 @@
     <EmbeddedResource Include="Forms\FormSettings.zh-CN.resx">
       <DependentUpon>FormSettings.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Languages\Language.de-DE.resx" />
+    <EmbeddedResource Include="Languages\Language.de.resx" />
     <EmbeddedResource Include="Languages\Language.hu.resx" />
     <EmbeddedResource Include="Languages\Language.pt-BR.resx" />
     <EmbeddedResource Include="Languages\Language.ru.resx" />

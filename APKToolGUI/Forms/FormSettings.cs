@@ -12,6 +12,8 @@ using System.Windows.Shapes;
 using static APKToolGUI.UpdateChecker;
 using APKToolGUI.Properties;
 using APKToolGUI.Controls;
+using System.Diagnostics;
+using System.Linq;
 
 namespace APKToolGUI
 {
@@ -85,15 +87,19 @@ namespace APKToolGUI
 
             comboBox1.Items.Add(sysLang);
             comboBox1.Items.Add(CultureInfo.GetCultureInfo("en"));
+
             CultureInfo[] cultures = CultureInfo.GetCultures(CultureTypes.AllCultures);
             string _culture = Settings.Default.Culture;
+
             foreach (CultureInfo culture in cultures)
             {
                 foreach (string resourceName in Assembly.GetExecutingAssembly().GetManifestResourceNames())
                 {
-                    string[] cultNamw = resourceName.Split('.');
-                    if (cultNamw[1] == culture.Name)
+                    Debug.WriteLine(resourceName);
+                    string[] cultName = resourceName.Split('.');
+                    if (cultName[1] == culture.Name)
                     {
+                        Debug.WriteLine("Lang: " + cultName[1] + " " + culture.Name);
                         string lang = string.Format("{0} [{1}]", culture.DisplayName, culture.Name);
                         comboBox1.Items.Add(lang);
 
