@@ -26,10 +26,10 @@ namespace APKToolGUI.Utils
         /// log message with level DEBUG (may be disabled)
         /// </summary>
         /// <param name="s">the string to log</param>
-        public static void d(ApktoolEventType eventType, string s)
+        public static void d(string s)
         {
             if (!Settings.Default.DebugMode) return;
-            FormMain.Instance.ToLog(eventType, s);
+            FormMain.Instance.ToLog(ApktoolEventType.Infomation, s);
         }
 
         /// <summary>
