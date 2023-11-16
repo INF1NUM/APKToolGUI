@@ -1,10 +1,48 @@
-﻿using System;
+﻿using APKToolGUI;
+using APKToolGUI.Languages;
+using APKToolGUI.Properties;
+using System;
 using System.Diagnostics;
+using System.IO;
+using System.Linq;
+using System.Windows.Forms;
+using static Microsoft.WindowsAPICodePack.Shell.PropertySystem.SystemProperties.System;
 
 namespace Java
 {
     public class JavaUtils
     {
+        public static string GetSystemVariable()
+        {
+            try
+            {
+                using (Process javaProcess = new Process())
+                {
+                    javaProcess.StartInfo.FileName = "where";
+                    javaProcess.StartInfo.Arguments = "java";
+                    javaProcess.StartInfo.CreateNoWindow = true;
+                    javaProcess.StartInfo.UseShellExecute = false;
+                    javaProcess.StartInfo.RedirectStandardError = true;
+                    javaProcess.StartInfo.RedirectStandardOutput = true;
+                    javaProcess.Start();
+                    string output = javaProcess.StandardOutput.ReadToEnd();
+                    javaProcess.WaitForExit();
+                    if (!String.IsNullOrEmpty(output))
+                    {
+                        string[] paths = output.Split(new[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries);
+                        foreach (string path in paths)
+                        {
+                            return path;
+                        }
+                    }
+                }
+            }
+            catch
+            {
+                return null;
+            }
+            return null;
+        }
         private static string GetJavaInstallationPath()
         {
             string environmentPath = Environment.GetEnvironmentVariable("JAVA_HOME");
@@ -44,6 +82,27 @@ namespace Java
             }
             else
                 return null;
+        }
+
+        public static string GetJavaPath()
+        {
+            if (Settings.Default.UseCustomJavaExe)
+            {
+                return Settings.Default.JavaExe;
+            }
+            else
+            {
+                string javaExec = JavaUtils.GetSystemVariable();
+                if (String.IsNullOrEmpty(javaExec))
+                {
+                    javaExec = JavaUtils.SearchPath();
+                    if (File.Exists(javaExec))
+                    {
+                        return javaExec;
+                    }
+                }
+                return javaExec;
+            }
         }
     }
 }

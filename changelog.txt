@@ -1,65 +1,198 @@
+3.3.0.1
+- Fixed an issue that caused installation fail after compiling
+
+3.3.0.0
+- Updated Simplified Chinese translation
+- Removed android.intent.action.MAIN from "Fix ApkTool errors after decompile"
+- Updated tools (apktool.jar (2.8.1), APKEditor.jar (1.3.2), aapt.exe (SDK 34), aapt2.exe (SDK 34), adb.exe (34.0.4-10411341), apksigner.jar (SDK 34), zipalign.exe (SDK 34))
+- Added debug mode to print more logs
+- Fixed java version
+- "Fix ApkTool errors after decompile" No longer change target SDK to 29
+- Added option to clear temp folder
+- Improve dark theme a bit
+- Added option to not parse APK info when selecting APK for decompiling
+- Fixed sign after zipalign
+- Added option to open new Instance
+- Added jump list
+- Parse alt-native-code from aapt
+- Added custom JVM args
+- All settings portable
+- Move labels to tooltips to keep UI clean
+- Change sparseResources to false for "Fix ApkTool errors after decompile"
+- Fix crash when drag and dropping APK file
+
+If you are using Java 20 and encountered "Invalid CEN header (invalid zip64 extra data field size)" error, enable "custom JVM arguments" in settings to temporary fix this issue. See issue #13 on Github repo
+
+3.2.2.0
+- Dark theme (Currently there is no dark scrollbar, and tabs looks quite ugly)
+- Fix crash when dropping decompiled APK on compile panel
+- Added View APK info in context menu (You must reinstall context menu)
+- Fixed attempting to install APK even it's disabled
+- Updated APKEditor.jar to 1.2.0
+
+3.2.1.0
+- Fixed an error when decompiling split APK for the second time
+- Updated Russian language
+- Updated Hungarian language
+- Updated dependencies
+- Make log output read only
+- Updated resources: aapt.exe, aapt2.exe, apksigner.jar, zipalign.exe, adb.exe
+- Removed libaapt2_jni.dll
+
+3.2.0.0
+- Added split APK merging (Build-in and APKEditor.jar) for decompilation. APKEditor.jar is set to default
+- Added incompleted Hungarian translation
+- Added incompleted Portuguese translation
+- Improve performance
+- Improve Java logic
+- Added launcable activity text box
+- Improve directory logic
+- Support high DPI
+- Support long path (Windows 10 and above)
+- Use own framework path to avoid conflict with other tools
+- Allow drop multiple files
+- Status bar is clickable to cancel the process
+- Added ADB to install APK
+- Clean up log calls
+- Kill process by clicking on status bar
+- Option to use custom apktool path
+- Added menu item "Report an issue"
+- Fixed issue that caused some anti-virus to detect as virus. It's false positive
+- Fixed crash if Java is not installed
+
+3.1.0.0
+- Disable maximize
+- Sign after align settings fixed
+- Sign after align enabled by default
+- Update dependencies
+- Added incomplete Chinese Simplified language
+- Prevent error with apkinfo when file is not found
+- Make config fully portable
+- Fixed "Do not decode sources"
+- Added chinese language. It is currently incomplete
+- Simple log output
+- Added UTF-8 filename support workaround. It will move to temp folder so it will process slower
+- Fixed paths of baksmali
+- Improved temp logic
+- Improved Java logic
+- Improved Apkinfo
+- Added option to overwrite input apk of signing
+- Updated apktool to 2.7.0
+- Updated apksigner, aapt, and zipalign
+
+3.0.2.0
+- Bring back status bar. VS kept messing up with the design for some reason
+- Added timelapse
+- Added taskbar progress
+- Play sound when done (OFF by default)
+- Grid no longer sortable
+
+3.0.1.0
+- Fix filename to signed APK
+- Fix minimum API changer
+- Added button to open decompile project output folder
+- Added "use aapt2"
+
+3.0.0.2
+- Fix APK input for decompilation 
+- Save log in temp folder
+
+3.0.0.1
+- Show changelog on update prompt
+- Implement unsigned APK creation after compile. Totally forgotten it
+- Compiled APK named "signed" instead "compiled" when signng after compile
+
+3.0.0.0
+- Updated apktool to 2.6.1
+- Updated apksinger, aapt, and zipalign to SDK 31
+- Detect installed Java
+- Word wrap in log box
+- Upgrade to .NET 4.8. XP and Vista support will be removed
+- Removed .jar and .zip signing
+- Modern folder browser dialog
+- Removed all exited event handler. It is buggy
+- Added button to open selected APK, decompiled APK, compiled APK, signed APK and aligned APK location
+- Added button to open AndroidManifest.xml, apktool.xml and main activity smali
+- Added Sign after compile
+- Added Zipalign after compile
+- Added Button to clear framework
+- Added Clear framework before decompile 
+- APK info with icon and links to Playstore, Apkcombo and APKpure
+- Added option no crunching on build
+- Added options to use keystore file to sign APK
+- Added APK scheme version selections
+- Added option to save log as file
+- Removed mini forms
+- Added .dex for context menu
+- Added baksmali
+- Added framework cleaning
+- Added option to ignore output directory options for context menu
+- New modern icons
+
+---------------------------------------------------------------------
+
 2.4.0.0
-В очередной раз полностью переписана "обёртка" для apktool.
-Добавлено несколько опций apktool.
+Once again, the "wrapper" for apktool has been completely rewritten.
+Added several options to apktool.
 
 2.3.3.1
-Исправлено подвисание окна при запуске программы.
+Fixed window freezing when starting the program.
 
 2.3.3.0
-Оптимизация графических ресурсов (-20% размера исполняемого файла).
+Graphic resource optimization (-20% executable file size).
 
 2.3.2.0
-Добавлена опциональная возможность очищать журнал событий перед выполнение действия
-Добавлена возможность очищать журнал событий из контекстного меню журнала.
-В диалоги выбора файла для декомпиляции и подписи добавлена возможность выбора файлов любого типа
+Added an optional ability to clear the event log before performing an action
+Added the ability to clear the event log from the context menu of the log.
+The ability to select files of any type has been added to the file selection dialogs for decompilation and signing
 
 2.3.1.2
-Исправлено определение типа файла при подписи из главного окна программы
+Fixed file type detection when signing from the main program window
 
 2.3.1.1
-Исправлен прогрессбар в окне из контекстного меню.
+Fixed progressbar in window from context menu.
 
 2.3.1.0
-+ Теперь настройки программы хранятся в каталоге программы.
++ Now the program settings are stored in the program directory.
 
 2.3.0.1
-- Исправлено появление окна при установке/удалении контекстного меню
-- Исправлена ошибка установки/удаления контекстного меню на Windows XP
+- Fixed window appearance when installing/removing context menu
+- Fixed error installing/removing context menu on Windows XP
 
 2.3.0.0
-+ Новый лог, более читабельный
-+ Статусбар
-+ Проверка обновлений при запуске (но не чаще, чем раз в сутки). Отключается в настройках.
-+ Добавлена возможность при неудачном поиске явы указать пользовательское расположение
-- Немного ускорил запуск программы
-- Очередной рефакторинг и оптимизации.
++ New log, more readable
++ Statusbar
++ Check for updates at startup (but not more than once a day). Disabled in settings.
++ Added the ability to specify a custom location in case of an unsuccessful Java search
+- Slightly accelerated the launch of the program
+- Another refactoring and optimization.
 
 2.2.1.0
-- Исправлена ошибка при закрытии программы в случае неудачного поиска расположения явы
-- Исправлена ошибка в результате которой повторный запуск выполняющейся задачи приводил к падению программы.
-+ Добавлеа возможность подписывать zip-архивы
-+ Обновлен zipalign.exe
-- Мелкие оптимизации и рефакторинг
+- Fixed a bug when closing the program in case of an unsuccessful search for the location of Java
+- Fixed a bug where restarting a running task would cause the program to crash.
++ Added ability to sign zip archives
++ Updated zipalign.exe
+- Minor optimizations and refactorings
 
 2.2.0.0
-- Рефакторинг всего и вся
-- Оптимизировано использование памяти
-+ Добавлена многоуровневая система поиска расположения Java Runtime (подробнее)
-+ Добавлена возможность использования портативной Java Runtime (подробнее)
-+ Блокировка формы на период выполнения операций apktool для исключения повторного запуска выполняемого процесса
-- Прочие мелки оптимизации
+- Refactoring anything and everything
+- Optimized memory usage
++ Added multi-level Java Runtime location search system (more info)
++ Added ability to use portable Java Runtime (more info)
++ Blocking the form for the period of apktool operations to prevent restarting the running process
+- Other small optimizations
 
 2.1.3.2
-- Исправлено добавление в контекстное меня таких объектов как "Корзина", "Мой компьютер" и т.д.
-+ apktool обновлён до версии 2.0.0 BETA 9
+- Fixed adding objects such as "Recycle Bin", "My Computer", etc. to the context menu.
++ apktool updated to version 2.0.0 BETA 9
 
 2.1.3.1
-- Исправлено подвисание программы при проверке обновления
-- Исправлена подпись файла из главного окна программы
+- Fixed program freezing when checking for updates
+- Fixed file signature from the main program window
 
-2.1.3.0 (21.11.2013)
-- Группировка пунктов контекстного меню (Внимание! Сначала удалите старое меню версией 2.1.2.1)
-- Перевод для элементов контекстного меню
-- Пофиксил выбор языков
-+ Добавлена украинская локализация (спасибо LinXP)
-- Прочие мелкие изменения
+2.1.3.0 (11/21/2013)
+- Grouping context menu items (Attention! First remove the old menu with version 2.1.2.1)
+- Translation for context menu items
+- Fixed the choice of languages
++ Added Ukrainian localization (thanks to LinXP)
+- Other minor changes

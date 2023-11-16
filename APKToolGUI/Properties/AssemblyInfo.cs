@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // Управление общими сведениями о сборке осуществляется с помощью 
 // набора атрибутов. Измените значения этих атрибутов, чтобы изменить сведения,
 // связанные со сборкой.
-[assembly: AssemblyTitle("APKTool GUI")]
-[assembly: AssemblyDescription("Графический интерфейс для утилит akptool, signapk и zipalign.")]
+[assembly: AssemblyTitle("APK Tool GUI")]
+[assembly: AssemblyDescription("GUI for apktool, signapk and zipalign utilities.")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("APKTool GUI")]
-[assembly: AssemblyCopyright("© INFINUM, 2012-2015")]
+[assembly: AssemblyProduct("APK Tool GUI")]
+[assembly: AssemblyCopyright("Original owner: INFINUM, 2012-2015 | Maintained by: AndnixSH, 2022-2023")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // Следующий GUID служит для идентификации библиотеки типов, если этот проект будет видимым для COM
-[assembly: Guid("12cc5907-c237-4d52-8c7e-08d622828cf4")]
+[assembly: Guid("49ccb60c-22a6-4a25-a4bf-9208712ad928")]
 
 // Сведения о версии сборки состоят из следующих четырех значений:
 //
@@ -32,5 +32,5 @@ using System.Runtime.InteropServices;
 // Можно задать все значения или принять номер построения и номер редакции по умолчанию, 
 // используя "*", как показано ниже:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("2.4.0.446")]
-[assembly: AssemblyFileVersion("2.4.0.446")]
+[assembly: AssemblyVersion("3.3.0.1")]
+[assembly: AssemblyFileVersion("3.3.0.1")]

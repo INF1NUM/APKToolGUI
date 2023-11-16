@@ -1,5 +1,15 @@
-﻿using System;
+﻿using APKToolGUI.Languages;
+using APKToolGUI.Properties;
+using APKToolGUI.Utils;
+using Bluegrams.Application;
+using Dark.Net;
+using OSVersionExtension;
+using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.IO;
+using System.Reflection;
+using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
 namespace APKToolGUI
@@ -9,51 +19,145 @@ namespace APKToolGUI
         /// <summary>
         /// Главная точка входа для приложения.
         /// </summary>
+        [DllImport("Shcore.dll")]
+        static extern int SetProcessDpiAwareness(int PROCESS_DPI_AWARENESS);
+
+        [DllImport("user32.dll")]
+        private static extern bool SetProcessDPIAware();
+
         [STAThread]
         static void Main(String[] arg)
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-
-            if (arg.Length > 0)
+            try
             {
-                switch (arg[0])
+                //Debug.WriteLine(Application.ProductName);
+                Application.EnableVisualStyles();
+                Application.SetCompatibleTextRenderingDefault(false);
+
+                if (Environment.OSVersion.Version.Major == 6)
                 {
-                    case "ccm":
-                        ExplorerContextMenuMethod(ExplorerContextMenu.Action.Create);
-                        break;
-                    case "rcm":
-                        ExplorerContextMenuMethod(ExplorerContextMenu.Action.Remove);
-                        break;
-                    case "b":
-                        Application.Run(new FormBuild(arg));
-                        break;
-                    case "d":
-                        Application.Run(new FormDecode(arg));
-                        break;
-                    default:
-                        break;
+                    SetProcessDPIAware();
+                }
+
+                PortableSettingsProvider.SettingsFileName = "config.xml";
+                PortableSettingsProvider.ApplyProvider(Settings.Default);
+
+                if (arg.Length == 1)
+                {
+                    switch (arg[0])
+                    {
+                        case "ccm":
+                            ExplorerContextMenuMethod(ExplorerContextMenu.Action.Create);
+                            break;
+                        case "rcm":
+                            ExplorerContextMenuMethod(ExplorerContextMenu.Action.Remove);
+                            break;
+                        case "opendecfolder":
+                            if (Settings.Default.Decode_UseOutputDir)
+                            {
+                                string outDir = Settings.Default.Decode_OutputDir;
+                                if (Directory.Exists(outDir))
+                                    Process.Start(outDir);
+                                else
+                                    MessageBox.Show(String.Format(Language.DirectoryNotExist, outDir), Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                            break;
+                        case "opencomfolder":
+                            if (Settings.Default.Build_UseOutputAppPath)
+                            {
+                                string outDir = Settings.Default.Build_OutputAppPath;
+                                if (Directory.Exists(outDir))
+                                    Process.Start(outDir);
+                                else
+                                    MessageBox.Show(String.Format(Language.DirectoryNotExist, outDir), Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                            break;
+                    }
+                }
+                else
+                {
+                    if (arg.Length == 2)
+                    {
+                        switch (arg[0])
+                        {
+                            case "comapk":
+                                if (!File.Exists(Path.Combine(arg[1], "AndroidManifest.xml")))
+                                {
+                                    MessageBox.Show(Language.NotDecompiledApk, Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                    return;
+                                }
+                                break;
+                        }
+                    }
+                    if (FilesCheck() == true)
+                    {
+                        TEMP_PATH = RandTempDirectory();
+                        TEMP_MAIN = TempDirectory();
+                        Directory.CreateDirectory(TEMP_PATH);
+
+                        Theme theme = (Theme)Settings.Default.Theme;
+                        if (IsWin10OrAbove())
+                            DarkNet.Instance.SetCurrentProcessTheme(theme);
+
+                        Form mainForm = new FormMain();
+
+                        if (IsWin10OrAbove())
+                            DarkNet.Instance.SetWindowThemeForms(mainForm, theme);
+
+                        Application.Run(mainForm);
+                    }
                 }
             }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex);
+                //MessageBox.Show(ex.ToString(), Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public static bool IsWin10OrAbove()
+        {
+            // Check if the operating system is Windows 10 or above
+            if (OSVersion.GetOSVersion().Version.Major >= 10 && OSVersion.GetOSVersion().Version.Minor >= 0)
+            {
+                return true;
+            }
             else
-                if (FilesCheck() == true)
-                    Application.Run(new FormMain());
+            {
+                return false;
+            }
+        }
+
+
+        public static bool IsDarkTheme()
+        {
+            if (IsWin10OrAbove())
+                return DarkNet.Instance.EffectiveCurrentProcessThemeIsDark;
+            else if (Settings.Default.Theme == 2)
+                return true;
+            return false;
         }
 
         public static void SetLanguage()
         {
-            String settingsCulture = Properties.Settings.Default.Culture;
-
-            if (settingsCulture.Equals("Auto"))
+            String settingsCulture = Settings.Default.Culture;
+            try
             {
-                System.Threading.Thread.CurrentThread.CurrentUICulture = System.Globalization.CultureInfo.InstalledUICulture;
-                System.Threading.Thread.CurrentThread.CurrentCulture = System.Globalization.CultureInfo.InstalledUICulture;
+                if (settingsCulture.Equals("Auto"))
+                {
+                    System.Threading.Thread.CurrentThread.CurrentUICulture = System.Globalization.CultureInfo.InstalledUICulture;
+                    System.Threading.Thread.CurrentThread.CurrentCulture = System.Globalization.CultureInfo.InstalledUICulture;
+                }
+                else
+                {
+                    System.Globalization.CultureInfo _settingsCulture = System.Globalization.CultureInfo.GetCultureInfo(settingsCulture);
+                    System.Threading.Thread.CurrentThread.CurrentUICulture = _settingsCulture;
+                    System.Threading.Thread.CurrentThread.CurrentCulture = _settingsCulture;
+                }
             }
-            else
+            catch
             {
-                System.Globalization.CultureInfo _settingsCulture = System.Globalization.CultureInfo.GetCultureInfo(settingsCulture);
-                System.Threading.Thread.CurrentThread.CurrentUICulture = _settingsCulture;
-                System.Threading.Thread.CurrentThread.CurrentCulture = _settingsCulture;
+
             }
         }
 
@@ -68,7 +172,7 @@ namespace APKToolGUI
                 {
                     files += file + Environment.NewLine;
                 }
-                MessageBox.Show("Отсутствуют необходимые файлы:" + files, Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(Language.RequiredFilesMissing + files, Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 //Application.Exit();
                 return false;
             }
@@ -82,12 +186,22 @@ namespace APKToolGUI
             String[] fileList = new String[]{
                 APKTOOL_PATH,
                 ZIPALIGN_PATH,
-                SIGNAPK_PATH,
+                APKSIGNER_PATH,
+                BAKSMALI_PATH,
+                SMALI_PATH,
+                AAPT_PATH,
+                AAPT2_PATH,
                 SIGNAPK_KEYPRIVATE,
-                SIGNAPK_KEYPUBLIC};
+                SIGNAPK_KEYPUBLIC,
+                APKEDITOR_PATH,
+                ADB_PATH,
+                ADBWINAPI_PATH,
+                ADBWINUSBAPI_PATH,
+                LIBWINP_PATH,
+            };
             for (int i = 0; i < fileList.Length; i++)
-                if (!System.IO.File.Exists(fileList[i]))
-                    missingFiles.Add(System.IO.Path.GetFileName(fileList[i]));
+                if (!File.Exists(fileList[i]))
+                    missingFiles.Add(Path.GetFileName(fileList[i]));
             return missingFiles;
         }
 
@@ -116,24 +230,49 @@ namespace APKToolGUI
 
         public static string GetPortablePath(string path)
         {
-            string startupPath = Application.StartupPath + System.IO.Path.DirectorySeparatorChar;
+            string startupPath = Application.StartupPath + Path.DirectorySeparatorChar;
             if (path.Contains(startupPath))
                 return path.Replace(startupPath, String.Empty);
             else
                 return path;
         }
 
-        private static readonly string appPath = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
-        public static string APKTOOL_PATH { get { return appPath + @"\bin\apktool.jar"; } }
-        public static string SIGNAPK_PATH { get { return  appPath + @"\bin\signapk.jar"; } }
-        public static string SIGNAPK_KEYPRIVATE { get { return  appPath + @"\bin\testkey.pk8"; } }
-        public static string SIGNAPK_KEYPUBLIC { get { return  appPath + @"\bin\testkey.x509.pem"; } }
-        public static string ZIPALIGN_PATH { get { return appPath + @"\bin\zipalign.exe"; } }
+        public static string TempDirectory()
+        {
+            //Generate new every new instance to avoid conflict
+            //We want to keep obfuscated path short as possible to prevent long path error
+            if (Settings.Default.UseCustomTempDir)
+                return Path.Combine(Settings.Default.TempDir);
+            else
+                return Path.Combine(LOCAL_APPDATA_PATH, ASSEMBLY_NAME);
+        }
 
-        //public static readonly string APKTOOL_PATH = appPath + @"\bin\apktool.jar";
-        //public static readonly string SIGNAPK_PATH = appPath + @"\bin\signapk.jar";
-        //public static readonly string SIGNAPK_KEYPRIVATE = appPath + @"\bin\testkey.pk8";
-        //public static readonly string SIGNAPK_KEYPUBLIC = appPath + @"\bin\testkey.x509.pem";
-        //public static readonly string ZIPALIGN_PATH = appPath + @"\bin\zipalign.exe";
+        public static string RandTempDirectory()
+        {
+            return Path.Combine(TempDirectory(), StringExt.RandStrWithCaps(5));
+        }
+
+        public static string ASSEMBLY_NAME { get { return AssemblyName.GetAssemblyName(Assembly.GetExecutingAssembly().Location).Name; } }
+        public static string TEMP_PATH { get; set; }
+        public static string TEMP_MAIN { get; set; }
+        public static string LOCAL_APPDATA_PATH { get { return Environment.GetEnvironmentVariable("LocalAppData"); } }
+        public static string APP_PATH { get { return Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location); } }
+        public static string RES_PATH { get { return Path.Combine(APP_PATH, "Resources"); } }
+        public static string APKTOOL_PATH { get { return Path.Combine(RES_PATH, "apktool.jar"); } }
+        public static string APKSIGNER_PATH { get { return Path.Combine(RES_PATH, "apksigner.jar"); } }
+        public static string BAKSMALI_PATH { get { return Path.Combine(RES_PATH, "baksmali.jar"); } }
+        public static string SMALI_PATH { get { return Path.Combine(RES_PATH, "smali.jar"); } }
+        public static string SIGNAPK_KEYPRIVATE { get { return Path.Combine(RES_PATH, "testkey.pk8"); } }
+        public static string SIGNAPK_KEYPUBLIC { get { return Path.Combine(RES_PATH, "testkey.x509.pem"); } }
+        public static string ZIPALIGN_PATH { get { return Path.Combine(RES_PATH, "zipalign.exe"); } }
+        public static string AAPT_PATH { get { return Path.Combine(RES_PATH, "aapt.exe"); } }
+        public static string AAPT2_PATH { get { return Path.Combine(RES_PATH, "aapt2.exe"); } }
+        public static string APKEDITOR_PATH { get { return Path.Combine(RES_PATH, "apkeditor.jar"); } }
+        public static string ADB_PATH { get { return Path.Combine(RES_PATH, "adb.exe"); } }
+        public static string ADBWINAPI_PATH { get { return Path.Combine(RES_PATH, "AdbWinApi.dll"); } }
+        public static string ADBWINUSBAPI_PATH { get { return Path.Combine(RES_PATH, "AdbWinUsbApi.dll"); } }
+        public static string LIBWINP_PATH { get { return Path.Combine(RES_PATH, "libwinpthread-1.dll"); } }
+        public static string FRAMEWORK_DIR { get { return Path.Combine(LOCAL_APPDATA_PATH, "apktool", "framework"); } }
+        public static string STANDALONE_FRAMEWORK_DIR { get { return Path.Combine(LOCAL_APPDATA_PATH, ASSEMBLY_NAME, "framework"); } }
     }
 }

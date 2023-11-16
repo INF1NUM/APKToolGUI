@@ -1,0 +1,519 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="About" xml:space="preserve">
+    <value>Rólunk</value>
+  </data>
+  <data name="APKToolVersion" xml:space="preserve">
+    <value>Apktool verzió</value>
+  </data>
+  <data name="CheckForUpdate" xml:space="preserve">
+    <value>Frissítés keresése</value>
+  </data>
+  <data name="DebugMode" xml:space="preserve">
+    <value>Hibakereső mód</value>
+  </data>
+  <data name="Exit" xml:space="preserve">
+    <value>Kilépés</value>
+  </data>
+  <data name="File" xml:space="preserve">
+    <value>Fájl</value>
+  </data>
+  <data name="Help" xml:space="preserve">
+    <value>Súgó</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>Beállítások</value>
+  </data>
+  <data name="ErrorJavaDetect" xml:space="preserve">
+    <value>Java nincs vagy rosszul van telepítve. Telepítse a Javát vagy adja meg az egyéni helyét a Beállításokban</value>
+  </data>
+  <data name="ErrorReadSettings" xml:space="preserve">
+    <value>Hiba a beállítások olvasásakor!</value>
+  </data>
+  <data name="UpdateNewVersion" xml:space="preserve">
+    <value>Új verzió érhető el. Szeretne frissíteni?</value>
+  </data>
+  <data name="UpdateNoUpdates" xml:space="preserve">
+    <value>Nincs frissítés.</value>
+  </data>
+  <data name="WarningDecodingFolderNotSelected" xml:space="preserve">
+    <value>Dekódolási mappa nincs kiválasztva!</value>
+  </data>
+  <data name="WarningFileForDecodingNotSelected" xml:space="preserve">
+    <value>A dekódolandó fájl nincs kiválasztva!</value>
+  </data>
+  <data name="WarningFileForSigningNotSelected" xml:space="preserve">
+    <value>Az aláírni szánt fájl nincs kiválasztva!</value>
+  </data>
+  <data name="WarningFrameworkNotSelected" xml:space="preserve">
+    <value>A framework nincs kiválasztva!</value>
+  </data>
+  <data name="ErrorSaveSettings" xml:space="preserve">
+    <value>Hiba a beállítások mentése során!</value>
+  </data>
+  <data name="NeedRestart" xml:space="preserve">
+    <value>A módosítások érvényesítéséhez újra kell indítania a programot. Most akarja megtenni?</value>
+  </data>
+  <data name="FileNotFound" xml:space="preserve">
+    <value>A fájl nem található</value>
+  </data>
+  <data name="FolderNotExist" xml:space="preserve">
+    <value>A mappa nem létezik</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>Hiba</value>
+  </data>
+  <data name="Build" xml:space="preserve">
+    <value>Build</value>
+  </data>
+  <data name="Decode" xml:space="preserve">
+    <value>Dekódolás</value>
+  </data>
+  <data name="InstallFramework" xml:space="preserve">
+    <value>A keretrendszer telepítése</value>
+  </data>
+  <data name="Sign" xml:space="preserve">
+    <value>Aláírás</value>
+  </data>
+  <data name="SystemLanguage" xml:space="preserve">
+    <value>Rendszer nyelve</value>
+  </data>
+  <data name="DoYouRealyWantToInstallCM" xml:space="preserve">
+    <value>Tényleg telepíteni szeretné a kontextus menüt?</value>
+  </data>
+  <data name="DoYouRealyWantToRemoveCM" xml:space="preserve">
+    <value>Tényleg el akarja távolítani a kontextus menüt?</value>
+  </data>
+  <data name="Done" xml:space="preserve">
+    <value>Kész</value>
+  </data>
+  <data name="CantDetectApktoolVersion" xml:space="preserve">
+    <value>Nem érzékeli az apktool verzióját.</value>
+  </data>
+  <data name="DecompilingSuccessfullyCompleted" xml:space="preserve">
+    <value>A dekompilálás sikeresen befejeződött. Kimeneti könyvtár "{0}".</value>
+  </data>
+  <data name="ErrorUpdateChecking" xml:space="preserve">
+    <value>Frissítés ell. hiba:</value>
+  </data>
+  <data name="SignSuccessfullyCompleted" xml:space="preserve">
+    <value>Az aláírás sikeresen befejeződött. Fájl mentve: "{0}".</value>
+  </data>
+  <data name="Aligning" xml:space="preserve">
+    <value>Igazítás</value>
+  </data>
+  <data name="ErrorCompiling" xml:space="preserve">
+    <value>A kódolás sikertelen</value>
+  </data>
+  <data name="ErrorEnteringFrameworkTag" xml:space="preserve">
+    <value>Hiba a framework címke bevitelében.</value>
+  </data>
+  <data name="ErrorSelectedFileNotExist" xml:space="preserve">
+    <value>A kiválasztott fájl nem létezik.</value>
+  </data>
+  <data name="ErrorSelectingFrameworkDirectory" xml:space="preserve">
+    <value>Hiba a keretrendszer könyvtár kiválasztásában.</value>
+  </data>
+  <data name="ErrorSelectingFrameworkFile" xml:space="preserve">
+    <value>Hiba a keretrendszer fájl kiválasztásában. A fájl nem létezik.</value>
+  </data>
+  <data name="ErrorSigning" xml:space="preserve">
+    <value>Az aláírás sikertelen.</value>
+  </data>
+  <data name="FrameworkInstallationNotStarted" xml:space="preserve">
+    <value>Hiba. A keretrendszer telepítése nem indult el.</value>
+  </data>
+  <data name="InstallingFramework" xml:space="preserve">
+    <value>A keretrendszer telepítése</value>
+  </data>
+  <data name="Signing" xml:space="preserve">
+    <value>Aláírás</value>
+  </data>
+  <data name="SignInputFileNotFound" xml:space="preserve">
+    <value>A bemeneti fájl nem található.</value>
+  </data>
+  <data name="SignPrivateKeyNotFound" xml:space="preserve">
+    <value>Privát kulcs nem található.</value>
+  </data>
+  <data name="SignPublicKeyNotFound" xml:space="preserve">
+    <value>Nyilvános kulcs nem található.</value>
+  </data>
+  <data name="ZIPArchives" xml:space="preserve">
+    <value>ZIP archívumok</value>
+  </data>
+  <data name="DecodeCouldNotCreate" xml:space="preserve">
+    <value>A kiválasztott dekompilációs könyvtárat nem lehetett létrehozni, mert érvénytelen karaktereket tartalmaz.</value>
+  </data>
+  <data name="DecodeDirNotSelected" xml:space="preserve">
+    <value>A dekompilációs könyvtár nincs kiválasztva.</value>
+  </data>
+  <data name="DecodeSelectedFrameworkNotExist" xml:space="preserve">
+    <value>A kiválasztott keretkönyvtár nem létezik.</value>
+  </data>
+  <data name="Decoding" xml:space="preserve">
+    <value>Dekódolás</value>
+  </data>
+  <data name="ErrorDecompiling" xml:space="preserve">
+    <value>A dekompilálás sikertelen</value>
+  </data>
+  <data name="ExecutableFile" xml:space="preserve">
+    <value>Végrehajtható fájl</value>
+  </data>
+  <data name="ChangedTargetSdkTo29" xml:space="preserve">
+    <value>A cél SDK 29-re változott</value>
+  </data>
+  <data name="ErrorVersionParsing" xml:space="preserve">
+    <value>Nem sikerült elemezni a verziót</value>
+  </data>
+  <data name="FixAndroidManifest" xml:space="preserve">
+    <value>Javított AndroidManifest.xml</value>
+  </data>
+  <data name="RemoveApkToolDummies" xml:space="preserve">
+    <value>Eltávolítottuk az összes ApkTool dummie-t</value>
+  </data>
+  <data name="APKSelected" xml:space="preserve">
+    <value>APK kiválasztva:</value>
+  </data>
+  <data name="ErrorSelectedFolderNotExist" xml:space="preserve">
+    <value>A kiválasztott mappa nem létezik.</value>
+  </data>
+  <data name="AndroidManifestNotExist" xml:space="preserve">
+    <value>Az AndroidManifest.xml nem létezik</value>
+  </data>
+  <data name="DecompiledAPKNotExist" xml:space="preserve">
+    <value>A dekompilált APK könyvtár nem létezik</value>
+  </data>
+  <data name="MainActivityFound" xml:space="preserve">
+    <value>A MainActivity itt, "{0}" található</value>
+  </data>
+  <data name="MainActivityNotFoundPleaseFindManually" xml:space="preserve">
+    <value>Nem találta a MainActivity-t. Kérjük keresse meg manuálisan</value>
+  </data>
+  <data name="ClearingFramework" xml:space="preserve">
+    <value>Keretrendszer tisztítás</value>
+  </data>
+  <data name="CompilingSuccessfullyCompleted" xml:space="preserve">
+    <value>Az összeállítás sikeresen befejeződött. Kimeneti könyvtár "{0}"</value>
+  </data>
+  <data name="ErrorZipalign" xml:space="preserve">
+    <value>A Zipalign nem sikerült</value>
+  </data>
+  <data name="ZipalignFileSavedTo" xml:space="preserve">
+    <value>A Zipalign sikeresen befejeződött. Fájl ide mentve "{0}"</value>
+  </data>
+  <data name="ErrorClearingFw" xml:space="preserve">
+    <value>Keretrendszer törlési hiba</value>
+  </data>
+  <data name="FrameworkCacheCleared" xml:space="preserve">
+    <value>A keretrendszer gyorsítótára törölve</value>
+  </data>
+  <data name="AllDone" xml:space="preserve">
+    <value>Minden kész!</value>
+  </data>
+  <data name="FrameworkInstalled" xml:space="preserve">
+    <value>A keretrendszer sikeresen települt</value>
+  </data>
+  <data name="FrameworkDirNotExist" xml:space="preserve">
+    <value>A keretrendszer könyvtár nem létezik</value>
+  </data>
+  <data name="DecompilingDex" xml:space="preserve">
+    <value>Dex dekódolása</value>
+  </data>
+  <data name="ErrorSelectedOutputFolderNotExist" xml:space="preserve">
+    <value>A kiválasztott kimeneti mappa nem létezik.</value>
+  </data>
+  <data name="CompilingDex" xml:space="preserve">
+    <value>Dex összeállítása</value>
+  </data>
+  <data name="DragDropNotSupported" xml:space="preserve">
+    <value>Rendszergazdaként fut. A Húzd &amp; Dobd nem támogatott</value>
+  </data>
+  <data name="DragDropSupported" xml:space="preserve">
+    <value>A Húzd &amp; Dobd támogatott</value>
+  </data>
+  <data name="ErrorNotAnApk" xml:space="preserve">
+    <value>Ez a könyvtár nem egy Android csomag</value>
+  </data>
+  <data name="Baksmali" xml:space="preserve">
+    <value>Baksmali</value>
+  </data>
+  <data name="Smali" xml:space="preserve">
+    <value>Smali</value>
+  </data>
+  <data name="Zipalign" xml:space="preserve">
+    <value>Zipalign</value>
+  </data>
+  <data name="CompileApk" xml:space="preserve">
+    <value>APK összeállítása</value>
+  </data>
+  <data name="CompileDex" xml:space="preserve">
+    <value>DEX összeszerelése</value>
+  </data>
+  <data name="DecompileApk" xml:space="preserve">
+    <value>APK dekompilálása</value>
+  </data>
+  <data name="DecompileDex" xml:space="preserve">
+    <value>DEX szétszerelése</value>
+  </data>
+  <data name="GetApkInfo" xml:space="preserve">
+    <value>APK infó beszerzése</value>
+  </data>
+  <data name="NotDecompiledApk" xml:space="preserve">
+    <value>Ez a mappa nem egy dekompilált APK</value>
+  </data>
+  <data name="NotDecompiledDex" xml:space="preserve">
+    <value>Ez a mappa nem dekompilált DEX</value>
+  </data>
+  <data name="RequiredFilesMissing" xml:space="preserve">
+    <value>Szükséges fájlok hiányoznak</value>
+  </data>
+  <data name="SignApk" xml:space="preserve">
+    <value>APK aláírása</value>
+  </data>
+  <data name="TextFile" xml:space="preserve">
+    <value>Szöveg fájl</value>
+  </data>
+  <data name="ZipalignApk" xml:space="preserve">
+    <value>APK Zipalign</value>
+  </data>
+  <data name="CreateUnsignedApk" xml:space="preserve">
+    <value>Aláírás nélküli APK létrehozása</value>
+  </data>
+  <data name="MetainfNotExist" xml:space="preserve">
+    <value>A META-INF mappa nem létezik. Kihagyva</value>
+  </data>
+  <data name="ErrorGettingApkInfo" xml:space="preserve">
+    <value>Hiba történt az APK-infó megszerzésében</value>
+  </data>
+  <data name="InputDirectory" xml:space="preserve">
+    <value>Bemeneti könyvtár: {0}</value>
+  </data>
+  <data name="InputFile" xml:space="preserve">
+    <value>Bemeneti fájl: {0}</value>
+  </data>
+  <data name="DeleteFile" xml:space="preserve">
+    <value>"{0}" fájl törlése</value>
+  </data>
+  <data name="CopyFileToTemp" xml:space="preserve">
+    <value>"{0}" fájl másolása "{1}" ideiglenes könyvtárba.</value>
+  </data>
+  <data name="CopyFolderToTemp" xml:space="preserve">
+    <value>Dekompilált apk mappa "{0}" másolása "{1}" ideiglenes könyvtárba.</value>
+  </data>
+  <data name="DecodeDesDirExists" xml:space="preserve">
+    <value>A "{0}" célkönyvtár már létezik. Ha felül szeretné írni, engedélyezze a "Célkönyvtár kényszerített törlésének" beállítását.</value>
+  </data>
+  <data name="MoveTempApkFileToOutput" xml:space="preserve">
+    <value>A "{0}" ideiglenes mappa áthelyezése a "{1}" kimeneti könyvtárba</value>
+  </data>
+  <data name="MoveTempApkToOutput" xml:space="preserve">
+    <value>A(z) "{0}" ideiglenes apk áthelyezése a "{1}" kimeneti könyvtárba</value>
+  </data>
+  <data name="ParsingApkInfo" xml:space="preserve">
+    <value>APK információk elemzése...</value>
+  </data>
+  <data name="SetLanguageRestartApplication" xml:space="preserve">
+    <value>A nyelv be van állítva. Újra akarja indítani az alkalmazást?</value>
+  </data>
+  <data name="DecompilingAllApkFiles" xml:space="preserve">
+    <value>Az összes APK fájl visszafejtése</value>
+  </data>
+  <data name="DetectedAsBase" xml:space="preserve">
+    <value>{0} bázisként észlelve</value>
+  </data>
+  <data name="DetectedAsSplit" xml:space="preserve">
+    <value>{0} részeként észlelve</value>
+  </data>
+  <data name="ExtractingAllApkFiles" xml:space="preserve">
+    <value>Az összes APK fájl kicsomagolása</value>
+  </data>
+  <data name="MergeFinishedMoveDir" xml:space="preserve">
+    <value>Egyesítés kész. Könyvtár áthelyezése ide: "{0}"</value>
+  </data>
+  <data name="MergingApk" xml:space="preserve">
+    <value>APK egyesítése</value>
+  </data>
+  <data name="MovingBasedirectory" xml:space="preserve">
+    <value>Bázis könyvtár áthelyezése ide: "{0}"</value>
+  </data>
+  <data name="DirNotExist" xml:space="preserve">
+    <value>A(z) "{0}" könyvtár nem létezik</value>
+  </data>
+  <data name="TempDirectory" xml:space="preserve">
+    <value>Temp könyvtár: "{0}"</value>
+  </data>
+  <data name="ErrorMerging" xml:space="preserve">
+    <value>Az ˘egyesítés nem sikerült</value>
+  </data>
+  <data name="ExtractOrigSignature" xml:space="preserve">
+    <value>Az eredeti aláírás kibontása</value>
+  </data>
+  <data name="MergingApkEditor" xml:space="preserve">
+    <value>APK egyesítése az APKEditor.jar használatával</value>
+  </data>
+  <data name="Aborted" xml:space="preserve">
+    <value>Megszakítva</value>
+  </data>
+  <data name="CancelProcess" xml:space="preserve">
+    <value>Biztosan megszakítja a folyamatot?</value>
+  </data>
+  <data name="GettingDevices" xml:space="preserve">
+    <value>Eszközök keresése...</value>
+  </data>
+  <data name="PleaseWait" xml:space="preserve">
+    <value>Kis türelmet...</value>
+  </data>
+  <data name="ConfirmKillingAdbServer" xml:space="preserve">
+    <value>Biztosan leállítja az ADB szervert? Lehet, hogy újra kell csatlakoztatnia az eszközt, vagy újra kell indítania az emulátort</value>
+  </data>
+  <data name="DeviceNotSelected" xml:space="preserve">
+    <value>Az eszköz nincs kiválasztva</value>
+  </data>
+  <data name="DeviceSelected" xml:space="preserve">
+    <value>Kiválasztott eszköz: "{0}"</value>
+  </data>
+  <data name="DevicesFound" xml:space="preserve">
+    <value>{0} eszköz található</value>
+  </data>
+  <data name="InstallApkFailed" xml:space="preserve">
+    <value>Az APK telepítése nem sikerült</value>
+  </data>
+  <data name="InstallApkSuccessful" xml:space="preserve">
+    <value>Az APK telepítése sikeres volt</value>
+  </data>
+  <data name="InstallingApk" xml:space="preserve">
+    <value>APK telepítése</value>
+  </data>
+  <data name="InstallingApkPath" xml:space="preserve">
+    <value>"{0}" APK telepítése</value>
+  </data>
+  <data name="NoDevicesFound" xml:space="preserve">
+    <value>Nem találhatók eszközök. Győződjön meg róla, hogy eszközén be van kapcsolva az adb hibakeresés. Ha emulátort használ, indítsa újra és várja meg amíg elindul</value>
+  </data>
+  <data name="TimeEnded" xml:space="preserve">
+    <value>Befejezve: {0}</value>
+  </data>
+  <data name="TimeStarted" xml:space="preserve">
+    <value>Elkezdve: {0}</value>
+  </data>
+  <data name="ClearFrameworkPrompt" xml:space="preserve">
+    <value>A váratlan hibák elkerülése érdekében az Apktool verziójának módosítása után törölni kell a framework gyorsítótárát. Szeretné most törölni?</value>
+  </data>
+</root>
