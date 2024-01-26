@@ -503,6 +503,15 @@ namespace APKToolGUI
             ToStatus(Language.Done, Resources.done);
         }
 
+        internal void Error(Exception ex)
+        {
+#if DEBUG
+            Error(ex.ToString());
+#else
+            Error(ex.Message);
+#endif
+        }
+
         internal void Error(string msg, string status = null)
         {
             isRunning = false;
@@ -663,8 +672,7 @@ namespace APKToolGUI
             catch (Exception ex)
             {
                 code = 1;
-                ToLog(ApktoolEventType.Error, ex.Message);
-                Error(ex.Message);
+                Error(ex);
             }
 
             return code;
@@ -709,8 +717,7 @@ namespace APKToolGUI
             catch (Exception ex)
             {
                 code = 1;
-                ToLog(ApktoolEventType.Error, ex.Message);
-                Error(ex.Message);
+                Error(ex);
             }
 
             return code;
@@ -871,7 +878,7 @@ namespace APKToolGUI
             }
             catch (Exception ex)
             {
-                Error(ex.Message);
+                Error(ex);
                 code = 1;
             }
 
@@ -1007,7 +1014,7 @@ namespace APKToolGUI
             }
             catch (Exception ex)
             {
-                Error(ex.Message);
+                Error(ex);
                 code = 1;
             }
 
@@ -1063,7 +1070,7 @@ namespace APKToolGUI
             catch (Exception ex)
             {
                 code = 1;
-                ToLog(ApktoolEventType.Error, ex.Message);
+                Error(ex);
             }
 
             return code;
@@ -1112,7 +1119,7 @@ namespace APKToolGUI
             }
             catch (Exception ex)
             {
-                Error(ex.Message);
+                Error(ex);
                 code = 1;
             }
 
@@ -1202,7 +1209,7 @@ namespace APKToolGUI
             }
             catch (Exception ex)
             {
-                Error(ex.Message);
+                Error(ex);
                 code = 1;
             }
 
@@ -1302,7 +1309,7 @@ namespace APKToolGUI
             catch (Exception ex)
             {
                 code = 1;
-                Error(ex.Message);
+                Error(ex);
             }
 
             return code;
@@ -1404,9 +1411,8 @@ namespace APKToolGUI
             }
             catch (Exception ex)
             {
-                code = 1;
-                ToLog(ApktoolEventType.Error, ex.ToString());
-                Error(ex.Message);
+                code = 1; 
+                Error(ex);
             }
 
             return code;

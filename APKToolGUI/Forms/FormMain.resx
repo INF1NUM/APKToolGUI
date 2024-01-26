@@ -6297,43 +6297,43 @@
     <value>309, 13</value>
   </metadata>
   <data name="newInsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>168, 22</value>
+    <value>180, 22</value>
   </data>
   <data name="newInsToolStripMenuItem.Text" xml:space="preserve">
     <value>New instance</value>
   </data>
   <data name="saveLogToFileToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>168, 22</value>
+    <value>180, 22</value>
   </data>
   <data name="saveLogToFileToolStripMenuItem.Text" xml:space="preserve">
     <value>Save log to file</value>
   </data>
   <data name="settingsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>168, 22</value>
+    <value>180, 22</value>
   </data>
   <data name="settingsToolStripMenuItem.Text" xml:space="preserve">
     <value>Settings</value>
   </data>
   <data name="toolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>165, 6</value>
+    <value>177, 6</value>
   </data>
   <data name="openTempFolderToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>168, 22</value>
+    <value>180, 22</value>
   </data>
   <data name="openTempFolderToolStripMenuItem.Text" xml:space="preserve">
     <value>Open temp folder</value>
   </data>
   <data name="clearTempFolderToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>168, 22</value>
+    <value>180, 22</value>
   </data>
   <data name="clearTempFolderToolStripMenuItem.Text" xml:space="preserve">
     <value>Clear temp folder</value>
   </data>
   <data name="toolStripMenuItem2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>165, 6</value>
+    <value>177, 6</value>
   </data>
   <data name="exitToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>168, 22</value>
+    <value>180, 22</value>
   </data>
   <data name="exitToolStripMenuItem.Text" xml:space="preserve">
     <value>Exit</value>
