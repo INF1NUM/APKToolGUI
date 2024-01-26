@@ -102,6 +102,48 @@ namespace APKToolGUI
             CancelErrorRead();
             return ExitCode;
         }
+
+        public int Decompile(string input, string output)
+        {
+            string inputFile = String.Format("-i \"{0}\"", input);
+            string keyOutputDir = String.Format("-o \"{0}\"", output);
+
+            string args = String.Format("d {0} {1} -f", inputFile, keyOutputDir);
+
+            Log.d("ApkEditor CMD: " + _jarPath + " " + args);
+
+            Start(args);
+
+            BeginOutputReadLine();
+            BeginErrorReadLine();
+
+            WaitForExit();
+
+            CancelOutputRead();
+            CancelErrorRead();
+            return ExitCode;
+        }
+
+        public int Build(string input, string output)
+        {
+            string inputFile = String.Format("-i \"{0}\"", input);
+            string keyOutputDir = String.Format("-o \"{0}\"", output);
+
+            string args = String.Format("b {0} {1} -f", inputFile, keyOutputDir);
+
+            Log.d("ApkEditor CMD: " + _jarPath + " " + args);
+
+            Start(args);
+
+            BeginOutputReadLine();
+            BeginErrorReadLine();
+
+            WaitForExit();
+
+            CancelOutputRead();
+            CancelErrorRead();
+            return ExitCode;
+        }
     }
 
     public class ApkEditorExitedEventArgs : EventArgs

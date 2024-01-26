@@ -96,7 +96,7 @@ namespace APKToolGUI.Handlers
                     }
                 }
 
-                if (inputFile.ContainsAny(".xapk", ".zip", ".apks", ".apkm"))
+                if (inputFile.ContainsAny(".xapk", ".zip", ".apks", ".apkm") && !main.useAPKEditorForDecompilingItem.Checked)
                 {
                     await main.MergeAndDecompile(inputFile);
                 }

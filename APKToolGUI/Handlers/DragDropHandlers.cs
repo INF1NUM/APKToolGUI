@@ -92,7 +92,7 @@ namespace APKToolGUI.Handlers
                     if (!Settings.Default.Decode_DontParseApkInfo)
                         await main.GetApkInfo(apkFile);
 
-                    if (apkFile.ContainsAny(".xapk", ".zip", ".apks", ".apkm"))
+                    if (apkFile.ContainsAny(".xapk", ".zip", ".apks", ".apkm") && !main.useAPKEditorForDecompilingItem.Checked)
                     {
                         await main.MergeAndDecompile(apkFile);
                     }

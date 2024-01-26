@@ -34,7 +34,6 @@
             this.tabPageMain = new System.Windows.Forms.TabPage();
             this.mergePanel = new System.Windows.Forms.Panel();
             this.splitApkTxt = new System.Windows.Forms.Label();
-            this.splitApkPathTxtBox = new System.Windows.Forms.TextBox();
             this.selSplitApkBtn = new System.Windows.Forms.Button();
             this.mergeApkBtn = new System.Windows.Forms.Button();
             this.comApkOpenDir = new System.Windows.Forms.Button();
@@ -48,22 +47,18 @@
             this.openAndroidMainfestBtn = new System.Windows.Forms.Button();
             this.signPanel = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox_SIGN_InputFile = new System.Windows.Forms.TextBox();
             this.button_SIGN_BrowseInputFile = new System.Windows.Forms.Button();
             this.button_SIGN_Sign = new System.Windows.Forms.Button();
             this.zipalignPanel = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.button_ZIPALIGN_Align = new System.Windows.Forms.Button();
             this.button_ZIPALIGN_BrowseInputFile = new System.Windows.Forms.Button();
-            this.textBox_ZIPALIGN_InputFile = new System.Windows.Forms.TextBox();
             this.comPanel = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.button_BUILD_BrowseInputProjectDir = new System.Windows.Forms.Button();
             this.button_BUILD_Build = new System.Windows.Forms.Button();
-            this.textBox_BUILD_InputProjectDir = new System.Windows.Forms.TextBox();
             this.decPanel = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox_DECODE_InputAppPath = new System.Windows.Forms.TextBox();
             this.button_DECODE_Decode = new System.Windows.Forms.Button();
             this.button_DECODE_BrowseInputAppPath = new System.Windows.Forms.Button();
             this.tabPageApkInfo = new System.Windows.Forms.TabPage();
@@ -112,6 +107,90 @@
             this.fullInfoTextBox = new System.Windows.Forms.RichTextBox();
             this.tabPageDecode = new System.Windows.Forms.TabPage();
             this.groupBox_DECODE_Options = new System.Windows.Forms.GroupBox();
+            this.tabPageBuild = new System.Windows.Forms.TabPage();
+            this.groupBox_BUILD_Options = new System.Windows.Forms.GroupBox();
+            this.tabPageSign = new System.Windows.Forms.TabPage();
+            this.groupBox_SIGN_Options = new System.Windows.Forms.GroupBox();
+            this.schemev4ComboBox = new System.Windows.Forms.ComboBox();
+            this.label27 = new System.Windows.Forms.Label();
+            this.schemev3ComboBox = new System.Windows.Forms.ComboBox();
+            this.label26 = new System.Windows.Forms.Label();
+            this.schemev2ComboBox = new System.Windows.Forms.ComboBox();
+            this.label25 = new System.Windows.Forms.Label();
+            this.schemev1ComboBox = new System.Windows.Forms.ComboBox();
+            this.label24 = new System.Windows.Forms.Label();
+            this.selectKeyStoreFileBtn = new System.Windows.Forms.Button();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label_SIGN_PrivateKey = new System.Windows.Forms.Label();
+            this.label_SIGN_PublicKey = new System.Windows.Forms.Label();
+            this.button_SIGN_BrowseOutputFile = new System.Windows.Forms.Button();
+            this.button_SIGN_BrowsePublicKey = new System.Windows.Forms.Button();
+            this.button_SIGN_BrowsePrivateKey = new System.Windows.Forms.Button();
+            this.tabPageZipAlign = new System.Windows.Forms.TabPage();
+            this.groupBox_ZIPALIGN_Options = new System.Windows.Forms.GroupBox();
+            this.label_ZIPALIGN_AlignmentBytes = new System.Windows.Forms.Label();
+            this.button_ZIPALIGN_BrowseOutputFile = new System.Windows.Forms.Button();
+            this.tabPageInstallFramework = new System.Windows.Forms.TabPage();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.openFwFolderBtn = new System.Windows.Forms.Button();
+            this.clearFwBtn = new System.Windows.Forms.Button();
+            this.groupBox_IF_Options = new System.Windows.Forms.GroupBox();
+            this.button_IF_InstallFramework = new System.Windows.Forms.Button();
+            this.button_IF_BrowseInputFramePath = new System.Windows.Forms.Button();
+            this.tabPageBaksmali = new System.Windows.Forms.TabPage();
+            this.smaliGroupBox = new System.Windows.Forms.GroupBox();
+            this.label29 = new System.Windows.Forms.Label();
+            this.comSmaliBtn = new System.Windows.Forms.Button();
+            this.smaliBrowseOutputBtn = new System.Windows.Forms.Button();
+            this.smaliBrowseInputDirBtn = new System.Windows.Forms.Button();
+            this.bakSmaliGroupBox = new System.Windows.Forms.GroupBox();
+            this.label28 = new System.Windows.Forms.Label();
+            this.baksmaliBrowseOutputBtn = new System.Windows.Forms.Button();
+            this.decSmaliBtn = new System.Windows.Forms.Button();
+            this.baksmaliBrowseInputDexBtn = new System.Windows.Forms.Button();
+            this.tabPageAdb = new System.Windows.Forms.TabPage();
+            this.selAdbDeviceLbl = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
+            this.killAdbBtn = new System.Windows.Forms.Button();
+            this.installApkBtn = new System.Windows.Forms.Button();
+            this.refreshDevicesBtn = new System.Windows.Forms.Button();
+            this.selApkAdbBtn = new System.Windows.Forms.Button();
+            this.label32 = new System.Windows.Forms.Label();
+            this.devicesListBox = new System.Windows.Forms.ListBox();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.toolStripStatusLabelStateImage = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabelStateText = new System.Windows.Forms.ToolStripStatusLabel();
+            this.progressBar = new System.Windows.Forms.ToolStripProgressBar();
+            this.contextMenuStripLog = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.copyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.clearLogToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.logTxtBox = new System.Windows.Forms.RichTextBox();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.newInsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveLogToFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
+            this.openTempFolderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.clearTempFolderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.checkForUpdateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reportAnIsuueToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.apktoolIssuesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.baksmaliIssuesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.settingsToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.useAPKEditorForDecompilingItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.splitApkPathTxtBox = new System.Windows.Forms.TextBox();
+            this.textBox_SIGN_InputFile = new System.Windows.Forms.TextBox();
+            this.textBox_ZIPALIGN_InputFile = new System.Windows.Forms.TextBox();
+            this.textBox_BUILD_InputProjectDir = new System.Windows.Forms.TextBox();
+            this.textBox_DECODE_InputAppPath = new System.Windows.Forms.TextBox();
             this.checkBox7 = new System.Windows.Forms.CheckBox();
             this.decApiLvlUpDown = new System.Windows.Forms.NumericUpDown();
             this.decSetApiLvlChkBox = new System.Windows.Forms.CheckBox();
@@ -129,8 +208,6 @@
             this.checkBox_DECODE_Force = new System.Windows.Forms.CheckBox();
             this.checkBox_DECODE_NoRes = new System.Windows.Forms.CheckBox();
             this.checkBox_DECODE_NoDebugInfo = new System.Windows.Forms.CheckBox();
-            this.tabPageBuild = new System.Windows.Forms.TabPage();
-            this.groupBox_BUILD_Options = new System.Windows.Forms.GroupBox();
             this.checkBox_BUILD_NetSecConf = new System.Windows.Forms.CheckBox();
             this.useAapt2ChkBox = new System.Windows.Forms.CheckBox();
             this.buildApiLvlUpDown = new System.Windows.Forms.NumericUpDown();
@@ -150,116 +227,41 @@
             this.textBox_BUILD_AaptPath = new System.Windows.Forms.TextBox();
             this.textBox_BUILD_FrameDir = new System.Windows.Forms.TextBox();
             this.checkBox_BUILD_UseFramework = new System.Windows.Forms.CheckBox();
-            this.tabPageSign = new System.Windows.Forms.TabPage();
-            this.groupBox_SIGN_Options = new System.Windows.Forms.GroupBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.autoDelIdsigChkBox = new System.Windows.Forms.CheckBox();
-            this.schemev4ComboBox = new System.Windows.Forms.ComboBox();
-            this.label27 = new System.Windows.Forms.Label();
-            this.schemev3ComboBox = new System.Windows.Forms.ComboBox();
-            this.label26 = new System.Windows.Forms.Label();
-            this.schemev2ComboBox = new System.Windows.Forms.ComboBox();
-            this.label25 = new System.Windows.Forms.Label();
-            this.schemev1ComboBox = new System.Windows.Forms.ComboBox();
-            this.label24 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.selectKeyStoreFileBtn = new System.Windows.Forms.Button();
             this.aliasTxtBox = new System.Windows.Forms.TextBox();
             this.useAliasChkBox = new System.Windows.Forms.CheckBox();
-            this.label22 = new System.Windows.Forms.Label();
             this.keyStoreFileTxtBox = new System.Windows.Forms.TextBox();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
             this.useKeyStoreChkBox = new System.Windows.Forms.CheckBox();
             this.useSigningOutputDir = new System.Windows.Forms.CheckBox();
-            this.label_SIGN_PrivateKey = new System.Windows.Forms.Label();
-            this.label_SIGN_PublicKey = new System.Windows.Forms.Label();
-            this.button_SIGN_BrowseOutputFile = new System.Windows.Forms.Button();
             this.textBox_SIGN_OutputFile = new System.Windows.Forms.TextBox();
-            this.button_SIGN_BrowsePublicKey = new System.Windows.Forms.Button();
-            this.button_SIGN_BrowsePrivateKey = new System.Windows.Forms.Button();
             this.textBox_SIGN_PublicKey = new System.Windows.Forms.TextBox();
             this.textBox_SIGN_PrivateKey = new System.Windows.Forms.TextBox();
-            this.tabPageZipAlign = new System.Windows.Forms.TabPage();
-            this.groupBox_ZIPALIGN_Options = new System.Windows.Forms.GroupBox();
             this.zipalignOutputDirChkBox = new System.Windows.Forms.CheckBox();
             this.signAfterZipalignChkBox = new System.Windows.Forms.CheckBox();
             this.checkBox_ZIPALIGN_Recompress = new System.Windows.Forms.CheckBox();
-            this.label_ZIPALIGN_AlignmentBytes = new System.Windows.Forms.Label();
-            this.button_ZIPALIGN_BrowseOutputFile = new System.Windows.Forms.Button();
             this.checkBox_ZIPALIGN_CheckAlignment = new System.Windows.Forms.CheckBox();
             this.textBox_ZIPALIGN_OutputFile = new System.Windows.Forms.TextBox();
             this.checkBox_ZIPALIGN_VerboseOutput = new System.Windows.Forms.CheckBox();
             this.numericUpDown_ZIPALIGN_AlignmentBytes = new System.Windows.Forms.NumericUpDown();
             this.checkBox_ZIPALIGN_OverwriteOutputFile = new System.Windows.Forms.CheckBox();
-            this.tabPageInstallFramework = new System.Windows.Forms.TabPage();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.openFwFolderBtn = new System.Windows.Forms.Button();
-            this.clearFwBtn = new System.Windows.Forms.Button();
             this.clearFwBeforeDecodeChkBox = new System.Windows.Forms.CheckBox();
-            this.groupBox_IF_Options = new System.Windows.Forms.GroupBox();
             this.checkBox_IF_Tag = new System.Windows.Forms.CheckBox();
             this.checkBox_IF_FramePath = new System.Windows.Forms.CheckBox();
             this.textBox_IF_Tag = new System.Windows.Forms.TextBox();
-            this.button_IF_InstallFramework = new System.Windows.Forms.Button();
             this.button_IF_BrowseFrameDir = new System.Windows.Forms.Button();
-            this.button_IF_BrowseInputFramePath = new System.Windows.Forms.Button();
             this.textBox_IF_InputFramePath = new System.Windows.Forms.TextBox();
             this.textBox_IF_FrameDir = new System.Windows.Forms.TextBox();
-            this.tabPageBaksmali = new System.Windows.Forms.TabPage();
-            this.smaliGroupBox = new System.Windows.Forms.GroupBox();
-            this.label29 = new System.Windows.Forms.Label();
             this.smaliUseOutputChkBox = new System.Windows.Forms.CheckBox();
-            this.comSmaliBtn = new System.Windows.Forms.Button();
-            this.smaliBrowseOutputBtn = new System.Windows.Forms.Button();
             this.smaliBrowseInputDirTxtBox = new System.Windows.Forms.TextBox();
             this.smaliBrowseOutputTxtBox = new System.Windows.Forms.TextBox();
-            this.smaliBrowseInputDirBtn = new System.Windows.Forms.Button();
-            this.bakSmaliGroupBox = new System.Windows.Forms.GroupBox();
-            this.label28 = new System.Windows.Forms.Label();
             this.baksmaliUseOutputChkBox = new System.Windows.Forms.CheckBox();
-            this.baksmaliBrowseOutputBtn = new System.Windows.Forms.Button();
             this.baksmaliBrowseOutputTxtBox = new System.Windows.Forms.TextBox();
-            this.decSmaliBtn = new System.Windows.Forms.Button();
-            this.baksmaliBrowseInputDexBtn = new System.Windows.Forms.Button();
             this.baksmaliBrowseInputDexTxtBox = new System.Windows.Forms.TextBox();
-            this.tabPageAdb = new System.Windows.Forms.TabPage();
-            this.selAdbDeviceLbl = new System.Windows.Forms.Label();
-            this.label33 = new System.Windows.Forms.Label();
-            this.killAdbBtn = new System.Windows.Forms.Button();
-            this.installApkBtn = new System.Windows.Forms.Button();
-            this.refreshDevicesBtn = new System.Windows.Forms.Button();
-            this.selApkAdbBtn = new System.Windows.Forms.Button();
             this.setVendorChkBox = new System.Windows.Forms.CheckBox();
             this.apkPathAdbTxtBox = new System.Windows.Forms.TextBox();
-            this.label32 = new System.Windows.Forms.Label();
-            this.devicesListBox = new System.Windows.Forms.ListBox();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.toolStripStatusLabelStateImage = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolStripStatusLabelStateText = new System.Windows.Forms.ToolStripStatusLabel();
-            this.progressBar = new System.Windows.Forms.ToolStripProgressBar();
-            this.contextMenuStripLog = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.copyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.clearLogToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.logTxtBox = new System.Windows.Forms.RichTextBox();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.newInsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.saveLogToFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
-            this.openTempFolderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.clearTempFolderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
-            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.checkForUpdateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.reportAnIsuueToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.apktoolIssuesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.baksmaliIssuesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.tabControlMain.SuspendLayout();
             this.tabPageMain.SuspendLayout();
             this.mergePanel.SuspendLayout();
@@ -274,15 +276,12 @@
             this.tabPage3.SuspendLayout();
             this.tabPageDecode.SuspendLayout();
             this.groupBox_DECODE_Options.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.decApiLvlUpDown)).BeginInit();
             this.tabPageBuild.SuspendLayout();
             this.groupBox_BUILD_Options.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.buildApiLvlUpDown)).BeginInit();
             this.tabPageSign.SuspendLayout();
             this.groupBox_SIGN_Options.SuspendLayout();
             this.tabPageZipAlign.SuspendLayout();
             this.groupBox_ZIPALIGN_Options.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ZIPALIGN_AlignmentBytes)).BeginInit();
             this.tabPageInstallFramework.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox_IF_Options.SuspendLayout();
@@ -293,6 +292,9 @@
             this.statusStrip1.SuspendLayout();
             this.contextMenuStripLog.SuspendLayout();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.decApiLvlUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buildApiLvlUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ZIPALIGN_AlignmentBytes)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControlMain
@@ -346,14 +348,6 @@
             // 
             resources.ApplyResources(this.splitApkTxt, "splitApkTxt");
             this.splitApkTxt.Name = "splitApkTxt";
-            // 
-            // splitApkPathTxtBox
-            // 
-            this.splitApkPathTxtBox.AllowDrop = true;
-            resources.ApplyResources(this.splitApkPathTxtBox, "splitApkPathTxtBox");
-            this.splitApkPathTxtBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::APKToolGUI.Properties.Settings.Default, "SplitApk_InputFile", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.splitApkPathTxtBox.Name = "splitApkPathTxtBox";
-            this.splitApkPathTxtBox.Text = global::APKToolGUI.Properties.Settings.Default.SplitApk_InputFile;
             // 
             // selSplitApkBtn
             // 
@@ -437,14 +431,6 @@
             resources.ApplyResources(this.label4, "label4");
             this.label4.Name = "label4";
             // 
-            // textBox_SIGN_InputFile
-            // 
-            this.textBox_SIGN_InputFile.AllowDrop = true;
-            resources.ApplyResources(this.textBox_SIGN_InputFile, "textBox_SIGN_InputFile");
-            this.textBox_SIGN_InputFile.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::APKToolGUI.Properties.Settings.Default, "Sign_InputFile", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.textBox_SIGN_InputFile.Name = "textBox_SIGN_InputFile";
-            this.textBox_SIGN_InputFile.Text = global::APKToolGUI.Properties.Settings.Default.Sign_InputFile;
-            // 
             // button_SIGN_BrowseInputFile
             // 
             resources.ApplyResources(this.button_SIGN_BrowseInputFile, "button_SIGN_BrowseInputFile");
@@ -486,14 +472,6 @@
             this.button_ZIPALIGN_BrowseInputFile.Name = "button_ZIPALIGN_BrowseInputFile";
             this.button_ZIPALIGN_BrowseInputFile.UseVisualStyleBackColor = true;
             // 
-            // textBox_ZIPALIGN_InputFile
-            // 
-            this.textBox_ZIPALIGN_InputFile.AllowDrop = true;
-            resources.ApplyResources(this.textBox_ZIPALIGN_InputFile, "textBox_ZIPALIGN_InputFile");
-            this.textBox_ZIPALIGN_InputFile.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::APKToolGUI.Properties.Settings.Default, "Zipalign_InputFile", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.textBox_ZIPALIGN_InputFile.Name = "textBox_ZIPALIGN_InputFile";
-            this.textBox_ZIPALIGN_InputFile.Text = global::APKToolGUI.Properties.Settings.Default.Zipalign_InputFile;
-            // 
             // comPanel
             // 
             this.comPanel.AllowDrop = true;
@@ -522,14 +500,6 @@
             this.button_BUILD_Build.Name = "button_BUILD_Build";
             this.button_BUILD_Build.UseVisualStyleBackColor = true;
             // 
-            // textBox_BUILD_InputProjectDir
-            // 
-            this.textBox_BUILD_InputProjectDir.AllowDrop = true;
-            resources.ApplyResources(this.textBox_BUILD_InputProjectDir, "textBox_BUILD_InputProjectDir");
-            this.textBox_BUILD_InputProjectDir.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::APKToolGUI.Properties.Settings.Default, "Build_InputDir", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.textBox_BUILD_InputProjectDir.Name = "textBox_BUILD_InputProjectDir";
-            this.textBox_BUILD_InputProjectDir.Text = global::APKToolGUI.Properties.Settings.Default.Build_InputDir;
-            // 
             // decPanel
             // 
             this.decPanel.AllowDrop = true;
@@ -545,14 +515,6 @@
             // 
             resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
-            // 
-            // textBox_DECODE_InputAppPath
-            // 
-            this.textBox_DECODE_InputAppPath.AllowDrop = true;
-            resources.ApplyResources(this.textBox_DECODE_InputAppPath, "textBox_DECODE_InputAppPath");
-            this.textBox_DECODE_InputAppPath.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::APKToolGUI.Properties.Settings.Default, "Decode_InputAppPath", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.textBox_DECODE_InputAppPath.Name = "textBox_DECODE_InputAppPath";
-            this.textBox_DECODE_InputAppPath.Text = global::APKToolGUI.Properties.Settings.Default.Decode_InputAppPath;
             // 
             // button_DECODE_Decode
             // 
@@ -892,6 +854,651 @@
             this.groupBox_DECODE_Options.Name = "groupBox_DECODE_Options";
             this.groupBox_DECODE_Options.TabStop = false;
             // 
+            // tabPageBuild
+            // 
+            resources.ApplyResources(this.tabPageBuild, "tabPageBuild");
+            this.tabPageBuild.BackColor = System.Drawing.Color.White;
+            this.tabPageBuild.Controls.Add(this.groupBox_BUILD_Options);
+            this.tabPageBuild.Name = "tabPageBuild";
+            // 
+            // groupBox_BUILD_Options
+            // 
+            this.groupBox_BUILD_Options.Controls.Add(this.checkBox_BUILD_NetSecConf);
+            this.groupBox_BUILD_Options.Controls.Add(this.useAapt2ChkBox);
+            this.groupBox_BUILD_Options.Controls.Add(this.buildApiLvlUpDown);
+            this.groupBox_BUILD_Options.Controls.Add(this.buildSetApiLvlChkBox);
+            this.groupBox_BUILD_Options.Controls.Add(this.createUnsignApkChkBox);
+            this.groupBox_BUILD_Options.Controls.Add(this.signAfterBuildChkBox);
+            this.groupBox_BUILD_Options.Controls.Add(this.zipalignAfterBuildChkBox);
+            this.groupBox_BUILD_Options.Controls.Add(this.checkBox_BUILD_NoCrunch);
+            this.groupBox_BUILD_Options.Controls.Add(this.button_BUILD_BrowseOutputAppPath);
+            this.groupBox_BUILD_Options.Controls.Add(this.checkBox_BUILD_ForceAll);
+            this.groupBox_BUILD_Options.Controls.Add(this.button_BUILD_BrowseFrameDir);
+            this.groupBox_BUILD_Options.Controls.Add(this.button_BUILD_BrowseAaptPath);
+            this.groupBox_BUILD_Options.Controls.Add(this.checkBox_BUILD_OutputAppPath);
+            this.groupBox_BUILD_Options.Controls.Add(this.checkBox_BUILD_CopyOriginal);
+            this.groupBox_BUILD_Options.Controls.Add(this.textBox_BUILD_OutputAppPath);
+            this.groupBox_BUILD_Options.Controls.Add(this.checkBox_BUILD_UseAapt);
+            this.groupBox_BUILD_Options.Controls.Add(this.textBox_BUILD_AaptPath);
+            this.groupBox_BUILD_Options.Controls.Add(this.textBox_BUILD_FrameDir);
+            this.groupBox_BUILD_Options.Controls.Add(this.checkBox_BUILD_UseFramework);
+            resources.ApplyResources(this.groupBox_BUILD_Options, "groupBox_BUILD_Options");
+            this.groupBox_BUILD_Options.Name = "groupBox_BUILD_Options";
+            this.groupBox_BUILD_Options.TabStop = false;
+            // 
+            // tabPageSign
+            // 
+            resources.ApplyResources(this.tabPageSign, "tabPageSign");
+            this.tabPageSign.BackColor = System.Drawing.Color.White;
+            this.tabPageSign.Controls.Add(this.groupBox_SIGN_Options);
+            this.tabPageSign.Name = "tabPageSign";
+            // 
+            // groupBox_SIGN_Options
+            // 
+            this.groupBox_SIGN_Options.Controls.Add(this.checkBox2);
+            this.groupBox_SIGN_Options.Controls.Add(this.checkBox1);
+            this.groupBox_SIGN_Options.Controls.Add(this.autoDelIdsigChkBox);
+            this.groupBox_SIGN_Options.Controls.Add(this.schemev4ComboBox);
+            this.groupBox_SIGN_Options.Controls.Add(this.label27);
+            this.groupBox_SIGN_Options.Controls.Add(this.schemev3ComboBox);
+            this.groupBox_SIGN_Options.Controls.Add(this.label26);
+            this.groupBox_SIGN_Options.Controls.Add(this.schemev2ComboBox);
+            this.groupBox_SIGN_Options.Controls.Add(this.label25);
+            this.groupBox_SIGN_Options.Controls.Add(this.schemev1ComboBox);
+            this.groupBox_SIGN_Options.Controls.Add(this.label24);
+            this.groupBox_SIGN_Options.Controls.Add(this.textBox3);
+            this.groupBox_SIGN_Options.Controls.Add(this.selectKeyStoreFileBtn);
+            this.groupBox_SIGN_Options.Controls.Add(this.aliasTxtBox);
+            this.groupBox_SIGN_Options.Controls.Add(this.useAliasChkBox);
+            this.groupBox_SIGN_Options.Controls.Add(this.label22);
+            this.groupBox_SIGN_Options.Controls.Add(this.keyStoreFileTxtBox);
+            this.groupBox_SIGN_Options.Controls.Add(this.label21);
+            this.groupBox_SIGN_Options.Controls.Add(this.label20);
+            this.groupBox_SIGN_Options.Controls.Add(this.useKeyStoreChkBox);
+            this.groupBox_SIGN_Options.Controls.Add(this.useSigningOutputDir);
+            this.groupBox_SIGN_Options.Controls.Add(this.label_SIGN_PrivateKey);
+            this.groupBox_SIGN_Options.Controls.Add(this.label_SIGN_PublicKey);
+            this.groupBox_SIGN_Options.Controls.Add(this.button_SIGN_BrowseOutputFile);
+            this.groupBox_SIGN_Options.Controls.Add(this.textBox_SIGN_OutputFile);
+            this.groupBox_SIGN_Options.Controls.Add(this.button_SIGN_BrowsePublicKey);
+            this.groupBox_SIGN_Options.Controls.Add(this.button_SIGN_BrowsePrivateKey);
+            this.groupBox_SIGN_Options.Controls.Add(this.textBox_SIGN_PublicKey);
+            this.groupBox_SIGN_Options.Controls.Add(this.textBox_SIGN_PrivateKey);
+            resources.ApplyResources(this.groupBox_SIGN_Options, "groupBox_SIGN_Options");
+            this.groupBox_SIGN_Options.Name = "groupBox_SIGN_Options";
+            this.groupBox_SIGN_Options.TabStop = false;
+            // 
+            // schemev4ComboBox
+            // 
+            this.schemev4ComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.schemev4ComboBox.FormattingEnabled = true;
+            this.schemev4ComboBox.Items.AddRange(new object[] {
+            resources.GetString("schemev4ComboBox.Items"),
+            resources.GetString("schemev4ComboBox.Items1"),
+            resources.GetString("schemev4ComboBox.Items2")});
+            resources.ApplyResources(this.schemev4ComboBox, "schemev4ComboBox");
+            this.schemev4ComboBox.Name = "schemev4ComboBox";
+            // 
+            // label27
+            // 
+            resources.ApplyResources(this.label27, "label27");
+            this.label27.Name = "label27";
+            // 
+            // schemev3ComboBox
+            // 
+            this.schemev3ComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.schemev3ComboBox.FormattingEnabled = true;
+            this.schemev3ComboBox.Items.AddRange(new object[] {
+            resources.GetString("schemev3ComboBox.Items"),
+            resources.GetString("schemev3ComboBox.Items1"),
+            resources.GetString("schemev3ComboBox.Items2")});
+            resources.ApplyResources(this.schemev3ComboBox, "schemev3ComboBox");
+            this.schemev3ComboBox.Name = "schemev3ComboBox";
+            // 
+            // label26
+            // 
+            resources.ApplyResources(this.label26, "label26");
+            this.label26.Name = "label26";
+            // 
+            // schemev2ComboBox
+            // 
+            this.schemev2ComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.schemev2ComboBox.FormattingEnabled = true;
+            this.schemev2ComboBox.Items.AddRange(new object[] {
+            resources.GetString("schemev2ComboBox.Items"),
+            resources.GetString("schemev2ComboBox.Items1"),
+            resources.GetString("schemev2ComboBox.Items2")});
+            resources.ApplyResources(this.schemev2ComboBox, "schemev2ComboBox");
+            this.schemev2ComboBox.Name = "schemev2ComboBox";
+            // 
+            // label25
+            // 
+            resources.ApplyResources(this.label25, "label25");
+            this.label25.Name = "label25";
+            // 
+            // schemev1ComboBox
+            // 
+            this.schemev1ComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.schemev1ComboBox.FormattingEnabled = true;
+            this.schemev1ComboBox.Items.AddRange(new object[] {
+            resources.GetString("schemev1ComboBox.Items"),
+            resources.GetString("schemev1ComboBox.Items1"),
+            resources.GetString("schemev1ComboBox.Items2")});
+            resources.ApplyResources(this.schemev1ComboBox, "schemev1ComboBox");
+            this.schemev1ComboBox.Name = "schemev1ComboBox";
+            // 
+            // label24
+            // 
+            resources.ApplyResources(this.label24, "label24");
+            this.label24.Name = "label24";
+            // 
+            // selectKeyStoreFileBtn
+            // 
+            resources.ApplyResources(this.selectKeyStoreFileBtn, "selectKeyStoreFileBtn");
+            this.selectKeyStoreFileBtn.Name = "selectKeyStoreFileBtn";
+            this.selectKeyStoreFileBtn.UseVisualStyleBackColor = true;
+            // 
+            // label22
+            // 
+            this.label22.ForeColor = System.Drawing.Color.Maroon;
+            resources.ApplyResources(this.label22, "label22");
+            this.label22.Name = "label22";
+            // 
+            // label21
+            // 
+            resources.ApplyResources(this.label21, "label21");
+            this.label21.Name = "label21";
+            // 
+            // label20
+            // 
+            resources.ApplyResources(this.label20, "label20");
+            this.label20.Name = "label20";
+            // 
+            // label_SIGN_PrivateKey
+            // 
+            resources.ApplyResources(this.label_SIGN_PrivateKey, "label_SIGN_PrivateKey");
+            this.label_SIGN_PrivateKey.Name = "label_SIGN_PrivateKey";
+            // 
+            // label_SIGN_PublicKey
+            // 
+            resources.ApplyResources(this.label_SIGN_PublicKey, "label_SIGN_PublicKey");
+            this.label_SIGN_PublicKey.Name = "label_SIGN_PublicKey";
+            // 
+            // button_SIGN_BrowseOutputFile
+            // 
+            resources.ApplyResources(this.button_SIGN_BrowseOutputFile, "button_SIGN_BrowseOutputFile");
+            this.button_SIGN_BrowseOutputFile.Name = "button_SIGN_BrowseOutputFile";
+            this.button_SIGN_BrowseOutputFile.UseVisualStyleBackColor = true;
+            // 
+            // button_SIGN_BrowsePublicKey
+            // 
+            resources.ApplyResources(this.button_SIGN_BrowsePublicKey, "button_SIGN_BrowsePublicKey");
+            this.button_SIGN_BrowsePublicKey.Name = "button_SIGN_BrowsePublicKey";
+            this.button_SIGN_BrowsePublicKey.UseVisualStyleBackColor = true;
+            // 
+            // button_SIGN_BrowsePrivateKey
+            // 
+            resources.ApplyResources(this.button_SIGN_BrowsePrivateKey, "button_SIGN_BrowsePrivateKey");
+            this.button_SIGN_BrowsePrivateKey.Name = "button_SIGN_BrowsePrivateKey";
+            this.button_SIGN_BrowsePrivateKey.UseVisualStyleBackColor = true;
+            // 
+            // tabPageZipAlign
+            // 
+            resources.ApplyResources(this.tabPageZipAlign, "tabPageZipAlign");
+            this.tabPageZipAlign.BackColor = System.Drawing.Color.White;
+            this.tabPageZipAlign.Controls.Add(this.groupBox_ZIPALIGN_Options);
+            this.tabPageZipAlign.Name = "tabPageZipAlign";
+            // 
+            // groupBox_ZIPALIGN_Options
+            // 
+            resources.ApplyResources(this.groupBox_ZIPALIGN_Options, "groupBox_ZIPALIGN_Options");
+            this.groupBox_ZIPALIGN_Options.Controls.Add(this.zipalignOutputDirChkBox);
+            this.groupBox_ZIPALIGN_Options.Controls.Add(this.signAfterZipalignChkBox);
+            this.groupBox_ZIPALIGN_Options.Controls.Add(this.checkBox_ZIPALIGN_Recompress);
+            this.groupBox_ZIPALIGN_Options.Controls.Add(this.label_ZIPALIGN_AlignmentBytes);
+            this.groupBox_ZIPALIGN_Options.Controls.Add(this.button_ZIPALIGN_BrowseOutputFile);
+            this.groupBox_ZIPALIGN_Options.Controls.Add(this.checkBox_ZIPALIGN_CheckAlignment);
+            this.groupBox_ZIPALIGN_Options.Controls.Add(this.textBox_ZIPALIGN_OutputFile);
+            this.groupBox_ZIPALIGN_Options.Controls.Add(this.checkBox_ZIPALIGN_VerboseOutput);
+            this.groupBox_ZIPALIGN_Options.Controls.Add(this.numericUpDown_ZIPALIGN_AlignmentBytes);
+            this.groupBox_ZIPALIGN_Options.Controls.Add(this.checkBox_ZIPALIGN_OverwriteOutputFile);
+            this.groupBox_ZIPALIGN_Options.Name = "groupBox_ZIPALIGN_Options";
+            this.groupBox_ZIPALIGN_Options.TabStop = false;
+            // 
+            // label_ZIPALIGN_AlignmentBytes
+            // 
+            resources.ApplyResources(this.label_ZIPALIGN_AlignmentBytes, "label_ZIPALIGN_AlignmentBytes");
+            this.label_ZIPALIGN_AlignmentBytes.Name = "label_ZIPALIGN_AlignmentBytes";
+            // 
+            // button_ZIPALIGN_BrowseOutputFile
+            // 
+            resources.ApplyResources(this.button_ZIPALIGN_BrowseOutputFile, "button_ZIPALIGN_BrowseOutputFile");
+            this.button_ZIPALIGN_BrowseOutputFile.Name = "button_ZIPALIGN_BrowseOutputFile";
+            this.button_ZIPALIGN_BrowseOutputFile.UseVisualStyleBackColor = true;
+            // 
+            // tabPageInstallFramework
+            // 
+            this.tabPageInstallFramework.BackColor = System.Drawing.Color.White;
+            this.tabPageInstallFramework.Controls.Add(this.groupBox1);
+            this.tabPageInstallFramework.Controls.Add(this.groupBox_IF_Options);
+            resources.ApplyResources(this.tabPageInstallFramework, "tabPageInstallFramework");
+            this.tabPageInstallFramework.Name = "tabPageInstallFramework";
+            // 
+            // groupBox1
+            // 
+            resources.ApplyResources(this.groupBox1, "groupBox1");
+            this.groupBox1.Controls.Add(this.openFwFolderBtn);
+            this.groupBox1.Controls.Add(this.clearFwBtn);
+            this.groupBox1.Controls.Add(this.clearFwBeforeDecodeChkBox);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.TabStop = false;
+            // 
+            // openFwFolderBtn
+            // 
+            resources.ApplyResources(this.openFwFolderBtn, "openFwFolderBtn");
+            this.openFwFolderBtn.Name = "openFwFolderBtn";
+            this.openFwFolderBtn.UseVisualStyleBackColor = true;
+            // 
+            // clearFwBtn
+            // 
+            resources.ApplyResources(this.clearFwBtn, "clearFwBtn");
+            this.clearFwBtn.Name = "clearFwBtn";
+            this.clearFwBtn.UseVisualStyleBackColor = true;
+            // 
+            // groupBox_IF_Options
+            // 
+            resources.ApplyResources(this.groupBox_IF_Options, "groupBox_IF_Options");
+            this.groupBox_IF_Options.Controls.Add(this.checkBox_IF_Tag);
+            this.groupBox_IF_Options.Controls.Add(this.checkBox_IF_FramePath);
+            this.groupBox_IF_Options.Controls.Add(this.textBox_IF_Tag);
+            this.groupBox_IF_Options.Controls.Add(this.button_IF_InstallFramework);
+            this.groupBox_IF_Options.Controls.Add(this.button_IF_BrowseFrameDir);
+            this.groupBox_IF_Options.Controls.Add(this.button_IF_BrowseInputFramePath);
+            this.groupBox_IF_Options.Controls.Add(this.textBox_IF_InputFramePath);
+            this.groupBox_IF_Options.Controls.Add(this.textBox_IF_FrameDir);
+            this.groupBox_IF_Options.Name = "groupBox_IF_Options";
+            this.groupBox_IF_Options.TabStop = false;
+            // 
+            // button_IF_InstallFramework
+            // 
+            resources.ApplyResources(this.button_IF_InstallFramework, "button_IF_InstallFramework");
+            this.button_IF_InstallFramework.Name = "button_IF_InstallFramework";
+            this.button_IF_InstallFramework.UseVisualStyleBackColor = true;
+            // 
+            // button_IF_BrowseInputFramePath
+            // 
+            resources.ApplyResources(this.button_IF_BrowseInputFramePath, "button_IF_BrowseInputFramePath");
+            this.button_IF_BrowseInputFramePath.Name = "button_IF_BrowseInputFramePath";
+            this.button_IF_BrowseInputFramePath.UseVisualStyleBackColor = true;
+            // 
+            // tabPageBaksmali
+            // 
+            this.tabPageBaksmali.AllowDrop = true;
+            this.tabPageBaksmali.BackColor = System.Drawing.Color.White;
+            this.tabPageBaksmali.Controls.Add(this.smaliGroupBox);
+            this.tabPageBaksmali.Controls.Add(this.bakSmaliGroupBox);
+            resources.ApplyResources(this.tabPageBaksmali, "tabPageBaksmali");
+            this.tabPageBaksmali.Name = "tabPageBaksmali";
+            // 
+            // smaliGroupBox
+            // 
+            resources.ApplyResources(this.smaliGroupBox, "smaliGroupBox");
+            this.smaliGroupBox.Controls.Add(this.label29);
+            this.smaliGroupBox.Controls.Add(this.smaliUseOutputChkBox);
+            this.smaliGroupBox.Controls.Add(this.comSmaliBtn);
+            this.smaliGroupBox.Controls.Add(this.smaliBrowseOutputBtn);
+            this.smaliGroupBox.Controls.Add(this.smaliBrowseInputDirTxtBox);
+            this.smaliGroupBox.Controls.Add(this.smaliBrowseOutputTxtBox);
+            this.smaliGroupBox.Controls.Add(this.smaliBrowseInputDirBtn);
+            this.smaliGroupBox.Name = "smaliGroupBox";
+            this.smaliGroupBox.TabStop = false;
+            // 
+            // label29
+            // 
+            resources.ApplyResources(this.label29, "label29");
+            this.label29.Name = "label29";
+            // 
+            // comSmaliBtn
+            // 
+            resources.ApplyResources(this.comSmaliBtn, "comSmaliBtn");
+            this.comSmaliBtn.Name = "comSmaliBtn";
+            this.comSmaliBtn.UseVisualStyleBackColor = true;
+            // 
+            // smaliBrowseOutputBtn
+            // 
+            resources.ApplyResources(this.smaliBrowseOutputBtn, "smaliBrowseOutputBtn");
+            this.smaliBrowseOutputBtn.Name = "smaliBrowseOutputBtn";
+            this.smaliBrowseOutputBtn.UseVisualStyleBackColor = true;
+            // 
+            // smaliBrowseInputDirBtn
+            // 
+            resources.ApplyResources(this.smaliBrowseInputDirBtn, "smaliBrowseInputDirBtn");
+            this.smaliBrowseInputDirBtn.Name = "smaliBrowseInputDirBtn";
+            this.smaliBrowseInputDirBtn.UseVisualStyleBackColor = true;
+            // 
+            // bakSmaliGroupBox
+            // 
+            resources.ApplyResources(this.bakSmaliGroupBox, "bakSmaliGroupBox");
+            this.bakSmaliGroupBox.Controls.Add(this.label28);
+            this.bakSmaliGroupBox.Controls.Add(this.baksmaliUseOutputChkBox);
+            this.bakSmaliGroupBox.Controls.Add(this.baksmaliBrowseOutputBtn);
+            this.bakSmaliGroupBox.Controls.Add(this.baksmaliBrowseOutputTxtBox);
+            this.bakSmaliGroupBox.Controls.Add(this.decSmaliBtn);
+            this.bakSmaliGroupBox.Controls.Add(this.baksmaliBrowseInputDexBtn);
+            this.bakSmaliGroupBox.Controls.Add(this.baksmaliBrowseInputDexTxtBox);
+            this.bakSmaliGroupBox.Name = "bakSmaliGroupBox";
+            this.bakSmaliGroupBox.TabStop = false;
+            // 
+            // label28
+            // 
+            resources.ApplyResources(this.label28, "label28");
+            this.label28.Name = "label28";
+            // 
+            // baksmaliBrowseOutputBtn
+            // 
+            resources.ApplyResources(this.baksmaliBrowseOutputBtn, "baksmaliBrowseOutputBtn");
+            this.baksmaliBrowseOutputBtn.Name = "baksmaliBrowseOutputBtn";
+            this.baksmaliBrowseOutputBtn.UseVisualStyleBackColor = true;
+            // 
+            // decSmaliBtn
+            // 
+            resources.ApplyResources(this.decSmaliBtn, "decSmaliBtn");
+            this.decSmaliBtn.Name = "decSmaliBtn";
+            this.decSmaliBtn.UseVisualStyleBackColor = true;
+            // 
+            // baksmaliBrowseInputDexBtn
+            // 
+            resources.ApplyResources(this.baksmaliBrowseInputDexBtn, "baksmaliBrowseInputDexBtn");
+            this.baksmaliBrowseInputDexBtn.Name = "baksmaliBrowseInputDexBtn";
+            this.baksmaliBrowseInputDexBtn.UseVisualStyleBackColor = true;
+            // 
+            // tabPageAdb
+            // 
+            this.tabPageAdb.AllowDrop = true;
+            this.tabPageAdb.Controls.Add(this.selAdbDeviceLbl);
+            this.tabPageAdb.Controls.Add(this.label33);
+            this.tabPageAdb.Controls.Add(this.killAdbBtn);
+            this.tabPageAdb.Controls.Add(this.installApkBtn);
+            this.tabPageAdb.Controls.Add(this.refreshDevicesBtn);
+            this.tabPageAdb.Controls.Add(this.selApkAdbBtn);
+            this.tabPageAdb.Controls.Add(this.setVendorChkBox);
+            this.tabPageAdb.Controls.Add(this.apkPathAdbTxtBox);
+            this.tabPageAdb.Controls.Add(this.label32);
+            this.tabPageAdb.Controls.Add(this.devicesListBox);
+            resources.ApplyResources(this.tabPageAdb, "tabPageAdb");
+            this.tabPageAdb.Name = "tabPageAdb";
+            this.tabPageAdb.UseVisualStyleBackColor = true;
+            // 
+            // selAdbDeviceLbl
+            // 
+            this.selAdbDeviceLbl.ForeColor = System.Drawing.Color.ForestGreen;
+            resources.ApplyResources(this.selAdbDeviceLbl, "selAdbDeviceLbl");
+            this.selAdbDeviceLbl.Name = "selAdbDeviceLbl";
+            // 
+            // label33
+            // 
+            resources.ApplyResources(this.label33, "label33");
+            this.label33.Name = "label33";
+            // 
+            // killAdbBtn
+            // 
+            resources.ApplyResources(this.killAdbBtn, "killAdbBtn");
+            this.killAdbBtn.Name = "killAdbBtn";
+            this.killAdbBtn.UseVisualStyleBackColor = true;
+            // 
+            // installApkBtn
+            // 
+            resources.ApplyResources(this.installApkBtn, "installApkBtn");
+            this.installApkBtn.Name = "installApkBtn";
+            this.installApkBtn.UseVisualStyleBackColor = true;
+            // 
+            // refreshDevicesBtn
+            // 
+            resources.ApplyResources(this.refreshDevicesBtn, "refreshDevicesBtn");
+            this.refreshDevicesBtn.Name = "refreshDevicesBtn";
+            this.refreshDevicesBtn.UseVisualStyleBackColor = true;
+            // 
+            // selApkAdbBtn
+            // 
+            resources.ApplyResources(this.selApkAdbBtn, "selApkAdbBtn");
+            this.selApkAdbBtn.Name = "selApkAdbBtn";
+            this.selApkAdbBtn.UseVisualStyleBackColor = true;
+            // 
+            // label32
+            // 
+            resources.ApplyResources(this.label32, "label32");
+            this.label32.Name = "label32";
+            // 
+            // devicesListBox
+            // 
+            resources.ApplyResources(this.devicesListBox, "devicesListBox");
+            this.devicesListBox.FormattingEnabled = true;
+            this.devicesListBox.Name = "devicesListBox";
+            // 
+            // statusStrip1
+            // 
+            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabelStateImage,
+            this.toolStripStatusLabelStateText,
+            this.progressBar});
+            resources.ApplyResources(this.statusStrip1, "statusStrip1");
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.SizingGrip = false;
+            // 
+            // toolStripStatusLabelStateImage
+            // 
+            this.toolStripStatusLabelStateImage.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripStatusLabelStateImage.Name = "toolStripStatusLabelStateImage";
+            resources.ApplyResources(this.toolStripStatusLabelStateImage, "toolStripStatusLabelStateImage");
+            // 
+            // toolStripStatusLabelStateText
+            // 
+            this.toolStripStatusLabelStateText.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            resources.ApplyResources(this.toolStripStatusLabelStateText, "toolStripStatusLabelStateText");
+            this.toolStripStatusLabelStateText.Name = "toolStripStatusLabelStateText";
+            this.toolStripStatusLabelStateText.Overflow = System.Windows.Forms.ToolStripItemOverflow.Never;
+            this.toolStripStatusLabelStateText.Spring = true;
+            this.toolStripStatusLabelStateText.Click += new System.EventHandler(this.toolStripStatusLabelStateText_Click);
+            // 
+            // progressBar
+            // 
+            this.progressBar.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            resources.ApplyResources(this.progressBar, "progressBar");
+            this.progressBar.MarqueeAnimationSpeed = 30;
+            this.progressBar.Name = "progressBar";
+            this.progressBar.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
+            this.progressBar.Click += new System.EventHandler(this.toolStripProgressBar1_Click);
+            // 
+            // contextMenuStripLog
+            // 
+            this.contextMenuStripLog.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStripLog.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.copyToolStripMenuItem,
+            this.clearLogToolStripMenuItem});
+            this.contextMenuStripLog.Name = "contextMenuStripLog";
+            resources.ApplyResources(this.contextMenuStripLog, "contextMenuStripLog");
+            // 
+            // copyToolStripMenuItem
+            // 
+            this.copyToolStripMenuItem.Name = "copyToolStripMenuItem";
+            resources.ApplyResources(this.copyToolStripMenuItem, "copyToolStripMenuItem");
+            // 
+            // clearLogToolStripMenuItem
+            // 
+            this.clearLogToolStripMenuItem.Name = "clearLogToolStripMenuItem";
+            resources.ApplyResources(this.clearLogToolStripMenuItem, "clearLogToolStripMenuItem");
+            // 
+            // logTxtBox
+            // 
+            resources.ApplyResources(this.logTxtBox, "logTxtBox");
+            this.logTxtBox.ContextMenuStrip = this.contextMenuStripLog;
+            this.logTxtBox.HideSelection = false;
+            this.logTxtBox.Name = "logTxtBox";
+            this.logTxtBox.ReadOnly = true;
+            this.logTxtBox.TabStop = false;
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fileToolStripMenuItem,
+            this.settingsToolStripMenuItem1,
+            this.helpToolStripMenuItem});
+            resources.ApplyResources(this.menuStrip1, "menuStrip1");
+            this.menuStrip1.Name = "menuStrip1";
+            // 
+            // fileToolStripMenuItem
+            // 
+            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.newInsToolStripMenuItem,
+            this.saveLogToFileToolStripMenuItem,
+            this.toolStripMenuItem1,
+            this.openTempFolderToolStripMenuItem,
+            this.clearTempFolderToolStripMenuItem,
+            this.toolStripMenuItem2,
+            this.exitToolStripMenuItem});
+            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+            resources.ApplyResources(this.fileToolStripMenuItem, "fileToolStripMenuItem");
+            // 
+            // newInsToolStripMenuItem
+            // 
+            this.newInsToolStripMenuItem.Name = "newInsToolStripMenuItem";
+            resources.ApplyResources(this.newInsToolStripMenuItem, "newInsToolStripMenuItem");
+            // 
+            // saveLogToFileToolStripMenuItem
+            // 
+            this.saveLogToFileToolStripMenuItem.Name = "saveLogToFileToolStripMenuItem";
+            resources.ApplyResources(this.saveLogToFileToolStripMenuItem, "saveLogToFileToolStripMenuItem");
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            resources.ApplyResources(this.toolStripMenuItem1, "toolStripMenuItem1");
+            // 
+            // openTempFolderToolStripMenuItem
+            // 
+            this.openTempFolderToolStripMenuItem.Name = "openTempFolderToolStripMenuItem";
+            resources.ApplyResources(this.openTempFolderToolStripMenuItem, "openTempFolderToolStripMenuItem");
+            // 
+            // clearTempFolderToolStripMenuItem
+            // 
+            this.clearTempFolderToolStripMenuItem.Name = "clearTempFolderToolStripMenuItem";
+            resources.ApplyResources(this.clearTempFolderToolStripMenuItem, "clearTempFolderToolStripMenuItem");
+            this.clearTempFolderToolStripMenuItem.Click += new System.EventHandler(this.clearTempFolderToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            resources.ApplyResources(this.toolStripMenuItem2, "toolStripMenuItem2");
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            resources.ApplyResources(this.exitToolStripMenuItem, "exitToolStripMenuItem");
+            // 
+            // helpToolStripMenuItem
+            // 
+            this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.checkForUpdateToolStripMenuItem,
+            this.reportAnIsuueToolStripMenuItem,
+            this.apktoolIssuesToolStripMenuItem,
+            this.baksmaliIssuesToolStripMenuItem,
+            this.aboutToolStripMenuItem});
+            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
+            resources.ApplyResources(this.helpToolStripMenuItem, "helpToolStripMenuItem");
+            // 
+            // checkForUpdateToolStripMenuItem
+            // 
+            this.checkForUpdateToolStripMenuItem.Name = "checkForUpdateToolStripMenuItem";
+            resources.ApplyResources(this.checkForUpdateToolStripMenuItem, "checkForUpdateToolStripMenuItem");
+            // 
+            // reportAnIsuueToolStripMenuItem
+            // 
+            this.reportAnIsuueToolStripMenuItem.Name = "reportAnIsuueToolStripMenuItem";
+            resources.ApplyResources(this.reportAnIsuueToolStripMenuItem, "reportAnIsuueToolStripMenuItem");
+            // 
+            // apktoolIssuesToolStripMenuItem
+            // 
+            this.apktoolIssuesToolStripMenuItem.Name = "apktoolIssuesToolStripMenuItem";
+            resources.ApplyResources(this.apktoolIssuesToolStripMenuItem, "apktoolIssuesToolStripMenuItem");
+            // 
+            // baksmaliIssuesToolStripMenuItem
+            // 
+            this.baksmaliIssuesToolStripMenuItem.Name = "baksmaliIssuesToolStripMenuItem";
+            resources.ApplyResources(this.baksmaliIssuesToolStripMenuItem, "baksmaliIssuesToolStripMenuItem");
+            // 
+            // aboutToolStripMenuItem
+            // 
+            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            resources.ApplyResources(this.aboutToolStripMenuItem, "aboutToolStripMenuItem");
+            // 
+            // toolTip1
+            // 
+            this.toolTip1.AutoPopDelay = 10000;
+            this.toolTip1.InitialDelay = 500;
+            this.toolTip1.ReshowDelay = 100;
+            // 
+            // settingsToolStripMenuItem1
+            // 
+            this.settingsToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.useAPKEditorForDecompilingItem,
+            this.settingsToolStripMenuItem});
+            this.settingsToolStripMenuItem1.Name = "settingsToolStripMenuItem1";
+            resources.ApplyResources(this.settingsToolStripMenuItem1, "settingsToolStripMenuItem1");
+            // 
+            // settingsToolStripMenuItem
+            // 
+            this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
+            resources.ApplyResources(this.settingsToolStripMenuItem, "settingsToolStripMenuItem");
+            // 
+            // useAPKEditorForDecompilingItem
+            // 
+            this.useAPKEditorForDecompilingItem.Checked = global::APKToolGUI.Properties.Settings.Default.UseApkeditor;
+            this.useAPKEditorForDecompilingItem.CheckOnClick = true;
+            this.useAPKEditorForDecompilingItem.Name = "useAPKEditorForDecompilingItem";
+            resources.ApplyResources(this.useAPKEditorForDecompilingItem, "useAPKEditorForDecompilingItem");
+            // 
+            // splitApkPathTxtBox
+            // 
+            this.splitApkPathTxtBox.AllowDrop = true;
+            resources.ApplyResources(this.splitApkPathTxtBox, "splitApkPathTxtBox");
+            this.splitApkPathTxtBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::APKToolGUI.Properties.Settings.Default, "SplitApk_InputFile", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.splitApkPathTxtBox.Name = "splitApkPathTxtBox";
+            this.splitApkPathTxtBox.Text = global::APKToolGUI.Properties.Settings.Default.SplitApk_InputFile;
+            // 
+            // textBox_SIGN_InputFile
+            // 
+            this.textBox_SIGN_InputFile.AllowDrop = true;
+            resources.ApplyResources(this.textBox_SIGN_InputFile, "textBox_SIGN_InputFile");
+            this.textBox_SIGN_InputFile.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::APKToolGUI.Properties.Settings.Default, "Sign_InputFile", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.textBox_SIGN_InputFile.Name = "textBox_SIGN_InputFile";
+            this.textBox_SIGN_InputFile.Text = global::APKToolGUI.Properties.Settings.Default.Sign_InputFile;
+            // 
+            // textBox_ZIPALIGN_InputFile
+            // 
+            this.textBox_ZIPALIGN_InputFile.AllowDrop = true;
+            resources.ApplyResources(this.textBox_ZIPALIGN_InputFile, "textBox_ZIPALIGN_InputFile");
+            this.textBox_ZIPALIGN_InputFile.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::APKToolGUI.Properties.Settings.Default, "Zipalign_InputFile", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.textBox_ZIPALIGN_InputFile.Name = "textBox_ZIPALIGN_InputFile";
+            this.textBox_ZIPALIGN_InputFile.Text = global::APKToolGUI.Properties.Settings.Default.Zipalign_InputFile;
+            // 
+            // textBox_BUILD_InputProjectDir
+            // 
+            this.textBox_BUILD_InputProjectDir.AllowDrop = true;
+            resources.ApplyResources(this.textBox_BUILD_InputProjectDir, "textBox_BUILD_InputProjectDir");
+            this.textBox_BUILD_InputProjectDir.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::APKToolGUI.Properties.Settings.Default, "Build_InputDir", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.textBox_BUILD_InputProjectDir.Name = "textBox_BUILD_InputProjectDir";
+            this.textBox_BUILD_InputProjectDir.Text = global::APKToolGUI.Properties.Settings.Default.Build_InputDir;
+            // 
+            // textBox_DECODE_InputAppPath
+            // 
+            this.textBox_DECODE_InputAppPath.AllowDrop = true;
+            resources.ApplyResources(this.textBox_DECODE_InputAppPath, "textBox_DECODE_InputAppPath");
+            this.textBox_DECODE_InputAppPath.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::APKToolGUI.Properties.Settings.Default, "Decode_InputAppPath", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.textBox_DECODE_InputAppPath.Name = "textBox_DECODE_InputAppPath";
+            this.textBox_DECODE_InputAppPath.Text = global::APKToolGUI.Properties.Settings.Default.Decode_InputAppPath;
+            // 
             // checkBox7
             // 
             resources.ApplyResources(this.checkBox7, "checkBox7");
@@ -1033,38 +1640,6 @@
             this.checkBox_DECODE_NoDebugInfo.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "Decode_NoDebugInfo", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.checkBox_DECODE_NoDebugInfo.Name = "checkBox_DECODE_NoDebugInfo";
             this.checkBox_DECODE_NoDebugInfo.UseVisualStyleBackColor = true;
-            // 
-            // tabPageBuild
-            // 
-            resources.ApplyResources(this.tabPageBuild, "tabPageBuild");
-            this.tabPageBuild.BackColor = System.Drawing.Color.White;
-            this.tabPageBuild.Controls.Add(this.groupBox_BUILD_Options);
-            this.tabPageBuild.Name = "tabPageBuild";
-            // 
-            // groupBox_BUILD_Options
-            // 
-            this.groupBox_BUILD_Options.Controls.Add(this.checkBox_BUILD_NetSecConf);
-            this.groupBox_BUILD_Options.Controls.Add(this.useAapt2ChkBox);
-            this.groupBox_BUILD_Options.Controls.Add(this.buildApiLvlUpDown);
-            this.groupBox_BUILD_Options.Controls.Add(this.buildSetApiLvlChkBox);
-            this.groupBox_BUILD_Options.Controls.Add(this.createUnsignApkChkBox);
-            this.groupBox_BUILD_Options.Controls.Add(this.signAfterBuildChkBox);
-            this.groupBox_BUILD_Options.Controls.Add(this.zipalignAfterBuildChkBox);
-            this.groupBox_BUILD_Options.Controls.Add(this.checkBox_BUILD_NoCrunch);
-            this.groupBox_BUILD_Options.Controls.Add(this.button_BUILD_BrowseOutputAppPath);
-            this.groupBox_BUILD_Options.Controls.Add(this.checkBox_BUILD_ForceAll);
-            this.groupBox_BUILD_Options.Controls.Add(this.button_BUILD_BrowseFrameDir);
-            this.groupBox_BUILD_Options.Controls.Add(this.button_BUILD_BrowseAaptPath);
-            this.groupBox_BUILD_Options.Controls.Add(this.checkBox_BUILD_OutputAppPath);
-            this.groupBox_BUILD_Options.Controls.Add(this.checkBox_BUILD_CopyOriginal);
-            this.groupBox_BUILD_Options.Controls.Add(this.textBox_BUILD_OutputAppPath);
-            this.groupBox_BUILD_Options.Controls.Add(this.checkBox_BUILD_UseAapt);
-            this.groupBox_BUILD_Options.Controls.Add(this.textBox_BUILD_AaptPath);
-            this.groupBox_BUILD_Options.Controls.Add(this.textBox_BUILD_FrameDir);
-            this.groupBox_BUILD_Options.Controls.Add(this.checkBox_BUILD_UseFramework);
-            resources.ApplyResources(this.groupBox_BUILD_Options, "groupBox_BUILD_Options");
-            this.groupBox_BUILD_Options.Name = "groupBox_BUILD_Options";
-            this.groupBox_BUILD_Options.TabStop = false;
             // 
             // checkBox_BUILD_NetSecConf
             // 
@@ -1226,48 +1801,6 @@
             this.checkBox_BUILD_UseFramework.Name = "checkBox_BUILD_UseFramework";
             this.checkBox_BUILD_UseFramework.UseVisualStyleBackColor = true;
             // 
-            // tabPageSign
-            // 
-            resources.ApplyResources(this.tabPageSign, "tabPageSign");
-            this.tabPageSign.BackColor = System.Drawing.Color.White;
-            this.tabPageSign.Controls.Add(this.groupBox_SIGN_Options);
-            this.tabPageSign.Name = "tabPageSign";
-            // 
-            // groupBox_SIGN_Options
-            // 
-            this.groupBox_SIGN_Options.Controls.Add(this.checkBox2);
-            this.groupBox_SIGN_Options.Controls.Add(this.checkBox1);
-            this.groupBox_SIGN_Options.Controls.Add(this.autoDelIdsigChkBox);
-            this.groupBox_SIGN_Options.Controls.Add(this.schemev4ComboBox);
-            this.groupBox_SIGN_Options.Controls.Add(this.label27);
-            this.groupBox_SIGN_Options.Controls.Add(this.schemev3ComboBox);
-            this.groupBox_SIGN_Options.Controls.Add(this.label26);
-            this.groupBox_SIGN_Options.Controls.Add(this.schemev2ComboBox);
-            this.groupBox_SIGN_Options.Controls.Add(this.label25);
-            this.groupBox_SIGN_Options.Controls.Add(this.schemev1ComboBox);
-            this.groupBox_SIGN_Options.Controls.Add(this.label24);
-            this.groupBox_SIGN_Options.Controls.Add(this.textBox3);
-            this.groupBox_SIGN_Options.Controls.Add(this.selectKeyStoreFileBtn);
-            this.groupBox_SIGN_Options.Controls.Add(this.aliasTxtBox);
-            this.groupBox_SIGN_Options.Controls.Add(this.useAliasChkBox);
-            this.groupBox_SIGN_Options.Controls.Add(this.label22);
-            this.groupBox_SIGN_Options.Controls.Add(this.keyStoreFileTxtBox);
-            this.groupBox_SIGN_Options.Controls.Add(this.label21);
-            this.groupBox_SIGN_Options.Controls.Add(this.label20);
-            this.groupBox_SIGN_Options.Controls.Add(this.useKeyStoreChkBox);
-            this.groupBox_SIGN_Options.Controls.Add(this.useSigningOutputDir);
-            this.groupBox_SIGN_Options.Controls.Add(this.label_SIGN_PrivateKey);
-            this.groupBox_SIGN_Options.Controls.Add(this.label_SIGN_PublicKey);
-            this.groupBox_SIGN_Options.Controls.Add(this.button_SIGN_BrowseOutputFile);
-            this.groupBox_SIGN_Options.Controls.Add(this.textBox_SIGN_OutputFile);
-            this.groupBox_SIGN_Options.Controls.Add(this.button_SIGN_BrowsePublicKey);
-            this.groupBox_SIGN_Options.Controls.Add(this.button_SIGN_BrowsePrivateKey);
-            this.groupBox_SIGN_Options.Controls.Add(this.textBox_SIGN_PublicKey);
-            this.groupBox_SIGN_Options.Controls.Add(this.textBox_SIGN_PrivateKey);
-            resources.ApplyResources(this.groupBox_SIGN_Options, "groupBox_SIGN_Options");
-            this.groupBox_SIGN_Options.Name = "groupBox_SIGN_Options";
-            this.groupBox_SIGN_Options.TabStop = false;
-            // 
             // checkBox2
             // 
             resources.ApplyResources(this.checkBox2, "checkBox2");
@@ -1293,70 +1826,6 @@
             this.autoDelIdsigChkBox.Name = "autoDelIdsigChkBox";
             this.autoDelIdsigChkBox.UseVisualStyleBackColor = true;
             // 
-            // schemev4ComboBox
-            // 
-            this.schemev4ComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.schemev4ComboBox.FormattingEnabled = true;
-            this.schemev4ComboBox.Items.AddRange(new object[] {
-            resources.GetString("schemev4ComboBox.Items"),
-            resources.GetString("schemev4ComboBox.Items1"),
-            resources.GetString("schemev4ComboBox.Items2")});
-            resources.ApplyResources(this.schemev4ComboBox, "schemev4ComboBox");
-            this.schemev4ComboBox.Name = "schemev4ComboBox";
-            // 
-            // label27
-            // 
-            resources.ApplyResources(this.label27, "label27");
-            this.label27.Name = "label27";
-            // 
-            // schemev3ComboBox
-            // 
-            this.schemev3ComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.schemev3ComboBox.FormattingEnabled = true;
-            this.schemev3ComboBox.Items.AddRange(new object[] {
-            resources.GetString("schemev3ComboBox.Items"),
-            resources.GetString("schemev3ComboBox.Items1"),
-            resources.GetString("schemev3ComboBox.Items2")});
-            resources.ApplyResources(this.schemev3ComboBox, "schemev3ComboBox");
-            this.schemev3ComboBox.Name = "schemev3ComboBox";
-            // 
-            // label26
-            // 
-            resources.ApplyResources(this.label26, "label26");
-            this.label26.Name = "label26";
-            // 
-            // schemev2ComboBox
-            // 
-            this.schemev2ComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.schemev2ComboBox.FormattingEnabled = true;
-            this.schemev2ComboBox.Items.AddRange(new object[] {
-            resources.GetString("schemev2ComboBox.Items"),
-            resources.GetString("schemev2ComboBox.Items1"),
-            resources.GetString("schemev2ComboBox.Items2")});
-            resources.ApplyResources(this.schemev2ComboBox, "schemev2ComboBox");
-            this.schemev2ComboBox.Name = "schemev2ComboBox";
-            // 
-            // label25
-            // 
-            resources.ApplyResources(this.label25, "label25");
-            this.label25.Name = "label25";
-            // 
-            // schemev1ComboBox
-            // 
-            this.schemev1ComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.schemev1ComboBox.FormattingEnabled = true;
-            this.schemev1ComboBox.Items.AddRange(new object[] {
-            resources.GetString("schemev1ComboBox.Items"),
-            resources.GetString("schemev1ComboBox.Items1"),
-            resources.GetString("schemev1ComboBox.Items2")});
-            resources.ApplyResources(this.schemev1ComboBox, "schemev1ComboBox");
-            this.schemev1ComboBox.Name = "schemev1ComboBox";
-            // 
-            // label24
-            // 
-            resources.ApplyResources(this.label24, "label24");
-            this.label24.Name = "label24";
-            // 
             // textBox3
             // 
             this.textBox3.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::APKToolGUI.Properties.Settings.Default, "Sign_KeystorePassword", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
@@ -1364,12 +1833,6 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Text = global::APKToolGUI.Properties.Settings.Default.Sign_KeystorePassword;
             this.textBox3.UseSystemPasswordChar = true;
-            // 
-            // selectKeyStoreFileBtn
-            // 
-            resources.ApplyResources(this.selectKeyStoreFileBtn, "selectKeyStoreFileBtn");
-            this.selectKeyStoreFileBtn.Name = "selectKeyStoreFileBtn";
-            this.selectKeyStoreFileBtn.UseVisualStyleBackColor = true;
             // 
             // aliasTxtBox
             // 
@@ -1387,28 +1850,12 @@
             this.useAliasChkBox.Name = "useAliasChkBox";
             this.useAliasChkBox.UseVisualStyleBackColor = true;
             // 
-            // label22
-            // 
-            this.label22.ForeColor = System.Drawing.Color.Maroon;
-            resources.ApplyResources(this.label22, "label22");
-            this.label22.Name = "label22";
-            // 
             // keyStoreFileTxtBox
             // 
             this.keyStoreFileTxtBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::APKToolGUI.Properties.Settings.Default, "Sign_KeystoreFilePath", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             resources.ApplyResources(this.keyStoreFileTxtBox, "keyStoreFileTxtBox");
             this.keyStoreFileTxtBox.Name = "keyStoreFileTxtBox";
             this.keyStoreFileTxtBox.Text = global::APKToolGUI.Properties.Settings.Default.Sign_KeystoreFilePath;
-            // 
-            // label21
-            // 
-            resources.ApplyResources(this.label21, "label21");
-            this.label21.Name = "label21";
-            // 
-            // label20
-            // 
-            resources.ApplyResources(this.label20, "label20");
-            this.label20.Name = "label20";
             // 
             // useKeyStoreChkBox
             // 
@@ -1426,40 +1873,12 @@
             this.useSigningOutputDir.Name = "useSigningOutputDir";
             this.useSigningOutputDir.UseVisualStyleBackColor = true;
             // 
-            // label_SIGN_PrivateKey
-            // 
-            resources.ApplyResources(this.label_SIGN_PrivateKey, "label_SIGN_PrivateKey");
-            this.label_SIGN_PrivateKey.Name = "label_SIGN_PrivateKey";
-            // 
-            // label_SIGN_PublicKey
-            // 
-            resources.ApplyResources(this.label_SIGN_PublicKey, "label_SIGN_PublicKey");
-            this.label_SIGN_PublicKey.Name = "label_SIGN_PublicKey";
-            // 
-            // button_SIGN_BrowseOutputFile
-            // 
-            resources.ApplyResources(this.button_SIGN_BrowseOutputFile, "button_SIGN_BrowseOutputFile");
-            this.button_SIGN_BrowseOutputFile.Name = "button_SIGN_BrowseOutputFile";
-            this.button_SIGN_BrowseOutputFile.UseVisualStyleBackColor = true;
-            // 
             // textBox_SIGN_OutputFile
             // 
             this.textBox_SIGN_OutputFile.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::APKToolGUI.Properties.Settings.Default, "Sign_OutputDir", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             resources.ApplyResources(this.textBox_SIGN_OutputFile, "textBox_SIGN_OutputFile");
             this.textBox_SIGN_OutputFile.Name = "textBox_SIGN_OutputFile";
             this.textBox_SIGN_OutputFile.Text = global::APKToolGUI.Properties.Settings.Default.Sign_OutputDir;
-            // 
-            // button_SIGN_BrowsePublicKey
-            // 
-            resources.ApplyResources(this.button_SIGN_BrowsePublicKey, "button_SIGN_BrowsePublicKey");
-            this.button_SIGN_BrowsePublicKey.Name = "button_SIGN_BrowsePublicKey";
-            this.button_SIGN_BrowsePublicKey.UseVisualStyleBackColor = true;
-            // 
-            // button_SIGN_BrowsePrivateKey
-            // 
-            resources.ApplyResources(this.button_SIGN_BrowsePrivateKey, "button_SIGN_BrowsePrivateKey");
-            this.button_SIGN_BrowsePrivateKey.Name = "button_SIGN_BrowsePrivateKey";
-            this.button_SIGN_BrowsePrivateKey.UseVisualStyleBackColor = true;
             // 
             // textBox_SIGN_PublicKey
             // 
@@ -1474,29 +1893,6 @@
             resources.ApplyResources(this.textBox_SIGN_PrivateKey, "textBox_SIGN_PrivateKey");
             this.textBox_SIGN_PrivateKey.Name = "textBox_SIGN_PrivateKey";
             this.textBox_SIGN_PrivateKey.Text = global::APKToolGUI.Properties.Settings.Default.Sign_PrivateKey;
-            // 
-            // tabPageZipAlign
-            // 
-            resources.ApplyResources(this.tabPageZipAlign, "tabPageZipAlign");
-            this.tabPageZipAlign.BackColor = System.Drawing.Color.White;
-            this.tabPageZipAlign.Controls.Add(this.groupBox_ZIPALIGN_Options);
-            this.tabPageZipAlign.Name = "tabPageZipAlign";
-            // 
-            // groupBox_ZIPALIGN_Options
-            // 
-            resources.ApplyResources(this.groupBox_ZIPALIGN_Options, "groupBox_ZIPALIGN_Options");
-            this.groupBox_ZIPALIGN_Options.Controls.Add(this.zipalignOutputDirChkBox);
-            this.groupBox_ZIPALIGN_Options.Controls.Add(this.signAfterZipalignChkBox);
-            this.groupBox_ZIPALIGN_Options.Controls.Add(this.checkBox_ZIPALIGN_Recompress);
-            this.groupBox_ZIPALIGN_Options.Controls.Add(this.label_ZIPALIGN_AlignmentBytes);
-            this.groupBox_ZIPALIGN_Options.Controls.Add(this.button_ZIPALIGN_BrowseOutputFile);
-            this.groupBox_ZIPALIGN_Options.Controls.Add(this.checkBox_ZIPALIGN_CheckAlignment);
-            this.groupBox_ZIPALIGN_Options.Controls.Add(this.textBox_ZIPALIGN_OutputFile);
-            this.groupBox_ZIPALIGN_Options.Controls.Add(this.checkBox_ZIPALIGN_VerboseOutput);
-            this.groupBox_ZIPALIGN_Options.Controls.Add(this.numericUpDown_ZIPALIGN_AlignmentBytes);
-            this.groupBox_ZIPALIGN_Options.Controls.Add(this.checkBox_ZIPALIGN_OverwriteOutputFile);
-            this.groupBox_ZIPALIGN_Options.Name = "groupBox_ZIPALIGN_Options";
-            this.groupBox_ZIPALIGN_Options.TabStop = false;
             // 
             // zipalignOutputDirChkBox
             // 
@@ -1522,17 +1918,6 @@
             this.checkBox_ZIPALIGN_Recompress.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "Zipalign_Recompress", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.checkBox_ZIPALIGN_Recompress.Name = "checkBox_ZIPALIGN_Recompress";
             this.checkBox_ZIPALIGN_Recompress.UseVisualStyleBackColor = true;
-            // 
-            // label_ZIPALIGN_AlignmentBytes
-            // 
-            resources.ApplyResources(this.label_ZIPALIGN_AlignmentBytes, "label_ZIPALIGN_AlignmentBytes");
-            this.label_ZIPALIGN_AlignmentBytes.Name = "label_ZIPALIGN_AlignmentBytes";
-            // 
-            // button_ZIPALIGN_BrowseOutputFile
-            // 
-            resources.ApplyResources(this.button_ZIPALIGN_BrowseOutputFile, "button_ZIPALIGN_BrowseOutputFile");
-            this.button_ZIPALIGN_BrowseOutputFile.Name = "button_ZIPALIGN_BrowseOutputFile";
-            this.button_ZIPALIGN_BrowseOutputFile.UseVisualStyleBackColor = true;
             // 
             // checkBox_ZIPALIGN_CheckAlignment
             // 
@@ -1577,35 +1962,6 @@
             this.checkBox_ZIPALIGN_OverwriteOutputFile.Name = "checkBox_ZIPALIGN_OverwriteOutputFile";
             this.checkBox_ZIPALIGN_OverwriteOutputFile.UseVisualStyleBackColor = true;
             // 
-            // tabPageInstallFramework
-            // 
-            this.tabPageInstallFramework.BackColor = System.Drawing.Color.White;
-            this.tabPageInstallFramework.Controls.Add(this.groupBox1);
-            this.tabPageInstallFramework.Controls.Add(this.groupBox_IF_Options);
-            resources.ApplyResources(this.tabPageInstallFramework, "tabPageInstallFramework");
-            this.tabPageInstallFramework.Name = "tabPageInstallFramework";
-            // 
-            // groupBox1
-            // 
-            resources.ApplyResources(this.groupBox1, "groupBox1");
-            this.groupBox1.Controls.Add(this.openFwFolderBtn);
-            this.groupBox1.Controls.Add(this.clearFwBtn);
-            this.groupBox1.Controls.Add(this.clearFwBeforeDecodeChkBox);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.TabStop = false;
-            // 
-            // openFwFolderBtn
-            // 
-            resources.ApplyResources(this.openFwFolderBtn, "openFwFolderBtn");
-            this.openFwFolderBtn.Name = "openFwFolderBtn";
-            this.openFwFolderBtn.UseVisualStyleBackColor = true;
-            // 
-            // clearFwBtn
-            // 
-            resources.ApplyResources(this.clearFwBtn, "clearFwBtn");
-            this.clearFwBtn.Name = "clearFwBtn";
-            this.clearFwBtn.UseVisualStyleBackColor = true;
-            // 
             // clearFwBeforeDecodeChkBox
             // 
             resources.ApplyResources(this.clearFwBeforeDecodeChkBox, "clearFwBeforeDecodeChkBox");
@@ -1614,20 +1970,6 @@
             this.clearFwBeforeDecodeChkBox.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "Framework_ClearBeforeDecode", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.clearFwBeforeDecodeChkBox.Name = "clearFwBeforeDecodeChkBox";
             this.clearFwBeforeDecodeChkBox.UseVisualStyleBackColor = true;
-            // 
-            // groupBox_IF_Options
-            // 
-            resources.ApplyResources(this.groupBox_IF_Options, "groupBox_IF_Options");
-            this.groupBox_IF_Options.Controls.Add(this.checkBox_IF_Tag);
-            this.groupBox_IF_Options.Controls.Add(this.checkBox_IF_FramePath);
-            this.groupBox_IF_Options.Controls.Add(this.textBox_IF_Tag);
-            this.groupBox_IF_Options.Controls.Add(this.button_IF_InstallFramework);
-            this.groupBox_IF_Options.Controls.Add(this.button_IF_BrowseFrameDir);
-            this.groupBox_IF_Options.Controls.Add(this.button_IF_BrowseInputFramePath);
-            this.groupBox_IF_Options.Controls.Add(this.textBox_IF_InputFramePath);
-            this.groupBox_IF_Options.Controls.Add(this.textBox_IF_FrameDir);
-            this.groupBox_IF_Options.Name = "groupBox_IF_Options";
-            this.groupBox_IF_Options.TabStop = false;
             // 
             // checkBox_IF_Tag
             // 
@@ -1654,12 +1996,6 @@
             this.textBox_IF_Tag.Name = "textBox_IF_Tag";
             this.textBox_IF_Tag.Text = global::APKToolGUI.Properties.Settings.Default.InstallFramework_Tag;
             // 
-            // button_IF_InstallFramework
-            // 
-            resources.ApplyResources(this.button_IF_InstallFramework, "button_IF_InstallFramework");
-            this.button_IF_InstallFramework.Name = "button_IF_InstallFramework";
-            this.button_IF_InstallFramework.UseVisualStyleBackColor = true;
-            // 
             // button_IF_BrowseFrameDir
             // 
             this.button_IF_BrowseFrameDir.DataBindings.Add(new System.Windows.Forms.Binding("Enabled", global::APKToolGUI.Properties.Settings.Default, "Framework_UseFrameDir", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
@@ -1667,12 +2003,6 @@
             resources.ApplyResources(this.button_IF_BrowseFrameDir, "button_IF_BrowseFrameDir");
             this.button_IF_BrowseFrameDir.Name = "button_IF_BrowseFrameDir";
             this.button_IF_BrowseFrameDir.UseVisualStyleBackColor = true;
-            // 
-            // button_IF_BrowseInputFramePath
-            // 
-            resources.ApplyResources(this.button_IF_BrowseInputFramePath, "button_IF_BrowseInputFramePath");
-            this.button_IF_BrowseInputFramePath.Name = "button_IF_BrowseInputFramePath";
-            this.button_IF_BrowseInputFramePath.UseVisualStyleBackColor = true;
             // 
             // textBox_IF_InputFramePath
             // 
@@ -1690,33 +2020,6 @@
             this.textBox_IF_FrameDir.Name = "textBox_IF_FrameDir";
             this.textBox_IF_FrameDir.Text = global::APKToolGUI.Properties.Settings.Default.Framework_FrameDir;
             // 
-            // tabPageBaksmali
-            // 
-            this.tabPageBaksmali.AllowDrop = true;
-            this.tabPageBaksmali.BackColor = System.Drawing.Color.White;
-            this.tabPageBaksmali.Controls.Add(this.smaliGroupBox);
-            this.tabPageBaksmali.Controls.Add(this.bakSmaliGroupBox);
-            resources.ApplyResources(this.tabPageBaksmali, "tabPageBaksmali");
-            this.tabPageBaksmali.Name = "tabPageBaksmali";
-            // 
-            // smaliGroupBox
-            // 
-            resources.ApplyResources(this.smaliGroupBox, "smaliGroupBox");
-            this.smaliGroupBox.Controls.Add(this.label29);
-            this.smaliGroupBox.Controls.Add(this.smaliUseOutputChkBox);
-            this.smaliGroupBox.Controls.Add(this.comSmaliBtn);
-            this.smaliGroupBox.Controls.Add(this.smaliBrowseOutputBtn);
-            this.smaliGroupBox.Controls.Add(this.smaliBrowseInputDirTxtBox);
-            this.smaliGroupBox.Controls.Add(this.smaliBrowseOutputTxtBox);
-            this.smaliGroupBox.Controls.Add(this.smaliBrowseInputDirBtn);
-            this.smaliGroupBox.Name = "smaliGroupBox";
-            this.smaliGroupBox.TabStop = false;
-            // 
-            // label29
-            // 
-            resources.ApplyResources(this.label29, "label29");
-            this.label29.Name = "label29";
-            // 
             // smaliUseOutputChkBox
             // 
             resources.ApplyResources(this.smaliUseOutputChkBox, "smaliUseOutputChkBox");
@@ -1724,18 +2027,6 @@
             this.smaliUseOutputChkBox.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::APKToolGUI.Properties.Settings.Default, "Smali_UseOutputDir", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.smaliUseOutputChkBox.Name = "smaliUseOutputChkBox";
             this.smaliUseOutputChkBox.UseVisualStyleBackColor = true;
-            // 
-            // comSmaliBtn
-            // 
-            resources.ApplyResources(this.comSmaliBtn, "comSmaliBtn");
-            this.comSmaliBtn.Name = "comSmaliBtn";
-            this.comSmaliBtn.UseVisualStyleBackColor = true;
-            // 
-            // smaliBrowseOutputBtn
-            // 
-            resources.ApplyResources(this.smaliBrowseOutputBtn, "smaliBrowseOutputBtn");
-            this.smaliBrowseOutputBtn.Name = "smaliBrowseOutputBtn";
-            this.smaliBrowseOutputBtn.UseVisualStyleBackColor = true;
             // 
             // smaliBrowseInputDirTxtBox
             // 
@@ -1751,30 +2042,6 @@
             this.smaliBrowseOutputTxtBox.Name = "smaliBrowseOutputTxtBox";
             this.smaliBrowseOutputTxtBox.Text = global::APKToolGUI.Properties.Settings.Default.Smali_OutputDir;
             // 
-            // smaliBrowseInputDirBtn
-            // 
-            resources.ApplyResources(this.smaliBrowseInputDirBtn, "smaliBrowseInputDirBtn");
-            this.smaliBrowseInputDirBtn.Name = "smaliBrowseInputDirBtn";
-            this.smaliBrowseInputDirBtn.UseVisualStyleBackColor = true;
-            // 
-            // bakSmaliGroupBox
-            // 
-            resources.ApplyResources(this.bakSmaliGroupBox, "bakSmaliGroupBox");
-            this.bakSmaliGroupBox.Controls.Add(this.label28);
-            this.bakSmaliGroupBox.Controls.Add(this.baksmaliUseOutputChkBox);
-            this.bakSmaliGroupBox.Controls.Add(this.baksmaliBrowseOutputBtn);
-            this.bakSmaliGroupBox.Controls.Add(this.baksmaliBrowseOutputTxtBox);
-            this.bakSmaliGroupBox.Controls.Add(this.decSmaliBtn);
-            this.bakSmaliGroupBox.Controls.Add(this.baksmaliBrowseInputDexBtn);
-            this.bakSmaliGroupBox.Controls.Add(this.baksmaliBrowseInputDexTxtBox);
-            this.bakSmaliGroupBox.Name = "bakSmaliGroupBox";
-            this.bakSmaliGroupBox.TabStop = false;
-            // 
-            // label28
-            // 
-            resources.ApplyResources(this.label28, "label28");
-            this.label28.Name = "label28";
-            // 
             // baksmaliUseOutputChkBox
             // 
             resources.ApplyResources(this.baksmaliUseOutputChkBox, "baksmaliUseOutputChkBox");
@@ -1783,12 +2050,6 @@
             this.baksmaliUseOutputChkBox.Name = "baksmaliUseOutputChkBox";
             this.baksmaliUseOutputChkBox.UseVisualStyleBackColor = true;
             // 
-            // baksmaliBrowseOutputBtn
-            // 
-            resources.ApplyResources(this.baksmaliBrowseOutputBtn, "baksmaliBrowseOutputBtn");
-            this.baksmaliBrowseOutputBtn.Name = "baksmaliBrowseOutputBtn";
-            this.baksmaliBrowseOutputBtn.UseVisualStyleBackColor = true;
-            // 
             // baksmaliBrowseOutputTxtBox
             // 
             this.baksmaliBrowseOutputTxtBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::APKToolGUI.Properties.Settings.Default, "Baksmali_OutputDir", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
@@ -1796,76 +2057,12 @@
             this.baksmaliBrowseOutputTxtBox.Name = "baksmaliBrowseOutputTxtBox";
             this.baksmaliBrowseOutputTxtBox.Text = global::APKToolGUI.Properties.Settings.Default.Baksmali_OutputDir;
             // 
-            // decSmaliBtn
-            // 
-            resources.ApplyResources(this.decSmaliBtn, "decSmaliBtn");
-            this.decSmaliBtn.Name = "decSmaliBtn";
-            this.decSmaliBtn.UseVisualStyleBackColor = true;
-            // 
-            // baksmaliBrowseInputDexBtn
-            // 
-            resources.ApplyResources(this.baksmaliBrowseInputDexBtn, "baksmaliBrowseInputDexBtn");
-            this.baksmaliBrowseInputDexBtn.Name = "baksmaliBrowseInputDexBtn";
-            this.baksmaliBrowseInputDexBtn.UseVisualStyleBackColor = true;
-            // 
             // baksmaliBrowseInputDexTxtBox
             // 
             resources.ApplyResources(this.baksmaliBrowseInputDexTxtBox, "baksmaliBrowseInputDexTxtBox");
             this.baksmaliBrowseInputDexTxtBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::APKToolGUI.Properties.Settings.Default, "Baksmali_InputDexFile", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.baksmaliBrowseInputDexTxtBox.Name = "baksmaliBrowseInputDexTxtBox";
             this.baksmaliBrowseInputDexTxtBox.Text = global::APKToolGUI.Properties.Settings.Default.Baksmali_InputDexFile;
-            // 
-            // tabPageAdb
-            // 
-            this.tabPageAdb.AllowDrop = true;
-            this.tabPageAdb.Controls.Add(this.selAdbDeviceLbl);
-            this.tabPageAdb.Controls.Add(this.label33);
-            this.tabPageAdb.Controls.Add(this.killAdbBtn);
-            this.tabPageAdb.Controls.Add(this.installApkBtn);
-            this.tabPageAdb.Controls.Add(this.refreshDevicesBtn);
-            this.tabPageAdb.Controls.Add(this.selApkAdbBtn);
-            this.tabPageAdb.Controls.Add(this.setVendorChkBox);
-            this.tabPageAdb.Controls.Add(this.apkPathAdbTxtBox);
-            this.tabPageAdb.Controls.Add(this.label32);
-            this.tabPageAdb.Controls.Add(this.devicesListBox);
-            resources.ApplyResources(this.tabPageAdb, "tabPageAdb");
-            this.tabPageAdb.Name = "tabPageAdb";
-            this.tabPageAdb.UseVisualStyleBackColor = true;
-            // 
-            // selAdbDeviceLbl
-            // 
-            this.selAdbDeviceLbl.ForeColor = System.Drawing.Color.ForestGreen;
-            resources.ApplyResources(this.selAdbDeviceLbl, "selAdbDeviceLbl");
-            this.selAdbDeviceLbl.Name = "selAdbDeviceLbl";
-            // 
-            // label33
-            // 
-            resources.ApplyResources(this.label33, "label33");
-            this.label33.Name = "label33";
-            // 
-            // killAdbBtn
-            // 
-            resources.ApplyResources(this.killAdbBtn, "killAdbBtn");
-            this.killAdbBtn.Name = "killAdbBtn";
-            this.killAdbBtn.UseVisualStyleBackColor = true;
-            // 
-            // installApkBtn
-            // 
-            resources.ApplyResources(this.installApkBtn, "installApkBtn");
-            this.installApkBtn.Name = "installApkBtn";
-            this.installApkBtn.UseVisualStyleBackColor = true;
-            // 
-            // refreshDevicesBtn
-            // 
-            resources.ApplyResources(this.refreshDevicesBtn, "refreshDevicesBtn");
-            this.refreshDevicesBtn.Name = "refreshDevicesBtn";
-            this.refreshDevicesBtn.UseVisualStyleBackColor = true;
-            // 
-            // selApkAdbBtn
-            // 
-            resources.ApplyResources(this.selApkAdbBtn, "selApkAdbBtn");
-            this.selApkAdbBtn.Name = "selApkAdbBtn";
-            this.selApkAdbBtn.UseVisualStyleBackColor = true;
             // 
             // setVendorChkBox
             // 
@@ -1881,186 +2078,6 @@
             this.apkPathAdbTxtBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::APKToolGUI.Properties.Settings.Default, "Adb_SelectedApkPath", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.apkPathAdbTxtBox.Name = "apkPathAdbTxtBox";
             this.apkPathAdbTxtBox.Text = global::APKToolGUI.Properties.Settings.Default.Adb_SelectedApkPath;
-            // 
-            // label32
-            // 
-            resources.ApplyResources(this.label32, "label32");
-            this.label32.Name = "label32";
-            // 
-            // devicesListBox
-            // 
-            resources.ApplyResources(this.devicesListBox, "devicesListBox");
-            this.devicesListBox.FormattingEnabled = true;
-            this.devicesListBox.Name = "devicesListBox";
-            // 
-            // statusStrip1
-            // 
-            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabelStateImage,
-            this.toolStripStatusLabelStateText,
-            this.progressBar});
-            resources.ApplyResources(this.statusStrip1, "statusStrip1");
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.SizingGrip = false;
-            // 
-            // toolStripStatusLabelStateImage
-            // 
-            this.toolStripStatusLabelStateImage.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripStatusLabelStateImage.Name = "toolStripStatusLabelStateImage";
-            resources.ApplyResources(this.toolStripStatusLabelStateImage, "toolStripStatusLabelStateImage");
-            // 
-            // toolStripStatusLabelStateText
-            // 
-            this.toolStripStatusLabelStateText.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            resources.ApplyResources(this.toolStripStatusLabelStateText, "toolStripStatusLabelStateText");
-            this.toolStripStatusLabelStateText.Name = "toolStripStatusLabelStateText";
-            this.toolStripStatusLabelStateText.Overflow = System.Windows.Forms.ToolStripItemOverflow.Never;
-            this.toolStripStatusLabelStateText.Spring = true;
-            this.toolStripStatusLabelStateText.Click += new System.EventHandler(this.toolStripStatusLabelStateText_Click);
-            // 
-            // progressBar
-            // 
-            this.progressBar.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            resources.ApplyResources(this.progressBar, "progressBar");
-            this.progressBar.MarqueeAnimationSpeed = 30;
-            this.progressBar.Name = "progressBar";
-            this.progressBar.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
-            this.progressBar.Click += new System.EventHandler(this.toolStripProgressBar1_Click);
-            // 
-            // contextMenuStripLog
-            // 
-            this.contextMenuStripLog.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.contextMenuStripLog.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.copyToolStripMenuItem,
-            this.clearLogToolStripMenuItem});
-            this.contextMenuStripLog.Name = "contextMenuStripLog";
-            resources.ApplyResources(this.contextMenuStripLog, "contextMenuStripLog");
-            // 
-            // copyToolStripMenuItem
-            // 
-            this.copyToolStripMenuItem.Name = "copyToolStripMenuItem";
-            resources.ApplyResources(this.copyToolStripMenuItem, "copyToolStripMenuItem");
-            // 
-            // clearLogToolStripMenuItem
-            // 
-            this.clearLogToolStripMenuItem.Name = "clearLogToolStripMenuItem";
-            resources.ApplyResources(this.clearLogToolStripMenuItem, "clearLogToolStripMenuItem");
-            // 
-            // logTxtBox
-            // 
-            resources.ApplyResources(this.logTxtBox, "logTxtBox");
-            this.logTxtBox.ContextMenuStrip = this.contextMenuStripLog;
-            this.logTxtBox.HideSelection = false;
-            this.logTxtBox.Name = "logTxtBox";
-            this.logTxtBox.ReadOnly = true;
-            this.logTxtBox.TabStop = false;
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fileToolStripMenuItem,
-            this.helpToolStripMenuItem});
-            resources.ApplyResources(this.menuStrip1, "menuStrip1");
-            this.menuStrip1.Name = "menuStrip1";
-            // 
-            // fileToolStripMenuItem
-            // 
-            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.newInsToolStripMenuItem,
-            this.saveLogToFileToolStripMenuItem,
-            this.settingsToolStripMenuItem,
-            this.toolStripMenuItem1,
-            this.openTempFolderToolStripMenuItem,
-            this.clearTempFolderToolStripMenuItem,
-            this.toolStripMenuItem2,
-            this.exitToolStripMenuItem});
-            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            resources.ApplyResources(this.fileToolStripMenuItem, "fileToolStripMenuItem");
-            // 
-            // newInsToolStripMenuItem
-            // 
-            this.newInsToolStripMenuItem.Name = "newInsToolStripMenuItem";
-            resources.ApplyResources(this.newInsToolStripMenuItem, "newInsToolStripMenuItem");
-            // 
-            // saveLogToFileToolStripMenuItem
-            // 
-            this.saveLogToFileToolStripMenuItem.Name = "saveLogToFileToolStripMenuItem";
-            resources.ApplyResources(this.saveLogToFileToolStripMenuItem, "saveLogToFileToolStripMenuItem");
-            // 
-            // settingsToolStripMenuItem
-            // 
-            this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
-            resources.ApplyResources(this.settingsToolStripMenuItem, "settingsToolStripMenuItem");
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            resources.ApplyResources(this.toolStripMenuItem1, "toolStripMenuItem1");
-            // 
-            // openTempFolderToolStripMenuItem
-            // 
-            this.openTempFolderToolStripMenuItem.Name = "openTempFolderToolStripMenuItem";
-            resources.ApplyResources(this.openTempFolderToolStripMenuItem, "openTempFolderToolStripMenuItem");
-            // 
-            // clearTempFolderToolStripMenuItem
-            // 
-            this.clearTempFolderToolStripMenuItem.Name = "clearTempFolderToolStripMenuItem";
-            resources.ApplyResources(this.clearTempFolderToolStripMenuItem, "clearTempFolderToolStripMenuItem");
-            this.clearTempFolderToolStripMenuItem.Click += new System.EventHandler(this.clearTempFolderToolStripMenuItem_Click);
-            // 
-            // toolStripMenuItem2
-            // 
-            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            resources.ApplyResources(this.toolStripMenuItem2, "toolStripMenuItem2");
-            // 
-            // exitToolStripMenuItem
-            // 
-            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            resources.ApplyResources(this.exitToolStripMenuItem, "exitToolStripMenuItem");
-            // 
-            // helpToolStripMenuItem
-            // 
-            this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.checkForUpdateToolStripMenuItem,
-            this.reportAnIsuueToolStripMenuItem,
-            this.apktoolIssuesToolStripMenuItem,
-            this.baksmaliIssuesToolStripMenuItem,
-            this.aboutToolStripMenuItem});
-            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            resources.ApplyResources(this.helpToolStripMenuItem, "helpToolStripMenuItem");
-            // 
-            // checkForUpdateToolStripMenuItem
-            // 
-            this.checkForUpdateToolStripMenuItem.Name = "checkForUpdateToolStripMenuItem";
-            resources.ApplyResources(this.checkForUpdateToolStripMenuItem, "checkForUpdateToolStripMenuItem");
-            // 
-            // reportAnIsuueToolStripMenuItem
-            // 
-            this.reportAnIsuueToolStripMenuItem.Name = "reportAnIsuueToolStripMenuItem";
-            resources.ApplyResources(this.reportAnIsuueToolStripMenuItem, "reportAnIsuueToolStripMenuItem");
-            // 
-            // apktoolIssuesToolStripMenuItem
-            // 
-            this.apktoolIssuesToolStripMenuItem.Name = "apktoolIssuesToolStripMenuItem";
-            resources.ApplyResources(this.apktoolIssuesToolStripMenuItem, "apktoolIssuesToolStripMenuItem");
-            // 
-            // baksmaliIssuesToolStripMenuItem
-            // 
-            this.baksmaliIssuesToolStripMenuItem.Name = "baksmaliIssuesToolStripMenuItem";
-            resources.ApplyResources(this.baksmaliIssuesToolStripMenuItem, "baksmaliIssuesToolStripMenuItem");
-            // 
-            // aboutToolStripMenuItem
-            // 
-            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            resources.ApplyResources(this.aboutToolStripMenuItem, "aboutToolStripMenuItem");
-            // 
-            // toolTip1
-            // 
-            this.toolTip1.AutoPopDelay = 10000;
-            this.toolTip1.InitialDelay = 500;
-            this.toolTip1.ReshowDelay = 100;
             // 
             // FormMain
             // 
@@ -2098,18 +2115,15 @@
             this.tabPageDecode.ResumeLayout(false);
             this.groupBox_DECODE_Options.ResumeLayout(false);
             this.groupBox_DECODE_Options.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.decApiLvlUpDown)).EndInit();
             this.tabPageBuild.ResumeLayout(false);
             this.groupBox_BUILD_Options.ResumeLayout(false);
             this.groupBox_BUILD_Options.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.buildApiLvlUpDown)).EndInit();
             this.tabPageSign.ResumeLayout(false);
             this.groupBox_SIGN_Options.ResumeLayout(false);
             this.groupBox_SIGN_Options.PerformLayout();
             this.tabPageZipAlign.ResumeLayout(false);
             this.groupBox_ZIPALIGN_Options.ResumeLayout(false);
             this.groupBox_ZIPALIGN_Options.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ZIPALIGN_AlignmentBytes)).EndInit();
             this.tabPageInstallFramework.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -2127,6 +2141,9 @@
             this.contextMenuStripLog.ResumeLayout(false);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.decApiLvlUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buildApiLvlUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ZIPALIGN_AlignmentBytes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2343,7 +2360,6 @@
         internal System.Windows.Forms.Label selAdbDeviceLbl;
         private System.Windows.Forms.CheckBox checkBox2;
         internal System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
-        internal System.Windows.Forms.ToolStripMenuItem settingsToolStripMenuItem;
         internal System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         internal System.Windows.Forms.ToolStripMenuItem checkForUpdateToolStripMenuItem;
         internal System.Windows.Forms.ToolStripMenuItem apktoolIssuesToolStripMenuItem;
@@ -2364,6 +2380,9 @@
         internal System.Windows.Forms.TextBox splitApkPathTxtBox;
         internal System.Windows.Forms.Button selSplitApkBtn;
         internal System.Windows.Forms.Button mergeApkBtn;
+        private System.Windows.Forms.ToolStripMenuItem settingsToolStripMenuItem1;
+        internal System.Windows.Forms.ToolStripMenuItem settingsToolStripMenuItem;
+        internal System.Windows.Forms.ToolStripMenuItem useAPKEditorForDecompilingItem;
     }
 }
 

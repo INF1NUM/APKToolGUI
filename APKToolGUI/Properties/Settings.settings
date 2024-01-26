@@ -221,59 +221,62 @@
     <Setting Name="PlaySoundWhenDone" Provider="Bluegrams.Application.PortableSettingsProvider" Roaming="true" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
-    <Setting Name="UseCustomTempDir" Roaming="true" Type="System.Boolean" Scope="User">
+    <Setting Name="UseCustomTempDir" Provider="Bluegrams.Application.PortableSettingsProvider" Roaming="true" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
-    <Setting Name="TempDir" Roaming="true" Type="System.String" Scope="User">
+    <Setting Name="TempDir" Provider="Bluegrams.Application.PortableSettingsProvider" Roaming="true" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="UseCustomJavaExe" Roaming="true" Type="System.Boolean" Scope="User">
+    <Setting Name="UseCustomJavaExe" Provider="Bluegrams.Application.PortableSettingsProvider" Roaming="true" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
-    <Setting Name="AutoDeleteIdsigFile" Roaming="true" Type="System.Boolean" Scope="User">
+    <Setting Name="AutoDeleteIdsigFile" Provider="Bluegrams.Application.PortableSettingsProvider" Roaming="true" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>
     </Setting>
-    <Setting Name="Utf8FilenameSupport" Roaming="true" Type="System.Boolean" Scope="User">
+    <Setting Name="Utf8FilenameSupport" Provider="Bluegrams.Application.PortableSettingsProvider" Roaming="true" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
-    <Setting Name="Sign_OverwriteInputFile" Roaming="true" Type="System.Boolean" Scope="User">
+    <Setting Name="Sign_OverwriteInputFile" Provider="Bluegrams.Application.PortableSettingsProvider" Roaming="true" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
-    <Setting Name="Adb_SetVendor" Roaming="true" Type="System.Boolean" Scope="User">
+    <Setting Name="Adb_SetVendor" Provider="Bluegrams.Application.PortableSettingsProvider" Roaming="true" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
-    <Setting Name="Adb_SelectedApkPath" Roaming="true" Type="System.String" Scope="User">
+    <Setting Name="Adb_SelectedApkPath" Provider="Bluegrams.Application.PortableSettingsProvider" Roaming="true" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="Sign_InstallApkAfterSign" Roaming="true" Type="System.Boolean" Scope="User">
+    <Setting Name="Sign_InstallApkAfterSign" Provider="Bluegrams.Application.PortableSettingsProvider" Roaming="true" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
-    <Setting Name="UseCustomApktool" Roaming="true" Type="System.Boolean" Scope="User">
+    <Setting Name="UseCustomApktool" Provider="Bluegrams.Application.PortableSettingsProvider" Roaming="true" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
-    <Setting Name="ApktoolPath" Roaming="true" Type="System.String" Scope="User">
+    <Setting Name="ApktoolPath" Provider="Bluegrams.Application.PortableSettingsProvider" Roaming="true" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="Theme" Roaming="true" Type="System.Int32" Scope="User">
+    <Setting Name="Theme" Provider="Bluegrams.Application.PortableSettingsProvider" Roaming="true" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">0</Value>
     </Setting>
-    <Setting Name="DebugMode" Roaming="true" Type="System.Boolean" Scope="User">
+    <Setting Name="DebugMode" Provider="Bluegrams.Application.PortableSettingsProvider" Roaming="true" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
-    <Setting Name="Build_NetSecConf" Roaming="true" Type="System.Boolean" Scope="User">
+    <Setting Name="Build_NetSecConf" Provider="Bluegrams.Application.PortableSettingsProvider" Roaming="true" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
-    <Setting Name="Decode_DontParseApkInfo" Roaming="true" Type="System.Boolean" Scope="User">
+    <Setting Name="Decode_DontParseApkInfo" Provider="Bluegrams.Application.PortableSettingsProvider" Roaming="true" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
-    <Setting Name="UseCustomJVMArgs" Roaming="true" Type="System.Boolean" Scope="User">
+    <Setting Name="UseCustomJVMArgs" Provider="Bluegrams.Application.PortableSettingsProvider" Roaming="true" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
-    <Setting Name="CustomJVMArgs" Roaming="true" Type="System.String" Scope="User">
+    <Setting Name="CustomJVMArgs" Provider="Bluegrams.Application.PortableSettingsProvider" Roaming="true" Type="System.String" Scope="User">
       <Value Profile="(Default)">-Dfile.encoding=UTF8 -Djdk.util.zip.disableZip64ExtraFieldValidation=true -Djdk.nio.zipfs.allowDotZipEntry=true</Value>
     </Setting>
-    <Setting Name="SplitApk_InputFile" Type="System.String" Scope="User">
+    <Setting Name="SplitApk_InputFile" Provider="Bluegrams.Application.PortableSettingsProvider" Roaming="true" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="UseApkeditor" Provider="Bluegrams.Application.PortableSettingsProvider" Roaming="true" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
     </Setting>
   </Settings>
 </SettingsFile>

@@ -95,11 +95,11 @@ namespace APKToolGUI
             {
                 foreach (string resourceName in Assembly.GetExecutingAssembly().GetManifestResourceNames())
                 {
-                    Debug.WriteLine(resourceName);
+                    //Debug.WriteLine(resourceName);
                     string[] cultName = resourceName.Split('.');
                     if (cultName[1] == culture.Name)
                     {
-                        Debug.WriteLine("Lang: " + cultName[1] + " " + culture.Name);
+                        //Debug.WriteLine("Lang: " + cultName[1] + " " + culture.Name);
                         string lang = string.Format("{0} [{1}]", culture.DisplayName, culture.Name);
                         comboBox1.Items.Add(lang);
 

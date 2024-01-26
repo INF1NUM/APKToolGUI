@@ -91,6 +91,8 @@ namespace APKToolGUI
             schemev4ComboBox.SelectedIndex = v4;
             Settings.Default.Sign_Schemev4 = v4;
 
+            useAPKEditorForDecompilingItem.Checked = Settings.Default.UseApkeditor;
+
             new DecodeControlEventHandlers(this);
             new BuildControlEventHandlers(this);
             new SignControlEventHandlers(this);
@@ -770,93 +772,6 @@ namespace APKToolGUI
             ToLog(e.EventType, e.Message);
         }
 
-        internal async Task<int> Decompile(string inputApk)
-        {
-            int code = 0;
-
-            Running(Language.Decoding);
-
-            string apkFileName = Path.GetFileName(inputApk);
-            string outputDir = PathUtils.GetDirectoryNameWithoutExtension(inputApk);
-            if (Settings.Default.Decode_UseOutputDir && !IgnoreOutputDirContextMenu)
-                outputDir = Path.Combine(Settings.Default.Decode_OutputDir, Path.GetFileNameWithoutExtension(inputApk));
-
-            string tempApk = Path.Combine(Program.TEMP_PATH, "dec.apk");
-            string outputTempDir = tempApk.Replace(".apk", "");
-
-            try
-            {
-                if (!Settings.Default.Decode_Force && Directory.Exists(outputDir))
-                {
-                    ToLog(ApktoolEventType.Error, String.Format(Language.DecodeDesDirExists, outputDir));
-                    return 1;
-                }
-                await Task.Factory.StartNew(() =>
-                {
-                    DirectoryUtils.Delete(outputTempDir);
-
-                    if (Settings.Default.Framework_ClearBeforeDecode)
-                    {
-                        ToLog(ApktoolEventType.Infomation, Language.ClearingFramework);
-                        if (apktool.ClearFramework() == 0)
-                        {
-                            ToLog(ApktoolEventType.Success, Language.FrameworkCacheCleared);
-                        }
-                        else
-                            ToLog(ApktoolEventType.Error, Language.ErrorClearingFw);
-                    }
-
-                    if (Settings.Default.Utf8FilenameSupport)
-                    {
-                        ToLog(ApktoolEventType.None, String.Format(Language.CopyFileToTemp, inputApk, tempApk));
-
-                        FileUtils.Copy(inputApk, tempApk, true);
-
-                        code = apktool.Decompile(tempApk, outputTempDir);
-                    }
-                    else
-                        code = apktool.Decompile(inputApk, outputDir);
-
-                    if (code == 0)
-                    {
-                        if (Settings.Default.Utf8FilenameSupport)
-                        {
-                            ToLog(ApktoolEventType.None, String.Format(Language.MoveTempApkFileToOutput, outputTempDir, outputDir));
-                            DirectoryUtils.Delete(outputDir);
-                            DirectoryUtils.Copy(outputTempDir, outputDir);
-                        }
-
-                        textBox_BUILD_InputProjectDir.BeginInvoke(new Action(delegate
-                        {
-                            textBox_BUILD_InputProjectDir.Text = outputDir;
-                        }));
-
-                        ToLog(ApktoolEventType.None, String.Format(Language.DecompilingSuccessfullyCompleted, outputDir));
-                        if (Settings.Default.Decode_FixError)
-                        {
-                            if (ApkFixer.FixAndroidManifest(outputDir))
-                                ToLog(ApktoolEventType.None, Language.FixAndroidManifest);
-                            if (ApkFixer.FixApktoolYml(outputDir))
-                                ToLog(ApktoolEventType.None, Language.FixApktoolYml);
-                            if (ApkFixer.RemoveApkToolDummies(outputDir))
-                                ToLog(ApktoolEventType.None, Language.RemoveApkToolDummies);
-                        }
-
-                        Done();
-                    }
-                    else
-                        Error(Language.ErrorDecompiling);
-                });
-            }
-            catch (Exception ex)
-            {
-                code = 1;
-                Error(ex.ToString(), Language.ErrorDecompiling);
-            }
-
-            return code;
-        }
-
         internal async Task<int> ClearFramework()
         {
             int code = 0;
@@ -880,6 +795,100 @@ namespace APKToolGUI
             {
                 Error(ex);
                 code = 1;
+            }
+
+            return code;
+        }
+
+        internal async Task<int> Decompile(string inputApk)
+        {
+            Debug.WriteLine(useAPKEditorForDecompilingItem.Checked);
+
+            int code = 0;
+
+            Running(Language.Decoding);
+
+            string apkFileName = Path.GetFileName(inputApk);
+            string outputDir = PathUtils.GetDirectoryNameWithoutExtension(inputApk);
+            if (Settings.Default.Decode_UseOutputDir && !IgnoreOutputDirContextMenu)
+                outputDir = Path.Combine(Settings.Default.Decode_OutputDir, Path.GetFileNameWithoutExtension(inputApk));
+
+            string tempApk = Path.Combine(Program.TEMP_PATH, "dec.apk");
+            string outputTempDir = tempApk.Replace(".apk", "");
+            string outputDecDir = outputDir;
+
+            try
+            {
+                if (!Settings.Default.Decode_Force && Directory.Exists(outputDir))
+                {
+                    ToLog(ApktoolEventType.Error, String.Format(Language.DecodeDesDirExists, outputDir));
+                    return 1;
+                }
+                await Task.Factory.StartNew(() =>
+                {
+                    if (Settings.Default.Framework_ClearBeforeDecode && !Settings.Default.UseApkeditor)
+                    {
+                        ToLog(ApktoolEventType.Infomation, Language.ClearingFramework);
+                        if (apktool.ClearFramework() == 0)
+                        {
+                            ToLog(ApktoolEventType.Success, Language.FrameworkCacheCleared);
+                        }
+                        else
+                            ToLog(ApktoolEventType.Error, Language.ErrorClearingFw);
+                    }
+
+                    if (Settings.Default.Utf8FilenameSupport)
+                    {
+                        DirectoryUtils.Delete(outputTempDir);
+
+                        ToLog(ApktoolEventType.None, String.Format(Language.CopyFileToTemp, inputApk, tempApk));
+
+                        FileUtils.Copy(inputApk, tempApk, true);
+
+                        inputApk = tempApk;
+                        outputDecDir = outputTempDir;
+                    }
+
+                    if (useAPKEditorForDecompilingItem.Checked)
+                        code = apkeditor.Decompile(inputApk, outputDecDir);
+                    else
+                        code = apktool.Decompile(inputApk, outputDecDir);
+
+                    if (code == 0)
+                    {
+                        if (Settings.Default.Utf8FilenameSupport)
+                        {
+                            ToLog(ApktoolEventType.None, String.Format(Language.MoveTempApkFileToOutput, outputTempDir, outputDir));
+                            DirectoryUtils.Delete(outputDir);
+                            DirectoryUtils.Copy(outputTempDir, outputDir);
+                        }
+
+                        textBox_BUILD_InputProjectDir.BeginInvoke(new Action(delegate
+                        {
+                            textBox_BUILD_InputProjectDir.Text = outputDir;
+                        }));
+
+                        ToLog(ApktoolEventType.None, String.Format(Language.DecompilingSuccessfullyCompleted, outputDir));
+                        if (Settings.Default.Decode_FixError && !useAPKEditorForDecompilingItem.Checked)
+                        {
+                            if (ApkFixer.FixAndroidManifest(outputDir))
+                                ToLog(ApktoolEventType.None, Language.FixAndroidManifest);
+                            if (ApkFixer.FixApktoolYml(outputDir))
+                                ToLog(ApktoolEventType.None, Language.FixApktoolYml);
+                            if (ApkFixer.RemoveApkToolDummies(outputDir))
+                                ToLog(ApktoolEventType.None, Language.RemoveApkToolDummies);
+                        }
+
+                        Done();
+                    }
+                    else
+                        Error(Language.ErrorDecompiling);
+                });
+            }
+            catch (Exception ex)
+            {
+                code = 1;
+                Error(ex.ToString(), Language.ErrorDecompiling);
             }
 
             return code;
@@ -912,6 +921,8 @@ namespace APKToolGUI
                     string tempDecApkFolder = Path.Combine(Program.TEMP_PATH, "dec");
                     string outputTempApk = tempDecApkFolder + ".apk";
 
+                    bool isDecompiledUsingApkEditor = File.Exists(Path.Combine(inputFolder, "path-map.json"));
+
                     if (Settings.Default.Utf8FilenameSupport)
                     {
                         ToLog(ApktoolEventType.None, String.Format(Language.CopyFolderToTemp, inputFolder, tempDecApkFolder));
@@ -922,7 +933,10 @@ namespace APKToolGUI
                         outputFile = outputTempApk;
                     }
 
-                    code = apktool.Build(inputFolder, outputFile);
+                    if (isDecompiledUsingApkEditor)
+                        code = apkeditor.Build(inputFolder, outputFile);
+                    else
+                        code = apktool.Build(inputFolder, outputFile);
 
                     if (code == 0)
                     {
@@ -1411,7 +1425,7 @@ namespace APKToolGUI
             }
             catch (Exception ex)
             {
-                code = 1; 
+                code = 1;
                 Error(ex);
             }
 
@@ -1548,6 +1562,7 @@ namespace APKToolGUI
             Settings.Default.Sign_Schemev2 = schemev2ComboBox.SelectedIndex;
             Settings.Default.Sign_Schemev3 = schemev3ComboBox.SelectedIndex;
             Settings.Default.Sign_Schemev4 = schemev4ComboBox.SelectedIndex;
+            Settings.Default.UseApkeditor = useAPKEditorForDecompilingItem.Checked;
             Settings.Default.Save();
         }
         #endregion
