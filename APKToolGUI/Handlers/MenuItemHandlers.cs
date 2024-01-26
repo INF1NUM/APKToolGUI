@@ -73,6 +73,11 @@ namespace APKToolGUI.Handlers
         {
             if (Directory.Exists(Program.TEMP_PATH))
                 Process.Start("explorer.exe", Program.TEMP_PATH);
+            else
+            {
+                Directory.CreateDirectory(Program.TEMP_PATH);
+                Process.Start("explorer.exe", Program.TEMP_PATH);
+            }
         }
 
         private void menuItemCheckUpdate_Click(object sender, EventArgs e)

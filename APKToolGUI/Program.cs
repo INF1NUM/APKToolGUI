@@ -244,7 +244,7 @@ namespace APKToolGUI
             if (Settings.Default.UseCustomTempDir)
                 return Path.Combine(Settings.Default.TempDir);
             else
-                return Path.Combine(LOCAL_APPDATA_PATH, ASSEMBLY_NAME);
+                return Path.Combine(LOCAL_APPDATA_PATH, ASSEMBLY_NAME, "Temp");
         }
 
         public static string RandTempDirectory()

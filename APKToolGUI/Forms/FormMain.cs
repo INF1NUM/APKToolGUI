@@ -1434,21 +1434,25 @@ namespace APKToolGUI
         #endregion
 
         #region Form handlers
-        private void clearTempFolderToolStripMenuItem_Click(object sender, EventArgs e)
+        private async void clearTempFolderToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Running(Language.ClearTempFolder);
             try
             {
-                foreach (var subDir in new DirectoryInfo(Program.TEMP_MAIN).EnumerateDirectories())
+                await Task.Factory.StartNew(() =>
                 {
-                    ToLog(ApktoolEventType.None, String.Format(Language.DeletingFolder, subDir));
-                    subDir.Delete(true);
-                }
+                    foreach (var subDir in new DirectoryInfo(Program.TEMP_MAIN).EnumerateDirectories())
+                    {
+                        ToLog(ApktoolEventType.None, String.Format(Language.DeletingFolder, subDir));
+                        DirectoryUtils.Delete(subDir.FullName);
+                    }
+                    Directory.CreateDirectory(Program.TEMP_PATH);
+                });
                 Done();
             }
             catch (Exception ex)
             {
-                ToLog(ApktoolEventType.Error, ex.Message);
+                Error(ex);
             }
         }
 
