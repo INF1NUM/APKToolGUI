@@ -144,13 +144,14 @@ namespace APKToolGUI
                 Settings.Default.Theme = themeComboBox.SelectedIndex;
                 Settings.Default.Save();
 
-                if (string.IsNullOrEmpty(currentLanguage))
-                    currentLanguage = "English";
+               if (string.IsNullOrEmpty(currentLanguage))
+                    currentLanguage = "en";
+
+                Debug.WriteLine("Combobox: " + comboBox1.SelectedItem.ToString() + " Language: " + currentLanguage);
 
                 if (!comboBox1.SelectedItem.ToString().Contains(currentLanguage) || themeComboBox.SelectedIndex != currentTheme)
                     if (MessageBox.Show(Language.RestartApplicationPrompt, Application.ProductName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                         Application.Restart();
-
 
                 if (currentUseApktoolChk != useCustomApktoolChk.Checked || currentApktoolPath != customApkToolTxtBox.Text)
                 {
