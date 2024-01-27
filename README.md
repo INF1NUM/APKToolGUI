@@ -20,18 +20,18 @@ If you don't believe this then try to compile the app by yourself or simply don'
 - [.NET Framework 4.8](https://dotnet.microsoft.com/en-us/download/dotnet-framework/net48) (Windows 8 and above already have it preinstalled)
 
 # Features
-- Decompile APK
-- Decompile and merge split APK/XAPK/APKS/ZIP/APKM using build-in split merging or APKEditor.jar (Default)
-- Compile APK
+- Decompile & compile APK using Apktool
+- Decompile APK/XAPK/APKS/ZIP/APKM & compile APK using APKEditor.jar. Automatically detect if APK was decompiled using Apktool or APKEditor
+- Merge XAPK/APKS/ZIP/APKM using APKEditor.jar
 - Sign APK
 - Zipalign APK
-- Adb
+- ADB
 - Framework
 - Drag and drop
 - APK info
 - Log output
-- All features from [Apktool](https://ibotpeaches.github.io/Apktool/documentation/).
-- Additional features that can fix some Apktool errors, such as removing DUMMY_APKTOOL, clear framework before decompiling
+- All other features from [Apktool](https://ibotpeaches.github.io/Apktool/documentation/).
+- Fix some Apktool errors, such as removing DUMMY_APKTOOL, clear framework before decompiling
 - Multi language
 - Right-click context menu
 - Create unsigned APK for Core Patch
@@ -39,11 +39,12 @@ If you don't believe this then try to compile the app by yourself or simply don'
 - Long path support (Windows 10 and above) 
 
 # Languages
-- Brazilian Portuguese (Incomplete)
 - English
+- Brazilian Portuguese (Incomplete)
 - Hungary (Incomplete)
 - Russian (Incomplete)
 - Chinese Simplified (Incomplete)
+- German
 
 ### Translation
 If you like to help translate with your native language, I recommend using Visual Studio 2022. You don't need any programming knowledge, you just edit the GUI and the `.resx` files
@@ -117,4 +118,4 @@ Use Visual Studio 2019 and above. NET Framework 4.8 SDK is required
 Same as Apktool by iBotPeaches, It is NOT intended for piracy and other non-legal uses. It could be used for localizing, adding some features or support for custom platforms and other GOOD purposes. Just try to be fair with authors of an app, that you use and probably like.
 
 # License
-The original repo does not have a license but I have permission from the author to use ane distriute this project as open source, without license. He doesn't seems to know much about licensing. For this project, I'll just add license as unlicensed
+The original repo does not have a license but I have permission from the author to use ane distribute this project as "open source"... I don't know what license to use so I'll just add license as unlicensed
