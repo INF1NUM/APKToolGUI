@@ -129,10 +129,16 @@ namespace APKToolGUI
                     {
                         ToLog(ApktoolEventType.None, javaVersion);
                         string apktoolVersion = apktool.GetVersion();
+                        string apkeditorVersion = apkeditor.GetVersion();
                         if (!String.IsNullOrWhiteSpace(apktoolVersion))
                             ToLog(ApktoolEventType.None, String.Format(Language.APKToolVersion + " {0}", apktoolVersion));
                         else
                             ToLog(ApktoolEventType.Error, Language.CantDetectApktoolVersion);
+
+                        if (!String.IsNullOrWhiteSpace(apkeditorVersion))
+                            ToLog(ApktoolEventType.None, apkeditorVersion);
+                        else
+                            ToLog(ApktoolEventType.Error, Language.CantDetectApkeditorVersion);
                     }
                     else
                         ToLog(ApktoolEventType.Error, Language.ErrorJavaDetect);

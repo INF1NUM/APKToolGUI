@@ -144,6 +144,20 @@ namespace APKToolGUI
             CancelErrorRead();
             return ExitCode;
         }
+        public string GetVersion()
+        {
+            using (JarProcess jar = new JarProcess(JavaPath, JarPath))
+            {
+                jar.EnableRaisingEvents = false;
+                jar.Start("-version");
+
+                //APKEditor always print as errors as usual :)
+                string version = jar.StandardOutput.ReadToEnd();
+                version += jar.StandardError.ReadToEnd();
+                jar.WaitForExit(3000);
+                return version.Replace("\r\n", "");
+            }
+        }
     }
 
     public class ApkEditorExitedEventArgs : EventArgs

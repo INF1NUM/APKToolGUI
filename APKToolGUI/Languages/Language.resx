@@ -540,4 +540,7 @@
   <data name="SplitApkNotFound" xml:space="preserve">
     <value>Split APK is not selected</value>
   </data>
+  <data name="CantDetectApkeditorVersion" xml:space="preserve">
+    <value>Can't detect APKEditor version</value>
+  </data>
 </root>

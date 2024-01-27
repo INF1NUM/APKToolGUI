@@ -151,6 +151,15 @@ namespace APKToolGUI.Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Can&apos;t detect APKEditor version.
+        /// </summary>
+        internal static string CantDetectApkeditorVersion {
+            get {
+                return ResourceManager.GetString("CantDetectApkeditorVersion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Can&apos;t detect apktool version..
         /// </summary>
         internal static string CantDetectApktoolVersion {
