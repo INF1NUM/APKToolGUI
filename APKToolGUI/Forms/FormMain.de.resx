@@ -973,12 +973,6 @@ ausgewählt ist.)</value>
   <data name="saveLogToFileToolStripMenuItem.Text" xml:space="preserve">
     <value>Protokoll in Datei speichern</value>
   </data>
-  <data name="settingsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>236, 22</value>
-  </data>
-  <data name="settingsToolStripMenuItem.Text" xml:space="preserve">
-    <value>Einstellungen</value>
-  </data>
   <data name="toolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
     <value>233, 6</value>
   </data>
@@ -1002,6 +996,21 @@ ausgewählt ist.)</value>
   </data>
   <data name="exitToolStripMenuItem.Text" xml:space="preserve">
     <value>Beenden</value>
+  </data>
+  <data name="settingsToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>90, 20</value>
+  </data>
+  <data name="settingsToolStripMenuItem1.Text" xml:space="preserve">
+    <value>Einstellungen</value>
+  </data>
+  <data name="useAPKEditorForDecompilingItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>294, 22</value>
+  </data>
+  <data name="useAPKEditorForDecompilingItem.Text" xml:space="preserve">
+    <value>APKEditor für Dekompilierung verwenden</value>
+  </data>
+  <data name="settingsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Einstellungen</value>
   </data>
   <data name="helpToolStripMenuItem.Text" xml:space="preserve">
     <value>Hilfe</value>
@@ -2704,6 +2713,6 @@ ausgewählt ist.)</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>Inherit</value>
+    <value>NoControl</value>
   </data>
 </root>
