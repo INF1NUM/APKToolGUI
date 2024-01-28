@@ -92,6 +92,7 @@ body:
   - type: input
     attributes:
       label: Operating system and version
-      placeholder: (Example: Windows 11 2h22)
+      placeholder: |
+        (Example: Windows 11 2h22)
     validations:
       required: true

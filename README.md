@@ -61,6 +61,8 @@ https://user-images.githubusercontent.com/40742924/227244601-6f796141-ac2d-4c60-
 
 If you can't use Visual Studio, you can use translator tools like [resxtranslator](https://github.com/HakanL/resxtranslator) or [RESX Translator automat](https://www.utilstudio.com/en/resx-translator/), but make sure the `.resx` file is added to [APKToolGUI.csproj](https://github.com/AndnixSH/APKToolGUI/blob/master/APKToolGUI/APKToolGUI.csproj), otherwise Visual Studio would not be able to detect it
 
+3rd party tools can't be translated.
+
 Make pull request when you are done
 
 # Issues

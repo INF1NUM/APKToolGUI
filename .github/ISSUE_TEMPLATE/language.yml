@@ -1,0 +1,16 @@
+name: Language suggestion/error
+description: Suggest a change or report an error of language. Use this form if you can't pull request
+labels: language
+body:
+  - type: input
+    attributes:
+      label: Language
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Description
+      description: A clear and concise description of what you want to be changed. You can upload/paste screenshots here. For full translation, please upload zip file of translated files or full project
+    validations:
+      required: true
+
