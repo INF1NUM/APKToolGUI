@@ -137,7 +137,7 @@
     <value>245, 13</value>
   </data>
   <data name="splitApkTxt.Text" xml:space="preserve">
-    <value>Geteilte APK in einzelne APK zusammenführen:</value>
+    <value>Geteilte APKs zu einer APK zusammenführen:</value>
   </data>
   <data name="selSplitApkBtn.Text" xml:space="preserve">
     <value>…</value>
@@ -179,10 +179,10 @@
     <value>142, 13</value>
   </data>
   <data name="label3.Text" xml:space="preserve">
-    <value>APK-Datei zum Ausrichten:</value>
+    <value>APK-Dateiausrichtung optimieren:</value>
   </data>
   <data name="button_ZIPALIGN_Align.Text" xml:space="preserve">
-    <value>Ausrichten</value>
+    <value>Ausrichtung optimieren</value>
   </data>
   <data name="button_ZIPALIGN_BrowseInputFile.Text" xml:space="preserve">
     <value>…</value>
@@ -329,7 +329,7 @@
     <value>134, 17</value>
   </data>
   <data name="checkBox_DECODE_OutputDirectory.Text" xml:space="preserve">
-    <value>Ausgabe Verzeichnis:</value>
+    <value>Ausgabeverzeichnis:</value>
   </data>
   <data name="checkBox_DECODE_KeepBrokenRes.Size" type="System.Drawing.Size, System.Drawing">
     <value>193, 17</value>
@@ -973,6 +973,12 @@ ausgewählt ist.)</value>
   <data name="saveLogToFileToolStripMenuItem.Text" xml:space="preserve">
     <value>Protokoll in Datei speichern</value>
   </data>
+  <data name="settingsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>236, 22</value>
+  </data>
+  <data name="settingsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Einstellungen</value>
+  </data>
   <data name="toolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
     <value>233, 6</value>
   </data>
@@ -996,21 +1002,6 @@ ausgewählt ist.)</value>
   </data>
   <data name="exitToolStripMenuItem.Text" xml:space="preserve">
     <value>Beenden</value>
-  </data>
-  <data name="settingsToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>90, 20</value>
-  </data>
-  <data name="settingsToolStripMenuItem1.Text" xml:space="preserve">
-    <value>Einstellungen</value>
-  </data>
-  <data name="useAPKEditorForDecompilingItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>294, 22</value>
-  </data>
-  <data name="useAPKEditorForDecompilingItem.Text" xml:space="preserve">
-    <value>APKEditor für Dekompilierung verwenden</value>
-  </data>
-  <data name="settingsToolStripMenuItem.Text" xml:space="preserve">
-    <value>Einstellungen</value>
   </data>
   <data name="helpToolStripMenuItem.Text" xml:space="preserve">
     <value>Hilfe</value>
@@ -2713,6 +2704,121 @@ ausgewählt ist.)</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+    <value>Inherit</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Dekompilierter APK-Ordner:</value>
+  </data>
+  <data name="useAPKEditorForDecompilingItem.Text" xml:space="preserve">
+    <value>APKEditor zum Dekompilieren verwenden</value>
+  </data>
+  <data name="settingsToolStripMenuItem1.Text" xml:space="preserve">
+    <value>Einstellungen</value>
+  </data>
+  <data name="zipalignOutputDirChkBox.Text" xml:space="preserve">
+    <value>APK-Ausgabeverzeichnis:</value>
+  </data>
+  <data name="button_OpenMainActivity.Text" xml:space="preserve">
+    <value>Main activity smali	</value>
+  </data>
+  <data name="openApktoolYmlBtn.Text" xml:space="preserve">
+    <value>Apktool.yml</value>
+  </data>
+  <data name="openAndroidMainfestBtn.Text" xml:space="preserve">
+    <value>AndroidManifest.xml</value>
+  </data>
+  <data name="apkDlLinkBtn.Text" xml:space="preserve">
+    <value>Apk-DL</value>
+  </data>
+  <data name="apkSosLinkBtn.Text" xml:space="preserve">
+    <value>ApkSos</value>
+  </data>
+  <data name="apkMirrorLinkBtn.Text" xml:space="preserve">
+    <value>Apk Mirror</value>
+  </data>
+  <data name="apkSupportLinkBtn.Text" xml:space="preserve">
+    <value>	Apk Mirror
+Apk.support	</value>
+  </data>
+  <data name="apkGkLinkBtn.Text" xml:space="preserve">
+    <value>ApkGk</value>
+  </data>
+  <data name="apkComboLinkBtn.Text" xml:space="preserve">
+    <value>ApkCombo</value>
+  </data>
+  <data name="apkAioLinkBtn.Text" xml:space="preserve">
+    <value>ApkAio</value>
+  </data>
+  <data name="apkPureLinkBtn.Text" xml:space="preserve">
+    <value>ApkPure</value>
+  </data>
+  <data name="psLinkBtn.Text" xml:space="preserve">
+    <value>Play Store</value>
+  </data>
+  <data name="label19.Text" xml:space="preserve">
+    <value>Links:</value>
+  </data>
+  <data name="label8.Text" xml:space="preserve">
+    <value>Version:</value>
+  </data>
+  <data name="label11.Text" xml:space="preserve">
+    <value>Version:</value>
+  </data>
+  <data name="label10.Text" xml:space="preserve">
+    <value>Build:</value>
+  </data>
+  <data name="schemev4ComboBox.Items1" xml:space="preserve">
+    <value>True</value>
+  </data>
+  <data name="schemev4ComboBox.Items2" xml:space="preserve">
+    <value>False</value>
+  </data>
+  <data name="schemev3ComboBox.Items1" xml:space="preserve">
+    <value>True</value>
+  </data>
+  <data name="schemev3ComboBox.Items2" xml:space="preserve">
+    <value>False</value>
+  </data>
+  <data name="schemev2ComboBox.Items1" xml:space="preserve">
+    <value>True</value>
+  </data>
+  <data name="schemev2ComboBox.Items2" xml:space="preserve">
+    <value>False</value>
+  </data>
+  <data name="useAliasChkBox.Text" xml:space="preserve">
+    <value>Alias:</value>
+  </data>
+  <data name="schemev1ComboBox.Items1" xml:space="preserve">
+    <value>True</value>
+  </data>
+  <data name="schemev1ComboBox.Items2" xml:space="preserve">
+    <value>False</value>
+  </data>
+  <data name="tabPageInstallFramework.Text" xml:space="preserve">
+    <value>Framework</value>
+  </data>
+  <data name="smaliGroupBox.Text" xml:space="preserve">
+    <value>Smali</value>
+  </data>
+  <data name="bakSmaliGroupBox.Text" xml:space="preserve">
+    <value>Baksmali</value>
+  </data>
+  <data name="tabPageBaksmali.Text" xml:space="preserve">
+    <value>Baksmali</value>
+  </data>
+  <data name="tabPageAdb.Text" xml:space="preserve">
+    <value>ADB</value>
+  </data>
+  <data name="toolStripStatusLabelStateImage.Text" xml:space="preserve">
+    <value>toolStripStatusLabel1</value>
+  </data>
+  <data name="statusStrip1.Text" xml:space="preserve">
+    <value>statusStrip1</value>
+  </data>
+  <data name="menuStrip1.Text" xml:space="preserve">
+    <value>menuStrip1</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>APK Tool GUI</value>
   </data>
 </root>
