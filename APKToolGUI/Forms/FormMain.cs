@@ -1542,6 +1542,14 @@ namespace APKToolGUI
                     }));
                 else
                     comSmaliBtn.Enabled = value;
+
+                if (mergeApkBtn.InvokeRequired)
+                    mergeApkBtn.BeginInvoke(new Action(delegate
+                    {
+                        mergeApkBtn.Enabled = value;
+                    }));
+                else
+                    mergeApkBtn.Enabled = value;
             }
         }
 
