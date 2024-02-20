@@ -1435,6 +1435,8 @@ namespace APKToolGUI
                 Error(ex);
             }
 
+            AdbActionButtonsEnabled = true;
+
             return code;
         }
         #endregion
