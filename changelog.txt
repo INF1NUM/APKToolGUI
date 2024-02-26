@@ -1,3 +1,8 @@
+3.3.1.1
+- Fixed buttons not ungraying after ADB installation
+- Fixed "Merge APK" button not greying out during the process
+- Updated German language
+
 3.3.1.0
 - Updated dependencies
 - Print exceptions
