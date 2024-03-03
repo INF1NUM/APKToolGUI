@@ -5607,6 +5607,69 @@
   <data name="&gt;&gt;tabPageBaksmali.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
+  <data name="overrideAbiComboBox.Items" xml:space="preserve">
+    <value>arm64-v8a</value>
+  </data>
+  <data name="overrideAbiComboBox.Items1" xml:space="preserve">
+    <value>armeabi-v7a</value>
+  </data>
+  <data name="overrideAbiComboBox.Items2" xml:space="preserve">
+    <value>x86</value>
+  </data>
+  <data name="overrideAbiComboBox.Items3" xml:space="preserve">
+    <value>x86_64</value>
+  </data>
+  <data name="overrideAbiComboBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>223, 46</value>
+  </data>
+  <data name="overrideAbiComboBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 21</value>
+  </data>
+  <data name="overrideAbiComboBox.TabIndex" type="System.Int32, mscorlib">
+    <value>23</value>
+  </data>
+  <data name="&gt;&gt;overrideAbiComboBox.Name" xml:space="preserve">
+    <value>overrideAbiComboBox</value>
+  </data>
+  <data name="&gt;&gt;overrideAbiComboBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;overrideAbiComboBox.Parent" xml:space="preserve">
+    <value>tabPageAdb</value>
+  </data>
+  <data name="&gt;&gt;overrideAbiComboBox.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="overrideAbiCheckBox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="overrideAbiCheckBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="overrideAbiCheckBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 48</value>
+  </data>
+  <data name="overrideAbiCheckBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>190, 17</value>
+  </data>
+  <data name="overrideAbiCheckBox.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="overrideAbiCheckBox.Text" xml:space="preserve">
+    <value>Override platform's default ABI: </value>
+  </data>
+  <data name="&gt;&gt;overrideAbiCheckBox.Name" xml:space="preserve">
+    <value>overrideAbiCheckBox</value>
+  </data>
+  <data name="&gt;&gt;overrideAbiCheckBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;overrideAbiCheckBox.Parent" xml:space="preserve">
+    <value>tabPageAdb</value>
+  </data>
+  <data name="&gt;&gt;overrideAbiCheckBox.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="selAdbDeviceLbl.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -5632,7 +5695,7 @@
     <value>tabPageAdb</value>
   </data>
   <data name="&gt;&gt;selAdbDeviceLbl.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>2</value>
   </data>
   <data name="label33.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -5662,13 +5725,13 @@
     <value>tabPageAdb</value>
   </data>
   <data name="&gt;&gt;label33.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
   </data>
   <data name="killAdbBtn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="killAdbBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 76</value>
+    <value>7, 101</value>
   </data>
   <data name="killAdbBtn.Size" type="System.Drawing.Size, System.Drawing">
     <value>121, 23</value>
@@ -5689,7 +5752,7 @@
     <value>tabPageAdb</value>
   </data>
   <data name="&gt;&gt;killAdbBtn.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>4</value>
   </data>
   <data name="installApkBtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
@@ -5698,7 +5761,7 @@
     <value>NoControl</value>
   </data>
   <data name="installApkBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>475, 76</value>
+    <value>474, 101</value>
   </data>
   <data name="installApkBtn.Size" type="System.Drawing.Size, System.Drawing">
     <value>121, 23</value>
@@ -5719,13 +5782,13 @@
     <value>tabPageAdb</value>
   </data>
   <data name="&gt;&gt;installApkBtn.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>5</value>
   </data>
   <data name="refreshDevicesBtn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="refreshDevicesBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>135, 76</value>
+    <value>134, 101</value>
   </data>
   <data name="refreshDevicesBtn.Size" type="System.Drawing.Size, System.Drawing">
     <value>121, 23</value>
@@ -5746,7 +5809,7 @@
     <value>tabPageAdb</value>
   </data>
   <data name="&gt;&gt;refreshDevicesBtn.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>6</value>
   </data>
   <data name="selApkAdbBtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -5758,7 +5821,7 @@
     <value>NoControl</value>
   </data>
   <data name="selApkAdbBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>564, 25</value>
+    <value>565, 71</value>
   </data>
   <data name="selApkAdbBtn.Size" type="System.Drawing.Size, System.Drawing">
     <value>28, 24</value>
@@ -5779,7 +5842,7 @@
     <value>tabPageAdb</value>
   </data>
   <data name="&gt;&gt;selApkAdbBtn.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>7</value>
   </data>
   <data name="setVendorChkBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -5788,7 +5851,7 @@
     <value>NoControl</value>
   </data>
   <data name="setVendorChkBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 54</value>
+    <value>9, 26</value>
   </data>
   <data name="setVendorChkBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>267, 17</value>
@@ -5809,13 +5872,13 @@
     <value>tabPageAdb</value>
   </data>
   <data name="&gt;&gt;setVendorChkBox.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>8</value>
   </data>
   <data name="apkPathAdbTxtBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
   <data name="apkPathAdbTxtBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>192, 26</value>
+    <value>193, 72</value>
   </data>
   <data name="apkPathAdbTxtBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>366, 22</value>
@@ -5833,7 +5896,7 @@
     <value>tabPageAdb</value>
   </data>
   <data name="&gt;&gt;apkPathAdbTxtBox.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>9</value>
   </data>
   <data name="label32.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -5842,7 +5905,7 @@
     <value>NoControl</value>
   </data>
   <data name="label32.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 31</value>
+    <value>9, 77</value>
   </data>
   <data name="label32.Size" type="System.Drawing.Size, System.Drawing">
     <value>78, 13</value>
@@ -5863,13 +5926,13 @@
     <value>tabPageAdb</value>
   </data>
   <data name="&gt;&gt;label32.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>10</value>
   </data>
   <data name="devicesListBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
+    <value>Top, Bottom, Left, Right</value>
   </data>
   <data name="devicesListBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 102</value>
+    <value>7, 130</value>
   </data>
   <data name="devicesListBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>588, 173</value>
@@ -5887,7 +5950,7 @@
     <value>tabPageAdb</value>
   </data>
   <data name="&gt;&gt;devicesListBox.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>11</value>
   </data>
   <data name="tabPageAdb.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 27</value>
@@ -8100,6 +8163,9 @@
         //////////w4AAAcP///////
 </value>
   </data>
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
     <value>99, 97</value>
   </data>
@@ -8190,12 +8256,6 @@
   <data name="&gt;&gt;settingsToolStripMenuItem1.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;useAPKEditorForDecompilingItem.Name" xml:space="preserve">
-    <value>useAPKEditorForDecompilingItem</value>
-  </data>
-  <data name="&gt;&gt;useAPKEditorForDecompilingItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;settingsToolStripMenuItem.Name" xml:space="preserve">
     <value>settingsToolStripMenuItem</value>
   </data>
@@ -8243,6 +8303,12 @@
   </data>
   <data name="&gt;&gt;toolTip1.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;useAPKEditorForDecompilingItem.Name" xml:space="preserve">
+    <value>useAPKEditorForDecompilingItem</value>
+  </data>
+  <data name="&gt;&gt;useAPKEditorForDecompilingItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>FormMain</value>

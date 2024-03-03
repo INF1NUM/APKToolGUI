@@ -19,7 +19,7 @@ namespace APKToolGUI
             public const string Serial = " -s"; // use device with given serial (overrides $ANDROID_SERIAL)
             public const string Vendor = " -i"; //Vendor
             public const string ApkPath = " -r";
-            public const string Abi = " --abi armeabi-v7a";
+            public const string Abi = " --abi"; //override platform's default ABI
         }
 
         public event DataReceivedEventHandler OutputDataReceived
@@ -79,11 +79,29 @@ namespace APKToolGUI
             Regex regex = new Regex(@"^(\S+)\s+.*model:(\w+).*");
             Match mdevice = regex.Match(device);
 
-            string setVendor = null;
+            string setVendor = null, abi = null;
             if (Settings.Default.Adb_SetVendor)
                 setVendor = $"{Keys.Vendor} com.android.vending {Keys.ApkPath}";
+            if (Settings.Default.Adb_SetOverrideAbi)
+            {
+                switch (Settings.Default.Adb_OverrideAbi)
+                {
+                    case 0:
+                        abi = Keys.Abi + " arm64-v8a";
+                        break;
+                    case 1:
+                        abi = Keys.Abi + " armeabi-v7a";
+                        break;
+                    case 2:
+                        abi = Keys.Abi + " x86";
+                        break;
+                    case 3:
+                        abi = Keys.Abi + " x86_64";
+                        break;
+                }
+            }
 
-            string args = String.Format($"{Keys.Serial} {mdevice.Groups[1].Value} install {setVendor} \"{inputApk}\"");
+            string args = String.Format($"{Keys.Serial} {mdevice.Groups[1].Value} install {setVendor} {abi} \"{inputApk}\"");
 
             Log.d("ADB: " + adbFileName + " " + args);
             Debug.WriteLine("Adb: " + args);

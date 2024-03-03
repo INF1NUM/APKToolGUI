@@ -1,4 +1,5 @@
 ﻿using APKToolGUI.Languages;
+using APKToolGUI.Properties;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -20,6 +21,12 @@ namespace APKToolGUI.Handlers
             main.refreshDevicesBtn.Click += refreshDevicesBtn_Click;
             main.selApkAdbBtn.Click += selApkAdbBtn_Click;
             main.devicesListBox.SelectedValueChanged += devicesListBox_SelectedValueChanged;
+            main.overrideAbiComboBox.SelectedIndexChanged += ComboBoxChanged;
+        }
+
+        private void ComboBoxChanged(object sender, EventArgs e)
+        {
+            Settings.Default.Adb_OverrideAbi = main.overrideAbiComboBox.SelectedIndex;
         }
 
         private async void refreshDevicesBtn_Click(object sender, EventArgs e)

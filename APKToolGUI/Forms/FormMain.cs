@@ -91,6 +91,10 @@ namespace APKToolGUI
             schemev4ComboBox.SelectedIndex = v4;
             Settings.Default.Sign_Schemev4 = v4;
 
+            int overrideAbi = (overrideAbiComboBox.Items.Count + 1 > Settings.Default.Adb_OverrideAbi) ? Settings.Default.Adb_OverrideAbi : 0;
+            overrideAbiComboBox.SelectedIndex = overrideAbi;
+            Settings.Default.Adb_OverrideAbi = overrideAbi;
+
             useAPKEditorForDecompilingItem.Checked = Settings.Default.UseApkeditor;
 
             new DecodeControlEventHandlers(this);
@@ -1566,6 +1570,8 @@ namespace APKToolGUI
                 apkPathAdbTxtBox.Enabled = value;
                 selApkAdbBtn.Enabled = value;
                 setVendorChkBox.Enabled = value;
+                overrideAbiCheckBox.Enabled = value;
+                overrideAbiComboBox.Enabled = value;
             }
         }
 
@@ -1582,6 +1588,7 @@ namespace APKToolGUI
             Settings.Default.Sign_Schemev2 = schemev2ComboBox.SelectedIndex;
             Settings.Default.Sign_Schemev3 = schemev3ComboBox.SelectedIndex;
             Settings.Default.Sign_Schemev4 = schemev4ComboBox.SelectedIndex;
+            Settings.Default.Adb_OverrideAbi = overrideAbiComboBox.SelectedIndex;
             Settings.Default.UseApkeditor = useAPKEditorForDecompilingItem.Checked;
             Settings.Default.Save();
         }
