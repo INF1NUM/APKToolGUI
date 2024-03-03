@@ -197,76 +197,81 @@ namespace APKToolGUI.Utils
             }
         }
 
+        //https://apilevels.com/
         public string SdkToAndroidVer(string sdk)
         {
             switch (sdk)
             {
+                case "35":
+                    return sdk + ": Android 15";
+                case "34":
+                    return sdk + ": Android 14";
                 case "33":
-                    return "31: Android 13";
+                    return sdk + ": Android 14";
                 case "32":
-                    return "31: Android 12.0L";
+                    return sdk + ": Android 12.0L";
                 case "31":
-                    return "31: Android 12";
+                    return sdk + ": Android 12";
                 case "30":
-                    return "30: Android 11";
+                    return sdk + ": Android 11";
                 case "29":
-                    return "29: Android 10";
+                    return sdk + ": Android 10";
                 case "28":
-                    return "28: Android 9 (Pie)";
+                    return sdk + ": Android 9 (Pie)";
                 case "27":
-                    return "27: Android 8.1 (Oreo MR1)";
+                    return sdk + ": Android 8.1 (Oreo)";
                 case "26":
-                    return "26: Android 8.0 (Oreo)";
+                    return sdk + ": Android 8.0 (Oreo)";
                 case "25":
-                    return "25: Android 7.1 (Nougat MR1)";
+                    return sdk + ": Android 7.1 (Nougat)";
                 case "24":
-                    return "24: Android 7.0 (Nougat)";
+                    return sdk + ": Android 7.0 (Nougat)";
                 case "23":
-                    return "23: Android 6 (Marshmallow)";
+                    return sdk + ": Android 6 (Marshmallow)";
                 case "22":
-                    return "22: Android 5.1 (Lollipop MR1)";
+                    return sdk + ": Android 5.1 (Lollipop)";
                 case "21":
-                    return "21: Android 5.0 (Lollipop)";
+                    return sdk + ": Android 5.0 (Lollipop)";
                 case "20":
-                    return "20: Android 4.4W (KitKat Watch)";
+                    return sdk + ": Android 4.4W (KitKat Watch)";
                 case "19":
-                    return "19: Android 4.4 (KitKat)";
+                    return sdk + ": Android 4.4 (KitKat)";
                 case "18":
-                    return "18: Android 4.3 (Jelly Bean MR2)";
+                    return sdk + ": Android 4.3 (Jelly Bean)";
                 case "17":
-                    return "17: Android 4.2 (Jelly Bean MR1)";
+                    return sdk + ": Android 4.2 (Jelly Bean)";
                 case "16":
-                    return "16: Android 4.1 (Jelly Bean)";
+                    return sdk + ": Android 4.1 (Jelly Bean)";
                 case "15":
-                    return "15: Android 4.0.3 (Ice Cream Sandwich MR1)";
+                    return sdk + ": Android 4.0.3 (Ice Cream Sandwich)";
                 case "14":
-                    return "14: Android 4.0 (Ice Cream Sandwich)";
+                    return sdk + ": Android 4.0 (Ice Cream Sandwich)";
                 case "13":
-                    return "13: Android 3.2 (Honeycomb MR2)";
+                    return sdk + ": Android 3.2 (Honeycomb)";
                 case "12":
-                    return "12: Android 3.1 (Honeycomb MR1)";
+                    return sdk + ": Android 3.1 (Honeycomb)";
                 case "11":
-                    return "11: Android 3.0 (Honeycomb)";
+                    return sdk + ": Android 3.0 (Honeycomb)";
                 case "10":
-                    return "10: Android 2.3.3 Gingerbread MR1";
+                    return sdk + ": Android 2.3.3 Gingerbread";
                 case "9":
-                    return "9: Android 2.3 (Gingerbread)";
+                    return sdk + ": Android 2.3 (Gingerbread)";
                 case "8":
-                    return "8: Android 2.2 (Froyo)";
+                    return sdk + ": Android 2.2 (Froyo)";
                 case "7":
-                    return "7: Android 2.1 (Eclair MR1)";
+                    return sdk + ": Android 2.1 (Eclair)";
                 case "6":
-                    return "6: Android 2.0.1 (Eclair 0.1)";
+                    return sdk + ": Android 2.0.1 (Eclair)";
                 case "5":
-                    return "5: Android 2.0 (Eclair)";
+                    return sdk + ": Android 2.0 (Eclair)";
                 case "4":
-                    return "4: Android 1.6 (Donut)";
+                    return sdk + ": Android 1.6 (Donut)";
                 case "3":
-                    return "3: Android 1.5 (Cupcake)";
+                    return sdk + ": Android 1.5 (Cupcake)";
                 case "2":
-                    return "2: Android 1.1 (Base 1.1)";
+                    return sdk + ": Android 1.1 (Base 1.1)";
                 case "1":
-                    return "1: Android 1.0 (Base)";
+                    return sdk + ": Android 1.0 (Base)";
                 default:
                     return sdk;
             }
